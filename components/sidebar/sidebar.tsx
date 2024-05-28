@@ -50,7 +50,7 @@ const sidebarItems: SidebarItems = {
         <Link href="/discover">Discover</Link>
       </SidebarButton>
       <SidebarButton
-        className='w-[90%] justify-center text-white'
+        className='w-[90%] justify-center text-white bg-black'
         variant='default'
       >
         <SignInButton/>

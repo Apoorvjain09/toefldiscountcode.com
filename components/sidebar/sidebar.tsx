@@ -15,7 +15,7 @@ import { SidebarItems } from '@/types';
 import { SidebarButton } from './sidebar-button';
 import { useMediaQuery } from 'usehooks-ts';
 import { SidebarMobile } from './sidebar-mobile';
-import { SignInButton} from '@clerk/nextjs';
+import { SignInButton } from '@clerk/nextjs';
 import Link from 'next/link';
 
 const sidebarItems: SidebarItems = {
@@ -53,7 +53,7 @@ const sidebarItems: SidebarItems = {
         className='w-[90%] justify-center text-white bg-black'
         variant='default'
       >
-        <SignInButton/>
+        Sign In
       </SidebarButton>
     </div>
   ),
@@ -68,5 +68,5 @@ export default function Sidebar() {
     return <SidebarDesktop sidebarItems={sidebarItems} />;
   }
 
-  return <SidebarMobile sidebarItems={sidebarItems}/>;
+  return <SidebarMobile sidebarItems={sidebarItems} />;
 }

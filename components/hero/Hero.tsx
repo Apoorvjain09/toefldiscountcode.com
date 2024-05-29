@@ -16,14 +16,10 @@ const textFont = Baloo_2({
 const Hero = () => {
   return (
     <div className="min-h-[80vh] md:min-h-fit lg:min-h-screen ">
-      <div className="relative min-h-[80vh] mt-3 md:mt-8 lg:mt-10 lg:w-[90%] 2xl:w-[70%] mx-auto px-4">
-        <div
-          className="hidden md:block absolute inset-0 bg-globe bg-no-repeat bg-center h-full w-full"
-          style={{ backgroundSize: "100% 80%" }}
-        ></div>
-
-        <div className="flex flex-col-reverse md:flex-row items-center ">
-          <div className="w-full md:w-1/2 flex flex-col   lg:gap-20  ">
+      <div className="relative min-h-[80vh] mt-6 md:mt-8 lg:mt-10 lg:w-[90%] 2xl:w-[80%] mx-auto px-4">
+        <div className="hidden md:block absolute inset-0 bg-globe bg-no-repeat bg-center h-full w-full" style={{ backgroundSize: "100% 80%" }}></div>
+        <div className="flex flex-col-reverse md:flex-row items-center">
+          <div className="w-full md:w-1/2 flex flex-col lg:gap-20">
             <h2
               className={cn(
                 textFont.className,
@@ -43,16 +39,15 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
           <div className="w-[70%] md:w-1/2  flex justify-center items-center lg:justify-end  ">
             <div
-              className=" md:hidden absolute  bg-globe bg-no-repeat bg-center h-full w-full"
+              className=" md:hidden absolute bg-globe bg-no-repeat bg-center h-full w-full"
               style={{ backgroundSize: "100% " }}
             ></div>
             <Image
               src={heroImage}
               alt=""
-              className="md:w-96 md:h-96 lg:w-[440px] lg:h-[440px] xl:w-[500px] xl:h-[500px]  2xl:w-[unset] 2xl:h-[unset] z-[0]"
+              className="md:w-96 md:h-96 lg:w-[440px] lg:h-[340px] xl:w-[500px] xl:h-[500px]  2xl:w-[unset] 2xl:h-[unset] z-[0]"
             ></Image>
           </div>
         </div>

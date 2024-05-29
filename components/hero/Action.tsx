@@ -17,7 +17,7 @@ const Action = () => {
       <Link href={youtubeLink} target="_blank">
         <Button
           size="lg"
-          className="font-bold text-lg rounded-full "
+          className="font-bold text-lg rounded-full bg-black text-white"
         >
           Get the Code -&gt;
         </Button>

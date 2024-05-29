@@ -375,17 +375,17 @@ export default function Home() {
 
           <div className="flex justify-between gap-10">
             {step > 1 && (
-              <Button type="button" className="w-full" onClick={prevStep}>
+              <Button type="button" className="w-full bg-black text-white" onClick={prevStep}>
                 Previous
               </Button>
             )}
             {step <= 2 && (
-              <Button type="button" className="w-full" onClick={nextStep}>
+              <Button type="button" className="w-full bg-black text-white" onClick={nextStep}>
                 Next
               </Button>
             )}
             {step === 3 && (
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full bg-black text-white">
                 Submit
               </Button>
             )}

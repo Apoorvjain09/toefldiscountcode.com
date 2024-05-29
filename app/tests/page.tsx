@@ -30,10 +30,10 @@ export default function Page() {
                         <h1 className={cn("text-center md:text-4xl text-xl text-white relative z-20")}>
                             Ace Your TOEFL Test with Our AI-Powered Mock Tests
                         </h1>
-                        <p className="text-center mt-2 text-neutral-300 relative z-20">
+                        <p className="text-center mt-2 mb-4 text-neutral-300 relative z-20">
                             Practice with realistic tests and get detailed feedback to improve your scores.
                         </p>
-                        <button onClick={handleGetStartedClick} className="bg-blue-600 text-white py-2 px-4 rounded z-[1000] mt-1">Get Started</button>
+                        <button onClick={handleGetStartedClick} className="bg-blue-600 text-white py-2 px-4 rounded z-[10] mt-1">Get Started</button>
                     </div>
                     <section id="features" className="py-20">
                         <div className="container mx-auto text-center">

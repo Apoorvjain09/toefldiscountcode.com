@@ -27,8 +27,8 @@ export function SidebarMobile(props: SidebarMobileProps) {
   return (
     <Sheet >
       <SheetTrigger asChild>
-        <Button size='icon' variant='ghost' className='fixed top-3 left-3'>
-          <div className='border p-3 bg-slate-50 rounded-2xl'>
+        <Button size='icon' variant='ghost' className='fixed top-3 left-3 z-[400]'>
+          <div className='border p-3 bg-slate-50 rounded-2xl z-[400]'>
             <Menu size={20} />
           </div>
         </Button>
@@ -36,7 +36,7 @@ export function SidebarMobile(props: SidebarMobileProps) {
       <SheetContent side='left' className='px-3 py-4 bg-gray-50' hideClose>
         <SheetHeader className='flex flex-row justify-between items-center space-y-0'>
           <span className='text-lg font-semibold text-foreground mx-3'>
-            Twitter
+            MJ Study Abroad
           </span>
           <SheetClose asChild>
             <Button className='h-7 w-7 p-0' variant='ghost'>

@@ -144,7 +144,7 @@ const Test1 = () => {
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
                         A Full Length Test is similar to other toefl tests and takes around 2 hour to complete. It&apos;ll give you a good feel for what you can expect from our full TOEFL practice tests.
                     </p>
-                    <button onClick={handleStartTestClick} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded sm:inline-block mb-8 md:mb-10">
+                    <button onClick={handleStartTestClick} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
                         <FaPlayCircle className="mr-2" size={24} />
                         Start Test
                     </button>

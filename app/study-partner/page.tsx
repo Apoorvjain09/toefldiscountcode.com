@@ -145,12 +145,8 @@ function Form({ setStage }: FormProps) {
               className="w-full p-2 border border-gray-300 rounded mb-4"
             />
           </div>
+          
           <div className="flex justify-between">
-            {currentStep > 0 && (
-              <button onClick={handleBack} className="bg-blue-500 text-white py-2 px-4 rounded">
-                Back
-              </button>
-            )}
             {currentStep < steps.length - 1 ? (
               <button onClick={handleNext} className="bg-blue-500 text-white py-2 px-4 rounded">
                 Next
@@ -158,6 +154,11 @@ function Form({ setStage }: FormProps) {
             ) : (
               <button onClick={handleSubmit} className="bg-green-500 text-white py-2 px-4 rounded">
                 Submit
+              </button>
+            )}
+            {currentStep > 0 && (
+              <button onClick={handleBack} className="bg-blue-500 text-white py-2 px-4 rounded">
+                Back
               </button>
             )}
           </div>

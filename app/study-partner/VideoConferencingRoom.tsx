@@ -68,7 +68,7 @@ export default function VideoConferencingRoom() {
 
   return (
     <StreamVideo client={client}>
-      <StreamTheme className="my-theme-overrides">
+      <StreamTheme className="text-white my-theme-overrides">
         <StreamCall call={call}>
           <SpeakerLayout />
           <CallControls />

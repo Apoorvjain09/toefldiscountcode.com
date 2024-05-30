@@ -73,13 +73,13 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                     </div>
                 </div>
             )}
-            {task1Submitted && (
+            {/* {task1Submitted && (
                 <div className="bg-white shadow p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4">Evaluation for Task 1</h3>
                     <p><strong>Score:</strong> {evaluation?.score}</p>
                     <p><strong>Feedback:</strong> {evaluation?.feedback}</p>
                 </div>
-            )}
+            )} */}
             {task1Submitted && !task2Submitted && (
                 <div className="bg-white shadow p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4">Task 2: Independent Writing</h3>

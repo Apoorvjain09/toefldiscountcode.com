@@ -51,6 +51,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
 
     const handleTask2Submit = () => {
         handleTaskSubmit(2, writingTask2);
+        onComplete();
     };
 
     return (
@@ -97,7 +98,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                     </div>
                 </div>
             )}
-            {task2Submitted && (
+            {/* {task2Submitted && (
                 <>
                     <div className="bg-white shadow p-6 rounded mb-4">
                         <h3 className="text-xl font-bold mb-4">Evaluation for Task 2</h3>
@@ -111,7 +112,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                         </button>
                     </div>
                 </>
-            )}
+            )} */}
         </div>
     );
 };

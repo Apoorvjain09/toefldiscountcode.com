@@ -564,22 +564,17 @@ export const writingQuestions = {
 
 export const speakingQuestions = [
     {
-        question: "Should schools engage in character education to instill morals and values in children?",
+        question1: "Should schools engage in character education to instill morals and values in children?",
+
+        passage2: "The geology department is aware of the problems surrounding group work...",
+        conversationAudio2: "/assets/T1S1.mp3",
+        question2: "The man expresses his opinion of group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.",
+
+        passage3: "One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K)...",
+        conversationAudio3: "/assets/T1S2.mp3",
+        question3: "One theory of learning states that we use three sensory receivers...",
+
+        conversationAudio4: "/assets/T1S3.mp3",
+        question4: "The man expresses his opinion on group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.",
     },
-    {
-        intro: "In this question of the TOEFL Speaking Task 2, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.",
-        passage: "The geology department is aware of the problems surrounding group work...",
-        conversationAudio: "/assets/T1S1.mp3",
-        question: "The man expresses his opinion of group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.",
-    },
-    {
-        passage: "One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K)...",
-        conversationAudio: "/assets/T1S2.mp3",
-        question: "One theory of learning states that we use three sensory receivers...",
-    },
-    {
-        intro: "In this question of the TOEFL Speaking Task 4, you'll first read a short passage on an academic topic. Next, you will hear a lecture on the same topic. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.",
-        conversationAudio: "/assets/T1S3.mp3",
-        question: "The man expresses his opinion on group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.",
-    }
 ];

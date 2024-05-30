@@ -17,10 +17,10 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     const { transcript, listening, resetTranscript } = useSpeechRecognition();
     const [question, setQuestion] = useState<string>('Should schools engage in character education to instill morals and values in children?');
     const task2Intro = "In this question of the TOEFL Speaking Task 2, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
-    const task2Passage = "The geology department is aware of the problems surrounding of group work, and its unpopularity among students. We realize that in some cases students do not contribute and thus gain marks they do not deserve, while stronger students are frustrated at being held back by weaker students. Similarly, it is very difficult for tutors to award marks for group projects, as it is unclear who is responsible for each part. However, the department feels that there is a great deal to be gained from group work, in terms of self-organization and communication skills. To this end, we plan to introduce a system whereby the group work itself is not formally assessed, but each student will undertake an individual piece of work based on the group project, which will be designed to ensure participation in the project.";
-    const task3Passage = "One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K) when we take in information. According to the VAK theory, one or two of these receiving styles is normally dominant and thus defines the best way for a person to learn new information. Thus a visual learner learns best using their sight; an auditory learner learns best when listening, and a kinesthetic learner learns best through physical activity. VAK is one of the most popular learning models nowadays due to its simplicity. Teachers are beginning to incorporate a range of stimuli and activities into their lessons so as to cater for all types of learner. Although it is not yet proven that using one’s preferred sense provides the best means for learning, having a range of activities can reduce boredom and increase motivation in the classroom.";
+    const task3Intro = "In this question of the TOEFL Speaking Task 3, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task4Intro = "In this question of the TOEFL Speaking Task 4, you'll first read a short passage on an academic topic. Next, you will hear a lecture on the same topic. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
-    
+    const [currentTask, setCurrentTask] = useState<number>(0);
+    const currentQuestion = speakingQuestions[currentTask];
     useEffect(() => {
         if (stage === 'task1') {
             const timer = setTimeout(() => {
@@ -197,14 +197,14 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task1' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 1: Speak about a familiar topic</h3>
-                    <p className="mb-4"><strong>Question:</strong> Should schools engage in character education to instill morals and values in children?</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question1} </p>
                     {renderTimer(5, () => setStage('prepare'))}
                 </div>
             )}
             {stage === 'prepare' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Prepare Your Answer</h3>
-                    <p className="mb-4"><strong>Question:</strong> Should schools engage in character education to instill morals and values in children?</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question1} </p>
                     <p className="mb-4">You have 15 seconds to prepare your answer.</p>
                     {renderTimer(15, () => setStage('speak'))}
                 </div>
@@ -212,7 +212,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'speak' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Speak Now</h3>
-                    <p className="mb-4"><strong>Question:</strong> Should schools engage in character education to instill morals and values in children?</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question1} </p>
                     <p className="mb-4">You have 45 seconds to speak.</p>
                     {renderTimer(45, () => { })}
                     <div className="mt-4 w-full max-w-md">
@@ -238,7 +238,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task2Passage' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 2 Passage</h3>
-                    <p className="mb-4">{task2Passage}</p>
+                    <p className="mb-4">{currentQuestion.passage2}</p>
                     {renderTimer(50, () => setStage('task2Conversation'))}
                 </div>
             )}
@@ -257,7 +257,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task2QuestionPrepare' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 2 Question</h3>
-                    <p className="mb-4"><strong>Question:</strong> The man expresses his opinion of group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question2} </p>
                     <p className="mb-4">You have 40 seconds to prepare your answer.</p>
                     {renderTimer(40, () => setStage('task2Speak'))}
                 </div>
@@ -265,7 +265,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task2Speak' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Speak Now</h3>
-                    <p className="mb-4"><strong>Question:</strong> The man expresses his opinion of group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question2} </p>
                     <p className="mb-4">You have 60 seconds to speak.</p>
                     {renderTimer(60, () => { })}
                     <div className="mt-4 w-full max-w-md">
@@ -291,7 +291,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task3Passage' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 3 Passage</h3>
-                    <p className="mb-4">{task3Passage}</p>
+                    <p className="mb-4">{currentQuestion.passage3}</p>
                     {renderTimer(50, () => setStage('task3Conversation'))}
                 </div>
             )}
@@ -310,7 +310,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task3QuestionPrepare' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 3 Question</h3>
-                    <p className="mb-4"><strong>Question:</strong> One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K) when we take in information. According to the VAK theory, one or two of these receiving styles is normally dominant and thus defines the best way for a person to learn new information. Thus a visual learner learns best using their sight; an auditory learner learns best when listening, and a kinesthetic learner learns best through physical activity. VAK is one of the most popular learning models nowadays due to its simplicity. Teachers are beginning to incorporate a range of stimuli and activities into their lessons so as to cater for all types of learner. Although it is not yet proven that using one’s preferred sense provides the best means for learning, having a range of activities can reduce boredom and increase motivation in the classroom.</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question3}</p>
                     <p className="mb-4">You have 40 seconds to prepare your answer.</p>
                     {renderTimer(40, () => setStage('task3Speak'))}
                 </div>
@@ -318,7 +318,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task3Speak' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Speak Now</h3>
-                    <p className="mb-4"><strong>Question:</strong> One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K) when we take in information. According to the VAK theory, one or two of these receiving styles is normally dominant and thus defines the best way for a person to learn new information. Thus a visual learner learns best using their sight; an auditory learner learns best when listening, and a kinesthetic learner learns best through physical activity. VAK is one of the most popular learning models nowadays due to its simplicity. Teachers are beginning to incorporate a range of stimuli and activities into their lessons so as to cater for all types of learner. Although it is not yet proven that using one’s preferred sense provides the best means for learning, having a range of activities can reduce boredom and increase motivation in the classroom.</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question3}</p>
                     <p className="mb-4">You have 60 seconds to speak.</p>
                     {renderTimer(60, () => { })}
                     <div className="mt-4 w-full max-w-md">
@@ -356,7 +356,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task4QuestionPrepare' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 4 Question</h3>
-                    <p className="mb-4"><strong>Question:</strong> The man expresses his opinion on group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question4}</p>
                     <p className="mb-4">You have 20 seconds to prepare your answer.</p>
                     {renderTimer(20, () => setStage('task4Speak'))}
                 </div>
@@ -364,7 +364,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task4Speak' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Speak Now</h3>
-                    <p className="mb-4"><strong>Question:</strong> The man expresses his opinion on group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.</p>
+                    <p className="mb-4"><strong>Question:</strong> {currentQuestion.question4}</p>
                     <p className="mb-4">You have 60 seconds to speak.</p>
                     {renderTimer(60, () => {})}
                     <div className="mt-4 w-full max-w-md">

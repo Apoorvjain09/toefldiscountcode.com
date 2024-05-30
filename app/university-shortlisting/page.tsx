@@ -99,7 +99,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-5 sm:p-24 mt-10">
       <Form {...form}>
         <form
           onSubmit={(e) => {
@@ -122,7 +122,7 @@ export default function Home() {
                           <SelectValue placeholder="Select a date" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent>
+                      <SelectContent >
                         <SelectItem value="September 2024">September 2024</SelectItem>
                         <SelectItem value="January 2025">January 2025</SelectItem>
                         <SelectItem value="May 2025">May 2025</SelectItem>

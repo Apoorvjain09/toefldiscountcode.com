@@ -458,7 +458,7 @@ export default function Page() {
                             Increase your <br /> Toefl Score <br /> the right way
                         </motion.h1>
                     </LampContainer>
-                    <div className="flex flex-row py-20 h-[70vh] sm:h-full bg-black relative w-full">
+                    <div className="flex flex-row pt-5 pb-5 h-[70vh] sm:h-full bg-black relative w-full">
                         <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[100vh] px-4">
                             <motion.div
                                 initial={{
@@ -474,26 +474,22 @@ export default function Page() {
                                 }}
                                 className="div"
                             >
-                                <h2 className="text-center text-xl md:text-4xl font-bold text-white">
-                                    We conduct toefl test worldwide
+                                <h2 className="text-center mt-10 text-xl md:text-4xl font-bold text-white">
+                                    go GLOBAL with TOEFL
                                 </h2>
-                                <p className="text-center text-base md:text-lg font-normal text-neutral-200 max-w-md mt-2 mx-auto">
-                                    These tests are interactive and customizable. Have fun with it, and
-                                    don&apos;t forget to share it.
-                                </p>
                             </motion.div>
                             <div className="absolute w-full inset-x-0 h-40 pointer-events-none select-none z-40" />
-                            <div className="absolute w-full h-72 md:h-full z-10">
+                            <div className="absolute w-full h-72 md:h-full z-10 pr-10">
                                 <World data={sampleArcs} globeConfig={globeConfig} />;
                             </div>
                         </div>
                     </div>
-                    <section id="cta" className="py-20 bg-black text-white text-center">
+                    {/* <section id="cta" className="py-20 bg-black text-white text-center">
                         <div className="container mx-auto gap-10">
                             <h2 className="text-3xl font-bold mb-4">Ready to Ace Your TOEFL Test?</h2>
                             <a href="#signup" className="bg-white text-blue-600 py-2 px-4 rounded">Sign Up Now</a>
                         </div>
-                    </section>
+                    </section> */}
                 </div>
             ) : (
                 <div className="container mx-auto py-20">

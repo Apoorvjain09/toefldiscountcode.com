@@ -8,7 +8,7 @@ import SpeakingSection from './SpeakingSection';
 import ResultsDashboard from './ResultsDashboard';
 
 const Test1 = () => {
-    const [stage, setStage] = useState<'intro' | 'instructions' | 'reading' | 'readingQuestions' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' |  'resultsDashboard' >('intro');
+    const [stage, setStage] = useState<'intro' | 'instructions' | 'reading' | 'readingQuestions' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('intro');
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState<number[]>(Array(20).fill(-1));
     const [listeningAnswers, setListeningAnswers] = useState<number[]>(Array(28).fill(-1));
@@ -27,7 +27,7 @@ const Test1 = () => {
         task3: null,
         task4: null,
     });
-    
+
 
     const handleStartTestClick = () => {
         setStage('instructions');
@@ -49,7 +49,7 @@ const Test1 = () => {
             setStage('listeningConversation2');
             setCurrentQuestion(0); // Reset current question for next set of questions
         } else if (stage === 'listeningConversation2') {
-            setStage('listeningQuestions2');    
+            setStage('listeningQuestions2');
         } else if (stage === 'listeningQuestions2') {
             setStage('listeningConversation3');
             setCurrentQuestion(0); // Reset current question for next set of questions
@@ -119,7 +119,7 @@ const Test1 = () => {
     };
     const handleSpeakingCompletion = () => {
         setStage('resultsDashboard');
-    };  
+    };
 
     const handleSpeakingComplete = (task: number, evaluation: { score: number; feedback: string }) => {
         setSpeakingScores(prevScores => ({
@@ -216,27 +216,29 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'readingQuestions' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Reading Section</h3>
                     {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q, index) => (
                         <div key={q.id} className="mb-8">
                             <p className="mb-2 whitespace-pre-line"><strong>Passage:</strong> {q.passage}</p>
-                            <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={answers[currentQuestion] === i}
-                                                onChange={() => handleOptionChange(currentQuestion, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
+                            <div className='border p-2 rounded-lg'>
+                                <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={answers[currentQuestion] === i}
+                                                    onChange={() => handleOptionChange(currentQuestion, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     ))}
                     <div className="text-center">
@@ -293,10 +295,10 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningQuestions1' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
                     {listeningQuestions.slice(0, 6).map((q, index) => (
-                        <div key={q.id} className="mb-8">
+                        <div key={q.id} className="mb-8 border rounded-lg p-2">
                             <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
                             <ul className="list-none mb-4">
                                 {q.options.map((option, i) => (
@@ -357,10 +359,10 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningQuestions2' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
                     {listeningQuestions.slice(6, 12).map((q, index) => (
-                        <div key={q.id} className="mb-8">
+                        <div key={q.id} className="mb-8 border rounded-lg p-2">
                             <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
                             <ul className="list-none mb-4">
                                 {q.options.map((option, i) => (
@@ -421,10 +423,10 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningQuestions3' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
                     {listeningQuestions.slice(12, 18).map((q, index) => (
-                        <div key={q.id} className="mb-8">
+                        <div key={q.id} className="mb-8 border rounded-lg p-2">
                             <p className="mb-2"><strong>Question {index + 13}:</strong> {q.question}</p>
                             <ul className="list-none mb-4">
                                 {q.options.map((option, i) => (
@@ -485,10 +487,10 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningQuestions4' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
                     {listeningQuestions.slice(18, 23).map((q, index) => (
-                        <div key={q.id} className="mb-8">
+                        <div key={q.id} className="mb-8 border rounded-lg p-2">
                             <p className="mb-2"><strong>Question {index + 19}:</strong> {q.question}</p>
                             <ul className="list-none mb-4">
                                 {q.options.map((option, i) => (
@@ -537,10 +539,10 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningQuestions5' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
                     {listeningQuestions.slice(23, 28).map((q, index) => (
-                        <div key={q.id} className="mb-8">
+                        <div key={q.id} className="mb-8 border rounded-lg p-2">
                             <p className="mb-2"><strong>Question {index + 24}:</strong> {q.question}</p>
                             <ul className="list-none mb-4">
                                 {q.options.map((option, i) => (
@@ -573,9 +575,9 @@ const Test1 = () => {
                     </div>
                 </div>
             )}
-            {stage === 'writing' && <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete}/>}
-            {stage === 'speaking' && <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete}/>}
-            {stage === 'resultsDashboard' && <ResultsDashboard writingScores={writingScores} speakingScores={speakingScores}/>}
+            {stage === 'writing' && <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />}
+            {stage === 'speaking' && <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />}
+            {stage === 'resultsDashboard' && <ResultsDashboard writingScores={writingScores} speakingScores={speakingScores} />}
         </div>
     );
 };

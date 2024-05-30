@@ -3,6 +3,7 @@ import { readingQuestions, listeningQuestions } from './questions'; // Adjust th
 import WritingSection from './WritingSection';
 
 interface ResultsDashboardProps {
+    readingAnswers: number[];
     writingScores: {
         task1: { score: number; feedback: string } | null,
         task2: { score: number; feedback: string } | null
@@ -18,7 +19,7 @@ interface ResultsDashboardProps {
 
 
 
-const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ writingScores, speakingScores }) => {
+const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, writingScores, speakingScores }) => {
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
 
     const handleSectionClick = (section: 'reading' | 'listening' | 'writing' | 'speaking') => {
@@ -62,7 +63,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ writingScores, spea
                                             <li key={i}>{option}</li>
                                         ))}
                                     </ul>
-                                    <p><strong>Your Answer:</strong> {/* Show the user's answer here */}</p>
+                                    <p><strong>Your Answer:</strong> {renderCorrectAnswer(readingAnswers[index], q.options)}</p>
                                     <p><strong>Correct Answer:</strong> {renderCorrectAnswer(q.answer, q.options)}</p>
                                 </div>
                             ))}

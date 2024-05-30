@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { FaPlayCircle } from 'react-icons/fa';
-import { readingQuestions, listeningQuestions } from './questions'; // Adjust the import path as necessary
+import { readingQuestions, listeningQuestions } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
 import WritingSection from './WritingSection';
 import SpeakingSection from './SpeakingSection';
@@ -577,7 +577,7 @@ const Test1 = () => {
             )}
             {stage === 'writing' && <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />}
             {stage === 'speaking' && <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />}
-            {stage === 'resultsDashboard' && <ResultsDashboard writingScores={writingScores} speakingScores={speakingScores} />}
+            {stage === 'resultsDashboard' && <ResultsDashboard readingAnswers={answers} writingScores={writingScores} speakingScores={speakingScores} />}
         </div>
     );
 };

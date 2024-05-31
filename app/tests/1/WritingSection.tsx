@@ -52,7 +52,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
     const handleTask2Submit = () => {
         handleTaskSubmit(2, writingTask2);
         onComplete();
-    };
+    };  
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-20">

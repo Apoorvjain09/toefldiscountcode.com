@@ -20,7 +20,7 @@ import Link from 'next/link';
 
 const sidebarItems: SidebarItems = {
   links: [
-    { label: 'Mock Tests', href: '/tests', icon: Home },
+    { label: 'Mock Tests', href: '/', icon: Home },
     { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
     { label: 'Score Reporting', href: 'score-reporting', icon: Mail },
     {

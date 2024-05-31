@@ -17,6 +17,7 @@ import { useMediaQuery } from 'usehooks-ts';
 import { SidebarMobile } from './sidebar-mobile';
 import { SignInButton } from '@clerk/nextjs';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; 
 
 const sidebarItems: SidebarItems = {
   links: [
@@ -63,6 +64,13 @@ export default function Sidebar() {
   const isDesktop = useMediaQuery('(min-width: 640px)', {
     initializeWithValue: false,
   });
+  
+  const pathname = usePathname();
+  const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
+
+  if (isTestPage) {
+    return <SidebarMobile sidebarItems={sidebarItems} />;
+  }
 
   if (isDesktop) {
     return <SidebarDesktop sidebarItems={sidebarItems} />;

@@ -137,8 +137,8 @@ const Test1 = () => {
 
 
     return (
-        <div className="container mx-auto py-10 px-4 md:py-20">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-10 text-center">TOEFL Full Length Test 1</h2>
+        <div className="container mx-auto py-10 px-4 md:py-10">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 1</h2>
             {stage === 'intro' && (
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col items-center">
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
@@ -219,9 +219,9 @@ const Test1 = () => {
                 <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Reading Section</h3>
                     {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q, index) => (
-                        <div key={q.id} className="mb-8">
-                            <p className="mb-2 whitespace-pre-line"><strong>Passage:</strong> {q.passage}</p>
-                            <div className='border p-2 rounded-lg'>
+                        <div key={q.id} className="mb-8 flex flex-col lg:flex-row gap-10">
+                            <p className="mb-2 whitespace-pre-line lg:w-[55%] overflow-y-scroll h-[35rem] p-2"><strong>Passage:</strong> {q.passage}</p>
+                            <div className='border p-2 rounded-lg lg:w-[45%]'>
                                 <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
                                 <ul className="list-none mb-4">
                                     {q.options.map((option, i) => (

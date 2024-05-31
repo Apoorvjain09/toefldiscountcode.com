@@ -65,12 +65,12 @@ export default function Sidebar() {
     initializeWithValue: false,
   });
   
-  const pathname = usePathname();
-  const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
+  // const pathname = usePathname();
+  // const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
 
-  if (isTestPage) {
-    return <SidebarMobile sidebarItems={sidebarItems} />;
-  }
+  // if (isTestPage) {
+  //   return <SidebarMobile sidebarItems={sidebarItems} />;
+  // }
 
   if (isDesktop) {
     return <SidebarDesktop sidebarItems={sidebarItems} />;

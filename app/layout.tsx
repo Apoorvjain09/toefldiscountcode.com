@@ -26,8 +26,8 @@ export default function RootLayout({
     }, 2000); // Simulate a 6-second loading time
   }, []);
 
-  const pathname = usePathname();
-  const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
+  // const pathname = usePathname();
+  // const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
 
   return (
     <ClerkProvider>
@@ -35,22 +35,12 @@ export default function RootLayout({
         <body>
           <LoadingSpinner loading={loading} />
           <main className="">
-            {isTestPage ? (
-              <div className="p-4">
-                <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-                  <Sidebar />
-                  {children}
-                </div>
-              </div>
-            ):(
               <div className="p-4 sm:ml-64">
                 <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
                   <Sidebar />
                   {children}
                 </div>
               </div>
-            )}
-
           </main>
         </body>
       </html>

@@ -484,15 +484,9 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                    {/* <section id="cta" className="py-20 bg-black text-white text-center">
-                        <div className="container mx-auto gap-10">
-                            <h2 className="text-3xl font-bold mb-4">Ready to Ace Your TOEFL Test?</h2>
-                            <a href="#signup" className="bg-white text-blue-600 py-2 px-4 rounded">Sign Up Now</a>
-                        </div>
-                    </section> */}
                 </div>
             ) : (
-                <div className="container mx-auto py-20">
+                <div className="container mx-auto py-20 p-2">
                     <h2 className="text-3xl font-bold mb-10 text-center">Available Tests</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {Array.from({ length: 10 }, (_, i) => (

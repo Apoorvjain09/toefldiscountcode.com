@@ -20,7 +20,7 @@ export default function RootLayout({
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect(() => { 
     setTimeout(() => {
       setLoading(false);
     }, 2000); // Simulate a 6-second loading time

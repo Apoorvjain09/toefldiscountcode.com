@@ -8,10 +8,13 @@ import SpeakingSection from './SpeakingSection';
 import ResultsDashboard from './ResultsDashboard';
 
 const Test1 = () => {
-    const [stage, setStage] = useState<'intro' | 'instructions' | 'reading' | 'readingQuestions' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('intro');
+    const [stage, setStage] = useState<'intro' | 'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('intro');
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState<number[]>(Array(20).fill(-1));
     const [listeningAnswers, setListeningAnswers] = useState<number[]>(Array(28).fill(-1));
+    const [selectedAnswers1, setSelectedAnswers1] = useState<number[]>([]);
+    const [selectedAnswers2, setSelectedAnswers2] = useState<number[]>([]);
+    const [totalScoreReading, setTotalScoreReading] = useState<number>(0);
     const [writingScores, setWritingScores] = useState<{ task1: { score: number; feedback: string } | null, task2: { score: number; feedback: string } | null }>({
         task1: null,
         task2: null,
@@ -37,10 +40,15 @@ const Test1 = () => {
         if (stage === 'instructions') {
             setStage('reading');
         } else if (stage === 'reading') {
-            setStage('readingQuestions');
-        } else if (stage === 'readingQuestions' && currentQuestion + 1 >= readingQuestions.length) {
+            setStage('readingPassage1');
+        } else if (stage === 'readingPassage1' && currentQuestion + 1 >= 9) {
+            setStage('readingSummaryQuestions1');
+        } else if (stage === 'readingSummaryQuestions1') {
+            setStage('readingPassage2');
+        } else if (stage === 'readingPassage2' && currentQuestion + 1 >= 19) {
+            setStage('readingSummaryQuestions2');
+        } else if (stage === 'readingSummaryQuestions2') {
             setStage('listeningInstructions');
-            setCurrentQuestion(0); // Reset current question for listening section
         } else if (stage === 'listeningInstructions') {
             setStage('listeningConversation1');
         } else if (stage === 'listeningConversation1') {
@@ -86,15 +94,30 @@ const Test1 = () => {
     };
 
     const calculateScore = () => {
+        console.log(answers)
         let readingScore = 0;
         let listeningScore = 0;
 
+        // Calculate Reading Score for Passage Questions
         readingQuestions.forEach((question, index) => {
-            if (answers[index] === question.answer) {
+            if (answers[index + 1] === question.answer) {
                 readingScore++;
             }
         });
 
+        const correctSummaryAnswers1 = readingQuestions.find(q => q.id === 10)?.summaryAnswer || [];
+        const correctSummaryAnswers2 = readingQuestions.find(q => q.id === 20)?.summaryAnswer || [];
+
+        // Check if selected summary answers match correct answers
+        console.log(selectedAnswers1)
+        if (arraysMatch(selectedAnswers1, correctSummaryAnswers1)) {
+            readingScore += 2;
+        }
+        if (arraysMatch(selectedAnswers2, correctSummaryAnswers2)) {
+            readingScore += 2;
+        }
+
+        // Calculate Listening Score
         listeningQuestions.forEach((question, index) => {
             if (listeningAnswers[index] === question.answer) {
                 listeningScore++;
@@ -102,9 +125,19 @@ const Test1 = () => {
         });
 
         const totalScore = readingScore + listeningScore;
+        setTotalScoreReading(totalScore);
         console.log('Reading Score:', readingScore);
         console.log('Listening Score:', listeningScore);
         console.log('Total Score:', totalScore);
+    };
+
+    // Helper function to check if two arrays contain the same elements (order-sensitive)
+    const arraysMatch = (arr1: number[], arr2: number[]) => {
+        if (arr1.length !== arr2.length) return false;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) return false;
+        }
+        return true;
     };
 
     useEffect(() => {
@@ -133,6 +166,58 @@ const Test1 = () => {
             ...prevScores,
             [`task${task}`]: evaluation,
         }));
+    };
+
+    const highlightText = (text: string, highlight?: string) => {
+        if (!highlight) return text;
+
+        // Trim any leading or trailing whitespace from the highlight text
+        const trimmedHighlight = highlight.trim();
+
+        // Split the passage into sentences.
+        const sentences = text.match(/[^.!?]+[.!?]*/g) || [text];
+
+        // Iterate through sentences to find and highlight the matching one.
+        return sentences.map((sentence, index) => {
+            if (sentence.includes(trimmedHighlight)) {
+                const parts = sentence.split(new RegExp(`(${trimmedHighlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
+                // console.log('Parts:', parts);
+                return (
+                    <span key={index}>
+                        {parts.map((part, index) =>
+                            part.toLowerCase() === trimmedHighlight.toLowerCase() ? (
+                                <span key={index} className="bg-yellow-200">{part}</span>
+                            ) : (
+                                part
+                            )
+                        )}
+                    </span>
+                );
+            }
+            return <span key={index}>{sentence}</span>;
+        });
+    };
+
+
+
+    const handleSummaryOptionClick1 = (optionIndex: number) => {
+        setSelectedAnswers1((prev) => {
+            if (prev.includes(optionIndex)) {
+                return prev.filter((index) => index !== optionIndex);
+            } else {
+                return [...prev, optionIndex];
+            }
+        });
+    };
+
+    const handleSummaryOptionClick2 = (optionIndex: number) => {
+        setSelectedAnswers2((prev) => {
+            if (prev.includes(optionIndex)) {
+                return prev.filter((index) => index !== optionIndex);
+            } else {
+                return [...prev, optionIndex];
+            }
+        });
     };
 
 
@@ -215,12 +300,14 @@ const Test1 = () => {
                     </div>
                 </div>
             )}
-            {stage === 'readingQuestions' && (
+            {stage === 'readingPassage1' && (
                 <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section</h3>
+                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 1</h3>
                     {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q, index) => (
                         <div key={q.id} className="mb-8 flex flex-col lg:flex-row gap-10">
-                            <p className="mb-2 whitespace-pre-line lg:w-[55%] overflow-y-scroll h-[35rem] p-2"><strong>Passage:</strong> {q.passage}</p>
+                            <p className="mb-2 whitespace-pre-line lg:w-[55%] overflow-y-scroll h-[35rem] p-2">
+                                <strong>Passage:</strong> {highlightText(q.passage, q.highlight)}
+                            </p>
                             <div className='border p-2 rounded-lg lg:w-[45%]'>
                                 <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
                                 <ul className="list-none mb-4">
@@ -228,9 +315,10 @@ const Test1 = () => {
                                         <li key={i} className="mb-1">
                                             <label className="flex items-center">
                                                 <input
-                                                    type="checkbox"
-                                                    checked={answers[currentQuestion] === i}
-                                                    onChange={() => handleOptionChange(currentQuestion, i)}
+                                                    type="radio"
+                                                    name={`question-${q.id}`}
+                                                    checked={answers[q.id] === i}
+                                                    onChange={() => handleOptionChange(q.id, i)}
                                                     className="form-checkbox"
                                                 />
                                                 <span className="ml-2">{option}</span>
@@ -244,15 +332,160 @@ const Test1 = () => {
                     <div className="text-center">
                         <button
                             onClick={() => {
-                                if (currentQuestion < readingQuestions.length - 1) {
+                                if (currentQuestion < 8) {
                                     setCurrentQuestion(currentQuestion + 1);
+                                    calculateScore()
                                 } else {
+                                    calculateScore()
+                                    setCurrentQuestion(currentQuestion + 1);
                                     handleContinueClick();
                                 }
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            {currentQuestion < readingQuestions.length - 1 ? 'Next' : 'Continue'}
+                            {currentQuestion < 8 ? 'Next' : 'Continue'}
+                        </button>
+                    </div>
+                </div>
+            )}
+            {stage === 'readingSummaryQuestions1' && (
+                <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
+                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 1 Summary</h3>
+                    {readingQuestions.slice(9, 10).map((q, index) => (
+                        <div key={q.id}>
+                            <p><strong>Directions:</strong> {q.instructions}</p>
+                            <p><strong>Introductory Sentence:</strong> {q.introductorySentence}</p>
+                            <div className="flex flex-wrap justify-evenly mt-4">
+                                <div className="sm:w-[45%]">
+                                    {q.options.map((option, i) => (
+                                        <div
+                                            key={i}
+                                            className={`p-2 mb-2 border rounded cursor-pointer ${selectedAnswers1.includes(i) ? 'bg-blue-200' : 'bg-white'}`}
+                                            onClick={() => handleSummaryOptionClick1(i)}
+                                        >
+                                            {option}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="sm:h-auto min-h-40 w-[100%] sm:w-[45%] bg-gray-200 p-2 rounded">
+                                    {selectedAnswers1.map((index) => (
+                                        <div
+                                            key={index}
+                                            className="p-2 mb-2 border rounded bg-white cursor-pointer"
+                                            onClick={() => handleSummaryOptionClick1(index)}
+                                        >
+                                            {q.options[index]}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="text-center mt-4">
+                        <button
+                            onClick={() => {
+                                setStage('readingPassage2');
+                                setCurrentQuestion(10);
+                                calculateScore()
+                            }}
+                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                        >
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            )}
+            {stage === 'readingPassage2' && (
+                <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
+                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 2</h3>
+                    {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q, index) => (
+                        <div key={q.id} className="mb-8 flex flex-col lg:flex-row gap-10">
+                            <p className="mb-2 whitespace-pre-line lg:w-[55%] overflow-y-scroll h-[35rem] p-2">
+                                <strong>Passage:</strong> {highlightText(q.passage, q.highlight)}
+                            </p>
+                            <div className='border p-2 rounded-lg lg:w-[45%]'>
+                                <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="radio"
+                                                    name={`question-${q.id}`}
+                                                    checked={answers[q.id] === i}
+                                                    onChange={() => handleOptionChange(q.id, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="text-center">
+                        <button
+                            onClick={() => {
+                                if (currentQuestion < 18) {
+                                    setCurrentQuestion(currentQuestion + 1);
+                                    calculateScore()
+                                } else {
+                                    handleContinueClick();
+                                    setCurrentQuestion(currentQuestion + 1);
+                                }
+                            }}
+                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                        >
+                            {currentQuestion < 9 ? 'Next' : 'Continue'}
+                        </button>
+                    </div>
+                </div>
+            )}
+            {stage === 'readingSummaryQuestions2' && (
+                <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
+                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 2 Summary</h3>
+                    {readingQuestions.slice(19, 20).map((q, index) => (
+                        <div key={q.id}>
+                            <p><strong>Directions:</strong> {q.instructions}</p>
+                            <p><strong>Introductory Sentence:</strong> {q.introductorySentence}</p>
+                            <div className="flex flex-wrap justify-evenly mt-4">
+                                <div className="sm:w-[45%]">
+                                    {q.options.map((option, i) => (
+                                        <div
+                                            key={i}
+                                            className={`p-2 mb-2 border rounded cursor-pointer ${selectedAnswers2.includes(i) ? 'bg-blue-200' : 'bg-white'}`}
+                                            onClick={() => handleSummaryOptionClick2(i)}
+                                        >
+                                            {option}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="sm:h-auto min-h-40 w-[100%] sm:w-[45%] bg-gray-200 p-2 rounded">
+                                    {selectedAnswers2.map((index) => (
+                                        <div
+                                            key={index}
+                                            className="p-2 mb-2 border rounded bg-white cursor-pointer"
+                                            onClick={() => handleSummaryOptionClick2(index)}
+                                        >
+                                            {q.options[index]}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="text-center mt-4">
+                        <button
+                            onClick={() => {
+                                calculateScore()
+                                setStage('resultsDashboard');
+                                // setStage('listeningInstructions');
+                                setCurrentQuestion(0);
+                            }}
+                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                        >
+                            Continue
                         </button>
                     </div>
                 </div>
@@ -278,47 +511,51 @@ const Test1 = () => {
                         </button>
                     </div>
                 </div>
-            )}
-            {stage === 'listeningConversation1' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 1</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <ReactAudioPlayer
-                        src="/assets/T1C1.mp4"
-                        controls
-                    />
-                    <div className="text-center mt-10">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions1' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(0, 6).map((q, index) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[index] === i}
-                                                onChange={() => handleListeningOptionChange(index, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
+            )
+            }
+            {
+                stage === 'listeningConversation1' && (
+                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 1</h3>
+                        <p className="mb-4">[Use Headphones For Better Quality]</p>
+                        <ReactAudioPlayer
+                            src="/assets/T1C1.mp4"
+                            controls
+                        />
+                        <div className="text-center mt-10">
+                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                                Continue
+                            </button>
                         </div>
-                    ))}
-                    <div className="text-center">
-                        {/* <button
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningQuestions1' && (
+                    <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
+                        {listeningQuestions.slice(0, 6).map((q, index) => (
+                            <div key={q.id} className="mb-8 border rounded-lg p-2">
+                                <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={listeningAnswers[index] === i}
+                                                    onChange={() => handleListeningOptionChange(index, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="text-center">
+                            {/* <button
                             onClick={() => {
                                 if (currentQuestion < 6) {
                                     setCurrentQuestion(currentQuestion + 1);
@@ -330,59 +567,63 @@ const Test1 = () => {
                         >
                             {currentQuestion < 6 ? 'Next' : 'Continue'}
                         </button> */}
-                        <button
-                            onClick={() => {
-                                {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningConversation2' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 2</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <ReactAudioPlayer
-                        src="/assets/T1C2.mp4"
-                        controls
-                    />
-                    <div className="text-center mt-10">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions2' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(6, 12).map((q, index) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[index + 6] === i}
-                                                onChange={() => handleListeningOptionChange(index + 6, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
+                            <button
+                                onClick={() => {
+                                    {
+                                        handleContinueClick();
+                                    }
+                                }}
+                                className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                            >
+                                {'Continue'}
+                            </button>
                         </div>
-                    ))}
-                    <div className="text-center">
-                        {/* <button
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningConversation2' && (
+                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 2</h3>
+                        <p className="mb-4">[Use Headphones For Better Quality]</p>
+                        <ReactAudioPlayer
+                            src="/assets/T1C2.mp4"
+                            controls
+                        />
+                        <div className="text-center mt-10">
+                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningQuestions2' && (
+                    <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
+                        {listeningQuestions.slice(6, 12).map((q, index) => (
+                            <div key={q.id} className="mb-8 border rounded-lg p-2">
+                                <p className="mb-2"><strong>Question {index + 1}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={listeningAnswers[index + 6] === i}
+                                                    onChange={() => handleListeningOptionChange(index + 6, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="text-center">
+                            {/* <button
                             onClick={() => {
                                 if (currentQuestion < 12) {
                                     setCurrentQuestion(currentQuestion + 1);
@@ -394,59 +635,63 @@ const Test1 = () => {
                         >
                             {currentQuestion < 12 ? 'Next' : 'Continue'}
                         </button> */}
-                        <button
-                            onClick={() => {
-                                {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningConversation3' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 3</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <ReactAudioPlayer
-                        src="/assets/T1C3.mp3"
-                        controls
-                    />
-                    <div className="text-center mt-10">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions3' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(12, 18).map((q, index) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {index + 13}:</strong> {q.question}</p>
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[index + 12] === i}
-                                                onChange={() => handleListeningOptionChange(index + 12, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
+                            <button
+                                onClick={() => {
+                                    {
+                                        handleContinueClick();
+                                    }
+                                }}
+                                className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                            >
+                                {'Continue'}
+                            </button>
                         </div>
-                    ))}
-                    <div className="text-center">
-                        {/* <button
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningConversation3' && (
+                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 3</h3>
+                        <p className="mb-4">[Use Headphones For Better Quality]</p>
+                        <ReactAudioPlayer
+                            src="/assets/T1C3.mp3"
+                            controls
+                        />
+                        <div className="text-center mt-10">
+                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningQuestions3' && (
+                    <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
+                        {listeningQuestions.slice(12, 18).map((q, index) => (
+                            <div key={q.id} className="mb-8 border rounded-lg p-2">
+                                <p className="mb-2"><strong>Question {index + 13}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={listeningAnswers[index + 12] === i}
+                                                    onChange={() => handleListeningOptionChange(index + 12, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="text-center">
+                            {/* <button
                             onClick={() => {
                                 if (currentQuestion < 18) {
                                     setCurrentQuestion(currentQuestion + 1);
@@ -458,127 +703,136 @@ const Test1 = () => {
                         >
                             {currentQuestion < 18 ? 'Next' : 'Continue'}
                         </button> */}
-                        <button
-                            onClick={() => {
-                                {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningConversation4' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 4</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <ReactAudioPlayer
-                        src="/assets/T1C4.mp3"
-                        controls
-                    />
-                    <div className="text-center mt-10">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions4' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(18, 23).map((q, index) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {index + 19}:</strong> {q.question}</p>
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[index + 18] === i}
-                                                onChange={() => handleListeningOptionChange(index + 18, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
+                            <button
+                                onClick={() => {
+                                    {
+                                        handleContinueClick();
+                                    }
+                                }}
+                                className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                            >
+                                {'Continue'}
+                            </button>
                         </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {'Continue'}
-                        </button>
                     </div>
-                </div>
-            )}
-            {stage === 'listeningConversation5' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <ReactAudioPlayer
-                        src="/assets/T1C5.mp3"
-                        controls
-                    />
-                    <div className="text-center mt-10">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions5' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(23, 28).map((q, index) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {index + 24}:</strong> {q.question}</p>
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[index + 23] === i}
-                                                onChange={() => handleListeningOptionChange(index + 23, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
+                )
+            }
+            {
+                stage === 'listeningConversation4' && (
+                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 4</h3>
+                        <p className="mb-4">[Use Headphones For Better Quality]</p>
+                        <ReactAudioPlayer
+                            src="/assets/T1C4.mp3"
+                            controls
+                        />
+                        <div className="text-center mt-10">
+                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                                Continue
+                            </button>
                         </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {'Continue'}
-                        </button>
                     </div>
-                </div>
-            )}
+                )
+            }
+            {
+                stage === 'listeningQuestions4' && (
+                    <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
+                        {listeningQuestions.slice(18, 23).map((q, index) => (
+                            <div key={q.id} className="mb-8 border rounded-lg p-2">
+                                <p className="mb-2"><strong>Question {index + 19}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={listeningAnswers[index + 18] === i}
+                                                    onChange={() => handleListeningOptionChange(index + 18, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="text-center">
+                            <button
+                                onClick={() => {
+                                    {
+                                        handleContinueClick();
+                                    }
+                                }}
+                                className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                            >
+                                {'Continue'}
+                            </button>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningConversation5' && (
+                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
+                        <p className="mb-4">[Use Headphones For Better Quality]</p>
+                        <ReactAudioPlayer
+                            src="/assets/T1C5.mp3"
+                            controls
+                        />
+                        <div className="text-center mt-10">
+                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                stage === 'listeningQuestions5' && (
+                    <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
+                        {listeningQuestions.slice(23, 28).map((q, index) => (
+                            <div key={q.id} className="mb-8 border rounded-lg p-2">
+                                <p className="mb-2"><strong>Question {index + 24}:</strong> {q.question}</p>
+                                <ul className="list-none mb-4">
+                                    {q.options.map((option, i) => (
+                                        <li key={i} className="mb-1">
+                                            <label className="flex items-center">
+                                                <input
+                                                    type="checkbox"
+                                                    checked={listeningAnswers[index + 23] === i}
+                                                    onChange={() => handleListeningOptionChange(index + 23, i)}
+                                                    className="form-checkbox"
+                                                />
+                                                <span className="ml-2">{option}</span>
+                                            </label>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="text-center">
+                            <button
+                                onClick={() => {
+                                    {
+                                        handleContinueClick();
+                                    }
+                                }}
+                                className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                            >
+                                {'Continue'}
+                            </button>
+                        </div>
+                    </div>
+                )
+            }
             {stage === 'writing' && <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />}
             {stage === 'speaking' && <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />}
-            {stage === 'resultsDashboard' && <ResultsDashboard readingAnswers={answers} writingScores={writingScores} speakingScores={speakingScores} />}
-        </div>
+            {stage === 'resultsDashboard' && <ResultsDashboard summaryAnswers1={selectedAnswers1} summaryAnswers2={selectedAnswers2} readingAnswers={answers} totalScoreReading={totalScoreReading} writingScores={writingScores} speakingScores={speakingScores} />}
+        </div >
     );
 };
 

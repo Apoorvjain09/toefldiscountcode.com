@@ -4,6 +4,9 @@ import WritingSection from './WritingSection';
 
 interface ResultsDashboardProps {
     readingAnswers: number[];
+    summaryAnswers1: number[];
+    summaryAnswers2: number[];
+    totalScoreReading: number;
     writingScores: {
         task1: { score: number; feedback: string } | null,
         task2: { score: number; feedback: string } | null
@@ -17,22 +20,26 @@ interface ResultsDashboardProps {
 }
 
 
-
-
-const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, writingScores, speakingScores }) => {
+const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, writingScores, speakingScores }) => {
+    console.log(totalScoreReading)
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
 
     const handleSectionClick = (section: 'reading' | 'listening' | 'writing' | 'speaking') => {
         setSelectedSection(section);
     };
 
-    const renderCorrectAnswer = (correctAnswer: number | number[], options: string[]) => {
+    const renderCorrectAnswer = (correctAnswer: number | number[] | undefined, options: string[]) => {
+        if (correctAnswer === undefined) {
+            return "No Answer";
+        }
         if (Array.isArray(correctAnswer)) {
             return correctAnswer.map((index) => options[index]).join(', ');
         } else {
             return options[correctAnswer];
         }
     };
+
+
 
     return (
         <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center gap-4">
@@ -54,21 +61,81 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, wri
                     </div>
                     {selectedSection === 'reading' && (
                         <div>
-                            <h4 className="text-lg font-bold mb-4 mt-10">Reading Section Results</h4>
-                            {readingQuestions.map((q, index) => (
-                                <div key={q.id} className="mb-4 border p-2 rounded-2xl">
-                                    <p><strong>Question {index + 1}:</strong> {q.question}</p>
-                                    <ul className="list-disc ml-6 mb-2">
-                                        {q.options.map((option, i) => (
-                                            <li key={i}>{option}</li>
-                                        ))}
-                                    </ul>
-                                    <p><strong>Your Answer:</strong> {renderCorrectAnswer(readingAnswers[index], q.options)}</p>
-                                    <p><strong>Correct Answer:</strong> {renderCorrectAnswer(q.answer, q.options)}</p>
-                                </div>
-                            ))}
+                            <h4 className="text-lg font-bold mb-4 mt-10">Reading Section Results (Total Score: {totalScoreReading}/22)</h4>
+                            {readingQuestions.map((q, index) => {
+                                if (q.id === 10) {
+                                    const question10 = readingQuestions.find(q => q.id === 10);
+                                    return (
+                                        <div key={q.id} className="mb-4 border p-2 rounded-2xl">
+                                            <h4 className="text-lg font-bold mb-4">Summary Questions - Passage 1 [0:A, 1:B, 2:C, 3:D ,4:E ,5:F]</h4>
+                                            <ul className="list-disc ml-6 mb-2">
+                                                {summaryAnswers1.map((answer, idx) => {
+                                                    const isCorrect = question10?.summaryAnswer?.includes(answer);
+                                                    return (
+                                                        <li
+                                                            key={idx}
+                                                            style={{
+                                                                backgroundColor: isCorrect ? 'lightgreen' : 'lightcoral',
+                                                                padding: '5px',
+                                                                borderRadius: '5px',
+                                                                marginBottom: '10px'
+                                                            }}
+                                                        >
+                                                            Answer {idx + 1}: {answer}
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                            <strong>Correct Answer:</strong> <div dangerouslySetInnerHTML={{ __html: question10?.summaryAnswer?.map((idx: number) => question10.options[idx]).join('<br/>') || 'No Correct Answer' }} />
+                                        </div>
+                                    );
+                                } else if (q.id === 20) {
+                                    const question20 = readingQuestions.find(q => q.id === 20);
+                                    return (
+                                        <div key={q.id} className="mb-4 border p-2 rounded-2xl">
+                                            <h4 className="text-lg font-bold mb-4">Summary Questions - Passage 2 [0:A, 1:B, 2:C, 3:D ,4:E ,5:F]</h4>
+                                            <ul className="list-disc ml-6 mb-2">
+                                                {summaryAnswers2.map((answer, idx) => {
+                                                    const isCorrect = question20?.summaryAnswer?.includes(answer);
+                                                    return (
+                                                        <li
+                                                            key={idx}
+                                                            style={{
+                                                                backgroundColor: isCorrect ? 'lightgreen' : 'lightcoral',
+                                                                padding: '5px',
+                                                                borderRadius: '5px',
+                                                                marginBottom: '10px'
+                                                            }}
+                                                        >
+                                                            Answer {idx + 1}: {answer}
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                            <strong>Correct Answer:</strong> <div dangerouslySetInnerHTML={{ __html: question20?.summaryAnswer?.map((idx: number) => question20.options[idx]).join('<br/>') || 'No Correct Answer' }} />
+                                        </div>
+                                    );
+                                } else {
+                                    const isCorrect = readingAnswers[index + 1] === q.answer;
+                                    return (
+                                        <div key={q.id} className="mb-4 border p-2 rounded-2xl">
+                                            <p><strong>Question {index + 1}:</strong> {q.question}</p>
+                                            <ul className="list-disc ml-6 mb-2">
+                                                {q.options.map((option, i) => (
+                                                    <li key={i}>{option}</li>
+                                                ))}
+                                            </ul>
+                                            <p style={{ backgroundColor: isCorrect ? 'lightgreen' : 'lightcoral', padding: '5px', borderRadius: '5px' }}>
+                                                <strong>Your Answer:</strong> {renderCorrectAnswer(readingAnswers[index + 1], q.options)}
+                                            </p>
+                                            <p><strong>Correct Answer:</strong> {renderCorrectAnswer(q.answer, q.options)}</p>
+                                        </div>
+                                    );
+                                }
+                            })}
                         </div>
                     )}
+
                     {selectedSection === 'listening' && (
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">Listening Section Results</h4>

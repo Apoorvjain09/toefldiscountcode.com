@@ -6,7 +6,7 @@ function Page() {
   const { isSignedIn } = useAuth();
   return (
     <div className='xl:mt-10 xl:mb-10 flex gap-7 flex-wrap items-center justify-center'>
-      {isSignedIn ? <div><UserProfile /></div> : <div><SignIn /></div>}
+      {isSignedIn ? <div><UserProfile /></div> : <SignIn />}
     </div>
   );
 }

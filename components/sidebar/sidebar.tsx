@@ -15,62 +15,56 @@ import { SidebarItems } from '@/types';
 import { SidebarButton } from './sidebar-button';
 import { useMediaQuery } from 'usehooks-ts';
 import { SidebarMobile } from './sidebar-mobile';
-import { SignInButton } from '@clerk/nextjs';
+import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'; 
 
-const sidebarItems: SidebarItems = {
-  links: [
-    { label: 'Mock Tests', href: '/', icon: Home },
-    { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
-    { label: 'Score Reporting', href: 'score-reporting', icon: Mail },
-    {
-      href: '/book',
-      icon: List,
-      label: 'Books/ Materials',
-    },
-    {
-      href: '/study-partner',
-      icon: Bookmark,
-      label: 'Find study partner',
-    },
-    {
-      href: '/university-shortlisting',
-      icon: Users,
-      label: 'University Shortlisting',
-    },
-    {
-      href: '/profile',
-      icon: User,
-      label: 'Profile',
-    },
-  ],
-  extras: (
-    <div className='flex flex-col gap-2'>
-      <SidebarButton icon={MoreHorizontal} className='w-full'>
-        <Link href="/discover">Discover</Link>
-      </SidebarButton>
-      <SidebarButton
-        className='w-[90%] justify-center text-white bg-black'
-        variant='default'
-      >
-        Sign In
-      </SidebarButton>
-    </div>
-  ),
-};
-
 export default function Sidebar() {
+  const { isSignedIn } = useUser();
   const isDesktop = useMediaQuery('(min-width: 640px)', {
     initializeWithValue: false,
   });
-  
-  // const pathname = usePathname();
-  // const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
 
-  // if (isTestPage) {
-  //   return <SidebarMobile sidebarItems={sidebarItems} />;
-  // }
+  const sidebarItems: SidebarItems = {
+    links: [
+      { label: 'Mock Tests', href: '/', icon: Home },
+      { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
+      { label: 'Score Reporting', href: 'score-reporting', icon: Mail },
+      {
+        href: '/book',
+        icon: List,
+        label: 'Books/ Materials',
+      },
+      {
+        href: '/study-partner',
+        icon: Bookmark,
+        label: 'Find study partner',
+      },
+      {
+        href: '/university-shortlisting',
+        icon: Users,
+        label: 'University Shortlisting',
+      },
+      {
+        href: '/profile',
+        icon: User,
+        label: 'Profile',
+      },
+    ],
+    extras: (
+      <div className='flex flex-col gap-2'>
+        <SidebarButton icon={MoreHorizontal} className='w-full'>
+          <Link href="/discover">Discover</Link>
+        </SidebarButton>
+        <SidebarButton
+          className='w-[90%] justify-center text-white bg-black'
+          variant='default'
+        >
+          {isSignedIn ? <SignOutButton /> : <Link href="/profile">Sign In</Link>}
+        </SidebarButton>
+      </div>
+    ),
+  };
 
   if (isDesktop) {
     return <SidebarDesktop sidebarItems={sidebarItems} />;

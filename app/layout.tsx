@@ -23,7 +23,7 @@ export default function RootLayout({
   useEffect(() => { 
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // Simulate a 6-second loading time
+    }, 1000); // Simulate a 6-second loading time
   }, []);
 
   // const pathname = usePathname();

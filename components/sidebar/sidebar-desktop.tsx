@@ -17,7 +17,6 @@ interface SidebarDesktopProps {
 export function SidebarDesktop(props: SidebarDesktopProps) {
   const pathname = usePathname();
   const { isSignedIn, user }= useUser();
-  // const user = await currentUser();
 
   return (
     <aside className='w-[270px] max-w-xs h-screen fixed left-0 top-0 z-40 mt-1'>
@@ -48,7 +47,7 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
                       <Avatar className='h-7 w-7'>
                         {isSignedIn ? <UserButton/> : <AvatarImage src='https://github.com/max-programming.png' /> }
                       </Avatar>
-                        {isSignedIn ? <span>{user?.firstName}</span> :  <span>Max Programming</span> }
+                        {isSignedIn ? <span>{user?.firstName}</span> :  <span>Guest 100849</span> }
                     </div>
                     <MoreHorizontal size={20} />
                   </div>

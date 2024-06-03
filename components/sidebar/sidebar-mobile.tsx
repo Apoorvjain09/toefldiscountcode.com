@@ -16,6 +16,7 @@ import { usePathname } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { useUser, UserButton} from '@clerk/nextjs';
 
 interface SidebarMobileProps {
   sidebarItems: SidebarItems;
@@ -23,7 +24,7 @@ interface SidebarMobileProps {
 
 export function SidebarMobile(props: SidebarMobileProps) {
   const pathname = usePathname();
-
+  const { isSignedIn, user }= useUser();
   return (
     <Sheet >
       <SheetTrigger asChild>
@@ -65,12 +66,11 @@ export function SidebarMobile(props: SidebarMobileProps) {
               <DrawerTrigger asChild>
                 <Button variant='ghost' className='w-full justify-start'>
                   <div className='flex justify-between items-center w-full'>
-                    <div className='flex gap-2'>
-                      <Avatar className='h-5 w-5'>
-                        <AvatarImage src='https://github.com/max-programming.png' />
-                        <AvatarFallback>Max Programming</AvatarFallback>
+                    <div className='flex gap-2 items-center'>
+                      <Avatar className=''>
+                        {isSignedIn ? <UserButton/> : <AvatarImage src='https://github.com/max-programming.png' /> }
                       </Avatar>
-                      <span>Max Programming</span>
+                      {isSignedIn ? <span>{user?.firstName}</span> :  <span>Guest 100849</span> }
                     </div>
                     <MoreHorizontal size={20} />
                   </div>

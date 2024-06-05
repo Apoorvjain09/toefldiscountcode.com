@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState, ChangeEvent } from "react";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import Image from "next/image";
-import VideoConferencingRoom from "@/app/study-partner/VideoConferencingRoom"
+import { useUser } from "@clerk/clerk-react";
+import axios from 'axios';
+import VideoConferencingRoom from "./VideoConferencingRoom";
 
 interface FormData {
   location: string;
@@ -22,10 +22,10 @@ const steps: Step[] = [
   { id: 3, question: "When are you planning to give TOEFL?", key: "examDate" },
 ];
 
-
 export default function App() {
   const [stage, setStage] = useState<'home' | 'form' | 'video'>('home');
   const [onlineCount, setOnlineCount] = useState(23044);
+  const { isSignedIn } = useUser();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +36,11 @@ export default function App() {
   }, []);
 
   const handleButtonClick = () => {
-    setStage('form');
+    if (!isSignedIn) {
+      window.location.href = '/profile';
+      return;
+    }
+    else setStage('form');
   };
 
   return (
@@ -74,18 +78,14 @@ export default function App() {
   );
 }
 
-
-interface FormProps {
-  setStage: React.Dispatch<React.SetStateAction<'home' | 'form' | 'video'>>;
-}
-
-function Form({ setStage }: FormProps) {
+function Form({ setStage }: { setStage: React.Dispatch<React.SetStateAction<'home' | 'form' | 'video'>> }) {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<FormData>({
-    location: "",
-    bookedExam: "",
-    examDate: "",
+    location: '',
+    bookedExam: '',
+    examDate: '',
   });
+  const { user } = useUser();
 
   const handleNext = () => {
     setCurrentStep((prevStep) => prevStep + 1);
@@ -104,8 +104,19 @@ function Form({ setStage }: FormProps) {
     }));
   };
 
-  const handleSubmit = () => {
-    setStage('video');
+  const handleSubmit = async () => {
+    if (!user) return;
+    try {
+      await axios.post('/api/updateUserMetadata', {
+        userId: user.id,
+        location: formData.location,
+        bookedExam: formData.bookedExam,
+        examDate: formData.examDate,
+      });
+      setStage('video');
+    } catch (error) {
+      console.error('Error saving form data:', error);
+    }
   };
 
   return (
@@ -145,12 +156,18 @@ function Form({ setStage }: FormProps) {
               className="w-full p-2 border border-gray-300 rounded mb-4"
             />
           </div>
-          
           <div className="flex justify-between">
             {currentStep < steps.length - 1 ? (
-              <button onClick={handleNext} className="bg-blue-500 text-white py-2 px-4 rounded">
-                Next
-              </button>
+              <>
+                <button onClick={handleNext} className="bg-blue-500 text-white py-2 px-4 rounded">
+                  Next
+                </button>
+                {currentStep < steps.length - 2 && (
+                  <button onClick={() => { setStage('video') }} className="bg-blue-500 text-white py-2 px-4 rounded">
+                    Skip
+                  </button>
+                )}
+              </>
             ) : (
               <button onClick={handleSubmit} className="bg-green-500 text-white py-2 px-4 rounded">
                 Submit
@@ -162,13 +179,6 @@ function Form({ setStage }: FormProps) {
               </button>
             )}
           </div>
-          {/* <div className="flex justify-end mt-4">
-            {currentStep < steps.length - 1 && (
-              <button className="bg-purple-500 text-white py-2 px-4 rounded">
-                Skip
-              </button>
-            )}
-          </div> */}
         </div>
         <div className="hidden md:flex md:items-center md:justify-center md:w-1/2">
           <img src="/assets/study.svg" alt="Study Illustration" className="w-full h-auto" />

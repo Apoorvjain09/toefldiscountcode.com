@@ -1,13 +1,8 @@
 import React from 'react';
 import { ClipLoader } from 'react-spinners';
 
-interface LoadingSpinnerProps {
-  loading: boolean;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ loading }) => {
+const LoadingSpinner: React.FC = () => {
   return (
-    loading && (
       <div className="bg-white dark:bg-gray-800 flex justify-center items-center w-screen h-screen p-5">
         <div className="border border-gray-200 p-2 rounded-md shadow-lg shadow-orange-300">
           <div className="flex items-end gap-1">
@@ -46,8 +41,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ loading }) => {
           </div>
         </div>
       </div>
-
-    )
   );
 };
 

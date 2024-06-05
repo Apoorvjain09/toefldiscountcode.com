@@ -444,7 +444,7 @@ export default function Page() {
                             </div>
                         </div>
                     </section>
-                    <LampContainer>
+                    {/* <LampContainer>
                         <motion.h1
                             initial={{ opacity: 0.5, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -457,7 +457,7 @@ export default function Page() {
                         >
                             Increase your <br /> Toefl Score <br /> the right way
                         </motion.h1>
-                    </LampContainer>
+                    </LampContainer> */}
                     <div className="flex flex-row pt-5 pb-5 h-[70vh] sm:h-full bg-black relative w-full">
                         <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[100vh] px-4">
                             <motion.div
@@ -475,7 +475,7 @@ export default function Page() {
                                 className="div"
                             >
                                 <h2 className="text-center mt-10 text-xl md:text-4xl font-bold text-white">
-                                    go GLOBAL with TOEFL
+                                    Go GLOBAL with TOEFL
                                 </h2>
                             </motion.div>
                             <div className="absolute w-full inset-x-0 h-40 pointer-events-none select-none z-40" />

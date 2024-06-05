@@ -7,6 +7,8 @@ interface ResultsDashboardProps {
     summaryAnswers1: number[];
     summaryAnswers2: number[];
     totalScoreReading: number;
+    totalScoreListening: number;
+    listeningAnswers: number[],
     writingScores: {
         task1: { score: number; feedback: string } | null,
         task2: { score: number; feedback: string } | null
@@ -20,7 +22,7 @@ interface ResultsDashboardProps {
 }
 
 
-const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, writingScores, speakingScores }) => {
+const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, totalScoreListening, listeningAnswers, writingScores, speakingScores }) => {
     console.log(totalScoreReading)
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
 
@@ -138,19 +140,28 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
 
                     {selectedSection === 'listening' && (
                         <div>
-                            <h4 className="text-lg font-bold mb-4 mt-10">Listening Section Results</h4>
-                            {listeningQuestions.map((q, index) => (
-                                <div key={q.id} className="mb-4 border p-2 rounded-2xl">
-                                    <p><strong>Question {index + 1}:</strong> {q.question}</p>
-                                    <ul className="list-disc ml-6 mb-2">
-                                        {q.options.map((option, i) => (
-                                            <li key={i}>{option}</li>
-                                        ))}
-                                    </ul>
-                                    <p><strong>Your Answer:</strong> {/* Show the user's answer here */}</p>
-                                    <p><strong>Correct Answer:</strong> {renderCorrectAnswer(q.answer, q.options)}</p>
-                                </div>
-                            ))}
+                            <h4 className="text-lg font-bold mb-4 mt-10">Listening Section Results (Total Score: {totalScoreListening}/28)</h4>
+                            {listeningQuestions.map((q, index) => {
+                                const isCorrect = listeningAnswers[index] === q.answer;
+                                return (
+                                    <div key={q.id} className="mb-4 border p-2 rounded-2xl">
+                                        <p><strong>Question {index + 1}:</strong> {q.question}</p>
+                                        <ul className="list-disc ml-6 mb-2">
+                                            {q.options.map((option, i) => (
+                                                <li key={i}>{option}</li>
+                                            ))}
+                                        </ul>
+                                        <p style={{
+                                            backgroundColor: isCorrect ? 'lightgreen' : 'lightcoral',
+                                            padding: '5px',
+                                            borderRadius: '5px'
+                                        }}>
+                                            <strong>Your Answer:</strong> {q.options[listeningAnswers[index]]}
+                                        </p>
+                                        <p><strong>Correct Answer:</strong> {renderCorrectAnswer(q.answer, q.options)}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     )}
                     {selectedSection === 'writing' && (

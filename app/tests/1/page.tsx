@@ -15,6 +15,7 @@ const Test1 = () => {
     const [selectedAnswers1, setSelectedAnswers1] = useState<number[]>([]);
     const [selectedAnswers2, setSelectedAnswers2] = useState<number[]>([]);
     const [totalScoreReading, setTotalScoreReading] = useState<number>(0);
+    const [totalScoreListening, setTotalScoreListening] = useState<number>(0);
     const [writingScores, setWritingScores] = useState<{ task1: { score: number; feedback: string } | null, task2: { score: number; feedback: string } | null }>({
         task1: null,
         task2: null,
@@ -126,6 +127,7 @@ const Test1 = () => {
 
         const totalScore = readingScore + listeningScore;
         setTotalScoreReading(totalScore);
+        setTotalScoreListening(listeningScore);
         console.log('Reading Score:', readingScore);
         console.log('Listening Score:', listeningScore);
         console.log('Total Score:', totalScore);
@@ -134,9 +136,14 @@ const Test1 = () => {
     // Helper function to check if two arrays contain the same elements (order-sensitive)
     const arraysMatch = (arr1: number[], arr2: number[]) => {
         if (arr1.length !== arr2.length) return false;
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i] !== arr2[i]) return false;
+    
+        const sortedArr1 = [...arr1].sort();
+        const sortedArr2 = [...arr2].sort();
+    
+        for (let i = 0; i < sortedArr1.length; i++) {
+            if (sortedArr1[i] !== sortedArr2[i]) return false;
         }
+    
         return true;
     };
 
@@ -236,7 +243,7 @@ const Test1 = () => {
                     <div className="flex flex-col md:flex-row flex-wrap justify-around gap-4 md:gap-6 lg:gap-8 w-full">
                         <a href="#" className="bg-green-600 text-white py-2 px-4 rounded inline-block text-center">Reading</a>
                         <button onClick={() => setStage('writing')} className="bg-yellow-600 text-white py-2 px-4 rounded inline-block text-center">Writing</button>
-                        <a href="#" className="bg-red-600 text-white py-2 px-4 rounded inline-block text-center">Listening</a>
+                        <button onClick={() => setStage('listeningInstructions')} className="bg-red-600 text-white py-2 px-4 rounded inline-block text-center">Listening</button>
                         <button onClick={() => setStage("speaking")} className="bg-purple-600 text-white py-2 px-4 rounded inline-block text-center">Speaking</button>
                     </div>
                 </div>
@@ -479,8 +486,8 @@ const Test1 = () => {
                         <button
                             onClick={() => {
                                 calculateScore()
-                                setStage('resultsDashboard');
-                                // setStage('listeningInstructions');
+                                // setStage('resultsDashboard');
+                                setStage('listeningInstructions');
                                 setCurrentQuestion(0);
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
@@ -555,22 +562,11 @@ const Test1 = () => {
                             </div>
                         ))}
                         <div className="text-center">
-                            {/* <button
-                            onClick={() => {
-                                if (currentQuestion < 6) {
-                                    setCurrentQuestion(currentQuestion + 1);
-                                } else {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentQuestion < 6 ? 'Next' : 'Continue'}
-                        </button> */}
                             <button
                                 onClick={() => {
                                     {
                                         handleContinueClick();
+                                        calculateScore()
                                     }
                                 }}
                                 className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
@@ -623,22 +619,11 @@ const Test1 = () => {
                             </div>
                         ))}
                         <div className="text-center">
-                            {/* <button
-                            onClick={() => {
-                                if (currentQuestion < 12) {
-                                    setCurrentQuestion(currentQuestion + 1);
-                                } else {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentQuestion < 12 ? 'Next' : 'Continue'}
-                        </button> */}
                             <button
                                 onClick={() => {
                                     {
                                         handleContinueClick();
+                                        calculateScore()
                                     }
                                 }}
                                 className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
@@ -691,22 +676,11 @@ const Test1 = () => {
                             </div>
                         ))}
                         <div className="text-center">
-                            {/* <button
-                            onClick={() => {
-                                if (currentQuestion < 18) {
-                                    setCurrentQuestion(currentQuestion + 1);
-                                } else {
-                                    handleContinueClick();
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentQuestion < 18 ? 'Next' : 'Continue'}
-                        </button> */}
                             <button
                                 onClick={() => {
                                     {
                                         handleContinueClick();
+                                        calculateScore()
                                     }
                                 }}
                                 className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
@@ -763,6 +737,7 @@ const Test1 = () => {
                                 onClick={() => {
                                     {
                                         handleContinueClick();
+                                        calculateScore()
                                     }
                                 }}
                                 className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
@@ -818,6 +793,8 @@ const Test1 = () => {
                             <button
                                 onClick={() => {
                                     {
+                                        calculateScore()
+                                        // setStage("resultsDashboard")
                                         handleContinueClick();
                                     }
                                 }}
@@ -831,7 +808,7 @@ const Test1 = () => {
             }
             {stage === 'writing' && <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />}
             {stage === 'speaking' && <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />}
-            {stage === 'resultsDashboard' && <ResultsDashboard summaryAnswers1={selectedAnswers1} summaryAnswers2={selectedAnswers2} readingAnswers={answers} totalScoreReading={totalScoreReading} writingScores={writingScores} speakingScores={speakingScores} />}
+            {stage === 'resultsDashboard' && <ResultsDashboard summaryAnswers1={selectedAnswers1} summaryAnswers2={selectedAnswers2} readingAnswers={answers} totalScoreReading={totalScoreReading} totalScoreListening={totalScoreListening} listeningAnswers={listeningAnswers} writingScores={writingScores} speakingScores={speakingScores} />}
         </div >
     );
 };

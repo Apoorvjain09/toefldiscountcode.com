@@ -58,7 +58,7 @@ export const readingQuestions = [
         
         [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        highlight:"They would not",
+        highlight: "They would not",
         question: "The word 'they' in paragraph 2 refers to:",
         options: [
             "Proponents",
@@ -133,7 +133,7 @@ export const readingQuestions = [
             "It was supported by successful attempts at replicating how the Rapa Nui people may have rolled the statues on logs.",
             "It provides conclusive evidence that the Rapa Nui people used log-rolling techniques to move the moai.",
             "With all the variables taken into account, there still wasn't enough to provide reasonable justification for the log-rolling method."
-        ],  
+        ],
         answer: 2
     },
     {
@@ -171,7 +171,7 @@ export const readingQuestions = [
         
         [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        highlight:"to be abandoned in",
+        highlight: "to be abandoned in",
         question: "The word 'abandoned' in paragraph 5 is closest in meaning to:",
         options: [
             "damaged",
@@ -228,7 +228,7 @@ export const readingQuestions = [
             "F.Some statues were not, in fact, transported very far from the quarries where they were constructed.",
         ],
         answers: 10,
-        summaryAnswer: [0,1,2]
+        summaryAnswer: [0, 1, 2]
     },
     // Second passage
     {
@@ -251,7 +251,7 @@ export const readingQuestions = [
         [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
         question: "Which of the following best expresses the essential information in the highlighted sentence? Incorrect answer choices change the meaning in important ways or leave out essential information.",
-        highlight:"But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity.",
+        highlight: "But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity.",
         options: [
             "The word “revolution” is somewhat misleading because agriculture was not adopted all at once.",
             "Agriculture was an opportunity for sudden and rapid development, which is why we call it a “revolution.”",
@@ -311,7 +311,7 @@ export const readingQuestions = [
 
         [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        highlight:"to store them , which",
+        highlight: "to store them , which",
         question: "The word 'them' in paragraph 4 refers to:",
         options: [
             "People",
@@ -452,7 +452,7 @@ export const readingQuestions = [
 
         [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        highlight:"often heralded as a",
+        highlight: "often heralded as a",
         question: "The word 'heralded' in paragraph 7 is closest in meaning to:",
         options: [
             "To describe the construction methods of the Great Wall",
@@ -521,7 +521,7 @@ export const readingQuestions = [
             "F.Besides agricultural tools, people devised implements that helped them build a variety of structures.",
         ],
         answer: 10,
-        summaryAnswer: [0,1,2]
+        summaryAnswer: [0, 1, 2]
     }
 ];
 
@@ -594,14 +594,14 @@ export const listeningQuestions = [
     },
     {
         id: 7,
-        question: "The student cites which of the following as reason(s) for wanting to leave his university? (choose 2 answers)",
+        question: "The student cites which of the following as reason(s) for wanting to leave his university?",
         options: [
             "Illness",
             "Homesickness",
             "Greater familiarity with the college at home",
             "Failing grades"
         ],
-        answer: [1, 2]
+        answer: 2,
     },
     {
         id: 8,
@@ -616,14 +616,14 @@ export const listeningQuestions = [
     },
     {
         id: 9,
-        question: "The student cites which of the following reason(s) for coming to the university? (choose 2 answers)",
+        question: "The student cites which of the following reason(s) for coming to the university?",
         options: [
             "The appealing architecture of the university's buildings",
             "Its extracurricular activities",
             "Its strong Business program",
             "Desire to be independent from his family"
         ],
-        answer: [2, 3]
+        answer: 2
     },
     {
         id: 10,
@@ -697,9 +697,10 @@ export const listeningQuestions = [
         options: [
             "Focuses more on the mental state of patients than on bodily responses",
             "May be slow in cases of multiple levels of trauma",
+            "Involves moving the eyes back and forth while looking at a beam of light",
             "Involves moving the eyes back and forth while looking at a beam of light"
         ],
-        answer: [1, 1, 0]
+        answer: 1
     },
     {
         id: 17,
@@ -837,10 +838,39 @@ export const listeningQuestions = [
 
 export const writingQuestions = {
     task1: {
-        passage: "Read the following passage and the lecture. Summarize the main points made in the lecture, being sure to explain how they cast doubt on the specific points made in the reading passage.",
+        passage: `In several organizations the best way to approach certain new projects is by establishing a team of individuals. There are several advantages to teamwork when completing a project.
+
+        One of the advantages of teamwork is the wider range of knowledge, skills, and expertise brought to the situation by having multiple individuals involved. Everyone is unique and has different skills, backgrounds and experiences. Therefore, others in a team can help an individual see things from a different angle.
+
+        Also, teamwork enables a group of individuals to respond more quickly to their assigned task and come up with creative solutions to problems. The projects will be completed more quickly because there are more resources in a group than an individual would have access to. Creative solutions are more likely to come about because teamwork spreads the responsibility for a decision to all of the members . This means that no single individual will feel as if they are solely responsible for a wrong decision.
+
+        Finally, being a member of a team can be very rewarding for the individual. Team members will understand the processes they are involved in instituting which will make them more comfortable with carrying out the work. In addition, individual team members have a better opportunity to get their contributions and ideas recognized as highly significant. This is because a team's overall results are likely to have a greater impact than would have been accomplished by an individual.  
+        `,
     },
     task2: {
-        prompt: "Do you agree or disagree with the following statement? Use reasons and specific examples to support your answer.",
+        conversation: `
+        <p>Your professor is teaching a class on Psychology. Write a post responding to the professor’s question.</p>
+        <br/>
+        <p><strong>In your response you should:</strong></p>
+        <ul>
+            <li>express and support your opinion</li>
+            <li>make a contribution to the discussion</li>
+        </ul>
+        <p>An effective response will contain at least 100 words.</p>
+        <br/>
+        <div>
+            <p><strong>Prof. Martin:</strong></p>
+            <p>Hello, students! Today, we come together to delve into the intriguing field of psychology. In life, people often find themselves pushing their limits and trying things they don’t expect to enjoy. The main reason behind this is to broaden their comfort zone. While some believe that engaging in challenging and uncomfortable experiences can be beneficial, others argue that it’s unnecessary in life. What is your take on this? Do you think people should sometimes do things that they do not enjoy doing?</p>
+        </div>
+        <div>
+            <p><strong>Aoi:</strong></p>
+            <p>Hey everyone! In my viewpoint, it's quite necessary that we sometimes do things we don't particularly enjoy. Whether it's taking on a difficult project for professional growth, adhering to tedious routines for physical health, or facing uncomfortable social situations for personal development, these tasks, though not enjoyable, aid us in the long run. They push us beyond our comfort zone and foster resilience.</p>
+        </div>
+        <div>
+            <p><strong>Joe:</strong></p>
+            <p>Hi, I absolutely agree with the previous sentiment. Undertaking tasks that are challenging or even unenjoyable can indeed cultivate our resilience and contribute to our growth. Beyond personal betterment, it can also allow us to contribute more significantly to societal expectations and responsibilities. It's about discovering our potential and strengthening our ability to endure hardships.</p>
+        </div>
+        `
     },
 };
 

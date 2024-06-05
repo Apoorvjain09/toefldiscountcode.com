@@ -56,9 +56,7 @@ export default function Sidebar() {
         <SidebarButton icon={MoreHorizontal} className='w-full'>
           <Link href="/discover">Discover</Link>
         </SidebarButton>
-        <SidebarButton
-          className='w-[90%] justify-center text-white bg-black'
-          variant='default'
+        <SidebarButton className='w-[90%] justify-center text-white bg-black' variant='default'
         >
           {isSignedIn ? <SignOutButton /> : <Link href="/profile">Sign In</Link>}
         </SidebarButton>

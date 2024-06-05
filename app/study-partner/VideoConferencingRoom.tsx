@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   Call,
-  CallControls,
   StreamCall,
   StreamTheme,
   StreamVideo,
@@ -10,6 +9,7 @@ import {
 } from "@stream-io/video-react-sdk";
 import "@stream-io/video-react-sdk/dist/css/styles.css";
 import { useUser } from "@clerk/clerk-react";  // Import useUser from Clerk
+import CustomCallControls from './CallControls'; // Import the custom CallControls component
 
 // Use a fixed call ID for the room to remain open indefinitely
 const callId = "permanent-study-room";
@@ -18,10 +18,10 @@ const apiKey = "mmhfdzb5evj2";
 const tokenProvider = async (userId: string) => {
   const { token } = await fetch(
     "https://pronto.getstream.io/api/auth/create-token?" +
-      new URLSearchParams({
-        api_key: apiKey,
-        user_id: userId
-      })
+    new URLSearchParams({
+      api_key: apiKey,
+      user_id: userId
+    })
   ).then((res) => res.json());
   return token as string;
 };
@@ -71,7 +71,7 @@ export default function VideoConferencingRoom() {
       <StreamTheme className="text-white my-theme-overrides">
         <StreamCall call={call}>
           <SpeakerLayout />
-          <CallControls />
+          <CustomCallControls />
         </StreamCall>
       </StreamTheme>
     </StreamVideo>

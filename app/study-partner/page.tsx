@@ -3,6 +3,7 @@ import React, { useEffect, useState, ChangeEvent } from "react";
 import { useUser } from "@clerk/clerk-react";
 import axios from 'axios';
 import VideoConferencingRoom from "./VideoConferencingRoom";
+import libbg from '@/public/assets/lib-bg.jpg'
 
 interface FormData {
   location: string;
@@ -73,7 +74,21 @@ export default function App() {
         </div>
       )}
       {stage === 'form' && <Form setStage={setStage} />}
-      {stage === 'video' && <VideoConferencingRoom />}
+      {stage === 'video' && (
+        <div
+        style={{
+          backgroundImage: `url(/assets/lib-bg.jpg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          width: '100%',
+          height: '100vh',
+          borderRadius:'0.5rem',
+          padding:'1rem',
+        }}
+      >      
+        <VideoConferencingRoom />
+      </div>
+      )}
     </>
   );
 }

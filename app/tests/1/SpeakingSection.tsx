@@ -138,6 +138,27 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     }
 
     const handleTranscriptSubmit = async () => {
+        if (transcript.trim() === '') {
+            // If the transcript is empty, just move to the next stage without sending to the API
+            if (stage === 'speak') {
+                setStage('task2Intro');
+                onTaskComplete(1, { score: 0, feedback: 'No transcript provided.' });
+            }
+            if (stage === 'task2Speak') {
+                setStage('task3Intro');
+                onTaskComplete(2, { score: 0, feedback: 'No transcript provided.' });
+            }
+            if (stage === 'task3Speak') {
+                setStage('task4Intro');
+                onTaskComplete(3, { score: 0, feedback: 'No transcript provided.' });
+            }
+            if (stage === 'task4Speak') {
+                onTaskComplete(4, { score: 0, feedback: 'No transcript provided.' });
+                onComplete();
+            }
+            return;
+        }
+        
         try {
             const response = await fetch('/api/evaluate-speaking', {
                 method: 'POST',

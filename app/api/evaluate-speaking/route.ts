@@ -26,9 +26,18 @@ export async function POST(req: NextRequest) {
   try {
     const prompt = `
         You are a TOEFL evaluator.
-        Please evaluate the transcript based on the question and provide a score(1-10) and feedback in a JSON response with the following format: { "score": number, "feedback": string }. 
-        Question: ${question}. Transcript: ${transcript}
-    `;
+        Question: '${question}'
+        Answer Transcript: '${transcript}'
+        
+        HOW SCORING WILL BE DONE:
+        4: The response fulfills the demands of the task. Minimum 100 words.
+        3: The response addresses the task appropriately but may fall short of being fully developed. Minimum 80 words
+        2: Speech is basically intelligible, though listener effort is needed because of unclear articulation
+        1: Little relevant content from the lecture. Errors make it hard to understand.
+        0: Copies from the reading, off-topic, foreign language, or blank.
+        
+        Please evaluate the transcript based on the question and provide a score(0-4) and feedback in a JSON response with the following format: { "score": number, "feedback": string }. 
+    `;  
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',

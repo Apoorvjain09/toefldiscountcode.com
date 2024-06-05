@@ -168,7 +168,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">
                                 Writing Section Results (Total Score: {Math.round(((writingScores.task1?.score ?? 0) + (writingScores.task2?.score ?? 0)) * 3)}/30)
-                            </h4>                            
+                            </h4>
                             {writingScores.task1 && (
                                 <div className="mb-4 border p-2 rounded-2xl">
                                     <h5 className="font-bold mb-2">Task 1</h5>
@@ -187,7 +187,9 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                     )}
                     {selectedSection === 'speaking' && (
                         <div>
-                            <h4 className="text-lg font-bold mb-4 mt-10">Speaking Section Results</h4>
+                            <h4 className="text-lg font-bold mb-4 mt-10">
+                                Speaking Section Results (Total Score: {Math.round(((speakingScores.task1?.score ?? 0) + (speakingScores.task2?.score ?? 0) + (speakingScores.task3?.score ?? 0) + (speakingScores.task4?.score ?? 0)) * 1.875)}/30)
+                            </h4>                            
                             {speakingScores.task1 && (
                                 <div className="mb-4 border p-2 rounded-2xl">
                                     <h5 className="font-bold mb-2">Task 1</h5>

@@ -32,12 +32,12 @@ export async function POST(req: NextRequest) {
       prompt = `
       You are a toelf test evaluator.
       You are checking TOEFL writing task ${task}.
-      The Question Passage is ${writingQuestions.task1.passage}
+      The Question Passage is '${writingQuestions.task1.passage}'
       Evaluate the following passage based on the criteria below and provide a score (0-5) with feedback:
-      Answer Passage: ${passage}
+      Answer Passage: '${passage}'
       
       HOW SCORING WILL BE DONE:
-      5: Accurately presents key info from the lecture in relation to the reading. Well-organized, minor errors.
+      5: Accurately presents key info from the lecture in relation to the reading. Well-organized, minor errors. Typically is between 150-225 words.
       4: Good with minor omissions or inaccuracies. More frequent errors but still clear.
       3: Contains key info but vague or unclear connections. May omit a major point.
       2: Significant omissions or inaccuracies. Errors obscure meaning.
@@ -50,9 +50,9 @@ export async function POST(req: NextRequest) {
       prompt = `
       You are a toelf test evaluator.
       You are checking TOEFL writing task ${task}.
-      The Conversation is ${writingQuestions.task2.conversation}
+      The Conversation is '${writingQuestions.task2.conversation}'
       Evaluate the following conversation answer based on the criteria below and provide a score (0-5) with feedback:
-      Answer Passage: ${passage}
+      Answer Passage: '${passage}'
       
       HOW SCORING WILL BE DONE:
       5: Clear, relevant, well-organized with detailed examples. Few errors.

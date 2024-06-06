@@ -17,7 +17,7 @@ const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
         // </div>
         <div className="mt-10 w-full sm:w-[auto] flex items-center justify-center ">
             <PinContainer
-                title={`/tests/${testNumber}`}
+                title={`Start Test ${testNumber}`}
                 href={`/tests/${testNumber}`}
             >
                 {/* <Link href={`/tests/${testNumber}`}> */}

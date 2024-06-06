@@ -408,9 +408,9 @@ export default function Page() {
         <>
             {!showTests ? (
                 <div>
-                    <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+                    <div className="p-6 h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
                         <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-                        <Boxes />
+                        {/* <Boxes /> */}
                         <h1 className={cn("text-center md:text-4xl text-xl text-white relative z-20")}>
                             Ace Your TOEFL Test with Our AI-Powered Mock Tests
                         </h1>
@@ -458,7 +458,7 @@ export default function Page() {
                             Increase your <br /> Toefl Score <br /> the right way
                         </motion.h1>
                     </LampContainer> */}
-                    <div className="flex flex-row pt-5 pb-5 h-[70vh] sm:h-full bg-black relative w-full">
+                    {/* <div className="flex flex-row pt-5 pb-5 h-[70vh] sm:h-full bg-black relative w-full">
                         <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[100vh] px-4">
                             <motion.div
                                 initial={{
@@ -483,7 +483,7 @@ export default function Page() {
                                 <World data={sampleArcs} globeConfig={globeConfig} />;
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             ) : (
                 <div className="mx-auto py-20 p-2">

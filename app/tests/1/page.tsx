@@ -1,11 +1,11 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { FaPlayCircle } from 'react-icons/fa';
 import { readingQuestions, listeningQuestions } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
-import WritingSection from './WritingSection';
-import SpeakingSection from './SpeakingSection';
-import ResultsDashboard from './ResultsDashboard';
+const WritingSection = React.lazy(() => import('./WritingSection'));
+const SpeakingSection = React.lazy(() => import('./SpeakingSection'));
+const ResultsDashboard = React.lazy(() => import('./ResultsDashboard'));
 
 const Test1 = () => {
     const [stage, setStage] = useState<'intro' | 'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('intro');
@@ -806,9 +806,30 @@ const Test1 = () => {
                     </div>
                 )
             }
-            {stage === 'writing' && <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />}
-            {stage === 'speaking' && <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />}
-            {stage === 'resultsDashboard' && <ResultsDashboard summaryAnswers1={selectedAnswers1} summaryAnswers2={selectedAnswers2} readingAnswers={answers} totalScoreReading={totalScoreReading} totalScoreListening={totalScoreListening} listeningAnswers={listeningAnswers} writingScores={writingScores} speakingScores={speakingScores} />}
+            {stage === 'writing' && (
+                <Suspense fallback={<div>Loading Writing Section...</div>}>
+                    <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />
+                </Suspense>
+            )}
+            {stage === 'speaking' && (
+                <Suspense fallback={<div>Loading Speaking Section...</div>}>
+                    <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />
+                </Suspense>
+            )}
+            {stage === 'resultsDashboard' && (
+                <Suspense fallback={<div>Loading Results...</div>}>
+                    <ResultsDashboard 
+                        summaryAnswers1={selectedAnswers1} 
+                        summaryAnswers2={selectedAnswers2} 
+                        readingAnswers={answers} 
+                        totalScoreReading={totalScoreReading} 
+                        totalScoreListening={totalScoreListening} 
+                        listeningAnswers={listeningAnswers} 
+                        writingScores={writingScores} 
+                        speakingScores={speakingScores} 
+                    />
+                </Suspense>
+            )}
         </div >
     );
 };

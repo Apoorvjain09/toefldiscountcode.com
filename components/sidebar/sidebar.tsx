@@ -21,6 +21,8 @@ import { usePathname } from 'next/navigation';
 
 export default function Sidebar() {
   const { isSignedIn } = useUser();
+  const pathname = usePathname();
+
   const isDesktop = useMediaQuery('(min-width: 640px)', {
     initializeWithValue: false,
   });
@@ -29,7 +31,7 @@ export default function Sidebar() {
     links: [
       { label: 'Mock Tests', href: '/', icon: Home },
       { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
-      { label: 'Score Reporting', href: 'score-reporting', icon: Mail },
+      { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
       {
         href: '/book',
         icon: List,
@@ -53,7 +55,7 @@ export default function Sidebar() {
     ],
     extras: (
       <div className='flex flex-col gap-2'>
-        <SidebarButton icon={MoreHorizontal} className='w-full'>
+        <SidebarButton icon={MoreHorizontal} className={`w-full ${pathname === '/discover' ? 'bg-gray-200' : ''}`}>
           <Link href="/discover">Discover</Link>
         </SidebarButton>
         <SidebarButton className='w-[90%] justify-center text-white bg-black' variant='default'

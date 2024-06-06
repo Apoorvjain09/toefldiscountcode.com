@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState, ChangeEvent } from "react";
+import React, { useEffect, useState, ChangeEvent, lazy, Suspense } from "react";
 import { useUser } from "@clerk/clerk-react";
 import axios from 'axios';
-import VideoConferencingRoom from "./VideoConferencingRoom";
+const VideoConferencingRoom = lazy(() => import("./VideoConferencingRoom"));
 import libbg from '@/public/assets/lib-bg.jpg'
 
 interface FormData {
@@ -76,18 +76,20 @@ export default function App() {
       {stage === 'form' && <Form setStage={setStage} />}
       {stage === 'video' && (
         <div
-        style={{
-          backgroundImage: `url(/assets/lib-bg.jpg)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          width: '100%',
-          height: '100vh',
-          borderRadius:'0.5rem',
-          padding:'1rem',
-        }}
-      >      
-        <VideoConferencingRoom />
-      </div>
+          style={{
+            backgroundImage: `url(/assets/lib-bg.jpg)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            width: '100%',
+            height: '100vh',
+            borderRadius: '0.5rem',
+            padding: '1rem',
+          }}
+        >
+          <Suspense fallback={<div>Loading video conferencing room...</div>}>
+            <VideoConferencingRoom />
+          </Suspense>
+        </div>
       )}
     </>
   );

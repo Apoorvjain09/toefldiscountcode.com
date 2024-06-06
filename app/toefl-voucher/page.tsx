@@ -2,6 +2,7 @@
 import React, { Suspense, lazy } from "react";
 import { Body, H1 } from "@/app/score-reporting/formatting";
 import QA from "@/app/score-reporting/QA";
+import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 const Hero = lazy(() => import("@/components/hero/Hero"));
 const WhyUs = lazy(() => import("@/components/whyUs/WhyUs"));
@@ -26,33 +27,29 @@ const dataQA = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   return (
     <div className="">
-      <div className="mt--30">
-        <Suspense fallback={<div>Loading Hero...</div>}>
+      <Suspense fallback={<div><LoadingSpinner/></div>}>
+        <div className="mt--30">
           <Hero />
-        </Suspense>
-      </div>
-      <Suspense fallback={<div>Loading Why Us...</div>}>
+        </div>
         <WhyUs />
-      </Suspense>
-      <Suspense fallback={<div>Loading Get Code...</div>}>
         <GetCode />
+        <Body>
+          <H1>FAQ</H1>
+          {dataQA.map((data, i) => (
+            <div key={i}>
+              <QA
+                question={data.question}
+                answer={data.answer}
+              />
+            </div>
+          ))}
+        </Body>
       </Suspense>
-      <Body>
-        <H1>FAQ</H1>
-        {dataQA.map((data, i) => (
-          <div key={i}>
-            <QA
-              question={data.question}
-              answer={data.answer}
-            />
-          </div>
-        ))}
-      </Body>
     </div>
   );
 };
 
-export default page;
+export default Page;

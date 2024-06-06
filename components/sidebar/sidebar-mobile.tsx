@@ -17,6 +17,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useUser, UserButton } from '@clerk/nextjs';
 import React, { Suspense, lazy } from 'react';
+import Sidebarskeleton from '../ui/SidebarLoadingSkeleton';
 
 // Lazy load SidebarButton component
 const SidebarButton = lazy(() => import('./sidebar-button'));
@@ -39,7 +40,7 @@ export function SidebarMobile(props: SidebarMobileProps) {
         </Button>
       </SheetTrigger>
       <SheetContent side='left' className='px-3 py-4 bg-gray-50' hideClose>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div><Sidebarskeleton/></div>}>
           <SheetHeader className='flex flex-row justify-between items-center space-y-0'>
             <span className='text-lg font-semibold text-foreground mx-3'>
               MJ Study Abroad

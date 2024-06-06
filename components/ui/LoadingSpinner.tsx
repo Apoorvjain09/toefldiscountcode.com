@@ -3,7 +3,7 @@ import { ClipLoader } from 'react-spinners';
 
 const LoadingSpinner: React.FC = () => {
   return (
-      <div className="bg-white dark:bg-gray-800 flex justify-center items-center w-screen h-screen p-5">
+      <div className="bg-white dark:bg-gray-800 flex justify-center items-center h-screen p-5">
         <div className="border border-gray-200 p-2 rounded-md shadow-lg shadow-orange-300">
           <div className="flex items-end gap-1">
             <span className="text-6xl font-semibold dark:text-white">T</span>

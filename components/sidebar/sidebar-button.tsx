@@ -32,3 +32,6 @@ export function SidebarButtonSheet(props: SidebarButtonProps) {
     </SheetClose>
   );
 }
+
+
+export default SidebarButton;

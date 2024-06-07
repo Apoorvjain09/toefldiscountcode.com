@@ -118,10 +118,14 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
             {stage === 'audioLecture' && (
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening to the Lecture</h3>
-                    <ReactAudioPlayer
-                        src="/assets/T1W1.mp3"
-                        controls
-                    />
+                    <div className="custom-audio-container flex-col flex gap-10">
+                            <img src="/assets/T1W1_Writing.webp"></img>
+                            <ReactAudioPlayer
+                                src="/assets/T1W1.mp3"
+                                controls
+                                className="custom-audio-player"
+                            />
+                        </div>
                     <div className="text-center mt-10">
                         <button onClick={() => setStage("task1")} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
                             Continue

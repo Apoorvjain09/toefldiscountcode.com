@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-audio-container {
+    @apply flex items-center justify-center bg-gray-100 border border-gray-300 rounded-lg p-4 w-full max-w-xl;
+}
+
+.custom-audio-player {
+    @apply w-full outline-none;
+}
+
+/* Hiding time displays in the audio player */
+.custom-audio-player::-webkit-media-controls-current-time-display,
+.custom-audio-player::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+
+/* Styling the rest of the controls */
+.custom-audio-player::-webkit-media-controls-panel {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.custom-audio-player::-webkit-media-controls-play-button,
+.custom-audio-player::-webkit-media-controls-volume-slider {
+    filter: brightness(0.7);
+}

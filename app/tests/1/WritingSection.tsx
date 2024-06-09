@@ -18,14 +18,14 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
     const [task2Submitted, setTask2Submitted] = useState(false);
     const [evaluation, setEvaluation] = useState<{ score: number; feedback: string } | null>(null);
 
-    const handleTaskSubmit = async (task: number, passage: string) => {
+    const handleTaskSubmit = async (testNumber: number,task: number, passage: string) => {
         try {
             const response = await fetch('/api/evaluate-writing', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ task, passage }),
+                body: JSON.stringify({ testNumber, task, passage }),
             });
 
             if (!response.ok) {
@@ -52,7 +52,8 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
 
     const handleTask1Submit = () => {
         if (writingTask1.trim() !== '') {
-            handleTaskSubmit(1, writingTask1);
+            const testNumber = 1;
+            handleTaskSubmit(testNumber, 1, writingTask1);
         } else {
             setStage("task2Instructions");
         }
@@ -60,7 +61,8 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
 
 
     const handleTask2Submit = () => {
-        handleTaskSubmit(2, writingTask2);
+        const testNumber = 1;
+        handleTaskSubmit(testNumber, 2, writingTask2);
         onComplete();
     };
 
@@ -177,7 +179,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                     <h3 className="text-xl font-bold mb-4">Task 2: Independent Writing</h3>
                     <div dangerouslySetInnerHTML={{ __html: writingQuestions.task2.conversation }} />
                     <textarea
-                        className="w-full p-2 border rounded mb-4"
+                        className="w-full p-2 border rounded mb-4 mt-5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                         rows={10}
                         value={writingTask2}
                         onChange={(e) => setWritingTask2(e.target.value)}

@@ -1,5 +1,4 @@
 // app/api/evaluate-writing/route.ts
-import { writingQuestions } from '@/app/tests/1/questions';
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import 'regenerator-runtime/runtime';  // Import regenerator-runtime
@@ -17,16 +16,17 @@ const openai = new OpenAI({
 export async function POST(req: NextRequest) {
   console.log("Request received at /api/evaluate-writing");
 
-  const { task, passage } = await req.json();
+  const { testNumber, task, passage } = await req.json();
   console.log("Task:", task);
   console.log("Passage:", passage);
-  console.log(writingQuestions.task1.passage)
-
+  
   if (!task || !passage) {
     return NextResponse.json({ message: 'Missing task or passage' }, { status: 400 });
-  }
+    }
+    
+    try {
+      const { writingQuestions } = await import(`@/app/tests/${testNumber}/questions.ts`);
 
-  try {
     let prompt;
     if (task === 1) {
       prompt = `

@@ -13,7 +13,7 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: NextRequest) {
-  console.log("Request received at /api/evaluate-writing");
+  console.log("Request received at /api/evaluate-speaking");
 
   const { question, transcript } = await req.json();
   console.log("question:", question);
@@ -31,8 +31,8 @@ export async function POST(req: NextRequest) {
         
         HOW SCORING WILL BE DONE:
         4: The response fulfills the demands of the task. Minimum 100 words.
-        3: The response addresses the task appropriately but may fall short of being fully developed. Minimum 80 words
-        2: Speech is basically intelligible, though listener effort is needed because of unclear articulation
+        3: The response addresses the task appropriately but may fall short of being fully developed. Minimum 80 words.
+        2: Speech is basically intelligible, though listener effort is needed because of unclear articulation. Minimum 40 words.
         1: Little relevant content from the lecture. Errors make it hard to understand.
         0: Copies from the reading, off-topic, foreign language, or blank.
         

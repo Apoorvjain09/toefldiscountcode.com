@@ -100,7 +100,7 @@ export default function Home() {
             console.log("Form is being submitted");
             form.handleSubmit(handleSubmit)(e);
           }}
-          className="max-w-md w-full flex flex-col gap-4"
+          className="max-w-md w-[80vw] flex flex-col gap-4"
         >
           {step === 1 && (
             <>

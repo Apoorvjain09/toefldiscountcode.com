@@ -6,12 +6,12 @@ const Section = lazy(() => import("./Section"));
 
 const sections = [
   {
-    title: "Reading",
+    title: "Guides",
     cards: [
       {
-        title: "Reading Material 1",
-        description: "Description for Reading Material 1.",
-        link: "#",
+        title: "Official Ets Guide",
+        description: "MJ Study Abroad- Official Ets Guide Vol_3.pdf",
+        link: "https://drive.google.com/file/d/14OwL289o433gTSjBVTQmhqDczh0xP8is/view?usp=sharing",
       },
       {
         title: "Reading Material 2",

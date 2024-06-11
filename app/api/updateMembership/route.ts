@@ -2,11 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { clerkClient } from '@clerk/nextjs/server';
 import 'regenerator-runtime/runtime';  // Import regenerator-runtime
 
+interface MembershipRequestBody {
+  userId: string;
+  membershipType: string;
+}
+
 export async function POST(req: NextRequest) {
   console.log("Request received at /api/updateMembership");
 
   try {
-    const body = await req.json();
+    const body: MembershipRequestBody = await req.json();
     console.log("Parsed body:", body);
 
     const { userId, membershipType } = body;

@@ -140,7 +140,7 @@ export default function payemnt() {
 
                         <a
                             className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-                            href="https://rzp.io/l/bodBmivjG"
+                            href="https://rzp.io/l/C8szPh1"
                         >
                             Get Started
                         </a>
@@ -260,7 +260,7 @@ export default function payemnt() {
 
                         <a
                             className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-                            href="#"
+                            href="https://rzp.io/l/aUAjbuK"
                         >
                             Get Started
                         </a>

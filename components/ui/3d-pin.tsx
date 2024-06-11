@@ -10,14 +10,14 @@ export const PinContainer = ({
   href,
   className,
   containerClassName,
-  onClick,
+  // onClick,
 }: {
   children: React.ReactNode;
   title?: string;
   href?: string;
   className?: string;
   containerClassName?: string;
-  onClick: ()=> void;
+  // onClick: ()=> void;
 }) => {
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
@@ -38,7 +38,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={onClick}
+      // onClick={onClick}
     >
       <div
         style={{

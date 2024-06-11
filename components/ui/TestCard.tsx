@@ -15,13 +15,16 @@ const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
 
     const handleTestClick = () => {
         if (!isFreeTest) {
-            const hasMembership = user?.publicMetadata?.name === "6Month_Membership" || user?.publicMetadata?.name === "Monthly_Subscription";
+            const hasMembership =
+                user?.publicMetadata?.["6Month_Membership"] === "true" ||
+                user?.publicMetadata?.["Monthly_Subscription"] === "true";
 
             if (!hasMembership) {
                 window.location.href = '/payment';
                 return;
             }
         }
+
 
         window.location.href = `/tests/${testNumber}`;
     };
@@ -30,7 +33,7 @@ const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
         <div className="mt-10 w-full sm:w-[auto] flex items-center justify-center ">
             <PinContainer
                 title={`Start ${testTitle}`}
-                onClick={handleTestClick}
+                href={`/tests/${testNumber}`}
             >
                 <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[17rem] sm:w-[20rem] h-[20rem] ">
                     <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">

@@ -41,11 +41,15 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
         }
     };
 
+    const totalScoreWriting = ((writingScores.task1?.score ?? 0) + (writingScores.task2?.score ?? 0)) * 3;
+    const totalScoreSpeaking = ((speakingScores.task1?.score ?? 0) + (speakingScores.task2?.score ?? 0) + (speakingScores.task3?.score ?? 0) + (speakingScores.task4?.score ?? 0)) * 1.875;
+    const totalScore = Math.round(totalScoreReading * 30 / 22) + Math.round(totalScoreListening * 30 / 28) + Math.round(totalScoreWriting) + Math.round(totalScoreSpeaking);
+
 
 
     return (
         <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center gap-4">
-            <h3 className="text-xl font-bold mb-4">Test Results</h3>
+            <h3 className="text-xl font-bold mb-4">Test Results : {totalScore}/120</h3>
             {selectedSection === null ? (
                 <div className="flex flex-col md:flex-row flex-wrap justify-around gap-4 md:gap-6 lg:gap-8 w-full">
                     <button onClick={() => handleSectionClick('reading')} className="bg-green-600 text-white py-2 px-4 rounded inline-block text-center">Reading Results</button>
@@ -63,7 +67,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                     </div>
                     {selectedSection === 'reading' && (
                         <div>
-                            <h4 className="text-lg font-bold mb-4 mt-10">Reading Section Results (Total Score: {totalScoreReading}/22)</h4>
+                            <h4 className="text-lg font-bold mb-4 mt-10">Reading Section Results (Total Score: {Math.round(totalScoreReading * 30 / 22)}/30)</h4>
                             {readingQuestions.map((q, index) => {
                                 if (q.id === 10) {
                                     const question10 = readingQuestions.find(q => q.id === 10);
@@ -140,7 +144,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
 
                     {selectedSection === 'listening' && (
                         <div>
-                            <h4 className="text-lg font-bold mb-4 mt-10">Listening Section Results (Total Score: {totalScoreListening}/28)</h4>
+                            <h4 className="text-lg font-bold mb-4 mt-10">Listening Section Results (Total Score: {Math.round(totalScoreListening * 30 / 28)}/30)</h4>
                             {listeningQuestions.map((q, index) => {
                                 const isCorrect = listeningAnswers[index] === q.answer;
                                 return (

@@ -42,7 +42,7 @@ export default function Payment() {
           Subscriptions
         </span>
       </h1>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
+      <div className="flex gap-10 justify-evenly flex-col lg:flex-row">
         {/* Free Forever Plan */}
         <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
           <div className="p-6 sm:px-8">
@@ -160,7 +160,7 @@ export default function Payment() {
               <span className="text-sm font-medium text-gray-700">/month</span>
             </p>
             <button
-              className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
+              className="w-full mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
               onClick={() => handleSubscriptionClick('6Month_Membership')}
             >
               Get Started

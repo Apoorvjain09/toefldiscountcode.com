@@ -62,7 +62,7 @@ export default function Page() {
                                         />
                                     </svg>
 
-                                    <h2 className="mt-4 text-xl font-bold text-black">AI-powered Insights and Recommendations</h2>
+                                    <h2 className="mt-4 text-xl font-bold text-black">AI-powered Insights and Advice</h2>
 
                                     <p className="mt-1 text-sm text-black">
                                         Uses machine learning algorithms to predict scores and outcomes.

@@ -60,7 +60,7 @@ function Page() {
           borderRadius: "0.5rem",
         }}
       >
-        <div className="container mx-auto p-4 items-center text-center">
+        <div className="container mx-auto p-4 items-center text-center flex flex-col">
           {sections.map((section, index) => (
             <Section key={index} {...section} />
           ))}

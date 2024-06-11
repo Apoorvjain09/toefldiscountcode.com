@@ -59,7 +59,7 @@ export default function App() {
             <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
           <div className="relative text-white max-w-3xl p-10">
-            <h1 className="md:text-7xl font-bold mb-4 text-4xl">
+            <h1 className="lg:text-7xl md:text-5xl font-bold mb-4 text-4xl">
               Meet, chat, and study with students from all over the world 🌍
             </h1>
             <p className="text-lg mb-10 md:text-2xl">

@@ -6,11 +6,251 @@ export default function payemnt() {
                 <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
                     <div className="p-6 sm:px-8">
                         <h2 className="text-lg font-medium text-gray-900">
-                            Starter
+                            Free Forever
                             <span className="sr-only">Plan</span>
                         </h2>
 
-                        <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p className="mt-2 text-gray-700">Free for New Users!</p>
+
+                        <p className="mt-2 sm:mt-4">
+                            <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 0$ </strong>
+
+                            <span className="text-sm font-medium text-gray-700">/month</span>
+                        </p>
+
+                        <a
+                            className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
+                            href="#"
+                        >
+                            Get Started
+                        </a>
+                    </div>
+
+                    <div className="p-6 sm:px-8">
+                        <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
+
+                        <ul className="mt-2 space-y-2 sm:mt-4">
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> 2 free mock test (Full-length) </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> 100TGG free User credit </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> Email support </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-red-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                                <span className="text-gray-700"> Help center access </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-red-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                                <span className="text-gray-700"> Phone support </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-red-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                                <span className="text-gray-700"> Community access </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+                    <div className="p-6 sm:px-8">
+                        <h2 className="text-lg font-medium text-gray-900">
+                            6-Month Membership
+                            <span className="sr-only">Plan</span>
+                        </h2>
+
+                        <p className="mt-2 text-gray-700">Best Selling!</p>
+
+                        <p className="mt-2 sm:mt-4">
+                            <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 10$ </strong>
+
+                            <span className="text-sm font-medium text-gray-700">/month</span>
+                        </p>
+
+                        <a
+                            className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
+                            href="https://rzp.io/l/bodBmivjG"
+                        >
+                            Get Started
+                        </a>
+                    </div>
+
+                    <div className="p-6 sm:px-8">
+                        <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
+
+                        <ul className="mt-2 space-y-2 sm:mt-4">
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> 10 free mock test (Full-length) </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> 200TGG free User credit </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> Email support </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-indigo-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+
+                                <span className="text-gray-700"> Help center access </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-red-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                                <span className="text-gray-700"> Phone support </span>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 text-red-700"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                                <span className="text-gray-700"> Community access </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+                    <div className="p-6 sm:px-8">
+                        <h2 className="text-lg font-medium text-gray-900">
+                            Monthly Subscription
+                            <span className="sr-only">Plan</span>
+                        </h2>
+
+                        <p className="mt-2 text-gray-700">For Users Whoose test date are close.</p>
 
                         <p className="mt-2 sm:mt-4">
                             <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 20$ </strong>
@@ -42,7 +282,7 @@ export default function payemnt() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                 </svg>
 
-                                <span className="text-gray-700"> 10 users </span>
+                                <span className="text-gray-700"> 10 free mock test (Full-length) </span>
                             </li>
 
                             <li className="flex items-center gap-1">
@@ -57,247 +297,7 @@ export default function payemnt() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                 </svg>
 
-                                <span className="text-gray-700"> 2GB of storage </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> Email support </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-red-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                                <span className="text-gray-700"> Help center access </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-red-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                                <span className="text-gray-700"> Phone support </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-red-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                                <span className="text-gray-700"> Community access </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
-                    <div className="p-6 sm:px-8">
-                        <h2 className="text-lg font-medium text-gray-900">
-                            Pro
-                            <span className="sr-only">Plan</span>
-                        </h2>
-
-                        <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                        <p className="mt-2 sm:mt-4">
-                            <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 30$ </strong>
-
-                            <span className="text-sm font-medium text-gray-700">/month</span>
-                        </p>
-
-                        <a
-                            className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-                            href="#"
-                        >
-                            Get Started
-                        </a>
-                    </div>
-
-                    <div className="p-6 sm:px-8">
-                        <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
-
-                        <ul className="mt-2 space-y-2 sm:mt-4">
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> 20 users </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> 5GB of storage </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> Email support </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> Help center access </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-red-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                                <span className="text-gray-700"> Phone support </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-red-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                                <span className="text-gray-700"> Community access </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
-                    <div className="p-6 sm:px-8">
-                        <h2 className="text-lg font-medium text-gray-900">
-                            Enterprise
-                            <span className="sr-only">Plan</span>
-                        </h2>
-
-                        <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                        <p className="mt-2 sm:mt-4">
-                            <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 100$ </strong>
-
-                            <span className="text-sm font-medium text-gray-700">/month</span>
-                        </p>
-
-                        <a
-                            className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-                            href="#"
-                        >
-                            Get Started
-                        </a>
-                    </div>
-
-                    <div className="p-6 sm:px-8">
-                        <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
-
-                        <ul className="mt-2 space-y-2 sm:mt-4">
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> 50 users </span>
-                            </li>
-
-                            <li className="flex items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth="1.5"
-                                    stroke="currentColor"
-                                    className="size-5 text-indigo-700"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                </svg>
-
-                                <span className="text-gray-700"> 20GB of storage </span>
+                                <span className="text-gray-700"> 200TGG free User credit </span>
                             </li>
 
                             <li className="flex items-center gap-1">

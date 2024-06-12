@@ -15,7 +15,7 @@ import { usePathname } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useUser, UserButton } from '@clerk/nextjs';
+import { useUser, UserButton, SignInButton, SignOutButton } from '@clerk/nextjs';
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import Sidebarskeleton from '../ui/SidebarLoadingSkeleton';
 
@@ -29,7 +29,7 @@ interface SidebarMobileProps {
 export function SidebarMobile(props: SidebarMobileProps) {
   const pathname = usePathname();
   const { isSignedIn, user } = useUser();
-  
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -84,15 +84,17 @@ export function SidebarMobile(props: SidebarMobileProps) {
                     </div>
                   </Button>
                 </DrawerTrigger>
-                <DrawerContent className='mb-2 p-2'>
+                <DrawerContent className='p-2 z-[500] border-black bg-white text-black'>
                   <div className='flex flex-col space-y-2 mt-2'>
-                    <Link href='/'>
-                      <SidebarButton size='sm' icon={Settings} className='w-full'>
-                        Account Settings
-                      </SidebarButton>
+                    <Link href='/profile' className='w-full border-black'>
+                      <SheetClose asChild>
+                        <SidebarButton size='sm' icon={Settings} className='w-full'>
+                          Account Settings
+                        </SidebarButton>
+                      </SheetClose>
                     </Link>
                     <SidebarButton size='sm' icon={LogOut} className='w-full'>
-                      Log Out
+                      {!isSignedIn ? <SignInButton /> : <SignOutButton />}
                     </SidebarButton>
                   </div>
                 </DrawerContent>

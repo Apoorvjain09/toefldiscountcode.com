@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { LogOut, MoreHorizontal, Settings } from 'lucide-react';
 import { usePathname } from 'next/navigation';
-import { UserButton, useAuth, useUser, SignOutButton } from '@clerk/nextjs';
+import { UserButton, useAuth, useUser, SignOutButton, SignInButton } from '@clerk/nextjs';
 import { currentUser } from "@clerk/nextjs/server";
 
 interface SidebarDesktopProps {
@@ -57,11 +57,11 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
                 <div className='space-y-1'>
                   <Link href='/'>
                     <SidebarButton size='sm' icon={Settings} className='w-full'>
-                      Account Settings
+                      <Link href="/profile">Account Settings</Link>
                     </SidebarButton>
                   </Link>
                   <SidebarButton size='sm' icon={LogOut} className='w-full'>
-                    <SignOutButton/>
+                   {!isSignedIn ?<SignInButton/> : <SignOutButton/>}
                   </SidebarButton>
                 </div>
               </PopoverContent>

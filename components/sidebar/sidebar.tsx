@@ -7,6 +7,8 @@ import {
   List,
   Mail,
   MoreHorizontal,
+  BookCopy,
+  TicketPercent,
   User,
   Users,
 } from 'lucide-react';
@@ -29,7 +31,7 @@ export default function Sidebar() {
 
   const sidebarItems: SidebarItems = {
     links: [
-      { label: 'Mock Tests', href: '/', icon: Home },
+      { label: 'Toefl Mock Tests', href: '/', icon: Home },
       { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
       { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
       {
@@ -46,6 +48,16 @@ export default function Sidebar() {
         href: '/university-shortlisting',
         icon: Users,
         label: 'University Shortlisting',
+      },
+      {
+        href: 'https://gre-resources.com/gre-books',
+        icon: BookCopy,
+        label: 'Gre Resources',
+      },
+      {
+        href: 'https://gre-resources.com/gre-vouchers',
+        icon: TicketPercent,
+        label: 'Gre Discount Vouchers',
       },
       {
         href: '/profile',

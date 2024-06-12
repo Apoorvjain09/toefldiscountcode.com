@@ -74,15 +74,15 @@ export default function Sidebar() {
         </Link>
         {isSignedIn ?
           (
-            <a target="_blank" href="https://chat.whatsapp.com/CHwPiz6xEpHC0WSivb2UN7" className="inline-flex items-center justify-center w-[90%] px-5 py-3 text-sm text-center text-black font-semibold border border-gray-500 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-3 sm:gap-1">
-              <img src="assets/whatsapp.png" alt="whatsapp link" className='w-[27px]' /> Join MS in US community
+            <a target="_blank" href="https://chat.whatsapp.com/CHwPiz6xEpHC0WSivb2UN7" className="inline-flex items-center justify-center w-[90%] px-5 py-2 text-sm text-center text-black font-semibold border border-gray-500 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-3 sm:gap-1">
+              <img src="assets/whatsapp.png" className='w-[27px]' /> Join MS in US community
             </a>
           ) :
           (
             <>
               <Link href="/profile"><button className='w-[90%] sm:w-[100%] justify-center text-white bg-black text-center p-2 rounded-lg font-semibold'>Sign In</button></Link>
-              <a target="_blank" href="https://chat.whatsapp.com/CHwPiz6xEpHC0WSivb2UN7" className="inline-flex items-center justify-center w-[90%] px-5 py-3 text-sm text-center text-black font-semibold border border-gray-500 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-3 sm:gap-1">
-                <img src="assets/whatsapp.png" alt="whatsapp link" className='w-[27px]' /> Join MS in US community
+              <a target="_blank" href="https://chat.whatsapp.com/CHwPiz6xEpHC0WSivb2UN7" className="inline-flex items-center justify-center w-[90%] px-5 py-2 text-sm text-center text-black font-semibold border border-gray-500 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-3 sm:gap-1">
+                <img src="assets/whatsapp.png" className='w-[27px]' /> Join MS in US community
               </a>
             </>
           )}

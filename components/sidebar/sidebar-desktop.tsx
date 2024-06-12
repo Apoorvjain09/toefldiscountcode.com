@@ -9,6 +9,8 @@ import { LogOut, MoreHorizontal, Settings } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { UserButton, useAuth, useUser, SignOutButton, SignInButton } from '@clerk/nextjs';
 import { currentUser } from "@clerk/nextjs/server";
+import { Suspense } from 'react';
+import Sidebarskeleton from '../ui/SidebarLoadingSkeleton';
 
 interface SidebarDesktopProps {
   sidebarItems: SidebarItems;
@@ -16,7 +18,7 @@ interface SidebarDesktopProps {
 
 export function SidebarDesktop(props: SidebarDesktopProps) {
   const pathname = usePathname();
-  const { isSignedIn, user }= useUser();
+  const { isSignedIn, user } = useUser();
 
   return (
     <aside className='w-[270px] max-w-xs h-screen fixed left-0 top-0 z-40 mt-1'>
@@ -45,9 +47,9 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
                   <div className='flex justify-between items-center w-full'>
                     <div className='flex gap-2 items-center'>
                       <Avatar className='h-7 w-7'>
-                        {isSignedIn ? <UserButton/> : <AvatarImage src='https://github.com/max-programming.png' /> }
+                        {isSignedIn ? <UserButton /> : <AvatarImage src='https://github.com/max-programming.png' />}
                       </Avatar>
-                        {isSignedIn ? <span>{user?.firstName}</span> :  <span>Guest 100849</span> }
+                      {isSignedIn ? <span>{user?.firstName}</span> : <span>Guest 100849</span>}
                     </div>
                     <MoreHorizontal size={20} />
                   </div>
@@ -61,7 +63,7 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
                     </SidebarButton>
                   </Link>
                   <SidebarButton size='sm' icon={LogOut} className='w-full'>
-                   {!isSignedIn ?<SignInButton/> : <SignOutButton/>}
+                    {!isSignedIn ? <SignInButton /> : <SignOutButton />}
                   </SidebarButton>
                 </div>
               </PopoverContent>

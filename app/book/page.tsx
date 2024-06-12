@@ -10,18 +10,18 @@ const sections = [
     cards: [
       {
         title: "Official Ets Guide",
-        description: "MJ Study Abroad- Official Ets Guide Vol_3.pdf",
+        description: "MJ-Study-Abroad -Official_Ets_Guide_Vol_3.pdf",
         link: "https://drive.google.com/file/d/14OwL289o433gTSjBVTQmhqDczh0xP8is/view?usp=sharing",
       },
       {
-        title: "Reading Material 2",
-        description: "Description for Reading Material 2.",
-        link: "#",
+        title: "Official Ets Guide",
+        description: "MJ-Study-Abroad -Official_Ets_Guide_Vol_2.pdf",
+        link: "https://drive.google.com/file/d/14OwL289o433gTSjBVTQmhqDczh0xP8is/view?usp=drive_link",
       },
       {
-        title: "Reading Material 3",
-        description: "Description for Reading Material 3.",
-        link: "#",
+        title: "Official Ets Guide",
+        description: "MJ-Study-Abroad -Official_Ets_Guide_Vol_1.pdf",
+        link: "https://drive.google.com/file/d/121vTgk0RhxFZ4WENttyD8y7fTEalxW7A/view?usp=drive_link",
       },
     ],
   },

@@ -3,6 +3,7 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import Head from "next/head";
 
 const TestCard = lazy(() => import("@/components/ui/TestCard"));
 const FeaturesSection = lazy(() => import("@/components/ui/FeaturesSectionLandingPage"));
@@ -17,8 +18,12 @@ export default function Page() {
 
     return (
         <>
+            <head>
+                <title>TOEFL AI Powered Mock Tests</title>
+                <meta name="description" content="Enhance your TOEFL preparation with our AI-powered mock tests. Practice with realistic test simulations, receive detailed feedback, and track your progress to achieve your desired TOEFL score. Join our community of learners and access a wide range of study materials, practice questions, and expert advice to excel in your TOEFL exam." />
+            </head>
             {!showTests ? (
-                <div>       
+                <div>
                     <Suspense fallback={<div><LoadingSpinner /></div>}>
                         <FeaturesSection onGetStartedClick={handleGetStartedClick} />
                     </Suspense>

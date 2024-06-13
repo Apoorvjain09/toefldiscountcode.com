@@ -236,7 +236,7 @@ export const readingQuestions = [
         [6] Conservation organizations have condemned the obvious and extreme waste associated with bycatch. Public concern over high mortality rates of endangered marine turtles captured in shrimp trawls led to the development of turtle exclusion devices (TEDs) in the 1980s. TEDs were incorporated into the shrimp net design with the purpose of directing turtles out of nets without unacceptably reducing shrimp catches. Marine engineers and fishers also developed shrimp net designs that incorporate bycatch reduction devices (BRDs), taking advantage of behavioral differences between shrimp and fish, or between different fishes, in order to separate fishes.
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "There are several competing theories that attempt to explain how the large moai statues of Easter Island were transported to various locations on the island.",
+        introductorySentence: "Many fish and other animals are unintentionally caught during commercial fishing, a problem known as bycatch.",
         question: "What is the main topic of the passage?",
         options: [
             "A. Bycatch occurs in both longline fishing and trawling and affects a range of species, although marine engineers have developed net devices that have lessened the problem for some species.",

@@ -1,11 +1,40 @@
 "use client";
-import React, { Suspense, lazy } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 const Section = lazy(() => import("./Section"));
-const sectionsPromise = import("./sectionsData").then(module => module.sections);
 
-function Page() {
+interface CardProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
+interface SectionProps {
+  title: string;
+  cards: CardProps[];
+}
+
+const Page: React.FC = () => {
+  const [sections, setSections] = useState<SectionProps[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    import("./sectionsData")
+      .then((module) => {
+        setSections(module.sections);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load sections data:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <Suspense fallback={<div><LoadingSpinner /></div>}>
       <div
@@ -18,13 +47,11 @@ function Page() {
         }}
       >
         <div className="text-center flex flex-col p-7">
-          <Suspense fallback={<LoadingSpinner />}>
-            {sectionsPromise.then(sections => 
-              sections.map((section, index) => (
-                <Section key={index} {...section} />
-              ))
-            )}
-          </Suspense>
+          {sections.map((section, index) => (
+            // <Suspense key={index} fallback={<LoadingSpinner />}>
+              <Section {...section} />
+            // </Suspense>
+          ))}
         </div>
       </div>
     </Suspense>

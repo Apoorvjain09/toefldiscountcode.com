@@ -11,6 +11,7 @@ import { UserButton, useAuth, useUser, SignOutButton, SignInButton } from '@cler
 import { currentUser } from "@clerk/nextjs/server";
 import { Suspense } from 'react';
 import Sidebarskeleton from '../ui/SidebarLoadingSkeleton';
+import styles from './SidebarDesktop.module.css'; // import the CSS module
 
 interface SidebarDesktopProps {
   sidebarItems: SidebarItems;
@@ -24,7 +25,7 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
     <aside className='w-[270px] max-w-xs h-screen fixed left-0 top-0 z-40 mt-1'>
       <div className='h-full px-3 py-4'>
         <h3 className='mx-3 text-lg font-semibold text-foreground'>MJ Study Abroad</h3>
-        <div className='mt-5'>
+        <div className={`mt-5 ${styles.scrollable}`}>
           <div className='flex flex-col gap-1 w-full'>
             {props.sidebarItems.links.map((link, index) => (
               <Link key={index} href={link.href}>
@@ -39,7 +40,7 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
             ))}
             {props.sidebarItems.extras}
           </div>
-          <div className='absolute left-0 bottom-3 w-full px-3'>
+          <div className={`absolute left-0 bottom-3 w-full px-3`}>
             <Separator className='absolute -top-3 left-0 w-full' />
             <Popover>
               <PopoverTrigger asChild>

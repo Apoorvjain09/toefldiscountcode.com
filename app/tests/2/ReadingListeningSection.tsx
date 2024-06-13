@@ -486,7 +486,17 @@ const Test1 = () => {
                             </div>
                         </div>
                     ))}
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
+                        <button
+                            onClick={() => {
+                                calculateScore()
+                                setStage('resultsDashboard');
+                                setCurrentQuestion(0);
+                            }}
+                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                        >
+                            Go to Results
+                        </button>
                         <button
                             onClick={() => {
                                 calculateScore()
@@ -498,6 +508,7 @@ const Test1 = () => {
                         >
                             Continue
                         </button>
+
                     </div>
                 </div>
             )}
@@ -592,7 +603,7 @@ const Test1 = () => {
                         <p className="mb-4">[Use Headphones For Better Quality]</p>
                         <div className="custom-audio-container flex-col flex gap-10">
                             <img src="/assets/T2C2_Listening.webp"></img>
-                            <ReactAudioPlayer   
+                            <ReactAudioPlayer
                                 src="/assets/T2C2.mp4"
                                 controls
                                 className="custom-audio-player"

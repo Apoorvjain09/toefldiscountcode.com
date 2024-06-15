@@ -1,14 +1,20 @@
 "use client";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import { useUser } from "@clerk/nextjs";
+import React, { useState, Suspense, lazy, useEffect } from "react";
 import { FaPlayCircle } from 'react-icons/fa';
-import { useUser } from '@clerk/nextjs';
 
-const ReadingListeningSection = lazy(() => import('@/app/tests/2/ReadingListeningSection'));
+const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));
+
 
 const Page = () => {
-    const { user } = useUser();
     const [stage, setStage] = useState<'intro' | 'test'>('intro');
+
+    const handleStartTestClick = () => {
+        setStage('test');
+    };
+
+    const { user } = useUser();
 
     useEffect(() => {
         const isFreeTest = false; // Update this logic based on your requirement
@@ -23,15 +29,11 @@ const Page = () => {
         }
     }, [user]);
 
-    const handleStartTestClick = () => {
-        setStage('test');
-    };
-
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
             {stage === 'intro' && (
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col items-center">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 2</h2>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 3</h2>
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
                         A Full Length Test is similar to other TOEFL tests and takes around 2 hours to complete. It&apos;ll give you a good feel for what you can expect from our full TOEFL practice tests.
                     </p>

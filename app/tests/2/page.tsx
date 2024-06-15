@@ -24,12 +24,12 @@ const Page = () => {
                         <FaPlayCircle className="mr-2" size={24} />
                         Start Test
                     </button>
-                    <div className="flex flex-col md:flex-row flex-wrap justify-around gap-4 md:gap-6 lg:gap-8 w-full">
+                    {/* <div className="flex flex-col md:flex-row flex-wrap justify-around gap-4 md:gap-6 lg:gap-8 w-full">
                         <a href="#" className="bg-green-600 text-white py-2 px-4 rounded inline-block text-center">Reading</a>
                         <button onClick={handleStartTestClick} className="bg-yellow-600 text-white py-2 px-4 rounded inline-block text-center">Writing</button>
                         <button onClick={handleStartTestClick} className="bg-red-600 text-white py-2 px-4 rounded inline-block text-center">Listening</button>
                         <button onClick={handleStartTestClick} className="bg-purple-600 text-white py-2 px-4 rounded inline-block text-center">Speaking</button>
-                    </div>
+                    </div> */}
                 </div>
             )}
             {stage === 'test' && (

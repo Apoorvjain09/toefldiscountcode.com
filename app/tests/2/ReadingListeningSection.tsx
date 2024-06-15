@@ -274,10 +274,60 @@ const Test1 = () => {
     };
 
 
+    const handleExitClick = () => {
+        if (stage === 'instructions') {
+            setStage('reading');
+        } else if (stage === 'reading') {
+            setStage('listeningInstructions');
+        } else if (stage === 'readingPassage1' && currentQuestion + 1 >= 9) {
+            setStage('listeningInstructions');
+        } else if (stage === 'readingSummaryQuestions1') {
+            setStage('listeningInstructions');
+        } else if (stage === 'readingPassage2' && currentQuestion + 1 >= 19) {
+            setStage('listeningInstructions');
+        } else if (stage === 'readingSummaryQuestions2') {
+            setStage('listeningInstructions');
+        } else if (stage === 'listeningInstructions') {
+            setStage('writing');
+        } else if (stage === 'listeningConversation1') {
+            setStage('writing');
+        } else if (stage === 'listeningQuestions1') {
+            setStage('writing');
+            setCurrentQuestion(0); // Reset current question for next set of questions
+        } else if (stage === 'listeningConversation2') {
+            setStage('writing');
+        } else if (stage === 'listeningQuestions2') {
+            setStage('writing');
+            setCurrentQuestion(0); // Reset current question for next set of questions
+        } else if (stage === 'listeningConversation3') {
+            setStage('writing');
+        } else if (stage === 'listeningQuestions3') {
+            setStage('writing');
+            setCurrentQuestion(0); // Reset current question for next set of questions
+        } else if (stage === 'listeningConversation4') {
+            setStage('writing');
+        } else if (stage === 'listeningQuestions4') {
+            setStage('writing');
+            setCurrentQuestion(0); // Reset current question for next set of questions
+        } else if (stage === 'listeningConversation5') {
+            setStage('writing');
+        } else if (stage === 'listeningQuestions5') {
+            calculateScore(); // Calculate score when all questions are answered
+            setStage('writing');
+        } else if (stage === 'writing') {
+            setStage('speaking');
+        }
+    };
+
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 2</h2>
+            <div className='flex flex-row justify-between px-10 mb-5'>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 2</h2>
+                <button onClick={handleExitClick} className="bg-blue-600 text-white py-2 px-4 rounded">
+                    Exit Section
+                </button>
+            </div>
             {stage === 'instructions' && (
                 <div className="bg-white shadow p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">General Test Instructions</h3>
@@ -582,23 +632,23 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningConversation1' && (
-                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 1</h3>
-                        <p className="mb-4">[Use Headphones For Better Quality]</p>
-                        <div className="custom-audio-container flex-col flex gap-10">
-                            <img src="/assets/T2C1_Listening.jpg"></img>
-                            <ReactAudioPlayer
-                                src={listeningAudios[0]}
-                                controls
-                                className="custom-audio-player"
-                            />
-                        </div>
-                        <div className="text-center mt-10">
-                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Continue
-                            </button>
-                        </div>
+                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 1</h3>
+                    <p className="mb-4">[Use Headphones For Better Quality]</p>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src="/assets/T2C1_Listening.jpg"></img>
+                        <ReactAudioPlayer
+                            src={listeningAudios[0]}
+                            controls
+                            className="custom-audio-player"
+                        />
                     </div>
+                    <div className="text-center mt-10">
+                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                            Continue
+                        </button>
+                    </div>
+                </div>
             )}
             {stage === 'listeningQuestions1' && (
                 <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
@@ -637,23 +687,23 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningConversation2' && (
-                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 2</h3>
-                        <p className="mb-4">[Use Headphones For Better Quality]</p>
-                        <div className="custom-audio-container flex-col flex gap-10">
-                            <img src="/assets/T2C2_Listening.webp"></img>
-                            <ReactAudioPlayer
-                                src={listeningAudios[1]}
-                                controls
-                                className="custom-audio-player"
-                            />
-                        </div>
-                        <div className="text-center mt-10">
-                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Continue
-                            </button>
-                        </div>
+                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 2</h3>
+                    <p className="mb-4">[Use Headphones For Better Quality]</p>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src="/assets/T2C2_Listening.webp"></img>
+                        <ReactAudioPlayer
+                            src={listeningAudios[1]}
+                            controls
+                            className="custom-audio-player"
+                        />
                     </div>
+                    <div className="text-center mt-10">
+                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                            Continue
+                        </button>
+                    </div>
+                </div>
             )}
             {stage === 'listeningQuestions2' && (
                 <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
@@ -692,23 +742,23 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningConversation3' && (
-                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 3</h3>
-                        <p className="mb-4">[Use Headphones For Better Quality]</p>
-                        <div className="custom-audio-container flex-col flex gap-10">
-                            <img src="/assets/T2C3_Listening.jpg"></img>
-                            <ReactAudioPlayer
-                                src={listeningAudios[2]}
-                                controls
-                                className="custom-audio-player"
-                            />
-                        </div>
-                        <div className="text-center mt-10">
-                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Continue
-                            </button>
-                        </div>
+                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 3</h3>
+                    <p className="mb-4">[Use Headphones For Better Quality]</p>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src="/assets/T2C3_Listening.jpg"></img>
+                        <ReactAudioPlayer
+                            src={listeningAudios[2]}
+                            controls
+                            className="custom-audio-player"
+                        />
                     </div>
+                    <div className="text-center mt-10">
+                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                            Continue
+                        </button>
+                    </div>
+                </div>
             )}
             {stage === 'listeningQuestions3' && (
                 <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
@@ -747,23 +797,23 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningConversation4' && (
-                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 4</h3>
-                        <p className="mb-4">[Use Headphones For Better Quality]</p>
-                        <div className="custom-audio-container flex-col flex gap-10">
-                            <img src="/assets/T1C4_Listening.jpg"></img>
-                            <ReactAudioPlayer
-                                src={listeningAudios[3]}
-                                controls
-                                className="custom-audio-player"
-                            />
-                        </div>
-                        <div className="text-center mt-10">
-                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Continue
-                            </button>
-                        </div>
+                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 4</h3>
+                    <p className="mb-4">[Use Headphones For Better Quality]</p>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src="/assets/T1C4_Listening.jpg"></img>
+                        <ReactAudioPlayer
+                            src={listeningAudios[3]}
+                            controls
+                            className="custom-audio-player"
+                        />
                     </div>
+                    <div className="text-center mt-10">
+                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                            Continue
+                        </button>
+                    </div>
+                </div>
             )}
             {stage === 'listeningQuestions4' && (
                 <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
@@ -802,23 +852,23 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'listeningConversation5' && (
-                    <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                        <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
-                        <p className="mb-4">[Use Headphones For Better Quality]</p>
-                        <div className="custom-audio-container flex-col flex gap-10">
-                            <img src="/assets/T1C5_Listening.jpg"></img>
-                            <ReactAudioPlayer
-                                src={listeningAudios[4]}
-                                controls
-                                className="custom-audio-player"
-                            />
-                        </div>
-                        <div className="text-center mt-10">
-                            <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Continue
-                            </button>
-                        </div>
+                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
+                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
+                    <p className="mb-4">[Use Headphones For Better Quality]</p>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src="/assets/T1C5_Listening.jpg"></img>
+                        <ReactAudioPlayer
+                            src={listeningAudios[4]}
+                            controls
+                            className="custom-audio-player"
+                        />
                     </div>
+                    <div className="text-center mt-10">
+                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                            Continue
+                        </button>
+                    </div>
+                </div>
             )}
             {stage === 'listeningQuestions5' && (
                 <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">

@@ -12,7 +12,7 @@ const VideoPlayer = dynamic(() => import('./videoplayer'), {
   suspense: true,
 });
 
-const initialLecture = courseData.sections[0].chapters[0].lectures[1];
+const initialLecture = courseData.sections[0].chapters[0].lectures[0];
 
 const CoursePage: React.FC = () => {
     const [currentLecture, setCurrentLecture] = useState<Lecture>(initialLecture);

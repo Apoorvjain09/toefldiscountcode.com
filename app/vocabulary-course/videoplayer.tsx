@@ -48,12 +48,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl }) => {
       setShowSkeleton(true);
       const skeletonTimeout = setTimeout(() => {
         setShowSkeleton(false);
-      }, 8000);
+      }, 20000);
 
       // Show "Check Internet Connection" alert if video is not loaded after 8 seconds
       internetConnectionTimeout = setTimeout(() => {
         setAlert({ message: 'Please Wait... Loading!', type: 'warning' });
-      }, 10000);
+      }, 20000);
 
       // Clean up event listeners and timeouts
       return () => {

@@ -294,7 +294,7 @@ export const readingQuestions = [
         ],
         answer: 2
     },
-    
+
     {
         id: 14,
         passage: `
@@ -370,7 +370,7 @@ export const readingQuestions = [
 
         [8] On the bright side, a Japanese firm is constructing a kudzu farm and processing plant in Alabama. The idea is to export the starch to Asia, where the demand currently exceeds the supply. Also, kudzu may eventually help reduce logging operations. At the Georgia Institute of Technology, researchers report that kudzu might become an alternative source for paper.
         `,
-        highlight:"exceeds",
+        highlight: "exceeds",
         question: "The word 'exceeds' in passage 8 is closest in meaning to",
         options: [
             "surpasses",
@@ -502,67 +502,67 @@ export const readingQuestions = [
 export const listeningQuestions = [
     {
         id: 1,
-        question: "What is the main topic of the lecture?",
+        question: "What is the discussion mainly about?",
         options: [
-            "Autonomous vehicles are the only solution for the future of transportation",
-            "Electric vehicles will completely replace traditional vehicles",
-            "High-speed rail networks will be the primary mode of transportation",
-            "The future of transportation will be shaped by several factors, including autonomous vehicles, electric vehicles, and high-speed rail"
-        ],
-        answer: 3
-    },
-    {
-        id: 2,
-        question: "What did the professor mean when saying 'and enhance the standard of out urban surroundings'?",
-        options: [
-            "The development of more parks and green spaces",
-            "Reducing traffic congestion and pollution from vehicles",
-            "The construction of more buildings and infrastructure",
-            "The development of new entertainment options"
-        ],
-        answer: 1
-    },
-    {
-        id: 3,
-        question: "What is the professor's attitude towards the future of transportation?",
-        options: [
-            "Skeptical",
-            "Hesitant",
-            "Enthusiastic",
-            "Indifferent"
+            "The difference between suppression and repression",
+            "Why Freud’s theories of defense mechanisms are correct",
+            "Some of the more common types of defense mechanisms",
+            "How to solve a student’s problem with an unfair professor"
         ],
         answer: 2
     },
     {
-        id: 4,
-        question: "Why does the professor say 'hopeful about the promise'?",
+        id: 2,
+        question: "How does the student explain the term 'repression'?",
         options: [
-            "To express the belief that transportation innovations will positively impact society",
-            "To downplay the challenges faced by the transportation industry",
-            "To encourage students to invest in transportation companies",
-            "To dismiss concerns about the environmental impact of transportation"
+            "He contrasts it with suppression.",
+            "He identifies it as a conscious response.",
+            "He gives several examples of it.",
+            "He refers to a study by Freud."
         ],
         answer: 0
     },
     {
-        id: 5,
-        question: "What did the professor imply by stating that electric vehicles could serve as a 'last mile' solution for high-speed rail passengers?",
+        id: 3,
+        question: "Why does the professor say this: `not me ofcourse i'm referring to another professor`?",
         options: [
-            "Electric vehicles can replace trains entirely",
-            "Electric vehicles will be used for short-distance travel, connecting passengers to high-speed rail stations",
-            "High-speed rail will only be used for long-distance travel",
-            "Electric vehicles will be too expensive for most passengers to afford"
+            "She is getting the class to pay attention.",
+            "She is making a joke about herself.",
+            "She is asking for a compliment.",
+            "She is criticizing a colleague."
+        ],
+        answer: 1
+    },
+    {
+        id: 4,
+        question: "Which of the following is an example of displacement that was used in the discussion?",
+        options: [
+            "Insisting that the professor dislikes you, when you really dislike him",
+            "Defending the professor even when you are angry about his behavior",
+            "Blaming someone in your study group instead of blaming the professor",
+            "Refusing to acknowledge that a problem exists because of the low grade"
+        ],
+        answer: 2
+    },
+    {
+        id: 5,
+        question: "According to the professor, what happened in the 1990s?",
+        options: [
+            "The concept of defense mechanisms was abandoned.",
+            "New terms were introduced for the same mechanisms.",
+            "Modern researchers improved upon Freud’s theory.",
+            "Additional categories were introduced by researchers."
         ],
         answer: 1
     },
     {
         id: 6,
-        question: "What is the connection between autonomous vehicle technology and shared transportation services, according to the professor?",
+        question: "How does the professor organize the discussion?",
         options: [
-            "Shared transportation services will become obsolete with the advent of autonomous vehicles",
-            "Autonomous vehicles will make shared transportation services more efficient and convenient",
-            "Autonomous vehicles will only be available for shared transportation services",
-            "Shared transportation services will hinder the development of autonomous vehicle technology"
+            "She has visual aids to explain each point.",
+            "She uses a scenario that students can relate to.",
+            "She provides a handout with an outline.",
+            "She helps students read the textbook."
         ],
         answer: 1
     },
@@ -863,4 +863,13 @@ export const speakingQuestions = [
         conversationAudio4: "/assets/T2S3.mp3",
         question4: "Using points and examples from the talk, explain two ways that natural arches are formed.",
     },
+];
+
+export const listeningAudios = [
+    "https://www.dropbox.com/scl/fi/kjg1w026bftnorrb9q81g/T3C1.mp3?rlkey=7i58jso37sxx423fju2ojtuqn&raw=1",
+    "/assets/T2C2.mp4",
+    "/assets/T2C2.mp4",
+    "/assets/T2C3.mp4",
+    "/assets/T2C4.mp4",
+    "/assets/T2C5.mp4"
 ];

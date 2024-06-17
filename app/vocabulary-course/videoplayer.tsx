@@ -75,7 +75,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl }) => {
         />
       )}
       {showSkeleton && <VideoSkele />}
-      <video ref={videoRef} controls className={`w-full ${showSkeleton ? 'hidden' : 'block'}`}>
+      <video ref={videoRef} controls className={`w-full ${showSkeleton ? 'hidden' : 'block'}`} controlsList="nodownload"> 
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

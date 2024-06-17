@@ -88,7 +88,7 @@ export const courseData: { sections: Section[] } = {
                     ],
                 },
                 {
-                    title: 'Money Matters',
+                    title: 'War and Peace',
                     lectures: [
                         { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/29Jul2020020714War-and-peace--part-1.mp4' },
                         { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/29Jul2020020744War-and-peace---Part-2.mp4' },
@@ -161,8 +161,8 @@ export const courseData: { sections: Section[] } = {
                         { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/03Jan2023070160BEAUTIFUL-MIND---1--(Part-2).mp4' },
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/03Jan2023070159BEAUTIFUL-MIND---1--(Part-3).mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/27Dec2022061222BEAUTIFUL-MIND---1--(Part-4).mp4' },
-                        { id: 5, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/11Jul2020060720BEAUTIFUL-MIND---1--(Part-5).mp4' },
-                        { id: 6, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/13Jul2020070701BEAUTIFUL-MIND---1--(Part-6).mp4' },
+                        { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/11Jul2020060720BEAUTIFUL-MIND---1--(Part-5).mp4' },
+                        { id: 6, title: 'Lecture 6', videoUrl: 'https://mja.in/uploads/course_video/13Jul2020070701BEAUTIFUL-MIND---1--(Part-6).mp4' },
                     ],
                 },
                 {

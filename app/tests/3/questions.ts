@@ -568,257 +568,256 @@ export const listeningQuestions = [
     },
     {
         id: 7,
-        question: "What is the main idea of the dialogue?",
+        question: "What is the main focus of this discussion?",
         options: [
-            "Work-study eligibility requirements",
-            "How to apply for financial aid",
-            "Job positions available through work-study",
-            "An overview of work-study opportunities"
+            "The Renaissance",
+            "Important scholars",
+            "Humanism",
+            "Political reform"
         ],
-        answer: 3,
+
+
+        answer: 2,
     },
     {
         id: 8,
-        question: "What does the Career Counselor imply about the workload of work-study positions?",
+        question: "Why does the professor say this: 'I don't need to spell that for you, do I?'?",
         options: [
-            "They require a lot of hours",
-            "They are not flexible",
-            "They can be balanced with schoolwork",
-            "They are not beneficial for students"
+            "She thinks that the spelling of the term is not important.",
+            "She assumes that the students know how to spell the term.",
+            "She knows that the term can be found in the textbook.",
+            "She does not want to spend time explaining the term."
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 9,
-        question: "What is one requirement the Career Counselor mentions for maintaining work-study eligibility?",
+        question: "Why does the professor mention the drawing by Leonardo da Vinci?",
         options: [
-            "Full-time enrollment",
-            "Living on campus",
-            "Maintaining satisfactory academic progress",
-            "Attending regular meetings with a supervisor"
+            "She wants the students to refer to their textbook more often.",
+            "She uses it as an example of the union of art and science.",
+            "She says that it is one of her personal favorites.",
+            "She contrasts his work with that of other artists."
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 10,
-        question: "Based on the student's concern about balancing work and studies, how does the Career Counselor feel about this issue?",
+        question: "According to the professor, what was the effect of using Latin as a universal language of scholarship?",
         options: [
-            "Worried",
-            "Indifferent",
-            "Reassuring",
-            "Skeptical"
+            "It facilitated communication among intellectuals in many countries.",
+            "It made Rome the capital of the world during the Renaissance.",
+            "It caused class distinctions to be apparent throughout Europe.",
+            "It created an environment in which new ideas were suppressed."
         ],
-        answer: 2
+        answer: 0
     },
     {
         id: 11,
-        question: "According to the dialogue, where can the student find work-study job listings?",
+        question: "According to the professor, what can be inferred about a Renaissance man?",
         options: [
-            "In the financial aid office",
-            "On the school's website",
-            "Through a local newspaper",
-            "By contacting academic departments"
+            "He would probably be a master craftsman.",
+            "He would have an aptitude for both art and science.",
+            "He would be interested in classical philosophers.",
+            "He would value logic at the expense of creativity."
         ],
         answer: 1
     },
     {
         id: 12,
-        question: "Is the student eligible for financial aid?",
+        question: "All of the following characteristics are true of humanism EXCEPT",
         options: [
-            "No, she has not filled her student aid",
-            "Yes, she has filled her student aid and have been awarded financial help.",
-            "Didnt mentioned in the conversation.",
-            "Yes but She will fill the student aid tommorow."
+            "Mankind is innately good.",
+            "Scholars must serve society.",
+            "The individual is important.",
+            "Human beings are rational."
         ],
         answer: 1
     },
     {
         id: 13,
-        question: "What is the main idea of this lecture?",
+        question: "What is the discussion mainly about?",
         options: [
-            "The anatomy of the tongue",
-            "The connection between taste, smell, and memory",
-            "The role of the olfactory system in taste perception",
-            "The science and intricacies of taste and smell"
+            "Global marketing of food products",
+            "International business in Europe",
+            "Surprises in food preferences abroad",
+            "Packaging food for exportation"
         ],
-        answer: 3
+        answer: 0
     },
     {
         id: 14,
-        question: "According to the professor, what does the term 'flavor' imply?",
+        question: "How does the professor organize the discussion?",
         options: [
-            "The intensity of taste",
-            "The combination of taste and smell",
-            "The unique taste of a food item",
-            "The aroma of food"
+            "He compares domestic and foreign products.",
+            "He relates the textbook to his professional experience.",
+            "He refers to case studies from the textbook.",
+            "He presents information from most to least important."
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 15,
-        question: "What does the professor imply about humans' ability to distinguish between flavors and aromas?",
+        question: "Why does the student say this: 'How About serving Sizes'?",
         options: [
-            "Humans are less skilled than other animals",
-            "Humans are incapable of discerning subtle differences",
-            "Humans have a remarkable capacity for adaptation and learning",
-            "Humans need assistance to detect different flavors and aromas"
-        ],
-        answer: 2
-    },
-    {
-        id: 16,
-        question: "Which part of the brain is responsible for the connection between taste, smell, and memory?",
-        options: [
-            "Olfactory bulb",
-            "Retronasal pathway",
-            "Hippocampus and amygdala",
-            "Papillae"
-        ],
-        answer: 2
-    },
-    {
-        id: 17,
-        question: "How does the professor feel about the complexity of our sensory system?",
-        options: [
-            "Overwhelmed",
-            "Fascinated",
-            "Puzzled",
-            "Concerned"
+            "She is asking the professor a question about his previous point.",
+            "She is offering a possible answer to the professor’s question.",
+            "She is changing the subject of the class discussion.",
+            "She is checking her comprehension of the professor’s opinion."
         ],
         answer: 1
     },
     {
-        id: 18,
-        question: "What does the professor mean when they say 'that the way we expirence flavour is a symphony of sensory data'?",
+        id: 16,
+        question: "What technique does the professor use to encourage student discussion?",
         options: [
-            "Taste and smell are independent processes",
-            "Only one sense is dominant at a time",
-            "Different senses contribute to the overall experience",
-            "Flavor perception is solely based on the sense of taste"
+            "He gives students positive reinforcement by praising their efforts.",
+            "He asks the students to talk among themselves in small groups.",
+            "He assigns a different part of the textbook to each student.",
+            "He calls on each student by name to contribute to the discussion."
         ],
-        answer: 2
+        answer: 0
     },
     {
-        id: 19,
-        question: "What is the purpose of the conversation?",
+        id: 17,
+        question: "What did Ted Levitt mean by 'the pluralization of consumption'?",
         options: [
-            "The man is interviewing the woman for a job in the office.",
-            "The woman wants to enroll in the communications program.",
-            "The man wants to discuss a change in the course schedule.",
-            "The woman is requesting an interview with the dean."
+            "More people would begin to travel.",
+            "More multinational corporations would produce brands.",
+            "More consumers will have the means to afford goods.",
+            "More people will want the same products."
         ],
         answer: 3
     },
     {
-        id: 20,
-        question: "Why does the man say this: 'I'm sure the dean would like to particiapte but the schedule is pretty tight?",
+        id: 18,
+        question: "What does the professor say about television and movie companies?",
         options: [
-            "To express regret that the dean is not available",
-            "To state that the dean cannot change his schedule",
-            "To let the woman know the dean is very busy",
-            "To apologize for the dean’s confusing behavior"
+            "He indicates that some companies hire foreign marketing experts.",
+            "He criticizes the way that they advertise their programs and films.",
+            "He notes that they are one of the most widely distributed exports.",
+            "He points out that they are paid to display brand-name products."
+        ],
+        answer: 3
+    },
+    {
+        id: 19,
+        question: "What are the students mainly discussing?",
+        options: [
+            "Group sessions in the Office of Career Development",
+            "The advantages of career counseling for the man",
+            "The woman’s internship in the Office of Career Development",
+            "How to find employment in the field of career counseling"
+        ],
+        answer: 1
+    },
+    {
+        id: 20,
+        question: "What is the man’s problem?",
+        options: [
+            "He does not have time to see an advisor.",
+            "He does not have an internship yet.",
+            "He does not know which career to choose.",
+            "He does not have a job offer after graduation."
         ],
         answer: 2
     },
     {
         id: 21,
-        question: "Why does the woman want to meet with the dean?",
+        question: "Why does the woman tell the man about her experience?",
         options: [
-            "To learn about his ideas and vision",
-            "To ask for a letter of recommendation",
-            "To request a change in the school calendar",
-            "To tell him that she enjoyed his lecture"
+            "To demonstrate the benefits of going to the Office of Career Development",
+            "To encourage the man to talk with an advisor about an internship",
+            "To suggest that he change his major from math to library science",
+            "To give the man her opinion about his career decision"
         ],
-
-
         answer: 0
     },
     {
         id: 22,
-        question: "What can be inferred about the dean?",
+        question: "What is the woman’s attitude toward her internship?",
         options: [
-            "He is in his office two days a week.",
-            "He has been dean for only a short time.",
-            "He generally does not give interviews.",
-            "He is an excellent public speaker."
+            "She would rather go to graduate school.",
+            "She is looking forward to interning.",
+            "She thinks that it is a very positive experience.",
+            "She will be happy when she completes it."
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 23,
-        question: "When will the meeting with the dean take place?",
+        question: "What will the man probably do?",
         options: [
-            "The next day",
-            "The next week",
-            "In two weeks",
-            "In three weeks"
-        ],
-        answer: 2
-    },
-    {
-        id: 24,
-        question: "What are the students mainly discussing?",
-        options: [
-            "Various costs that businesses face",
-            "The concept of opportunity cost",
-            "The rising costs of owning a business",
-            "Differences between economics and accounting"
+            "He will make an appointment with his academic advisor.",
+            "He will go to the Office of Career Development.",
+            "He will apply for a job at the library.",
+            "He will ask the woman to help him with his tests."
         ],
         answer: 1
     },
     {
-        id: 25,
-        question: "How does the man help the woman understand a concept that she finds difficult?",
+        id: 24,
+        question: "What is the discussion mainly about?",
         options: [
-            "He illustrates the concept with an example.",
-            "He makes a list of terms for her to study.",
-            "He asks her to explain a similar concept.",
-            "He reads a passage from their textbook."
-        ],
-
-
-        answer: 0
-    },
-    {
-        id: 26,
-        question: "Why does the man ask this: 'is it really that good?'?",
-        options: [
-            "To find out how much money the woman made",
-            "To evaluate the food at a restaurant",
-            "To suggest that the profit is less than it seems",
-            "To express his concerns about owning a business"
+            "Catherine de Medici’s entertainments",
+            "The figures for court dancing",
+            "The development of the ballet",
+            "The relationship between dance and meals"
         ],
         answer: 2
     },
     {
-        id: 27,
-        question: "According to the man, how does an economist's view of costs differ from that of an accountant?",
+        id: 25,
+        question: "According to the professor, what does the term balletti mean?",
         options: [
-            "An economist's definition of costs never changes.",
-            "An economist uses a computer to calculate costs.",
-            "An economist tries to lessen the effect of costs.",
-            "An economist looks at a broader range of costs."
+            "A dramatic story",
+            "A parade of horses",
+            "A dance done in figures",
+            "An outdoor entertainment"
         ],
-        answer: 3
+        answer: 2
+    },
+    {
+        id: 26,
+        question: "How did the early choreographers accommodate the abilities of amateur performers?",
+        options: [
+            "The steps were quite simple.",
+            "The same performance was repeated.",
+            "Practice sessions were lengthy.",
+            "The dance was seen from a distance."
+        ],
+        answer: 0
+    },
+    {
+        id: 27,
+        question: "Why does the professor mention that he checked several references about the length of Queen Louise’s Ballet?",
+        options: [
+            "He was very interested in the ballet.",
+            "He did not know much about it.",
+            "He wasn’t sure that it was accurate.",
+            "He wanted to impress the class."
+        ],
+        answer: 2
     },
     {
         id: 28,
-        question: "What can be inferred about the true cost of a college education?",
+        question: "What can be inferred about the professor?",
         options: [
-            "It includes the cost of lost income.",
-            "It is more than the woman can afford.",
-            "It is not as expensive as it appears.",
-            "It continues to increase each year."
+            "He is not very polite to his class.",
+            "He encourages the students to participate.",
+            "He is not very interested in the topic.",
+            "He is probably a good dancer."
         ],
-        answer: 0
+        answer: 1
     }
 ];
 
 export const writingQuestions = {
+    task1_audio: "https://www.dropbox.com/scl/fi/a9zxw3eewirrek59qxwzn/T3W1.mp3?rlkey=kpxjos6kchjb34ncjexjknlmc&raw=1",
     task1: {
-        passage: `In a vote that took place at the International Astronomical Union Conference on August 24th, 2006, Pluto lost its status as a planet in our solar system. Pluto was originally discovered in 1930 when scientists were searching for something that was interfering with Uranus's orbit. Though Pluto was estimated to be similar in size to Earth, it was later discovered that it was even smaller than our own moon, as well as many other moons.
-        It is now known that there are thousands of planetary objects similar to Pluto, including Eris which is slightly larger than Pluto. Choosing to reclassify Pluto to a dwarf planet honors the fact that science is about making new discoveries. While it was a sad day for Pluto lovers, people in general have accepted the idea, and the next generation of children will grow up knowing only eight planets and thinking nothing of it. As Mike Brown, the astronomer who discovered Eris, noted following the IUC's decision, "science is self-correcting."
-        `,
+        passage: `Emperor penguins are not only the largest species of penguin in the world but also one of the most unique. They are very social, living in colonies that can include hundreds of thousands of individuals. Nevertheless, emperor penguins are monogamous. Having selected a mate, emperor penguins remain faithful to each other for life, using vocal calls to find one another when they return to their breeding site on the compacted ice of the Antarctic continent. It is believed that different frequencies alert mates to the sound of their partner's call.
+        Another interesting aspect of emperor penguins is that they return to the same site, called a rookery, to nest each year. Although their path to the rookery is different every year due to the shifting sea ice, in general, the penguins continue to use the rookery where they were hatched. Their loyalty to a particular breeding ground results in increasingly larger pen- guin colonies, some with more than a million birds. Males tend to arrive first to reestablish and defend their preferred nesting sites and females return a day or so later.,
+        Emperor penguins are not considered endangered and are not currently protected under international law. In fact, in areas where reliable population counts have been conducted, the evidence suggests that populations are stable. However, due to harsh environmental conditions, some colonies have not been monitored on a consistent basis. Estimates of population sizes are at about 240,000 breeding pairs. Taking into con- sideration the non-breeding birds as well, the total translates into about 600,000 adult birds. Emperor chicks that reach adulthood can survive for 20 years.`
     },
     task2: {
         conversation: `
@@ -833,16 +832,16 @@ export const writingQuestions = {
         <br/>
         <div>
             <p><strong>Professor:</strong></p>
-            <p>Hello class! Next week, we will delve into the fascinating topic of World War II, a pivotal event in history. You all will gain insights into the causes, major battles, and its profound impact on global politics. Here’s a question for the discussion board:<br/><strong> "How did World War II shape the post-war world order, and what lessons can we draw from this period to prevent future conflicts?"</strong></p>
+            <p>Today we’re going to talk about the debate between economic growth and protecting the environment. Economic growth creates new jobs and gives people money they can use to improve their lives. On the other hand, if we protect the environment it can be enjoyed both by ourselves and future generations. If you had to choose between prioritizing economic growth or protecting the environment, which one would you choose. Why?</p>
         </div>
         <br/>
         <div>
-            <p><strong>Kia:</strong></p>
-            <p>World War II undeniably played a significant role in shaping the post-war world order for the better. In its aftermath, the establishment of the United Nations emerged as a beacon of hope for global cooperation and conflict resolution. Nations recognized the necessity of diplomacy over aggression, and the UN's formation paved the way for diplomatic dialogues and peaceful settlements. This emphasis on collaboration has led to a substantial decrease in major interstate conflicts since WWII, highlighting the positive impact it had on fostering a more stable and peaceful world.</p>
+            <p><strong>Alex:</strong></p>
+            <p> I would prioritize the environment. We only have one planet and if we don’t take care of it, we won’t have pleasant lives in the future. Economic growth can be important, but not at the expense of the environment. I think we need to shift towards more things such as investing in renewable energy and promoting environmentally-friendly technologies.  We’ll all live much healthier lives if the world around us is clean.</p>
         </div>
         <div>
             <p><strong>Joe:</strong></p>
-            <p>Conversely, World War II also left behind a legacy of distrust and geopolitical rivalries that continue to influence international relations negatively. The wartime alliance between the United States and the Soviet Union, for instance, quickly dissolved into the Cold War, characterized by proxy conflicts, nuclear arms race, and ideological tensions. This division of the world into opposing blocs led to decades of instability and conflict, illustrating how the aftermath of WWII sowed the seeds of future disputes. It serves as a stark reminder of the importance of addressing underlying tensions and promoting diplomacy to prevent such prolonged periods of hostility in the future.</p>
+            <p>While I agree with Alex that environmental sustainability is important, I think that economic growth is the only way to solve many of the social and economic problems we face. We need a strong economy to create jobs, reduce poverty, and improve standards of living.  Not only that, but when companies grow stronger and more profitable, they can develop new technologies that solve our environmental problems.</p>
         </div>
         `
     },
@@ -850,26 +849,25 @@ export const writingQuestions = {
 
 export const speakingQuestions = [
     {
-        question1: "If you will choose a new roommate, which of the following qualities do you think is the best: quietness, friendliness, or cleanliness? Explain your response with examples.",
+        question1: "The older generation often gives advice to younger family members. Describe a valuable piece of advice that an older person gave you. Why did it help you?",
 
-        passage2: `All students should be aware that there are two changes in tomorrow’s student council elections. First of all, there will be no voting in the student library as the librarians have claimed that voting there would be too noisy. As a result, voting will only be permitted in the student center and at the student cafeteria. The second change concerns the student cafeteria. Voting there will end at 8 P.M. rather than at 9 P.M. since the cafeteria regularly closes at eight. Those students wishing to vote between eight and nine must do so at the student center.`,
-        conversationAudio2: "/assets/T2S1.mp3",
-        question2: "The man expresses his opinion about the article in the school newspaper. Explain his opinion and the reasons he gives for holding that opinion.",
+        passage2: `In order to qualify for a refund of 100 percent at any time during the semester; you must first establish eligibility. Serious illness or injury must be verified by a written statement signed by a doctor or a psychologist. The death of a family member ·must be verified by a death certificate. Military duty must be verified by a copy of the orders. Students who wish to withdraw without submitting official documentation may do so before the end of the drop-add period without penalty. After the end of the second week of classes, students may petition for a 90 percent reimbursement. After the end of the fourth week, students are eligible for a 50 percent refund.`,
+        conversationAudio2: "https://www.dropbox.com/scl/fi/7sl4ps4ahsvoqpioyjcqh/T3S1.mp3?rlkey=mkprfbg0krlafsrw37s56gbek&raw=1",
+        question2: "The student expresses her opinion of the policy for reimbursement. Report her opinion and explain the reasons that she gives for having that opinion.",
 
-        passage3: "Prey animals employ a variety of methods, including running and hiding, to avoid being caught by predators. Yet some animals do not hide but instead stand out. This is often accomplished through the method known as warning coloration. Animals utilizing warning coloration have brightly colored fur or skin. They are typically blue, purple, white, orange, red, or yellow in color. Many of these animals have lethal poison or venom. Predators that see brightly colored animals almost always avoid them. That is particularly true if the predators have had prior negative experiences with similar-looking animals.",
-        conversationAudio3: "/assets/T2S2.mp3",
-        question3: "The professor talks about the poison dart frog and the skunk. Explain how their actions are related to animal warning coloration.",
+        passage3: "A ballad is a poem that tells a story and is sung to music. Usually the story is of unknown origin, and a number of versions may be found for one song, a characteristic that stems from the oral tradition. As the song is passed on from one singer to another, a word is added or changed, or a slight alteration is made in the tune. In short, ballads represent a living tradition that evolves as the song is performed and passed to the next musician. A collection of ballads has been preserved in written form in the volume English and Scottish Popular Ballads by Francis James Child, and many ballads are still referred to by their 'Child number.'",
+        conversationAudio3: "https://www.dropbox.com/scl/fi/6sb3e4iy533hks54joe2u/T3S2.mp3?rlkey=90wr8dndrvmof4w9rhlujmw7r&raw=1",
+        question3: "Define a ballad, and then explain why 'Barbara Allen' can be classified as a ballad.",
 
-        conversationAudio4: "/assets/T2S3.mp3",
-        question4: "Using points and examples from the talk, explain two ways that natural arches are formed.",
+        conversationAudio4: "https://www.dropbox.com/scl/fi/zdt9r261h4kytwlxef4qm/T3S3.mp3?rlkey=4g9x3297503n3x10ua3wv3nts&raw=1",
+        question4: "Using the main points and examples from the lecture, describe the kind of information that ultrasound can provide, and then explain the way that ultrasound is used in medical diagnosis.",
     },
 ];
 
 export const listeningAudios = [
     "https://www.dropbox.com/scl/fi/kjg1w026bftnorrb9q81g/T3C1.mp3?rlkey=7i58jso37sxx423fju2ojtuqn&raw=1",
-    "/assets/T2C2.mp4",
-    "/assets/T2C2.mp4",
-    "/assets/T2C3.mp4",
-    "/assets/T2C4.mp4",
-    "/assets/T2C5.mp4"
+    "https://www.dropbox.com/scl/fi/zfqzrcjkd3w6b5idxa0rx/T3C2.mp3?rlkey=uj65m5ljgovus22cyukrawnu7&raw=1",
+    "https://www.dropbox.com/scl/fi/afzx9zpb4rlz76m8867m6/T3C3.mp3?rlkey=dri5qiprzgpf8dca63anbi6ly&raw=1",
+    "https://www.dropbox.com/scl/fi/q51hzc0vqkf3ovm9rdnyh/T3C4.mp3?rlkey=sq3cy9h7clewhwr83qyy1qpao&raw=1",
+    "https://www.dropbox.com/scl/fi/dm6tondi23omibqbs991r/T3C5.mp3?rlkey=q9votkve2q8dxuh3sfqxviev3&raw=1",
 ];

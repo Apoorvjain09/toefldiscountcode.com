@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
   const { testNumber, task, passage } = await req.json();
   console.log("Task:", task);
-  console.log("Passage:", passage);
+  console.log("answer Passage:", passage);
   
   if (!task || !passage) {
     return NextResponse.json({ message: 'Missing task or passage' }, { status: 400 });
@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
     
     try {
       const { writingQuestions } = await import(`@/app/tests/${testNumber}/questions.ts`);
+      console.log("question passage:", writingQuestions.task2.conversation)
 
     let prompt;
     if (task === 1) {

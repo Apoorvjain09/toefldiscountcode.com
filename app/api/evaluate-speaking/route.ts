@@ -30,9 +30,9 @@ export async function POST(req: NextRequest) {
         Answer Transcript: '${transcript}'
         
         HOW SCORING WILL BE DONE:
-        4: The response fulfills the demands of the task. Minimum 100 words.
-        3: The response addresses the task appropriately but may fall short of being fully developed. Minimum 80 words.
-        2: Speech is basically intelligible, though listener effort is needed because of unclear articulation. Minimum 40 words.
+        4: The response fulfills the demands of the task. Minimum 80 words.
+        3: The response addresses the task appropriately but may fall short of being fully developed. Minimum 60 words.
+        2: Speech is basically intelligible, though listener effort is needed because of unclear articulation. Minimum 20 words.
         1: Little relevant content from the lecture. Errors make it hard to understand.
         0: Copies from the reading, off-topic, foreign language, or blank.
         

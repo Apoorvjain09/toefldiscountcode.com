@@ -691,7 +691,7 @@ const Test1 = () => {
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 2</h3>
                     <p className="mb-4">[Use Headphones For Better Quality]</p>
                     <div className="custom-audio-container flex-col flex gap-10">
-                        <img src="/assets/T2C2_Listening.webp"></img>
+                        <img src="/assets/T1C2_Listening.jpg"></img>
                         <ReactAudioPlayer
                             src={listeningAudios[1]}
                             controls
@@ -801,7 +801,7 @@ const Test1 = () => {
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 4</h3>
                     <p className="mb-4">[Use Headphones For Better Quality]</p>
                     <div className="custom-audio-container flex-col flex gap-10">
-                        <img src="/assets/T1C4_Listening.jpg"></img>
+                        <img src="/assets/two-students-talking.jpg"></img>
                         <ReactAudioPlayer
                             src={listeningAudios[3]}
                             controls
@@ -856,7 +856,7 @@ const Test1 = () => {
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
                     <p className="mb-4">[Use Headphones For Better Quality]</p>
                     <div className="custom-audio-container flex-col flex gap-10">
-                        <img src="/assets/T1C5_Listening.jpg"></img>
+                        <img src="/assets/T2C3_Listening.jpg"></img>
                         <ReactAudioPlayer
                             src={listeningAudios[4]}
                             controls

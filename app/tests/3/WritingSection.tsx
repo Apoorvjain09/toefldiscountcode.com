@@ -52,7 +52,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
 
     const handleTask1Submit = () => {
         if (writingTask1.trim() !== '') {
-            const testNumber = 2;
+            const testNumber = 3;
             handleTaskSubmit(testNumber, 1, writingTask1);
         } else {
             setStage("task2Instructions");
@@ -61,7 +61,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
 
 
     const handleTask2Submit = () => {
-        const testNumber = 2;
+        const testNumber = 3;
         handleTaskSubmit(testNumber, 2, writingTask2);
         onComplete();
     };
@@ -123,7 +123,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                     <div className="custom-audio-container flex-col flex gap-10">
                         <img src="/assets/T1C2_Listening.jpg"></img>
                         <ReactAudioPlayer
-                            src="/assets/T2W1.mp3"
+                            src={writingQuestions.task1_audio}
                             controls
                             className="custom-audio-player"
                         />

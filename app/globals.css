@@ -26,3 +26,7 @@
 .custom-audio-player::-webkit-media-controls-volume-slider {
     filter: brightness(0.7);
 }
+
+#default-modal::-webkit-scrollbar{
+    display: none;
+}

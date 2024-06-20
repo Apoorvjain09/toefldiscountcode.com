@@ -1,8 +1,10 @@
 "use client"
 import React, { useState, useEffect, Suspense } from 'react';
-import { FaPlayCircle } from 'react-icons/fa';
+import { FaPlayCircle, FaSignOutAlt } from 'react-icons/fa';
 import { readingQuestions, listeningQuestions, listeningAudios } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
+import Draggable from 'react-draggable';
+
 const WritingSection = React.lazy(() => import('./WritingSection'));
 const SpeakingSection = React.lazy(() => import('./SpeakingSection'));
 const ResultsDashboard = React.lazy(() => import('./ResultsDashboard'));
@@ -159,8 +161,8 @@ const Test1 = () => {
     }, [currentQuestion, stage]);
 
     const handleWritingCompletion = () => {
-        // setStage('resultsDashboard');
-        setStage('speaking');
+        setStage('resultsDashboard');
+        // setStage('speaking');
     };
     const handleSpeakingCompletion = () => {
         setStage('resultsDashboard');
@@ -319,12 +321,23 @@ const Test1 = () => {
         }
     };
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen2, setIsModalOpen2] = useState(false);
+
+    const handleModalToggle = () => {
+        setIsModalOpen(!isModalOpen);
+    };
+    const handleModalToggle2 = () => {
+        setIsModalOpen2(!isModalOpen2);
+    };
+
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
-            <div className='flex flex-row justify-between px-10 mb-5'>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 3</h2>
-                <button onClick={handleExitClick} className="bg-blue-600 text-white py-2 px-4 rounded">
+            <div className='flex flex-row justify-between px-10 mb-5 gap-10 '>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 4</h2>
+                <button onClick={handleExitClick} className="hidden sm:flex bg-blue-600 text-white py-0 lg:px-4 rounded-[30px] w-[150px] lg:rounded-[50px] gap-1 items-center flex-row justify-center text-sm px-4 max-h-[60px]">
+                    <FaSignOutAlt />
                     Exit Section
                 </button>
             </div>
@@ -374,12 +387,12 @@ const Test1 = () => {
                     <p className="mb-4">
                         Within this section, you can go to the next question by clicking Next. You may skip questions in the current passage and go back to them later. If you want to return to previous questions, click on Back.
                     </p>
-                    <p className="mb-4">
+                    {/* <p className="mb-4">
                         You can click on Review at any time and the review screen will show you which questions you have answered and which you have not answered. From this review screen, you may go directly to any question you have already seen in the current passage.
                     </p>
                     <p className="mb-4">
                         You may now begin the Reading section. NOTE: In an actual test some test takers may receive 4 passages; those test takers will have 72 minutes (1 hour and 12 minutes) to answer the questions.
-                    </p>
+                    </p> */}
                     <div className="text-center">
                         <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
                             Continue
@@ -425,7 +438,7 @@ const Test1 = () => {
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            Prev
+                            Back
                         </button>
                         <button
                             onClick={() => {
@@ -478,7 +491,15 @@ const Test1 = () => {
                             </div>
                         </div>
                     ))}
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
+                        <button
+                            onClick={() => {
+                                handleModalToggle(); // Toggle modal on button click
+                            }}
+                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                        >
+                            Read Passage
+                        </button>
                         <button
                             onClick={() => {
                                 setStage('readingPassage2');
@@ -491,6 +512,36 @@ const Test1 = () => {
                         </button>
                     </div>
                 </div>
+            )}
+            {isModalOpen && (
+                <Draggable handle=".modal-header">
+                    <div id="default-modal" tab-index="-1" aria-hidden="true" className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
+                        <div className="relative p-4 w-full max-w-2xl max-h-full">
+                            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 cursor-move">
+                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Passage
+                                    </h3>
+                                    <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onClick={handleModalToggle}>
+                                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span className="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <div className="p-4 md:p-5 space-y-4">
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        {/* Insert the passage content here */}
+                                        {readingQuestions.find(q => q.id === 10)?.passage}
+                                    </p>
+                                </div>
+                                <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                    <button onClick={handleModalToggle} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Draggable>
             )}
             {stage === 'readingPassage2' && (
                 <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
@@ -586,13 +637,11 @@ const Test1 = () => {
                     <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
                         <button
                             onClick={() => {
-                                calculateScore()
-                                setStage('resultsDashboard');
-                                setCurrentQuestion(0);
+                                handleModalToggle2(); // Toggle modal on button click
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            Finish
+                            Read Passage
                         </button>
                         <button
                             onClick={() => {
@@ -608,6 +657,36 @@ const Test1 = () => {
 
                     </div>
                 </div>
+            )}
+            {isModalOpen2 && (
+                <Draggable handle=".modal-header">
+                    <div id="default-modal" tab-index="-1" aria-hidden="true" className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
+                        <div className="relative p-4 w-full max-w-2xl max-h-full">
+                            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 cursor-move">
+                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Passage
+                                    </h3>
+                                    <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onClick={handleModalToggle2}>
+                                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span className="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <div className="p-4 md:p-5 space-y-4">
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        {/* Insert the passage content here */}
+                                        {readingQuestions.find(q => q.id === 20)?.passage}
+                                    </p>
+                                </div>
+                                <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                    <button onClick={handleModalToggle2} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Draggable>
             )}
             {stage === 'listeningInstructions' && (
                 <div className="bg-white shadow p-6 rounded mb-4">

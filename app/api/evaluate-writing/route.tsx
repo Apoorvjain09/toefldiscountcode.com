@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     
     try {
       const { writingQuestions } = await import(`@/app/tests/${testNumber}/questions.ts`);
-      console.log("question passage:", writingQuestions.task2.conversation)
+      // console.log("question passage:", writingQuestions.task2.conversation)
 
     let prompt;
     if (task === 1) {

@@ -281,11 +281,11 @@ const Test1 = () => {
             setStage('reading');
         } else if (stage === 'reading') {
             setStage('listeningInstructions');
-        } else if (stage === 'readingPassage1' && currentQuestion + 1 >= 9) {
+        } else if (stage === 'readingPassage1') {
             setStage('listeningInstructions');
         } else if (stage === 'readingSummaryQuestions1') {
             setStage('listeningInstructions');
-        } else if (stage === 'readingPassage2' && currentQuestion + 1 >= 19) {
+        } else if (stage === 'readingPassage2') {
             setStage('listeningInstructions');
         } else if (stage === 'readingSummaryQuestions2') {
             setStage('listeningInstructions');
@@ -318,6 +318,8 @@ const Test1 = () => {
             setStage('writing');
         } else if (stage === 'writing') {
             setStage('speaking');
+        } else if (stage === 'speaking') {
+            setStage('resultsDashboard');
         }
     };
 
@@ -335,7 +337,7 @@ const Test1 = () => {
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
             <div className='flex flex-row justify-between px-10 mb-5 gap-10 '>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 4</h2>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 1</h2>
                 <button onClick={handleExitClick} className="hidden sm:flex bg-blue-600 text-white py-0 lg:px-4 rounded-[30px] w-[150px] lg:rounded-[50px] gap-1 items-center flex-row justify-center text-sm px-4 max-h-[60px]">
                     <FaSignOutAlt />
                     Exit Section

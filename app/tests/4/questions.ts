@@ -3,842 +3,849 @@ export const readingQuestions = [
     {
         id: 1,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape.
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        question: "In paragraph 1, each of the following is mentioned as a feature of the city of Cahokia between A.D 1100 to 1200 EXCEPT:",
+        question: "Which of the following best expresses the essential information in the highlighted sentence? Incorrect answer choices change the meaning in important ways or leave out essential information.",
+        highlight: "While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places.",
         options: [
-            "Man-made mounds",
-            "Several large temples",
-            "A manufacturing workshop",
-            "Many public plazas"
+            "The transportation of the moai is both remarkable and mysterious, but not as impressive as the actual creation of the statues.",
+            "The moai were carved with stone hand chisels, which is an impressive accomplishment, but it is still unknown whether the people actually transported them.",
+            "The creation of the moai is amazing, but not as amazing as how they were transported.",
+            "The transportation of the moai is remarkable, mysterious, and as impressive as their creation with simple hand tools."
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 2,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        question: "Which of the following is NOT mentioned in paragraph 2 as a factor in the development of Cahokia?",
+        question: "In paragraph 2, what does the author say about past theories of how the moai were transported from quarries to their resting places?",
         options: [
-            "The presence of chert close to the city",
-            "Its religious significance to non-residents",
-            "An exchange of agricultural tools with Mesoamerica",
-            "The city’s position along a natural trade route"
-        ],
-        answer: 2
-    },
-    {
-        id: 3,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        highlight: "ingenuity",
-        question: "The word “ingenuity” in paragraph 2 is closest in meaning to:",
-        options: [
-            "ambition",
-            "sincerity",
-            "faith",
-            "cleverness"
-        ],
-        answer: 3
-    },
-    {
-        id: 4,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        question: "What can be inferred from paragraph 3 about agricultural methods used in Cahokia in 1100?",
-        options: [
-            "They were not as advanced as those used in Mesoamerica.",
-            "They were sometimes unable to supply enough food for the city.",
-            "They were carried out by newly arrived immigrants.",
-            "They were seriously affected by environmental pollution."
+            "The theories claimed that that use of natural resources for transporting moai had devastating effects on the land and society.",
+            "The theories relied on evidence of log roadways that remained long after the Rapa Nui people had disappeared.",
+            "The theories were supported by oral accounts of the use of wood by the Rapa Nui peoples at the time the moai were constructed and transported.",
+            "The theories were based on inaccurate estimates of the amount of wood required to transport moai over long distances."
         ],
         answer: 1
     },
     {
+        id: 3,
+        passage: `
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
+
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
+        `,
+        highlight: "They would not",
+        question: "The word 'they' in paragraph 2 refers to:",
+        options: [
+            "Proponents",
+            "The People",
+            "Rollers",
+            "Statues"
+        ],
+        answer: 1
+    },
+    {
+        id: 4,
+        passage: `
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
+
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
+        `,
+        question: "Why does the author mention “sophisticated computer models” developed by Jo Anne Van Tilburg in paragraph 3?",
+        options: [
+            "to emphasize the difficulty of theorizing about the activities of people in the remote past",
+            "to demonstrate that Van Tilburg’s hypothesis appeared to be supported by evidence",
+            "to cast doubt on theories that relied more on experimentation than on effective digital modelling",
+            "to show how archaeology can apply modern tools to ancient mysteries"
+        ],
+        answer: 3
+    },
+    {
         id: 5,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. █ [A] Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling the statues was the most efficient method. █ [B] As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. █ [C] They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. █ [D] . Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        highlight: "this problem",
-        question: `The phrase “this problem” in paragraph 3 refers to:`,
+        question: `Examine the four █ in the selection below and indicate at which block the following sentence could be inserted into the passage 3:
+        → Her data appeared to demonstrate that an average-sized moai could be moved approximately 10 kilometers in 4.7 days with a team of 70 people.
+        `,
         options: [
-            "An unhealthy environment",
-            "An insufficient amount of immigrants",
-            "Unattractive social and political attractions",
-            "The population of the city"
+            "[A]",
+            "[B]",
+            "[C]",
+            "[D]"
         ],
-        answer: 0
+        answer: 1
     },
     {
         id: 6,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        question: "Which of the following “bolstered the population of the city”?",
+        question: "In paragraph 3, what does the author NOT suggest about Jo Anne Van Tilburg’s hypothesis concerning the method of transporting the moai?",
         options: [
-            "A highly-visible and attractive religious structure",
-            "The leadership of influential spiritual elites",
-            "Knowledge of complex construction techniques",
-            "The selection of a new paramount chief from elsewhere in the Mississippi area"
+            "The use of computer modelling provides evidence that rolling statues on logs would have been a very efficient method of transportation.",
+            "It was supported by successful attempts at replicating how the Rapa Nui people may have rolled the statues on logs.",
+            "It provides conclusive evidence that the Rapa Nui people used log-rolling techniques to move the moai.",
+            "With all the variables taken into account, there still wasn't enough to provide reasonable justification for the log-rolling method."
         ],
-        answer: 0
+        answer: 2
     },
     {
         id: 7,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        question: "According to paragraph 5, what has recent research on chert tools found at the Silvernail settlement site revealed?",
+        question: "What can be inferred from paragraph 5 about the statues found at their eventual resting places?",
         options: [
-            "Chert tools were started to be used after Cahokia became an important city.",
-            "The residents of Cahokia were the only producers of farming tools in the area",
-            "Some of the tools used by people at the Silvernail settlement were made of materials from the area near Cahokia.",
-            "Agricultural tools were exchanged with people at the Silvernail settlement for copper and seashells."
+            "They showed signs of having been tipped over on their sides at some point in transit.",
+            "The people intended for them to be located elsewhere but were constrained by their transportation methods.",
+            "Many were, in fact, created where they were installed rather than at the quarries that were originally assumed to be the place of creation.",
+            "They did not have curved front edges."
         ],
         answer: 2
     },
     {
         id: 8,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
-        question: "In paragraph 6, why does the author mention the location of the city’s defensive structures?",
+        highlight: "to be abandoned in",
+        question: "The word 'abandoned' in paragraph 5 is closest in meaning to:",
         options: [
-            "To suggest that the city was not abandoned due to warfare.",
-            "To explain why diseases spread so quickly in heavily populated areas.",
-            "To explain why the city was easily invaded by outside forces.",
-            "To present an example of why large cities often decline over time."
-        ],
-        answer: 0
-    },
-    {
-        id: 9,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. █[A] Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. █[B] Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. █[C] Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area. █[D]
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        question: `In paragraph 1 of the passage, there is a missing sentence. The paragraph is repeated below and shows four letters (A, B, C, and D) that indicate where the following sentence could be added. → “In fact, artifacts and tools from Cahokia have been discovered in sites as far away as the shores of Lake Superior to the north, and Appalachia to the south.”`,
-        options: [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "damaged",
+            "tipped",
+            "left",
+            "altered"
         ],
         answer: 2
     },
     {
+        id: 9,
+        passage: `
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
+
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
+        `,
+        question: "Which of the following methods of transportation does the author say is supported by the most compelling evidence?",
+        options: [
+            "The rolling of moai in an upright position on logs.",
+            "The shuffling of moai with ropes tied to the head and base.",
+            "The rolling of moai in a prone position.",
+            "The rocking of moai with ropes tied to the head."
+        ],
+        answer: 1
+    },
+    {
         id: 10,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] In the southeastern Pacific Ocean, on the piece of land known as Easter Island (now a territory of Chile), stand several hundred massive stone monoliths. These carvings, called “moai,” are recognizable by their oversized heads, heavy brows, long noses, elongated ears, and protruding lips. While they average four meters in height and 12.5 tonnes, the largest is almost 10 meters tall, and the heaviest weighs 86 tons. The upright sculptures are scattered around Easter Island, many installed on platforms called “ahu” along the coast, while others are more inland, and several stand near the main volcanic quarry of Rano Raraku. The Rapa Nui people of the island built a total of 887 of these impressive statues between the 12th and 16th centuries. They were, it is said, symbols of religious and political authority, embodiments of powerful chiefs or ancestors who faced inland toward the island’s villages, perhaps watching over their creators, keeping them safe.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [2] While the very creation of such monoliths – most out of volcanic ash with stone hand chisels – is an impressive feat, what is more remarkable (not to mention mysterious) is how they were transported to their resting places. In the past, most researchers associated the building and transportation of the moai with widespread deforestation on the island and the eventual collapse of the Rapa Nui civilization. This hypothesis is based, in part, on the fact that the pollen record suddenly disappeared at the same time as the Rapa Nui people stopped constructing the moai and transporting them with the help of wooden logs. How exactly would logs facilitate the movement of the statues? Most proponents of this method believe that the people created “rollers” by arranging parallel logs on which the prone statues were pulled or pushed. They would not have required an entire roadway of logs since logs from the back could be placed at the front, creating a moving platform of sorts. To make it easier to roll, and keep in position, the statue would be placed on two logs arranged in a V shape. 
+        
+        [3] One proponent of this idea of rolling the statues in a prone position is Jo Anne Van Tilburg, of UCLA. Van Tilburg created sophisticated computer models that took into account available materials, routes, rock, and manpower, even factoring in how much the workers would have to have eaten. Her models supported the idea that rolling prone statues was the most efficient method. As further evidence, Van Tilburg oversaw the movement of a moai replica by the method she had proposed. They were successful, but evidence that it was possible is not necessarily evidence that it actually happened. Van Tilburg was not the only one to have experimented with rolling the statues. In the 1980s, archaeologist Charles Love experimented with rolling the moai in an upright position, rather than prone, on two wooden runners. Indeed, a team of just 25 men was able to move the statue a distance of 150 feet in a mere two minutes. However, the route from the stone quarries where the statues were built to the coast where they were installed was often uneven, and Love’s experiments were hampered by the tendency of the statues to tip over. While Love’s ideas were dismissed by many, the idea of the statutes tipping over along the route was consistent with the many moai found on their sides or faces beside the island’s ancient roads. Local legend held that the statues “walked” to their destinations, which would seem to support an upright mode of transportation. In fact, rolling was not the only possible way of transporting the moai in an upright position. 
+        
+        [4] In the 1980s, Pavel Pavel and Thor Heyerdahl had experimented with swiveling the statues forward. With one rope tied around the head and another around the base, they were able to move a five-ton moai with only eight people, and a nine-ton statue with 16. However, they abandoned their efforts when their technique proved too damaging; as they shuffled the statues forward, the bases were chipped away. This confounding factor led most to believe that an upright, rope-assisted walking method was incorrect. 
+        
+        [5] But many now believe that they were, in fact, transported upright. In 2012, Carl Lipo of California State University Long Beach and Terry Hunt of the University of Hawaii teamed up with archaeologist Sergio Rapu to refine the upright walking idea. They found that the statues that appeared to be abandoned in transit had bases with a curved front edge. This meant they would naturally topple forward and need to be modified once they reached their destinations. But that curved edge also meant they could easily be rocked forward using a small team of people and three ropes attached to the head. Indeed, their experiments demonstrated the feasibility of this method, and their theory has gained traction. 
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "Cahokia was a large prosperous city in North America that reached its peak between about A.D. 1100 and 1200.",
+        introductorySentence: "There are several competing theories that attempt to explain how the large moai statues of Easter Island were transported to various locations on the island.",
         question: "What is the main topic of the passage?",
         options: [
-            "[A]. The large construction projects and signs of manufacturing and religious facilities that have been uncovered suggests that Cahokia was a complex and influential society.",
-            "[B]. Scholars in Cahokia may have used symbols recorded on pottery, shells, stones and other materials to record the city’s history.",
-            "[C]. Several factors account for the growth of Cahokia, including its location on a trade route, religious significance and access to valuable chert.",
-            "[D]. As a result of pollution caused by its extremely dense population, Cahokia suffered frequent crop failures.",
-            "[E]. It is likely that all of the city’s defensive structures were constructed merely for ceremonial reasons",
-            "[F]. The reason for the decline of Cahokia is unknown, but it may be connected to environmental factors or military conflict."
+            "A.Jo Anne Van Tilburg experimented with moving moai replicas using a V-shaped log structure.",
+            "B.Experiments with moving the moai using ropes have demonstrated the likelihood that they were transported in an upright position.",
+            "C.The statues that were located around the island were created in the stone quarries in the interior of the island.",
+            "D.Many theories suggest the use of logs to roll the statues, which may be connected to the eventual collapse of the civilization.",
+            "E.The condition of the road, the availability of materials, and the construction of the statues are all important variables in determining how they were transported.",
+            "F.Some statues were not, in fact, transported very far from the quarries where they were constructed.",
         ],
         answers: 10,
-        summaryAnswer: [0, 2, 5]
+        summaryAnswer: [0, 1, 2]
     },
     // Second passage
     {
         id: 11,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        highlight: "constitute",
-        question: "The word constitute in the passage 2 is closest in meaning to",
+        question: "Which of the following best expresses the essential information in the highlighted sentence? Incorrect answer choices change the meaning in important ways or leave out essential information.",
+        highlight: "But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity.",
         options: [
-            "explain",
-            "reject",
-            "form",
-            "modify"
+            "The word “revolution” is somewhat misleading because agriculture was not adopted all at once.",
+            "Agriculture was an opportunity for sudden and rapid development, which is why we call it a “revolution.”",
+            "Although agriculture is called a “revolution,” it turned out to be a mistake for those societies that adopted it quickly and completely.",
+            "Traditional beliefs about the adoption of agriculture have been recently transformed in what is known as a “revolution.”"
         ],
         answer: 2
     },
     {
         id: 12,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants that were deemed healthy and delicious, and avoiding those that were not. █ [A] Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. █ [B] Later, people learned to cultivate pulses, including lentils, peas, chickpeas, and bitter vetch, as well as the multi-purpose flax plant. █ [C] Together, these eight plant species are known as the Neolithic founder crops or primary domesticates. █ [D] .
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        highlight: "Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born.",
-        question: "Which of the sentences below best expresses the information in the highlighted statement in the passage? The other choices change the meaning or leave out important information.",
+        question: `
+        Examine the four █ in the selection below and indicate at which block the following sentence could be inserted into the passage:
+
+        → "Early farming came about as people observed and experimented with plant reproduction."
+        `,
         options: [
-            "Although it is not  generally accepted, your family provides the best prediction of your future wealth.",
-            "You can achieve great future wealth in spite of the family in which you may have been born.",
-            "It is not true that your family will restrict the acquisition of your future wealth and level of social status.",
-            "Social myths are contrary to the facts about the future wealth and social status of your family."
+            "[A]",
+            "[B]",
+            "[C]",
+            "[D]"
         ],
-        answer: 0
+        answer: 3
     },
     {
         id: 13,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        question: "Why does the author mention the Forbes 400 in paragraph 3?",
+        highlight: "to store them , which",
+        question: "The word 'them' in paragraph 4 refers to:",
         options: [
-            "To explain the meaning of the listing that appears every year",
-            "To support the statement that most wealthy people inherit their money",
-            "To cast doubt on the claim that family income predicts individual wealth",
-            "To give examples of successful people who have modest family connections"
+            "People",
+            "Facilities",
+            "Food Surplus",
+            "Techniques"
         ],
-        answer: 1
+        answer: 3
     },
-
     {
         id: 14,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        highlight: "exclusive",
-        question: "The word 'exclusive' in the passage 3 is closest in meaning to",
+        question: "Which of the following can be inferred from the information in paragraph 4?",
         options: [
-            "long",
-            "expensive",
-            "frequent",
-            "relaxing"
+            "Advancements in agriculture can be directly linked to the emergence of complex social systems",
+            "Food surpluses led to considerable conflict both within and between agricultural societies.",
+            "Success in farming was dependent on materials and knowledge obtained from outside one’s own region.",
+            "Granaries were owned and controlled by the farmers themselves, despite social stratification."
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 15,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        question: "In paragraph 4, the author states that business and professional people with educational advantages are most often members of which class?",
+        question: "According to the author, which of the following was most critical in the development of intensive agriculture?",
         options: [
-            "lower middle class",
-            "upper middle class",
-            "nouveau riche",
-            "upper class"
+            "the adze",
+            "the axe",
+            "the sickle",
+            "the hoe"
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 16,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        question: "According to paragraph 5, why do most people identify themselves as middle class in the United States?",
+        question: "According to paragraph 6, which of the following is true about domesticated animals?",
         options: [
-            "They have about the same lifestyle as everyone else in the country.",
-            "They prefer not to admit that there are class distinctions in the United States.",
-            "They don’t really know how to define their status because it is unclear.",
-            "They identify themselves with the majority who have normal lifestyles."
+            "They served a variety of purposes for Neolithic farmers.",
+            "They were limited to animals which could produce milk, leather, wool, or fertilizer.",
+            "Their domestication predates the domestication of plant species.",
+            "They consumed much of the food surpluses generated through the cultivation of plants."
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 17,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        question: "What can be inferred about the working class in the United States?",
+        question: "The primary purpose of paragraph 7 is to",
         options: [
-            "They are often not able to find entry-level jobs.",
-            "They work in jobs that pay minimum wage.",
-            "They are service workers and manual laborers.",
-            "They are considered lower class."
+            "summarize previously mentioned benefits of the Neolithic revolution.",
+            "introduce the negative impacts of the advent of agriculture.",
+            "provide examples of other important developments that rivalled the Neolithic revolution in importance.",
+            "outline the necessary preconditions for the development of agriculture."
         ],
         answer: 2
     },
     {
         id: 18,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        question: "According to paragraph 7, why has the underclass emerged?",
+        highlight: "often heralded as a",
+        question: "The word 'heralded' in paragraph 7 is closest in meaning to:",
         options: [
-            "The new term was necessary because the lower class enjoyed a higher lifestyle than it had previously.",
-            "The increase in crime has supported a new class of people who live by engaging in illegal activities.",
-            "Changes in the economy have caused an entire class of people to survive by welfare or crime.",
-            "Minimum-wage jobs no longer support a class of people at a standard level in the economic system."
+            "To describe the construction methods of the Great Wall",
+            "To explain the cultural significance of the Great Wall",
+            "To highlight the tourism aspect of the Great Wall",
+            "To discuss the military strategies used in building the Great Wall"
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 19,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. █[A] People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. █[B] The underclass includes those who are likely to be permanently unemployed and without means of economic support. █[C] Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities. █[D]
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
-        question: "Look at the part of passage 7 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'The working poor constitute a large portion of those who are poor.'",
+        question: "All of the following are mentioned as negative impacts of the Neolithic revolution EXCEPT that",
         options: [
-            "Choice A",
-            "Choice B",
-            "Choice C",
-            "Choice D"
+            "people suffered from more illness as a result of poor sanitation.",
+            "farming required harder work than previous modes of food production.",
+            "there was more competition in society for certain types of resources.",
+            "people lacked diversity in the foods they ate."
         ],
-        answer: 0
+        answer: 2
     },
     {
         id: 20,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] While the use of stone tools began 2.5 million years ago, it wasn’t until about 10,000 BCE that Homo sapiens applied these tools to the deliberate cultivation of plants and animals. The adoption of sustained agriculture – what anthropologists call the “Neolithic revolution” – signifies an important turning point in the development of human societies, as it led directly to population growth, permanent or semi-permanent settlement, as well as technological and social development.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] Neolithic agriculture developed at different times in different parts of the world, beginning with the Levant and Mesopotamia, followed by Northern Africa, Southeast Asia, and Europe. But while we often call it a “revolution,” it would be a mistake to believe that agriculture was a sudden and complete development, an all or nothing proposition that societies adopted wholesale at the first opportunity. Instead, it developed slowly, beginning as a supplement to more traditional hunting and gathering lifestyles in which people relied on plants and animals gathered or hunted in their natural environment. Over time, as people learned more about and relied more greatly on domesticated plants and animals, they settled more permanently and cultivated the land more intensively.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] Neolithic farmers collected and planted seeds that they learned would produce palatable grains, selectively breeding plants deemed healthy and delicious and avoiding those not. Early agriculture was restricted to a limited number of plants, namely Emmer wheat, Einkorn wheat, and barley. Later, people learned to cultivate pulses, including lentils, peas, chickpeas, bitter vetch, and the multi-purpose flax plant. These eight plant species are known as the Neolithic founder crops or primary domesticates.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] People’s success in planting, cultivating, and harvesting these plants came about as a result not only of their increased knowledge of the plants themselves but also of the conditions for growth. They explored innovative irrigation techniques, which enabled even greater production and, eventually, food surpluses. Of course, food surpluses are useless unless people have the ability and facilities to store them , which people did in granaries. And food surpluses, in turn, enabled a host of other social developments, like occupational specialization (since not everyone had to be involved in food production), trade, and social stratification.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] These advances in agriculture went hand in hand with technological development. People fashioned stone tools such as hoes for working soil, sickle blades for harvesting crops, and grinding stones for processing grains. However, the polished stone axe was more important than such agricultural implements, which allowed the Neolithic farmers to clear forests on a large scale and open up new lands for cultivation. Along with the adze, the axe also enabled them to work the trees they felled into wood that was usable for building shelters and other structures.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
+        [6] Besides cultivating plants, these stone-age farmers also domesticated animals. At first, it was sheep, goats, and dogs whose temperament, diet, and mating patterns made them good candidates for domestication. Later, cows and pigs were added to the mix. Besides meat, these animals provided people with milk (a renewable source of protein), leather, wool, and fertilizer. Cows became valued for their labor, as they assisted with plowing and towing, and dogs provided protection (not only to humans but also to their crops and livestock) as well as companionship.
 
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [7] That agriculture enabled hitherto unknown population growth is undeniable. Food surpluses and an agricultural lifestyle brought security and safety that nomadic hunter-gatherers did not enjoy. And it may be argued that the subsequent advances in all realms of society – not only the aforementioned technology but also knowledge, art, writing, and astronomy – would not have emerged without a sedentary lifestyle. But the impact of the Neolithic revolution, often heralded as a giant step forward for humankind, was not all positive.
+
+        [8] Sedentary agriculture narrowed the diet of Neolithic peoples: they consumed greater amounts of starch and plant protein and fewer types of food overall. An increasing number of researchers claim that human nutrition worsened with the Neolithic revolution. In addition, the disease increased as humans lived in closer contact with each other and with domesticated animals; sanitation didn’t advance quite as quickly as agricultural methods. It also turns out that agriculture required significantly more labor than hunting and gathering. The combined result of these facts was a life expectancy that was most likely shorter than that of the apparently more primitive hunter-gatherers.
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "The levels of education, the acquisition of wealth, and occupational prestige determine social status in the United States .",
+        introductorySentence: "The passage discusses the creation and transportation of the moai statues on Easter Island.",
         question: "Which era marks the beginning of the construction of the Great Wall?",
         options: [
-            "[A]. People who have made their money more recently tend not to be accepted by those who have inherited their wealth from family holdings.",
-            "[B]. The lower class includes working people with low incomes and a new underclass of people who are dependent on welfare or engage in crime.",
-            "[C]. The upper class tends to acquire wealth through inheritance, whereas the upper middle class has a high income that they earn in their professions.",
-            "[D]. Although the lifestyle of the upper middle class is the goal for the majority, it is difficult for many people to maintain this standard of living.",
-            "[E]. Most people identify themselves as middle class, including blue-collar workers and service workers as well as bureaucratic employees.",
-            "[F]. It is still possible to move from one social class to another in the United States by working your way up the ladder in a corporate environment."
+            "A.People learned to cultivate a number of different plants, using innovative tools and techniques.",
+            "B.Agriculture appeared in different parts of the world at different times, beginning with the Levant and finally in Europe.",
+            "C.The food surpluses that agriculture enabled other developments but had an overall negative impact on human health.",
+            "D.Not all hunter-gatherer groups in the Neolithic period adopted an agricultural lifestyle, as some peoples found it advantageous to maintain their traditional ways",
+            "E.Neolithic farmers domesticated a variety of animals, which provided additional food sources as well as labor and protection.",
+            "F.Besides agricultural tools, people devised implements that helped them build a variety of structures.",
         ],
         answer: 10,
-        summaryAnswer: [2, 4, 1]
+        summaryAnswer: [0, 1, 2]
     }
 ];
 
 export const listeningQuestions = [
     {
         id: 1,
-        question: "What is the discussion mainly about?",
+        question: "The primary function of the Electoral College is to",
         options: [
-            "Commercials on television",
-            "Marketing brand-name products",
-            "A book by Rob Frankel",
-            "Selling Aunt Ruby’s chicken"
+            "Educate future presidential candidates",
+            "Run national elections and ensure they go smoothly",
+            "Elect the next president and vice president of the United States",
+            "Mediate any disputes that arise between candidates during an election"
+        ],
+        answer: 2
+    },
+    {
+        id: 2,
+        question: "A person chosen by a political party in a given state who is pledged to his/her party and its candidate for president is called an",
+        options: [
+            "Runner",
+            "Elector",
+            "Electorate",
+            "Potential Elected"
         ],
         answer: 1
     },
     {
-        id: 2,
-        question: "Why does the professor say this: 'Go back to the car commercial for a minute.'?",
-        options: [
-            "To emphasize the importance of commercials",
-            "To correct something that he said earlier",
-            "To identify the time limits for most commercials",
-            "To relate new information to a previous example"
-        ],
-        answer: 3
-    },
-    {
         id: 3,
-        question: "According to the professor, why do consumers develop brand loyalty?",
+        question: "The number of electors a state may have is equal to",
         options: [
-            "They have a relationship with the personality that the product projects.",
-            "They are able to recognize the brand easily when they see it.",
-            "They tend to make decisions based on recommendations by friends.",
-            "They find a product that they like and continue to buy it."
+            "The sum of the US senators in that state plus the number of US representatives in that state",
+            "The population of a state divided by number of US representatives",
+            "The number of candidates running for office in that state",
+            "The sum of all the US representatives in that state divided by the number of US senators"
         ],
         answer: 0
     },
     {
         id: 4,
-        question: "How does the professor emphasize his point about branding?",
+        question: "Which of the following is/are true about electors in the United States?",
         options: [
-            "He uses Aunt Ruby’s chicken as an example.",
-            "He defines it by contrasting it with related concepts.",
-            "He refers to a book that he has written.",
-            "He shows a familiar commercial in class."
-        ],
-        answer: 1
-    },
-    {
-        id: 5,
-        question: "Why does Susan mention laundry detergent?",
-        options: [
-            "To give an example of price wars",
-            "To show that consumers buy different brands",
-            "To name an industry that introduces new brands",
-            "To clarify the concept of brand loyalty"
+            "They are not senators and representatives",
+            "They are the same as senators",
+            "They are the same as representatives",
+            "Their numbers are based on the amount of senators and representatives"
         ],
         answer: 3
     },
     {
-        id: 6,
-        question: "How does the professor organize the discussion?",
+        id: 5,
+        question: "How many representatives does a state have?",
         options: [
-            "She has visual aids to explain each point.",
-            "She uses a scenario that students can relate to.",
-            "She provides a handout with an outline.",
-            "She helps students read the textbook."
+            "Every state has two representatives",
+            "The number is based on the population of the state",
+            "Each state votes in as many or as few representatives as it wants",
+            "There is no minimum number of representatives per state, but there is a maximum of five"
         ],
         answer: 1
+    },
+    {
+        id: 6,
+        question: "How many electoral votes are there currently in the United States?",
+        options: [
+            "541",
+            "623",
+            "538",
+            "497"
+        ],
+        answer: 2
     },
     {
         id: 7,
-        question: "What aspect of blood does the professor mainly discuss?",
+        question: "The student cites which of the following as reason(s) for wanting to leave his university?",
         options: [
-            "An explanation of stem cells",
-            "A process for blood transfusion",
-            "A method for producing artificial blood",
-            "A discussion of blood typing"
+            "Illness",
+            "Homesickness",
+            "Greater familiarity with the college at home",
+            "Failing grades"
         ],
-        answer: 3,
+        answer: 2,
     },
     {
         id: 8,
-        question: "Why does the student say this: 'Excuse me.'?",
+        question: "What is the student's major?",
         options: [
-            "She is apologizing for disagreeing with the professor.",
-            "She is interrupting politely to ask a question.",
-            "She is talking to herself during the lecture.",
-            "She is changing the subject of the professor’s talk."
+            "Business Administration",
+            "Mechanical Engineering",
+            "Economics",
+            "Statistics"
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 9,
-        question: "Why does the professor mention fingerprints?",
+        question: "The student cites which of the following reason(s) for coming to the university?",
         options: [
-            "To demonstrate that blood types are different for individuals",
-            "To explain how most of the blood tests are performed",
-            "To explain why O blood is considered universal",
-            "To help students remember the different antigens"
+            "The appealing architecture of the university's buildings",
+            "Its extracurricular activities",
+            "Its strong Business program",
+            "Desire to be independent from his family"
         ],
-        answer: 0
+        answer: 2
     },
     {
         id: 10,
-        question: "In cross matching, how does a compatible match appear under the microscope?",
+        question: "What is the primary drawback of transferring schools for this student?",
         options: [
-            "All of the cells are at an equal distance from each other.",
-            "The arrangement of the cells looks like two parallel lines.",
-            "The cells tend to group together in a large clump.",
-            "The red cells and the plasma separate in an irregular pattern."
+            "If he transfers, he will lose some credits and fall behind",
+            "He will have to learn everything about the new college in a short amount of time",
+            "He will not receive the same amount of financial support",
+            "He will lose his housing that is close to campus"
         ],
         answer: 0
     },
     {
         id: 11,
-        question: "Why does the professor mention artificial blood?",
+        question: "Why does the advisor offer the anecdote of her own freshman year?",
         options: [
-            "She is referring to the textbook.",
-            "She is answering a question.",
-            "She is reporting her research.",
-            "She is joking with the students."
+            "Because she only wants to talk about herself",
+            "Because she doesn't know what else to say to the student",
+            "To suggest that maybe it is best if he changes colleges after all",
+            "To demonstrate to the student that it is not uncommon to feel lonely and homesick during the first year of college"
         ],
-        answer: 1
+        answer: 3
     },
     {
         id: 12,
-        question: "What does the professor imply when she says this: 'Still, continuing research along these lines should probably be encouraged.'?",
+        question: "After hearing the advisor's story, the student feels",
         options: [
-            "She is very uncertain about the risks of the research.",
-            "She is somewhat interested in doing research in this area.",
-            "She is withdrawing her support for future research.",
-            "She agrees that research should continue in spite of problems."
+            "That it is the right decision to transfer schools",
+            "That misery is part of college and he'll just have to deal with it",
+            "That the appointment was a waste of his time",
+            "Encouraged that his situation can improve"
         ],
         answer: 3
     },
     {
         id: 13,
-        question: "What is this discussion mainly about?",
+        question: "What is the main topic of the lecture?",
         options: [
-            "How to exploit nonrenewable mineral resources",
-            "The exploitation of minerals in protected environments",
-            "Pollution as a by-product of mineral exploitation",
-            "The economic and environmental costs of exploiting minerals"
+            "The technical definition of EMDR",
+            "Differences between different types of therapy",
+            "Various non-traditional treatments for trauma",
+            "The value and usefulness of EMDR treatment"
         ],
         answer: 3
     },
     {
         id: 14,
-        question: "According to the professor, what are two problems that can be anticipated when roads are cut into an area for mining?",
+        question: "According to the professor, what does 'processing' mean?",
         options: [
-            "The labor is difficult to retain.",
-            "The natural landscape is damaged and the ecosystem is disturbed.",
-            "The roadbeds create waste piles.",
-            "Only The ecosystem is disturbed."
+            "Explaining the complicated way that EMDR works",
+            "Mentally revisiting a traumatic event",
+            "Understanding an experience via a healthy state of mind",
+            "Talking about a painful experience through EMDR"
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 15,
-        question: "Why does the professor say this: 'And that would mean ...'?",
+        question: "What is the speaker’s attitude toward EMDR?",
         options: [
-            "As encouragement for a more complete answer",
-            "Because he doesn’t understand the student’s answer",
-            "To give another student an opportunity to speak",
-            "For positive reinforcement of a correct answer"
+            "She believes it is a unique form of therapy with a proven track record and promising future.",
+            "She thinks it will require time before EMDR’s benefits can be fully understood by psychologists.",
+            "She is unsure of whether or not the results achieved by the method are long-term.",
+            "She believes it will replace most traditional forms of therapy in the near future."
         ],
         answer: 0
     },
     {
         id: 16,
-        question: "What option is proposed as an alternative when all of the mineral resources in easily accessible locations have been depleted?",
+        question: "The professor describes various features of EMDR compared to other forms of therapy. For each of the following, indicate whether it is a feature of EMDR or of another form of therapy.",
         options: [
-            "Converting to nonrenewable resources",
-            "Concentrating on conservation of the resources",
-            "Developing synthetic resources to replace minerals",
-            "Using new technology to search the area again"
+            "Focuses more on the mental state of patients than on bodily responses",
+            "May be slow in cases of multiple levels of trauma",
+            "Involves moving the eyes back and forth while looking at a beam of light",
+            "Involves moving the eyes back and forth while looking at a beam of light"
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 17,
-        question: "What does the professor imply about the environmental costs of mineral exploitation?",
+        question: "Why does the professor say this?",
         options: [
-            "He thinks that the environmental costs are less than the economic costs.",
-            "He regrets that the environment is damaged during mineral exploitation.",
-            "He opposes mineral exploitation when it is done close to urban areas.",
-            "He believes in exploiting the resources in national parks and historic reserves."
-        ],
-        answer: 1
-    },
-    {
-        id: 18,
-        question: "What does the professor want the students to do in this class session?",
-        options: [
-            "Listen carefully and take notes",
-            "Bring in alternative ideas to present",
-            "Ask questions and draw conclusions",
-            "Prepare for a quiz at the end"
-        ],
-        answer: 2
-    },
-    {
-        id: 19,
-        question: "Why does the woman go to see her professor?",
-        options: [
-            "To get advice about memorizing information",
-            "To clarify several terms that she doesn’t understand",
-            "To get permission to bring her children to class",
-            "To ask a question about classroom procedures"
-        ],
-        answer: 1
-    },
-    {
-        id: 20,
-        question: "What do semantic memory and episodic memory have in common?",
-        options: [
-            "They are both included in short-term memory.",
-            "They do not concentrate on each step in the process.",
-            "They are subcategories of declarative memory.",
-            "They are the two major types of long-term memory."
-        ],
-        answer: 2
-    },
-    {
-        id: 21,
-        question: "When the professor gives the example of riding a bicycle, what kind of memory is he referring to?",
-        options: [
-            "Declarative memory",
-            "Episodic memory",
-            "Procedural memory",
-            "Semantic memory"
-        ],
-        answer: 2
-    },
-    {
-        id: 22,
-        question: "What does the student mean when she says this:'Do you see what I mean?'",
-        options: [
-            "She wants confirmation that the professor understands.",
-            "She is worried that the professor may not be able to remember.",
-            "She remembers something else that she needs to say.",
-            "She disagrees with the professor’s example about vocabulary."
+            "To caution against hurrying through treatment to obtain fast results",
+            "To clarify why EMDR is a time-limited treatment approach",
+            "To suggest that other forms of therapy are slower and less effective",
+            "To warn her students against using EMDR with patients whom they do not know well"
         ],
         answer: 0
     },
     {
-        id: 23,
-        question: "What does the professor suggest?",
+        id: 18,
+        question: "What does the professor imply about traumatic experiences?",
         options: [
-            "He wants the woman to come back to his office again.",
-            "He expects the woman to ask questions in writing.",
-            "He offers to respond to additional questions by email.",
-            "He does not think that the woman will have more questions."
-        ],
-        answer: 2
-    },
-    {
-        id: 24,
-        question: "Why does the man approach the librarian?",
-        options: [
-            "He needs an explanation of his assignment.",
-            "He is looking for an encyclopedia.",
-            "He needs help finding some data.",
-            "He is trying to find the reference section."
-        ],
-        answer: 2
-    },
-    {
-        id: 25,
-        question: "What does the woman mean when she says this:'That's it?'",
-        options: [
-            "She is showing comprehension.",
-            "She is expressing surprise.",
-            "She is talking to herself.",
-            "She is dismissing the man."
+            "Traumatic experiences feel like they take a long time to reach completion.",
+            "Traumatic experiences can haunt the memory and never leave a person’s mind.",
+            "Traumatic experiences sometimes occur in repetitious patterns in people’s lives.",
+            "Traumatic experiences can seem more debilitating than they really are."
         ],
         answer: 1
     },
     {
-        id: 26,
-        question: "What does the librarian imply?",
+        id: 19,
+        question: "Why is the student looking for accommodation now?",
         options: [
-            "The man can find a chart in an encyclopedia.",
-            "The professor has explained the assignment clearly.",
-            "The library has a very good reference section.",
-            "The man should not change the assignment."
+            "The accommodation she booked is no longer available.",
+            "She forgot to book accommodation earlier.",
+            "She signed up for the course at the last minute.",
+            "She dislikes her present accommodation and wants to change."
+        ],
+        answer: 0
+    },
+    {
+        id: 20,
+        question: "What does the man imply when he says ‘Well, that’ll teach you for next time won’t it?’",
+        options: [
+            "He thinks the student was foolish.",
+            "He feels sorry for the student.",
+            "He wants to give the student some advice.",
+            "He expects the same thing to happen again."
+        ],
+        answer: 0
+    },
+    {
+        id: 21,
+        question: "Why doesn’t the student want to remain where she is staying now?",
+        options: [
+            "It is too far from the college campus.",
+            "She doesn’t want to stay with her parents.",
+            "The rooms are too expensive.",
+            "She is currently sleeping on the floor."
         ],
         answer: 3
     },
     {
-        id: 27,
-        question: "What example does the librarian give for the assignment?",
+        id: 22,
+        question: "What sort of accommodation may the man be able to offer her in a couple of weeks?",
         options: [
-            "A relative comparison of home prices",
-            "Average family income in several countries",
-            "International business around the world",
-            "Global economic patterns in this decade"
+            "a room in a student dorm",
+            "a room in a motel",
+            "a room in a shared student flat",
+            "a room in a private house"
+        ],
+        answer: 2
+    },
+    {
+        id: 23,
+        question: "What is the problem with the accommodation listed in the folder and on the website?",
+        options: [
+            "It goes out of date very quickly.",
+            "There aren’t many addresses listed there.",
+            "Most accommodation was booked up long ago.",
+            "There is a waiting list for the accommodation listed there."
+        ],
+        answer: 0
+    },
+    {
+        id: 24,
+        question: "What is the main point of the discussion?",
+        options: [
+            "Job prospects for students doing their course",
+            "Grades for a recent assignment",
+            "The advantages and disadvantages of going to college",
+            "The quality of the teaching on their course"
+        ],
+        answer: 0
+    },
+    {
+        id: 25,
+        question: "Why is the woman concerned?",
+        options: [
+            "She feels she is not learning anything useful.",
+            "She has been receiving poor grades.",
+            "She is not enjoying her course.",
+            "She is finding the course very difficult."
+        ],
+        answer: 0
+    },
+    {
+        id: 26,
+        question: "What does the man appreciate most about studying at university?",
+        options: [
+            "Studying a subject in depth",
+            "Getting involved in discussions",
+            "Meeting people with diverse interests",
+            "Teaching others about what he has learnt"
         ],
         answer: 1
     },
     {
-        id: 28,
-        question: "What will the man do with the information?",
+        id: 27,
+        question: "The man says that employers will appreciate the woman’s ____.",
         options: [
-            "Show it to the librarian",
-            "Write a report for class",
-            "Draw a chart or a graph",
-            "Decide where to live"
+            "transferable skills",
+            "ability to train others",
+            "enthusiasm",
+            "knowledge of history"
         ],
-        answer: 2
+        answer: 0
+    },
+    {
+        id: 28,
+        question: "What is implied about Professor Jacques?",
+        options: [
+            "She has never worked outside the university.",
+            "She is a good person to ask about careers.",
+            "She is more approachable than the other professors.",
+            "She teaches on both the history and the business course."
+        ],
+        answer: 1
     }
 ];
 
 export const writingQuestions = {
-    task1_audio: "https://www.dropbox.com/scl/fi/2luk5sedd44obxh4sl563/T4W1.mp3?rlkey=mh2z1andjbq0j4nnou1yi74rp&raw=1",
     task1: {
-        passage: `
-        Although cooperation is currently the most popular paradigm in classrooms, competition has a number of advantages. Research on classrooms in which competition is encouraged has demonstrated that competition can increase motivation and productivity while students are having fun.
-        Competition has long been used in classrooms to motivate students, encouraging them to do their best work. Like athletes who improve when they train with others who are equal or superior performers, students tend to improve in a competitive learning setting. Considerable evidence suggests that motivation is especially enhanced among high achieving students in a competitive classroom.
-        One of the main advantages of competition is that it creates an environment in which students push each other to excel and thereby increase productivity. For example, in classrooms where students compete to read the most books, the total number of books that each student reads increases as compared with classrooms without similar competitive goals.
-        Perhaps because competition has long been associated with sports and games, it is fun for students. Teachers often use team-based com- petitions to make academic material more interesting and entertaining. Some common examples are spelling bees, science project competi- tions, and group quizzes in which teams answer questions and receive points for correct answers. Competition is useful when an otherwise uninteresting lesson is presented as a game. Most would agree that play- ing is more enjoyable than memorizing by rote for the big test. In fact, students who participate in the Science Olympiad, a national competitive event, report that the main reason for joining the team is to have fun.
-        `
+        passage: `In several organizations the best way to approach certain new projects is by establishing a team of individuals. There are several advantages to teamwork when completing a project.
+
+        One of the advantages of teamwork is the wider range of knowledge, skills, and expertise brought to the situation by having multiple individuals involved. Everyone is unique and has different skills, backgrounds and experiences. Therefore, others in a team can help an individual see things from a different angle.
+
+        Also, teamwork enables a group of individuals to respond more quickly to their assigned task and come up with creative solutions to problems. The projects will be completed more quickly because there are more resources in a group than an individual would have access to. Creative solutions are more likely to come about because teamwork spreads the responsibility for a decision to all of the members . This means that no single individual will feel as if they are solely responsible for a wrong decision.
+
+        Finally, being a member of a team can be very rewarding for the individual. Team members will understand the processes they are involved in instituting which will make them more comfortable with carrying out the work. In addition, individual team members have a better opportunity to get their contributions and ideas recognized as highly significant. This is because a team's overall results are likely to have a greater impact than would have been accomplished by an individual.  
+        `,
     },
     task2: {
         conversation: `
@@ -852,17 +859,16 @@ export const writingQuestions = {
         <p>An effective response will contain at least 100 words.</p>
         <br/>
         <div>
-            <p><strong>Professor:</strong></p>
-            <p>Hello class!  Next week we will be discussing the impact of social media influencers on consumer behavior. With the rise of social media platforms like Instagram and YouTube, we’ve seen the emergence of a new type of celebrity: the social media influencer. These influencers have large followings and can sway consumer behavior by endorsing products or services. What are your thoughts</p>
-        </div>
-        <br/>
-        <div>
-            <p><strong>Alex:</strong></p>
-            <p>I think social media influencers have a significant impact. When young people start admiring these influencers and trust their recommendations, they are more likely to buy products or services that they endorse. However, I also think there are some concerns about the authenticity of these endorsements, as some influencers may promote products that they don’t actually use or believe in.</p>
+            <p><strong>Prof. Martin:</strong></p>
+            <p>Hello, students! Today, we come together to delve into the intriguing field of psychology. In life, people often find themselves pushing their limits and trying things they don’t expect to enjoy. The main reason behind this is to broaden their comfort zone. While some believe that engaging in challenging and uncomfortable experiences can be beneficial, others argue that it’s unnecessary in life. What is your take on this? Do you think people should sometimes do things that they do not enjoy doing?</p>
         </div>
         <div>
-            <p><strong>Scarlet:</strong></p>
-            <p>I’m not convinced that social media influencers have a significant impact on consumer behavior. While they may have large followings, most people are smart enough to make their own purchasing decisions based on their needs and preferences. Plus, there are so many influencers out there promoting different products that it can be hard to know who to trust.</p>
+            <p><strong>Aoi:</strong></p>
+            <p>Hey everyone! In my viewpoint, it's quite necessary that we sometimes do things we don't particularly enjoy. Whether it's taking on a difficult project for professional growth, adhering to tedious routines for physical health, or facing uncomfortable social situations for personal development, these tasks, though not enjoyable, aid us in the long run. They push us beyond our comfort zone and foster resilience.</p>
+        </div>
+        <div>
+            <p><strong>Joe:</strong></p>
+            <p>Hi, I absolutely agree with the previous sentiment. Undertaking tasks that are challenging or even unenjoyable can indeed cultivate our resilience and contribute to our growth. Beyond personal betterment, it can also allow us to contribute more significantly to societal expectations and responsibilities. It's about discovering our potential and strengthening our ability to endure hardships.</p>
         </div>
         `
     },
@@ -870,30 +876,17 @@ export const writingQuestions = {
 
 export const speakingQuestions = [
     {
-        question1: `
-        Your friend's cousin is going to visit your country and you promised to show her some interesting places. Which one would be more interesting?
-        1. A beautiful landscape
-        2. A historical city
-        3. Your home
-        ` ,
+        question1: "Should schools engage in character education to instill morals and values in children?",
 
-        passage2: `Vehicles parked on campus by students, faculty, or staff must be registered with the Campus Police Department. Parking permits are required for both part-time and full-time students. Permits may be purchased at the Campus Police Department, which is located at the south entrance to the campus or at the Business Office in the Administration Building. The fee per vehicle is $20. Please be advised that you must have a permit for every vehicle that you park in campus lots. Parking enforcement will begin one week after the first day of each semester.`,
-        conversationAudio2: "https://www.dropbox.com/scl/fi/lpm3b2rda2h649bwv8va4/T4S1.mp3?rlkey=cowu6mfq3bspsrj8sexu368mg&raw=1",
-        question2: "The student expresses her opinion of the policy for vehicle registration. Report her opinion and explain the reasons that she gives for having that opinion.",
+        passage2: "The geology department is aware of the problems surrounding group work...",
+        conversationAudio2: "/assets/T1S1.mp3",
+        question2: "The man expresses his opinion of group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.",
 
-        passage3: "Stress is defined as a mental and physical condition that occurs when an adjustment or adaptation must be made to the environment. Unpleasant conditions or events cause stress, as, for example, financial problems, a divorce, health issues, or pressure at work. However, a certain amount of stress occurs even when the adjustment is to a condition that is perceived as desirable. Exercise, dating, moving to a new home, or taking a trip are \, all stressful situations. Although short-term stress is usually harmless, the consequences * of long-term stress can be dangerous to health. Factors that decrease the consequences of stress are the ability to predict stressful situations and the level of control over them that can be achieved.",
-        conversationAudio3: "https://www.dropbox.com/scl/fi/x0idougvbgp402v624fq9/T4S2.mp3?rlkey=ma54o5ui6ekpp5flunkq6kgxx&raw=1",
-        question3: "Explain the causes of stress and relate them to the experiment with rats.",
+        passage3: "One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K)...",
+        conversationAudio3: "/assets/T1S2.mp3",
+        question3: "One theory of learning states that we use three sensory receivers...",
 
-        conversationAudio4: "https://www.dropbox.com/scl/fi/yksvnjc7pgg26pi0n67y0/T4S3.mp3?rlkey=k1tmlvet129xqd133xx1tlz5c&raw=1",
-        question4: "Describe the woman's problem and the two suggestions that her friend makes about how to handle it. What do you think the woman should do, and why?",
+        conversationAudio4: "/assets/T1S3.mp3",
+        question4: "The man expresses his opinion on group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.",
     },
-];
-
-export const listeningAudios = [
-    "https://www.dropbox.com/scl/fi/lmhkxsysyj9bghf2bjnt1/T4C1.mp3?rlkey=qnyyywbycsoxjrvvuzjwx0e00&raw=1",
-    "https://www.dropbox.com/scl/fi/tffqrbyolgqgpwwzz0ds5/T4C2.mp3?rlkey=efx2ik6kg86pcq9qhpsyvhyet&raw=1",
-    "https://www.dropbox.com/scl/fi/tm4oe7b0m7ehi5qbtyt26/T4C3.mp3?rlkey=v4dt2t5lh3qjkego9zpqw4ffq&raw=1",
-    "https://www.dropbox.com/scl/fi/7yctxm3cggshlh1cjgrb7/T4C4.mp3?rlkey=5icl83p5kh5n2u9d5gs9ge3km&raw=1",
-    "https://www.dropbox.com/scl/fi/x7g38yqndgv0vlax7nqkx/T4C5.mp3?rlkey=xvrhq4noq31emjmnqltm6dfe6&raw=1",
 ];

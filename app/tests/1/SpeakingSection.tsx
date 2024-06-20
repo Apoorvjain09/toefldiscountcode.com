@@ -15,7 +15,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     const [isTimerRunning, setIsTimerRunning] = useState<boolean>(true);
     const [evaluation, setEvaluation] = useState<{ score: number; feedback: string } | null>(null);
     const { transcript, listening, resetTranscript } = useSpeechRecognition();
-    const [question, setQuestion] = useState<string>('Should schools engage in character education to instill morals and values in children?');
+    const [question, setQuestion] = useState<string>(`${speakingQuestions[0].question1}`);
     const task2Intro = "In this question of the TOEFL Speaking Task 2, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task3Intro = "In this question of the TOEFL Speaking Task 3, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task4Intro = "In this question of the TOEFL Speaking Task 4, you'll first read a short passage on an academic topic. Next, you will hear a lecture on the same topic. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
@@ -55,7 +55,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
 
     useEffect(() => {
         if (stage === 'task2Speak') {
-            setQuestion("The man expresses his opinion of group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.")
+            setQuestion(`${speakingQuestions[0].question2}`)
             resetTranscript();
             SpeechRecognition.startListening({ continuous: true });
             const timer = setTimeout(() => {
@@ -68,7 +68,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     
     useEffect(() => {
         if (stage === 'task3Speak') {
-            setQuestion("One theory of learning states that we use three sensory receivers: visual (V), auditory (A), and kinesthetic (K) when we take in information. According to the VAK theory, one or two of these receiving styles is normally dominant and thus defines the best way for a person to learn new information. Thus a visual learner learns best using their sight; an auditory learner learns best when listening, and a kinesthetic learner learns best through physical activity. VAK is one of the most popular learning models nowadays due to its simplicity. Teachers are beginning to incorporate a range of stimuli and activities into their lessons so as to cater for all types of learner. Although it is not yet proven that using one’s preferred sense provides the best means for learning, having a range of activities can reduce boredom and increase motivation in the classroom.")
+            setQuestion(`${speakingQuestions[0].question3}`)
             resetTranscript();
             SpeechRecognition.startListening({ continuous: true });
             const timer = setTimeout(() => {
@@ -81,7 +81,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     
     useEffect(() => {
         if (stage === 'task4Speak') {
-            setQuestion("The man expresses his opinion on group work. State and explain his opinion. Compare his opinion with the opinion of the geology faculty.")
+            setQuestion(`${speakingQuestions[0].question4}`)
             resetTranscript();
             SpeechRecognition.startListening({ continuous: true });
             const timer = setTimeout(() => {
@@ -158,7 +158,8 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             }
             return;
         }
-        
+        console.log(question)
+        console.log(transcript)
         try {
             const response = await fetch('/api/evaluate-speaking', {
                 method: 'POST',
@@ -267,7 +268,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Conversation</h3>
                     <ReactAudioPlayer
-                        src="/assets/T1S1.mp3"
+                        src={speakingQuestions[0].conversationAudio2}
                         controls
                     />
                     <button onClick={handleContinueToQuestion} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
@@ -302,7 +303,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col items-center">
                     <h3 className="text-xl font-bold mb-4">Task 3 Instructions</h3>
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
-                        {task2Intro}
+                        {task3Intro}
                     </p>
                     <button onClick={handleContinueToTask3} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
                         Continue to Task 3
@@ -320,7 +321,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Lecture</h3>
                     <ReactAudioPlayer
-                        src="/assets/T1S2.mp3"
+                        src={speakingQuestions[0].conversationAudio3}
                         controls
                     />
                     <button onClick={() => setStage('task3QuestionPrepare')} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
@@ -366,7 +367,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Conversation</h3>
                     <ReactAudioPlayer
-                        src="/assets/T1S3.mp3"
+                        src={speakingQuestions[0].conversationAudio4}
                         controls
                     />
                     <button onClick={handleContinueTo4Question} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">

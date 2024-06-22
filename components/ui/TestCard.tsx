@@ -24,8 +24,6 @@ const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
                 return;
             }
         }
-
-
         window.location.href = `/tests/${testNumber}`;
     };
 

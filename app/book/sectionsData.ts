@@ -10,7 +10,7 @@ export const sections = [
         {
           title: "Official Ets Guide Vol 2",
           description: "MJ-Study-Abroad -Official_Ets_Guide Vol_2.pdf",
-          link: "https://drive.google.com/file/d/14OwL289o433gTSjBVTQmhqDczh0xP8is/view?usp=drive_link",
+          link: "https://drive.google.com/file/d/1MrRbP_KuL2HT-Ib9t2MgE89QPXXcIiFN/view?usp=sharing",
         },
         {
           title: "Official Ets Guide Vol 1",

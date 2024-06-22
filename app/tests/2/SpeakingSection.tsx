@@ -15,7 +15,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     const [isTimerRunning, setIsTimerRunning] = useState<boolean>(true);
     const [evaluation, setEvaluation] = useState<{ score: number; feedback: string } | null>(null);
     const { transcript, listening, resetTranscript } = useSpeechRecognition();
-    const [question, setQuestion] = useState<string>("If you will choose a new roommate, which of the following qualities do you think is the best: quietness, friendliness, or cleanliness? Explain your response with examples.");
+    const [question, setQuestion] = useState<string>(`${speakingQuestions[0].question1}`);
     const task2Intro = "In this question of the TOEFL Speaking Task 2, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task3Intro = "In this question of the TOEFL Speaking Task 3, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task4Intro = "In this question of the TOEFL Speaking Task 4, you'll first read a short passage on an academic topic. Next, you will hear a lecture on the same topic. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
@@ -55,7 +55,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
 
     useEffect(() => {
         if (stage === 'task2Speak') {
-            setQuestion("The man expresses his opinion about the article in the school newspaper. Explain his opinion and the reasons he gives for holding that opinion.")
+            setQuestion(`${speakingQuestions[0].question2}`)
             resetTranscript();
             SpeechRecognition.startListening({ continuous: true });
             const timer = setTimeout(() => {
@@ -68,7 +68,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     
     useEffect(() => {
         if (stage === 'task3Speak') {
-            setQuestion("Prey animals employ a variety of methods, including running and hiding, to avoid being caught by predators. Yet some animals do not hide but instead stand out. This is often accomplished through the method known as warning coloration. Animals utilizing warning coloration have brightly colored fur or skin. They are typically blue, purple, white, orange, red, or yellow in color. Many of these animals have lethal poison or venom. Predators that see brightly colored animals almost always avoid them. That is particularly true if the predators have had prior negative experiences with similar-looking animals.")
+            setQuestion(`${speakingQuestions[0].question3}`)
             resetTranscript();
             SpeechRecognition.startListening({ continuous: true });
             const timer = setTimeout(() => {
@@ -81,7 +81,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     
     useEffect(() => {
         if (stage === 'task4Speak') {
-            setQuestion("Using points and examples from the talk, explain two ways that natural arches are formed.")
+            setQuestion(`${speakingQuestions[0].question4}`)
             resetTranscript();
             SpeechRecognition.startListening({ continuous: true });
             const timer = setTimeout(() => {
@@ -268,7 +268,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Conversation</h3>
                     <ReactAudioPlayer
-                        src="/assets/T2S1.mp3"
+                        src={speakingQuestions[0].conversationAudio2}
                         controls
                     />
                     <button onClick={handleContinueToQuestion} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
@@ -303,7 +303,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col items-center">
                     <h3 className="text-xl font-bold mb-4">Task 3 Instructions</h3>
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
-                        {task2Intro}
+                        {task3Intro}
                     </p>
                     <button onClick={handleContinueToTask3} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
                         Continue to Task 3
@@ -321,7 +321,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Lecture</h3>
                     <ReactAudioPlayer
-                        src="/assets/T2S2.mp3"
+                        src={speakingQuestions[0].conversationAudio3}
                         controls
                     />
                     <button onClick={() => setStage('task3QuestionPrepare')} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
@@ -367,7 +367,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Conversation</h3>
                     <ReactAudioPlayer
-                        src="/assets/T2S3.mp3"
+                        src={speakingQuestions[0].conversationAudio4}
                         controls
                     />
                     <button onClick={handleContinueTo4Question} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">

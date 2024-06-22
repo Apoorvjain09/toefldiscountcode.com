@@ -1,8 +1,10 @@
 "use client"
 import React, { useState, useEffect, Suspense } from 'react';
-import { FaPlayCircle } from 'react-icons/fa';
+import { FaPlayCircle, FaSignOutAlt } from 'react-icons/fa';
 import { readingQuestions, listeningQuestions, listeningAudios } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
+import Draggable from 'react-draggable';
+
 const WritingSection = React.lazy(() => import('./WritingSection'));
 const SpeakingSection = React.lazy(() => import('./SpeakingSection'));
 const ResultsDashboard = React.lazy(() => import('./ResultsDashboard'));
@@ -279,11 +281,11 @@ const Test1 = () => {
             setStage('reading');
         } else if (stage === 'reading') {
             setStage('listeningInstructions');
-        } else if (stage === 'readingPassage1' && currentQuestion + 1 >= 9) {
+        } else if (stage === 'readingPassage1') {
             setStage('listeningInstructions');
         } else if (stage === 'readingSummaryQuestions1') {
             setStage('listeningInstructions');
-        } else if (stage === 'readingPassage2' && currentQuestion + 1 >= 19) {
+        } else if (stage === 'readingPassage2') {
             setStage('listeningInstructions');
         } else if (stage === 'readingSummaryQuestions2') {
             setStage('listeningInstructions');
@@ -316,15 +318,28 @@ const Test1 = () => {
             setStage('writing');
         } else if (stage === 'writing') {
             setStage('speaking');
+        } else if (stage === 'speaking') {
+            setStage('resultsDashboard');
         }
+    };
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen2, setIsModalOpen2] = useState(false);
+
+    const handleModalToggle = () => {
+        setIsModalOpen(!isModalOpen);
+    };
+    const handleModalToggle2 = () => {
+        setIsModalOpen2(!isModalOpen2);
     };
 
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
-            <div className='flex flex-row justify-between px-10 mb-5'>
+            <div className='flex flex-row justify-between px-10 mb-5 gap-10 '>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 2</h2>
-                <button onClick={handleExitClick} className="bg-blue-600 text-white py-2 px-4 rounded">
+                <button onClick={handleExitClick} className="hidden sm:flex bg-blue-600 text-white py-0 lg:px-4 rounded-[30px] w-[150px] lg:rounded-[50px] gap-1 items-center flex-row justify-center text-sm px-4 max-h-[60px]">
+                    <FaSignOutAlt />
                     Exit Section
                 </button>
             </div>
@@ -341,7 +356,7 @@ const Test1 = () => {
                         In the Listening section, you will hear several conversations and lectures and answer questions about them.
                     </p>
                     <p className="mb-4">
-                        In the Speaking section, you will answer 6 questions. Some of the questions ask you to speak about your own experience. Other questions ask you to speak about lectures and reading passages.
+                        In the Speaking section, you will answer 6 or 5 questions depending upon the task. Some of the questions ask you to speak about your own experience. Other questions ask you to speak about lectures and reading passages.
                     </p>
                     <p className="mb-4">
                         In the Writing section you will answer 2 questions. The first question asks you to write about the relationship between a lecture you will hear and a passage you will read. The second question asks you to write an essay about a topic of general based on your experience.
@@ -350,7 +365,7 @@ const Test1 = () => {
                         There will be directions for each section which explain how to answer the questions in that section.
                     </p>
                     <p className="mb-4">
-                        You should work quickly but carefully on the Reading and Listening questions. Some questions are more difficult than others, but try to answer every one to the best of your ability. If you are not sure of the answer to a question, make the best guess that you can. The questions that you answer by speaking and writing are each separately timed. Try to answer every one of these as completely as possible in the time allowed.
+                        You should work quickly but carefully on the Reading and Listening questions. Some questions are more difficult than others, but try to answer every one to the best of your ability. If you are not sure of the answer to a question, make the best guess that you can.
                     </p>
                     <div className="text-center">
                         <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
@@ -363,23 +378,26 @@ const Test1 = () => {
                 <div className="bg-white shadow p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Reading Section Directions</h3>
                     <p className="mb-4">
-                        This section measures your ability to understand academic passages in English. You will read 2 passages and answer 10 questions per passage. You have 36 minutes to read all the passages and answer all the questions.
+                        This section measures your ability to understand academic passages in English. You will read 2 passages and answer 10 questions per passage. In the test center, You have 36 minutes to read all the passages and answer all the questions.
                     </p>
                     <p className="mb-4">
                         Most questions are worth 1 point, but the last question in each set is worth more than 1 point. The directions indicate how many points you may receive.
                     </p>
                     <p className="mb-4">
-                        Some passages include a word or phrase that is underlined in blue. In the Official TOEFL, you will be able to click on the underlined word to see an example and explanation of the word.
+                        Some passages include a word or phrase that is underlined in yellow. In the Official TOEFL, you will be able to click on the underlined word to see an example and explanation of the word.
                     </p>
                     <p className="mb-4">
                         Within this section, you can go to the next question by clicking Next. You may skip questions in the current passage and go back to them later. If you want to return to previous questions, click on Back.
                     </p>
-                    <p className="mb-4">
+                    <p className="mb-4 font-bold">
+                        Remember once you go to the summary questions (which is 10th and 20th question) you can't check your previous inputs for the reading passage questions. So try not to leave questions for later.
+                    </p>
+                    {/* <p className="mb-4">
                         You can click on Review at any time and the review screen will show you which questions you have answered and which you have not answered. From this review screen, you may go directly to any question you have already seen in the current passage.
                     </p>
                     <p className="mb-4">
                         You may now begin the Reading section. NOTE: In an actual test some test takers may receive 4 passages; those test takers will have 72 minutes (1 hour and 12 minutes) to answer the questions.
-                    </p>
+                    </p> */}
                     <div className="text-center">
                         <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
                             Continue
@@ -425,7 +443,7 @@ const Test1 = () => {
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            Prev
+                            Back
                         </button>
                         <button
                             onClick={() => {
@@ -478,7 +496,15 @@ const Test1 = () => {
                             </div>
                         </div>
                     ))}
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
+                        <button
+                            onClick={() => {
+                                handleModalToggle(); // Toggle modal on button click
+                            }}
+                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
+                        >
+                            Read Passage
+                        </button>
                         <button
                             onClick={() => {
                                 setStage('readingPassage2');
@@ -491,6 +517,36 @@ const Test1 = () => {
                         </button>
                     </div>
                 </div>
+            )}
+            {isModalOpen && (
+                <Draggable handle=".modal-header">
+                    <div id="default-modal" tab-index="-1" aria-hidden="true" className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
+                        <div className="relative p-4 w-full max-w-2xl max-h-full">
+                            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 cursor-move">
+                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Passage
+                                    </h3>
+                                    <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onClick={handleModalToggle}>
+                                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span className="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <div className="p-4 md:p-5 space-y-4">
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        {/* Insert the passage content here */}
+                                        {readingQuestions.find(q => q.id === 10)?.passage}
+                                    </p>
+                                </div>
+                                <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                    <button onClick={handleModalToggle} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Draggable>
             )}
             {stage === 'readingPassage2' && (
                 <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
@@ -586,13 +642,11 @@ const Test1 = () => {
                     <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
                         <button
                             onClick={() => {
-                                calculateScore()
-                                setStage('resultsDashboard');
-                                setCurrentQuestion(0);
+                                handleModalToggle2(); // Toggle modal on button click
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            Finish
+                            Read Passage
                         </button>
                         <button
                             onClick={() => {
@@ -608,6 +662,36 @@ const Test1 = () => {
 
                     </div>
                 </div>
+            )}
+            {isModalOpen2 && (
+                <Draggable handle=".modal-header">
+                    <div id="default-modal" tab-index="-1" aria-hidden="true" className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
+                        <div className="relative p-4 w-full max-w-2xl max-h-full">
+                            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 cursor-move">
+                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Passage
+                                    </h3>
+                                    <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onClick={handleModalToggle2}>
+                                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span className="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <div className="p-4 md:p-5 space-y-4">
+                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        {/* Insert the passage content here */}
+                                        {readingQuestions.find(q => q.id === 20)?.passage}
+                                    </p>
+                                </div>
+                                <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                    <button onClick={handleModalToggle2} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Draggable>
             )}
             {stage === 'listeningInstructions' && (
                 <div className="bg-white shadow p-6 rounded mb-4">

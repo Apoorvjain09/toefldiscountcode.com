@@ -123,7 +123,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                     <div className="custom-audio-container flex-col flex gap-10">
                         <img src="/assets/T1C2_Listening.jpg"></img>
                         <ReactAudioPlayer
-                            src="/assets/T2W1.mp3"
+                            src={writingQuestions.task1_audio}
                             controls
                             className="custom-audio-player"
                         />

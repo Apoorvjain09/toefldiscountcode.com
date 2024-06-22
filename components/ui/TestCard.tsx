@@ -8,7 +8,7 @@ interface TestCardProps {
 }
 
 const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
-    const { user } = useUser();
+    const { isSignedIn, user } = useUser();
 
     const isFreeTest = testNumber === 1 || testNumber === 2;
     const testTitle = isFreeTest ? 'Free Test' : `Test ${testNumber}`;

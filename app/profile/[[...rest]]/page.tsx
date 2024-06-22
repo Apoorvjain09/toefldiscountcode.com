@@ -1,25 +1,43 @@
 "use client";
-import React from 'react';
-import { UserProfile, useAuth, SignIn } from '@clerk/nextjs';
-import goglobal from "@/public/assets/goglobal.webp"
-import Image from 'next/image';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
+import { useAuth } from '@clerk/nextjs';
+import Alert from '@/components/ui/Alert';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
+
+// Lazy load components
+const LoginUI = lazy(() => import('./LoginUi'))
 
 function Page() {
   const { isSignedIn } = useAuth();
+  const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    if (!isSignedIn) {
+      setShowAlert(true);
+      const timer = setTimeout(() => {
+        setShowAlert(false);
+      }, 2000); // Show alert for 2 seconds
+
+      return () => clearTimeout(timer); // Clean up the timer on component unmount
+    }
+  }, [isSignedIn]);
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+
   return (
     <>
-      <div className='xl:mt-10 xl:mb-10 p-7 w-full sm:hidden md:flex h-full flex items-center justify-center '>
-        {isSignedIn ? <div><UserProfile /></div> : <SignIn />}
-      </div>
-      <div className='hidden sm:flex md:hidden lg:hidden text-2xl flex-col'>
-        {isSignedIn ?
-          <div>
-            <p>Please view the page on a larger device</p>
-            <Image src={goglobal} width={2000} height={50} alt="Tofel Go Global Background" />
-          </div>
-          : 
-          <SignIn />}
-      </div>
+      {showAlert && (
+        <Alert
+          message="Please log in"
+          type="warning"
+          onClose={handleCloseAlert}
+        />
+      )}
+      <Suspense fallback={<LoadingSpinner />}>
+        <LoginUI/>
+      </Suspense>
     </>
   );
 }

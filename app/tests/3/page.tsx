@@ -14,20 +14,20 @@ const Page = () => {
         setStage('test');
     };
 
-    const { user } = useUser();
+    // const { user } = useUser();
 
-    useEffect(() => {
-        const isFreeTest = false; // Update this logic based on your requirement
-        if (!isFreeTest) {
-            const hasMembership =
-                user?.publicMetadata?.["6Month_Membership"] === "true" ||
-                user?.publicMetadata?.["Monthly_Subscription"] === "true";
+    // useEffect(() => {
+    //     const isFreeTest = false; // Update this logic based on your requirement
+    //     if (!isFreeTest) {
+    //         const hasMembership =
+    //             user?.publicMetadata?.["6Month_Membership"] === "true" ||
+    //             user?.publicMetadata?.["Monthly_Subscription"] === "true";
 
-            if (!hasMembership) {
-                window.location.href = '/payment';
-            }
-        }
-    }, [user]);
+    //         if (!hasMembership) {
+    //             window.location.href = '/payment';
+    //         }
+    //     }
+    // }, [user]);
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">

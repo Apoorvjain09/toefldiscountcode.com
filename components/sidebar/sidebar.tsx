@@ -68,9 +68,9 @@ export default function Sidebar() {
     ],
     extras: (
       <div className='flex flex-col gap-2'>
-        <Link href="/discover">
-          <SidebarButton icon={MoreHorizontal} className={`w-full ${pathname === '/discover' ? 'bg-gray-200' : ''}`}>
-            Discover
+        <Link href="https://mbbs-in-europe.in">
+          <SidebarButton icon={MoreHorizontal} className={`w-full ${pathname === 'https://mbbs-in-europe.in' ? 'bg-gray-200' : ''}`}>
+            MBBS Abroad
           </SidebarButton>
         </Link>
         {isSignedIn ?

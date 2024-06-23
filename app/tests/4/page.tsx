@@ -6,27 +6,13 @@ import { FaPlayCircle } from 'react-icons/fa';
 
 const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));
 
+
 const Page = () => {
     const [stage, setStage] = useState<'intro' | 'test'>('intro');
 
     const handleStartTestClick = () => {
         setStage('test');
     };
-
-    // const { user } = useUser();
-
-    // useEffect(() => {
-    //     const isFreeTest = false; // Update this logic based on your requirement
-    //     if (!isFreeTest) {
-    //         const hasMembership =
-    //             user?.publicMetadata?.["6Month_Membership"] === "true" ||
-    //             user?.publicMetadata?.["Monthly_Subscription"] === "true";
-
-    //         if (!hasMembership) {
-    //             window.location.href = '/payment';
-    //         }
-    //     }
-    // }, [user]);
 
 
     return (

@@ -11,7 +11,8 @@ const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
     const { isSignedIn, user } = useUser();
 
     const isFreeTest = testNumber === 1 || testNumber === 2;
-    const testTitle = isFreeTest ? 'Free Test' : `Test ${testNumber}`;
+    // const testTitle = isFreeTest ? 'Free Test' : `Test ${testNumber}`;
+    const testTitle = isFreeTest ? `Test ${testNumber}` : `Test ${testNumber}`;
 
     const handleTestClick = () => {
         if (!isFreeTest) {

@@ -3,841 +3,817 @@ export const readingQuestions = [
     {
         id: 1,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
 
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
 
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
 
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
 
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
         `,
-        question: "In paragraph 1, each of the following is mentioned as a feature of the city of Cahokia between A.D 1100 to 1200 EXCEPT:",
+        question: "Referring to paragraph 1, the Baroque period is recognized for its:",
         options: [
-            "Man-made mounds",
-            "Several large temples",
-            "A manufacturing workshop",
-            "Many public plazas"
+            "restrained and minimalist art.",
+            "focus on rationalism and scientific approach.",
+            "rich and grandiose artistic expressions.",
+            "emphasis on simplicity and calmness."
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 2,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
 
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
 
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
 
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
 
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
         `,
-        question: "Which of the following is NOT mentioned in paragraph 2 as a factor in the development of Cahokia?",
+        question: "According to paragraph 2, which of the following is NOT a key element in Baroque painting?",
         options: [
-            "The presence of chert close to the city",
-            "Its religious significance to non-residents",
-            "An exchange of agricultural tools with Mesoamerica",
-            "The city’s position along a natural trade route"
-        ],
-        answer: 2
-    },
-    {
-        id: 3,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        highlight: "ingenuity",
-        question: "The word “ingenuity” in paragraph 2 is closest in meaning to:",
-        options: [
-            "ambition",
-            "sincerity",
-            "faith",
-            "cleverness"
+            "use of dramatic scenes.",
+            "tenebrism.",
+            "chiaroscuro.",
+            "minimalistic approach."
         ],
         answer: 3
     },
     {
+        id: 3,
+        passage: `
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
+
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
+
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
+
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
+
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
+
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
+        `,
+        question: "As stated in paragraph 3, Baroque architecture served a dual purpose. One of these was to display power and prestige. What was the other purpose?",
+        options: [
+            "To support the Counter-Reformation efforts.",
+            "To provide shelter for the poor.",
+            "To provide employment opportunities.",
+            "To showcase the latest architectural trends."
+        ],
+        answer: 0
+    },
+    {
         id: 4,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
 
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
 
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
 
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
 
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
         `,
-        question: "What can be inferred from paragraph 3 about agricultural methods used in Cahokia in 1100?",
+        highlight: "ostentatious",
+        question: "Which word in paragraph 3 is most similar in meaning to 'ostentatious'?",
         options: [
-            "They were not as advanced as those used in Mesoamerica.",
-            "They were sometimes unable to supply enough food for the city.",
-            "They were carried out by newly arrived immigrants.",
-            "They were seriously affected by environmental pollution."
+            "profound.",
+            "grandeur.",
+            "intricate.",
+            "extravagant."
         ],
-        answer: 1
+        answer: 3
     },
     {
         id: 5,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
 
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. █[A] Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. █[B] The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. █[C] St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. █[D] However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
 
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
 
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
 
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
         `,
-        highlight: "this problem",
-        question: `The phrase “this problem” in paragraph 3 refers to:`,
-        options: [
-            "An unhealthy environment",
-            "An insufficient amount of immigrants",
-            "Unattractive social and political attractions",
-            "The population of the city"
-        ],
-        answer: 0
-    },
-    {
-        id: 6,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        question: "Which of the following “bolstered the population of the city”?",
-        options: [
-            "A highly-visible and attractive religious structure",
-            "The leadership of influential spiritual elites",
-            "Knowledge of complex construction techniques",
-            "The selection of a new paramount chief from elsewhere in the Mississippi area"
-        ],
-        answer: 0
-    },
-    {
-        id: 7,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        question: "According to paragraph 5, what has recent research on chert tools found at the Silvernail settlement site revealed?",
-        options: [
-            "Chert tools were started to be used after Cahokia became an important city.",
-            "The residents of Cahokia were the only producers of farming tools in the area",
-            "Some of the tools used by people at the Silvernail settlement were made of materials from the area near Cahokia.",
-            "Agricultural tools were exchanged with people at the Silvernail settlement for copper and seashells."
-        ],
-        answer: 2
-    },
-    {
-        id: 8,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        question: "In paragraph 6, why does the author mention the location of the city’s defensive structures?",
-        options: [
-            "To suggest that the city was not abandoned due to warfare.",
-            "To explain why diseases spread so quickly in heavily populated areas.",
-            "To explain why the city was easily invaded by outside forces.",
-            "To present an example of why large cities often decline over time."
-        ],
-        answer: 0
-    },
-    {
-        id: 9,
-        passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. █[A] Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. █[B] Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. █[C] Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area. █[D]
-
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
-
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
-
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
-
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
-
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
-        `,
-        question: `In paragraph 1 of the passage, there is a missing sentence. The paragraph is repeated below and shows four letters (A, B, C, and D) that indicate where the following sentence could be added. → “In fact, artifacts and tools from Cahokia have been discovered in sites as far away as the shores of Lake Superior to the north, and Appalachia to the south.”`,
+        question: `In paragraph 3 of the passage, there is a missing sentence. The paragraph is repeated below and shows four letters (A, B, C, and D) that indicate where the following sentence could be added. → “They gave the architecture a dynamic and visually compelling quality”`,
         options: [
             "Option A",
             "Option B",
             "Option C",
             "Option D"
         ],
+        answer: 1
+    },
+    {
+        id: 6,
+        passage: `
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
+
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
+
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
+
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
+
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
+
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
+        `,
+        question: "Referring to paragraph 4, the music of the Baroque period can be characterized by all the following EXCEPT:",
+        options: [
+            "complex contrapuntal textures.",
+            "simple, measured rhythms and melodies.",
+            "ornate musical lines.",
+            "development of the tonal system."
+        ],
+        answer: 1
+    },
+    {
+        id: 7,
+        passage: `
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
+
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
+
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
+
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
+
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
+
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
+        `,
+        question: "Which of the answers offered below expressed the information from the marked part of the paragraph?",
+        options: [
+            "Vivaldi, Bach, and Handel's music was complex and emotional.",
+            "Composers like Vivaldi, Bach, and Handel disliked simple music.",
+            "These composers made music that was difficult to play.",
+            "Vivaldi, Bach, and Handel were the most famous composers of the Baroque period."
+        ],
+        answer: 0
+    },
+    {
+        id: 8,
+        passage: `
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
+
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
+
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
+
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
+
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
+
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
+        `,
+        question: "The transition from the Baroque period to the Enlightenment is implied to be in paragraph 5. Which of the following best describes this transition?",
+        options: [
+            "A shift from reason and balance to extravagance and drama.",
+            "A continuation of the same values and perceptions.",
+            "A shift from refinement to stability.",
+            "An abrupt end to all artistic endeavors."
+        ],
         answer: 2
+    },
+    {
+        id: 9,
+        passage: `
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
+
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
+
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
+
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
+
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
+
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
+        `,
+        question: "According to paragraph 5, the artistic contributions of the Baroque period can be viewed as:",
+        options: [
+            "a) outdated and irrelevant.",
+            "b) groundwork for subsequent periods.",
+            "c) in direct opposition to Enlightenment ideals.",
+            "d) overly dramatic and impractical."
+        ],
+        answer: 1
     },
     {
         id: 10,
         passage: `
-        [1] The ancient city of Cahokia was located at a site very close to modern St. Louis in the United States. At its apex from A.D. 1100 to 1200, Cahokia covered about 16 square kilometers and probably had a population that peaked at around 15,000. Excavations of the city have revealed that it contained a large number of public plazas that were separated by at least 120 man made earthen mounds, the largest of which was topped by a major temple. Remains have also been found of an elaborate copper workshop that produced sophisticated metal goods likely traded with both nearby and distant settlements.  Moreover, the city is noted for its significant economic and spiritual contacts with other communities in the Mississippi area. Although the inhabitants left no written records beyond symbols on pottery, shells, wood and  stone, the remains of this elaborately planned community suggest that it was home to a complex society that had great influence over a large geographic area.
+        [1] The Baroque era, which lasted from the late 16th to the middle of the 18th century, is an intriguing era in the history of the arts, marked by grandeur, drama, and extravagance. Baroque art, which originated in Rome and ultimately spread throughout Europe, encapsulated the cultural, intellectual, and spiritual zeitgeist of its time, influencing everything from architecture to music to painting to sculpture. In essence, the Baroque style aimed to evoke an emotional response by employing a vast array of techniques and instruments to create a sense of motion, tension, and grandeur.
 
-        [2] What accounts for the tremendous population growth of the city and its influence on the surrounding region?  Among the main factors currently cited are the city’s location on a natural trade route near the confluence of three major rivers (the Mississippi, Missouri and Illinois), its attractiveness as a religious pilgrimage site for inhabitants of other settlements, and the economic value of chert* that could be collected in nearby streams. The influence of other possible factors is much less clear – for example the ingenuity and foresightedness of the city’s leadership, the construction of advanced defensive structures, and the emergence of new and more productive agricultural techniques first practiced in Mesoamerica.
+        [2] Within the expansive influence of the Baroque, the domain of painting gained prominence, its evolution characterized by three primary elements. The technique of chiaroscuro, which emphasized the contrast between light and dark, was popularized by Caravaggio and refined by subsequent artists such as Rembrandt and Vermeer. Alongside this, tenebrism, an exaggerated form of chiaroscuro that emphasizes deep, often opaque shadows, was used to create intense, mood-driven works of art. Lastly, the staging of dramatic sequences, which were frequently biblical or mythological in nature, served to enhance the emotional resonance of Baroque art.
 
-        [3] The importance of the last factor is a matter of some debate. Cahokia’s peak in 1100 coincided with the emergence in the region of new methods of agricultural production.  These included the “three sisters” method of farming first discovered centuries earlier in Mesoamerica.  However, even though the city was ringed by farming communities, due to rapid population growth they were unable to feed the whole population. A related problem was the challenge of waste disposal in such a dense community, and people in Cahokia likely became sick from polluted waterways. Because it was such an unhealthy place to live, modern historians believe that the town had to rely on social and political attractions to bring in a steady supply of new immigrants. Without their arrival, this problem would have caused the city to be abandoned much earlier than it eventually was.
+        [3] In keeping with the period's general philosophy, Baroque architecture adopted an aesthetic of grandeur and ornate embellishment. Period structures are distinguished by their intricate facades, expansive spaces, and intricate floor plans. The construction of cathedrals, palaces, and other civic structures became physical manifestations of power and prestige. St. Peter’s Basilica in Rome and the Palace of Versailles in France are notable examples. However, it is essential to note that the ostentatious features did not merely serve an aesthetic function; they were frequently employed as a Counter-Reformation tool, demonstrating the Church’s affluence and power in response to the expanding Protestant threat.
 
-        [4] It is likely that one of Cahokia’s massive construction projects, encouraged by the spiritual elite, bolstered the population of the city.  This was the largest of the city’s mounds – now known as Monks Mound – which covered 14 acres, rose 30 meters and was topped by a massive wooden temple another 15 meters high that was presided over by the city’s paramount chief. To complete this unique structure, thousands of workers moved vast amounts of earth in handheld woven baskets over the course of several decades. This impressive structure would have been seen throughout the city and made it an appealing pilgrimage destination for people all over the Mississippi area, attracting many visitors, some of whom settled permanently in the city.
+        [4] In keeping with the period's dramatic artistic sensibility, Baroque music marked a distinct departure from the relatively simple and measured rhythms and melodies of the Renaissance. Vivaldi, Bach, and Handel introduced ornate musical lines, emotional melodies, and intricate contrapuntal textures. The development of the tonal system, which replaced the Renaissance's modal system, permitted more harmonic possibilities, thereby expanding the affective pallet of compositions. In addition, opera, a synthesis of music, drama, and visual arts, was created during the Baroque period, exemplifying the Baroque’s pursuit of emotional expression.
 
-        [5] The city’s growth as an important population center was also a result of its ability to establish and maintain economic links with communities as far away as the Great Lakes to the north and the  Gulf Coast  to the south. This was achieved through the trade of such exotic items as copper,  chert, and seashells.  Chert, most notably, was used in the production of hoes, a high demand tool for farmers around Cahokia and other Mississippian centers. Recent research on chert tools discovered at the Silvernail settlement site near modern day Minnesota found that the raw materials used to construct some of them originated near Cahokia.
+        [5] Midway through the eighteenth century, the transition to the Enlightenment marked a significant shift in societal values and perceptions, which inevitably influenced the development of the arts. In contrast to the Baroque period’s emphasis on extravagance, drama, and emotional profundity, the Enlightenment emphasized reason, equilibrium, and restraint. It is crucial to recognize the continuity of these periods without reducing them to a dichotomy between sentiment and reason. Complex and diverse as they were, the artistic contributions of the Baroque period lay a solid foundation that would be reevaluated and expanded upon in subsequent periods.
 
-        [6] The population of Cahokia began to decline during the 13th century. Scholars have not determined why this happened, but have proposed theories involving environmental factors such as overhunting, deforestation, and flooding, as explanations for the abandonment of the site. Another possible cause is invasion by outside peoples, though the position of the only defensive structures in the city (a wooden stockade and watchtowers) in the main ceremonial precinct, away from the heavily populated areas of the city, suggests that the civilian population of the city faced no threat of invasion from outside forces. There is no other evidence for warfare, so the stockade may have been more for ritual or formal separation than for military purposes. In any case, by 1300 this once thriving city was almost entirely abandoned.
+        [6] The Baroque era has left an indelible impression on the artistic world, its influences resonating throughout the centuries. The advancements in style and technique, the exploratory spirit, and the sociocultural resonance of the Baroque period remain ingrained in the collective cultural consciousness.
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "Cahokia was a large prosperous city in North America that reached its peak between about A.D. 1100 and 1200.",
+        introductorySentence: "The Baroque period brought a lot to the artistic expression.",
         question: "What is the main topic of the passage?",
         options: [
-            "[A]. The large construction projects and signs of manufacturing and religious facilities that have been uncovered suggests that Cahokia was a complex and influential society.",
-            "[B]. Scholars in Cahokia may have used symbols recorded on pottery, shells, stones and other materials to record the city’s history.",
-            "[C]. Several factors account for the growth of Cahokia, including its location on a trade route, religious significance and access to valuable chert.",
-            "[D]. As a result of pollution caused by its extremely dense population, Cahokia suffered frequent crop failures.",
-            "[E]. It is likely that all of the city’s defensive structures were constructed merely for ceremonial reasons",
-            "[F]. The reason for the decline of Cahokia is unknown, but it may be connected to environmental factors or military conflict."
+            "a) The Baroque period is marked by its dramatic and grandiose artistic expressions.",
+            "b) Baroque architecture and music were more important than painting.",
+            "c) The techniques and elements of Baroque art laid groundwork for subsequent periods.",
+            "d) All Baroque art was a direct reaction to the Counter-Reformation.",
+            "e) The Baroque period has influenced contemporary artistic practices.",
+            "f) The transition from the Baroque period to the Enlightenment involved a shift from simplicity to complexity."
         ],
         answers: 10,
-        summaryAnswer: [0, 2, 5]
+        summaryAnswer: [0, 1, 2]
     },
     // Second passage
     {
         id: 11,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        highlight: "constitute",
-        question: "The word constitute in the passage 2 is closest in meaning to",
+        question: "Referring to paragraph 1, which of the following is NOT a characteristic attributed to the Wright brothers?",
         options: [
-            "explain",
-            "reject",
-            "form",
-            "modify"
+            "innovative spirit",
+            "lack of formal education",
+            "defeatist attitude",
+            "meticulousness"
         ],
         answer: 2
     },
     {
         id: 12,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        highlight: "Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born.",
-        question: "Which of the sentences below best expresses the information in the highlighted statement in the passage? The other choices change the meaning or leave out important information.",
+        highlight: "progenitors",
+        question: "Referring to paragraph 1, what is the meaning of the word 'progenitors'?",
         options: [
-            "Although it is not  generally accepted, your family provides the best prediction of your future wealth.",
-            "You can achieve great future wealth in spite of the family in which you may have been born.",
-            "It is not true that your family will restrict the acquisition of your future wealth and level of social status.",
-            "Social myths are contrary to the facts about the future wealth and social status of your family."
+            "pioneers",
+            "antagonists",
+            "advocates",
+            "beneficiaries"
         ],
         answer: 0
     },
     {
         id: 13,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        question: "Why does the author mention the Forbes 400 in paragraph 3?",
+        question: "According to paragraph 2, what was the significant innovation the Wright Brothers developed to improve their understanding of aerodynamics?",
         options: [
-            "To explain the meaning of the listing that appears every year",
-            "To support the statement that most wealthy people inherit their money",
-            "To cast doubt on the claim that family income predicts individual wealth",
-            "To give examples of successful people who have modest family connections"
+            "a three-axis control system",
+            "an empirical data collection system",
+            "a wind tunnel",
+            "a more powerful engine"
         ],
-        answer: 1
+        answer: 2
     },
 
     {
         id: 14,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        highlight: "exclusive",
-        question: "The word 'exclusive' in the passage 3 is closest in meaning to",
+        question: "Which of the following best describes the significance of the Wright Brothers' three-axis control system in the development of the Wright Flyer?",
         options: [
-            "long",
-            "expensive",
-            "frequent",
-            "relaxing"
+            "It marked the Wright Brothers’ first attempt to incorporate an engine into their aircraft.",
+            "It highlighted the importance of powerful engines and wings in aircraft design.",
+            "It was a pivotal development that distinguished the Wright Brothers’ approach from their contemporaries by emphasizing control and stability.",
+            "It was the first time roll, pitch, and yaw controls were used in any form of transportation."
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 15,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        question: "In paragraph 4, the author states that business and professional people with educational advantages are most often members of which class?",
+        highlight: "This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability.",
+        question: "Which of the answers offered below expressed the information from the marked part of the paragraph?",
         options: [
-            "lower middle class",
-            "upper middle class",
-            "nouveau riche",
-            "upper class"
+            "The Wright Brothers' roll, pitch, and yaw controls were a major factor in the successful creation of the Wright Flyer, unlike others who ignored the importance of control and stability.",
+            "The Wright Flyer was developed by the Wright Brothers with roll, pitch, and yaw controls, which were used to defy gravity.",
+            "The Wright Brothers were successful because they built a powerful engine and wings for the Wright Flyer.",
+            "The Wright Brothers' unique focus on roll, pitch, and yaw controls resulted in the invention of the wind tunnel."
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 16,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        question: "According to paragraph 5, why do most people identify themselves as middle class in the United States?",
+        question: "According to paragraph 4, what is implied by the distance and duration of the first flights?",
         options: [
-            "They have about the same lifestyle as everyone else in the country.",
-            "They prefer not to admit that there are class distinctions in the United States.",
-            "They don’t really know how to define their status because it is unclear.",
-            "They identify themselves with the majority who have normal lifestyles."
+            "The Wright Brothers had superior physical strength.",
+            "The Wright Brothers had made a technological breakthrough.",
+            "The Wright Brothers' flight was a commercial failure.",
+            "The Wright Brothers were experienced pilots."
         ],
         answer: 1
     },
     {
         id: 17,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        question: "What can be inferred about the working class in the United States?",
+        question: "According to the passage, what was a key aspect of the Wright Brothers’ contributions to the aviation industry beyond technology and design?",
         options: [
-            "They are often not able to find entry-level jobs.",
-            "They work in jobs that pay minimum wage.",
-            "They are service workers and manual laborers.",
-            "They are considered lower class."
+            "They focused solely on the military applications of aviation.",
+            "They acted as advocates, promoting the commercial and military potential of aviation, and were pivotal in shaping the industry.",
+            "They founded several aviation companies to commercially exploit their inventions.",
+            "They worked on improving communication technologies for aviation."
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 18,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
-        question: "According to paragraph 7, why has the underclass emerged?",
+        question: "According to paragraph 5, what impact did the Wright Brothers' advocacy have on the future of aviation?",
         options: [
-            "The new term was necessary because the lower class enjoyed a higher lifestyle than it had previously.",
-            "The increase in crime has supported a new class of people who live by engaging in illegal activities.",
-            "Changes in the economy have caused an entire class of people to survive by welfare or crime.",
-            "Minimum-wage jobs no longer support a class of people at a standard level in the economic system."
+            "It limited the scope of aviation development.",
+            "It convinced stakeholders about the potential of aviation.",
+            "It led to their own financial downfall.",
+            "It discouraged military use of aviation."
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 19,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. █[A] People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. █[B] The underclass includes those who are likely to be permanently unemployed and without means of economic support. █[C] Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities. █[D]
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. █[A] Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. █[B] In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. █[C] This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy. █[D]
         `,
-        question: "Look at the part of passage 7 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'The working poor constitute a large portion of those who are poor.'",
+        question: "Look at the part of passage 6 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
         options: [
             "Choice A",
             "Choice B",
             "Choice C",
             "Choice D"
         ],
-        answer: 0
+        answer: 1
     },
     {
         id: 20,
         passage: `
-        [1] Taken together, income, occupation, and education are good measures of people’s social standing. Using a layered model of stratification, most sociologists describe the class system in the United States as divided into several classes: upper, upper middle, middle, lower middle, and lower class. The different classes are arrayed along a continuum with those with the most money, education, and prestige at the top and those with the least at the bottom.
+        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
 
-        [2] In the United States, the upper class owns the major share of corporate and personal wealth; it includes those who have held wealth for generations as well as those who have recently become rich. Only a very small proportion of people actually constitute the upper class, but they control vast amounts of wealth and power in the United States. Those in this class exercise enormous control throughout society. Some wealthy individuals can wield as much power as entire nations.
+        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
 
-        [3] Despite social myths to the contrary, the best predictor of future wealth is the family into which you are born. Each year, the business magazine Forbes publishes a list of the 400 wealthiest families and individuals in the country. Of all the wealth represented on the Forbes 400 list, most is inherited, although since the 1990s, there has been some increase in the number of people on the list with self-created wealth. Those in the upper class with newly acquired wealth are known as the nouveau riche. Luxury vehicles, high-priced real estate, and exclusive vacations may mark the lifestyle of the newly rich. However, although they may have vast amounts of money, they are often not accepted into “old rich” circles.
+        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
 
-        [4] The upper middle class includes those with high incomes and high social prestige. They tend to be well-educated professionals or business executives. Their earnings can be quite high indeed—successful business executives can earn millions of dollars a year. It is difficult to estimate exactly how many people fall into this group because of the difficulty of drawing lines between the upper, upper middle, and middle classes. Indeed, the upper middle class is often thought of as “middle class” because their lifestyle sets the standard to which many aspire, but this lifestyle is actually unattainable by most.
+        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
 
-        [5] The middle class is hard to define, in part because being “middle class” is more than just economic position. A very large portion of Americans identify themselves as middle class even though they vary widely in lifestyle and in resources at their disposal. But the idea that the United States is an open-class system leads many to think that the majority have a middle-class lifestyle; thus, the middle class becomes the ubiquitous norm even though many who call themselves middle class have a tenuous hold on this class position.
+        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
 
-        [6] The lower middle class includes workers in the skilled trades and low-income bureaucratic workers, many of whom may actually define themselves as middle class. Also known as the working class, this class includes blue-collar workers (those in skilled trades who do manual labor) and many service workers, such as secretaries, hair stylists, food servers, police, and firefighters. Medium to low income, education, and occupational prestige define the lower middle class relative to the class groups above it. The term lower in this class designation refers to the relative position of the group in the stratification system, but it has a pejorative sound to many people, especially to people who are members of this class, many of whom think of themselves as middle class.
-
-        [7] The lower class is composed primarily of the displaced and poor. People in this class have little formal education and are often unemployed or working in minimum-wage jobs. People of color and women make up a disproportionate part of this class. The poor include the working poor—those who work at least 27 hours a week but whose wages fall below the federal poverty level. Six percent of all working people now live below the poverty line. The concept of the underclass has been added to the lower class. The underclass includes those who are likely to be permanently unemployed and without means of economic support. Rejected from the economic system, those in the underclass may become dependent on public assistance or illegal activities.
+        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "The levels of education, the acquisition of wealth, and occupational prestige determine social status in the United States .",
+        introductorySentence: "The Wright Brothers' achievement made a great achievement.",
         question: "Which era marks the beginning of the construction of the Great Wall?",
         options: [
-            "[A]. People who have made their money more recently tend not to be accepted by those who have inherited their wealth from family holdings.",
-            "[B]. The lower class includes working people with low incomes and a new underclass of people who are dependent on welfare or engage in crime.",
-            "[C]. The upper class tends to acquire wealth through inheritance, whereas the upper middle class has a high income that they earn in their professions.",
-            "[D]. Although the lifestyle of the upper middle class is the goal for the majority, it is difficult for many people to maintain this standard of living.",
-            "[E]. Most people identify themselves as middle class, including blue-collar workers and service workers as well as bureaucratic employees.",
-            "[F]. It is still possible to move from one social class to another in the United States by working your way up the ladder in a corporate environment."
+            "[A] The Wright Brothers were self-taught engineers who made significant contributions to aviation.",
+            "[B]The Wright Brothers' wind tunnel and three-axis control system were instrumental to their success.",
+            "[C]The Wright Brothers' first flight was unsuccessful due to a lack of pilot experience.",
+            "[D]The Wright Brothers' advocacy played a critical role in the expansion of the aviation industry.",
+            "[E]The Wright Brothers were primarily interested in the commercial benefits of their inventions.",
+            "[F]The Wright Brothers combined humility with groundbreaking innovation, setting a unique legacy."
         ],
         answer: 10,
-        summaryAnswer: [2, 4, 1]
+        summaryAnswer: [0, 1, 3]
     }
 ];
 
 export const listeningQuestions = [
     {
         id: 1,
-        question: "What is the discussion mainly about?",
+        question: "According to the speaker, what did European explorers notice as they sailed toward the shores of North America?",
         options: [
-            "Commercials on television",
-            "Marketing brand-name products",
-            "A book by Rob Frankel",
-            "Selling Aunt Ruby’s chicken"
+            "The strength of the wind",
+            "The density of the forests",
+            "The fragrance of the trees",
+            "The Native American villages"
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 2,
-        question: "Why does the professor say this: 'Go back to the car commercial for a minute.'?",
+        question: "According to the speaker, why was pine sap a valuable commodity?",
         options: [
-            "To emphasize the importance of commercials",
-            "To correct something that he said earlier",
-            "To identify the time limits for most commercials",
-            "To relate new information to a previous example"
-        ],
-        answer: 3
-    },
-    {
-        id: 3,
-        question: "According to the professor, why do consumers develop brand loyalty?",
-        options: [
-            "They have a relationship with the personality that the product projects.",
-            "They are able to recognize the brand easily when they see it.",
-            "They tend to make decisions based on recommendations by friends.",
-            "They find a product that they like and continue to buy it."
+            "It could make wooden ships waterproof.",
+            "It was an effective cure for headaches.",
+            "It provided an aromatic spice for food.",
+            "It was a good material for starting fires."
         ],
         answer: 0
     },
     {
-        id: 4,
-        question: "How does the professor emphasize his point about branding?",
+        id: 3,
+        question: "How was the flowering dogwood used?",
         options: [
-            "He uses Aunt Ruby’s chicken as an example.",
-            "He defines it by contrasting it with related concepts.",
-            "He refers to a book that he has written.",
-            "He shows a familiar commercial in class."
+            "As a flavoring for candy and soft drinks",
+            "As a spring tonic for pioneer children",
+            "As a treatment for fevers and malaria",
+            "As an ingredient in soaps and perfumes"
         ],
-        answer: 1
+        answer: 2
+    },
+    {
+        id: 4,
+        question: "Why does the speaker say this: 'Just give it a small scrape with your thumbnail to release the scent, I think you will find it strong but pleasent'",
+        options: [
+            "She is demonstrating how to brew tea.",
+            "She needs someone to help her lift a heavy tree.",
+            "She wants the students to smell a piece of wood.",
+            "She is giving a recipe for a medicinal tonic."
+        ],
+        answer: 2
     },
     {
         id: 5,
-        question: "Why does Susan mention laundry detergent?",
+        question: "Why was sassafras once considered a wonder tree?",
         options: [
-            "To give an example of price wars",
-            "To show that consumers buy different brands",
-            "To name an industry that introduces new brands",
-            "To clarify the concept of brand loyalty"
+            "Its fragrance was the sweetest of any American tree.",
+            "Its sap could be made into a tar to seal wooden ships.",
+            "It provided more board timber than any other tree.",
+            "It was thought to be a cure for almost every disease."
         ],
         answer: 3
     },
     {
         id: 6,
-        question: "How does the professor organize the discussion?",
+        question: "What does the speaker imply about sassafras?",
         options: [
-            "She has visual aids to explain each point.",
-            "She uses a scenario that students can relate to.",
-            "She provides a handout with an outline.",
-            "She helps students read the textbook."
+            "It is probably not harmful to humans.",
+            "It is no longer a legal medicine.",
+            "It is too expensive for most people.",
+            "It is available only in drugstores."
         ],
         answer: 1
     },
     {
         id: 7,
-        question: "What aspect of blood does the professor mainly discuss?",
+        question: "What aspect of Plato's philosophy does the professor mainly discuss?",
         options: [
-            "An explanation of stem cells",
-            "A process for blood transfusion",
-            "A method for producing artificial blood",
-            "A discussion of blood typing"
+            "Plato's teachings about culture",
+            "Plato's rules for good government",
+            "Plato's affect on other philosophies",
+            "Plato's views on education"
         ],
         answer: 3,
     },
     {
         id: 8,
-        question: "Why does the student say this: 'Excuse me.'?",
+        question: "Why does the professor mention the mathematical concept of 2 + 2 = 4?",
         options: [
-            "She is apologizing for disagreeing with the professor.",
-            "She is interrupting politely to ask a question.",
-            "She is talking to herself during the lecture.",
-            "She is changing the subject of the professor’s talk."
+            "To compare philosophy and mathematics",
+            "To give an example of a lasting truth",
+            "To show the simplicity of Plato's philosophy",
+            "To discover which students like mathematics"
         ],
         answer: 1
     },
     {
         id: 9,
-        question: "Why does the professor mention fingerprints?",
+        question: "What do idealists believe about higher-level thinking?",
         options: [
-            "To demonstrate that blood types are different for individuals",
-            "To explain how most of the blood tests are performed",
-            "To explain why O blood is considered universal",
-            "To help students remember the different antigens"
+            "It develops a person's character and It benefits the whole society. ",
+            "It makes all people equal.",
+            "Only that it benefits the whole society",
+            "It gives teachers too much power."
         ],
         answer: 0
     },
     {
         id: 10,
-        question: "In cross matching, how does a compatible match appear under the microscope?",
+        question: "What is the woman's attitude toward the idealist view of education?",
         options: [
-            "All of the cells are at an equal distance from each other.",
-            "The arrangement of the cells looks like two parallel lines.",
-            "The cells tend to group together in a large clump.",
-            "The red cells and the plasma separate in an irregular pattern."
+            "She thinks it does not give students useful knowledge.",
+            "She finds it complex and difficult to understand.",
+            "She disagrees with its emphasis on truth.",
+            "She considers it the most liberal system of education."
         ],
         answer: 0
     },
     {
         id: 11,
-        question: "Why does the professor mention artificial blood?",
+        question: "What does the professor mean when he says this:",
         options: [
-            "She is referring to the textbook.",
-            "She is answering a question.",
-            "She is reporting her research.",
-            "She is joking with the students."
+            "Idealism has been criticized unfairly.",
+            "Idealism changes how people think.",
+            "Idealism has diminished in influence.",
+            "Idealism remains the only true philosophy."
         ],
-        answer: 1
+        answer: 2
     },
     {
         id: 12,
-        question: "What does the professor imply when she says this: 'Still, continuing research along these lines should probably be encouraged.'?",
+        question: "According to the professor, what do critics say about idealism?",
         options: [
-            "She is very uncertain about the risks of the research.",
-            "She is somewhat interested in doing research in this area.",
-            "She is withdrawing her support for future research.",
-            "She agrees that research should continue in spite of problems."
-        ],
-        answer: 3
-    },
-    {
-        id: 13,
-        question: "What is this discussion mainly about?",
-        options: [
-            "How to exploit nonrenewable mineral resources",
-            "The exploitation of minerals in protected environments",
-            "Pollution as a by-product of mineral exploitation",
-            "The economic and environmental costs of exploiting minerals"
-        ],
-        answer: 3
-    },
-    {
-        id: 14,
-        question: "According to the professor, what are two problems that can be anticipated when roads are cut into an area for mining?",
-        options: [
-            "The labor is difficult to retain.",
-            "The natural landscape is damaged and the ecosystem is disturbed.",
-            "The roadbeds create waste piles.",
-            "Only The ecosystem is disturbed."
+            "It gives students immoral ideas about learning.",
+            "It discourages student creativity and questioning.",
+            "It is overly concerned with economic development.",
+            "Its focus on abstract thinking is unfair to many students."
         ],
         answer: 1
     },
     {
-        id: 15,
-        question: "Why does the professor say this: 'And that would mean ...'?",
+        id: 13,
+        question: "What is the main idea of the lecture?",
         options: [
-            "As encouragement for a more complete answer",
-            "Because he doesn’t understand the student’s answer",
-            "To give another student an opportunity to speak",
-            "For positive reinforcement of a correct answer"
+            "Every human society is interested in sports.",
+            "Rules were developed to make sports fair.",
+            "Sports contain many elements of hunting.",
+            "Complex cultures have violent sports."
+        ],
+        answer: 2
+    },
+    {
+        id: 14,
+        question: "Listen again to part of the discussion. Then answer the question. Why does the professor say this:",
+        options: [
+            "To find out if the student did her homework",
+            "To contradict the student's answer",
+            "To learn about what food the student likes",
+            "To encourage the student to elaborate"
+        ],
+        answer: 3
+    },
+    {
+        id: 15,
+        question: "According to the professor, why did the ancient Romans build the Coliseum?",
+        options: [
+            "To make the hunt an entertainment for spectators",
+            "To compete with other cities in sports architecture",
+            "To put Rome at the center of Olympic sports",
+            "To shock and offend the enemies of Rome"
         ],
         answer: 0
     },
     {
         id: 16,
-        question: "What option is proposed as an alternative when all of the mineral resources in easily accessible locations have been depleted?",
+        question: "What point does the professor make about track and field sports?",
         options: [
-            "Converting to nonrenewable resources",
-            "Concentrating on conservation of the resources",
-            "Developing synthetic resources to replace minerals",
-            "Using new technology to search the area again"
+            "They were performed in the Coliseum of Rome.",
+            "They are shocking because an animal is killed.",
+            "They are the most popular sporting events today.",
+            "They involve skills originally used by hunters"
         ],
-        answer: 2
+        answer: 3
     },
     {
         id: 17,
-        question: "What does the professor imply about the environmental costs of mineral exploitation?",
+        question: "Which sports contain a symbolic element of the kill?",
         options: [
-            "He thinks that the environmental costs are less than the economic costs.",
-            "He regrets that the environment is damaged during mineral exploitation.",
-            "He opposes mineral exploitation when it is done close to urban areas.",
-            "He believes in exploiting the resources in national parks and historic reserves."
+            "Fencing and Boxing",
+            "Running and Boxing",
+            "Baseball",
+            "Only Boxing"
+        ],
+        answer: 0
+    },
+    {
+        id: 18,
+        question: "What does the professor imply about the negative element of sports?",
+        options: [
+            "People prefer sports with a strong negative element.",
+            "The concept of sportsmanship makes sports less negative.",
+            "Today, only blood sports contain a negative element.",
+            "Sports will become even more negative in the future."
         ],
         answer: 1
     },
     {
-        id: 18,
-        question: "What does the professor want the students to do in this class session?",
-        options: [
-            "Listen carefully and take notes",
-            "Bring in alternative ideas to present",
-            "Ask questions and draw conclusions",
-            "Prepare for a quiz at the end"
-        ],
-        answer: 2
-    },
-    {
         id: 19,
-        question: "Why does the woman go to see her professor?",
+        question: "What are the students mainly discussing?",
         options: [
-            "To get advice about memorizing information",
-            "To clarify several terms that she doesn’t understand",
-            "To get permission to bring her children to class",
-            "To ask a question about classroom procedures"
+            "Various costs that businesses face",
+            "The concept of opportunity cost",
+            "The rising costs of owning a business",
+            "Differences between economics and accounting"
         ],
         answer: 1
     },
     {
         id: 20,
-        question: "What do semantic memory and episodic memory have in common?",
+        question: "How does the man help the woman understand a concept that she finds difficult?",
         options: [
-            "They are both included in short-term memory.",
-            "They do not concentrate on each step in the process.",
-            "They are subcategories of declarative memory.",
-            "They are the two major types of long-term memory."
+            "He illustrates the concept with an example.",
+            "He makes a list of terms for her to study.",
+            "He asks her to explain a similar concept.",
+            "He reads a passage from their textbook."
         ],
-        answer: 2
+        answer: 0
     },
     {
         id: 21,
-        question: "When the professor gives the example of riding a bicycle, what kind of memory is he referring to?",
+        question: "Why does the man ask this:'But is it really that good?'",
         options: [
-            "Declarative memory",
-            "Episodic memory",
-            "Procedural memory",
-            "Semantic memory"
+            "To find out how much money the woman made",
+            "To evaluate the food at a restaurant",
+            "To suggest that the profit is less than it seems",
+            "To express his concerns about owning a business"
         ],
         answer: 2
     },
     {
         id: 22,
-        question: "What does the student mean when she says this:'Do you see what I mean?'",
+        question: "According to the man, how does an economist's view of costs differ from that of an accountant?",
         options: [
-            "She wants confirmation that the professor understands.",
-            "She is worried that the professor may not be able to remember.",
-            "She remembers something else that she needs to say.",
-            "She disagrees with the professor’s example about vocabulary."
+            "An economist's definition of costs never changes.",
+            "An economist uses a computer to calculate costs.",
+            "An economist tries to lessen the effect of costs.",
+            "An economist looks at a broader range of costs."
+        ],
+        answer: 3
+    },
+    {
+        id: 23,
+        question: "What can be inferred about the true cost of a college education?",
+        options: [
+            "It includes the cost of lost income.",
+            "It is more than the woman can afford.",
+            "It is not as expensive as it appears.",
+            "It continues to increase each year."
         ],
         answer: 0
     },
     {
-        id: 23,
-        question: "What does the professor suggest?",
-        options: [
-            "He wants the woman to come back to his office again.",
-            "He expects the woman to ask questions in writing.",
-            "He offers to respond to additional questions by email.",
-            "He does not think that the woman will have more questions."
-        ],
-        answer: 2
-    },
-    {
         id: 24,
-        question: "Why does the man approach the librarian?",
+        question: "What are the students mainly discussing?",
         options: [
-            "He needs an explanation of his assignment.",
-            "He is looking for an encyclopedia.",
-            "He needs help finding some data.",
-            "He is trying to find the reference section."
+            "The classes that they are taking",
+            "The theater program at their school",
+            "The woman's interest in an internship",
+            "The man's experience in a law firm"
         ],
         answer: 2
     },
     {
         id: 25,
-        question: "What does the woman mean when she says this:'That's it?'",
+        question: "What does the woman like about theater?",
         options: [
-            "She is showing comprehension.",
-            "She is expressing surprise.",
-            "She is talking to herself.",
-            "She is dismissing the man."
-        ],
-        answer: 1
-    },
-    {
-        id: 26,
-        question: "What does the librarian imply?",
-        options: [
-            "The man can find a chart in an encyclopedia.",
-            "The professor has explained the assignment clearly.",
-            "The library has a very good reference section.",
-            "The man should not change the assignment."
+            "The chance to meet interesting people",
+            "The opportunity to improve her acting",
+            "The efficiency of theater management",
+            "The entire atmosphere of theater"
         ],
         answer: 3
     },
     {
-        id: 27,
-        question: "What example does the librarian give for the assignment?",
+        id: 26,
+        question: "What is the woman's opinion of her own acting ability?",
         options: [
-            "A relative comparison of home prices",
-            "Average family income in several countries",
-            "International business around the world",
-            "Global economic patterns in this decade"
+            "She thinks she needs more acting experience.",
+            "She is excited about learning new acting skills.",
+            "She thinks she is not very skilled at acting.",
+            "She thinks she is better at acting than directing."
+        ],
+        answer: 2
+    },
+    {
+        id: 27,
+        question: "Why does the man say this: 'Like what?.. directing lighiting?'",
+        options: [
+            "To state what he likes about the theater",
+            "To learn more about the woman's interests",
+            "To imply that the woman should be a director",
+            "To compliment the woman on her abilities"
         ],
         answer: 1
     },
     {
         id: 28,
-        question: "What will the man do with the information?",
+        question: "What does the man suggest the woman do?",
         options: [
-            "Show it to the librarian",
-            "Write a report for class",
-            "Draw a chart or a graph",
-            "Decide where to live"
+            "Talk to her adviser and Write to the theater",
+            "Observe the director",
+            "Take an acting class and Write to the theater",
+            "Take an football class Observe the director"
         ],
-        answer: 2
+        answer: 0
     }
 ];
 
 export const writingQuestions = {
-    task1_audio: "https://www.dropbox.com/scl/fi/2luk5sedd44obxh4sl563/T4W1.mp3?rlkey=mh2z1andjbq0j4nnou1yi74rp&raw=1",
+    task1_audio: "https://www.dropbox.com/scl/fi/i6dhthietmd2dttmamh8b/T5W1.wma?rlkey=k7mc2duynt2w5oqydm2dpf8di&raw=1",
     task1: {
         passage: `
-        Although cooperation is currently the most popular paradigm in classrooms, competition has a number of advantages. Research on classrooms in which competition is encouraged has demonstrated that competition can increase motivation and productivity while students are having fun.
-        Competition has long been used in classrooms to motivate students, encouraging them to do their best work. Like athletes who improve when they train with others who are equal or superior performers, students tend to improve in a competitive learning setting. Considerable evidence suggests that motivation is especially enhanced among high achieving students in a competitive classroom.
-        One of the main advantages of competition is that it creates an environment in which students push each other to excel and thereby increase productivity. For example, in classrooms where students compete to read the most books, the total number of books that each student reads increases as compared with classrooms without similar competitive goals.
-        Perhaps because competition has long been associated with sports and games, it is fun for students. Teachers often use team-based com- petitions to make academic material more interesting and entertaining. Some common examples are spelling bees, science project competi- tions, and group quizzes in which teams answer questions and receive points for correct answers. Competition is useful when an otherwise uninteresting lesson is presented as a game. Most would agree that play- ing is more enjoyable than memorizing by rote for the big test. In fact, students who participate in the Science Olympiad, a national competitive event, report that the main reason for joining the team is to have fun.
+        Humans have always traveled across the earth. Early hunting-gathering nomads migrated in search of resources to sustain themselves. Later, after the spread of civilization, people of various religions made pilgrimages on foot or horseback, which led to the growth of wayside inns. Traders journeyed throughout Europe, North Africa, and the Middle East in search of perfumes, spices and other goods. Vikings traveled across vast seas in search of fish, timber, and other natural resources. Europeans explored Africa and the Americas, conquering other civilizations and establishing colonies. These activities—religious pilgrimages, the growth of trade, conquest and colonization—all stimulated the growth of tourism.
+        While the earliest “tourists” traveled in search of resources, later tourists took trips for cultural, educational, and scientific purposes. During the seventeenth century, the young members of Europe’s wealthy classes took “grand tours” through Europe to expand their cultural horizons, and to learn about languages, theater, music, and art. In the nineteenth century, naturalists like Charles Darwin studied animal and plant species in exotic places and contributed greatly to an interest in traveling for scientific advancement. In the early twentieth century, naturalist John Muir began to write about his wanderings through the southern United States, Alaska, and India, and his writings continue to inspire people to observe and preserve the natural world. Other travel heroes, such as Ernest Hemingway, wrote of their African expeditions to hunt big game, exposing people to the possibilities of journeying to faraway lands for adventure.
         `
     },
     task2: {
@@ -853,16 +829,16 @@ export const writingQuestions = {
         <br/>
         <div>
             <p><strong>Professor:</strong></p>
-            <p>Hello class!  Next week we will be discussing the impact of social media influencers on consumer behavior. With the rise of social media platforms like Instagram and YouTube, we’ve seen the emergence of a new type of celebrity: the social media influencer. These influencers have large followings and can sway consumer behavior by endorsing products or services. What are your thoughts</p>
+            <p>In next week’s class we’ll talk about different approaches to education. You know, not everyone agrees about the best way for young people to gain knowledge and learn new skills.  Let’s prepare by discussing whether it’s better for students to take classes with a lot of discussions or classes mainly focused on lectures. What do you think?</p>
         </div>
         <br/>
         <div>
-            <p><strong>Alex:</strong></p>
-            <p>I think social media influencers have a significant impact. When young people start admiring these influencers and trust their recommendations, they are more likely to buy products or services that they endorse. However, I also think there are some concerns about the authenticity of these endorsements, as some influencers may promote products that they don’t actually use or believe in.</p>
+            <p><strong>Jhonathan:</strong></p>
+            <p>I prefer classes that have a lot of discussions. I just learn better when I’m actively engaged with academic material and can exchange ideas with my classmates. When I have the opportunity to get immediate feedback, I can understand things more deeply. I also benefit from hearing about different perspectives and new ways of thinking about challenging topics. Additionally, discussions help me retain the information better since they’re more interactive and memorable.</p>
         </div>
         <div>
-            <p><strong>Scarlet:</strong></p>
-            <p>I’m not convinced that social media influencers have a significant impact on consumer behavior. While they may have large followings, most people are smart enough to make their own purchasing decisions based on their needs and preferences. Plus, there are so many influencers out there promoting different products that it can be hard to know who to trust.</p>
+            <p><strong>Mike:</strong></p>
+            <p>I see your point, Rachel, but I prefer lectures. I like being able to listen to an expert explain a topic and really get into it. With lectures, there’s usually a clear structure and a set agenda, which can help me stay focused and organized. I also appreciate being able to take notes and study at my own pace.  I can’t do those things if I have to engage in a discussion. Not only that, but discussions can sometimes get off track or become too argumentative, which can take away from the learning experience.</p>
         </div>
         `
     },
@@ -871,29 +847,26 @@ export const writingQuestions = {
 export const speakingQuestions = [
     {
         question1: `
-        Your friend's cousin is going to visit your country and you promised to show her some interesting places. Which one would be more interesting?
-        1. A beautiful landscape
-        2. A historical city
-        3. Your home
+        What game do you enjoy playing? Describe the game, and explain why you like to play it. Include details and examples in your explanation.    
         ` ,
 
-        passage2: `Vehicles parked on campus by students, faculty, or staff must be registered with the Campus Police Department. Parking permits are required for both part-time and full-time students. Permits may be purchased at the Campus Police Department, which is located at the south entrance to the campus or at the Business Office in the Administration Building. The fee per vehicle is $20. Please be advised that you must have a permit for every vehicle that you park in campus lots. Parking enforcement will begin one week after the first day of each semester.`,
-        conversationAudio2: "https://www.dropbox.com/scl/fi/lpm3b2rda2h649bwv8va4/T4S1.mp3?rlkey=cowu6mfq3bspsrj8sexu368mg&raw=1",
-        question2: "The student expresses her opinion of the policy for vehicle registration. Report her opinion and explain the reasons that she gives for having that opinion.",
+        passage2: `Culture consists of the beliefs, values, rituals, texts, and symbols of a society. An important element of culture is the rules—or norms—that regulate behavior and maintain social order. Some norms tell us how we should behave—for example, obey authority and treat others with respect. Some norms are traditions or customs, such as clothing styles. Other norms cover matters of morality, such as courtship behavior or showing respect to ancestors. The most essential norms cover activities that are central to the well being of the whole society; these rules are established as laws, both written and unwritten.`,
+        conversationAudio2: "https://www.dropbox.com/scl/fi/9di4shud8dcn4co6yvn94/T5S1.wma?rlkey=tp77xnn2nni16kcfi212czecb&raw=1",
+        question2: "Explain how corporations are similar to any other culture, and explain how corporate culture varies in different companies.",
 
-        passage3: "Stress is defined as a mental and physical condition that occurs when an adjustment or adaptation must be made to the environment. Unpleasant conditions or events cause stress, as, for example, financial problems, a divorce, health issues, or pressure at work. However, a certain amount of stress occurs even when the adjustment is to a condition that is perceived as desirable. Exercise, dating, moving to a new home, or taking a trip are \, all stressful situations. Although short-term stress is usually harmless, the consequences * of long-term stress can be dangerous to health. Factors that decrease the consequences of stress are the ability to predict stressful situations and the level of control over them that can be achieved.",
-        conversationAudio3: "https://www.dropbox.com/scl/fi/x0idougvbgp402v624fq9/T4S2.mp3?rlkey=ma54o5ui6ekpp5flunkq6kgxx&raw=1",
-        question3: "Explain the causes of stress and relate them to the experiment with rats.",
+        passage3: "Students are expected to attend all classes for which they are registered, including the first class session. Classes for which attendance is mandatory from the first session will be so noted in the class schedule. Instructors may set an attendance policy for each class, and it is the student's responsibility to know and comply with individual class attendance policies. Students who fail to comply with the established attendance policy for the class forfeit the right to continue in class and will be subject to an administrative withdrawal.",
+        conversationAudio3: "https://www.dropbox.com/scl/fi/ftqmwa7e8rbdus1wr3us4/11-Track-11.wma?rlkey=lc41b19e1s28wp1i4fipymjzh&raw=1",
+        question3: "The woman expresses her opinion about the attendance policy. State her opinion and explain the reasons she gives for holding that opinion.",
 
-        conversationAudio4: "https://www.dropbox.com/scl/fi/yksvnjc7pgg26pi0n67y0/T4S3.mp3?rlkey=k1tmlvet129xqd133xx1tlz5c&raw=1",
-        question4: "Describe the woman's problem and the two suggestions that her friend makes about how to handle it. What do you think the woman should do, and why?",
+        conversationAudio4: "https://www.dropbox.com/scl/fi/djnylkvdjv0d3fl9bir0o/T5S3.wma?rlkey=o22twhss3froibm3hpu8oz0es&raw=1",
+        question4: "Describe the man’s problem and the suggestions the woman makes about how to solve it. What do you think the man should do, and why?",
     },
 ];
 
 export const listeningAudios = [
-    "https://www.dropbox.com/scl/fi/lmhkxsysyj9bghf2bjnt1/T4C1.mp3?rlkey=qnyyywbycsoxjrvvuzjwx0e00&raw=1",
-    "https://www.dropbox.com/scl/fi/tffqrbyolgqgpwwzz0ds5/T4C2.mp3?rlkey=efx2ik6kg86pcq9qhpsyvhyet&raw=1",
-    "https://www.dropbox.com/scl/fi/tm4oe7b0m7ehi5qbtyt26/T4C3.mp3?rlkey=v4dt2t5lh3qjkego9zpqw4ffq&raw=1",
-    "https://www.dropbox.com/scl/fi/7yctxm3cggshlh1cjgrb7/T4C4.mp3?rlkey=5icl83p5kh5n2u9d5gs9ge3km&raw=1",
-    "https://www.dropbox.com/scl/fi/x7g38yqndgv0vlax7nqkx/T4C5.mp3?rlkey=xvrhq4noq31emjmnqltm6dfe6&raw=1",
+    "https://www.dropbox.com/scl/fi/2agz50l3o4civvzx5gjxh/T5C1.mp3?rlkey=im0i30ubsljvcg5fulxmqh8hc&raw=1",
+    "https://www.dropbox.com/scl/fi/jzcybi4rn6tfw2qdn2dm5/T5C2.mp3?rlkey=yqh2sewvlymgubte9yu0o7luj&raw=1",
+    "https://www.dropbox.com/scl/fi/3479reqkn6f3nogj9fcl3/T5C3.mp3?rlkey=zmlk37fast5t1k5m5jjmdz1g6&raw=1",
+    "https://www.dropbox.com/scl/fi/wcfvleyjfzzqmonozais1/T5C4.mp3?rlkey=il3ennhxyvepapkpgspyt2n9o&raw=1",
+    "https://www.dropbox.com/scl/fi/h878ha6kihjpjum6n5wt6/T5C5.mp3?rlkey=pktzi1emxwibmmqvt54766a2g&raw=1",
 ];

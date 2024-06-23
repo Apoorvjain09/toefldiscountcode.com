@@ -1,3 +1,6 @@
+import FAQLandingPAge from "./FAQ-landingpage";
+import Testimonials from "./Testimonials";
+
 interface FeaturesSectionProps {
     onGetStartedClick: () => void;
 }
@@ -222,6 +225,10 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
                 </div>
             </div>
         </section>
+        <Testimonials />
+        <div className="flex justify-center items-center text-center">
+            <FAQLandingPAge />
+        </div>
     </>
 );
 

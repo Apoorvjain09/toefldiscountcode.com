@@ -9,6 +9,7 @@ import { useState, useEffect, Suspense } from "react";
 import { usePathname } from "next/navigation";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
               </div>
             </div>
           </main>
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>

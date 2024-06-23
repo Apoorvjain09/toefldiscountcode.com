@@ -45,8 +45,8 @@ export default function NotFound() {
 
                     <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Uh-oh!</h1>
 
-                    <p className="mt-4 text-gray-500 mb-5">Uh oh! we detected you are not a VIP.</p>
-                    <Button onClick={handleClick} className='bg-black text-white hover:bg-zinc-700'>Become VIP</Button>
+                    <p className="mt-4 text-gray-500 mb-5">Page Not Found</p>
+                    {/* <Button onClick={handleClick} className='bg-black text-white hover:bg-zinc-700'>Become VIP</Button> */}
                 </div>
             </div>
         </div>

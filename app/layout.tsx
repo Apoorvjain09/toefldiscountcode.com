@@ -10,8 +10,8 @@ import { usePathname } from "next/navigation";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
-import { GoogleAnalyticsTracking } from "@/components/ui/GoogleAnalyticsTracker";
-
+import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
+import { Seo } from "@/components/Head/Seo";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -28,7 +28,13 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <GoogleAnalyticsTracking/>
+        <GoogleAnalyticsTracking />
+        <Seo
+          title="Toefl Go Global -AI Mock tests"
+          description="Prepare for your TOEFL exam with our AI-powered mock tests. Experience realistic test simulations, receive detailed feedback, and track your progress. Access a wealth of study materials, practice questions, and expert advice to excel in your TOEFL exam. Join our community of learners and maximize your TOEFL score with Toefl Go Global."
+          url="https://toeflgoblobal.com"
+          image="/assets/goglobal1.webp"
+        />
         <body>
           <main className="">
             <div className="p-4 sm:ml-64">

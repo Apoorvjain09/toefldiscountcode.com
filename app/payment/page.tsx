@@ -5,7 +5,7 @@ export default function Payment() {
   const { user } = useUser();
 
   const handleSubscriptionClick = async (membershipType: string) => {
-    alert('Hi, Currently we are not accepting any Payments!');
+    alert('Hi, Currently we are not accepting any Payments. Enojy free 4 mock tests!');
 
     // if (!user) {
     //   alert('You need to be logged in to subscribe');

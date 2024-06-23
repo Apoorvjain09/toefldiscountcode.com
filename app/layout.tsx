@@ -8,6 +8,7 @@ import 'regenerator-runtime/runtime';
 import { useState, useEffect, Suspense } from "react";
 import { usePathname } from "next/navigation";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,20 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+      <Head>
+          {/* Google Tag Manager */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16486749894"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-16486749894');
+              `,
+            }}
+          />
+        </Head>
         <body>
           <main className="">
             <div className="p-4 sm:ml-64">

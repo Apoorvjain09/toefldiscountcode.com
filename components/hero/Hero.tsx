@@ -18,7 +18,8 @@ const Hero = () => {
     <div className="z-[-1] min-h-[80vh] md:min-h-fit lg:min-h-screen ">
       <div className=" relative min-h-[80vh] mt-6 md:mt-8 lg:mt-10 lg:w-[90%] 2xl:w-[80%] mx-auto px-4">
         <div className="z-[-1] hidden md:block absolute inset-0 bg-globe bg-no-repeat bg-center h-full w-full" style={{ backgroundSize: "100% 80%" }}></div>
-        <div className="z-[-1] flex flex-col-reverse md:flex-row items-center">
+        <div className="z-[-1] flex flex-col-reverse md:flex-row items-center gap-10">
+
           <div className="w-full md:w-1/2 flex flex-col lg:gap-20">
             <h2
               className={cn(
@@ -26,10 +27,10 @@ const Hero = () => {
                 "font-extrabold text-2xl text-center lg:text-start  lg:text-4xl leading-[30px] lg:leading-[40px]  2xl:leading-[55px] py-5 "
               )}
             >
-              Unlock a TOEFL Voucher/ <br className="hidden md:block" />
-              Promotion Code now for <br className="hidden md:block" /> $25 (Rs
-              2000/-) off your <br className="hidden md:block" /> ETS TOEFL
-              Registration <br className="hidden md:block" /> Fees! 🌐💡
+              Unlock a TOEFL Discount Code
+              of $25 (Rs 2000/-) on
+              TOEFL Registration Fees! additionly
+              Get benifits of $230 (Rs18300) 🌐💡
             </h2>
 
             <div className="flex items-center justify-center lg:justify-between relative gap-10  z-10 ">
@@ -39,6 +40,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
           <div className="w-[70%] md:w-1/2  flex justify-center items-center lg:justify-end  ">
             <div
               className=" md:hidden absolute bg-globe bg-no-repeat bg-center h-full w-full"

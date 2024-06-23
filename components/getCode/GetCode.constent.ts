@@ -1,19 +1,19 @@
 export const infos = [
   {
-    text: "Create a TOEFL account and carefully fill in all the required details.",
+    text: "Watch the full 60sec video and put the Agent code and Voucher code provided by us.",
   },
   {
-    text: "Input the Agent code and Voucher code provided by us.",
+    text: "After that Join MS in US Whatsapp Community",
   },
   {
-    text: "During payment, enjoy a discount of Rs 2000/-",
+    text: "Get Offical ETS TOELF Mock Test voucher For free and Get free 8 Score reporting vouchers",
   },
   {
-    text: "Share the ETS confirmation with us at toeflcode@gmail.com to avail FREE:",
+    text: "Additially meet like minded people in MS in US Community group",
     subList: [
-      "TOEFL Prep Material",
-      "TOEFL classes",
-      "University shortlisting worth Rs 15,000/-",
+      "Get LIVE Classes Every Weekend",
+      "Free University Shortlisting",
+      "Univesities Open for 2024-25 intake",
     ],
   },
 ];

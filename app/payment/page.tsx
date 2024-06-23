@@ -5,34 +5,36 @@ export default function Payment() {
   const { user } = useUser();
 
   const handleSubscriptionClick = async (membershipType: string) => {
-    if (!user) {
-      alert('You need to be logged in to subscribe');
-      return;
-    }
+    alert('Hi, Currently we are not accepting any Payments!');
 
-    const userId = user.id;
+    // if (!user) {
+    //   alert('You need to be logged in to subscribe');
+    //   return;
+    // }
 
-    try {
-      const response = await fetch('/api/updateMembership', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, membershipType }),
-      });
+    // const userId = user.id;
 
-      const result = await response.json();
-      if (result.success) {
-        if (membershipType === '6Month_Membership') {
-            window.location.href = 'https://rzp.io/l/C8szPh1';
-        }
-      } else {
-        alert('Failed to update subscription');
-      }
-    } catch (error) {
-      console.error('Error updating subscription:', error);
-      alert('Error updating subscription');
-    }
+    // try {
+    //   const response = await fetch('/api/updateMembership', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ userId, membershipType }),
+    //   });
+
+    //   const result = await response.json();
+    //   if (result.success) {
+    //     if (membershipType === '6Month_Membership') {
+    //         window.location.href = 'https://rzp.io/l/C8szPh1';
+    //     }
+    //   } else {
+    //     alert('Failed to update subscription');
+    //   }
+    // } catch (error) {
+    //   console.error('Error updating subscription:', error);
+    //   alert('Error updating subscription');
+    // }
   };
 
   return (
@@ -265,7 +267,8 @@ export default function Payment() {
             </p>
             <a
               className="mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-              href="https://rzp.io/l/aUAjbuK"
+              // href="https://rzp.io/l/aUAjbuK"
+              onClick={() => handleSubscriptionClick('Monthly_Membership')}
             >
               Get Started
             </a>

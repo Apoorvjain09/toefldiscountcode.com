@@ -68,11 +68,11 @@ export default function Sidebar() {
     ],
     extras: (
       <div className='flex flex-col gap-2'>
-        <Link href="https://mbbs-in-europe.in">
-          <SidebarButton icon={MoreHorizontal} className={`w-full ${pathname === 'https://mbbs-in-europe.in' ? 'bg-gray-200' : ''}`}>
-            MBBS Abroad
+        {/* <Link href="/vocabulary-course">
+          <SidebarButton icon={MoreHorizontal} className={`w-full ${pathname === '/vocabulary-course' ? 'bg-gray-200' : ''}`}>
+            Vocabulary Course
           </SidebarButton>
-        </Link>
+        </Link> */}
         {isSignedIn ?
           (
             <a target="_blank" href="https://chat.whatsapp.com/CHwPiz6xEpHC0WSivb2UN7" className="inline-flex items-center justify-left w-[90%] px-5 py-2 text-sm text-center text-black font-semibold border border-gray-500 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-[3px] sm:gap-1">

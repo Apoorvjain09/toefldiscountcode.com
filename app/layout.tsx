@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalyticsTracking } from "@/components/ui/GoogleAnalyticsTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <GoogleAnalyticsTracking/>
         <body>
           <main className="">
             <div className="p-4 sm:ml-64">

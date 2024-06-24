@@ -3,22 +3,16 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
-import { useUser} from "@clerk/nextjs";
 
 const TestCard = lazy(() => import("@/components/ui/TestCard"));
 const FeaturesSection = lazy(() => import("@/components/ui/FeaturesSectionLandingPage"));
 
 
 export default function Page() {
-    const { isSignedIn } = useUser();
     const [showTests, setShowTests] = useState(false);
 
     const handleGetStartedClick = () => {
-        if(isSignedIn){
             setShowTests(true);
-        }else{
-            window.location.href="/profile"
-        }
     };
 
     return (

@@ -14,11 +14,11 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: NextRequest) {
-  console.log("Request received at /api/evaluate-writing");
+  // console.log("Request received at /api/evaluate-writing");
 
   const { testNumber, task, passage } = await req.json();
-  console.log("Task:", task);
-  console.log("answer Passage:", passage);
+  // console.log("Task:", task);
+  // console.log("answer Passage:", passage);
   
   if (!task || !passage) {
     return NextResponse.json({ message: 'Missing task or passage' }, { status: 400 });

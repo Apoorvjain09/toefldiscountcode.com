@@ -10,7 +10,7 @@ const LoginUI = lazy(() => import('./LoginUi'))
 function Page() {
   const { isSignedIn } = useAuth();
   const [showAlert, setShowAlert] = useState(false);
-
+  console.log("in profile ")
   useEffect(() => {
     if (!isSignedIn) {
       setShowAlert(true);

@@ -60,11 +60,11 @@ export default function Sidebar() {
         icon: TicketPercent,
         label: 'Gre Discount Vouchers',
       },
-      {
-        href: '/profile',
-        icon: User,
-        label: 'Profile',
-      },
+      // {
+      //   href: '/profile',
+      //   icon: User,
+      //   label: 'Profile',
+      // },
     ],
     extras: (
       <div className='flex flex-col gap-2'>
@@ -82,7 +82,11 @@ export default function Sidebar() {
           ) :
           (
             <>
-              <Link href="/profile"><button className='w-[90%] sm:w-[100%] justify-center text-white bg-black text-center p-2 rounded-lg font-semibold'>Sign In</button></Link>
+              <SignInButton>
+                  <button className='w-[90%] sm:w-[100%] justify-center text-white bg-black text-center p-2 rounded-lg font-semibold'>Sign In</button>
+              </SignInButton>
+
+              
               <a target="_blank" href="https://chat.whatsapp.com/CHwPiz6xEpHC0WSivb2UN7" className="inline-flex items-center justify-left w-[90%] px-5 py-2 text-sm text-center text-black font-semibold border border-gray-500 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-[3px] sm:gap-1">
               <Image src="/assets/whatsapp.png" alt="→" width={20} height={20} /> 
                 <h3 className='text-xs'>Join MS in US community</h3>

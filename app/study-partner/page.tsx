@@ -3,6 +3,7 @@ import React, { useEffect, useState, ChangeEvent, lazy, Suspense } from "react";
 import { useUser } from "@clerk/clerk-react";
 import axios from 'axios';
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import Alert from "@/components/ui/Alert";
 
 const VideoConferencingRoom = lazy(() => import("./VideoConferencingRoom"));
 const Form = lazy(() => import("./Form")); // Lazy import for the Form component
@@ -26,6 +27,7 @@ const steps: Step[] = [
 ];
 
 export default function App() {
+  const [showAlert, setShowAlert] = useState(false);
   const [stage, setStage] = useState<'home' | 'form' | 'video'>('home');
   const [onlineCount, setOnlineCount] = useState(23044);
   const { isSignedIn } = useUser();
@@ -40,14 +42,25 @@ export default function App() {
 
   const handleButtonClick = () => {
     if (!isSignedIn) {
-      window.location.href = '/profile';
+      setShowAlert(true);
       return;
     }
     else setStage('form');
   };
 
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+
   return (
     <>
+      {showAlert && (
+          <Alert
+            message="Please log in to continue"
+            type="warning"
+            onClose={handleCloseAlert}
+          />
+      )}
       {stage === 'home' && (
         <div className="z-[0] relative overflow-hidden rounded-xl m-2 flex items-center min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
           <div className="absolute inset-0 z-0">
@@ -76,7 +89,7 @@ export default function App() {
         </div>
       )}
       {stage === 'form' && (
-        <Suspense fallback={<div><LoadingSpinner/></div>}>
+        <Suspense fallback={<div><LoadingSpinner /></div>}>
           <Form setStage={setStage} />
         </Suspense>
       )}

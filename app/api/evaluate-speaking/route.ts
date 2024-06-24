@@ -13,11 +13,11 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: NextRequest) {
-  console.log("Request received at /api/evaluate-speaking");
+  // console.log("Request received at /api/evaluate-speaking");
 
   const { question, transcript } = await req.json();
-  console.log("question:", question);
-  console.log("transcript:", transcript);
+  // console.log("question:", question);
+  // console.log("transcript:", transcript);
 
   if (!question || !transcript) {
     return NextResponse.json({ message: 'Missing question or transcript' }, { status: 400 });

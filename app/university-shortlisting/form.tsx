@@ -22,6 +22,7 @@ import {
   Select,
 } from "@/components/ui/select";
 import { useUser } from '@clerk/nextjs';
+import Alert from '@/components/ui/Alert';
 
 const formSchema = z.object({
   abroadPlan: z.enum(["September 2024", "January 2025", "May 2025", "September 2025", "Other"]),
@@ -41,10 +42,11 @@ const formSchema = z.object({
 });
 
 export default function Home() {
+  const [alert, setAlert] = useState<{ message: string; type: 'success' | 'error' | 'loading' | 'warning' } | null>(null);
   const [step, setStep] = useState(1);
-  const { user } = useUser(); 
+  const { user } = useUser();
   const userId = user?.id;
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -77,15 +79,18 @@ export default function Home() {
         },
         body: JSON.stringify({ values }),
       });
-  
+
       if (response.ok) {
         console.log('Email sent successfully');
+        setAlert({ message: 'Form submitted successfully!', type: 'success' });
       } else {
         const errorData = await response.json();
         console.error('Failed to send email(page.tsx)', errorData);
+        setAlert({ message: 'Failed to submit the form. Please try again.', type: 'error' });
       }
     } catch (error) {
       console.error('Error sending email(page.tsx)', error);
+      setAlert({ message: 'An error occurred. Please try again.', type: 'error' });
     }
   };
 
@@ -94,6 +99,14 @@ export default function Home() {
 
 
   return (
+    <>
+      {alert && (
+        <Alert
+          message={alert.message}
+          type={alert.type}
+          onClose={() => setAlert(null)}
+        />
+      )}
       <Form {...form}>
         <form
           onSubmit={(e) => {
@@ -386,5 +399,6 @@ export default function Home() {
           </div>
         </form>
       </Form>
+    </>
   );
 }

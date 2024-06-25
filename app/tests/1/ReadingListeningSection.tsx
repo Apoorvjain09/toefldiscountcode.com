@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect, Suspense } from 'react';
 import { FaPlayCircle, FaSignOutAlt } from 'react-icons/fa';
+import { MdError } from "react-icons/md";
 import { readingQuestions, listeningQuestions, listeningAudios } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
 import Draggable from 'react-draggable';
@@ -275,7 +276,6 @@ const Test1 = () => {
         }
     };
 
-
     const handleExitClick = () => {
         if (stage === 'instructions') {
             setStage('reading');
@@ -333,16 +333,88 @@ const Test1 = () => {
         setIsModalOpen2(!isModalOpen2);
     };
 
+    const [showReportModal, setShowReportModal] = useState(false);
+    const [reportMessage, setReportMessage] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+
+    const handleReportClick = () => {
+        setShowReportModal(true);
+    };
+
+    const handleReportSubmit = async () => {
+        setLoading(true);
+        setError("");
+        setSuccess("");
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ values: { message: reportMessage } }),
+            });
+
+            if (response.ok) {
+                setSuccess("Your query will be resolved within 24hrs!");
+                // setShowReportModal(false);
+            } else {
+                setError("Failed to send email.");
+            }
+        } catch (error) {
+            setError("An error occurred. Please try again.");
+        }
+        setLoading(false);
+    };
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
             <div className='flex flex-row justify-between px-10 mb-5 gap-10 '>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 1</h2>
-                <button onClick={handleExitClick} className="hidden sm:flex bg-blue-600 text-white py-0 lg:px-4 rounded-[30px] w-[150px] lg:rounded-[50px] gap-1 items-center flex-row justify-center text-sm px-4 max-h-[60px]">
-                    <FaSignOutAlt />
-                    Exit Section
-                </button>
+                <div className='hidden sm:flex flex-row gap-5'>
+                    <button onClick={handleExitClick} className="hidden sm:flex bg-blue-600 text-white py-0 lg:px-4 rounded-[30px] w-[150px] lg:rounded-[50px] gap-1 items-center flex-row justify-center text-sm px-4 max-h-[60px]">
+                        <FaSignOutAlt />
+                        Exit Section
+                    </button>
+                    <button onClick={handleReportClick} className="hidden sm:flex bg-red-500 text-white py-0 lg:px-4 w-[100px] rounded-[30px] gap-1 items-center flex-row justify-center text-sm px-4 max-h-[60px]">
+                        <MdError />
+                        Report
+                    </button>
+                </div>
             </div>
+
+            {showReportModal && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+                        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                            <h2 className="text-xl font-bold mb-4">Report an Error</h2>
+                            <textarea
+                                value={reportMessage}
+                                onChange={(e) => setReportMessage(e.target.value)}
+                                className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                                rows={4}
+                                placeholder="Describe the error you faced"
+                            />
+                            {error && <p className="text-red-500 mb-4">{error}</p>}
+                            {success && <p className="text-green-500 mb-4">{success}</p>}
+                            <div className="flex justify-end gap-4">
+                                <button
+                                    onClick={() => setShowReportModal(false)}
+                                    className="bg-gray-500 text-white py-2 px-4 rounded-lg"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleReportSubmit}
+                                    className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+                                    disabled={loading}
+                                >
+                                    {loading ? "Sending..." : "Submit"}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            )}
             {stage === 'instructions' && (
                 <div className="bg-white shadow p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">General Test Instructions</h3>

@@ -39,8 +39,8 @@ export async function POST(req: NextRequest) {
       
       HOW SCORING WILL BE DONE:
       5: Accurately presents key info from the lecture in relation to the reading. Well-organized, minor errors. Typically is between 150-225 words.
-      4: Good with minor omissions or inaccuracies. More frequent errors but still clear.
-      3: Contains key info but vague or unclear connections. May omit a major point.
+      4: Good with minor omissions or inaccuracies. More frequent errors but still clear. Typically is between 100-120 words.
+      3: Contains key info but vague or unclear connections. May omit a major point. Typically is between 70-100 words.
       2: Significant omissions or inaccuracies. Errors obscure meaning.
       1: Little relevant content from the lecture. Errors make it hard to understand.
       0: Copies from the reading, off-topic, foreign language, or blank.

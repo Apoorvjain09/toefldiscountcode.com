@@ -6,7 +6,7 @@ export const infos = [
     text: "After that Join MS in US Whatsapp Community",
   },
   {
-    text: "Get Offical ETS TOELF Mock Test voucher For free and Get free 8 Score reporting vouchers",
+    text: "Get Official ETS TOELF Mock Test voucher For free and Get free 8 Score reporting vouchers",
   },
   {
     text: "Additially meet like minded people in MS in US Community group",

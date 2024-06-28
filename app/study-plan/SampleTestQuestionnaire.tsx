@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const rcAndVocabQuestions = [
     {
-        question: `Read the following passage and answer the question: 'Cuttlefish are full of personality, as behavioral ecologist Alexandra Schnell found out while researching the cephalopod's potential to display self-control. . . . \"Self-control is thought to be the cornerstone of intelligence, as it is an important prerequisite for complex decision-making and planning for the future,\" says Schnell . . .' Why is self-control considered the cornerstone of intelligence?`,
+        question: `Read the following passage and answer the question: 'Cuttlefish are full of personality, as behavioral ecologist Alexandra Schnell found out while researching the cephalopod's potential to display self-control. . . . "Self-control is thought to be the cornerstone of intelligence, as it is an important prerequisite for complex decision-making and planning for the future," says Schnell . . .'`,
+        questionPrompt: `Why is self-control considered the cornerstone of intelligence?`,
         options: [
             "It helps in displaying personality traits.",
             "It is necessary for complex decision-making and planning for the future.",
@@ -130,6 +131,7 @@ export default function SampleQuestions({ onComplete }: { onComplete: (data: { t
                         {stage === 1 && rcAndVocabQuestions.map((q, index) => (
                             <div key={index} className="mb-4">
                                 <p className="text-lg font-semibold mb-2">{q.question}</p>
+                                <p className="text-lg font-semibold mb-2">{q.questionPrompt}</p>
                                 {q.options.map((option) => (
                                     <label key={option} className="block mb-2">
                                         <input

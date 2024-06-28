@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState, ChangeEvent, lazy, Suspense } from "react";
 import { useUser } from "@clerk/clerk-react";
-import axios from 'axios';
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import Alert from "@/components/ui/Alert";
 

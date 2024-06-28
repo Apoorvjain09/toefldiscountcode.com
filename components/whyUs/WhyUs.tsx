@@ -1,7 +1,5 @@
-import Image from "next/image";
 import PerkCard from "./PerkCard";
 import { perks } from "./WhyUs.constent";
-import globe from "../../../../public/assets/globe.png";
 
 const WhyUs = () => {
   return (

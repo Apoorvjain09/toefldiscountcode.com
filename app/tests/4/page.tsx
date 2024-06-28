@@ -1,7 +1,6 @@
 "use client";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
-import { useUser } from "@clerk/nextjs";
-import React, { useState, Suspense, lazy, useEffect } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { FaPlayCircle } from 'react-icons/fa';
 
 const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));

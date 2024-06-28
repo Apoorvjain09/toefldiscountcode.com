@@ -1,11 +1,8 @@
 import Image from "next/image";
 import heroImage from "@/public/assets/hero.png";
-import whatsapp from "@/public/assets/whatsapp.svg";
 import arrowLine from "@/public/assets/arrow-line.svg";
-
 import { Baloo_2 } from "next/font/google";
 import { cn } from "@/lib/utils";
-
 import Action from "./Action";
 
 const textFont = Baloo_2({

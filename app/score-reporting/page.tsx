@@ -2,6 +2,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Body, H1 } from "./formatting";
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+
 const QA = lazy(() => import("@/app/score-reporting/QA"));
 const Main = lazy(() => import("./main"));
 

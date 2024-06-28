@@ -5,6 +5,27 @@ interface FeaturesSectionProps {
     onGetStartedClick: () => void;
 }
 
+const SvgIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="size-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+    >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path
+            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952,0,0012,20.055a11.952,11.952,0,00-6.824-2.998,12.078,12.078,0,01.665-6.479L12,14z"
+        />
+        <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083,0 01.665 6.479A11.952 11.952,0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+    </svg>
+);
+
 const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) => (
     <>
         <div className="p-6 h-96 relative w-full overflow-hidden bg-slate-900 sm:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 flex flex-col items-center justify-center rounded-t-lg">
@@ -30,27 +51,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
                 <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <a
                         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-                        href="#"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-10 text-pink-500"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                            />
-                        </svg>
-
+                        <SvgIcon/>
                         <h2 className="mt-4 text-xl font-bold text-black">AI-powered Insights and Advice</h2>
 
                         <p className="mt-1 text-sm text-black">
@@ -61,27 +63,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
 
                     <a
                         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-                        href="#"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-10 text-pink-500"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                            />
-                        </svg>
-
+                        <SvgIcon/>
                         <h2 className="mt-4 text-xl font-bold text-black">Integration with Learning Resources</h2>
 
                         <p className="mt-1 text-sm text-black">
@@ -92,27 +75,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
 
                     <a
                         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-                        href="#"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-10 text-pink-500"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                            />
-                        </svg>
-
+                        <SvgIcon/>
                         <h2 className="mt-4 text-xl font-bold text-black">Interactive Learning Aids</h2>
 
                         <p className="mt-1 text-sm text-black">
@@ -123,27 +87,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
 
                     <a
                         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-                        href="#"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-10 text-pink-500"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                            />
-                        </svg>
-
+                        <SvgIcon/>
                         <h2 className="mt-4 text-xl font-bold text-black">Diverse Question Bank</h2>
 
                         <p className="mt-1 text-sm text-black">
@@ -154,27 +99,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
 
                     <a
                         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-                        href="#"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-10 text-pink-500"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                            />
-                        </svg>
-
+                        <SvgIcon/>
                         <h2 className="mt-4 text-xl font-bold text-black">Simulated Test Environment</h2>
 
                         <p className="mt-1 text-sm text-black">
@@ -185,27 +111,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onGetStartedClick }) 
 
                     <a
                         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-                        href="#"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-10 text-pink-500"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                            />
-                        </svg>
-
+                        <SvgIcon/>
                         <h2 className="mt-4 text-xl font-bold text-black">Detailed Performance Analytics</h2>
 
                         <p className="mt-1 text-sm text-black">

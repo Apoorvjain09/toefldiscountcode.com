@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 
 const TestCard = lazy(() => import("@/components/ui/TestCard"));
 const FeaturesSection = lazy(() => import("@/components/ui/FeaturesSectionLandingPage"));

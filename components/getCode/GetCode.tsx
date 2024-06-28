@@ -1,5 +1,4 @@
 import Action from "../hero/Action";
-import { infos } from "./GetCode.constent";
 import HowToGetCode from "./HowToGetCode";
 import Video from "./Video";
 

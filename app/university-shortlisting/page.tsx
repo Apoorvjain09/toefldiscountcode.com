@@ -1,10 +1,7 @@
 "use client";
-import { Suspense, useEffect, useState} from 'react';
+import { Suspense} from 'react';
 import dynamic from 'next/dynamic';
 import LoadingSpinner from '@/components/ui/LoadingSpinner'; // Ensure you have a loading spinner component
-import { useUser } from '@clerk/nextjs';
-import { useRouter, usePathname } from 'next/navigation';
-import Alert from '@/components/ui/Alert';
 
 // Dynamically import the FormComponent
 const FormComponent = dynamic(() => import('./form'), {
@@ -12,10 +9,10 @@ const FormComponent = dynamic(() => import('./form'), {
 });
 
 export default function Home() {
-  const { isSignedIn } = useUser();
-  const router = useRouter();
-  const pathname = usePathname();
-  const [showAlert, setShowAlert] = useState(false);
+  // const { isSignedIn } = useUser();
+  // const router = useRouter();
+  // const pathname = usePathname();
+  // const [showAlert, setShowAlert] = useState(false);
 
 
   // useEffect(() => {

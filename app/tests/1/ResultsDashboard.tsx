@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { readingQuestions, listeningQuestions } from './questions'; // Adjust the import path as necessary
 import WritingSection from './WritingSection';
 
@@ -25,6 +25,43 @@ interface ResultsDashboardProps {
 const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, totalScoreListening, listeningAnswers, writingScores, speakingScores }) => {
     console.log(totalScoreReading)
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
+
+    //send email
+    useEffect(() => {
+        const sendEmailWithResults = async () => {
+            const totalScoreWriting = ((writingScores.task1?.score ?? 0) + (writingScores.task2?.score ?? 0)) * 3;
+            const totalScoreSpeaking = ((speakingScores.task1?.score ?? 0) + (speakingScores.task2?.score ?? 0) + (speakingScores.task3?.score ?? 0) + (speakingScores.task4?.score ?? 0)) * 1.875;
+            const totalScore = Math.round(totalScoreReading * 30 / 22) + Math.round(totalScoreListening * 30 / 28) + Math.round(totalScoreWriting) + Math.round(totalScoreSpeaking);
+
+            const emailContent = {
+                totalScoreReading: Math.round(totalScoreReading * 30 / 22),
+                totalScoreListening: Math.round(totalScoreListening * 30 / 28),
+                totalScoreWriting: Math.round(totalScoreWriting),
+                totalScoreSpeaking: Math.round(totalScoreSpeaking),
+                totalScore: totalScore
+            };
+
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ values: emailContent }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to send email');
+                }
+
+                console.log('Email sent successfully');
+            } catch (error) {
+                console.error('Error sending email:', error);
+            }
+        };
+
+        sendEmailWithResults();
+    }, [totalScoreReading, totalScoreListening, writingScores, speakingScores]);
 
     const handleSectionClick = (section: 'reading' | 'listening' | 'writing' | 'speaking') => {
         setSelectedSection(section);

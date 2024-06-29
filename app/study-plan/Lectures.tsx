@@ -17,6 +17,7 @@ export default function Lectures() {
     const [selectedTab, setSelectedTab] = useState<'lectures' | 'practice'>('lectures');
     const [planType, setPlanType] = useState<string | null>(null);
     const { user } = useUser();
+    const [selectedSection, setSelectedSection] = useState<string | null>(null);
 
     useEffect(() => {
         if (user && user.publicMetadata) {
@@ -77,9 +78,67 @@ export default function Lectures() {
         return (
             <div>
                 <h3 className="font-semibold">Practice Activities</h3>
-                <p>Include practice activities specific to each day here.</p>
+                <div className="flex flex-wrap gap-4">
+                    <button className="px-4 py-2 border rounded" onClick={() => setSelectedSection('reading')}>
+                        Reading
+                    </button>
+                    <button className="px-4 py-2 border rounded" onClick={() => setSelectedSection('listening')}>
+                        Listening
+                    </button>
+                    <button className="px-4 py-2 border rounded" onClick={() => setSelectedSection('writing')}>
+                        Writing
+                    </button>
+                    <button className="px-4 py-2 border rounded" onClick={() => setSelectedSection('speaking')}>
+                        Speaking
+                    </button>
+                </div>
+
+                {selectedSection === 'reading' && renderReadingQuestions()}
+                {selectedSection === 'listening' && renderListeningQuestions()}
+                {selectedSection === 'writing' && renderWritingQuestions()}
+                {selectedSection === 'speaking' && renderSpeakingQuestions()}
             </div>
         );
+    };
+
+    const renderReadingQuestions = () => {
+        const questions = Array.from({ length: 10 }, (_, index) => (
+            <div key={index} className='mt-4'>
+                <h4 className="font-semibold">Reading Question {index + 1}</h4>
+                <p>This is a placeholder for reading comprehension question {index + 1}.</p>
+            </div>
+        ));
+        return <div>{questions}</div>;
+    };
+
+    const renderListeningQuestions = () => {
+        const questions = Array.from({ length: 10 }, (_, index) => (
+            <div key={index} className='mt-4'>
+                <h4 className="font-semibold">Listening Question {index + 1}</h4>
+                <p>This is a placeholder for listening comprehension question {index + 1}.</p>
+            </div>
+        ));
+        return <div>{questions}</div>;
+    };
+
+    const renderWritingQuestions = () => {
+        const questions = Array.from({ length: 10 }, (_, index) => (
+            <div key={index} className='mt-4'>
+                <h4 className="font-semibold">Writing Question {index + 1}</h4>
+                <p>This is a placeholder for writing prompt {index + 1}.</p>
+            </div>
+        ));
+        return <div>{questions}</div>;
+    };
+
+    const renderSpeakingQuestions = () => {
+        const questions = Array.from({ length: 10 }, (_, index) => (
+            <div key={index} className='mt-4'>
+                <h4 className="font-semibold">Speaking Question {index + 1}</h4>
+                <p>This is a placeholder for speaking prompt {index + 1}.</p>
+            </div>
+        ));
+        return <div>{questions}</div>;
     };
 
     if (!planType) {

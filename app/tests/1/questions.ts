@@ -809,7 +809,7 @@ export const listeningQuestions = [
 ];
 
 export const writingQuestions = {
-    task1_audio: "https://www.dropbox.com/scl/fi/i6dhthietmd2dttmamh8b/T5W1.wma?rlkey=k7mc2duynt2w5oqydm2dpf8di&raw=1",
+    task1_audio: "https://www.dropbox.com/scl/fi/6iuzoxnkp3a9vq94da1yl/T5W1.mp3?rlkey=2m1wmohamli9y4qi8mcce7cms&raw=1",
     task1: {
         passage: `
         Humans have always traveled across the earth. Early hunting-gathering nomads migrated in search of resources to sustain themselves. Later, after the spread of civilization, people of various religions made pilgrimages on foot or horseback, which led to the growth of wayside inns. Traders journeyed throughout Europe, North Africa, and the Middle East in search of perfumes, spices and other goods. Vikings traveled across vast seas in search of fish, timber, and other natural resources. Europeans explored Africa and the Americas, conquering other civilizations and establishing colonies. These activities—religious pilgrimages, the growth of trade, conquest and colonization—all stimulated the growth of tourism.
@@ -851,14 +851,14 @@ export const speakingQuestions = [
         ` ,
 
         passage2: `Culture consists of the beliefs, values, rituals, texts, and symbols of a society. An important element of culture is the rules—or norms—that regulate behavior and maintain social order. Some norms tell us how we should behave—for example, obey authority and treat others with respect. Some norms are traditions or customs, such as clothing styles. Other norms cover matters of morality, such as courtship behavior or showing respect to ancestors. The most essential norms cover activities that are central to the well being of the whole society; these rules are established as laws, both written and unwritten.`,
-        conversationAudio2: "https://www.dropbox.com/scl/fi/9di4shud8dcn4co6yvn94/T5S1.wma?rlkey=tp77xnn2nni16kcfi212czecb&raw=1",
+        conversationAudio2: "https://www.dropbox.com/scl/fi/a9r5cyql0f56ueddl05en/T5S1.mp3?rlkey=0vh65rju6nrr4ig4tnimyrwna&raw=1",
         question2: "Explain how corporations are similar to any other culture, and explain how corporate culture varies in different companies.",
 
         passage3: "Students are expected to attend all classes for which they are registered, including the first class session. Classes for which attendance is mandatory from the first session will be so noted in the class schedule. Instructors may set an attendance policy for each class, and it is the student's responsibility to know and comply with individual class attendance policies. Students who fail to comply with the established attendance policy for the class forfeit the right to continue in class and will be subject to an administrative withdrawal.",
-        conversationAudio3: "https://www.dropbox.com/scl/fi/ftqmwa7e8rbdus1wr3us4/11-Track-11.wma?rlkey=lc41b19e1s28wp1i4fipymjzh&raw=1",
+        conversationAudio3: "https://www.dropbox.com/scl/fi/hw0bk37zryw7vejf0ae2f/T5S2.mp3?rlkey=r9fmc44toh7aqhg9dno9k0pdi&raw=1",
         question3: "The woman expresses her opinion about the attendance policy. State her opinion and explain the reasons she gives for holding that opinion.",
 
-        conversationAudio4: "https://www.dropbox.com/scl/fi/djnylkvdjv0d3fl9bir0o/T5S3.wma?rlkey=o22twhss3froibm3hpu8oz0es&raw=1",
+        conversationAudio4: "https://www.dropbox.com/scl/fi/amewlqt1ca139pvfa0hf9/T5S3.mp3?rlkey=8lxojl8yiu493ok1w4d1zszuc&raw=1",
         question4: "Describe the man’s problem and the suggestions the woman makes about how to solve it. What do you think the man should do, and why?",
     },
 ];

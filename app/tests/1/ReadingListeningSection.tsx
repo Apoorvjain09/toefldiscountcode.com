@@ -280,6 +280,7 @@ const Test1 = () => {
         if (stage === 'instructions') {
             setStage('reading');
         } else if (stage === 'reading') {
+            // alert("pls click next if you are performing current question")
             setStage('listeningInstructions');
         } else if (stage === 'readingPassage1') {
             setStage('listeningInstructions');
@@ -1012,7 +1013,7 @@ const Test1 = () => {
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
                     <p className="mb-4">[Use Headphones For Better Quality]</p>
                     <div className="custom-audio-container flex-col flex gap-10">
-                        <img src="/assets/T2C3_Listening.jpg"></img>
+                        <img src="/assets/T1C5_Listening.jpg"></img>
                         <ReactAudioPlayer
                             src={listeningAudios[4]}
                             controls

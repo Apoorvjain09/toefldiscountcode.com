@@ -28,7 +28,6 @@ const dataQA = [
 export default function Page() {
     return (
         <Suspense fallback={<div><LoadingSpinner /></div>}>
-            <LoadingSpinner/>
             <div className="">
                 <Main/>
                 <Body>

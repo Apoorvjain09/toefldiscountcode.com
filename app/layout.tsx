@@ -20,12 +20,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <GoogleAnalyticsTracking />
-        <Seo
-          title="Toefl Go Global -AI Mock tests"
-          description="Prepare for your TOEFL exam with our AI-powered mock tests. Experience realistic test simulations, receive detailed feedback, and track your progress. Access a wealth of study materials, practice questions, and expert advice to excel in your TOEFL exam. Join our community of learners and maximize your TOEFL score with Toefl Go Global."
-          url="https://toeflgoblobal.com"
-          image="https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1"
-        />
+        <Seo/>
         <body>
           <main className="">
             <div className="p-4 sm:ml-64">

@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
-import { Seo } from "@/components/Head/Seo";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <GoogleAnalyticsTracking />
-        <Seo/>
         <body>
           <main className="">
             <div className="p-4 sm:ml-64">

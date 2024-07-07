@@ -2,6 +2,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Body, H1 } from "./formatting";
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { Seo } from '@/components/Head/Seo';
 
 const QA = lazy(() => import("@/app/score-reporting/QA"));
 const Main = lazy(() => import("./main"));
@@ -27,6 +28,13 @@ const dataQA = [
 
 export default function Page() {
     return (
+        <>
+        <Seo
+         title = 'TOEFL Score Reporting - Know Your Scores'
+         description = 'Learn how to report your TOEFL scores to universities and institutions. Get all the details here.'
+         url = 'https://toeflgoglobal.com/score-reporting'
+         image='https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1'
+        />
         <Suspense fallback={<div><LoadingSpinner /></div>}>
             <div className="">
                 <Main/>
@@ -43,5 +51,6 @@ export default function Page() {
                 </Body>
             </div>
         </Suspense>
+        </>
     );
 }

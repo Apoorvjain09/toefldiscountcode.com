@@ -3,6 +3,7 @@ import React, { useEffect, useState, ChangeEvent, lazy, Suspense } from "react";
 import { useUser } from "@clerk/clerk-react";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import Alert from "@/components/ui/Alert";
+import { Seo } from "@/components/Head/Seo";
 
 const VideoConferencingRoom = lazy(() => import("./VideoConferencingRoom"));
 const Form = lazy(() => import("./Form")); // Lazy import for the Form component
@@ -53,6 +54,12 @@ export default function App() {
 
   return (
     <>
+    <Seo
+     title = 'Find a TOEFL Study Partner'
+     description = 'Connect with other TOEFL test takers and find a study partner to practice together.'
+     url = 'https://toeflgoglobal.com/study-partner'
+     image="https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1"
+     />
       {showAlert && (
           <Alert
             message="Please log in to continue"

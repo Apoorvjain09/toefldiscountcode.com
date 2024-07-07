@@ -1,17 +1,13 @@
 "use client"
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/sidebar/sidebar";
 import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
-import { useState, useEffect, Suspense } from "react";
-import { usePathname } from "next/navigation";
-import LoadingSpinner from "@/components/ui/LoadingSpinner";
-import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
 import { Seo } from "@/components/Head/Seo";
+
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -20,11 +16,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
-  // const pathname = usePathname();
-  // const isTestPage = pathname.match(/^\/tests\/[1-9]$|^\/tests\/10$/);
-
   return (
     <ClerkProvider>
       <html lang="en">

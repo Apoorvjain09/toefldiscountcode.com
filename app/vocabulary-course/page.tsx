@@ -62,7 +62,7 @@ export default function Page() {
                     className="inline-flex items-center mt-6 text-base font-semibold transition-all duration-200 sm:mt-0 hover:opacity-80"
                     onClick={handleWatchVideoClick}
                   >
-                    <svg
+                    {/* <svg
                       className="w-10 h-10 mr-3"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -83,7 +83,7 @@ export default function Page() {
                         stroke-width="1.5"
                         d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
-                    </svg>
+                    </svg> */}
                     Watch video
                   </a>
                 </div>

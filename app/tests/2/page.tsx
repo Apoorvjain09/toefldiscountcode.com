@@ -2,18 +2,34 @@
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import React, { useState, Suspense, lazy } from "react";
 import { FaPlayCircle } from 'react-icons/fa';
+import Alert from "@/components/ui/Alert";
+import { useUser } from "@clerk/nextjs";
 
 const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));
 
 const Page = () => {
     const [stage, setStage] = useState<'intro' | 'test'>('intro');
+    const [showAlert, setShowAlert] = useState(false);
+    const { isSignedIn } = useUser();  // useUser returns an object, destructuring to get isSignedIn
 
     const handleStartTestClick = () => {
-        setStage('test');
+        console.log(isSignedIn);
+        if (isSignedIn) {
+            setStage('test');
+        } else {
+            setShowAlert(true);
+        }
     };
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
+            {showAlert && (
+                <Alert 
+                    message="Please log in" 
+                    type="warning" 
+                    onClose={() => setShowAlert(false)} 
+                />
+            )}
             {stage === 'intro' && (
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col items-center">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-center">TOEFL Full Length Test 2</h2>

@@ -92,6 +92,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                         <button onClick={() => handleSectionClick('writing')} className="bg-yellow-600 text-white py-2 px-4 rounded inline-block text-center">Writing Results</button>
                         <button onClick={() => handleSectionClick('speaking')} className="bg-purple-600 text-white py-2 px-4 rounded inline-block text-center">Speaking Results</button>
                     </div>
+
                     {selectedSection === 'reading' && (
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">Reading Section Results (Total Score: {Math.round(totalScoreReading * 30 / 22)}/30)</h4>
@@ -195,6 +196,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                             })}
                         </div>
                     )}
+
                     {selectedSection === 'writing' && (
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">

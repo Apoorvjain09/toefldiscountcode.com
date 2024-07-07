@@ -161,8 +161,8 @@ const Test1 = () => {
     }, [currentQuestion, stage]);
 
     const handleWritingCompletion = () => {
-        setStage('resultsDashboard');
-        // setStage('speaking');
+        // setStage('resultsDashboard');
+        setStage('speaking');
     };
     const handleSpeakingCompletion = () => {
         setStage('resultsDashboard');

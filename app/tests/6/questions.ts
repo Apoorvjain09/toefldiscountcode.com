@@ -1,5 +1,5 @@
 export const readingQuestions = [
-    // First passage
+    // First passage delta:key to toefl ---> test 1 reading passage 1
     {
         id: 1,
         passage: `
@@ -17,12 +17,12 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "Referring to paragraph 1, the Baroque period is recognized for its:",
+        question: "How does the art of theater convey its message?",
         options: [
-            "restrained and minimalist art.",
-            "focus on rationalism and scientific approach.",
-            "rich and grandiose artistic expressions.",
-            "emphasis on simplicity and calmness."
+            "An instrument or voice produces sound.",
+            "A camera converts light to images on film.",
+            "People perform a story for another group.",
+            "A person writes a story for others to read."
         ],
         answer: 2
     },
@@ -43,14 +43,14 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "According to paragraph 2, which of the following is NOT a key element in Baroque painting?",
+        question: "The author discusses literature in paragraph 2 in order to illustrate what point?",
         options: [
-            "use of dramatic scenes.",
-            "tenebrism.",
-            "chiaroscuro.",
-            "minimalistic approach."
+            "Literature and drama are both written forms of communication.",
+            "Reading a novel and attending a play are different experiences.",
+            "Both novelists and dramatists use an outline to organize ideas.",
+            "Many actors prefer roles from classic works of literature."
         ],
-        answer: 3
+        answer: 1
     },
     {
         id: 3,
@@ -69,14 +69,15 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "As stated in paragraph 3, Baroque architecture served a dual purpose. One of these was to display power and prestige. What was the other purpose?",
+        highlight: "This combination of elements distinguishes theater from other art forms.",
+        question: "Which sentence below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
         options: [
-            "To support the Counter-Reformation efforts.",
-            "To provide shelter for the poor.",
-            "To provide employment opportunities.",
-            "To showcase the latest architectural trends."
+            "A play’s scenery, lighting, and costumes contribute to the message of the play.",
+            "Theater is the only art form that mixes more than one medium in a single work of art.",
+            "A successful dramatist knows how to blend purpose, viewpoint, and theme into a unique performance.",
+            "Theater is a distinct art form by the way it joins characters and audience in the telling of a story."
         ],
-        answer: 0
+        answer: 3
     },
     {
         id: 4,
@@ -95,15 +96,14 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        highlight: "ostentatious",
-        question: "Which word in paragraph 3 is most similar in meaning to 'ostentatious'?",
+        question: "Why does the author mention *Everyman* in paragraph 5?",
         options: [
-            "profound.",
-            "grandeur.",
-            "intricate.",
-            "extravagant."
+            "To show that the definition of theater has evolved over time.",
+            "To give an example of a play in which abstract ideas are characters.",
+            "To compare the importance of beauty, knowledge, and strength.",
+            "To illustrate the universal human desire to create theater."
         ],
-        answer: 3
+        answer: 1
     },
     {
         id: 5,
@@ -122,14 +122,14 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: `In paragraph 3 of the passage, there is a missing sentence. The paragraph is repeated below and shows four letters (A, B, C, and D) that indicate where the following sentence could be added. → “They gave the architecture a dynamic and visually compelling quality”`,
+        question: "Which of the following can be inferred from paragraph 6 about the development of theater?",
         options: [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "In every human society, theater appeared before other forms of art.",
+            "Theater could not have developed without the support of political leaders.",
+            "People created theater as a way to promote peace between rival groups.",
+            "Theater emerged as a distinct art form at different times around the world."
         ],
-        answer: 1
+        answer: 3
     },
     {
         id: 6,
@@ -148,14 +148,15 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "Referring to paragraph 4, the music of the Baroque period can be characterized by all the following EXCEPT:",
+        highlight: "transitory",
+        question: "The word transitory in paragraph 7 is closest in meaning to",
         options: [
-            "complex contrapuntal textures.",
-            "simple, measured rhythms and melodies.",
-            "ornate musical lines.",
-            "development of the tonal system."
+            "temporary",
+            "beautiful",
+            "surprising",
+            "expressive"
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 7,
@@ -174,14 +175,14 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "Which of the answers offered below expressed the information from the marked part of the paragraph?",
+        question: "How is theater similar to the other performing arts?",
         options: [
-            "Vivaldi, Bach, and Handel's music was complex and emotional.",
-            "Composers like Vivaldi, Bach, and Handel disliked simple music.",
-            "These composers made music that was difficult to play.",
-            "Vivaldi, Bach, and Handel were the most famous composers of the Baroque period."
+            "It is based on works of literature.",
+            "It exists as a finished product.",
+            "It is an event that occurs through time.",
+            "It is presented the same way every time."
         ],
-        answer: 0
+        answer: 2
     },
     {
         id: 8,
@@ -200,14 +201,14 @@ export const readingQuestions = [
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "The transition from the Baroque period to the Enlightenment is implied to be in paragraph 5. Which of the following best describes this transition?",
+        question: "According to the passage, all of the following are true of theater EXCEPT",
         options: [
-            "A shift from reason and balance to extravagance and drama.",
-            "A continuation of the same values and perceptions.",
-            "A shift from refinement to stability.",
-            "An abrupt end to all artistic endeavors."
+            "The impulse toward theater is universal.",
+            "The medium of theater is written language.",
+            "Theater is a distinct form of art.",
+            "The focus of theater is always human."
         ],
-        answer: 2
+        answer: 1
     },
     {
         id: 9,
@@ -222,18 +223,18 @@ export const readingQuestions = [
 
         [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
+        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. ⬛[A] The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. ⬛[B] At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. ⬛[C] In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.⬛[D]
 
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
-        question: "According to paragraph 5, the artistic contributions of the Baroque period can be viewed as:",
+        question: "Look at the part of passage 6 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
         options: [
-            "a) outdated and irrelevant.",
-            "b) groundwork for subsequent periods.",
-            "c) in direct opposition to Enlightenment ideals.",
-            "d) overly dramatic and impractical."
+            "Choice A",
+            "Choice B",
+            "Choice C",
+            "Choice D"
         ],
-        answer: 1
+        answer: 3
     },
     {
         id: 10,
@@ -253,267 +254,269 @@ export const readingQuestions = [
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "The Baroque period brought a lot to the artistic expression.",
+        introductorySentence: "Several qualities distinguish theater from other forms of art.",
         question: "What is the main topic of the passage?",
         options: [
-            "a) The Baroque period is marked by its dramatic and grandiose artistic expressions.",
-            "b) Baroque architecture and music were more important than painting.",
-            "c) The techniques and elements of Baroque art laid groundwork for subsequent periods.",
-            "d) All Baroque art was a direct reaction to the Counter-Reformation.",
-            "e) The Baroque period has influenced contemporary artistic practices.",
-            "f) The transition from the Baroque period to the Enlightenment involved a shift from simplicity to complexity."
+            "[A] Theater is a form of literature because we can read plays in books.",
+            "[B] Theater requires a human story, performers, and an audience.",
+            "[C] An actor must change his voice to play certain characters.",
+            "[D] The tendency toward creating theater occurs in all human societies.",
+            "[E] Theater developed as a separate art very early in Greece and India.",
+            "[F] Each theater performance is an immediate yet transitory experience."
         ],
         answers: 10,
-        summaryAnswer: [0, 1, 2]
+        summaryAnswer: [1, 3, 5]
     },
-    // Second passage
+    // Second passage delta:key to toefl ---> test 1 reading passage 3
     {
         id: 11,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "Referring to paragraph 1, which of the following is NOT a characteristic attributed to the Wright brothers?",
+        highlight: "shoals",
+        question: "The word 'shoals' in paragraph 1 is closest in meaning to",
         options: [
-            "innovative spirit",
-            "lack of formal education",
-            "defeatist attitude",
-            "meticulousness"
-        ],
-        answer: 2
-    },
-    {
-        id: 12,
-        passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
-
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
-
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
-
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
-
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
-
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
-        `,
-        highlight: "progenitors",
-        question: "Referring to paragraph 1, what is the meaning of the word 'progenitors'?",
-        options: [
-            "pioneers",
-            "antagonists",
-            "advocates",
-            "beneficiaries"
+            "shallows",
+            "currents",
+            "mountains",
+            "islands"
         ],
         answer: 0
     },
     {
+        id: 12,
+        passage: `
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
+
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
+
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
+        `,
+        question: "What physical process occurs in the region of the Grand Banks?",
+        options: [
+            "Underwater hot springs heat the water.",
+            "Warm and cold currents come together.",
+            "Nutrient-rich water flows in from rivers.",
+            "Tides transport plankton and small fish."
+        ],
+        answer: 1
+    },
+    {
         id: 13,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "According to paragraph 2, what was the significant innovation the Wright Brothers developed to improve their understanding of aerodynamics?",
+        highlight: "This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.",
+        question: "Which sentence below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
         options: [
-            "a three-axis control system",
-            "an empirical data collection system",
-            "a wind tunnel",
-            "a more powerful engine"
+            "Millions of cod come to the Grand Banks every year to feed on the abundant supplies of herring and other small fish.",
+            "The Grand Banks used to have the world's largest concentration of cod because of favorable natural conditions.",
+            "The Grand Banks is the only place on Earth where cod are known to come together in extremely large groups.",
+            "The environmental resources of the Grand Banks have made many people wealthy from cod fishing."
         ],
-        answer: 2
+        answer: 1
     },
 
     {
         id: 14,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "Which of the following best describes the significance of the Wright Brothers' three-axis control system in the development of the Wright Flyer?",
+        question: "The phrase the region in paragraph 2 refers to",
         options: [
-            "It marked the Wright Brothers’ first attempt to incorporate an engine into their aircraft.",
-            "It highlighted the importance of powerful engines and wings in aircraft design.",
-            "It was a pivotal development that distinguished the Wright Brothers’ approach from their contemporaries by emphasizing control and stability.",
-            "It was the first time roll, pitch, and yaw controls were used in any form of transportation."
+            "New England",
+            "northwestern Europe",
+            "the Grand Banks",
+            "Newfoundland"
         ],
-        answer: 2
+        answer: 3
     },
     {
         id: 15,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        highlight: "This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability.",
-        question: "Which of the answers offered below expressed the information from the marked part of the paragraph?",
+        highlight: "replenish",
+        question: "The word 'replenish' in paragraph 4 is closest in meaning to",
         options: [
-            "The Wright Brothers' roll, pitch, and yaw controls were a major factor in the successful creation of the Wright Flyer, unlike others who ignored the importance of control and stability.",
-            "The Wright Flyer was developed by the Wright Brothers with roll, pitch, and yaw controls, which were used to defy gravity.",
-            "The Wright Brothers were successful because they built a powerful engine and wings for the Wright Flyer.",
-            "The Wright Brothers' unique focus on roll, pitch, and yaw controls resulted in the invention of the wind tunnel."
+            "defend",
+            "repair",
+            "restock",
+            "improve"
         ],
-        answer: 0
+        answer: 2
     },
     {
         id: 16,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "According to paragraph 4, what is implied by the distance and duration of the first flights?",
+        question: "What event first signaled the overfishing of the Atlantic cod?",
         options: [
-            "The Wright Brothers had superior physical strength.",
-            "The Wright Brothers had made a technological breakthrough.",
-            "The Wright Brothers' flight was a commercial failure.",
-            "The Wright Brothers were experienced pilots."
+            "The failure of cod to support thousands of fishers in the 1930s",
+            "The merging of seafood companies into one huge conglomerate",
+            "An increase in the number of fishers and fish-processing plants",
+            "The government moratorium on cod fishing during the 1990s"
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 17,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "According to the passage, what was a key aspect of the Wright Brothers’ contributions to the aviation industry beyond technology and design?",
+        highlight: "commanding",
+        question: "The word 'commanding' in paragraph 4 is closest in meaning to",
         options: [
-            "They focused solely on the military applications of aviation.",
-            "They acted as advocates, promoting the commercial and military potential of aviation, and were pivotal in shaping the industry.",
-            "They founded several aviation companies to commercially exploit their inventions.",
-            "They worked on improving communication technologies for aviation."
+            "suggesting",
+            "missing",
+            "defying",
+            "receiving"
         ],
-        answer: 1
+        answer: 3
     },
     {
         id: 18,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "According to paragraph 5, what impact did the Wright Brothers' advocacy have on the future of aviation?",
+        question: "It can be inferred from paragraph 6 that the author most likely believes which of the following about the future of the Atlantic cod fishery?",
         options: [
-            "It limited the scope of aviation development.",
-            "It convinced stakeholders about the potential of aviation.",
-            "It led to their own financial downfall.",
-            "It discouraged military use of aviation."
+            "The fishery will improve if the government lifts the fishing ban.",
+            "It may be a long time before cod stocks recover from overfishing.",
+            "The center of the Atlantic cod fishery will shift to Norway.",
+            "The cod will return to the Grand Banks if seal hunting is allowed."
         ],
         answer: 1
     },
     {
         id: 19,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. ⬛[A] In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. ⬛[B] Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. ⬛[C] The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. ⬛[D] Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. █[A] Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. █[B] In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. █[C] This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy. █[D]
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
-        question: "Look at the part of passage 6 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
+        question: "Look at the part of passage 5 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
         options: [
             "Choice A",
             "Choice B",
             "Choice C",
             "Choice D"
         ],
-        answer: 1
+        answer: 0
     },
     {
         id: 20,
         passage: `
-        [1] Indeed, the birth of aviation is inextricably linked to the astounding accomplishments of the Wright Brothers, Orville and Wilbur, who, through their innovative spirit, unrelenting perseverance, and meticulous attention to scientific methodology, ushered in an era of unprecedented technological progress. Born in Dayton, Ohio, these self-taught engineers were the progenitors of controlled, propelled flight, an achievement that irrefutably altered the course of human civilization and fostered a pervasive culture of exploration and progress.
+        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
 
-        [2] The construction of the Wright Brothers' wind tunnel in 1901, which was used to meticulously collect empirical data on air pressure, lift, and drag on various airfoil shapes, was a linchpin of their pioneering voyage in aeronautics. This inventive device, the first of its kind, enabled them to comprehend the complexities of aerodynamics and refine their design concepts to a degree of precision previously unattainable. Through their meticulous research, they were able to dispel common misconceptions about air resistance and flight control, paving the way for the development of their groundbreaking aircraft.
+        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
 
-        [3] In their pursuit of propelled flight, the implementation of their three-axis control system represents a monumental achievement. This mechanism, which incorporated roll, pitch, and yaw controls, was crucial to the development of their first successful aircraft, the Wright Flyer, and marked a decisive departure from the unsuccessful efforts of their contemporaries, who focused primarily on building powerful engines and wings without considering the nuances of control and stability. This innovative control system serves as the conceptual foundation for all current fixed-wing aircraft.
+        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
 
-        [4] Although brief in duration, the Wright Brothers' historic flight at Kitty Hawk, North Carolina, on December 17, 1903, represented an extraordinary advance in human capability. Orville piloted the first flight, which lasted 12 seconds and covered 120 feet, followed by Wilbur's mission, which lasted 59 seconds and covered 852 feet. Despite not being explicitly stated, it should be noted that these numbers represent considerably more than mere data. They represent the culmination of years of devoted research and experimentation, as well as the fulfillment of mankind's age-old desire to fly.
+        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
 
-        [5] The Wright Brothers did not limit their contributions to aviation to the domain of technology and design alone. Their ardent advocacy for the commercial and military potential of aviation drove the eventual expansion and diversification of the industry. They envisioned a future in which air travel would revolutionize transportation, commerce, warfare, and communication, and they worked assiduously to persuade skeptics of the viability and efficacy of their vision. Although their advocacy efforts are frequently neglected, they were instrumental in establishing the aviation industry as it exists today.
+        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
 
-        [6] The Wright Brothers fundamentally altered our perception of distance, time, and possibility through their revolutionary technological achievements and pioneering spirit. Nevertheless, they did so with a modesty and calm dignity that belied the magnitude of their achievements. In analyzing their invaluable contributions, we should endeavor to recall not only the innovation and tenacity they exhibited, but also the unwavering commitment, insatiable curiosity, and unwavering honesty with which they pursued their ambition. This synthesis of humanistic and technological excellence represents the Wright Brothers' true legacy.
+        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
         `,
         instructions: "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
-        introductorySentence: "The Wright Brothers' achievement made a great achievement.",
+        introductorySentence: "The Atlantic cod fishery has shaped Newfoundland's economy for centuries.",
         question: "Which era marks the beginning of the construction of the Great Wall?",
         options: [
-            "[A] The Wright Brothers were self-taught engineers who made significant contributions to aviation.",
-            "[B]The Wright Brothers' wind tunnel and three-axis control system were instrumental to their success.",
-            "[C]The Wright Brothers' first flight was unsuccessful due to a lack of pilot experience.",
-            "[D]The Wright Brothers' advocacy played a critical role in the expansion of the aviation industry.",
-            "[E]The Wright Brothers were primarily interested in the commercial benefits of their inventions.",
-            "[F]The Wright Brothers combined humility with groundbreaking innovation, setting a unique legacy."
+            "[A] Atlantic cod stocks were once plentiful in the rich environment around the Grand Banks.",
+            "[B] The Atlantic cod is a groundfish that preys on herring and small fish that eat krill.",
+            "[C] Cod fishing was so successful that few people considered the possibility of overfishing until fish stocks fell.",
+            "[D] The Canadian government tried to diversify Newfoundland's economy in the 1980s.",
+            "[E] Despite severe limits on fishing, cod stocks remain at low levels and show few signs of recovery.",
+            "[F] Newfoundland exports millions of dollars worth of crab and other shellfish every year."
         ],
         answer: 10,
-        summaryAnswer: [0, 1, 3]
+        summaryAnswer: [0, 2, 4]
     }
 ];
 
@@ -554,7 +557,7 @@ export const listeningQuestions = [
     {
         id: 4,
         question: "Why does the speaker say this: 'Just give it a small scrape with your thumbnail to release the scent, I think you will find it strong but pleasent'",
-        audio:"https://www.dropbox.com/scl/fi/2agz50l3o4civvzx5gjxh/T5C1.mp3?rlkey=im0i30ubsljvcg5fulxmqh8hc&raw=1",
+        audio: "https://www.dropbox.com/scl/fi/2agz50l3o4civvzx5gjxh/T5C1.mp3?rlkey=im0i30ubsljvcg5fulxmqh8hc&raw=1",
         options: [
             "She is demonstrating how to brew tea.",
             "She needs someone to help her lift a heavy tree.",

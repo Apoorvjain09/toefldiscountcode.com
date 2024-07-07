@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { readingQuestions, listeningQuestions } from './questions'; // Adjust the import path as necessary
-import WritingSection from './WritingSection';
+import React, { useState, useEffect } from 'react';
+import { readingQuestions, listeningQuestions } from './questions';
+import UniversityShortlistingModal from '@/app/university-shortlisting/UniversityShortlistingModal';
+import { useUser } from '@clerk/nextjs';
 
 interface ResultsDashboardProps {
     readingAnswers: number[];
@@ -8,26 +9,44 @@ interface ResultsDashboardProps {
     summaryAnswers2: number[];
     totalScoreReading: number;
     totalScoreListening: number;
-    listeningAnswers: number[],
+    listeningAnswers: number[];
     writingScores: {
-        task1: { score: number; feedback: string } | null,
-        task2: { score: number; feedback: string } | null
+        task1: { score: number; feedback: string } | null;
+        task2: { score: number; feedback: string } | null;
     };
     speakingScores: {
-        task1: { score: number; feedback: string } | null,
-        task2: { score: number; feedback: string } | null,
-        task3: { score: number; feedback: string } | null,
-        task4: { score: number; feedback: string } | null
+        task1: { score: number; feedback: string } | null;
+        task2: { score: number; feedback: string } | null;
+        task3: { score: number; feedback: string } | null;
+        task4: { score: number; feedback: string } | null;
     };
 }
 
-
 const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, totalScoreListening, listeningAnswers, writingScores, speakingScores }) => {
-    console.log(totalScoreReading)
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
+    const [showShortlistingModal, setShowShortlistingModal] = useState(false);
+    const { user } = useUser();
+
+    useEffect(() => {
+        const checkShortlistingMetadata = async () => {
+            // Assuming you have a way to check if the user has the shortlisting metadata
+            const hasShortlisting = user?.publicMetadata?.shortlisting;
+
+            if (!hasShortlisting) {
+                setShowShortlistingModal(true);
+            }
+        };
+
+        checkShortlistingMetadata();
+    }, [user]);
 
     const handleSectionClick = (section: 'reading' | 'listening' | 'writing' | 'speaking') => {
         setSelectedSection(section);
+    };
+
+    const handleShortlistingComplete = () => {
+        setShowShortlistingModal(false);
+        // Update the user's metadata here to reflect that shortlisting is complete
     };
 
     const renderCorrectAnswer = (correctAnswer: number | number[] | undefined, options: string[]) => {
@@ -45,7 +64,15 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
     const totalScoreSpeaking = ((speakingScores.task1?.score ?? 0) + (speakingScores.task2?.score ?? 0) + (speakingScores.task3?.score ?? 0) + (speakingScores.task4?.score ?? 0)) * 1.875;
     const totalScore = Math.round(totalScoreReading * 30 / 22) + Math.round(totalScoreListening * 30 / 28) + Math.round(totalScoreWriting) + Math.round(totalScoreSpeaking);
 
-
+    if (showShortlistingModal) {
+        return (
+            <UniversityShortlistingModal
+                isOpen={showShortlistingModal}
+                onClose={() => setShowShortlistingModal(false)}
+                onComplete={handleShortlistingComplete}
+            />
+        );
+    }
 
     return (
         <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center gap-4">

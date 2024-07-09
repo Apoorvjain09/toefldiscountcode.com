@@ -48,7 +48,7 @@ export default function Sidebar() {
       {
         href: '/university-shortlisting',
         icon: Users,
-        label: 'University Shortlisting',
+        label: 'AI University Shortlisting',
       },
       {
         href: 'https://gre-resources.com/gre-books',

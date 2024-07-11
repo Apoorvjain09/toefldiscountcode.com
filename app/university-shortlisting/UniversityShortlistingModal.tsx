@@ -101,7 +101,7 @@
 
           {step === 1 && (
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-center">Which country are you targeting?</h2>
+              <h2 className="text-2xl font-bold mb-6 text-center">Check Eligibility for your dream universities</h2>
               <div className="grid grid-cols-2 gap-4">
                 {countries.map((country) => (
                   <div
@@ -156,7 +156,7 @@
 
           {step === 3 && (
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-center">Eligibility Form</h2>
+              <h2 className="text-2xl font-bold mb-4 text-center">Fill in the form to get Personalized Shortlisting</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="block text-gray-700">Name</label>

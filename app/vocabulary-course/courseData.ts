@@ -48,7 +48,7 @@ export const courseData: { sections: Section[] } = {
                     title: 'Shabd Part 2',
                     lectures: [
                         { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/07Sep2020020924SHABD-PART-2-(Part-1).mp4' },
-                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/07Sep2020020923SHABD-PART-2-(Part-2).mp4' },
+                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/07Sep2020030923SHABD-PART-2-(Part-2).mp4' },
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/07Sep2020030916SHABD-PART-2-(Part-3).mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/07Sep2020030948SHABD-PART-2-(Part-4).mp4' },
                         { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/07Sep2020030923SHABD-PART-2-(Part-5).mp4' },
@@ -64,7 +64,7 @@ export const courseData: { sections: Section[] } = {
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/24Aug2020120848Office-office--1-(Part-3).mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/24Aug2020120837Office-office--1-(Part-4).mp4' },
                         { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/24Aug2020120851Office-office--1-(Part-5).mp4' },
-                        { id: 6, title: 'Lecture 6', videoUrl: 'https://mja.in/uploads/course_video/24Aug2020100821Office-office--1-(Part-6).mp4' },
+                        { id: 6, title: 'Lecture 6', videoUrl: 'https://mja.in/uploads/course_video/24Aug2020010821Office-office--1-(Part-6).mp4' },
                     ],
                 },
                 {
@@ -169,11 +169,11 @@ export const courseData: { sections: Section[] } = {
                     title: 'Beautiful Mind Part-2',
                     lectures: [
                         { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/10Jul2021080752BEAUTIFUL-MIND---2--(Part-1).mp4' },
-                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090104BEAUTIFUL-MIND---2--(Part-2).mp4' },
-                        { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090159BEAUTIFUL-MIND---2--(Part-3).mp4' },
-                        { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090133BEAUTIFUL-MIND---2--(Part-4).mp4' },
-                        { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090132BEAUTIFUL-MIND---2--(Part-5).mp4' },
-                        { id: 6, title: 'Lecture 6', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090104BEAUTIFUL-MIND---2--(Part-6).mp4' },
+                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090104BEAUTIFUL-MIND---2-(Part-2).mp4' },
+                        { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090159BEAUTIFUL-MIND---2-(Part-3).mp4' },
+                        { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090133BEAUTIFUL-MIND---2-(Part-4).mp4' },
+                        { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090132BEAUTIFUL-MIND---2-(Part-5).mp4' },
+                        { id: 6, title: 'Lecture 6', videoUrl: 'https://mja.in/uploads/course_video/22Jan2021090104BEAUTIFUL-MIND---2-(Part-6).mp4' },
                     ],
                 },
                 {
@@ -234,8 +234,8 @@ export const courseData: { sections: Section[] } = {
                 {
                     title: 'Criticism and Praise',
                     lectures: [
-                        { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/30May2020020500CRITICISM-AND-PRAISE--(Part-1).mp4' },
-                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/30May2020020545CRITICISM-AND-PRAISE--(Part-2).mp4' },
+                        { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/30May2020020500CRITICISM-AND-PRAISE-(Part-1).mp4' },
+                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/30May2020020545CRITICISM-AND-PRAISE-(Part-2).mp4' },
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/30May2020020539CRITICISM-AND-PRAISE--(Part-3).mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/30May2020040519CRITICISM-AND-PRAISE--(Part-4).mp4' },
                         { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/30May2020040532CRITICISM-AND-PRAISE--(Part-5).mp4' },

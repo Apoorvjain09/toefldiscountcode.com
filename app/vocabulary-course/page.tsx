@@ -5,6 +5,8 @@ import { useUser } from '@clerk/nextjs';
 import { Seo } from '@/components/Head/Seo';
 import women from "@/public/assets/woman-young-free-clipart-hd.png"
 
+//mayank - 10th july 2024
+
 const CoursePage = dynamic(() => import('./CousePage'), {
   suspense: true,
 });
@@ -31,8 +33,8 @@ export default function Page() {
   return (
     <>
       <Seo
-        title='TOEFL Vocabulary Course'
-        description='Enhance your TOEFL vocabulary with our specialized course designed for TOEFL test takers.'
+        title='MJA Vocabulary Course'
+        description='Enhance your TOEFL vocabulary with our specialized course designed for competetive exam test takers.'
         url='https://toeflgoglobal.com/vocabulary-course'
         image='https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1'
       />

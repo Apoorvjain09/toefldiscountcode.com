@@ -2,16 +2,32 @@
 import { Seo } from "@/components/Head/Seo";
 import FeaturesSection from "@/components/ui/FeaturesSectionLandingPage";
 import { useState, lazy, Suspense } from "react";
+import { useUser } from "@clerk/nextjs";
+import Alert from "@/components/ui/Alert";
 
 const TestCard = lazy(() => import("@/components/ui/TestCard"));
 
 
 export default function Page() {
+    const [showAlert, setShowAlert] = useState(false);
     const [showTests, setShowTests] = useState(false);
+    const { isSignedIn } = useUser();
 
     const handleGetStartedClick = () => {
-        setShowTests(true);
+        if (isSignedIn) {
+            setShowTests(true);
+            return
+        }
+        else{
+            setShowAlert(true);
+            return
+        }
+
     };
+
+    const handleCloseAlert = () => {
+        setShowAlert(false);
+      };
 
     return (
         <>
@@ -21,9 +37,16 @@ export default function Page() {
                 url='https://toeflgoglobal.com'
                 image='https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1'
             />
+            {showAlert && (
+                <Alert
+                    message="Please log in to continue"
+                    type="warning"
+                    onClose={handleCloseAlert}
+                />
+            )}
             {!showTests ? (
                 <div>
-                        <FeaturesSection onGetStartedClick={handleGetStartedClick} />
+                    <FeaturesSection onGetStartedClick={handleGetStartedClick} />
                 </div>
             ) : (
                 <Suspense fallback={<div></div>}>

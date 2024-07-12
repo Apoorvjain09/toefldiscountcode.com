@@ -238,22 +238,14 @@ export const courseData: { sections: Section[] } = {
                         { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/30May2020020545CRITICISM-AND-PRAISE-(Part-2).mp4' },
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/30May2020020539CRITICISM-AND-PRAISE--(Part-3).mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/30May2020040519CRITICISM-AND-PRAISE--(Part-4).mp4' },
-                        { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/30May2020040532CRITICISM-AND-PRAISE--(Part-5).mp4' },
+                        { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/30May2020040532CRITICISM-AND-PRAISE--(part-5).mp4' },
                     ],
                 },
                 {
                     title: 'Walk in the park',
                     lectures: [
                         { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/18May2020010513A-walk-in-the-park-new---(part-1).mp4' },
-                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/18May2020010503A-walk-in-the-park-new--(part-2).mp4' },
-                        { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/18May2020010544A-walk-in-the-park-new--(part-3).mp4' },
-                    ],
-                },
-                {
-                    title: 'Walk in the park',
-                    lectures: [
-                        { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/18May2020010513A-walk-in-the-park-new---(part-1).mp4' },
-                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/18May2020010503A-walk-in-the-park-new--(part-2).mp4' },
+                        { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/18May2020010503A-walk-in-the-park-new-(part-2).mp4' },
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/18May2020010544A-walk-in-the-park-new--(part-3).mp4' },
                     ],
                 },
@@ -272,7 +264,7 @@ export const courseData: { sections: Section[] } = {
                     lectures: [
                         { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/04Jun2020020614Time-flies--kal,-aaj-aur-kal-(Part-1).mp4' },
                         { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/04Jun2020020636Time-flies--kal,-aaj-aur-kal-(Part-2).mp4' },
-                        { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/04Jun2020030614Time-flies--kal,-aaj-aur-kal-(Part-3).mp4' },
+                        { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/04Jun2020030603Time-flies--kal,-aaj-aur-kal-(Part-3).mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/04Jun2020040613Time-flies--kal,-aaj-aur-kal-(Part-4).mp4' },
                         { id: 5, title: 'Lecture 5', videoUrl: 'https://mja.in/uploads/course_video/04Jun2020030614Time-flies--kal,-aaj-aur-kal-(Part-5).mp4' },
                     ],

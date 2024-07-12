@@ -5,10 +5,10 @@ import { MdError } from "react-icons/md";
 import { readingQuestions, listeningQuestions, listeningAudios } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
 import Draggable from 'react-draggable';
+import WritingSection from './WritingSection';
+import SpeakingSection from './SpeakingSection';
+import ResultsDashboard from './ResultsDashboard';
 
-const WritingSection = React.lazy(() => import('./WritingSection'));
-const SpeakingSection = React.lazy(() => import('./SpeakingSection'));
-const ResultsDashboard = React.lazy(() => import('./ResultsDashboard'));
 
 const Test1 = () => {
     const [stage, setStage] = useState<'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('instructions');

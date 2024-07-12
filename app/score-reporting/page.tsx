@@ -4,8 +4,8 @@ import { Body, H1 } from "./formatting";
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { Seo } from '@/components/Head/Seo';
 
-const QA = lazy(() => import("@/app/score-reporting/QA"));
-const Main = lazy(() => import("./main"));
+import QA from "@/app/score-reporting/QA";
+import Main from "./main";
 
 const dataQA = [
     {

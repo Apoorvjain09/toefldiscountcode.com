@@ -3,7 +3,7 @@ import React, { Suspense } from 'react';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { Seo } from '@/components/Head/Seo';
 import Section from './Section';
-import { sections, SectionProps } from './sectionsData';
+import { sections } from './sectionsData';
 
 const Page: React.FC = () => {
   return (

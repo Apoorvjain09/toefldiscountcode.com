@@ -1,9 +1,9 @@
 "use client";
 import { Seo } from "@/components/Head/Seo";
+import FeaturesSection from "@/components/ui/FeaturesSectionLandingPage";
 import { useState, lazy, Suspense } from "react";
 
 const TestCard = lazy(() => import("@/components/ui/TestCard"));
-const FeaturesSection = lazy(() => import("@/components/ui/FeaturesSectionLandingPage"));
 
 
 export default function Page() {
@@ -23,9 +23,7 @@ export default function Page() {
             />
             {!showTests ? (
                 <div>
-                    <Suspense fallback={<div></div>}>
                         <FeaturesSection onGetStartedClick={handleGetStartedClick} />
-                    </Suspense>
                 </div>
             ) : (
                 <Suspense fallback={<div></div>}>

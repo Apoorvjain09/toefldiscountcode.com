@@ -1,32 +1,15 @@
 import React from 'react';
-import Link from 'next/link';
 import { PinContainer } from './3d-pin';
-import { useUser } from '@clerk/nextjs';
 
 interface TestCardProps {
     testNumber: number;
 }
 
 const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
-    const { isSignedIn, user } = useUser();
 
     const isFreeTest = testNumber === 1 || testNumber === 2;
     // const testTitle = isFreeTest ? 'Free Test' : `Test ${testNumber}`;
     const testTitle = isFreeTest ? `Test ${testNumber}` : `Test ${testNumber}`;
-
-    const handleTestClick = () => {
-        if (!isFreeTest) {
-            const hasMembership =
-                user?.publicMetadata?.["6Month_Membership"] === "true" ||
-                user?.publicMetadata?.["Monthly_Subscription"] === "true";
-
-            if (!hasMembership) {
-                window.location.href = '/payment';
-                return;
-            }
-        }
-        window.location.href = `/tests/${testNumber}`;
-    };
 
     return (
         <div className="mt-10 w-full sm:w-[auto] flex items-center justify-center ">

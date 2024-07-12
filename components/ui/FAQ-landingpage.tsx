@@ -1,5 +1,19 @@
 import React from 'react';
 
+const SvgIcon = () => {
+    return (
+        <svg
+            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    )
+}
+
 export default function FAQLandingPage() {
     return (
         <>
@@ -11,15 +25,8 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">What is TOEFL?</h2>
 
-                        <svg
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <SvgIcon/>
+
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -33,15 +40,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">How is the TOEFL scored?</h2>
 
-                        <svg
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <SvgIcon/>
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -55,19 +54,11 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">What is a good TOEFL score?</h2>
 
-                        <svg
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <SvgIcon/>
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
-                    A good TOEFL score depends on the requirements of the institution you are applying to. Generally, scores above 90 are considered good, while top universities may require scores above 100.                    </p>
+                        A good TOEFL score depends on the requirements of the institution you are applying to. Generally, scores above 90 are considered good, while top universities may require scores above 100.                    </p>
                 </details>
 
                 <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -76,15 +67,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">How long is the TOEFL test?</h2>
 
-                        <svg
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <SvgIcon/>
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -98,15 +81,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">How do I register for the TOEFL?</h2>
 
-                        <svg
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <SvgIcon/>
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -120,15 +95,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">What should I bring in test center?</h2>
 
-                        <svg
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <SvgIcon/>
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">

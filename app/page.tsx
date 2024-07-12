@@ -19,7 +19,8 @@ export default function Page() {
             return
         }
         else{
-            setShowAlert(true);
+            // setShowAlert(true);
+            window.location.href="https://accounts.toeflgoglobal.com/sign-up?redirect_url=https%3A%2F%2Fwww.toeflgoglobal.com%2F"
             return
         }
 

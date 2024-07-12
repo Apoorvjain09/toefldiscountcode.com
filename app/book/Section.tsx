@@ -1,10 +1,6 @@
+// components/Section.tsx
 import React from 'react';
-
-interface CardProps {
-  title: string;
-  description: string;
-  link: string;
-}
+import { CardProps, SectionProps } from './sectionsData';
 
 const Card: React.FC<CardProps> = ({ title, description, link }) => {
   return (
@@ -22,11 +18,6 @@ const Card: React.FC<CardProps> = ({ title, description, link }) => {
     </div>
   );
 };
-
-interface SectionProps {
-  title: string;
-  cards: CardProps[];
-}
 
 const Section: React.FC<SectionProps> = ({ title, cards }) => {
   return (

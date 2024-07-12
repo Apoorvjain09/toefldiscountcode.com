@@ -1,3 +1,15 @@
+
+export interface CardProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
+export interface SectionProps {
+  title: string;
+  cards: CardProps[];
+}
+
 export const sections = [
     {
       title: "Guides",

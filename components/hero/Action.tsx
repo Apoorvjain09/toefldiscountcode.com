@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import whatsapp from "../../../../public/assets/whatsapp.svg";
 import youtubeicon from "@/public/assets/youtube-icon.png"
 
 const Action = () => {
@@ -9,7 +8,6 @@ const Action = () => {
   const prefilledMessage = encodeURIComponent(
     "Please get me the TOEFL voucher code"
   );
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${prefilledMessage}`;
 
   const youtubeLink = 'https://youtu.be/UbxCeWKWFCc?si=g2ba80uzGiq0GnZC' 
   return (
@@ -23,7 +21,7 @@ const Action = () => {
         </Button>
       </Link>
       <a href={youtubeLink} target="_blank" rel="noopener noreferrer">
-        <Image src={youtubeicon} alt="" height={70} />
+        <img src="assets/youtube-icon.png" className="min-w-[70px] max-h-[70px]" alt="" />
       </a>
     </div>
   );

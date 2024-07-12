@@ -1,7 +1,7 @@
-import profile from "@/public/assets/profile.svg";
-import clock from "@/public/assets/clock.svg";
-import course from "@/public/assets/course.svg";
-import discount from "@/public/assets/discount.svg";
+const profile =  "assets/profile.svg";
+const clock =  "assets/clock.svg";
+const course  = "assets/course.svg";
+const discount =  "assets/discount.svg";
 
 export const perks = [
   {

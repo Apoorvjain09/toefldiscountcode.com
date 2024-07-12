@@ -1,12 +1,10 @@
 "use client";
-import React, { Suspense, lazy } from "react";
 import { Body, H1 } from "@/app/score-reporting/formatting";
 import QA from "@/app/score-reporting/QA";
-import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import Hero from "@/components/hero/Hero";
+import GetCode from "@/components/getCode/GetCode";
+import WhyUs from "@/components/whyUs/WhyUs";
 
-const Hero = lazy(() => import("@/components/hero/Hero"));
-const WhyUs = lazy(() => import("@/components/whyUs/WhyUs"));
-const GetCode = lazy(() => import("@/components/getCode/GetCode"));
 
 const dataQA = [
   {
@@ -30,7 +28,6 @@ const dataQA = [
 const Page = () => {
   return (
     <div className="">
-      <Suspense fallback={<div><LoadingSpinner/></div>}>
         <div className="mt--30">
           <Hero />
         </div>
@@ -47,7 +44,6 @@ const Page = () => {
             </div>
           ))}
         </Body>
-      </Suspense>
     </div>
   );
 };

@@ -11,6 +11,7 @@ import {
   TicketPercent,
   User,
   Users,
+  MessageCircleMore
 } from 'lucide-react';
 import { SidebarDesktop } from './sidebar-desktop';
 import { SidebarItems } from '@/types';
@@ -39,6 +40,11 @@ export default function Sidebar() {
         href: '/book',
         icon: List,
         label: 'Books/ Materials',
+      },
+      {
+        href: '/forum',
+        icon: MessageCircleMore,
+        label: 'Biggest Toefl Forum',
       },
       {
         href: '/study-partner',

@@ -32,13 +32,13 @@ export default function Forum() {
   const [newPost, setNewPost] = useState<NewPost>({ title: '', content: '', userId: '' });
   const [commentContent, setCommentContent] = useState<{ [key: string]: string }>({});
   const [showComments, setShowComments] = useState<{ [key: string]: boolean }>({});
+  const [likedPosts, setLikedPosts] = useState<{ [key: string]: boolean }>({});
   const [showShortlistingModal, setShowShortlistingModal] = useState(false);
-
 
   useEffect(() => {
     async function fetchPosts() {
       const response = await axios.get<Post[]>('/api/posts');
-      setPosts(response.data);
+      setPosts(response.data.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
     }
     fetchPosts();
   }, []);
@@ -53,16 +53,22 @@ export default function Forum() {
       comments: [],
     };
     const response = await axios.post('/api/posts', postToSubmit);
-    setPosts([...posts, response.data]);
+    setPosts([response.data, ...posts]);
     setNewPost({ title: '', content: '', userId: '' });
   };
 
   const handleLike = async (postId: string) => {
+    if (likedPosts[postId]) return; // Prevent multiple likes
+
     const response = await axios.patch('/api/posts', { id: postId, action: 'like' });
     const updatedPosts = posts.map(post =>
       post.id === postId ? { ...post, likes: response.data.likes } : post
     );
     setPosts(updatedPosts);
+    setLikedPosts(prevState => ({
+      ...prevState,
+      [postId]: true,
+    }));
   };
 
   const handleCommentChange = (postId: string, content: string) => {
@@ -80,7 +86,7 @@ export default function Forum() {
     const response = await axios.patch('/api/posts', {
       id: postId,
       action: 'comment',
-      userId: user?.id || 'Guest',
+      userId: user?.firstName || 'Guest',
       content,
     });
     const updatedPosts = posts.map(post =>
@@ -105,16 +111,14 @@ export default function Forum() {
       <h1 className='flex items-center justify-center bg-gradient-to-r from-orange-400 to-red-400 rounded-t-lg w-full text-center h-[20vh] font-extrabold text-3xl text-white'>
         Toefl iBt Study Group
       </h1>
-      <div className='bg-white text-sm flex items-center justify-evenly h-[50px] rounded-b-lg'>
-        <div className='font-bold flex flex-row gap-1 '><Lock />Public group</div>
+      <div className='bg-white text-xs sm:text-sm flex items-center justify-evenly h-[50px] rounded-b-lg'>
+        <div className='font-bold flex flex-row gap-1 items-center '><Lock />Public group</div>
         <div className='font-bold'>1200+ <span className='text-gray-500'>members</span></div>
         <span className='font-bold text-gray-500'>For batch 2024-25</span>
       </div>
 
       <div className='flex flex-row justify-evenly p-5'>
-        <div className='w-[70%] flex flex-col'>
-
-          {/* publish post  */}
+        <div className='lg:w-[70%] flex flex-col'>
           <div className='flex items-center justify-center my-4'>
             <form onSubmit={handlePostSubmit} className='w-full max-w-lg'>
               <div className='bg-white p-4 rounded-lg shadow-md flex items-center'>
@@ -140,10 +144,9 @@ export default function Forum() {
             </form>
           </div>
 
-          {/* posts  */}
           <div className='flex flex-col items-center justify-center'>
             {posts.map(post => (
-              <div key={post.id} className='bg-white p-4 my-4 rounded-lg shadow-md w-[90%]'>
+              <div key={post.id} className='bg-white p-4 my-4 rounded-lg shadow-md w-[100%] lg:w-[90%]'>
                 <div className='flex items-center mb-2'>
                   <img
                     src="assets/guest-account-logo.jpg"
@@ -155,7 +158,7 @@ export default function Forum() {
                     {/* <p className='text-xs text-gray-500'>{new Date(post.createdAt).toLocaleString()}</p> */}
                   </div>
                 </div>
-                <h2 className='font-semibold text-lg'>{post.title}</h2>
+                <h2 className='text-lg'>{post.title}</h2>
                 <p className='mt-2'>{post.content}</p>
                 <span className="flex items-center mb-3">
                   <span className="h-px flex-1 bg-gray-500"></span>
@@ -199,10 +202,8 @@ export default function Forum() {
           </div>
         </div>
 
-        <div className='hidden sm:flex flex-col w-[30%] gap-5'>
-
-          {/* top uni  */}
-          <div className="max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <div className='hidden lg:flex flex-col w-[30%] gap-5'>
+          <div className="max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow xl:p-8 lg:p-5 dark:bg-gray-800 dark:border-gray-700">
             <div className="flex items-center justify-between mb-4">
               <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Top Universities</h5>
             </div>
@@ -287,7 +288,6 @@ export default function Forum() {
             </div>
           </div>
 
-          {/* fill form  */}
           <div className="max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <UniversityShortlistingModal
               isOpen={showShortlistingModal}
@@ -313,7 +313,6 @@ export default function Forum() {
                     </div>
                     <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                   </div>
-                  <a href="#" className="ms-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
                 </div>
                 <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Check Eligibility</button>
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
@@ -321,7 +320,6 @@ export default function Forum() {
                 </div>
               </div>
             </button>
-
           </div>
         </div>
       </div>

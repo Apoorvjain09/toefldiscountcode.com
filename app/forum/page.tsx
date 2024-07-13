@@ -5,6 +5,7 @@ import { useUser } from '@clerk/nextjs';
 import axios from 'axios';
 import { Lock, ThumbsUp } from 'lucide-react';
 import { FaComment } from 'react-icons/fa';
+import UniversityShortlistingModal from '../university-shortlisting/UniversityShortlistingModal';
 
 type Comment = {
   id: string;
@@ -31,6 +32,8 @@ export default function Forum() {
   const [newPost, setNewPost] = useState<NewPost>({ title: '', content: '', userId: '' });
   const [commentContent, setCommentContent] = useState<{ [key: string]: string }>({});
   const [showComments, setShowComments] = useState<{ [key: string]: boolean }>({});
+  const [showShortlistingModal, setShowShortlistingModal] = useState(false);
+
 
   useEffect(() => {
     async function fetchPosts() {
@@ -44,7 +47,7 @@ export default function Forum() {
     e.preventDefault();
     const postToSubmit: Post = {
       ...newPost,
-      userId: user?.id || 'Guest',
+      userId: user?.firstName || 'Guest',
       createdAt: new Date(),
       likes: 0,
       comments: [],
@@ -102,86 +105,225 @@ export default function Forum() {
       <h1 className='flex items-center justify-center bg-gradient-to-r from-orange-400 to-red-400 rounded-t-lg w-full text-center h-[20vh] font-extrabold text-3xl text-white'>
         Toefl iBt Study Group
       </h1>
-      <div className='bg-white text-sm flex items-center justify-evenly h-[50px]'>
+      <div className='bg-white text-sm flex items-center justify-evenly h-[50px] rounded-b-lg'>
         <div className='font-bold flex flex-row gap-1 '><Lock />Public group</div>
         <div className='font-bold'>1200+ <span className='text-gray-500'>members</span></div>
         <span className='font-bold text-gray-500'>For batch 2024-25</span>
       </div>
-      <div className='flex items-center justify-center my-4'>
-        <form onSubmit={handlePostSubmit} className='w-full max-w-lg'>
-          <div className='bg-white p-4 rounded-lg shadow-md flex items-center'>
-            <img
-              src="assets/guest-account-logo.jpg"
-              alt="User Avatar"
-              className="rounded-full w-10 h-10 mr-4"
-            />
-            <input
-              type="text"
-              placeholder="Write something..."
-              value={newPost.title}
-              onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
-              className="w-full bg-gray-100 rounded-full p-3 focus:outline-none"
-            />
-          </div>
-          <button
-            type="submit"
-            className="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded-lg"
-          >
-            Post
-          </button>
-        </form>
-      </div>
-      <div className='flex flex-col items-center justify-center'>
-        {posts.map(post => (
-          <div key={post.id} className='bg-white p-4 my-4 rounded-lg shadow-md w-[60%]'>
-            <div className='flex items-center mb-2'>
-              <img
-                src="assets/guest-account-logo.jpg"
-                alt="User Avatar"
-                className="rounded-full w-8 h-8 mr-2"
-              />
-              <div>
-                <p className='font-bold'>{post.userId}</p>
-                {/* <p className='text-xs text-gray-500'>{new Date(post.createdAt).toLocaleString()}</p> */}
+
+      <div className='flex flex-row justify-evenly p-5'>
+        <div className='w-[70%] flex flex-col'>
+
+          {/* publish post  */}
+          <div className='flex items-center justify-center my-4'>
+            <form onSubmit={handlePostSubmit} className='w-full max-w-lg'>
+              <div className='bg-white p-4 rounded-lg shadow-md flex items-center'>
+                <img
+                  src="assets/guest-account-logo.jpg"
+                  alt="User Avatar"
+                  className="rounded-full w-10 h-10 mr-4"
+                />
+                <input
+                  type="text"
+                  placeholder="Write something..."
+                  value={newPost.title}
+                  onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
+                  className="w-full bg-gray-100 rounded-full p-3 focus:outline-none"
+                />
               </div>
-            </div>
-            <h2 className='font-bold text-lg'>{post.title}</h2>
-            <p className='mt-2'>{post.content}</p>
-            <div className='flex items-center justify-evenly gap-2'>
-              <button onClick={() => handleLike(post.id!)} className='flex items-center gap-1'>
-                <ThumbsUp /> {post.likes} Like
+              <button
+                type="submit"
+                className="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded-lg"
+              >
+                Post
               </button>
-              <button onClick={() => toggleComments(post.id!)} className='flex items-center gap-1'>
-                <FaComment /> {post.comments.length} Comment{post.comments.length !== 1 && 's'}
-              </button>
-            </div>
-            {showComments[post.id!] && (
-              <>
-                <form onSubmit={(e) => handleCommentSubmit(e, post.id!)} className='mt-2'>
-                  <input
-                    type="text"
-                    placeholder="Write a comment..."
-                    value={commentContent[post.id!] || ''}
-                    onChange={(e) => handleCommentChange(post.id!, e.target.value)}
-                    className="w-full bg-gray-100 rounded-full p-3 focus:outline-none"
-                  />
-                  <button type="submit" className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg">
-                    Post Comment
-                  </button>
-                </form>
-                <div className='mt-4'>
-                  {post.comments.map(comment => (
-                    <div key={comment.id} className='bg-gray-100 p-2 rounded-lg mt-2'>
-                      <p className='font-bold'>{comment.userId}</p>
-                      <p className='text-sm'>{comment.content}</p>
-                      {/* <p className='text-xs text-gray-500'>{new Date(comment.createdAt).toLocaleString()}</p> */}
-                    </div>
-                  ))}
-                </div>
-              </>
-            )}
+            </form>
           </div>
-        ))}
+
+          {/* posts  */}
+          <div className='flex flex-col items-center justify-center'>
+            {posts.map(post => (
+              <div key={post.id} className='bg-white p-4 my-4 rounded-lg shadow-md w-[90%]'>
+                <div className='flex items-center mb-2'>
+                  <img
+                    src="assets/guest-account-logo.jpg"
+                    alt="User Avatar"
+                    className="rounded-full w-8 h-8 mr-2"
+                  />
+                  <div>
+                    <p className='font-bold'>{post.userId}</p>
+                    {/* <p className='text-xs text-gray-500'>{new Date(post.createdAt).toLocaleString()}</p> */}
+                  </div>
+                </div>
+                <h2 className='font-semibold text-lg'>{post.title}</h2>
+                <p className='mt-2'>{post.content}</p>
+                <span className="flex items-center mb-3">
+                  <span className="h-px flex-1 bg-gray-500"></span>
+                  <span className="h-px flex-1 bg-gray-500"></span>
+                </span>
+                <div className='flex items-center justify-evenly gap-2'>
+                  <button onClick={() => handleLike(post.id!)} className='flex items-center gap-1'>
+                    <ThumbsUp /> {post.likes} Like
+                  </button>
+                  <button onClick={() => toggleComments(post.id!)} className='flex items-center gap-1'>
+                    <FaComment /> {post.comments.length} Comment{post.comments.length !== 1 && 's'}
+                  </button>
+                </div>
+                {showComments[post.id!] && (
+                  <>
+                    <form onSubmit={(e) => handleCommentSubmit(e, post.id!)} className='mt-2'>
+                      <input
+                        type="text"
+                        placeholder="Write a comment..."
+                        value={commentContent[post.id!] || ''}
+                        onChange={(e) => handleCommentChange(post.id!, e.target.value)}
+                        className="w-full bg-gray-100 rounded-full p-3 focus:outline-none"
+                      />
+                      <button type="submit" className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg">
+                        Post Comment
+                      </button>
+                    </form>
+                    <div className='mt-4'>
+                      {post.comments.map(comment => (
+                        <div key={comment.id} className='bg-gray-100 p-2 rounded-lg mt-2'>
+                          <p className='font-bold'>{comment.userId}</p>
+                          <p className='text-sm'>{comment.content}</p>
+                          {/* <p className='text-xs text-gray-500'>{new Date(comment.createdAt).toLocaleString()}</p> */}
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className='hidden sm:flex flex-col w-[30%] gap-5'>
+
+          {/* top uni  */}
+          <div className="max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div className="flex items-center justify-between mb-4">
+              <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Top Universities</h5>
+            </div>
+            <div className="flow-root">
+              <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
+                <li className="py-3 sm:py-4">
+                  <div className="flex items-center">
+                    <div className="flex-1 min-w-0 ms-4">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        Harvard University
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                        United State of America
+                      </p>
+                    </div>
+                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                      4.7%
+                    </div>
+                  </div>
+                </li>
+                <li className="py-3 sm:py-4">
+                  <div className="flex items-center ">
+                    <div className="flex-1 min-w-0 ms-4">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        Stanford University
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                        United State of America
+                      </p>
+                    </div>
+                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                      4.3%
+                    </div>
+                  </div>
+                </li>
+                <li className="py-3 sm:py-4">
+                  <div className="flex items-center">
+                    <div className="flex-1 min-w-0 ms-4">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        University of Cambridge
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                        United Kingdoms
+                      </p>
+                    </div>
+                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                      21%
+                    </div>
+                  </div>
+                </li>
+                <li className="py-3 sm:py-4">
+                  <div className="flex items-center ">
+                    <div className="flex-1 min-w-0 ms-4">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        University of Oxford
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                        United Kingdoms
+                      </p>
+                    </div>
+                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                      17.5%
+                    </div>
+                  </div>
+                </li>
+                <li className="pt-3 pb-0 sm:pt-4">
+                  <div className="flex items-center ">
+                    <div className="flex-1 min-w-0 ms-4">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        Massachusetts (MIT)
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                        United State of America
+                      </p>
+                    </div>
+                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                      6.7%
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* fill form  */}
+          <div className="max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <UniversityShortlistingModal
+              isOpen={showShortlistingModal}
+              onClose={() => setShowShortlistingModal(false)}
+              onComplete={() => { setShowShortlistingModal(false) }}
+            />
+
+            <button onClick={() => setShowShortlistingModal(true)} className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+              <div className="space-y-6">
+                <h5 className="text-xl font-medium text-gray-900 dark:text-white">Get Personalized Shortlisting</h5>
+                <div>
+                  <label className="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                  <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
+                </div>
+                <div>
+                  <label className="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+                  <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                </div>
+                <div className="flex items-start">
+                  <div className="flex items-start">
+                    <div className="flex items-center h-5">
+                      <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                    </div>
+                    <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                  </div>
+                  <a href="#" className="ms-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                </div>
+                <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Check Eligibility</button>
+                <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+                  Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                </div>
+              </div>
+            </button>
+
+          </div>
+        </div>
       </div>
     </div>
   );

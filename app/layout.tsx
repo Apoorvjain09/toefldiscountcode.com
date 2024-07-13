@@ -6,7 +6,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
-import { useEffect } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,18 +16,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js').then(registration => {
-          console.log('Service Worker registered: ', registration);
-        }).catch(registrationError => {
-          console.log('Service Worker registration failed: ', registrationError);
-        });
-      });
-    }
-  }, []);
 
   return (
     <ClerkProvider>

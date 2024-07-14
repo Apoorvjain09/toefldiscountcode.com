@@ -1,6 +1,7 @@
 "use client";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
-import React, { useState, Suspense, lazy } from "react";
+import { useUser } from "@clerk/nextjs";
+import React, { useState, Suspense, lazy, useEffect } from "react";
 import { FaPlayCircle } from 'react-icons/fa';
 
 const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));
@@ -13,6 +14,21 @@ const Page = () => {
         setStage('test');
     };
 
+    const { user } = useUser();
+
+
+    useEffect(() => {
+        const isFreeTest = false; // Update this logic based on your requirement
+        if (!isFreeTest) {
+            const hasMembership =
+                user?.publicMetadata?.["6Month_Membership"] === "true" ||
+                user?.publicMetadata?.["Monthly_Subscription"] === "true";
+
+            if (!hasMembership) {
+                window.location.href = '/payment';
+            }
+        }
+    }, [user]);
 
     return (
         <div className="container mx-auto py-10 px-4 md:py-10">
@@ -35,7 +51,7 @@ const Page = () => {
                 </div>
             )}
             {stage === 'test' && (
-                <Suspense fallback={<div><LoadingSpinner/></div>}>
+                <Suspense fallback={<div><LoadingSpinner /></div>}>
                     <ReadingListeningSection />
                 </Suspense>
             )}

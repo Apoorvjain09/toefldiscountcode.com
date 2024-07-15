@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
@@ -8,15 +9,17 @@ const PaymentVerify: React.FC = () => {
   const { push } = useRouter();
   const { user } = useUser();
 
-  if(!user){
-    alert("Some Technical Glitch Occoured, Please DM the admin in the 'MS in US' community group")
-    window.location.href = "/"
-    return
-  }
-
   useEffect(() => {
     const verifyPayment = async () => {
-      const userId = user.id
+      if (!user) {
+        if (typeof window !== "undefined") {
+          alert("Some Technical Glitch Occoured, Please DM the admin in the 'MS in US' community group");
+          window.location.href = "/";
+        }
+        return;
+      }
+
+      const userId = user.id;
 
       try {
         const response = await fetch('/api/updateMembership', {
@@ -43,11 +46,9 @@ const PaymentVerify: React.FC = () => {
     };
 
     verifyPayment();
-  }, [push]);
+  }, [push, user]);
 
-  return(
-    <LoadingSpinner/>
-  )
+  return <LoadingSpinner />;
 };
 
 export default PaymentVerify;

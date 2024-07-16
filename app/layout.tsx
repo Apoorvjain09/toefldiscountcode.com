@@ -4,7 +4,6 @@ import "./globals.css";
 import Sidebar from "@/components/sidebar/sidebar";
 import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
-import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
 
 
@@ -30,7 +29,6 @@ export default function RootLayout({
               </div>
             </div>
           </main>
-          <Analytics />
         </body>
       </html>
     </ClerkProvider>

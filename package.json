@@ -32,6 +32,7 @@
     "react-audio-player": "^0.17.0",
     "react-chartjs-2": "^5.2.0",
     "react-countdown-circle-timer": "^3.2.1",
+    "react-datepicker": "^7.3.0",
     "react-dom": "^18",
     "react-draggable": "^4.4.6",
     "react-hook-form": "^7.51.5",

@@ -82,7 +82,7 @@ const UniversityAcceptanceRates = () => {
         <div className="mt-12 text-center">
           <a
             target='_blank'
-            href="https://www.dropbox.com/scl/fi/rh6adxjlci8oe3zxg6sbe/Universities-list-Counseling.xlsx?rlkey=5iav0nyd6wwm8sp3bxgq0lv62&st=bwh4x1v2&dl=0"
+            href="https://www.dropbox.com/scl/fi/yblihx5vkjb8di02zkt8s/Universities-list-Counseling.xlsx?rlkey=v6gby5s7vwdwneptj719hwfbc&st=uz1crpk1&raw=1"
             className="inline-block rounded bg-blue-600 px-12 py-3 text-sm font-bold text-white transition hover:bg-blue-700 focus:outline-none focus:ring focus:ring-yellow-400"
           >
             View All

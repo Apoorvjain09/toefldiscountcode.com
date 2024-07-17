@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [loading, setLoading] = useState(true);
   const intervalRef = useRef(null);
 
   const slides = [
@@ -17,7 +18,7 @@ const Carousel = () => {
     if (!paused) {
       intervalRef.current = setInterval(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-      }, 2000); // Change slide every 1 second
+      }, 2000); // Change slide every 2 seconds
     } else {
       clearInterval(intervalRef.current);
     }
@@ -31,8 +32,15 @@ const Carousel = () => {
     setTimeout(() => setPaused(false), 10000); // Pause for 10 seconds
   };
 
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
   return (
     <div id="indicators-carousel" className="relative w-full" data-carousel="static">
+      {loading && (
+        <div className="h-full w-64 md:w-96 bg-gray-300 animate-pulse rounded-lg mx-auto absolute inset-0 z-10"></div>
+      )}
       <div className="relative h-64 w-64 mx-auto overflow-hidden rounded-lg md:h-96 md:w-96">
         {slides.map((slide, index) => (
           <div
@@ -44,6 +52,7 @@ const Carousel = () => {
               src={slide}
               className="block w-full h-full object-cover"
               alt={`Slide ${index + 1}`}
+              onLoad={index === 0 ? handleImageLoad : undefined}
             />
           </div>
         ))}

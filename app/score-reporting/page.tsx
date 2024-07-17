@@ -10,19 +10,19 @@ import Main from "./main";
 const dataQA = [
     {
         question: "How do I get free application guidance for TOEFL?",
-        answer: "Simply join our WhatsApp group! We offer free, step-by-step assistance to help you with your application process."
+        answer: "Simply join our WhatsApp group! We offer free, step-by-step assistance to help you with your application process or contact us at +91 8802-8801-81."
     },
     {
-        question: "Can I still get codes if I have already completed my application?",
-        answer: "Absolutely! Even if your application is already done, joining our group gives you access to TOEFL voucher codes and a supportive community."
+        question: "Can I still get assistance if I have already completed my application?",
+        answer: "Absolutely! Even if your application is already done, joining our group gives you access to expert assistance and a supportive community."
     },
     {
         question: "What support can I expect after joining the WhatsApp group?",
         answer: "Our community provides continuous support for your academic needs, from application tips to study resources for TOEFL preparation."
     },
     {
-        question: "Are the TOEFL voucher codes really free?",
-        answer: "Yes, our TOEFL voucher codes are provided for free to members of our WhatsApp group as part of our commitment to your educational journey."
+        question: "Are the TOEFL test voucher codes really free?",
+        answer: "Yes, our TOEFL test voucher codes are provided for free to members of our WhatsApp group as part of our commitment to your educational journey."
     },
 ]
 

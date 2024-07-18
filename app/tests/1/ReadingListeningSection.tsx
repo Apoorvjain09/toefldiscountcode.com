@@ -8,9 +8,15 @@ import Draggable from 'react-draggable';
 import WritingSection from './WritingSection';
 import SpeakingSection from './SpeakingSection';
 import ResultsDashboard from './ResultsDashboard';
-
+import { useUser } from '@clerk/nextjs';
 
 const Test1 = () => {
+    const { user } = useUser()
+    if (!user) {
+        alert("please sign in")
+        return
+    }
+
     const [stage, setStage] = useState<'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('instructions');
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState<number[]>(Array(20).fill(-1));
@@ -354,7 +360,7 @@ const Test1 = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ values: { message: reportMessage } }),
+                body: JSON.stringify({ values: { message: reportMessage, userid: user.id } }),
             });
 
             if (response.ok) {
@@ -386,35 +392,35 @@ const Test1 = () => {
             </div>
 
             {showReportModal && (
-                    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-                        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-                            <h2 className="text-xl font-bold mb-4">Report an Error</h2>
-                            <textarea
-                                value={reportMessage}
-                                onChange={(e) => setReportMessage(e.target.value)}
-                                className="w-full p-2 border border-gray-300 rounded-lg mb-4"
-                                rows={4}
-                                placeholder="Describe the error you faced"
-                            />
-                            {error && <p className="text-red-500 mb-4">{error}</p>}
-                            {success && <p className="text-green-500 mb-4">{success}</p>}
-                            <div className="flex justify-end gap-4">
-                                <button
-                                    onClick={() => setShowReportModal(false)}
-                                    className="bg-gray-500 text-white py-2 px-4 rounded-lg"
-                                >
-                                    Cancel
-                                </button>
-                                <button
-                                    onClick={handleReportSubmit}
-                                    className="bg-blue-600 text-white py-2 px-4 rounded-lg"
-                                    disabled={loading}
-                                >
-                                    {loading ? "Sending..." : "Submit"}
-                                </button>
-                            </div>
+                <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+                    <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                        <h2 className="text-xl font-bold mb-4">Report an Error</h2>
+                        <textarea
+                            value={reportMessage}
+                            onChange={(e) => setReportMessage(e.target.value)}
+                            className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+                            rows={4}
+                            placeholder="Describe the error you faced"
+                        />
+                        {error && <p className="text-red-500 mb-4">{error}</p>}
+                        {success && <p className="text-green-500 mb-4">{success}</p>}
+                        <div className="flex justify-end gap-4">
+                            <button
+                                onClick={() => setShowReportModal(false)}
+                                className="bg-gray-500 text-white py-2 px-4 rounded-lg"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleReportSubmit}
+                                className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+                                disabled={loading}
+                            >
+                                {loading ? "Sending..." : "Submit"}
+                            </button>
                         </div>
                     </div>
+                </div>
             )}
             {stage === 'instructions' && (
                 <div className="bg-white shadow p-6 rounded mb-4">

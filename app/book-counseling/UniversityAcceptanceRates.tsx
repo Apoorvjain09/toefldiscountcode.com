@@ -63,7 +63,7 @@ const UniversityAcceptanceRates = () => {
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-3xl font-bold text-blue-600">ToeflGoGlobal Acceptance Rate</h2>
-          <p className="mt-4 text-gray-500 text-xl">
+          <p className="mt-4 text-gray-500 sm:text-xl">
             On an average <span className="font-bold">ToeflGlobian have 2X</span> more chances of landing a dream admit in top universities than through other consultancies or themselves
           </p>
         </div>

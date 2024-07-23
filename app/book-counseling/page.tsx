@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="text-center lg:text-left mt-5 flex flex-col lg:flex-row justify-between items-center p-10 gap-10 lg:gap-0">
+            <div className="text-center lg:text-left mt-5 flex flex-col lg:flex-row justify-between items-center p-5 sm:p-10 gap-10 lg:gap-0">
                 {/* Left Section */}
                 <div className="lg:w-1/2">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">

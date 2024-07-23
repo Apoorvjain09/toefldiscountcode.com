@@ -47,9 +47,12 @@ const timeSlots = [
 const BookCall = () => {
     const [degree, setDegree] = useState<string | null>(null);
     const [studyYear, setStudyYear] = useState<string | null>(null);
+    const [email, setEmail] = useState<string | null>(null);
+    const [mobile, setMobile] = useState<string | null>(null);
     const [countryCode, setCountryCode] = useState<string>('+91');
     const [step, setStep] = useState<number>(1);
-
+    const [validationErrors, setValidationErrors] = useState<{ degree?: string; studyYear?: string; email?: string; mobile?: string }>({});
+    const [validationErrorsStep2, setValidationErrorsStep2] = useState<{ selectedDate?: string; selectedTime?: string; firstName?: string; lastName?: string; course?: string; stage?: string }>({});
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
     const [selectedTime, setSelectedTime] = useState<string>('');
     const [firstName, setFirstName] = useState<string>('');
@@ -66,8 +69,29 @@ const BookCall = () => {
     };
 
     const slotBooking = () => {
-        setStep(2);
+        let errors: { degree?: string; studyYear?: string; email?: string; mobile?: string } = {};
+
+        if (!degree) {
+            errors.degree = 'Please select a degree';
+        }
+        if (!studyYear) {
+            errors.studyYear = 'Please select a study year';
+        }
+        if (!email) {
+            errors.email = 'Please enter your email';
+        }
+        if (!mobile) {
+            errors.mobile = 'Please enter your mobile number';
+        }
+
+        if (Object.keys(errors).length > 0) {
+            setValidationErrors(errors);
+        } else {
+            setValidationErrors({});
+            setStep(2);
+        }
     };
+
 
     const handleDateChange = (date: Date | null) => {
         setSelectedDate(date);
@@ -77,43 +101,75 @@ const BookCall = () => {
     const maxDate = new Date();
     maxDate.setDate(today.getDate() + 5);
 
+    const [finishloading, setFinishLoading] = useState(false);
 
     const handleFinishBooking = async () => {
-        const values = {
-            degree,
-            studyYear,
-            countryCode,
-            selectedDate,
-            selectedTime,
-            firstName,
-            lastName,
-            course,
-            stage
-        };
+        let errors: { selectedDate?: string; selectedTime?: string; firstName?: string; lastName?: string; course?: string; stage?: string } = {};
 
-        try {
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ values })
-            });
-
-            const data = await response.json();
-            if (response.ok) {
-                // alert('Email sent successfully');
-            } else {
-                // console.error('Failed to send email:', data.error);
-                // alert('Failed to send email');
-            }
-        } catch (error) {
-            // console.error('Error sending email:', error);
-            // alert('Error sending email');
+        if (!selectedDate) {
+            errors.selectedDate = 'Please select a date';
+        }
+        if (!selectedTime) {
+            errors.selectedTime = 'Please select a time slot';
+        }
+        if (!firstName) {
+            errors.firstName = 'Please enter your first name';
+        }
+        if (!lastName) {
+            errors.lastName = 'Please enter your last name';
+        }
+        if (!course) {
+            errors.course = 'Please enter your course of interest';
+        }
+        if (!stage) {
+            errors.stage = 'Please select your current stage';
         }
 
-        setStep(3);
+        if (Object.keys(errors).length > 0) {
+            setValidationErrorsStep2(errors);
+        } else {
+            setFinishLoading(true)
+            setValidationErrorsStep2({});
+            const values = {
+                degree,
+                studyYear,
+                email,
+                countryCode,
+                mobile,
+                selectedDate,
+                selectedTime,
+                firstName,
+                lastName,
+                course,
+                stage
+            };
+
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ values })
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    // alert('Email sent successfully');
+                } else {
+                    // console.error('Failed to send email:', data.error);
+                    // alert('Failed to send email');
+                }
+            } catch (error) {
+                // console.error('Error sending email:', error);
+                // alert('Error sending email');
+            } finally {
+                setFinishLoading(false); // Stop loading
+                setStep(3);
+            }
+        }
     };
+
 
     return (
         <div className="bg-gray-100  flex justify-center items-center">
@@ -153,6 +209,7 @@ const BookCall = () => {
                                         Master's
                                     </button>
                                 </div>
+                                {validationErrors.degree && <p className="text-red-500 text-sm">{validationErrors.degree}</p>}
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700">When are you going to study abroad?</label>
@@ -168,6 +225,7 @@ const BookCall = () => {
                                         </button>
                                     ))}
                                 </div>
+                                {validationErrors.studyYear && <p className="text-red-500 text-sm">{validationErrors.studyYear}</p>}
                             </div>
                             <div className="mb-4 rounded-md">
                                 <label className="block text-gray-700">How are you planning your study abroad process?</label>
@@ -183,9 +241,11 @@ const BookCall = () => {
                                 <label className="block text-gray-700">Email ID</label>
                                 <input
                                     type="email"
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full mt-2 px-4 py-2 border rounded-md"
                                     placeholder="eg: example@gmail.com"
                                 />
+                                {validationErrors.email && <p className="text-red-500 text-sm">{validationErrors.email}</p>}
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700">Mobile number</label>
@@ -203,10 +263,12 @@ const BookCall = () => {
                                     </select>
                                     <input
                                         type="tel"
+                                        onChange={(e) => setMobile(e.target.value)}
                                         className="w-full px-4 py-2 border rounded-r-md"
                                         placeholder="eg. 12345 78901"
                                     />
                                 </div>
+                                {validationErrors.mobile && <p className="text-red-500 text-sm">{validationErrors.mobile}</p>}
                             </div>
                             <div className="mb-4">
                                 <button onClick={slotBooking} className="block w-full bg-orange-500 text-white text-center py-2 px-4 rounded hover:bg-orange-600">
@@ -220,7 +282,7 @@ const BookCall = () => {
                     <div className="lg:w-1/2 p-6">
                         <form onSubmit={(e) => e.preventDefault()} className='border-2 p-8 rounded-lg shadow-lg bg-white'>
                             <div className="mb-4">
-                                <label className="block text-gray-700">Select date</label>
+                                <label className="block text-gray-700">Select Booking date</label>
                                 <DatePicker
                                     selected={selectedDate}
                                     onChange={handleDateChange}
@@ -229,6 +291,7 @@ const BookCall = () => {
                                     className="w-full mt-2 px-4 py-2 border rounded-md"
                                     placeholderText="Select a date"
                                 />
+                                {validationErrorsStep2.selectedDate && <p className="text-red-500 text-sm">{validationErrorsStep2.selectedDate}</p>}
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700">Select time</label>
@@ -242,6 +305,7 @@ const BookCall = () => {
                                         <option key={time} value={time}>{time}</option>
                                     ))}
                                 </select>
+                                {validationErrorsStep2.selectedTime && <p className="text-red-500 text-sm">{validationErrorsStep2.selectedTime}</p>}
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700">First name</label>
@@ -252,6 +316,7 @@ const BookCall = () => {
                                     className="w-full mt-2 px-4 py-2 border rounded-md"
                                     placeholder="First name"
                                 />
+                                {validationErrorsStep2.firstName && <p className="text-red-500 text-sm">{validationErrorsStep2.firstName}</p>}
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700">Last name</label>
@@ -262,6 +327,7 @@ const BookCall = () => {
                                     className="w-full mt-2 px-4 py-2 border rounded-md"
                                     placeholder="Last name"
                                 />
+                                {validationErrorsStep2.lastName && <p className="text-red-500 text-sm">{validationErrorsStep2.lastName}</p>}
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700">Course you’re interested in</label>
@@ -273,6 +339,7 @@ const BookCall = () => {
                                     placeholder="Search your course"
                                     list="courses"
                                 />
+                                {validationErrorsStep2.course && <p className="text-red-500 text-sm">{validationErrorsStep2.course}</p>}
                                 <datalist id="courses">
                                     {courses.map((course) => (
                                         <option key={course} value={course} />
@@ -291,12 +358,24 @@ const BookCall = () => {
                                         <option key={stage} value={stage}>{stage}</option>
                                     ))}
                                 </select>
+                                {validationErrorsStep2.stage && <p className="text-red-500 text-sm">{validationErrorsStep2.stage}</p>}
                             </div>
                             <div className="mb-4">
-                                <button onClick={handleFinishBooking} className="block w-full bg-orange-500 text-white text-center py-2 px-4 rounded hover:bg-orange-600">
-                                    Finish Booking
+                                <button
+                                    onClick={handleFinishBooking}
+                                    className="block w-full bg-orange-500 text-white text-center py-2 px-4 rounded hover:bg-orange-600"
+                                    disabled={finishloading}>
+                                    {finishloading ? (
+                                        <div className="flex justify-center items-center">
+                                            <svg className="animate-spin h-5 w-5 mr-3 border-t-2 border-r-2 border-white rounded-full" viewBox="0 0 24 24"></svg>
+                                            Scheduling Slot...
+                                        </div>
+                                    ) : (
+                                        "Finish Booking"
+                                    )}
                                 </button>
                             </div>
+
                         </form>
                     </div>
                 )}

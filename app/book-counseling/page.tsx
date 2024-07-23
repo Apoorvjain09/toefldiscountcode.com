@@ -17,7 +17,7 @@ const Home = () => {
             <div className="text-center lg:text-left mt-5 flex flex-col lg:flex-row justify-between items-center p-10 gap-10 lg:gap-0">
                 {/* Left Section */}
                 <div className="lg:w-1/2">
-                    <h1 className="text-4xl text-left sm:text-5xl font-bold mb-4">
+                    <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                         Entering the World's <span className="text-blue-600">Leading Universities</span> Just Got Easier!
                     </h1>
                     <p className="text-gray-600 mb-6">

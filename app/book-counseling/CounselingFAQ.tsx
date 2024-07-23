@@ -184,7 +184,7 @@ export default function CounselingFAQ() {
                 </div>
             </details>
 
-            <details className="border-b-2 border-gray-600 group p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="hidden xl:flex border-b-2 border-gray-600 group p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
                     <h2 className="text-lg font-medium">What is the difference between TGG Premium and other paid counselling services?</h2>
 
@@ -244,7 +244,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Specialised editing service that involves reviewing, guidance and <br/>mentoring that shapes unique and winning SOPs for every student
+                                    Specialised editing service that involves reviewing, guidance and <br />mentoring that shapes unique and winning SOPs for every student
                                 </td>
                                 <td className="px-6 py-4">
                                     Promise to write the entire SOP, LORs ending up with unioriginal and stereotype applications
@@ -252,7 +252,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Multiple brainstorming sessions to help students bring<br/> out their best stories and showcase achievements
+                                    Multiple brainstorming sessions to help students bring<br /> out their best stories and showcase achievements
                                 </td>
                                 <td className="px-6 py-4">
                                     One sided questionnaire based approach/ single one on one counselling session
@@ -260,7 +260,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Organised database of 90,000+ courses from 2500+ universities, their deadlines<br/>, fees, application process and more + tools to access this data for the counsellors and students
+                                    Organised database of 90,000+ courses from 2500+ universities, their deadlines<br />, fees, application process and more + tools to access this data for the counsellors and students
                                 </td>
                                 <td className="px-6 py-4">
                                     Human dependence for manually checking this data from university websites
@@ -276,7 +276,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Premium Dashboard for students to help them shortlist universities, manage documents, interact with <br/>alumni and community, build SOPs with AI, get notified before deadlines
+                                    Premium Dashboard for students to help them shortlist universities, manage documents, interact with <br />alumni and community, build SOPs with AI, get notified before deadlines
                                 </td>
                                 <td className="px-6 py-4">
                                     No additional features and all communications through email, docs and spreadsheets
@@ -295,7 +295,7 @@ export default function CounselingFAQ() {
                 </div>
             </details>
 
-            <details className="border-b-2 border-gray-600 group p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="hidden xl:flex border-b-2 border-gray-600 group p-6 [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
                     <h2 className="text-lg font-medium">What is the difference between TGG Premium and taking guidance from friends / family?</h2>
 
@@ -332,8 +332,8 @@ export default function CounselingFAQ() {
                     </span>
                 </summary>
 
-                <div className="mt-4 leading-relaxed text-gray-700">
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <div className="overflow-hidde mt-4 leading-relaxed text-gray-700">
+                    <table className="text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" className="px-6 py-3">
@@ -347,7 +347,7 @@ export default function CounselingFAQ() {
                         <tbody>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Seasoned Counsellors and database of 10k + admits help gauge student ability accurately
+                                    Seasoned Counsellors and database of 10k + admits<br /> help gauge student ability accurately
                                 </td>
                                 <td className="px-6 py-4">
                                     Self diagnosis leads to incorrect selection of universities
@@ -363,7 +363,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    No chance of missed opportunities such as scholarships or receiving rejects because of unclear university requirements
+                                    No chance of missed opportunities such as scholarships or <br /> receiving rejects because of unclear university requirements
                                 </td>
                                 <td className="px-6 py-4">
                                     Admission rejects because of misunderstanding university requirements
@@ -371,7 +371,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Successfully fill profile gaps and showcase achievements to admissions committee
+                                    Successfully fill profile gaps and showcase<br /> achievements to admissions committee
                                 </td>
                                 <td className="px-6 py-4">
                                     Unable to justify backlogs or change of streams successfully and inability to display achievements effectively
@@ -387,7 +387,7 @@ export default function CounselingFAQ() {
                             </tr>
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    Counsellor is your coach and cheerleader to keep you determined and focused throughout
+                                    Counsellor is your coach and cheerleader to keep<br /> you determined and focused throughout
                                 </td>
                                 <td className="px-6 py-4">
                                     Lack of motivation; anxiety and panic in many situations

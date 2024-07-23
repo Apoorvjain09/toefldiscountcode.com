@@ -8,7 +8,7 @@ import HowWeDoIt from './HowDoWeDoIt';
 const Home = () => {
 
     const BookAppointment = () => {
-        window.location.href="/book-counseling/slot-selection"
+        window.location.href = "/book-counseling/slot-selection"
         return
     }
 
@@ -18,10 +18,10 @@ const Home = () => {
                 {/* Left Section */}
                 <div className="lg:w-1/2">
                     <h1 className="text-5xl font-bold mb-4">
-                        Getting into the World's <span className="text-blue-600">Top-Most Universities</span> Just Got Easier!
+                        Entering the World's <span className="text-blue-600">Leading Universities</span> Just Got Easier!
                     </h1>
                     <p className="text-gray-600 mb-6">
-                        Our tech-backed, personalized test-prep & counseling service boosts your chances of acceptance into the world's top 200 universities by 3x, often with scholarships.
+                        Our tech-supported counseling service, backed by over 20 years of experience and recognized in the World Record Book, doubles your chances of getting into the world's top 200 universities, often with scholarships.
                     </p>
                     <button onClick={BookAppointment} className="bg-blue-600 text-white rounded-lg text-xl py-3 px-12 hover:bg-blue-700 font-bold">
                         Schedule A Call
@@ -64,7 +64,7 @@ const Home = () => {
 
             <UniversityAcceptanceRates />
 
-            <HowWeDoIt/>
+            <HowWeDoIt />
 
             <CounselingFAQ />
 

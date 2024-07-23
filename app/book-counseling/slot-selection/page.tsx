@@ -123,8 +123,8 @@ const BookCall = () => {
                     <div className="relative w-full">
                         <Image
                             src={BookCallWithExperts}
-                            height = {1200}
-                            width ={700}
+                            height={1200}
+                            width={700}
                             alt="Banner"
                             className='rounded-lg'
                         />
@@ -169,7 +169,7 @@ const BookCall = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="mb-4">
+                            <div className="mb-4 rounded-md">
                                 <label className="block text-gray-700">How are you planning your study abroad process?</label>
                                 <select className="w-full mt-2 px-4 py-2 border rounded-md shadow-md">
                                     <option>Select</option>

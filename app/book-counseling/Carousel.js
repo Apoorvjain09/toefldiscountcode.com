@@ -10,7 +10,7 @@ const Carousel = () => {
     'https://www.dropbox.com/scl/fi/gclr2p3lsfaqbeg2p7ubt/Slider1.png?rlkey=txj58q47l8na5go28bw85lhoz&st=h7op6rk3&raw=1',
     'https://www.dropbox.com/scl/fi/06j454uijqepr39aszrnz/Slider2.png?rlkey=s36oiocqzewsjs4ekndnnknra&st=ws4d21c1&raw=1',
     'https://www.dropbox.com/scl/fi/tmx7fpe111qnfvkhjm46k/Slider3.png?rlkey=o9ri24dat5l4e2qbcit1esjhc&st=e6xizy6j&raw=1',
-    'https://www.dropbox.com/scl/fi/juev4aavnn7na63nz38we/Slider4.png?rlkey=xq9mx0ir7a5jrehidmh2wi9lv&st=3ltspfru&raw=1',
+    'https://www.dropbox.com/scl/fi/yt3ael295ni9qfmclu6wh/Slider4.png?rlkey=2j9xww1jsgagoqzxdw3sa4q5v&st=g0hyu7vd&raw=1',
     'https://www.dropbox.com/scl/fi/xxoe92rmc32phe9uin5zu/Slider5.png?rlkey=ruw42bzpge5njdwpodf89sz6b&st=ebdfj5db&raw=1',
   ];
 

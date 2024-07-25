@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
 import { useEffect } from "react";
+import Head from "next/head";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,41 +18,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(registrations => {
-        for (let registration of registrations) {
-          registration.unregister();
-        }
-      }).catch(error => {
-        console.error(`Service worker unregistration failed: ${error}`);
-      });
-    }
-
-    if ('caches' in window) {
-      caches.keys().then(names => {
-        for (let name of names) {
-          caches.delete(name);
-        }
-      });
-    }
-  }, []);
-
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <GoogleAnalyticsTracking />
-        <body>
-          <main className="">
-            <div className="p-4 sm:ml-64">
-              <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-                <Sidebar />
-                {children}
+    <>
+      <ClerkProvider>
+        <html lang="en">
+          <head>
+            <link rel="manifest" href="/manifest.json" />
+            <meta name="theme-color" content="#000000" />
+            <link rel="apple-touch-icon" href="/assets/goglobal1.webp" />
+          </head>
+          <GoogleAnalyticsTracking />
+          <body>
+            <main className="">
+              <div className="p-4 sm:ml-64">
+                <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+                  <Sidebar />
+                  {children}
+                </div>
               </div>
-            </div>
-          </main>
-        </body>
-      </html>
-    </ClerkProvider>
+            </main>
+          </body>
+        </html>
+      </ClerkProvider>
+    </>
   );
 }

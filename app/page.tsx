@@ -1,34 +1,74 @@
 "use client";
 import { Seo } from "@/components/Head/Seo";
 import FeaturesSection from "@/components/ui/FeaturesSectionLandingPage";
-import { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
 import { useUser } from "@clerk/nextjs";
 import Alert from "@/components/ui/Alert";
 
 const TestCard = lazy(() => import("@/components/ui/TestCard"));
 
+type BeforeInstallPromptEvent = Event & {
+    prompt: () => void;
+    userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+};
 
 export default function Page() {
     const [showAlert, setShowAlert] = useState(false);
     const [showTests, setShowTests] = useState(false);
+    const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
     const { isSignedIn } = useUser();
 
     const handleGetStartedClick = () => {
         if (isSignedIn) {
             setShowTests(true);
-            return
+            return;
+        } else {
+            window.location.href = "https://accounts.toeflgoglobal.com/sign-up?redirect_url=https%3A%2F%2Fwww.toeflgoglobal.com%2F";
+            return;
         }
-        else{
-            // setShowAlert(true);
-            window.location.href="https://accounts.toeflgoglobal.com/sign-up?redirect_url=https%3A%2F%2Fwww.toeflgoglobal.com%2F"
-            return
-        }
-
     };
 
     const handleCloseAlert = () => {
         setShowAlert(false);
-      };
+    };
+
+    const handleInstallClick = () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult: { outcome: 'accepted' | 'dismissed' }) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the A2HS prompt');
+                } else {
+                    console.log('User dismissed the A2HS prompt');
+                }
+                setDeferredPrompt(null);
+            });
+        }
+    };
+
+    useEffect(() => {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/custom-sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+
+        const handleBeforeInstallPrompt = (e: BeforeInstallPromptEvent) => {
+            console.log('beforeinstallprompt event fired');
+            e.preventDefault();
+            setDeferredPrompt(e);
+        };
+
+        window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener);
+
+        return () => {
+            window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener);
+        };
+    }, []);
 
     return (
         <>
@@ -48,6 +88,11 @@ export default function Page() {
             {!showTests ? (
                 <div>
                     <FeaturesSection onGetStartedClick={handleGetStartedClick} />
+                    {deferredPrompt && (
+                        <button onClick={handleInstallClick}>
+                            Install App
+                        </button>
+                    )}
                 </div>
             ) : (
                 <Suspense fallback={<div></div>}>
@@ -64,4 +109,3 @@ export default function Page() {
         </>
     );
 }
-

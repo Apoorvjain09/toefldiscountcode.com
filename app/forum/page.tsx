@@ -1,7 +1,7 @@
 "use client";
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { Lock } from 'lucide-react';
 import { lazy, Suspense } from 'react';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
 const PublicPosts = lazy(() => import('./PublicPosts'));
 

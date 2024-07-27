@@ -18,6 +18,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  useEffect(() => {
+    const clearCacheAndUnregister = () => {
+      // Unregister the service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          for (let registration of registrations) {
+            registration.unregister().then(() => {
+              console.log('Service worker unregistered');
+            });
+          }
+        });
+      }
+
+      // Clear all caches
+      if ('caches' in window) {
+        caches.keys().then(cacheNames => {
+          cacheNames.forEach(cacheName => {
+            caches.delete(cacheName).then(() => {
+              console.log(`Cache ${cacheName} cleared`);
+            });
+          });
+        });
+      }
+    };
+
+    clearCacheAndUnregister();
+  }, []);
+
   return (
     <>
       <ClerkProvider>

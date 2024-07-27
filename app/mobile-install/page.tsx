@@ -10,6 +10,33 @@ export default function InstallPage() {
     const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
 
     useEffect(() => {
+        // Unregister the service worker and clear the cache
+        const clearCacheAndUnregister = () => {
+            // Unregister the service worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                    for (let registration of registrations) {
+                        registration.unregister().then(() => {
+                            console.log('Service worker unregistered');
+                        });
+                    }
+                });
+            }
+
+            // Clear all caches
+            if ('caches' in window) {
+                caches.keys().then(cacheNames => {
+                    cacheNames.forEach(cacheName => {
+                        caches.delete(cacheName).then(() => {
+                            console.log(`Cache ${cacheName} cleared`);
+                        });
+                    });
+                });
+            }
+        };
+
+        clearCacheAndUnregister();
+
         const handleBeforeInstallPrompt = (e: BeforeInstallPromptEvent) => {
             console.log('beforeinstallprompt event fired');
             e.preventDefault();

@@ -32,20 +32,6 @@ export default function Page() {
         setShowAlert(false);
     };
 
-    const handleInstallClick = () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult: { outcome: 'accepted' | 'dismissed' }) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('User accepted the A2HS prompt');
-                } else {
-                    console.log('User dismissed the A2HS prompt');
-                }
-                setDeferredPrompt(null);
-            });
-        }
-    };
-
     useEffect(() => {
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/custom-sw.js')
@@ -88,11 +74,6 @@ export default function Page() {
             {!showTests ? (
                 <div>
                     <FeaturesSection onGetStartedClick={handleGetStartedClick} />
-                    {deferredPrompt && (
-                        <button onClick={handleInstallClick}>
-                            Install App
-                        </button>
-                    )}
                 </div>
             ) : (
                 <Suspense fallback={<div></div>}>

@@ -8,8 +8,8 @@ interface TestCardProps {
 const TestCard: React.FC<TestCardProps> = ({ testNumber }) => {
 
     const isFreeTest = testNumber === 1 || testNumber === 2;
-    // const testTitle = isFreeTest ? 'Free Test' : `Test ${testNumber}`;
-    const testTitle = isFreeTest ? `Test ${testNumber}` : `Test ${testNumber}`;
+    const testTitle = isFreeTest ? 'Free Test' : `Test ${testNumber}`;
+    // const testTitle = isFreeTest ? `Test ${testNumber}` : `Test ${testNumber}`;
 
     return (
         <div className="mt-10 w-full sm:w-[auto] flex items-center justify-center ">

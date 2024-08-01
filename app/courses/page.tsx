@@ -32,11 +32,11 @@ export default function page() {
             </section>
 
             <div className="flex flex-wrap p-5 gap-5 justify-evenly">
-                <a href="/courses/verbal-course" className="block rounded-lg p-4 shadow-sm shadow-indigo-100">
+                <a href="/courses/verbal-course" className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100">
                     <img
                         alt=""
                         src="assets/verbal-course-banner.png"
-                        className="h-64 w-full rounded-md object-cover"
+                        className="sm:h-64 w-full rounded-md object-cove"
                     />
 
                     <div className="mt-2">
@@ -126,11 +126,11 @@ export default function page() {
                         </div>
                     </div>
                 </a>
-                <a href="/courses/quant-course" className="block rounded-lg p-4 shadow-sm shadow-indigo-100">
+                <a href="/courses/quant-course" className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100">
                     <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                        className="h-56 w-full rounded-md object-cover"
+                        src="https://www.dropbox.com/scl/fi/bnv3tio9lv26hfl6uxfa1/Quant_banner.png?rlkey=157scoylsfn6ocbks61vazrje&st=zby55ofw&raw=1"
+                        className="sm:h-64 w-full rounded-md object-cover"
                     />
 
                     <div className="mt-2">
@@ -220,11 +220,11 @@ export default function page() {
                         </div>
                     </div>
                 </a>
-                <a href="/courses/toefl-course" className="block rounded-lg p-4 shadow-sm shadow-indigo-100">
+                <a href="/courses/toefl-course" className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100">
                     <img
                         alt=""
-                        src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                        className="h-56 w-full rounded-md object-cover"
+                        src="https://www.dropbox.com/scl/fi/p9hkf8rsso0q2e072k3ko/toefl_banner.png?rlkey=8x2cy0odie1iz1207jlo8dkas&st=fw4bb3kg&raw=1"
+                        className="sm:h-64 w-full rounded-md object-cover"
                     />
 
                     <div className="mt-2">
@@ -315,6 +315,7 @@ export default function page() {
                     </div>
                 </a>
             </div>
+
             <footer className="rounded-b-lg bg-gray-100">
                 <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
                     <div className="lg:flex lg:items-center lg:justify-between">

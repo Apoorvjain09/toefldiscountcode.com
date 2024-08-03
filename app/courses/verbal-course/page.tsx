@@ -1,10 +1,7 @@
 "use client";
 import { useState, useEffect, Suspense } from 'react';
-import dynamic from 'next/dynamic';
 import { courseData, Lecture } from './courseData';
-
 import Sidebar from '@/app/vocabulary-course/sidebar';
-
 import VideoPlayer from './Videoplayer';
 import { useUser } from '@clerk/nextjs';
 
@@ -12,15 +9,22 @@ const initialLecture = courseData.sections[0].chapters[0].lectures[0];
 
 const CoursePage: React.FC = () => {
   const [currentLecture, setCurrentLecture] = useState<Lecture>(initialLecture);
-  const thumbnailUrl = "https://www.dropbox.com/scl/fi/v4wd061uoom1unvx6qyiq/verbal_banner_with_play.png?rlkey=k05d81wn5c4d18873zk9e1bgp&st=fihlzmlv&raw=1"
-  const {user} = useUser();
+  const [loading, setLoading] = useState(true);
+  const thumbnailUrl = "https://www.dropbox.com/scl/fi/v4wd061uoom1unvx6qyiq/verbal_banner_with_play.png?rlkey=k05d81wn5c4d18873zk9e1bgp&st=fihlzmlv&raw=1";
+  const { user, isLoaded } = useUser();
 
   useEffect(() => {
-    const hasMembership = user?.publicMetadata?.["Verbal_course"] === "true"
-    if (!hasMembership) {
-      window.location.href = "/courses"
+    if (isLoaded) {
+      const hasMembership = user?.publicMetadata?.["Verbal_course"] === "true";
+      if (!hasMembership) {
+        window.location.href = "/courses";
+      } else {
+        setLoading(false);
+      }
     }
+  }, [isLoaded, user]);
 
+  useEffect(() => {
     // Disable right-click
     const handleContextMenu = (event: MouseEvent) => {
       event.preventDefault();
@@ -46,6 +50,10 @@ const CoursePage: React.FC = () => {
     };
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="flex">
       <Suspense fallback={<div>Loading Sidebar...</div>}>
@@ -61,3 +69,8 @@ const CoursePage: React.FC = () => {
 };
 
 export default CoursePage;
+
+//data
+//adip.bali => assign till 25oct2024
+//shakshigre => assign till 310ct2024
+

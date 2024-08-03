@@ -23,7 +23,7 @@ const CoursePage: React.FC = () => {
       window.location.href = "/courses"
     }
 
-    // Disable right-click
+    // Disable right-click function
     const handleContextMenu = (event: MouseEvent) => {
       event.preventDefault();
     };

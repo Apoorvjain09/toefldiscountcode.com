@@ -232,13 +232,13 @@ export default function page() {
                             <div>
                                 <dt className="sr-only">Price</dt>
 
-                                <dd className="text-sm text-gray-500">$240,000</dd>
+                                <dd className="text-sm text-gray-500">$120.00</dd>
                             </div>
 
                             <div>
                                 <dt className="sr-only">Address</dt>
 
-                                <dd className="font-medium">123 Wallaby Avenue, Park Road</dd>
+                                <dd className="font-medium">GRE Quant Masterclass</dd>
                             </div>
                         </dl>
 
@@ -260,9 +260,9 @@ export default function page() {
                                 </svg>
 
                                 <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Parking</p>
+                                    <p className="text-gray-500">Classes</p>
 
-                                    <p className="font-medium">2 spaces</p>
+                                    <p className="font-medium">13 Lectures</p>
                                 </div>
                             </div>
 
@@ -283,9 +283,9 @@ export default function page() {
                                 </svg>
 
                                 <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Bathroom</p>
+                                    <p className="text-gray-500">Length</p>
 
-                                    <p className="font-medium">2 rooms</p>
+                                    <p className="font-medium">26 hours</p>
                                 </div>
                             </div>
 
@@ -306,9 +306,9 @@ export default function page() {
                                 </svg>
 
                                 <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Bedroom</p>
+                                    <p className="text-gray-500">Validity</p>
 
-                                    <p className="font-medium">4 rooms</p>
+                                    <p className="font-medium">1 year</p>
                                 </div>
                             </div>
                         </div>

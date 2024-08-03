@@ -63,3 +63,9 @@ return (
 };
 
 export default CoursePage;
+
+
+
+//data
+//adip.bali => assign till 25oct2024
+//shakshigre => assign till 310ct2024

@@ -14,9 +14,10 @@ const CoursePage: React.FC = () => {
   const [currentLecture, setCurrentLecture] = useState<Lecture>(initialLecture);
   const thumbnailUrl = "https://www.dropbox.com/scl/fi/myaawq2x8hl49t4vfvcez/toefl_banner_with_play.png?rlkey=rubea2fp2k881s50ob9t9mnwz&st=xta4nv44&raw=1"
   const {user} = useUser()
-  
+
   useEffect(() => {
-    if (user?.publicMetadata?.["Quant_course"] === "true") {
+    const hasMembership = user?.publicMetadata?.["Toefl_course"] === "true"
+    if (hasMembership) {
       return
     }else{
       window.location.href = "/courses"

@@ -16,7 +16,8 @@ const CoursePage: React.FC = () => {
   const {user} = useUser();
 
   useEffect(() => {
-    if (user?.publicMetadata?.["Verbal_course"] === "true") {
+    const hasMembership = user?.publicMetadata?.["Verbal_course"] === "true"
+    if (hasMembership) {
       return
     }else{
       window.location.href = "/courses"

@@ -15,13 +15,13 @@ const CoursePage: React.FC = () => {
   const thumbnailUrl = "https://www.dropbox.com/scl/fi/rt471v44clzl8om5z2tcp/quant_banner_with_play.png?rlkey=7er8ivf0j0env6c6uhko4vxf9&st=h1zl20qg&raw=1"
   const { user } = useUser();
 
-  useEffect(() => {
-    //check foe metatada
+  useEffect(()=>{
     const hasMembership = user?.publicMetadata?.["Quant_course"] === "true"
     if (!hasMembership) {
       window.location.href = "/courses"
     }
-
+  })
+  useEffect(() => {
   // Disable right-click
   const handleContextMenu = (event: MouseEvent) => {
     event.preventDefault();

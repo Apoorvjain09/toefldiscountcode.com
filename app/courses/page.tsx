@@ -232,13 +232,13 @@ export default function page() {
                             <div>
                                 <dt className="sr-only">Price</dt>
 
-                                <dd className="text-sm text-gray-500">$120.00</dd>
+                                <dd className="text-sm text-gray-500">$110.00</dd>
                             </div>
 
                             <div>
                                 <dt className="sr-only">Address</dt>
 
-                                <dd className="font-medium">GRE Quant Masterclass</dd>
+                                <dd className="font-medium">Toefl Masterclass</dd>
                             </div>
                         </dl>
 

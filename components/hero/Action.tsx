@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 // Action Component
 const Action = () => {
@@ -21,16 +22,19 @@ const Action = () => {
         >
           Get the Code -&gt;
         </Button>
-        <img
-          src="https://www.dropbox.com/scl/fi/l2h27mvqkwh84p5avhsem/Toefl-voucher-code.png?rlkey=zhv61jc6s4ngnu2m7n11v3jjz&st=mdl9txhf&raw=1"
+        <Image
+          src="/assets/youtube-get-code.png"
           alt="Get Code for Free"
           className="max-h-full max-w-full rounded-lg object-cover shadow-md hidden"
+          width={500}
+          height={500}
         />
-        <img
-          src="https://www.dropbox.com/scl/fi/9ttfkhque77ud9lq0f7ps/toefl-buy-voucher.png?rlkey=2s5nj021aipcr1t2xhxrqi6gj&st=fa2gefqv&raw=1"
+        <Image
+          src="/assets/toefl-buy-voucher.png"
           alt="Buy Voucher"
           className="max-h-full max-w-full rounded-lg object-cover shadow-md hidden"
-          rel="preload"
+          width={500}
+          height={500}
         />
       </div>
 
@@ -48,10 +52,12 @@ const Action = () => {
                 target="_blank"
                 className="h-full w-full flex-1 flex items-center justify-center transform transition-transform duration-300 hover:scale-105"
               >
-                <img
-                  src="https://www.dropbox.com/scl/fi/l2h27mvqkwh84p5avhsem/Toefl-voucher-code.png?rlkey=zhv61jc6s4ngnu2m7n11v3jjz&st=mdl9txhf&raw=1"
+                <Image
+                  src="/assets/youtube-get-code.png"
                   alt="Get Code for Free"
                   className="max-h-full max-w-full rounded-lg object-cover shadow-md"
+                  width={500}
+                  height={500}
                 />
               </Link>
               <Link
@@ -59,11 +65,12 @@ const Action = () => {
                 target="_blank"
                 className="h-full w-full flex-1 flex items-center justify-center transform transition-transform duration-300 hover:scale-105"
               >
-                <img
-                  src="https://www.dropbox.com/scl/fi/9ttfkhque77ud9lq0f7ps/toefl-buy-voucher.png?rlkey=2s5nj021aipcr1t2xhxrqi6gj&st=fa2gefqv&raw=1"
+                <Image
+                  src="/assets/toefl-buy-voucher.png"
                   alt="Buy Voucher"
                   className="max-h-full max-w-full rounded-lg object-cover shadow-md"
-                  rel="preload"
+                  width={500}
+                  height={500}
                 />
               </Link>
             </div>

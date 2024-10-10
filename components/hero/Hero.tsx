@@ -23,8 +23,8 @@ const Hero = () => {
                   "font-bold text-2xl text-center lg:text-start  lg:text-4xl leading-[30px] lg:leading-[40px]  2xl:leading-[55px] py-5 "
                 )}
               >
-                🎓 <span className="font-extrabold">INR 2000 ($25)</span> Discount on TOEFL Registration Fee <br/>
-                🎁 FREE Mock Test & TOEFL ASR worth <span className="font-extrabold">INR 8500 ($100)</span>
+                🎓 <span className="font-extrabold">INR 3,400 ($40)</span> Discount on TOEFL Registration Fee <br />
+                🎁 FREE Mock Test & Shortlisting worth <span className="font-extrabold">INR 8500 ($100)</span>
               </h2>
 
               <div className="flex items-center justify-center lg:justify-between relative gap-10  z-10 ">

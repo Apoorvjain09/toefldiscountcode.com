@@ -8,12 +8,6 @@ const HowToGetCode = () => {
         HOW TO GET CODE?{" "}
       </h2>
       <div className="xl:w-[80%] py-4 px-2 md:px-[5dvh] lg:px-2 ">
-{/*         <p className=" mark text-lg font-medium text-center md:text-start">
-          <span className="bg-prime bg-opacity-5 px-2  text-black rounded-lg">
-            WhatsApp us at (+91) 7011460487.
-          </span>{" "}
-          We will promptly provide you with the code.
-        </p> */}
         <div className="flex flex-col gap-3 mt-2">
           {infos?.map((info, index) => (
             <div key={index}>

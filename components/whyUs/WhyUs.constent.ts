@@ -17,13 +17,13 @@ export const perks = [
     borderColor: "border-clock",
   },
   {
-    title: "Free Courses worth Rs15,000",
-    info: "Share your ETS confirmation, and enjoy TOEFL Prep Material and TOEFL classes worth Rs 15,000/-. ",
+    title: "Free Courses worth $178",
+    info: "Share your ETS confirmation, and enjoy TOEFL Prep Material and TOEFL classes worth $178/-. ",
     icon: course,
     borderColor: "border-course",
   },
   {
-    title: "Get Rs2000/- on Toefl Tests",
+    title: "Get $40 off on Toefl Tests",
     info: "Make TOEFL affordable and gain access to features designed to enhance your learning experience.",
     icon: discount,
     borderColor: "border-discount",

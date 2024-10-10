@@ -36,7 +36,7 @@ export default function Sidebar() {
     links: [
       { label: 'Toefl Mock Tests', href: '/', icon: Home },
       { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
-      { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
+      // { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
       { label: 'Book Counseling Slot', href: '/book-counseling', icon: ScreenShare },
       {
         href: '/book',

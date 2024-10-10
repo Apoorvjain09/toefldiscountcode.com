@@ -1,15 +1,15 @@
 export const infos = [
   {
-    text: "Watch the full 60sec video and put the Agent code and Voucher code provided by us.",
+    text: "If you choose the FREE code option then just watch the full 60sec video and put the Agent code and Voucher code provided by us.",
   },
   {
-    text: "After that Join MS in US Whatsapp Community",
+    text: "if you want bigger discount you need a prepaid voucher. Press 'Get the code' and click second option to get discount voucher.",
   },
   {
-    text: "Get Official ETS TOELF Mock Test voucher For free and Get free 8 Score reporting vouchers",
+    text: "Above 2 are the only options in the market to get discount on toefl examination.",
   },
   {
-    text: "Additially meet like minded people in MS in US Community group",
+    text: "Additially Join MS in US Whatsapp Community and meet like minded people",
     subList: [
       "Get LIVE Classes Every Weekend",
       "Free University Shortlisting",

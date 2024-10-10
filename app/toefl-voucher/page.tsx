@@ -21,29 +21,29 @@ const dataQA = [
   },
   {
     question: "Are the TOEFL voucher codes really free?",
-    answer: "Yes, our TOEFL voucher codes are provided for free as part of our commitment to your educational journey."
+    answer: "Yes, our TOEFL voucher codes are provided for free as part of our commitment to your educational journey. But if you want bigger discount you can opt for pre-paid vouchers also."
   },
 ];
 
 const Page = () => {
   return (
     <div className="">
-        <div className="mt--30">
-          <Hero />
-        </div>
-        <WhyUs />
-        <GetCode />
-        <Body>
-          <H1>FAQ</H1>
-          {dataQA.map((data, i) => (
-            <div key={i}>
-              <QA
-                question={data.question}
-                answer={data.answer}
-              />
-            </div>
-          ))}
-        </Body>
+      <div className="mt--30">
+        <Hero />
+      </div>
+      <WhyUs />
+      <GetCode />
+      <Body>
+        <H1>FAQ</H1>
+        {dataQA.map((data, i) => (
+          <div key={i}>
+            <QA
+              question={data.question}
+              answer={data.answer}
+            />
+          </div>
+        ))}
+      </Body>
     </div>
   );
 };

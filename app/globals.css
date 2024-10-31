@@ -44,3 +44,9 @@
   @keyframes spin {
     to { transform: rotate(360deg); }
   }
+  
+  @layer base {
+  :root {
+        --radius: 0.5rem;
+    }
+}

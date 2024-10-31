@@ -1,0 +1,1632 @@
+[
+    {
+        "Word": "Upbeat",
+        "Definition": "Happy; optimistic.",
+        "Sample Sentence": "Even when she\u2019s having a bad day, my mom always has an upbeat attitude."
+    },
+    {
+        "Word": "Divert",
+        "Definition": "To cause a change of course.",
+        "Sample Sentence": "Because of the accident, the police had to divert traffic down a side street."
+    },
+    {
+        "Word": "Accurate",
+        "Definition": "Correct; free from errors.",
+        "Sample Sentence": "Make sure your address is accurate before submitting your online order."
+    },
+    {
+        "Word": "Amateur",
+        "Definition": "Someone who is inexperienced or not highly skilled in a particular area.",
+        "Sample Sentence": "He\u2019s an amateur soccer player and is still learning the rules of the game."
+    },
+    {
+        "Word": "Section",
+        "Definition": "A part of the whole.",
+        "Sample Sentence": "This section of the stadium dressed completely in red."
+    },
+    {
+        "Word": "Contribute",
+        "Definition": "To give something (usually money or time) to a common fund or cause.",
+        "Sample Sentence": "Every roommate contributes part of his paycheck to the grocery bill."
+    },
+    {
+        "Word": "Stagnant",
+        "Definition": "Sluggish, showing little movement.",
+        "Sample Sentence": "With few new jobs created, the economy has remained stagnant for the past five years."
+    },
+    {
+        "Word": "Framework",
+        "Definition": "A skeletal structure designed to support something.",
+        "Sample Sentence": "Skyscrapers must have a strong framework to support all the floors."
+    },
+    {
+        "Word": "Frivolous",
+        "Definition": "Unnecessary; of little importance",
+        "Sample Sentence": "You must stop spending your money on frivolous purchases."
+    },
+    {
+        "Word": "Voluminous",
+        "Definition": "Taking up a lot of space.",
+        "Sample Sentence": "The puffy wedding dress had voluminous sleeves."
+    },
+    {
+        "Word": "Potent",
+        "Definition": "Powerful.",
+        "Sample Sentence": "Only take one sleeping pill since they\u2019re very potent."
+    },
+    {
+        "Word": "Scrutinize",
+        "Definition": "To very carefully examine.",
+        "Sample Sentence": "The judges were looking for perfection, so they scrutinized every entry."
+    },
+    {
+        "Word": "Identical",
+        "Definition": "Exactly the same.",
+        "Sample Sentence": "The twins were completely identical."
+    },
+    {
+        "Word": "Intervene",
+        "Definition": "To come between people, objects, or an event and change what is happening.",
+        "Sample Sentence": "When the toddlers couldn\u2019t share their toys, their mothers had to intervene."
+    },
+    {
+        "Word": "Retract",
+        "Definition": "\u00a01. To draw back in.",
+        "Sample Sentence": "\u00a01. I felt calmer after the lion retracted its claws."
+    },
+    {
+        "Word": "Exploit",
+        "Definition": "To use selfishly.",
+        "Sample Sentence": "The company exploited its workers by making them work long hours."
+    },
+    {
+        "Word": "Reject",
+        "Definition": "To say no to something that is offered.",
+        "Sample Sentence": "Lydia rejected my invitation to the homecoming dance."
+    },
+    {
+        "Word": "Significant",
+        "Definition": "Important, noteworthy.",
+        "Sample Sentence": "The Gettysburg Address was a significant event during the Civil War."
+    },
+    {
+        "Word": "Languish",
+        "Definition": "To become weak; to be neglected.",
+        "Sample Sentence": "During winter break, my plants languished since I was visiting my parents and couldn\u2019t water them."
+    },
+    {
+        "Word": "Evade",
+        "Definition": "To avoid or escape.",
+        "Sample Sentence": "By hiding in the bathroom, we were able to evade the intruder."
+    },
+    {
+        "Word": "Investigate",
+        "Definition": "To examine or study.",
+        "Sample Sentence": "The police are going to investigate the crime scene."
+    },
+    {
+        "Word": "Phase",
+        "Definition": "A period or stage in a process.",
+        "Sample Sentence": "In high school, I went through a phase where I only wore black clothes."
+    },
+    {
+        "Word": "Decline",
+        "Definition": "1. To politely refuse.",
+        "Sample Sentence": "1. I declined his offer of a ride home."
+    },
+    {
+        "Word": "Boost",
+        "Definition": "To help raise or increase something.",
+        "Sample Sentence": "I gave him a pep talk to boost his self-esteem before his speech."
+    },
+    {
+        "Word": "Hindrance",
+        "Definition": "Something that causes delay or resistance.",
+        "Sample Sentence": "Her hatred of public transportation is a hindrance when trying to get around New York City."
+    },
+    {
+        "Word": "Dynamic",
+        "Definition": "Constantly changing.",
+        "Sample Sentence": "The theater has dynamic shows, so you never know what you\u2019ll see."
+    },
+    {
+        "Word": "Prosper",
+        "Definition": "To do well.",
+        "Sample Sentence": "Dave hopes his new business will prosper and make him a millionaire."
+    },
+    {
+        "Word": "Obvious",
+        "Definition": "Easily understood.",
+        "Sample Sentence": "The large poster of Michael Jackson over her bed made it obvious who her favorite singer was."
+    },
+    {
+        "Word": "Enhance",
+        "Definition": "To intensify or magnify.",
+        "Sample Sentence": "The falling snow enhanced the beauty of the small village."
+    },
+    {
+        "Word": "Paradigm",
+        "Definition": "A typical example of something.",
+        "Sample Sentence": "This work of art is a paradigm of the period; you\u2019ll see many examples of it in the museum."
+    },
+    {
+        "Word": "Symbolic",
+        "Definition": "Serving as a symbol.",
+        "Sample Sentence": "A cross is symbolic of Christianity."
+    },
+    {
+        "Word": "Mediocre",
+        "Definition": "Ordinary, average.",
+        "Sample Sentence": "The meal the chef made was only mediocre."
+    },
+    {
+        "Word": "Gap",
+        "Definition": "A space in between two objects.",
+        "Sample Sentence": "Be careful to avoid the gap between the two steps."
+    },
+    {
+        "Word": "Annual",
+        "Definition": "Occurring yearly.",
+        "Sample Sentence": "The annual company barbeque takes place every August."
+    },
+    {
+        "Word": "Contemplate",
+        "Definition": "To consider thoughtfully.",
+        "Sample Sentence": "I spend a lot of time contemplating what career I want to have."
+    },
+    {
+        "Word": "Chronological",
+        "Definition": "Arranged in order of time or date.",
+        "Sample Sentence": "Put the historical events in chronological order to make them easier to study."
+    },
+    {
+        "Word": "Inclination",
+        "Definition": "A preference.",
+        "Sample Sentence": "My inclination is to go to bed early."
+    },
+    {
+        "Word": "Generate",
+        "Definition": "To produce.",
+        "Sample Sentence": "The fire generates heat, which keeps the room warm."
+    },
+    {
+        "Word": "Leery",
+        "Definition": "Wary.",
+        "Sample Sentence": "I\u2019m leery of taking the dark-looking shortcut."
+    },
+    {
+        "Word": "Aggregate",
+        "Definition": "To combine.",
+        "Sample Sentence": "We should aggregate our resources to share them more easily."
+    },
+    {
+        "Word": "Digress",
+        "Definition": "To wander from the main subject.",
+        "Sample Sentence": "The teacher digressed from the lecture to discuss the weather."
+    },
+    {
+        "Word": "Poll",
+        "Definition": "A record of opinions or votes.",
+        "Sample Sentence": "The polls show that my candidate is going to win the election."
+    },
+    {
+        "Word": "Proximity",
+        "Definition": "Nearness in time or space.",
+        "Sample Sentence": "The twins hated to be apart, so they bought houses in close proximity to each other."
+    },
+    {
+        "Word": "Subtle",
+        "Definition": "Difficult to notice right away.",
+        "Sample Sentence": "Maya\u2019s perfume was very subtle; you had to get close to her to smell it."
+    },
+    {
+        "Word": "Lecture",
+        "Definition": "A talk given to an audience.",
+        "Sample Sentence": "The professor will give a 30 minute lecture before the quiz."
+    },
+    {
+        "Word": "Likely",
+        "Definition": "Probable.",
+        "Sample Sentence": "I don\u2019t have much homework, so it\u2019s likely I\u2019ll be able to go out tonight."
+    },
+    {
+        "Word": "Resent",
+        "Definition": "To feel bitterness or anger towards someone or something.",
+        "Sample Sentence": "I\u2019ve always resented my sister because she is my mother\u2019s favorite child."
+    },
+    {
+        "Word": "Supervise",
+        "Definition": "To oversee work or a process.",
+        "Sample Sentence": "My dad didn\u2019t think we were old enough to build the fort on our own, so he supervised us."
+    },
+    {
+        "Word": "Measure",
+        "Definition": "To find the size and dimensions of something.",
+        "Sample Sentence": "By measuring the tree, I found it was seven feet tall."
+    },
+    {
+        "Word": "Intricate",
+        "Definition": "Highly detailed.",
+        "Sample Sentence": "The pattern on this blanket is so intricate."
+    },
+    {
+        "Word": "Disrupt",
+        "Definition": "To interrupt by causing a disturbance.",
+        "Sample Sentence": "The protesters disrupted the politician\u2019s speech."
+    },
+    {
+        "Word": "Extract",
+        "Definition": "To get or remove something.",
+        "Sample Sentence": "The dentist extracted one of my teeth."
+    },
+    {
+        "Word": "Adverse",
+        "Definition": "Unfavorable; against one\u2019s desires.",
+        "Sample Sentence": "I had an adverse reaction to my medication and had to stop taking it."
+    },
+    {
+        "Word": "Despise",
+        "Definition": "To hate.",
+        "Sample Sentence": "I despise early morning classes."
+    },
+    {
+        "Word": "Illiterate",
+        "Definition": "Unable to read.",
+        "Sample Sentence": "Because he\u2019d never been able to attend school, the man was illiterate."
+    },
+    {
+        "Word": "Strategy",
+        "Definition": "A plan to reach a desired outcome.",
+        "Sample Sentence": "The football team will need a good strategy to win the game tomorrow."
+    },
+    {
+        "Word": "Accumulate",
+        "Definition": "To gradually collect.",
+        "Sample Sentence": "Each fall, leaves accumulate in our driveway."
+    },
+    {
+        "Word": "Vilify",
+        "Definition": "To speak poorly of; to slander.",
+        "Sample Sentence": "Mark was vilified by his angry ex-girlfriend."
+    },
+    {
+        "Word": "Ambiguous",
+        "Definition": "Having several potential meanings; unclear and difficult to understand.",
+        "Sample Sentence": "When I asked the HR manager what my chances were of getting the job, she gave me a very ambiguous reply."
+    },
+    {
+        "Word": "Deviate",
+        "Definition": "To differ from the norm.",
+        "Sample Sentence": "I decided to deviate from my normal route home and took a shortcut."
+    },
+    {
+        "Word": "Severe",
+        "Definition": "1. Harsh or strict.",
+        "Sample Sentence": "1. The robbers suffered severe consequences for stealing."
+    },
+    {
+        "Word": "Adamant",
+        "Definition": "Refusing to change an opinion.",
+        "Sample Sentence": "The defendant was adamant that he was innocent."
+    },
+    {
+        "Word": "Hierarchy",
+        "Definition": "A ranking system.",
+        "Sample Sentence": "In the office hierarchy, the manager is higher than the associate."
+    },
+    {
+        "Word": "Implement",
+        "Definition": "To carry out.",
+        "Sample Sentence": "We will implement the new schedule starting next semester."
+    },
+    {
+        "Word": "Progeny",
+        "Definition": "Offspring.",
+        "Sample Sentence": "The dog\u2019s progeny all have yellow fur."
+    },
+    {
+        "Word": "Copious",
+        "Definition": "Abundant.",
+        "Sample Sentence": "He always takes copious notes during class to study later on."
+    },
+    {
+        "Word": "Inflate",
+        "Definition": "To increase in size.",
+        "Sample Sentence": "Getting a promotion has really inflated his ego."
+    },
+    {
+        "Word": "Reinforce",
+        "Definition": "To strengthen with added support.",
+        "Sample Sentence": "The builders reinforced the house\u2019s wooden frame with steel beams."
+    },
+    {
+        "Word": "Haphazard",
+        "Definition": "Lacking planning.",
+        "Sample Sentence": "There was no schedule, so the event was very haphazard."
+    },
+    {
+        "Word": "Retrieve",
+        "Definition": "To bring back.",
+        "Sample Sentence": "Alexis got out of the car to retrieve the ball her little brother had thrown."
+    },
+    {
+        "Word": "Squalid",
+        "Definition": "Filthy and unpleasant.",
+        "Sample Sentence": "The shelter was squalid and overcrowded."
+    },
+    {
+        "Word": "Grandiose",
+        "Definition": "Pompous; overly important.",
+        "Sample Sentence": "The actress had only one small part before she got grandiose ideas of her fame."
+    },
+    {
+        "Word": "Minimum",
+        "Definition": "The smallest or lowest amount possible.",
+        "Sample Sentence": "You need to get a minimum of 70% on the test to pass the class."
+    },
+    {
+        "Word": "Function",
+        "Definition": "A purpose natural to a person or thing.",
+        "Sample Sentence": "The function of petals is to attract insects to the plant."
+    },
+    {
+        "Word": "Elite",
+        "Definition": "A select, above-average group.",
+        "Sample Sentence": "The elite detective team were also sent for when there were big crimes."
+    },
+    {
+        "Word": "Suspend",
+        "Definition": "\u00a01. To temporarily stop.",
+        "Sample Sentence": "\u00a01. The power outage suspended the school concert."
+    },
+    {
+        "Word": "Desirable",
+        "Definition": "Worth having or wanting.",
+        "Sample Sentence": "Bravery is a desirable trait for firefighters to have."
+    },
+    {
+        "Word": "Reform",
+        "Definition": "To make changes that improve something.",
+        "Sample Sentence": "Melanie\u2019s father is in charge of reforming to school system."
+    },
+    {
+        "Word": "Disproportionate",
+        "Definition": "Too large or small when compared to something else.",
+        "Sample Sentence": "The piece of pie I received was disproportionately small."
+    },
+    {
+        "Word": "Equivalent",
+        "Definition": "Equal.",
+        "Sample Sentence": "Twenty-four is equivalent to two dozen."
+    },
+    {
+        "Word": "Rebuke",
+        "Definition": "To sternly disapprove or reprimand.",
+        "Sample Sentence": "After staying out too late, Grace received a rebuke from her parents."
+    },
+    {
+        "Word": "Berate",
+        "Definition": "To scold.",
+        "Sample Sentence": "Our neighbor berated us after we broke his window playing baseball."
+    },
+    {
+        "Word": "Prestigious",
+        "Definition": "Having a high reputation.",
+        "Sample Sentence": "Harvard is one of the most prestigious colleges in the United States."
+    },
+    {
+        "Word": "Sequence",
+        "Definition": "Things that follow each other in a certain order.",
+        "Sample Sentence": "Librarians need to know how order books in the correct sequence."
+    },
+    {
+        "Word": "Promote",
+        "Definition": "To further to progress of something.",
+        "Sample Sentence": "I\u2019m promoting this new indie movie so that more people will buy tickets to it."
+    },
+    {
+        "Word": "Advocate",
+        "Definition": "To publicly support.",
+        "Sample Sentence": "My aunt is a major advocate for women's\u2019 rights."
+    },
+    {
+        "Word": "Parsimonious",
+        "Definition": "Frugal, stingy.",
+        "Sample Sentence": "The parsimonious woman only donated a dollar to charity."
+    },
+    {
+        "Word": "Brusque",
+        "Definition": "Abrupt to the point of rudeness.",
+        "Sample Sentence": "After being away for so long, I expected more than her brusque greeting."
+    },
+    {
+        "Word": "Collide",
+        "Definition": "To hit one another with a forceful impact.",
+        "Sample Sentence": "The two cars collided on the freeway."
+    },
+    {
+        "Word": "Rank",
+        "Definition": "An official position or station.",
+        "Sample Sentence": "Archibald was promoted to the rank of first captain."
+    },
+    {
+        "Word": "Rotate",
+        "Definition": "To turn.",
+        "Sample Sentence": "Rotate the sculpture so I can see the other side."
+    },
+    {
+        "Word": "Permeate",
+        "Definition": "To penetrate or pass through.",
+        "Sample Sentence": "Let the maple syrup permeate your waffles before eating them."
+    },
+    {
+        "Word": "Rigid",
+        "Definition": "Stiff; unyielding.",
+        "Sample Sentence": "The boys\u2019 father was happy to see the base of the treehouse was rigid and sturdy."
+    },
+    {
+        "Word": "Ineffective",
+        "Definition": "Not producing any major impact.",
+        "Sample Sentence": "The drug was shown to be ineffective at curing cancer."
+    },
+    {
+        "Word": "Exemplary",
+        "Definition": "Worthy of imitation.",
+        "Sample Sentence": "She is an exemplary student, and you should copy her study habits."
+    },
+    {
+        "Word": "Speculate",
+        "Definition": "To form a theory without strong evidence.",
+        "Sample Sentence": "My sister loves to speculate on the private lives of celebrities."
+    },
+    {
+        "Word": "Bestow",
+        "Definition": "To give as a gift.",
+        "Sample Sentence": "The medal was bestowed upon him by the president."
+    },
+    {
+        "Word": "Unscathed",
+        "Definition": "Unharmed.",
+        "Sample Sentence": "Ian was lucky to walk away from the car crash unscathed."
+    },
+    {
+        "Word": "Shelter",
+        "Definition": "To protect from something harmful.",
+        "Sample Sentence": "The empty barn gave the men shelter during the storm."
+    },
+    {
+        "Word": "Terminal",
+        "Definition": "Situated at the end.",
+        "Sample Sentence": "Everyone on the train must get off at the terminal stop."
+    },
+    {
+        "Word": "Ludicrous",
+        "Definition": "Ridiculous.",
+        "Sample Sentence": "His claims about me are absolutely ludicrous."
+    },
+    {
+        "Word": "Alternative",
+        "Definition": "Another option or choice.",
+        "Sample Sentence": "If the ATM is broken, an alternative solution is to stop by the bank."
+    },
+    {
+        "Word": "Garbled",
+        "Definition": "Communication that is distorted and unclear.",
+        "Sample Sentence": "Our answering machine is so bad that people\u2019s voices are always garbled."
+    },
+    {
+        "Word": "Evolve",
+        "Definition": "To gradually change.",
+        "Sample Sentence": "The small school evolved into a world-class institution."
+    },
+    {
+        "Word": "Contradict",
+        "Definition": "To give the opposite opinion.",
+        "Sample Sentence": "I told the employees that sales were down, but my boss contradicted me and said sales were actually up."
+    },
+    {
+        "Word": "Aggressive",
+        "Definition": "Assertive and pushy.",
+        "Sample Sentence": "The salesperson was very aggressive when trying to get us to buy the television."
+    },
+    {
+        "Word": "Mend",
+        "Definition": "To fix.",
+        "Sample Sentence": "My mother will mend the hole in my shirt."
+    },
+    {
+        "Word": "Coerce",
+        "Definition": "To force someone to do something against their will.",
+        "Sample Sentence": "The young boy was coerced into stealing by his friends."
+    },
+    {
+        "Word": "Indefatigable",
+        "Definition": "Untiring.",
+        "Sample Sentence": "She is an indefatigable hiker and can walk all day."
+    },
+    {
+        "Word": "Censure",
+        "Definition": "To express strong disapproval.",
+        "Sample Sentence": "Every parent in our district censured the education cuts."
+    },
+    {
+        "Word": "Solitary",
+        "Definition": "Alone; without others.",
+        "Sample Sentence": "The hermit lives a solitary existence deep in the mountains."
+    },
+    {
+        "Word": "Technical",
+        "Definition": "Relating to a specific subject or craft.",
+        "Sample Sentence": "The laptop manual is full of technical terms only a computer expert can understand."
+    },
+    {
+        "Word": "Initial",
+        "Definition": "The first.",
+        "Sample Sentence": "She was the initial president of the company."
+    },
+    {
+        "Word": "Attribute",
+        "Definition": "To give credit.",
+        "Sample Sentence": "Be sure to attribute credit to your sources when writing a research paper."
+    },
+    {
+        "Word": "Maximize",
+        "Definition": "To increase to the greatest possible size.",
+        "Sample Sentence": "The store\u2019s goal this year is to maximize its profit."
+    },
+    {
+        "Word": "Cease",
+        "Definition": "To stop.",
+        "Sample Sentence": "I wish they would cease arguing."
+    },
+    {
+        "Word": "Exclusive",
+        "Definition": "Not admitting the majority.",
+        "Sample Sentence": "We may not be able to get in since that club is very exclusive."
+    },
+    {
+        "Word": "Hasty",
+        "Definition": "In a hurry.",
+        "Sample Sentence": "In order to avoid the police, the robbers made a hasty retreat."
+    },
+    {
+        "Word": "Verdict",
+        "Definition": "A judgement or decision.",
+        "Sample Sentence": "The jury delivered a guilty verdict."
+    },
+    {
+        "Word": "Flaw",
+        "Definition": "A feature that ruins the perfection of something.",
+        "Sample Sentence": "I got the diamond for a reduced price since the stone had a flaw."
+    },
+    {
+        "Word": "Quarrel",
+        "Definition": "Disagreement or fight; to have an argument.",
+        "Sample Sentence": "Nina and her boyfriend always quarrel over money."
+    },
+    {
+        "Word": "Peripheral",
+        "Definition": "Located on the side or edge.",
+        "Sample Sentence": "There are some peripheral fights going on at the outdoor concert."
+    },
+    {
+        "Word": "Proceed",
+        "Definition": "To continue doing something.",
+        "Sample Sentence": "I\u2019m sorry for interrupting; please proceed with your speech."
+    },
+    {
+        "Word": "Supplant",
+        "Definition": "To take the place of something else.",
+        "Sample Sentence": "The king was supplanted by his treacherous younger brother who locked him in the dungeon."
+    },
+    {
+        "Word": "Whereas",
+        "Definition": "On the contrary.",
+        "Sample Sentence": "I always save my money whereas my brother is constantly in debt."
+    },
+    {
+        "Word": "Dilemma",
+        "Definition": "A situation where one must choose between two difficult choices.",
+        "Sample Sentence": "The student faced the dilemma of attending school sick or missing her exam."
+    },
+    {
+        "Word": "Sufficient",
+        "Definition": "Enough to serve a particular purpose.",
+        "Sample Sentence": "Make sure you have sufficient food for the camping trip."
+    },
+    {
+        "Word": "Indisputable",
+        "Definition": "Not able to be challenged.",
+        "Sample Sentence": "She\u2019s the indisputable star of the basketball team."
+    },
+    {
+        "Word": "Harsh",
+        "Definition": "Not gentle; unpleasant.",
+        "Sample Sentence": "Her comments on my performance were very harsh and not kind at all."
+    },
+    {
+        "Word": "Deposit",
+        "Definition": "To deliver and leave an item.",
+        "Sample Sentence": "Please deposit your books in the bin outside the library."
+    },
+    {
+        "Word": "Augment",
+        "Definition": "To increase or make larger.",
+        "Sample Sentence": "She augments her regular salary by babysitting on the weekends."
+    },
+    {
+        "Word": "Constrain",
+        "Definition": "To restrict or repress.",
+        "Sample Sentence": "You should move your plant to a bigger pot, otherwise you\u2019ll constrain its roots."
+    },
+    {
+        "Word": "Assuage",
+        "Definition": "To lessen a negative feeling.",
+        "Sample Sentence": "The mother assuaged her child\u2019s fear of the dark."
+    },
+    {
+        "Word": "Vial",
+        "Definition": "A small container used to hold liquids.",
+        "Sample Sentence": "The chemist carefully filled the vial with the bubbling solution."
+    },
+    {
+        "Word": "Resign",
+        "Definition": "To give up an office or position.",
+        "Sample Sentence": "Due to his declining health, the mayor decided to resign from office."
+    },
+    {
+        "Word": "Integral",
+        "Definition": "Necessary to complete the whole.",
+        "Sample Sentence": "You can\u2019t quit. You\u2019re an integral part of this team."
+    },
+    {
+        "Word": "Cognizant",
+        "Definition": "Being aware or having knowledge of something.",
+        "Sample Sentence": "Before mountain climbing, you need to be cognizant of the risks."
+    },
+    {
+        "Word": "Fortify",
+        "Definition": "To strengthen.",
+        "Sample Sentence": "The king decided to fortify the castle walls to protect them during attacks."
+    },
+    {
+        "Word": "Horror",
+        "Definition": "An intense feeling of fear.",
+        "Sample Sentence": "The haunted house filled me with horror."
+    },
+    {
+        "Word": "Boast",
+        "Definition": "To brag or talk with excessive pride.",
+        "Sample Sentence": "He always boasts of his talents after he wins a game."
+    },
+    {
+        "Word": "Source",
+        "Definition": "A person, place, or thing where something was obtained.",
+        "Sample Sentence": "You shouldn\u2019t use Wikipedia as a source when writing school papers."
+    },
+    {
+        "Word": "Conflict",
+        "Definition": "A disagreement or fight.",
+        "Sample Sentence": "The conflict between the two families has been going on for generations."
+    },
+    {
+        "Word": "Adjacent",
+        "Definition": "Close to or next to.",
+        "Sample Sentence": "The park is adjacent to the school."
+    },
+    {
+        "Word": "Range",
+        "Definition": "The distance between two things, often the maximum and the minimum.",
+        "Sample Sentence": "The range of ages at the concert spanned from 12 to 65."
+    },
+    {
+        "Word": "Irascible",
+        "Definition": "Easy to anger.",
+        "Sample Sentence": "Even though my grandfather seems irascible, he\u2019s actually very loving."
+    },
+    {
+        "Word": "Recapitulate",
+        "Definition": "To give a brief summary.",
+        "Sample Sentence": "At the end of his speech, the politician made sure to recapitulate his main points."
+    },
+    {
+        "Word": "Adequate",
+        "Definition": "Enough to suit your needs.",
+        "Sample Sentence": "Our house isn\u2019t big, but it\u2019s adequate for the two of us."
+    },
+    {
+        "Word": "Tolerate",
+        "Definition": "To put up with.",
+        "Sample Sentence": "I tolerate the rude man since he is my husband\u2019s best friend."
+    },
+    {
+        "Word": "Resolve",
+        "Definition": "To come to a firm decision.",
+        "Sample Sentence": "Matt resolved to get better grades next semester by studying every night."
+    },
+    {
+        "Word": "Benefit",
+        "Definition": "Something positive or advantageous.",
+        "Sample Sentence": "A benefit of doing homework on Friday is that your weekend will be free."
+    },
+    {
+        "Word": "Arbitrary",
+        "Definition": "Based on a whim or random decision.",
+        "Sample Sentence": "Flipping a coin is an arbitrary way to make a decision."
+    },
+    {
+        "Word": "Manipulate",
+        "Definition": "To influence, especially in an unfair way.",
+        "Sample Sentence": "He tried to manipulate the results of the election."
+    },
+    {
+        "Word": "Abundant",
+        "Definition": "Present in large quantities.",
+        "Sample Sentence": "Living close to a lake means we have an abundant supply of water."
+    },
+    {
+        "Word": "Diatribe",
+        "Definition": "A sharp criticism or attack.",
+        "Sample Sentence": "The politician went into a diatribe against her opponent."
+    },
+    {
+        "Word": "Data",
+        "Definition": "Facts, statistics, or pieces of information.",
+        "Sample Sentence": "The data from these graphs show that yearly temperatures are increasing."
+    },
+    {
+        "Word": "Amend",
+        "Definition": "To change for the better; to improve.",
+        "Sample Sentence": "I believe we should amend our country\u2019s tax laws."
+    },
+    {
+        "Word": "Partial",
+        "Definition": "Preferring one option over others.",
+        "Sample Sentence": "We can get strawberry ice cream, but I\u2019m actually more partial to chocolate."
+    },
+    {
+        "Word": "Curriculum",
+        "Definition": "The courses given by a school or program.",
+        "Sample Sentence": "Our school needs to add more music courses to its curriculum."
+    },
+    {
+        "Word": "Deny",
+        "Definition": "To state that something isn\u2019t true.",
+        "Sample Sentence": "He denied being the robber."
+    },
+    {
+        "Word": "Interpret",
+        "Definition": "To explain the meaning of something.",
+        "Sample Sentence": "I need you to interpret this German speech for me."
+    },
+    {
+        "Word": "Persist",
+        "Definition": "To continue, especially when facing opposition.",
+        "Sample Sentence": "I may have lost my last six games, but I will continue to persist trying to win."
+    },
+    {
+        "Word": "Expose",
+        "Definition": "To reveal or unmask.",
+        "Sample Sentence": "The emails presented exposed the company\u2019s corruption."
+    },
+    {
+        "Word": "Negligent",
+        "Definition": "Lazy, neglectful.",
+        "Sample Sentence": "The negligent babysitter invited her friends over while the children were upstairs."
+    },
+    {
+        "Word": "Incidental",
+        "Definition": "A minor part.",
+        "Sample Sentence": "Don\u2019t worry about your grade on this quiz; it\u2019s only an incidental part of your grade."
+    },
+    {
+        "Word": "Recommend",
+        "Definition": "To present someone with confidence and approval.",
+        "Sample Sentence": "I need to ask Mr. Smith if he\u2019ll recommend me for this leadership position."
+    },
+    {
+        "Word": "Safeguard",
+        "Definition": "Something that serves as protection or ensures safety.",
+        "Sample Sentence": "A retirement fund is one way to safeguard your finances for the future."
+    },
+    {
+        "Word": "Tuition",
+        "Definition": "The fee for instruction at a school.",
+        "Sample Sentence": "College tuition prices have gone up in recent decades."
+    },
+    {
+        "Word": "Knack",
+        "Definition": "A special talent or skill.",
+        "Sample Sentence": "My brother has a real knack for solving tricky math problems."
+    },
+    {
+        "Word": "Evidence",
+        "Definition": "Facts or information that help prove or disprove something.",
+        "Sample Sentence": "These fossils are evidence of evolution."
+    },
+    {
+        "Word": "Degrade",
+        "Definition": "To lower in quality.",
+        "Sample Sentence": "My attempt at cake degraded into a crumbly mess."
+    },
+    {
+        "Word": "Summarize",
+        "Definition": "To briefly give the main points.",
+        "Sample Sentence": "The class didn\u2019t have time to read the book, so the professor summarized it for them."
+    },
+    {
+        "Word": "Irresolute",
+        "Definition": "Uncertain.",
+        "Sample Sentence": "Not sure which direction to go in, he stood irresolute."
+    },
+    {
+        "Word": "Precise",
+        "Definition": "Exact.",
+        "Sample Sentence": "When collecting data, it\u2019s important that your measurements are very precise."
+    },
+    {
+        "Word": "Efficient",
+        "Definition": "Maximizing productivity.",
+        "Sample Sentence": "Now that I\u2019m following a schedule at work, I\u2019m much more efficient."
+    },
+    {
+        "Word": "Demonstrate",
+        "Definition": "To show.",
+        "Sample Sentence": "Let me demonstrate the proper way of throwing a football."
+    },
+    {
+        "Word": "Lampoon",
+        "Definition": "To mock or ridicule.",
+        "Sample Sentence": "The cartoonist lampooned the president\u2019s speech."
+    },
+    {
+        "Word": "Hollow",
+        "Definition": "Empty inside.",
+        "Sample Sentence": "The dead tree is hollow."
+    },
+    {
+        "Word": "Arduous",
+        "Definition": "Requiring a lot of effort.",
+        "Sample Sentence": "After you cross the bridge, there\u2019s an arduous walk up the hill."
+    },
+    {
+        "Word": "Select",
+        "Definition": "To choose.",
+        "Sample Sentence": "Jane selected a blue dress to wear to the wedding."
+    },
+    {
+        "Word": "Allocate",
+        "Definition": "To put aside for a specific purpose.",
+        "Sample Sentence": "The village needs to allocate funds for building the new school."
+    },
+    {
+        "Word": "Maintain",
+        "Definition": "To continue at the same level.",
+        "Sample Sentence": "She has maintained the same weight since high school."
+    },
+    {
+        "Word": "Cacophony",
+        "Definition": "A harsh, unpleasant mixture of noise.",
+        "Sample Sentence": "The cuckoo clock shop lets off a cacophony every hour."
+    },
+    {
+        "Word": "Hypothesis",
+        "Definition": "An unproven idea that attempts to explain something.",
+        "Sample Sentence": "You\u2019ll need to conduct an experiment to test your hypothesis."
+    },
+    {
+        "Word": "Community",
+        "Definition": "A group of people who live or work together.",
+        "Sample Sentence": "The Chinese community in my city is hosting a New Year celebration next week."
+    },
+    {
+        "Word": "Finite",
+        "Definition": "Having an end or limits.",
+        "Sample Sentence": "Remember that life is finite; you\u2019re not immortal."
+    },
+    {
+        "Word": "Transparent",
+        "Definition": "\u00a01. See-through material.",
+        "Sample Sentence": "\u00a01. The glass vase is completely transparent."
+    },
+    {
+        "Word": "Endure",
+        "Definition": "To suffer through something difficult with patience.",
+        "Sample Sentence": "He has endured four knee operations so far."
+    },
+    {
+        "Word": "Pertain",
+        "Definition": "Relate.",
+        "Sample Sentence": "How does your question pertain to the lecture?"
+    },
+    {
+        "Word": "Corrode",
+        "Definition": "To gradually wear away.",
+        "Sample Sentence": "The rust corroded the paint on my car."
+    },
+    {
+        "Word": "Jointly",
+        "Definition": "Together.",
+        "Sample Sentence": "The newlyweds jointly opened up a bank account."
+    },
+    {
+        "Word": "Regulate",
+        "Definition": "To supervise or control a process so that it functions correctly.",
+        "Sample Sentence": "Ben needs to regulate how much he eats in order to stay at a healthy weight."
+    },
+    {
+        "Word": "Diminish",
+        "Definition": "To shrink or reduce.",
+        "Sample Sentence": "Sprinkle baking soda on the carpet to diminish the stain."
+    },
+    {
+        "Word": "Anomaly",
+        "Definition": "Deviation from the norm.",
+        "Sample Sentence": "The basketball player is the team\u2019s best free thrower, so his missing both shots was an anomaly."
+    },
+    {
+        "Word": "Nonchalant",
+        "Definition": "Indifferent, unexcited.",
+        "Sample Sentence": "I was hurt when my friend greeted me so nonchalantly."
+    },
+    {
+        "Word": "Resist",
+        "Definition": "To withstand the effect of.",
+        "Sample Sentence": "Resist the impulse to have ice cream for breakfast."
+    },
+    {
+        "Word": "Transition",
+        "Definition": "Changing from one state or condition to another.",
+        "Sample Sentence": "The transition from student to employee can often take awhile to get used to."
+    },
+    {
+        "Word": "Modify",
+        "Definition": "To change.",
+        "Sample Sentence": "I need to modify my style so it looks more professional."
+    },
+    {
+        "Word": "Impoverish",
+        "Definition": "To reduce to poverty.",
+        "Sample Sentence": "These medical bills are going to impoverish me."
+    },
+    {
+        "Word": "Retain",
+        "Definition": "To continue to do something or keep something.",
+        "Sample Sentence": "I\u2019ve decided to retain my normal hairstyle."
+    },
+    {
+        "Word": "Unobtrusive",
+        "Definition": "Not attracting attention.",
+        "Sample Sentence": "The prince\u2019s bodyguards had mastered the art of being unobtrusive."
+    },
+    {
+        "Word": "Exclude",
+        "Definition": "To leave out.",
+        "Sample Sentence": "The young boy was excluded from his friends\u2019 soccer game."
+    },
+    {
+        "Word": "Paucity",
+        "Definition": "Something existing in very small amounts; scarcity.",
+        "Sample Sentence": "During the drought, the town had a paucity of fresh water."
+    },
+    {
+        "Word": "Misleading",
+        "Definition": "Giving the wrong idea.",
+        "Sample Sentence": "The advertisement for the weight loss pills is very misleading since studies have shown they\u2019re ineffective."
+    },
+    {
+        "Word": "Core",
+        "Definition": "Central; of main importance.",
+        "Sample Sentence": "Although many employees left the company, the core leadership remained."
+    },
+    {
+        "Word": "Brash",
+        "Definition": "Rude and tactless.",
+        "Sample Sentence": "The brash man always asked inappropriate questions."
+    },
+    {
+        "Word": "Major",
+        "Definition": "Very important.",
+        "Sample Sentence": "This test is a major part of your final grade."
+    },
+    {
+        "Word": "Cohesion",
+        "Definition": "Uniting; becoming one.",
+        "Sample Sentence": "Water molecules show strong cohesion when they stick together."
+    },
+    {
+        "Word": "Impact",
+        "Definition": "Effect or influence.",
+        "Sample Sentence": "His moving words had a large impact on me."
+    },
+    {
+        "Word": "Opponent",
+        "Definition": "Someone on the opposite side for a game or contest.",
+        "Sample Sentence": "The soccer player blocked her opponent\u2019s shot at the goal."
+    },
+    {
+        "Word": "Focus",
+        "Definition": "The central point or idea.",
+        "Sample Sentence": "The program is going to focus on environmental issues."
+    },
+    {
+        "Word": "Sustain",
+        "Definition": "To keep going.",
+        "Sample Sentence": "I stopped trying to sustain the friendship after he made fun of how I looked."
+    },
+    {
+        "Word": "Primary",
+        "Definition": "First; most important.",
+        "Sample Sentence": "Maeve\u2019s primary goal in life is to become a doctor."
+    },
+    {
+        "Word": "Convey",
+        "Definition": "To make known.",
+        "Sample Sentence": "I\u2019ve conveyed my interest in working for that company."
+    },
+    {
+        "Word": "Wilt",
+        "Definition": "To droop and become limp.",
+        "Sample Sentence": "Plants will wilt if you don\u2019t water them regularly."
+    },
+    {
+        "Word": "Inhibit",
+        "Definition": "To hinder or restrain.",
+        "Sample Sentence": "This cleaning spray inhibits the growth of bacteria."
+    },
+    {
+        "Word": "Decay",
+        "Definition": "To decline in health or excellence.",
+        "Sample Sentence": "After the tree died, its wood began to decay."
+    },
+    {
+        "Word": "Vacillate",
+        "Definition": "To waver or be indecisive.",
+        "Sample Sentence": "She vacillated between the two dresses before finally deciding to wear a skirt."
+    },
+    {
+        "Word": "Shallow",
+        "Definition": "Not deep.",
+        "Sample Sentence": "You don\u2019t need to worry about getting your dress wet. The water is very shallow here."
+    },
+    {
+        "Word": "Wholly",
+        "Definition": "Completely.",
+        "Sample Sentence": "The monk is wholly devoted to his faith."
+    },
+    {
+        "Word": "Emphasize",
+        "Definition": "To give special importance to when speaking or writing.",
+        "Sample Sentence": "The teacher emphasized the due date of the project."
+    },
+    {
+        "Word": "Illustrate",
+        "Definition": "To explain by using an example.",
+        "Sample Sentence": "The professor illustrated the lesson with a personal story."
+    },
+    {
+        "Word": "Distort",
+        "Definition": "To misrepresent.",
+        "Sample Sentence": "The camera filter distorted the image."
+    },
+    {
+        "Word": "Praise",
+        "Definition": "To give approval or admiration.",
+        "Sample Sentence": "The book is the best I\u2019ve ever read; I can\u2019t praise it enough."
+    },
+    {
+        "Word": "Labor",
+        "Definition": "Work or effort.",
+        "Sample Sentence": "Building a house requires a lot of labor."
+    },
+    {
+        "Word": "Incite",
+        "Definition": "To urge on.",
+        "Sample Sentence": "The ringleader incited the soldiers to rebellion."
+    },
+    {
+        "Word": "Attitude",
+        "Definition": "Manner or feeling.",
+        "Sample Sentence": "After she got grounded, the teenager had a bad attitude for the rest of the day."
+    },
+    {
+        "Word": "Specify",
+        "Definition": "To clearly indicate which one.",
+        "Sample Sentence": "You need to specify which size shirt you want before I can order it."
+    },
+    {
+        "Word": "Cumbersome",
+        "Definition": "Burdensome; clumsy",
+        "Sample Sentence": "Trying to carry four grocery bags at once was very cumbersome."
+    },
+    {
+        "Word": "Infer",
+        "Definition": "To guess based on evidence.",
+        "Sample Sentence": "I inferred that she was annoyed based on her body language."
+    },
+    {
+        "Word": "Suspicious",
+        "Definition": "Having the belief that someone is doing something dishonest or illegal.",
+        "Sample Sentence": "The couple became suspicious when they saw strange men removing their neighbor\u2019s expensive electronics during the night."
+    },
+    {
+        "Word": "Imply",
+        "Definition": "To strongly suggest.",
+        "Sample Sentence": "My mother implied that I was the one who forgot to take out the trash."
+    },
+    {
+        "Word": "Inquiry",
+        "Definition": "An investigation to determine the truth.",
+        "Sample Sentence": "Congress launched an inquiry after the senator was accused of taking bribes."
+    },
+    {
+        "Word": "Coincide",
+        "Definition": "To occur at the same time.",
+        "Sample Sentence": "This year Thanksgiving coincided with my birthday."
+    },
+    {
+        "Word": "Subsequent",
+        "Definition": "Coming after something in time.",
+        "Sample Sentence": "The first king was a good ruler, but subsequent kings have all been corrupt."
+    },
+    {
+        "Word": "Influence",
+        "Definition": "The ability to have an impact of something.",
+        "Sample Sentence": "The older sister has been a positive influence on her younger siblings."
+    },
+    {
+        "Word": "Somber",
+        "Definition": "Gloomy; depressing.",
+        "Sample Sentence": "After losing the competition, the chess players were very somber."
+    },
+    {
+        "Word": "Vestige",
+        "Definition": "A small trace of something that is disappearing or has already disappeared.",
+        "Sample Sentence": "The empty castle still had a few vestiges of its former wealth."
+    },
+    {
+        "Word": "Origin",
+        "Definition": "The source; where something began.",
+        "Sample Sentence": "The explorers are trying to find the origin of the Nile."
+    },
+    {
+        "Word": "Collapse",
+        "Definition": "To fall down or break down.",
+        "Sample Sentence": "The old building finally collapsed, leaving nothing but a pile of rubble."
+    },
+    {
+        "Word": "Hackneyed",
+        "Definition": "Overused and unoriginal.",
+        "Sample Sentence": "HIs poems contain many hackneyed phrases."
+    },
+    {
+        "Word": "Shrink",
+        "Definition": "To become smaller.",
+        "Sample Sentence": "Hopefully this cream will cause my scar to shrink."
+    },
+    {
+        "Word": "Erroneous",
+        "Definition": "Incorrect.",
+        "Sample Sentence": "He apologized for his erroneous statement."
+    },
+    {
+        "Word": "Fundamental",
+        "Definition": "Of primary importance.",
+        "Sample Sentence": "Learning scales is fundamental to being a good piano player."
+    },
+    {
+        "Word": "Diverse",
+        "Definition": "Showing a lot of variety.",
+        "Sample Sentence": "This city has a very diverse population."
+    },
+    {
+        "Word": "Adjust",
+        "Definition": "To change something so it serves its purpose better.",
+        "Sample Sentence": "The bike seat may be too high; you\u2019ll probably need to adjust it."
+    },
+    {
+        "Word": "Incessant",
+        "Definition": "Continuing without pause.",
+        "Sample Sentence": "I can\u2019t sleep because of the dog\u2019s incessant barking."
+    },
+    {
+        "Word": "Morose",
+        "Definition": "Gloomy, depressed.",
+        "Sample Sentence": "The boy was morose after hearing he didn\u2019t make the football team."
+    },
+    {
+        "Word": "Acquire",
+        "Definition": "To come into possession of.",
+        "Sample Sentence": "When my grandmother died, I acquired her cookbook collection."
+    },
+    {
+        "Word": "Jargon",
+        "Definition": "Words specific to a certain job or group.",
+        "Sample Sentence": "To be a successful doctor, you\u2019ll need to learn a lot of medical jargon."
+    },
+    {
+        "Word": "Inconsistent",
+        "Definition": "Changing randomly.",
+        "Sample Sentence": "His pitching has been very inconsistent all season."
+    },
+    {
+        "Word": "Expertise",
+        "Definition": "Expert knowledge or skill in a particular field.",
+        "Sample Sentence": "The surgeon\u2019s expertise is knee surgeries."
+    },
+    {
+        "Word": "Epitome",
+        "Definition": "A perfect example of something.",
+        "Sample Sentence": "The duchess is the epitome of class."
+    },
+    {
+        "Word": "Prevalent",
+        "Definition": "Widespread.",
+        "Sample Sentence": "If more people don\u2019t start washing their hands, disease will become more prevalent."
+    },
+    {
+        "Word": "Precede",
+        "Definition": "To come before.",
+        "Sample Sentence": "The flower girls preceded the bride when they walked down the aisle."
+    },
+    {
+        "Word": "Stable",
+        "Definition": "Unlikely to change or fail.",
+        "Sample Sentence": "We\u2019re lucky to live in a country with such a stable government."
+    },
+    {
+        "Word": "Rhetorical",
+        "Definition": "Used just for style or impact.",
+        "Sample Sentence": "You aren\u2019t expected to actually answer rhetorical questions."
+    },
+    {
+        "Word": "Widespread",
+        "Definition": "Occurring over a large region.",
+        "Sample Sentence": "There is widespread poverty across that country."
+    },
+    {
+        "Word": "Expand",
+        "Definition": "To increase in size.",
+        "Sample Sentence": "Adding air to bike tires will cause them to expand."
+    },
+    {
+        "Word": "Eliminate",
+        "Definition": "To remove.",
+        "Sample Sentence": "Our team lost the match and was eliminated from the competition."
+    },
+    {
+        "Word": "Soothe",
+        "Definition": "To calm or comfort.",
+        "Sample Sentence": "The mother sang a lullaby to soothe her crying baby."
+    },
+    {
+        "Word": "Ambitious",
+        "Definition": "Having large goals.",
+        "Sample Sentence": "My son is very ambitious and hopes to be a millionaire by the time he\u2019s thirty."
+    },
+    {
+        "Word": "Distribute",
+        "Definition": "To give portions of something.",
+        "Sample Sentence": "Distribute the materials evenly among the class."
+    },
+    {
+        "Word": "Devise",
+        "Definition": "To plan or create.",
+        "Sample Sentence": "The coach devised a plan for winning the game."
+    },
+    {
+        "Word": "Method",
+        "Definition": "A way of doing something.",
+        "Sample Sentence": "Her method for making bread takes three days."
+    },
+    {
+        "Word": "Antagonize",
+        "Definition": "To tease or be hostile towards a person or group.",
+        "Sample Sentence": "The boy loves to antagonize his little sister by pulling her hair."
+    },
+    {
+        "Word": "Substitute",
+        "Definition": "A person or thing acting in place of another.",
+        "Sample Sentence": "If you don\u2019t have sugar, honey makes a good substitute for this recipe."
+    },
+    {
+        "Word": "Evaluate",
+        "Definition": "To assess.",
+        "Sample Sentence": "At the end of the class, every student will evaluate how well the professor taught."
+    },
+    {
+        "Word": "Concur",
+        "Definition": "To agree.",
+        "Sample Sentence": "He believes women should be paid as much as men, and I concur."
+    },
+    {
+        "Word": "Feasible",
+        "Definition": "Possible to do.",
+        "Sample Sentence": "This study plan you made for me sounds feasible, even with my work schedule."
+    },
+    {
+        "Word": "Advantage",
+        "Definition": "Something that makes it easier to achieve success.",
+        "Sample Sentence": "His height gives him an advantage in basketball."
+    },
+    {
+        "Word": "Deplete",
+        "Definition": "To significantly decrease.",
+        "Sample Sentence": "Your shopping sprees have depleted my savings."
+    },
+    {
+        "Word": "Partake",
+        "Definition": "To join in.",
+        "Sample Sentence": "My leg was feeling much better, so I decided to partake in the soccer match."
+    },
+    {
+        "Word": "Transfer",
+        "Definition": "To move from one place to another.",
+        "Sample Sentence": "Ben\u2019s work is going to transfer him from Chicago to Detroit."
+    },
+    {
+        "Word": "Sparse",
+        "Definition": "Thinly scattered.",
+        "Sample Sentence": "The farm was almost empty; there were just a few sparse trees here and there."
+    },
+    {
+        "Word": "Obtain",
+        "Definition": "To get.",
+        "Sample Sentence": "The spy obtained the secret codes we need."
+    },
+    {
+        "Word": "Irony",
+        "Definition": "The use of words to give a meaning opposite to their literal meaning.",
+        "Sample Sentence": "\u201cI love spending my Friday nights doing homework,\u201d she said with irony."
+    },
+    {
+        "Word": "Lenient",
+        "Definition": "Merciful; less harsh.",
+        "Sample Sentence": "The judge gave the criminal a lenient sentence due to his bad childhood."
+    },
+    {
+        "Word": "Oppress",
+        "Definition": "To unfairly burden.",
+        "Sample Sentence": "For the past ten generations the royal family has oppressed the peasants by keeping them in poverty."
+    },
+    {
+        "Word": "Inevitable",
+        "Definition": "Unable to be avoided.",
+        "Sample Sentence": "Even if you\u2019re healthy, death is inevitable in the end."
+    },
+    {
+        "Word": "Integrate",
+        "Definition": "To combine.",
+        "Sample Sentence": "When making a cake, you need to fully integrate the wet and dry ingredients."
+    },
+    {
+        "Word": "Peak",
+        "Definition": "The highest or most important point.",
+        "Sample Sentence": "Winning the championship was the peak of his career."
+    },
+    {
+        "Word": "Incompetent",
+        "Definition": "Incapable; lacking ability.",
+        "Sample Sentence": "The incompetent worker was fired from his job."
+    },
+    {
+        "Word": "Fluctuate",
+        "Definition": "To change continually.",
+        "Sample Sentence": "I\u2019m not sure what to wear since the temperature has been fluctuating so much."
+    },
+    {
+        "Word": "Recede",
+        "Definition": "To retreat.",
+        "Sample Sentence": "Two days after the flood, the seawater finally began to recede from our house."
+    },
+    {
+        "Word": "Accustomed",
+        "Definition": "Used to something.",
+        "Sample Sentence": "Having 8AM classes means I\u2019m accustomed to getting up early."
+    },
+    {
+        "Word": "Vanish",
+        "Definition": "To disappear quickly.",
+        "Sample Sentence": "The plane vanished behind the clouds."
+    },
+    {
+        "Word": "Ample",
+        "Definition": "Plentiful.",
+        "Sample Sentence": "Our new apartment has ample space for the two of us."
+    },
+    {
+        "Word": "Legitimate",
+        "Definition": "Lawful.",
+        "Sample Sentence": "The way he became mayor is completely legitimate."
+    },
+    {
+        "Word": "Continuously",
+        "Definition": "To go on without stopping.",
+        "Sample Sentence": "My neighbors have been continuously blasting their music since last night."
+    },
+    {
+        "Word": "Reproach",
+        "Definition": "To express disapproval or disappointment.",
+        "Sample Sentence": "The coach reproached the players for failing to play their best."
+    },
+    {
+        "Word": "Obey",
+        "Definition": "To follow orders or instructions.",
+        "Sample Sentence": "My dog always obeys me when I ask her to sit."
+    },
+    {
+        "Word": "Rely",
+        "Definition": "To depend on.",
+        "Sample Sentence": "I rely on coffee to get my through my mornings."
+    },
+    {
+        "Word": "Conceal",
+        "Definition": "To hide.",
+        "Sample Sentence": "The mountains concealed the ocean from view."
+    },
+    {
+        "Word": "Hazardous",
+        "Definition": "Full of risk.",
+        "Sample Sentence": "The nuclear reactor has a lot of hazardous waste."
+    },
+    {
+        "Word": "Invasive",
+        "Definition": "Intrusive.",
+        "Sample Sentence": "We found the stranger\u2019s questions too personal and very invasive."
+    },
+    {
+        "Word": "Migrate",
+        "Definition": "To move from one place to another.",
+        "Sample Sentence": "Every fall, the geese migrate to Florida."
+    },
+    {
+        "Word": "Deceive",
+        "Definition": "To trick or mislead.",
+        "Sample Sentence": "He deceived me by pretending to be a millionaire."
+    },
+    {
+        "Word": "Hostile",
+        "Definition": "Extremely unfriendly.",
+        "Sample Sentence": "My ex-boyfriend\u2019s new girlfriend was very hostile towards me."
+    },
+    {
+        "Word": "Prior",
+        "Definition": "Previous or earlier.",
+        "Sample Sentence": "Prior to becoming a teacher, Elena worked as a book editor."
+    },
+    {
+        "Word": "Eloquent",
+        "Definition": "Moving speech or writing.",
+        "Sample Sentence": "Her eloquent writing has gained her many fans."
+    },
+    {
+        "Word": "Hesitate",
+        "Definition": "To pause, often due to reluctance.",
+        "Sample Sentence": "She hesitated before entering the abandoned building."
+    },
+    {
+        "Word": "Clarify",
+        "Definition": "To make clear; to remove confusion.",
+        "Sample Sentence": "I didn\u2019t understand the instructions, so I asked the teacher to clarify them."
+    },
+    {
+        "Word": "Assume",
+        "Definition": "To suppose without solid proof.",
+        "Sample Sentence": "I assumed he was rich because he worked as a lawyer."
+    },
+    {
+        "Word": "Ease",
+        "Definition": "To reduce unpleasantness or difficulty.",
+        "Sample Sentence": "This prescription will ease your allergies."
+    },
+    {
+        "Word": "Commitment",
+        "Definition": "Dedication to a cause or activity.",
+        "Sample Sentence": "Joining a school play is a big commitment. You\u2019ll need to practice every evening."
+    },
+    {
+        "Word": "Decipher",
+        "Definition": "To find the meaning of.",
+        "Sample Sentence": "The spy deciphered the secret code."
+    },
+    {
+        "Word": "Coalesce",
+        "Definition": "To combine or grow together.",
+        "Sample Sentence": "The people on the street eventually coalesced into a group."
+    },
+    {
+        "Word": "Impose",
+        "Definition": "To force upon.",
+        "Sample Sentence": "After the riots, the mayor imposed a curfew on the town."
+    },
+    {
+        "Word": "Detect",
+        "Definition": "To locate something.",
+        "Sample Sentence": "The police dog detected the missing child\u2019s scent."
+    },
+    {
+        "Word": "Pragmatic",
+        "Definition": "Practical, sensible.",
+        "Sample Sentence": "Your boyfriend is too dramatic. I think you need a more pragmatic man."
+    },
+    {
+        "Word": "Brief",
+        "Definition": "Short (in terms of time).",
+        "Sample Sentence": "It will only have a brief meeting, so you\u2019ll still have plenty of time for lunch."
+    },
+    {
+        "Word": "Require",
+        "Definition": "To need for a specific purpose.",
+        "Sample Sentence": "The camping trip requires that every participant bring their own food and sleeping bag."
+    },
+    {
+        "Word": "Lag",
+        "Definition": "To fall behind.",
+        "Sample Sentence": "I stayed with the front group of runners for the first few miles, but after that I began to lag."
+    },
+    {
+        "Word": "Intrepid",
+        "Definition": "Fearless.",
+        "Sample Sentence": "The intrepid mountain climber reached the top of Mt. Everest."
+    },
+    {
+        "Word": "Valid",
+        "Definition": "Just; well-founded.",
+        "Sample Sentence": "The soldiers had valid concerns about the battles they\u2019d be facing."
+    },
+    {
+        "Word": "Deter",
+        "Definition": "To discourage.",
+        "Sample Sentence": "The warning signs on the house deterred trespassers."
+    },
+    {
+        "Word": "Release",
+        "Definition": "To free; to allow to be known.",
+        "Sample Sentence": "The CEO decided to release the company\u2019s profits from last year."
+    },
+    {
+        "Word": "Famine",
+        "Definition": "A time when there is an extreme lack of food.",
+        "Sample Sentence": "Millions of children in \u00a0Ethiopia died due to the famine there."
+    },
+    {
+        "Word": "Restrict",
+        "Definition": "To confine or keep within limits.",
+        "Sample Sentence": "My doctor told me to restrict myself to one glass of wine a day."
+    },
+    {
+        "Word": "Incentive",
+        "Definition": "A reason to do something.",
+        "Sample Sentence": "I hate my job, but the big paychecks are a good incentive to stick with it."
+    },
+    {
+        "Word": "Impair",
+        "Definition": "To worsen.",
+        "Sample Sentence": "Drinking alcohol will impair your driving abilities."
+    },
+    {
+        "Word": "Declaration",
+        "Definition": "An announcement.",
+        "Sample Sentence": "He made a declaration to the office that he was quitting."
+    },
+    {
+        "Word": "Extension",
+        "Definition": "An act of making something longer.",
+        "Sample Sentence": "If you\u2019re sick on the day the paper is due, the teacher may give you an extension on the due date."
+    },
+    {
+        "Word": "Unjust",
+        "Definition": "Unfair.",
+        "Sample Sentence": "Since I tried my hardest on the exam, I felt my teacher\u2019s criticism of me was unjust."
+    },
+    {
+        "Word": "Estimate",
+        "Definition": "An approximate value.",
+        "Sample Sentence": "Try to get an estimate of the number of people attending the concert."
+    },
+    {
+        "Word": "Dispose",
+        "Definition": "To get rid of.",
+        "Sample Sentence": "I need to dispose of this trash."
+    }
+]

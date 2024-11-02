@@ -13,7 +13,8 @@ import {
   Users,
   MessageCircleMore,
   ScreenShare,
-  MountainIcon
+  MountainIcon,
+  DollarSignIcon
 } from 'lucide-react';
 import { SidebarDesktop } from './sidebar-desktop';
 import { SidebarItems } from '@/types';
@@ -68,6 +69,11 @@ export default function Sidebar() {
         href: '/university-shortlisting',
         icon: Users,
         label: 'AI University Shortlisting',
+      },
+      {
+        href: '/payment',
+        icon: DollarSignIcon,
+        label: 'Monthly Pricing',
       },
       {
         href: 'https://gre-resources.com/gre-books',

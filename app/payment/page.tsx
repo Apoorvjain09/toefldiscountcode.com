@@ -42,160 +42,107 @@ export default function Payment() {
           Subscriptions
         </span>
       </h1>
-      <div className="flex gap-10 justify-evenly flex-col lg:flex-row">
-        {/* 3 Month Membership */}
-        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
-          <div className="p-6 sm:px-8">
-            <h2 className="text-lg font-medium text-gray-900">
-              3-Month Membership
-              <span className="sr-only">Plan</span>
-            </h2>
-            <p className="mt-2 text-gray-700">Best Value Pack!</p>
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 15$ </strong>
-              <span className="text-sm font-medium text-gray-700">/month</span>
-            </p>
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-xl"> <del>45$!</del> <ins>40$</ins>!</strong>
-            </p>
-            <button
-              className="w-full mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-            >
-              <PaymentButton id="pl_OYfBLTGmPCKsCY" />
-            </button>
-          </div>
-          <div className="p-6 sm:px-8">
-            <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
-            <ul className="mt-2 space-y-2 sm:mt-4">
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> 10 Full-length Mock tests </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> 100TGG free User credit </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> Email support </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgCross />
-                <span className="text-gray-700"> Help center access </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgCross />
-                <span className="text-gray-700"> Phone support </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgCross />
-                <span className="text-gray-700"> Community access </span>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
+          <div
+            className="rounded-2xl border border-indigo-600 p-6 shadow-sm ring-1 ring-indigo-600 sm:order-last sm:px-8 lg:p-12"
+          >
+            <div className="text-center">
+              <h2 className="text-lg font-medium text-gray-900">
+                TGG Plus
+                <span className="sr-only">Plan</span>
+              </h2>
 
-        {/* 6-Month Membership Plan */}
-        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
-          <div className="p-6 sm:px-8">
-            <h2 className="text-lg font-medium text-gray-900">
-              6-Month Membership
-              <span className="sr-only">Plan</span>
-            </h2>
-            <p className="mt-2 text-gray-700">Best Selling!</p>
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 10$ </strong>
-              <span className="text-sm font-medium text-gray-700">/month</span>
-            </p>
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-xl"> <del>60$!</del> <ins>50$</ins>!</strong>
-            </p>
-            <button
-              className="w-full mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-            >
-              <PaymentButton id='pl_OYe9haqEkwk3Jd' />
-            </button>
-          </div>
-          <div className="p-6 sm:px-8">
-            <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
-            <ul className="mt-2 space-y-2 sm:mt-4">
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> 10 free mock test (Full-length) </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> 200TGG free User credit </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> Email support </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> Help center access </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgCross />
-                <span className="text-gray-700"> Phone support </span>
-              </li>
-              <li className="flex items-center gap-1">
-                <SvgCross />
-                <span className="text-gray-700"> Community access </span>
-              </li>
-            </ul>
-          </div>
-        </div>
+              <p className="mt-2 sm:mt-4">
+                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 5$ </strong>
 
-        {/* Monthly Subscription Plan */}
-        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
-          <div className="p-6 sm:px-8">
-            <h2 className="text-lg font-medium text-gray-900">
-              Monthly Subscription
-              <span className="sr-only">Plan</span>
-            </h2>
-            <p className="mt-2 text-gray-700">For Users Whose test date is close.</p>
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> 20$ </strong>
-              <span className="text-sm font-medium text-gray-700">/month</span>
-            </p>
-            <p className="mt-2 sm:mt-4">
-              <strong className="text-3xl font-bold text-gray-900 sm:text-xl">Flat 20$!</strong>
-            </p>
-            <button
-              className="w-full mt-4 block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 sm:mt-6"
-            >
-              <PaymentButton id='pl_OYfRwibtIHC3Nx' />
-            </button>
-          </div>
-          <div className="p-6 sm:px-8">
-            <p className="text-lg font-medium text-gray-900 sm:text-xl">What's included:</p>
-            <ul className="mt-2 space-y-2 sm:mt-4">
+                <span className="text-sm font-medium text-gray-700">/month</span>
+              </p>
+            </div>
+
+            <ul className="mt-6 space-y-2">
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> 10 free mock test (Full-length) </span>
+                <span className="text-gray-700"> 8 Mock Tests </span>
               </li>
+
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> 200TGG free User credit </span>
+                <span className="text-gray-700"> 4 Pre-recorded Classes </span>
               </li>
+
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> Email support </span>
+                <span className="text-gray-700"> Vocab Ladder Access</span>
               </li>
+
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> Help center access </span>
+                <span className="text-gray-700"> University Shortlisting</span>
               </li>
+
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> Phone support </span>
+                <span className="text-gray-700"> 10 toefl mini tests </span>
               </li>
+
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> Community access </span>
+                <span className="text-gray-700"> 12 Toefl vocab classes </span>
               </li>
             </ul>
+
+            <a
+              href="https://rzp.io/rzp/Daf27InL"
+              target="_blank"
+              className="mt-8 block rounded-full border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
+            >
+              Get Started
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
+            <div className="text-center">
+              <h2 className="text-lg font-medium text-gray-900">
+                Starter
+                <span className="sr-only">Plan</span>
+              </h2>
+
+              <p className="mt-2 sm:mt-4">
+                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl"> Free </strong>
+
+                <span className="text-sm font-medium text-gray-700">/month</span>
+              </p>
+            </div>
+
+            <ul className="mt-6 space-y-2">
+              <li className="flex items-center gap-1">
+                <SvgTick />
+                <span className="text-gray-700"> 1 Mock Test </span>
+              </li>
+
+              <li className="flex items-center gap-1">
+                <SvgTick />
+                <span className="text-gray-700"> Vocab Lader Access </span>
+              </li>
+
+              <li className="flex items-center gap-1">
+                <SvgCross />
+                <span className="text-gray-700"> Pre-recorded classes </span>
+              </li>
+
+              <li className="flex items-center gap-1">
+                <SvgCross />
+                <span className="text-gray-700"> Help center access </span>
+              </li>
+            </ul>
+
+            <a
+              href="/"
+              className="mt-8 block rounded-full border border-indigo-600 bg-white px-12 py-3 text-center text-sm font-medium text-indigo-600 hover:ring-1 hover:ring-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+            >
+              Get Started
+            </a>
           </div>
         </div>
       </div>

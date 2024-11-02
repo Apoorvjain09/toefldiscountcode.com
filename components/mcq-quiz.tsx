@@ -1,12 +1,12 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState, useMemo } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Progress } from '@/components/ui/progress'
-import { CircleCheck, CircleX, X } from 'lucide-react'
+import { CircleCheck, CircleX, Medal, X } from 'lucide-react'
 
 interface QuizQuestion {
   Word: string;
@@ -146,27 +146,6 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
   }, [moduleComplete, modulePosition]);
 
 
-  if (moduleComplete) {
-    return (
-      <Card className="w-full max-w-2xl mx-auto">
-        <CardHeader>
-          <CardTitle>Congratulations!</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-xl text-center font-semibold text-green-600">
-            You have successfully completed the module!
-          </p>
-          <Button
-            onClick={() => { window.location.href = "/vocab-mountain" }} // Navigate to home page
-            className="mt-4 bg-blue-500 hover:bg-blue-600 text-white"
-          >
-            Go to Home
-          </Button>
-        </CardContent>
-      </Card>
-    )
-  }
-
   const generateOptions = (correctAnswer: string) => {
     const incorrectOptions = questions
       .filter((q) => q.Word !== correctAnswer)
@@ -177,12 +156,27 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
     return [correctAnswer, ...incorrectOptions].sort(() => 0.5 - Math.random())
   }
 
-  const currentQuestion = isReviewingWrongAnswers ? wrongAnswers[currentQuestionIndex] : questions[currentQuestionIndex]
-  const currentOptions = currentQuestion ? generateOptions(currentQuestion.Word) : []
-  const progressValue = (correctAnswersCount / questions.length) * 100
+  const currentQuestion = isReviewingWrongAnswers
+    ? wrongAnswers[currentQuestionIndex] || null
+    : questions[currentQuestionIndex] || null;
+  const currentOptions = useMemo(() => {
+    if (currentQuestion) {
+      const correctAnswer = currentQuestion.Word;
+      const incorrectOptions = questions
+        .filter((q) => q.Word !== correctAnswer)
+        .map((q) => q.Word)
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
+
+      return [correctAnswer, ...incorrectOptions].sort(() => 0.5 - Math.random());
+    }
+
+    // Fallback to empty array if `currentQuestion` is undefined
+    return [];
+  }, [currentQuestion, questions]); const progressValue = (correctAnswersCount / questions.length) * 100
 
   return (
-    <Card className="relative mx-auto bg-[#1D1A5F] w-full h-full sm:h-[90vh] bg-center bg-cover bg-no-repeat bg-[url('https://img.freepik.com/free-vector/outer-space-background-with-planets-stars_107791-17549.jpg?t=st=1730365437~exp=1730369037~hmac=4113865b77c0b9f1a5e1e18857f19df9fe3ddf309b5b2bbeddadffa0ad234bc0&w=996')]">
+    <Card className="relative mx-auto bg-[#1D1A5F] w-full h-[95vh] sm:h-[90vh] bg-center bg-cover bg-no-repeat bg-[url('https://img.freepik.com/free-vector/outer-space-background-with-planets-stars_107791-17549.jpg?t=st=1730365437~exp=1730369037~hmac=4113865b77c0b9f1a5e1e18857f19df9fe3ddf309b5b2bbeddadffa0ad234bc0&w=996')]">
       <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md"></div>
       <div className='relative z-10'>
 
@@ -199,7 +193,7 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
               {currentOptions.map((option, index) => (
                 <div
                   key={index}
-                  className={`w-[90%] sm:w-[50%] h-[4rem] mb-3 px-4 text-white rounded-lg flex justify-start items-center gap-5 cursor-pointer ${selectedOption === option && showCorrectFeedback ? 'bg-green-500' : 'bg-white/10 hover:bg-white/30'}`}
+                  className={`w-[90%] sm:w-[50%] h-[4rem] mb-3 px-4 text-white rounded-lg flex justify-start items-center gap-5 cursor-pointer ${selectedOption === option && showCorrectFeedback ? 'bg-green-500' : 'bg-white/10 sm:hover:bg-white/30'}`}
                   onClick={() => handleAnswer(option)}
                 >
                   <span className="mr-2">{userAnswers[currentQuestionIndex] === option ? "●" : "○"}</span>
@@ -225,6 +219,44 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
             <Button onClick={moveToNextQuestion} className='text-xl bg-purple-500 p-2'>Next</Button>
           )}
         </CardFooter>
+
+        {moduleComplete && (
+          <Card className="w-[80%] h-[] sm:w-full max-w-sm mx-auto">
+            <CardContent className="pt-6 text-center">
+              <div className="relative mb-4">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-full h-full max-w-[200px] max-h-[200px]">
+                    <div className="absolute top-0 left-1/4 w-2 h-2 bg-sky-300 rounded-full" />
+                    <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-pink-300 rounded-full" />
+                    <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-purple-300 rounded-full" />
+                    <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-yellow-300 rounded-full" />
+                    <div className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-green-300 rotate-45" />
+                    <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-blue-300 rotate-45" />
+                    <div className="absolute top-[45%] left-[45%] w-1.5 h-1.5 bg-red-300 rotate-45" />
+                  </div>
+                </div>
+
+                <div className="relative mx-auto w-20 h-20 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full flex items-center justify-center">
+                  <div className="absolute -bottom-3 w-6 h-8 bg-purple-500 clip-ribbon" />
+                  <Medal className="w-10 h-10 text-yellow-100" />
+                </div>
+              </div>
+
+              <h2 className="text-2xl font-semibold mb-3">Congratulations</h2>
+              <p className="text-muted-foreground text-sm mb-6 px-6">
+                Awesome Job! You’ve successfully completed this module, and now you’re one step closer to mastering the art of vocabulary! Every word you learn strengthens your understanding and brings you closer to expressing yourself with precision and confidence. 🚀
+              </p>
+
+              <Button onClick={() => { window.location.href = "/vocab-mountain" }} className="bg-purple-500 hover:bg-purple-600 text-white px-8">Home</Button>
+            </CardContent>
+
+            <style jsx>{`
+            .clip-ribbon {
+              clip-path: polygon(50% 100%, 0 0, 100% 0);
+            }
+          `}</style>
+          </Card>
+        )}
       </div>
 
     </Card>

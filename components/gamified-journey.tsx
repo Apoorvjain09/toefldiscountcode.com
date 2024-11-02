@@ -108,12 +108,12 @@ export function GamifiedJourney() {
   }
 
   return (
-    <div className="w-full h-full mx-auto rounded-lg overflow-hidden">
+    <div className="w-full h-[95vh] sm:h-full mx-auto rounded-lg overflow-hidden">
       <div
         ref={scrollContainerRef}
         style={{
           overflowY: "auto",
-          maxHeight: "90vh",
+          maxHeight: "95vh",
           scrollbarWidth: "thin", // for Firefox
           scrollbarColor: "#c1c1c1 #f0f0f0", // scrollbar color for Firefox
         }}

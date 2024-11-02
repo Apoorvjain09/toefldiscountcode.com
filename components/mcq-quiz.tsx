@@ -182,7 +182,7 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
 
         <CardContent>
           <div className='flex justify-center items-center my-10 gap-3'>
-            <X className='text-white hover:cursor-pointer' onClick={() => { window.location.href = "/vocab-mountain" }} />
+            <X className='text-white hover:cursor-pointer' onClick={() => { window.location.href = "/vocab-ladder" }} />
             <Progress value={progressValue} className="border border-white" style={{ backgroundColor: '#0C062F', color: 'gray' }} />
           </div>
 
@@ -247,7 +247,7 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
                 Awesome Job! You’ve successfully completed this module, and now you’re one step closer to mastering the art of vocabulary! Every word you learn strengthens your understanding and brings you closer to expressing yourself with precision and confidence. 🚀
               </p>
 
-              <Button onClick={() => { window.location.href = "/vocab-mountain" }} className="bg-purple-500 hover:bg-purple-600 text-white px-8">Home</Button>
+              <Button onClick={() => { window.location.href = "/vocab-ladder" }} className="bg-purple-500 hover:bg-purple-600 text-white px-8">Home</Button>
             </CardContent>
 
             <style jsx>{`

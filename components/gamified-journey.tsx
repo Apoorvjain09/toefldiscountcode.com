@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Button } from '@/components/ui/button'
 import { Trophy, Star, GraduationCap } from 'lucide-react'
-import quizData from "./../app/vocab-mountain/output.json"
+import quizData from "./../app/vocab-ladder/output.json"
 import { McqQuiz } from './mcq-quiz'
 import { useMediaQuery } from 'usehooks-ts'; // Import the hook
 

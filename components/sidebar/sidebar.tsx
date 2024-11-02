@@ -61,7 +61,7 @@ export default function Sidebar() {
       //   label: 'Classes',
       // },
       {
-        href: '/vocab-mountain',
+        href: '/vocab-ladder',
         icon: MountainIcon,
         label: 'Vocab Ladder',
       },

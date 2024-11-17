@@ -55,11 +55,11 @@ export default function Sidebar() {
       //   icon: Bookmark,
       //   label: 'Find study partner',
       // },
-      // {
-      //   href: '/classes',
-      //   icon: Bookmark,
-      //   label: 'Classes',
-      // },
+      {
+        href: '/classes',
+        icon: Bookmark,
+        label: 'Classes (💎)',
+      },
       {
         href: '/vocab-ladder',
         icon: MountainIcon,

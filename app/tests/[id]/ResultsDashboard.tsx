@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { readingQuestions, listeningQuestions } from './questions'; // Adjust the import path as necessary
+// import { readingQuestions, listeningQuestions } from './questions'; // Adjust the import path as necessary
 import WritingSection from './WritingSection';
+import { usePathname } from 'next/navigation';
 
 interface ResultsDashboardProps {
     readingAnswers: number[];
@@ -22,8 +23,28 @@ interface ResultsDashboardProps {
 }
 
 
+interface ReadingQuestion {
+    id: number;
+    passage?: string;
+    question: string;
+    options: string[];
+    answer: number;
+    summaryAnswer?: number[];
+    highlight?: string
+    instructions?: string
+    introductorySentence?: string
+}
+
+export interface ListeningQuestion {
+    id: number; // Unique identifier for the question
+    question: string; // The text of the question
+    options: string[]; // Array of options for the question
+    answer: number; // Index of the correct option in the options array
+}
+
+
+
 const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, totalScoreListening, listeningAnswers, writingScores, speakingScores }) => {
-    console.log(totalScoreReading)
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
 
     //send email
@@ -62,6 +83,30 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
 
     //     sendEmailWithResults();
     // }, [totalScoreReading, totalScoreListening, writingScores, speakingScores]);
+
+
+
+    const pathname = usePathname();
+    const id = pathname.split('/').pop();
+
+    if (!id) {
+        return <div>Loading...</div>;
+    }
+    // Dynamically import the correct questions file
+    let readingQuestions: any;
+    let listeningQuestions: any;
+    let listeningAudios: any;
+
+    try {
+        const questionsModule = require(`../questions/${id}`);
+        readingQuestions = questionsModule.readingQuestions;
+        listeningQuestions = questionsModule.listeningQuestions;
+        listeningAudios = questionsModule.listeningAudios;
+    } catch (error) {
+        console.error(`Questions file for Test ${id} not found.`);
+        return <div>Test questions not found.</div>;
+    }
+
 
     const handleSectionClick = (section: 'reading' | 'listening' | 'writing' | 'speaking') => {
         setSelectedSection(section);
@@ -105,9 +150,9 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                     {selectedSection === 'reading' && (
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">Reading Section Results (Total Score: {Math.round(totalScoreReading * 30 / 22)}/30)</h4>
-                            {readingQuestions.map((q, index) => {
+                            {readingQuestions.map((q: ReadingQuestion, index: number) => {
                                 if (q.id === 10) {
-                                    const question10 = readingQuestions.find(q => q.id === 10);
+                                    const question10 = readingQuestions.find((q: ReadingQuestion) => q.id === 10);
                                     return (
                                         <div key={q.id} className="mb-4 border p-2 rounded-2xl">
                                             <h4 className="text-lg font-bold mb-4">Summary Questions - Passage 1 [0:A, 1:B, 2:C, 3:D ,4:E ,5:F]</h4>
@@ -133,7 +178,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                                         </div>
                                     );
                                 } else if (q.id === 20) {
-                                    const question20 = readingQuestions.find(q => q.id === 20);
+                                    const question20 = readingQuestions.find((q: ReadingQuestion) => q.id === 20);
                                     return (
                                         <div key={q.id} className="mb-4 border p-2 rounded-2xl">
                                             <h4 className="text-lg font-bold mb-4">Summary Questions - Passage 2 [0:A, 1:B, 2:C, 3:D ,4:E ,5:F]</h4>
@@ -182,7 +227,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                     {selectedSection === 'listening' && (
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">Listening Section Results (Total Score: {Math.round(totalScoreListening * 30 / 28)}/30)</h4>
-                            {listeningQuestions.map((q, index) => {
+                            {listeningQuestions.map((q: ListeningQuestion, index: number) => {
                                 const isCorrect = listeningAnswers[index] === q.answer;
                                 return (
                                     <div key={q.id} className="mb-4 border p-2 rounded-2xl">
@@ -230,7 +275,7 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
                         <div>
                             <h4 className="text-lg font-bold mb-4 mt-10">
                                 Speaking Section Results (Total Score: {Math.round(((speakingScores.task1?.score ?? 0) + (speakingScores.task2?.score ?? 0) + (speakingScores.task3?.score ?? 0) + (speakingScores.task4?.score ?? 0)) * 1.875)}/30)
-                            </h4>                            
+                            </h4>
                             {speakingScores.task1 && (
                                 <div className="mb-4 border p-2 rounded-2xl">
                                     <h5 className="font-bold mb-2">Task 1</h5>

@@ -826,6 +826,7 @@ export const listeningQuestions = [
 
 export const writingQuestions = {
     task1_audio: "https://www.dropbox.com/scl/fi/9lorg2e3a2ouxmt20suyf/T2W1.mp3?rlkey=97voaa60ko4yzr6byhb3gampk&raw=1",
+    task1_photo: "/assets/T1C3_Listening.avif", //female giving lecture,
     task1: {
         passage: `In a vote that took place at the International Astronomical Union Conference on August 24th, 2006, Pluto lost its status as a planet in our solar system. Pluto was originally discovered in 1930 when scientists were searching for something that was interfering with Uranus's orbit. Though Pluto was estimated to be similar in size to Earth, it was later discovered that it was even smaller than our own moon, as well as many other moons.
         It is now known that there are thousands of planetary objects similar to Pluto, including Eris which is slightly larger than Pluto. Choosing to reclassify Pluto to a dwarf planet honors the fact that science is about making new discoveries. While it was a sad day for Pluto lovers, people in general have accepted the idea, and the next generation of children will grow up knowing only eight planets and thinking nothing of it. As Mike Brown, the astronomer who discovered Eris, noted following the IUC's decision, "science is self-correcting."
@@ -866,13 +867,16 @@ export const speakingQuestions = [
         passage2: `All students should be aware that there are two changes in tomorrow’s student council elections. First of all, there will be no voting in the student library as the librarians have claimed that voting there would be too noisy. As a result, voting will only be permitted in the student center and at the student cafeteria. The second change concerns the student cafeteria. Voting there will end at 8 P.M. rather than at 9 P.M. since the cafeteria regularly closes at eight. Those students wishing to vote between eight and nine must do so at the student center.`,
         conversationAudio2: "https://www.dropbox.com/scl/fi/8wfil9rifqhsvp2svdjhl/T2S1.mp3?rlkey=1dnpcr52xgbrzw7ak1r4phkfu&raw=1",
         question2: "The man expresses his opinion about the article in the school newspaper. Explain his opinion and the reasons he gives for holding that opinion.",
+        Audio2Photo: "/assets/Two-Students_talking-in-coridor.png",
 
         passage3: "Prey animals employ a variety of methods, including running and hiding, to avoid being caught by predators. Yet some animals do not hide but instead stand out. This is often accomplished through the method known as warning coloration. Animals utilizing warning coloration have brightly colored fur or skin. They are typically blue, purple, white, orange, red, or yellow in color. Many of these animals have lethal poison or venom. Predators that see brightly colored animals almost always avoid them. That is particularly true if the predators have had prior negative experiences with similar-looking animals.",
         conversationAudio3: "https://www.dropbox.com/scl/fi/ci67vtn8hfydqi63uyg6z/T2S2.mp3?rlkey=vyuuu77k32fqhrour5kx94l0s&raw=1",
         question3: "The professor talks about the poison dart frog and the skunk. Explain how their actions are related to animal warning coloration.",
+        Audio3Photo:"/assets/Man-giving-speech.png",
 
         conversationAudio4: "https://www.dropbox.com/scl/fi/l3d2mp9o74dhc2m42bddw/T2S3.mp3?rlkey=zy4p41knq0w7q9qv50uigi890&raw=1",
         question4: "Using points and examples from the talk, explain two ways that natural arches are formed.",
+        Audio4Photo: "/assets/T1C3_Listening.avif", //female giving lecture
     },
 ];
 
@@ -883,3 +887,11 @@ export const listeningAudios = [
     "https://www.dropbox.com/scl/fi/o5exsczqcg838a5paw0di/T2C4.mp4?rlkey=qy40ap2uqntoj3njygfcx5phz&raw=1",
     "https://www.dropbox.com/scl/fi/tknkvhe5oqfqhmg1lo36a/T2C5.mp4?rlkey=hc0owhjdz7buu3tmlovwvx6xq&raw=1"
 ];
+
+export const listeningAudiosPhotos = [
+    "/assets/T2C3_Listening.jpg", //young male giving lecture
+    "/assets/two-students-talking.jpg",
+    "/assets/T2C1_Listening.jpg", //old male giving lecture
+    "/assets/T1C4_Listening.jpg", //two students talking in reception
+    "/assets/T1C5_Listening.jpg" //two students study together
+]

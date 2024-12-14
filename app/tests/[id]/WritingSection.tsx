@@ -1,8 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import { writingQuestions } from './questions';
+// import { writingQuestions } from './questions';
 import { useEffect } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
+import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { FaSpinner } from 'react-icons/fa';
 
 interface WritingSectionProps {
     onComplete: () => void;
@@ -17,9 +20,30 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
     const [task1Submitted, setTask1Submitted] = useState(false);
     const [task2Submitted, setTask2Submitted] = useState(false);
     const [evaluation, setEvaluation] = useState<{ score: number; feedback: string } | null>(null);
+    const [tryReloadAudio, setTryReloadAudio] = useState(0);
+    const [loading, setLoading] = useState(false)
+
+    const pathname = usePathname();
+    const id = pathname.split('/').pop();
+
+    if (!id) {
+        return <div>Loading...</div>;
+    }
+    // Dynamically import the correct questions file
+    let writingQuestions: any;
+
+    try {
+        const questionsModule = require(`../questions/${id}`);
+        writingQuestions = questionsModule.writingQuestions;
+
+    } catch (error) {
+        console.error(`Questions file for Test ${id} not found.`);
+        return <div>Test questions not found.</div>;
+    }
 
     const handleTaskSubmit = async (testNumber: number, task: number, passage: string) => {
         try {
+            setLoading(true)
             const response = await fetch('/api/evaluate-writing', {
                 method: 'POST',
                 headers: {
@@ -48,12 +72,12 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
         } catch (error) {
             console.error('Error submitting task:', error);
         }
+        setLoading(false)
     };
 
     const handleTask1Submit = () => {
         if (writingTask1.trim() !== '') {
-            const testNumber = 2;
-            handleTaskSubmit(testNumber, 1, writingTask1);
+            handleTaskSubmit(writingQuestions.task1.passage, 1, writingTask1);
         } else {
             setStage("task2Instructions");
         }
@@ -61,8 +85,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
 
 
     const handleTask2Submit = () => {
-        const testNumber = 2;
-        handleTaskSubmit(testNumber, 2, writingTask2);
+        handleTaskSubmit(writingQuestions.task2.conversation, 2, writingTask2);
         onComplete();
     };
 
@@ -121,36 +144,44 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening to the Lecture</h3>
                     <div className="custom-audio-container flex-col flex gap-10">
-                        <img src="/assets/T1C2_Listening.jpg"></img>
+                        <img src={writingQuestions.task1_photo}></img>
                         <ReactAudioPlayer
+                            key={tryReloadAudio}
                             src={writingQuestions.task1_audio}
                             controls
                             className="custom-audio-player"
                         />
                     </div>
-                    <div className="text-center mt-10">
-                        <button onClick={() => setStage("task1")} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                    <div className="flex text-center mt-10 gap-5">
+                        <Button
+                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
+                            variant="default"
+                        >
+                            Reload Audio
+                        </Button>
+                        <Button onClick={() => setStage("task1")} variant="outline">
                             Continue
-                        </button>
+                        </Button>
                     </div>
                 </div>
             )}
             {stage === 'task1' && !task1Submitted && (
                 <div className="bg-white shadow p-6 rounded mb-4">
                     <h3 className="text-xl font-bold mb-4">Task 1: Integrated Writing</h3>
-                    <p>Question: Summarize the points made in the lecture, being sure to explain how they respond to the specific arguments made in the reading passage.</p>
-                    <div className='flex flex-col lg:flex-row justify-between mt-10'>
+                    <p className='p-2 border shadow-xl rounded-2xl'>Question: Summarize the points made in the lecture, being sure to explain how they respond to the specific arguments made in the reading passage.</p>
+                    <div className='flex flex-col lg:flex-row justify-between mt-5 sm:mt-10'>
                         <div className="mb-4 w-full lg:w-[45%]" dangerouslySetInnerHTML={{ __html: writingQuestions.task1.passage.replace(/\n/g, '<br>') }} />
                         <textarea
-                            className="p-2 border rounded mb-4 w-full lg:w-[45%] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+                            className="p-2 border rounded-2xl mb-4 w-full lg:w-[45%] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                             rows={9}
                             value={writingTask1}
+                            placeholder='start typing here....'
                             onChange={(e) => setWritingTask1(e.target.value)}
                         ></textarea>
                     </div>
                     <div className="text-center mt-5">
                         <button onClick={handleTask1Submit} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Submit Task 1
+                            {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Submit Task 1")}
                         </button>
                     </div>
                 </div>
@@ -179,14 +210,15 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                     <h3 className="text-xl font-bold mb-4">Task 2: Independent Writing</h3>
                     <div dangerouslySetInnerHTML={{ __html: writingQuestions.task2.conversation }} />
                     <textarea
-                        className="w-full p-2 border rounded mb-4 mt-5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+                        className="w-full p-2 border rounded-2xl mb-4 mt-5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                         rows={10}
+                        placeholder='start typing here....'
                         value={writingTask2}
                         onChange={(e) => setWritingTask2(e.target.value)}
                     ></textarea>
                     <div className="text-center">
                         <button onClick={handleTask2Submit} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                            Submit Task 2
+                            {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Submit Task 2")}
                         </button>
                     </div>
                 </div>

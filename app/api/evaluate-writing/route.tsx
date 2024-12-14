@@ -16,24 +16,22 @@ const openai = new OpenAI({
 export async function POST(req: NextRequest) {
   // console.log("Request received at /api/evaluate-writing");
 
-  const { testNumber, task, passage } = await req.json();
+  const { taskQuestion, task, passage } = await req.json();
   // console.log("Task:", task);
   // console.log("answer Passage:", passage);
-  
+
   if (!task || !passage) {
     return NextResponse.json({ message: 'Missing task or passage' }, { status: 400 });
-    }
-    
-    try {
-      const { writingQuestions } = await import(`@/app/tests/${testNumber}/questions.ts`);
-      // console.log("question passage:", writingQuestions.task2.conversation)
+  }
+
+  try {
 
     let prompt;
     if (task === 1) {
       prompt = `
       You are a toelf test evaluator.
       You are checking TOEFL writing task ${task}.
-      The Question Passage is '${writingQuestions.task1.passage}'
+      The Question Passage is '${taskQuestion}'
       Evaluate the following passage based on the criteria below and provide a score (0-5) with feedback:
       Answer Passage: '${passage}'
       
@@ -51,7 +49,7 @@ export async function POST(req: NextRequest) {
       prompt = `
       You are a toelf test evaluator.
       You are checking TOEFL writing task ${task}.
-      The Conversation is '${writingQuestions.task2.conversation}'
+      The Conversation is '${taskQuestion}'
       Evaluate the following conversation answer based on the criteria below and provide a score (0-5) with feedback:
       Answer Passage: '${passage}'
       

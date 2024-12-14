@@ -1,13 +1,18 @@
+import { Button } from '@/components/ui/button';
+import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
+import { FaSpinner } from 'react-icons/fa';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import { speakingQuestions } from './questions';
+// import { speakingQuestions } from './questions';
 
 interface SpeakingSectionProps {
     onComplete: () => void;
     onTaskComplete: (task: number, evaluation: { score: number; feedback: string }) => void;
 }
+
+
 
 const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskComplete }) => {
     const [stage, setStage] = useState<'intro' | 'task1' | 'prepare' | 'speak' | 'task2Intro' | 'task2Passage' | 'task2Conversation' | 'task2QuestionPrepare' | 'task2Speak' | 'task3Intro' | 'task3Passage' | 'task3Conversation' | 'task3QuestionPrepare' | 'task3Speak' | 'task4Intro' | 'task4Conversation' | 'task4QuestionPrepare' | 'task4Speak'>('intro');
@@ -15,12 +20,30 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     const [isTimerRunning, setIsTimerRunning] = useState<boolean>(true);
     const [evaluation, setEvaluation] = useState<{ score: number; feedback: string } | null>(null);
     const { transcript, listening, resetTranscript } = useSpeechRecognition();
-    const [question, setQuestion] = useState<string>(`${speakingQuestions[0].question1}`);
     const task2Intro = "In this question of the TOEFL Speaking Task 2, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task3Intro = "In this question of the TOEFL Speaking Task 3, you'll first read a short passage about either a campus announcement or a student's letter. Next, you will hear a conversation between two students discussing their opinions on the passage you just read. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const task4Intro = "In this question of the TOEFL Speaking Task 4, you'll first read a short passage on an academic topic. Next, you will hear a lecture on the same topic. You will then be asked a question about what you have read and heard. You'll have 30 seconds to prepare your answer and 60 seconds to speak.";
     const [currentTask, setCurrentTask] = useState<number>(0);
+    const [tryReloadAudio, setTryReloadAudio] = useState(0);
+    const [loading, setLoading] = useState(false)
+    const pathname = usePathname();
+    const id = pathname.split('/').pop();
+
+    // Dynamically import the correct questions file
+    let speakingQuestions: any;
+
+    try {
+        const questionsModule = require(`../questions/${id}`);
+        speakingQuestions = questionsModule.speakingQuestions;
+
+    } catch (error) {
+        console.error(`Questions file for Test ${id} not found.`);
+    }
+
+    const [question, setQuestion] = useState<string>(`${speakingQuestions[0].question1}`);
     const currentQuestion = speakingQuestions[currentTask];
+
+
     useEffect(() => {
         if (stage === 'task1') {
             const timer = setTimeout(() => {
@@ -30,7 +53,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             return () => clearTimeout(timer);
         }
     }, [stage]);
-    
+
     useEffect(() => {
         if (stage === 'prepare') {
             const timer = setTimeout(() => {
@@ -40,7 +63,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             return () => clearTimeout(timer);
         }
     }, [stage]);
-    
+
     useEffect(() => {
         if (stage === 'speak') {
             resetTranscript();
@@ -65,7 +88,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             return () => clearTimeout(timer);
         }
     }, [stage, resetTranscript]);
-    
+
     useEffect(() => {
         if (stage === 'task3Speak') {
             setQuestion(`${speakingQuestions[0].question3}`)
@@ -78,7 +101,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             return () => clearTimeout(timer);
         }
     }, [stage, resetTranscript]);
-    
+
     useEffect(() => {
         if (stage === 'task4Speak') {
             setQuestion(`${speakingQuestions[0].question4}`)
@@ -161,6 +184,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
         console.log(question)
         console.log(transcript)
         try {
+            setLoading(true);
             const response = await fetch('/api/evaluate-speaking', {
                 method: 'POST',
                 headers: {
@@ -192,28 +216,29 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             if (stage === 'task4Speak') {
                 onTaskComplete(4, data);
                 onComplete();
-            } 
+            }
 
         } catch (error) {
             console.error('Error submitting task:', error);
         }
+        setLoading(false);
     };
 
 
     return (
-        <div className="container mx-auto py-10 px-4 md:py-20">
+        <div className="min-h-[80vh] mx-auto py-10 px-4 md:py-20">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-10 text-center">Speaking Section</h2>
             {stage === 'intro' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col items-center">
+                <div className="flex flex-col items-center justify-center border shadow-2xl p-6 rounded-2xl">
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
                         In this question of the TOEFL Speaking Task 1, you&apos;ll speak about a familiar topic. Your response will be scored on your ability to speak clearly and coherently about the topics. You&apos;ll have 15 seconds to prepare your answer and 45 seconds to speak.
                     </p>
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
                         We recommend you practice taking notes with a pen and paper like you will during your TOEFL exam.
                     </p>
-                    <button onClick={handleStartTask} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
+                    <Button onClick={handleStartTask} variant="default">
                         Start Task
-                    </button>
+                    </Button>
                 </div>
             )}
             {stage === 'task1' && (
@@ -227,7 +252,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Prepare Your Answer</h3>
                     <p className="mb-4"><strong>Question:</strong> {currentQuestion.question1} </p>
-                    <p className="mb-4">You have 15 seconds to prepare your answer.</p>
+                    <p className="mb-4">You have 15 seconds to PREPARE your answer.</p>
                     {renderTimer(15, () => setStage('speak'))}
                 </div>
             )}
@@ -239,9 +264,9 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                     {renderTimer(45, () => { })}
                     <div className="mt-4 w-full max-w-md">
                         {stage === 'speak' && !isTimerRunning && (
-                            <button onClick={handleTranscriptSubmit} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                            <Button variant="default" onClick={handleTranscriptSubmit}>
                                 Submit
-                            </button>
+                            </Button>
                         )}
                     </div>
                 </div>
@@ -252,9 +277,9 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                     <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
                         {task2Intro}
                     </p>
-                    <button onClick={handleContinueToTask2} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
+                    <Button variant="default" onClick={handleContinueToTask2}>
                         Continue to Task 2
-                    </button>
+                    </Button>
                 </div>
             )}
             {stage === 'task2Passage' && (
@@ -267,20 +292,33 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task2Conversation' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Conversation</h3>
-                    <ReactAudioPlayer
-                        src={speakingQuestions[0].conversationAudio2}
-                        controls
-                    />
-                    <button onClick={handleContinueToQuestion} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
-                        Continue to Question
-                    </button>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src={speakingQuestions[0].Audio2Photo}></img>
+                        <ReactAudioPlayer
+                            key={tryReloadAudio}
+                            src={speakingQuestions[0].conversationAudio2}
+                            controls
+                            className="custom-audio-player"
+                        />
+                    </div>
+                    <div className="flex text-center mt-10 gap-5">
+                        <Button
+                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
+                            variant="default"
+                        >
+                            Reload Audio
+                        </Button>
+                        <Button onClick={handleContinueToQuestion} variant="outline">
+                            {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Continue")}
+                        </Button>
+                    </div>
                 </div>
             )}
             {stage === 'task2QuestionPrepare' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Task 2 Question</h3>
                     <p className="mb-4"><strong>Question:</strong> {currentQuestion.question2} </p>
-                    <p className="mb-4">You have 40 seconds to prepare your answer.</p>
+                    <p className="mb-4">You have 40 seconds to PREPARE your answer.</p>
                     {renderTimer(40, () => setStage('task2Speak'))}
                 </div>
             )}
@@ -293,7 +331,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                     <div className="mt-4 w-full max-w-md">
                         {stage === 'task2Speak' && !isTimerRunning && (
                             <button onClick={handleTranscriptSubmit} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Submit
+                                {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Continue")}
                             </button>
                         )}
                     </div>
@@ -320,13 +358,26 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task3Conversation' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Lecture</h3>
-                    <ReactAudioPlayer
-                        src={speakingQuestions[0].conversationAudio3}
-                        controls
-                    />
-                    <button onClick={() => setStage('task3QuestionPrepare')} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
-                        Continue to Question
-                    </button>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src={speakingQuestions[0].Audio3Photo}></img>
+                        <ReactAudioPlayer
+                            key={tryReloadAudio}
+                            src={speakingQuestions[0].conversationAudio3}
+                            controls
+                            className="custom-audio-player"
+                        />
+                    </div>
+                    <div className="flex text-center mt-10 gap-5">
+                        <Button
+                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
+                            variant="default"
+                        >
+                            Reload Audio
+                        </Button>
+                        <Button onClick={() => setStage('task3QuestionPrepare')} variant="outline">
+                            Continue
+                        </Button>
+                    </div>
                 </div>
             )}
             {stage === 'task3QuestionPrepare' && (
@@ -346,7 +397,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                     <div className="mt-4 w-full max-w-md">
                         {stage === 'task3Speak' && !isTimerRunning && (
                             <button onClick={handleTranscriptSubmit} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Submit
+                                {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Continue")}
                             </button>
                         )}
                     </div>
@@ -366,13 +417,26 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
             {stage === 'task4Conversation' && (
                 <div className="bg-white shadow p-6 rounded mb-4 text-center flex flex-col justify-center items-center gap-4">
                     <h3 className="text-xl font-bold mb-4">Listening to Conversation</h3>
-                    <ReactAudioPlayer
-                        src={speakingQuestions[0].conversationAudio4}
-                        controls
-                    />
-                    <button onClick={handleContinueTo4Question} className="flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded mb-8 md:mb-10">
-                        Continue to Question
-                    </button>
+                    <div className="custom-audio-container flex-col flex gap-10">
+                        <img src={speakingQuestions[0].Audio4Photo}></img>
+                        <ReactAudioPlayer
+                            key={tryReloadAudio}
+                            src={speakingQuestions[0].conversationAudio4}
+                            controls
+                            className="custom-audio-player"
+                        />
+                    </div>
+                    <div className="flex text-center mt-10 gap-5">
+                        <Button
+                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
+                            variant="default"
+                        >
+                            Reload Audio
+                        </Button>
+                        <Button onClick={handleContinueTo4Question} variant="outline">
+                            Continue
+                        </Button>
+                    </div>
                 </div>
             )}
             {stage === 'task4QuestionPrepare' && (
@@ -388,11 +452,11 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                     <h3 className="text-xl font-bold mb-4">Speak Now</h3>
                     <p className="mb-4"><strong>Question:</strong> {currentQuestion.question4}</p>
                     <p className="mb-4">You have 60 seconds to speak.</p>
-                    {renderTimer(60, () => {})}
+                    {renderTimer(60, () => { })}
                     <div className="mt-4 w-full max-w-md">
                         {stage === 'task4Speak' && !isTimerRunning && (
                             <button onClick={handleTranscriptSubmit} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
-                                Submit
+                                {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Continue")}
                             </button>
                         )}
                     </div>

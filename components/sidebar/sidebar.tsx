@@ -30,7 +30,7 @@ export default function Sidebar() {
   const { isSignedIn } = useUser();
   const pathname = usePathname();
 
-  const isDesktop = useMediaQuery('(min-width: 640px)', {
+  const isDesktop = useMediaQuery('(min-width: 1024px)', {
     initializeWithValue: false,
   });
 

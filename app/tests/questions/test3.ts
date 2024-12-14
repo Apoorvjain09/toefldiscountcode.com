@@ -814,6 +814,7 @@ export const listeningQuestions = [
 
 export const writingQuestions = {
     task1_audio: "https://www.dropbox.com/scl/fi/a9zxw3eewirrek59qxwzn/T3W1.mp3?rlkey=kpxjos6kchjb34ncjexjknlmc&raw=1",
+    task1_photo:"/assets/women-lecture2.png", //female giving lecture 2
     task1: {
         passage: `Emperor penguins are not only the largest species of penguin in the world but also one of the most unique. They are very social, living in colonies that can include hundreds of thousands of individuals. Nevertheless, emperor penguins are monogamous. Having selected a mate, emperor penguins remain faithful to each other for life, using vocal calls to find one another when they return to their breeding site on the compacted ice of the Antarctic continent. It is believed that different frequencies alert mates to the sound of their partner's call.
         Another interesting aspect of emperor penguins is that they return to the same site, called a rookery, to nest each year. Although their path to the rookery is different every year due to the shifting sea ice, in general, the penguins continue to use the rookery where they were hatched. Their loyalty to a particular breeding ground results in increasingly larger pen- guin colonies, some with more than a million birds. Males tend to arrive first to reestablish and defend their preferred nesting sites and females return a day or so later.,
@@ -824,7 +825,7 @@ export const writingQuestions = {
         <p>Your professor is teaching a class on Psychology. Write a post responding to the professor’s question.</p>
         <br/>
         <p><strong>In your response you should:</strong></p>
-        <ul>
+        <ul>    
             <li>express and support your opinion</li>
             <li>make a contribution to the discussion</li>
         </ul>
@@ -854,13 +855,16 @@ export const speakingQuestions = [
         passage2: `In order to qualify for a refund of 100 percent at any time during the semester; you must first establish eligibility. Serious illness or injury must be verified by a written statement signed by a doctor or a psychologist. The death of a family member ·must be verified by a death certificate. Military duty must be verified by a copy of the orders. Students who wish to withdraw without submitting official documentation may do so before the end of the drop-add period without penalty. After the end of the second week of classes, students may petition for a 90 percent reimbursement. After the end of the fourth week, students are eligible for a 50 percent refund.`,
         conversationAudio2: "https://www.dropbox.com/scl/fi/7sl4ps4ahsvoqpioyjcqh/T3S1.mp3?rlkey=mkprfbg0krlafsrw37s56gbek&raw=1",
         question2: "The student expresses her opinion of the policy for reimbursement. Report her opinion and explain the reasons that she gives for having that opinion.",
+        Audio2Photo: "/assets/Two-Students_talking-in-coridor.png",
 
         passage3: "A ballad is a poem that tells a story and is sung to music. Usually the story is of unknown origin, and a number of versions may be found for one song, a characteristic that stems from the oral tradition. As the song is passed on from one singer to another, a word is added or changed, or a slight alteration is made in the tune. In short, ballads represent a living tradition that evolves as the song is performed and passed to the next musician. A collection of ballads has been preserved in written form in the volume English and Scottish Popular Ballads by Francis James Child, and many ballads are still referred to by their 'Child number.'",
         conversationAudio3: "https://www.dropbox.com/scl/fi/6sb3e4iy533hks54joe2u/T3S2.mp3?rlkey=90wr8dndrvmof4w9rhlujmw7r&raw=1",
         question3: "Define a ballad, and then explain why 'Barbara Allen' can be classified as a ballad.",
+        Audio3Photo:"/assets/T2C3_Listening.jpg", //young male giving lecture,
 
         conversationAudio4: "https://www.dropbox.com/scl/fi/zdt9r261h4kytwlxef4qm/T3S3.mp3?rlkey=4g9x3297503n3x10ua3wv3nts&raw=1",
         question4: "Using the main points and examples from the lecture, describe the kind of information that ultrasound can provide, and then explain the way that ultrasound is used in medical diagnosis.",
+        Audio4Photo:"/assets/women-lecture2.png", //old woemn giving lecture
     },
 ];
 
@@ -871,3 +875,11 @@ export const listeningAudios = [
     "https://www.dropbox.com/scl/fi/q51hzc0vqkf3ovm9rdnyh/T3C4.mp3?rlkey=sq3cy9h7clewhwr83qyy1qpao&raw=1",
     "https://www.dropbox.com/scl/fi/dm6tondi23omibqbs991r/T3C5.mp3?rlkey=q9votkve2q8dxuh3sfqxviev3&raw=1",
 ];
+
+export const listeningAudiosPhotos = [
+    "/assets/T1C3_Listening.avif", //female giving lecture
+    "/assets/T1C3_Listening.avif", //female giving lecture
+    "/assets/T2C1_Listening.jpg", //old male giving lecture
+    "/assets/Two-Students_talking-in-coridor.png",
+    "/assets/T2C3_Listening.jpg", //young male giving lecture
+]

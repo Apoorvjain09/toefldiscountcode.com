@@ -832,6 +832,7 @@ export const listeningQuestions = [
 
 export const writingQuestions = {
     task1_audio: "https://www.dropbox.com/scl/fi/2luk5sedd44obxh4sl563/T4W1.mp3?rlkey=mh2z1andjbq0j4nnou1yi74rp&raw=1",
+    task1_photo: "/assets/T2C3_Listening.jpg",
     task1: {
         passage: `
         Although cooperation is currently the most popular paradigm in classrooms, competition has a number of advantages. Research on classrooms in which competition is encouraged has demonstrated that competition can increase motivation and productivity while students are having fun.
@@ -897,3 +898,11 @@ export const listeningAudios = [
     "https://www.dropbox.com/scl/fi/7yctxm3cggshlh1cjgrb7/T4C4.mp3?rlkey=5icl83p5kh5n2u9d5gs9ge3km&raw=1",
     "https://www.dropbox.com/scl/fi/x7g38yqndgv0vlax7nqkx/T4C5.mp3?rlkey=xvrhq4noq31emjmnqltm6dfe6&raw=1",
 ];
+
+export const listeningAudiosPhotos = [
+    "/assets/T2C1_Listening.jpg", //old male giving lecture
+    "/assets/women-lecture2.png", //old female giving lecture
+    "/assets/T2C3_Listening.jpg", //young male giving lecture
+    "/assets/Man-giving-speech.png", //middle ages male giving lecture
+    "/tests/Librarian-student-talking.png" //librarian and student talking
+]

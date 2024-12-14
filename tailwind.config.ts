@@ -15,6 +15,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        baloo: ['"Baloo Bhai 2"', 'cursive'], // Add the font family
+      },
   		backgroundImage: {
   			globe: "url('/assets/globe.png')",
         ellipse1: "url('/assets/ellipse 1.svg')",

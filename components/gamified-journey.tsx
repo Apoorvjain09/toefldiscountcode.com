@@ -27,7 +27,7 @@ interface JourneyItemProps {
 const JourneyItem: React.FC<JourneyItemProps> = ({ icon, isStart = false, isCompleted = false, isActive = false, id, onClick }) => (
   <div
     id={id}
-    onClick={onClick}
+    onClick={() => { if (isStart || isActive || isCompleted) { onClick?.() } else { alert("pls complete previous modules") } }}
     className={`relative flex items-center justify-center w-16 h-16 rounded-full border-4 cursor-pointer ${isStart ? 'bg-green-500 border-yellow-400' : isCompleted ? 'bg-yellow-300 border-yellow-400' : 'bg-gray-200 border-gray-300'
       } ${isActive ? 'animate-bounce' : ''}`}
   >

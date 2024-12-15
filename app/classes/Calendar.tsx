@@ -12,23 +12,16 @@ interface ClassItem {
 }
 
 const classData: ClassItem[] = [
-    { date: '4th Nov 2024', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'PTE' },
-    { date: '6th Nov 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '6th Nov 2024', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'GRE/GMAT' },
-    { date: '8th Nov 2024', time: '4 pm to 5:30 pm', duration: '1.5 hrs', subject: 'SAT' },
-    { date: '9th Nov 2024', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '9th Nov 2024', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'German A1' },
-    { date: '11th Nov 2024', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'Duolingo' },
-    { date: '13th Nov 2024', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '14th Nov 2024', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'TOEFL' },
-    { date: '16th Nov 2024', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '19th Nov 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '20th Nov 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'PTE' },
-    { date: '22nd Nov 2024', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '22nd Nov 2024', time: '7:30 am to 9 am', duration: '1.5 hrs', subject: 'GRE/GMAT' },
-    { date: '25th Nov 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'Duolingo' },
-    { date: '25th Nov 2024', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'German A1' },
-    { date: '26th Nov 2024', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '7th Dec 2024', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'Duolingo' },
+    { date: '10th Dec 2024', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'SAT' },
+    { date: '12th Dec 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '13th Dec 2024', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'GRE/GMAT' },
+    { date: '16th Dec 2024', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'TOEFL' },
+    { date: '17th Dec 2024', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '21st Dec 2024', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '21st Dec 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'PTE' },
+    { date: '26th Dec 2024', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '30th Dec 2024', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
 ];
 
 // Helper function to organize classes by subject

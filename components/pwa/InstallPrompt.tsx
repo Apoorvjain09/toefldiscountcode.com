@@ -26,7 +26,9 @@ export default function PWAInstallPrompt() {
     const handleBeforeInstallPrompt = (event: BeforeInstallPromptEvent) => {
       event.preventDefault()
       setDeferredPrompt(event)
-      setShowInstallPrompt(true)
+      setTimeout(() => {
+        setShowInstallPrompt(true);
+      }, 300);
     }
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
@@ -56,7 +58,7 @@ export default function PWAInstallPrompt() {
   }
 
   return (
-    <div className={`fixed bottom-4 left-4 right-4 z-50 transition-all duration-300 ease-in-out ${showInstallPrompt ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}>
+    <div className={`fixed bottom-4 left-4 right-4 z-50 transition-all duration-500 ease-in-out ${showInstallPrompt ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}>
       <Card className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-lg">
         <CardHeader>
           <div className="flex items-center justify-between">

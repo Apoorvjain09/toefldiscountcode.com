@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "TOEFL Courses | Master TOEFL Preparation Online",
+    description:
+        "Discover expert-led TOEFL courses to boost your preparation. Flexible schedules, interactive lectures, and personalized study plans for success.",
+    keywords: "TOEFL courses, Online TOEFL classes, Master TOEFL preparation, TOEFL coaching",
+    openGraph: {
+        title: "TOEFL Courses | Master TOEFL Preparation Online",
+        description:
+            "Prepare for TOEFL with top-rated online courses. Join expert instructors and access tailored study plans to achieve your dream score.",
+        url: "https://toeflgoglobal.com/courses",
+        images: [
+            {
+                url: "/assets/goglobal1.webp", // Keeping the same image as requested
+                width: 800,
+                height: 600,
+                alt: "TOEFL Courses Background",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "TOEFL Courses | Master TOEFL Preparation Online",
+        description:
+            "Join the best TOEFL courses online to prepare effectively. Interactive lectures, expert guidance, and flexible schedules tailored to your needs.",
+        images: ["/assets/goglobal1.webp"], // Same image
+        creator: "@MJ_Study_Abroad", // Replace with your Twitter handle
+    },
+};
+
+
 export default function page() {
     return (
         <>

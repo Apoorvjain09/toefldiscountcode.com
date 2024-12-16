@@ -1,4 +1,3 @@
-// components/Section.tsx
 import React from 'react';
 import { CardProps, SectionProps } from './sectionsData';
 import Link from 'next/link';

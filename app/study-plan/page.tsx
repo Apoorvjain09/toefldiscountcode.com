@@ -2,7 +2,6 @@
 import { useState, Suspense, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useUser } from '@clerk/nextjs';
-import { Seo } from '@/components/Head/Seo';
 
 // Dynamically import the stage components
 const Start = dynamic(() => import('./Start'), { suspense: true });
@@ -38,30 +37,24 @@ export default function Page() {
 
     return (
         <>
-        <Seo
-        title = 'Create Your TOEFL Study Plan'
-        description = 'Design a personalized TOEFL study plan to maximize your preparation and score high on the exam.'
-        url = 'https://toeflgoglobal.com/study-plan'
-        image='https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1'
-        />
-        <div className={stage === 'sampleQuestions' ? 'rounded-lg px-5 py-10 bg-gradient-to-r from-violet-600 to-indigo-400' : ''}>
-            <Suspense fallback={<div>Loading...</div>}>
-                {stage === 'start' && <Start onNext={() => handleNext(planType ? 'lectures' : 'sampleQuestions')} />}
-                {stage === 'sampleQuestions' && <SampleQuestions onComplete={handleQuestionnaireComplete} />}
-                {stage === 'studyPlan' && (
-                    <StudyPlan
-                        testDate={testData.testDate}
-                        readingScore={testData.readingScore}
-                        listeningScore={testData.listeningScore}
-                        writingScore={testData.writingScore}
-                        targetScores={testData.targetScores}
-                        totalTargetScore={testData.totalTargetScore}
-                        onNext={(planType) => handleNext('lectures', planType)}
-                    />
-                )}
-                {stage === 'lectures' && <Lectures />}
-            </Suspense>
-        </div>
+            <div className={stage === 'sampleQuestions' ? 'rounded-lg px-5 py-10 bg-gradient-to-r from-violet-600 to-indigo-400' : ''}>
+                <Suspense fallback={<div>Loading...</div>}>
+                    {stage === 'start' && <Start onNext={() => handleNext(planType ? 'lectures' : 'sampleQuestions')} />}
+                    {stage === 'sampleQuestions' && <SampleQuestions onComplete={handleQuestionnaireComplete} />}
+                    {stage === 'studyPlan' && (
+                        <StudyPlan
+                            testDate={testData.testDate}
+                            readingScore={testData.readingScore}
+                            listeningScore={testData.listeningScore}
+                            writingScore={testData.writingScore}
+                            targetScores={testData.targetScores}
+                            totalTargetScore={testData.totalTargetScore}
+                            onNext={(planType) => handleNext('lectures', planType)}
+                        />
+                    )}
+                    {stage === 'lectures' && <Lectures />}
+                </Suspense>
+            </div>
         </>
     );
 }

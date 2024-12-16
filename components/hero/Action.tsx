@@ -48,7 +48,7 @@ const Action = () => {
             />
             <div className="flex sm:flex-row flex-col items-center justify-center sm:justify-evenly gap-2 sm:gap-8 h-full ">
               <Link
-                href="https://www.youtube.com/watch?v=UbxCeWKWFCc"
+                href="https://www.youtube.com/watch?v=p6Lw3Oz2a7g"
                 target="_blank"
                 className="h-full w-full flex-1 flex items-center justify-center transform transition-transform duration-300 hover:scale-105"
               >

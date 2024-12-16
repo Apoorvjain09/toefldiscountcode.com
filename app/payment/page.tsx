@@ -1,11 +1,6 @@
-"use client"
-import { useUser } from '@clerk/nextjs';
-import PaymentButton from './RazorPayButton';
-import { useEffect } from 'react';
+// import { useUser } from '@clerk/nextjs';
 
 export default function Payment() {
-  const { user } = useUser();
-
   const SvgTick = () => {
     return (
       <svg

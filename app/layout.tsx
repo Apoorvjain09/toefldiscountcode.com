@@ -26,7 +26,7 @@ export default function RootLayout({
             <main className="">
               <div className="p-4 lg:ml-64">
                 <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-                  <InstallPrompt />
+                  <div className="block sm:hidden"><InstallPrompt /></div>
                   <Sidebar />
                   {children}
                 </div>

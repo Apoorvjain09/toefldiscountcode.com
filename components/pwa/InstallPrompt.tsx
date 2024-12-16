@@ -62,17 +62,17 @@ export default function PWAInstallPrompt() {
       <Card className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-lg">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle className="text-2xl font-bold">Install Our App</CardTitle>
+            <CardTitle className="text-2xl font-bold">Practice Toefl Vocabulary Daily</CardTitle>
             <Button variant="ghost" size="icon" onClick={handleDismiss} className="text-white hover:text-gray-200">
               <X className="h-6 w-6" />
             </Button>
           </div>
           <CardDescription className="text-purple-100">
-            Enhance your vocabulary learning experience
+            Install our app to learn most frequent Toefl words
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 ">
             <div className="flex items-center space-x-2">
               <Badge variant="secondary" className="bg-purple-700 text-white">
                 New

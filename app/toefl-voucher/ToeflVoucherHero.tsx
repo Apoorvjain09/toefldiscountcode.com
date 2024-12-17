@@ -5,9 +5,71 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
+import { useState } from 'react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form'
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+import { Input } from '@/components/ui/input'
+import { db } from "@/firebase"; // Path to your firebase.ts
+import { collection, addDoc } from "firebase/firestore";
+
+
+
+const formSchema = z.object({
+    firstName: z.string().min(2, 'First name must be at least 2 characters'),
+    lastName: z.string().min(2, 'Last name must be at least 2 characters'),
+    email: z.string().email('Invalid email address'),
+    contactNumber: z.string().regex(/^\d{10}$/, 'Contact number must be 10 digits'),
+    voucher: z.enum(['13900', '12900'], {
+        required_error: 'Please select a voucher option',
+    }),
+})
 
 export default function ToeflVoucherHero() {
+    const [openModal, setOpenModal] = useState(false)
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            contactNumber: '',
+            voucher: undefined,
+        },
+    })
+
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        // console.log(values)
+        // Handle form submission here
+        const formData = {
+            firstName: values.firstName,
+            lastName: values.lastName,
+            email: values.email,
+            contactNumber: values.contactNumber,
+            voucher: values.voucher,
+            submittedAt: new Date().toISOString(), // Optional timestamp
+        };
+
+        try {
+            // Add the document to the "voucher" collection, letting Firebase generate the ID
+            const docRef = await addDoc(collection(db, "voucher"), formData);
+            console.log("Form details saved successfully with ID: ", docRef.id);
+            setIsSubmitted(true);
+            form.reset();
+
+            setTimeout(() => {
+                setIsSubmitted(false);
+                setOpenModal(false);
+            }, 3000);
+        } catch (error) {
+            console.error("Error saving form details: ", error);
+        }
+    }
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 p-4 md:p-8 lg:p-12">
             <Card className="mx-auto max-w-5xl overflow-hidden">
@@ -22,7 +84,7 @@ export default function ToeflVoucherHero() {
                             MJ Study Abroad × ETS Partnership
                         </h1>
                         <p className="mt-2 text-muted-foreground">
-                            Exclusive TOEFL exam discounts for international students
+                            Exclusive TOEFL exam discounts for students
                         </p>
                     </motion.div>
                 </CardHeader>
@@ -73,10 +135,11 @@ export default function ToeflVoucherHero() {
                 <CardFooter className="flex flex-col space-y-4 p-6 md:p-8">
                     <div className="flex w-full flex-col items-center justify-between space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <Button
+                            onClick={() => { setOpenModal(true) }}
                             className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 text-white transition-all hover:shadow-lg sm:w-auto"
                         >
                             <span className="relative z-10 flex items-center justify-center">
-                                Know How ?!
+                                Enquire Now!
                             </span>
                             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 transition-opacity group-hover:opacity-100" />
                         </Button>
@@ -86,6 +149,117 @@ export default function ToeflVoucherHero() {
                     </div>
                 </CardFooter>
             </Card>
+            <Dialog open={openModal} onOpenChange={setOpenModal}>
+                <DialogContent className="sm:max-w-[425px]">
+                    {isSubmitted ? (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="text-center py-8"
+                        >
+                            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                            <DialogTitle className="text-2xl font-bold mb-2">Thank You!</DialogTitle>
+                            <DialogDescription>
+                                Your enquiry has been submitted successfully. We'll get back to you soon.
+                            </DialogDescription>
+                        </motion.div>
+                    ) : (
+                        <>
+                            <DialogHeader>
+                                <DialogTitle>Enquiry Form</DialogTitle>
+                                <DialogDescription>
+                                    Please fill out the form below to enquire about our TOEFL exam discounts.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <Form {...form}>
+                                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                                    <FormField
+                                        control={form.control}
+                                        name="firstName"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>First Name</FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="John" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <FormField
+                                        control={form.control}
+                                        name="lastName"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Last Name</FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Doe" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <FormField
+                                        control={form.control}
+                                        name="email"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Email</FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="john.doe@example.com" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <FormField
+                                        control={form.control}
+                                        name="contactNumber"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Contact Number</FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="1234567890" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <FormField
+                                        control={form.control}
+                                        name="voucher"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Select your voucher</FormLabel>
+                                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                    <FormControl>
+                                                        <SelectTrigger>
+                                                            <SelectValue placeholder="Select a voucher option" />
+                                                        </SelectTrigger>
+                                                    </FormControl>
+                                                    <SelectContent>
+                                                        <SelectItem value="13900">
+                                                            INR 13,900 (You will get the voucher code on your registered Email ID)
+                                                        </SelectItem>
+                                                        <SelectItem value="12900">
+                                                            INR 12,900 (We will book the exam slot for you, you will not get the voucher code)
+                                                        </SelectItem>
+                                                    </SelectContent>
+                                                </Select>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <DialogFooter>
+                                        <Button type="submit" className="w-full">Submit Enquiry</Button>
+                                    </DialogFooter>
+                                </form>
+                            </Form>
+                        </>
+                    )}
+                </DialogContent>
+            </Dialog>
         </div>
     )
 }

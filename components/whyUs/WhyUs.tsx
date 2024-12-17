@@ -5,7 +5,7 @@ const WhyUs = () => {
   return (
     <div className="relative mt-10 lg:mt-0 z-[0]">
       <h2 className="text-prime text-center text-4xl lg:text-5xl font-bold ">
-        WHY CHOOSE US
+        Why MJ Study Abroad ?
       </h2>
       <div className="relative ">
         {/* <Image src={globe} alt="" className="absolute " /> */}

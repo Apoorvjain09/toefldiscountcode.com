@@ -66,7 +66,7 @@ const Action = () => {
                 className="h-full w-full flex-1 flex items-center justify-center transform transition-transform duration-300 hover:scale-105"
               >
                 <Image
-                  src="/assets/toefl-buy-voucher-updated.png"
+                  src="/assets/toefl-buy-voucher.png"
                   alt="Buy Voucher"
                   className="max-h-full max-w-full rounded-lg object-cover shadow-md"
                   width={500}

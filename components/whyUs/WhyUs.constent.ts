@@ -1,31 +1,23 @@
-const profile =  "assets/profile.svg";
-const clock =  "assets/clock.svg";
-const course  = "assets/course.svg";
-const discount =  "assets/discount.svg";
 
 export const perks = [
   {
-    title: "Exclusive Profile Evaluation",
-    info: "Get FREE profile evaluation from industry expert counselors. Don't wait, book a session Now. ",
-    icon: profile,
+    title: " Official ETS Partner",
+    info: `✅ ETS Agent ID: IND3205010 Award-Winning Recognition by ETS`,
     borderColor: "border-prime",
   },
   {
     title: "Fastest Customer Care ",
     info: "Connect seamlessly anytime, anywhere – breaking free from the constraints of time.",
-    icon: clock,
     borderColor: "border-clock",
   },
   {
-    title: "Free Courses worth $178",
-    info: "Share your ETS confirmation, and enjoy TOEFL Prep Material and TOEFL classes worth $178/-. ",
-    icon: course,
+    title: "Trusted Since 1998",
+    info: "Most Registrations in North India for TOEFL Exam” – Awarded by ETS.",
     borderColor: "border-course",
   },
   {
-    title: "Get $40 off on Toefl Tests",
-    info: "Make TOEFL affordable and gain access to features designed to enhance your learning experience.",
-    icon: discount,
+    title: "Complete Support",
+    info: "Complete support from coaching and Consulting to Visa",
     borderColor: "border-discount",
   },
 ];

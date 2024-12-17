@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
     const testId = params.id;
     return {
+        metadataBase: new URL("https://toeflgoglobal.com"), // Set base URL
         title: `TOEFL ${testId} | AI-Powered Practice Test`,
         description: `Take TOEFL ${testId} and prepare with a full-length, AI-powered practice test. Get detailed insights into your performance.`,
         keywords: `TOEFL Test ${testId}, Practice ${testId}, AI TOEFL Tests, TOEFL Mock Tests`,

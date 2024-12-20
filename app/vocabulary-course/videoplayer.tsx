@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Alert from '@/components/ui/Alert';
+import Alert from '@/components/ui/AlertNotification';
 import VideoSkele from './LoadingSkeletonVideo';
 
 interface VideoPlayerProps {
@@ -75,7 +75,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl }) => {
         />
       )}
       {showSkeleton && <VideoSkele />}
-      <video ref={videoRef} controls className={`w-full ${showSkeleton ? 'hidden' : 'block'}`} controlsList="nodownload"> 
+      <video ref={videoRef} controls className={`w-full ${showSkeleton ? 'hidden' : 'block'}`} controlsList="nodownload">
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

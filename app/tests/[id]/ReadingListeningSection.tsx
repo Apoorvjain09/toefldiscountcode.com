@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 import { db } from "@/firebase"; // Import Firestore instance
 import { ReloadIcon } from '@radix-ui/react-icons';
+import AfterTestDetailsModal from '@/components/tests-ui/AfterTestDetailsModal';
 
 interface ReadingQuestion {
     id: number;
@@ -37,6 +38,7 @@ export interface ListeningQuestion {
 
 const Test1 = () => {
     const { user } = useUser()
+    const [isAfterTestDetailsModalopen, setIsAfterTestDetailsModalopen] = useState(false)
     const [tryReloadAudio, setTryReloadAudio] = useState(0);
     const [stage, setStage] = useState<'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('instructions');
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -216,9 +218,10 @@ const Test1 = () => {
     };
 
     const handleSpeakingCompletion = async () => {
+        setIsAfterTestDetailsModalopen(true)
         setStage('resultsDashboard');
-        const testNumber = new Date().getTime();
 
+        const testNumber = id
         const testData = {
             summaryAnswers1: selectedAnswers1,
             summaryAnswers2: selectedAnswers2,
@@ -389,7 +392,8 @@ const Test1 = () => {
         } else if (stage === 'writing') {
             setStage('speaking');
         } else if (stage === 'speaking') {
-            setStage('resultsDashboard');
+            // setStage('resultsDashboard');
+            handleSpeakingCompletion()
         }
     };
 
@@ -1305,6 +1309,9 @@ const Test1 = () => {
                         speakingScores={speakingScores}
                     />
                 </Suspense>
+            )}
+            {(id === "test1" || id === "test2") && (
+                <AfterTestDetailsModal type={id} isOpen={isAfterTestDetailsModalopen} onClose={() => { setIsAfterTestDetailsModalopen(false) }} />
             )}
         </div >
     );

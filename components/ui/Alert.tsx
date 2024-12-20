@@ -1,82 +1,59 @@
-import React from 'react';
+import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
-interface AlertProps {
-  message: string;
-  type: 'success' | 'error' | 'loading' | 'warning';
-  onClose: () => void;
-}
+import { cn } from "@/lib/utils"
 
-const SvgIcon = () => {
-  return(
-    <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-  )
-}
+const alertVariants = cva(
+  "relative w-full rounded-lg border border-slate-200 px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-slate-950 [&>svg~*]:pl-7 dark:border-slate-800 dark:[&>svg]:text-slate-50",
+  {
+    variants: {
+      variant: {
+        default: "bg-white text-slate-950 dark:bg-slate-950 dark:text-slate-50",
+        destructive:
+          "border-red-500/50 text-red-500 dark:border-red-500 [&>svg]:text-red-500 dark:border-red-900/50 dark:text-red-900 dark:dark:border-red-900 dark:[&>svg]:text-red-900",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
 
-const Alert: React.FC<AlertProps> = ({ message, type, onClose }) => {
-  const getIcon = () => {
-    if (type === 'success') {
-      return (
-        <span className="text-green-600">
-          <SvgIcon/>
-        </span>
-      );
-    } else if (type === 'error') {
-      return (
-        <span className="text-red-600">
-          <SvgIcon/>
-        </span>
-      );
-    } else if (type === 'warning') {
-      return (
-        <span className="text-yellow-600">
-          <SvgIcon/>
-        </span>
-      );
-    } else {
-      return (
-        <span className="text-yellow-600">
-          <SvgIcon/>
-        </span>
-      );
-    }
-  };
+const Alert = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
+>(({ className, variant, ...props }, ref) => (
+  <div
+    ref={ref}
+    role="alert"
+    className={cn(alertVariants({ variant }), className)}
+    {...props}
+  />
+))
+Alert.displayName = "Alert"
 
-  return (
-    <div role="alert" className="rounded-xl border border-gray-100 bg-white p-4 fixed top-4 right-4 shadow-lg z-50">
-      <div className="flex items-start gap-4">
-        {getIcon()}
-        <div className="flex-1">
-          <strong className="block font-medium text-gray-900">{message}</strong>
-        </div>
-        <button onClick={onClose} className="text-gray-500 transition hover:text-gray-600">
-          <span className="sr-only">Dismiss popup</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  );
-};
+const AlertTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h5
+    ref={ref}
+    className={cn("mb-1 font-medium leading-none tracking-tight", className)}
+    {...props}
+  />
+))
+AlertTitle.displayName = "AlertTitle"
 
-export default Alert;
+const AlertDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("text-sm [&_p]:leading-relaxed", className)}
+    {...props}
+  />
+))
+AlertDescription.displayName = "AlertDescription"
+
+export { Alert, AlertTitle, AlertDescription }

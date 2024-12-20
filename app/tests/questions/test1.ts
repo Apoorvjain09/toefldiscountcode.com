@@ -566,6 +566,7 @@ export const listeningQuestions = [
     id: 6,
     question: "What does the professor imply when she says this?",
     audio: "https://www.dropbox.com/scl/fi/grcwpdgp3lcvt935d1tu9/T6C1_packet.mp4?rlkey=ibmyd2tx16zc4zauz2ke045u5&st=wze9jm7l&raw=1",
+    // audio: "https://www.dropbox.com/scl/fi/grcwpdgp3lcvt935d1tu9/T6C1_packet.mp4?rlkey=ibmyd2tx16zc4zauz2ke045u5&st=wze9jm7l&raw=1",
     options: [
       "Sometimes the effects of sheet erosion are not immediately noticeable.",
       "Sheet erosion affects soil more slowly if the soil is mixed with sand.",
@@ -600,7 +601,7 @@ export const listeningQuestions = [
   {
     id: 9,
     question: "Why does the professor say this?",
-    audio: "https://www.dropbox.com/scl/fi/epc6jd52rccexcfsskj1x/T6C2_packet.mp4?rlkey=73pf667ue931ht3hzbx7i502w&st=1kj9k7ra&raw=0",
+    audio: "https://www.dropbox.com/scl/fi/epc6jd52rccexcfsskj1x/T6C2_packet.mp4?rlkey=73pf667ue931ht3hzbx7i502w&st=1kj9k7ra&raw=1",
     options: [
       "To clear up a possible confusion",
       "To help explain the exact number of electors",

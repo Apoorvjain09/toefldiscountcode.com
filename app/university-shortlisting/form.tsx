@@ -22,7 +22,7 @@ import {
   Select,
 } from "@/components/ui/select";
 import { useUser } from '@clerk/nextjs';
-import Alert from '@/components/ui/Alert';
+import Alert from '@/components/ui/AlertNotification';
 
 const formSchema = z.object({
   abroadPlan: z.enum(["September 2024", "January 2025", "May 2025", "September 2025", "Other"]),

@@ -2,7 +2,7 @@
 import React, { useEffect, useState, ChangeEvent, lazy, Suspense } from "react";
 import { useUser } from "@clerk/clerk-react";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
-import Alert from "@/components/ui/Alert";
+import Alert from "@/components/ui/AlertNotification";
 import { Seo } from "@/components/Head/Seo";
 
 const VideoConferencingRoom = lazy(() => import("./VideoConferencingRoom"));
@@ -54,18 +54,18 @@ export default function App() {
 
   return (
     <>
-    <Seo
-     title = 'Find a TOEFL Study Partner'
-     description = 'Connect with other TOEFL test takers and find a study partner to practice together.'
-     url = 'https://toeflgoglobal.com/study-partner'
-     image="https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1"
-     />
+      <Seo
+        title='Find a TOEFL Study Partner'
+        description='Connect with other TOEFL test takers and find a study partner to practice together.'
+        url='https://toeflgoglobal.com/study-partner'
+        image="https://www.dropbox.com/scl/fi/efgh6d39t1z69ulz03dl3/GoGlobalSocialShare.jpg?rlkey=o8vttiq065fkpsemyzo04fcj5&raw=1"
+      />
       {showAlert && (
-          <Alert
-            message="Please log in to continue"
-            type="warning"
-            onClose={handleCloseAlert}
-          />
+        <Alert
+          message="Please log in to continue"
+          type="warning"
+          onClose={handleCloseAlert}
+        />
       )}
       {stage === 'home' && (
         <div className="z-[0] relative overflow-hidden rounded-xl m-2 flex items-center min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">

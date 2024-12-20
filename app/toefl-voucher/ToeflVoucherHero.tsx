@@ -239,11 +239,11 @@ export default function ToeflVoucherHero() {
                                                         </SelectTrigger>
                                                     </FormControl>
                                                     <SelectContent>
-                                                        <SelectItem value="13900">
-                                                            INR 13,900 (You will get the voucher code on your registered Email ID)
+                                                        <SelectItem value="13700">
+                                                            INR 13,700 (You will get the voucher code on your registered Email ID)
                                                         </SelectItem>
-                                                        <SelectItem value="12900">
-                                                            INR 12,900 (We will book the exam slot for you, you will not get the voucher code)
+                                                        <SelectItem value="12700">
+                                                            INR 12,700 (We will book the exam slot for you, you will not get the voucher code)
                                                         </SelectItem>
                                                     </SelectContent>
                                                 </Select>

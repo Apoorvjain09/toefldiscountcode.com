@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { BookOpen, Info, Mail, Calendar, Video } from 'lucide-react'
+import { BookOpen, Info, Mail, Calendar, Video, MailIcon } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const pricingOptions = [
@@ -16,18 +16,18 @@ const pricingOptions = [
         bookingMethod: "youtube_code",
     },
     {
-        price: 13700,
-        actualPrice: 16900,
-        savings: 3200,
-        description: "You will get the voucher code on your registered Email ID",
-        bookingMethod: "buy_voucher",
-    },
-    {
         price: 12700,
         actualPrice: 16900,
         savings: 4200,
         description: "We will book the exam slot for you, you will not get the voucher code",
         bookingMethod: "slot_booking",
+    },
+    {
+        price: 12000,
+        actualPrice: 16900,
+        savings: 4900,
+        description: "You will get the voucher code on your registered Email ID",
+        bookingMethod: "buy_voucher",
         popular: true,
     },
 ]
@@ -63,14 +63,14 @@ export default function TOEFLPricing() {
                                 )}
                                 {option.bookingMethod === 'buy_voucher' && (
                                     <>
-                                        <FaWhatsapp className="mr-2 h-4 w-4" />
-                                        <span>Get Voucher code via whatsapp</span>
+                                        <MailIcon className="mr-2 h-4 w-4" />
+                                        <span>Get voucher code on email</span>
                                     </>
                                 )}
                                 {option.bookingMethod === 'slot_booking' && (
                                     <>
                                         <FaWhatsapp className="mr-2 h-4 w-4" />
-                                        <span>Voucher code via whatsapp</span>
+                                        <span>Talk to counselor via whatsapp</span>
                                     </>
                                 )}
                             </div>
@@ -86,7 +86,7 @@ export default function TOEFLPricing() {
                                                     window.location.href = "https://www.youtube.com/watch?v=p6Lw3Oz2a7g"
                                                 }
                                                 if (option.bookingMethod === 'buy_voucher') {
-                                                    window.location.href = "https://wa.me/918802880181?text=Hi%2C%20I%E2%80%99m%20interested%20in%20purchasing%20a%20TOEFL%20voucher.%20Could%20you%20share%20the%20details%3F";
+                                                    window.location.href = "https://rzp.io/l/6UO7bMkD";
                                                 }
                                                 if (option.bookingMethod === 'slot_booking') {
                                                     window.location.href = "https://wa.me/918802880181?text=Hi%2C%20I%E2%80%99m%20interested%20in%20purchasing%20a%20TOEFL%20voucher.%20Could%20you%20share%20the%20details%3F";

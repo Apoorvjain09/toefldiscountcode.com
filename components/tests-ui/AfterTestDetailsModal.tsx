@@ -78,77 +78,82 @@ export default function AfterTestDetailsModal({
     }
 
     return (
-        <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className="w-[90%] sm:w-auto sm:max-w-[425px] rounded-2xl">
-                <DialogHeader>
-                    <div className="flex items-center space-x-2">
-                        <Sparkles className="h-6 w-6 text-blue-500" />
-                        <DialogTitle className="text-2xl font-bold text-gray-800">
-                            Create Your Personalized TOEFL Study Plan
-                        </DialogTitle>
-                    </div>
-                </DialogHeader>
-                <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                        <Progress value={(step + 1) / steps.length * 100} className="w-full" />
-                        {/* <AnimatePresence mode="wait"> */}
-                        <motion.div
-                            key={step}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
-                        >
-                            {step === 1 && (
-                                <div className="space-y-4">
-                                    <h3 className="text-lg font-medium">{steps[step].title}</h3>
-                                    <Select onValueChange={(value) => form.setValue('country', value)}>
-                                        <SelectTrigger>
-                                            <SelectValue placeholder="Select a country" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="usa">United States</SelectItem>
-                                            <SelectItem value="uk">United Kingdom</SelectItem>
-                                            <SelectItem value="canada">Canada</SelectItem>
-                                            <SelectItem value="australia">Australia</SelectItem>
-                                            <SelectItem value="germany">Germany</SelectItem>
-                                            <SelectItem value="Not disclosed">Other..</SelectItem>
-                                        </SelectContent>
-                                    </Select>
+        <>
+            {type == "test1" && (
+                <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+                    <DialogContent className="w-[90%] sm:w-auto sm:max-w-[425px] rounded-2xl">
+                        <DialogHeader>
+                            <div className="flex items-center space-x-2">
+                                <Sparkles className="h-6 w-6 text-blue-500" />
+                                <DialogTitle className="text-2xl font-bold text-gray-800">
+                                    Create Your Personalized TOEFL Study Plan
+                                </DialogTitle>
+                            </div>
+                        </DialogHeader>
+                        <Form {...form}>
+                            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                                <Progress value={(step + 1) / steps.length * 100} className="w-full" />
+                                {/* <AnimatePresence mode="wait"> */}
+                                <motion.div
+                                    key={step}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    {step === 1 && (
+                                        <div className="space-y-4">
+                                            <h3 className="text-lg font-medium">{steps[step].title}</h3>
+                                            <Select onValueChange={(value) => form.setValue('country', value)}>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder="Select a country" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="usa">United States</SelectItem>
+                                                    <SelectItem value="uk">United Kingdom</SelectItem>
+                                                    <SelectItem value="canada">Canada</SelectItem>
+                                                    <SelectItem value="australia">Australia</SelectItem>
+                                                    <SelectItem value="germany">Germany</SelectItem>
+                                                    <SelectItem value="Not disclosed">Other..</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+                                    )}
+                                    {step === 0 && (
+                                        <div className="space-y-4">
+                                            <h3 className="flex items-center justify-center text-lg font-medium">{steps[step].title}</h3>
+                                            <Calendar
+                                                mode="single"
+                                                selected={form.watch('toeflDate')}
+                                                onSelect={(date) => form.setValue('toeflDate', date as Date)}
+                                                className="rounded-md border w-fit mx-auto shadow-xl"
+                                            />
+                                        </div>
+                                    )}
+                                </motion.div>
+                                {/* </AnimatePresence> */}
+                                <div className="flex justify-between">
+                                    <Button onClick={prevStep} disabled={step === 0} className='bg-gradient-to-br from-blue-400 to-green-500 hover:from-blue-500 hover:to-green-600'>
+                                        Previous
+                                    </Button>
+                                    {(step == 0) && (
+                                        <Button onClick={nextStep} className='bg-gradient-to-br from-blue-400 to-green-500 hover:from-blue-500 hover:to-green-600'>
+                                            Next
+                                        </Button>
+                                    )}
+                                    {(step == 1) && (
+                                        <Button type="submit" className='bg-gradient-to-br from-blue-400 to-green-500 hover:from-blue-500 hover:to-green-600'>
+                                            {loading ? <div className='animate-pulse'><FaSpinner /></div> : "Submit"}
+                                        </Button>
+                                    )}
                                 </div>
-                            )}
-                            {step === 0 && (
-                                <div className="space-y-4">
-                                    <h3 className="flex items-center justify-center text-lg font-medium">{steps[step].title}</h3>
-                                    <Calendar
-                                        mode="single"
-                                        selected={form.watch('toeflDate')}
-                                        onSelect={(date) => form.setValue('toeflDate', date as Date)}
-                                        className="rounded-md border w-fit mx-auto shadow-xl"
-                                    />
-                                </div>
-                            )}
-                        </motion.div>
-                        {/* </AnimatePresence> */}
-                        <div className="flex justify-between">
-                            <Button onClick={prevStep} disabled={step === 0} className='bg-gradient-to-br from-blue-400 to-green-500 hover:from-blue-500 hover:to-green-600'>
-                                Previous
-                            </Button>
-                            {(step == 0) && (
-                                <Button onClick={nextStep} className='bg-gradient-to-br from-blue-400 to-green-500 hover:from-blue-500 hover:to-green-600'>
-                                    Next
-                                </Button>
-                            )}
-                            {(step == 1) && (
-                                <Button type="submit" className='bg-gradient-to-br from-blue-400 to-green-500 hover:from-blue-500 hover:to-green-600'>
-                                    {loading ? <div className='animate-pulse'><FaSpinner /></div> : "Submit"}
-                                </Button>
-                            )}
-                        </div>
-                    </form>
-                </Form>
-            </DialogContent>
-        </Dialog>
+                            </form>
+                        </Form>
+                    </DialogContent>
+                </Dialog>
+            )}
+
+        </>
     )
 }
 

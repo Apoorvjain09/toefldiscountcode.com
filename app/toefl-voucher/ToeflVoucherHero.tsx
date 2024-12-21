@@ -92,8 +92,8 @@ export default function ToeflVoucherHero() {
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         {[
+                            { amount: 4900, type: 'Voucher' },
                             { amount: 4200, type: 'Exam Booking' },
-                            { amount: 3200, type: 'Voucher' },
                             { amount: 1700, type: 'Discount Code' },
                         ].map((offer, index) => (
                             <motion.div
@@ -240,7 +240,7 @@ export default function ToeflVoucherHero() {
                                                     </FormControl>
                                                     <SelectContent>
                                                         <SelectItem value="13700">
-                                                            INR 13,700 (You will get the voucher code on your registered Email ID)
+                                                            INR 12,000 (You will get the voucher code on your registered Email ID)
                                                         </SelectItem>
                                                         <SelectItem value="12700">
                                                             INR 12,700 (We will book the exam slot for you, you will not get the voucher code)

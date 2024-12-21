@@ -34,6 +34,7 @@ const Page = () => {
       <ToeflVoucherHero />
       <TOEFLPricing />
       <ToeflVoucherWhyUS />
+
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 mx-10 mb-10 ">
         <div className="md:w-[50%]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-secondary">
@@ -56,6 +57,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+
       <ToeflVoucherFAQ />
 
       <footer className="rounded-b-lg bg-gray-100">

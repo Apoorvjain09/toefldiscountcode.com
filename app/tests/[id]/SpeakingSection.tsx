@@ -5,14 +5,11 @@ import ReactAudioPlayer from 'react-audio-player';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { FaSpinner } from 'react-icons/fa';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-// import { speakingQuestions } from './questions';
 
 interface SpeakingSectionProps {
     onComplete: () => void;
     onTaskComplete: (task: number, evaluation: { score: number; feedback: string }) => void;
 }
-
-
 
 const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskComplete }) => {
     const [stage, setStage] = useState<'intro' | 'task1' | 'prepare' | 'speak' | 'task2Intro' | 'task2Passage' | 'task2Conversation' | 'task2QuestionPrepare' | 'task2Speak' | 'task3Intro' | 'task3Passage' | 'task3Conversation' | 'task3QuestionPrepare' | 'task3Speak' | 'task4Intro' | 'task4Conversation' | 'task4QuestionPrepare' | 'task4Speak'>('intro');
@@ -29,7 +26,6 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
     const pathname = usePathname();
     const id = pathname.split('/').pop();
 
-    // Dynamically import the correct questions file
     let speakingQuestions: any;
 
     try {

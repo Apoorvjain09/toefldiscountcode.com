@@ -11,8 +11,14 @@ import { useUser } from '@clerk/nextjs';
 const Page = () => {
     const pathname = usePathname();
     const id = pathname.split('/').pop();
-    const { user } = useUser()
-    const hasAccess = user?.publicMetadata?.["6Month_Membership"] === "true"
+    let hasAccess;
+
+    if (id === "test1" || id === "test2") {
+        hasAccess = true
+    } else {
+        const { user } = useUser()
+        hasAccess = user?.publicMetadata?.["Monthly_Membership"] === "true";
+    }
 
     const [stage, setStage] = useState<'intro' | 'test'>('intro');
     const handleStartTestClick = () => {

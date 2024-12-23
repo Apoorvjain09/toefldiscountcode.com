@@ -29,9 +29,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
     if (!id) {
         return <div>Loading...</div>;
     }
-    // Dynamically import the correct questions file
     let writingQuestions: any;
-
     try {
         const questionsModule = require(`../questions/${id}`);
         writingQuestions = questionsModule.writingQuestions;

@@ -29,9 +29,29 @@ export const metadata: Metadata = {
 };
 
 const layout = ({ children }: { children: ReactNode }) => {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.toeflgoglobal.com/toefl-voucher",
+    "name": "TOEFL Go Global",
+    "description": "Get exclusive TOEFL discount codes and top preparation resources. Save on registration fees and boost your TOEFL success with GregoGlobal.",
+    "image": "https://www.toeflgoglobal.com/assets/goglobal1.webp",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TOEFL Go Global",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.toeflgoglobal.com/assets/goglobal1.webp",
+      },
+    },
+  };
   return (
     <div className="">
       <main className="">{children}</main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
     </div>
   );
 };

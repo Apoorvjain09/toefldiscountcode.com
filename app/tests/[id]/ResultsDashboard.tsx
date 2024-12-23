@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { readingQuestions, listeningQuestions } from './questions'; // Adjust the import path as necessary
-import WritingSection from './WritingSection';
 import { usePathname } from 'next/navigation';
 import ScoreDashboard from '@/components/tests-ui/ScoreDashboard';
 import { Button } from '@/components/ui/button';
@@ -24,7 +22,6 @@ interface ResultsDashboardProps {
     };
 }
 
-
 interface ReadingQuestion {
     id: number;
     passage?: string;
@@ -38,13 +35,11 @@ interface ReadingQuestion {
 }
 
 export interface ListeningQuestion {
-    id: number; // Unique identifier for the question
-    question: string; // The text of the question
-    options: string[]; // Array of options for the question
-    answer: number; // Index of the correct option in the options array
+    id: number;
+    question: string;
+    options: string[];
+    answer: number;
 }
-
-
 
 const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, summaryAnswers1, summaryAnswers2, totalScoreReading, totalScoreListening, listeningAnswers, writingScores, speakingScores }) => {
     const [selectedSection, setSelectedSection] = useState<'reading' | 'listening' | 'writing' | 'speaking' | null>(null);
@@ -106,7 +101,6 @@ const ResultsDashboard: React.FC<ResultsDashboardProps> = ({ readingAnswers, sum
         console.error(`Questions file for Test ${id} not found.`);
         return <div>Test questions not found.</div>;
     }
-
 
     const handleSectionClick = (section: 'reading' | 'listening' | 'writing' | 'speaking') => {
         setSelectedSection(section);

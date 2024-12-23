@@ -1,18 +1,14 @@
 "use client"
 import React, { useState, useEffect, Suspense } from 'react';
-import { FaPlayCircle, FaSignOutAlt } from 'react-icons/fa';
+import { FaSignOutAlt } from 'react-icons/fa';
 import { MdError } from "react-icons/md";
-// import { readingQuestions, listeningQuestions, listeningAudios } from './questions';
 import ReactAudioPlayer from 'react-audio-player';
 import Draggable from 'react-draggable';
 import WritingSection from './WritingSection';
 import SpeakingSection from './SpeakingSection';
 import ResultsDashboard from './ResultsDashboard';
-import { useUser } from '@clerk/nextjs';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { doc, setDoc, collection, addDoc } from "firebase/firestore";
-import { db } from "@/firebase"; // Import Firestore instance
 import { ReloadIcon } from '@radix-ui/react-icons';
 import AfterTestDetailsModal from '@/components/tests-ui/AfterTestDetailsModal';
 
@@ -37,7 +33,6 @@ export interface ListeningQuestion {
 }
 
 const Test1 = () => {
-    const { user } = useUser()
     const [isAfterTestDetailsModalopen, setIsAfterTestDetailsModalopen] = useState(false)
     const [tryReloadAudio, setTryReloadAudio] = useState(0);
     const [stage, setStage] = useState<'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('instructions');
@@ -75,7 +70,7 @@ const Test1 = () => {
     if (!id) {
         return <div>Loading...</div>;
     }
-    // Dynamically import the correct questions file
+
     let readingQuestions: any;
     let listeningQuestions: any;
     let listeningAudios: any;
@@ -91,10 +86,6 @@ const Test1 = () => {
         console.error(`Questions file for Test ${id} not found.`);
         return <div>Test questions not found.</div>;
     }
-
-    const handleStartTestClick = () => {
-        setStage('instructions');
-    };
 
     const handleContinueClick = () => {
         if (stage === 'instructions') {
@@ -352,7 +343,6 @@ const Test1 = () => {
         if (stage === 'instructions') {
             setStage('reading');
         } else if (stage === 'reading') {
-            // alert("pls click next if you are performing current question")
             setStage('listeningInstructions');
         } else if (stage === 'readingPassage1') {
             setStage('listeningInstructions');
@@ -392,7 +382,6 @@ const Test1 = () => {
         } else if (stage === 'writing') {
             setStage('speaking');
         } else if (stage === 'speaking') {
-            // setStage('resultsDashboard');
             handleSpeakingCompletion()
         }
     };
@@ -427,12 +416,11 @@ const Test1 = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ values: { message: reportMessage, userid: user?.id || "test" } }),
+                body: JSON.stringify({ values: { message: reportMessage, userid: "USER_ID" } }),
             });
 
             if (response.ok) {
                 setSuccess("Your query will be resolved within 24hrs!");
-                // setShowReportModal(false);
             } else {
                 setError("Failed to send email.");
             }
@@ -1287,30 +1275,24 @@ const Test1 = () => {
                 </div>
             )}
             {stage === 'writing' && (
-                <Suspense fallback={<div>Loading Writing Section...</div>}>
-                    <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />
-                </Suspense>
+                <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />
             )}
             {stage === 'speaking' && (
-                <Suspense fallback={<div>Loading Speaking Section...</div>}>
-                    <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />
-                </Suspense>
+                <SpeakingSection onComplete={handleSpeakingCompletion} onTaskComplete={handleSpeakingComplete} />
             )}
             {stage === 'resultsDashboard' && (
-                <Suspense fallback={<div>Loading Results...</div>}>
-                    <ResultsDashboard
-                        summaryAnswers1={selectedAnswers1}
-                        summaryAnswers2={selectedAnswers2}
-                        readingAnswers={answers}
-                        totalScoreReading={totalScoreReading}
-                        totalScoreListening={totalScoreListening}
-                        listeningAnswers={listeningAnswers}
-                        writingScores={writingScores}
-                        speakingScores={speakingScores}
-                    />
-                </Suspense>
+                <ResultsDashboard
+                    summaryAnswers1={selectedAnswers1}
+                    summaryAnswers2={selectedAnswers2}
+                    readingAnswers={answers}
+                    totalScoreReading={totalScoreReading}
+                    totalScoreListening={totalScoreListening}
+                    listeningAnswers={listeningAnswers}
+                    writingScores={writingScores}
+                    speakingScores={speakingScores}
+                />
             )}
-            {(id === "test1" || id === "test2") && (
+            {(id === "test1") && (
                 <AfterTestDetailsModal type={id} isOpen={isAfterTestDetailsModalopen} onClose={() => { setIsAfterTestDetailsModalopen(false) }} />
             )}
         </div >

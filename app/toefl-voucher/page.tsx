@@ -6,6 +6,8 @@ import ToeflVoucherWhyUS from "./ToeflVoucherWhyUS";
 import ToeflVoucherHero from "./ToeflVoucherHero";
 import TOEFLPricing from "./ToeflVoucherPricing";
 import { Info } from "lucide-react";
+import ToeflVoucherWhatIsToefl from "./ToeflVoucheWhatIsToefl";
+import ToeflVoucherWhatIsDiscountCode from "./ToeflVoucherWhatIsDiscountCode";
 
 
 const dataQA = [
@@ -57,9 +59,10 @@ const Page = () => {
           </div>
         </div>
       </div>
-    
-      <ToeflVoucherFAQ />
 
+      <ToeflVoucherFAQ />
+      <ToeflVoucherWhatIsToefl />
+      <ToeflVoucherWhatIsDiscountCode />
       <footer className="rounded-b-lg bg-gray-100">
         <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="lg:flex lg:items-center lg:justify-between">

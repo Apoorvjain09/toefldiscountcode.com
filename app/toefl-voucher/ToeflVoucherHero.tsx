@@ -44,7 +44,6 @@ export default function ToeflVoucherHero() {
     })
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        // console.log(values)
         // Handle form submission here
         const formData = {
             firstName: values.firstName,

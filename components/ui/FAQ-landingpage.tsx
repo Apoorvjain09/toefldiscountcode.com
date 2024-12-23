@@ -25,7 +25,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">What is TOEFL?</h2>
 
-                        <SvgIcon/>
+                        <SvgIcon />
 
                     </summary>
 
@@ -40,7 +40,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">How is the TOEFL scored?</h2>
 
-                        <SvgIcon/>
+                        <SvgIcon />
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -54,7 +54,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">What is a good TOEFL score?</h2>
 
-                        <SvgIcon/>
+                        <SvgIcon />
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -67,7 +67,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">How long is the TOEFL test?</h2>
 
-                        <SvgIcon/>
+                        <SvgIcon />
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -81,7 +81,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">How do I register for the TOEFL?</h2>
 
-                        <SvgIcon/>
+                        <SvgIcon />
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">
@@ -95,7 +95,7 @@ export default function FAQLandingPage() {
                     >
                         <h2 className="font-medium">What should I bring in test center?</h2>
 
-                        <SvgIcon/>
+                        <SvgIcon />
                     </summary>
 
                     <p className="mt-4 px-4 leading-relaxed text-gray-700">

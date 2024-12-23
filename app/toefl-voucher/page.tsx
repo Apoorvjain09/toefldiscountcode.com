@@ -1,6 +1,4 @@
 "use client";
-// import Hero from "@/components/hero/Hero";
-// import WhyUs from "@/components/whyUs/WhyUs";
 import ToeflVoucherFAQ from "./ToeflVoucherFAQ";
 import ToeflVoucherWhyUS from "./ToeflVoucherWhyUS";
 import ToeflVoucherHero from "./ToeflVoucherHero";
@@ -8,31 +6,11 @@ import TOEFLPricing from "./ToeflVoucherPricing";
 import { Info } from "lucide-react";
 import ToeflVoucherWhatIsToefl from "./ToeflVoucheWhatIsToefl";
 import ToeflVoucherWhatIsDiscountCode from "./ToeflVoucherWhatIsDiscountCode";
-
-
-const dataQA = [
-  {
-    question: "How do I get free application guidance for TOEFL?",
-    answer: "Simply join our WhatsApp group! We offer free, step-by-step assistance to help you with your application process."
-  },
-  {
-    question: "How do I get the TOEFL discount code",
-    answer: "It's very straightforward. In the YouTube video you will get working voucher codes."
-  },
-  {
-    question: "What support can I expect after joining the WhatsApp group?",
-    answer: "Our community provides continuous support for your academic needs, from application tips to study resources for TOEFL preparation."
-  },
-  {
-    question: "Are the TOEFL voucher codes really free?",
-    answer: "Yes, our TOEFL voucher codes are provided for free as part of our commitment to your educational journey. But if you want bigger discount you can opt for pre-paid vouchers also."
-  },
-];
+import MainFooter from "@/components/ui/MainFooter";
 
 const Page = () => {
   return (
     <div className="">
-      {/* <Hero /> */}
       <ToeflVoucherHero />
       <TOEFLPricing />
       <ToeflVoucherWhyUS />
@@ -63,45 +41,7 @@ const Page = () => {
       <ToeflVoucherFAQ />
       <ToeflVoucherWhatIsToefl />
       <ToeflVoucherWhatIsDiscountCode />
-      <footer className="rounded-b-lg bg-gray-100">
-        <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <div>
-              <div className="flex justify-center text-blue-600 lg:justify-start">
-                <p className='font-extrabold text-3xl'>TOEFL Go GLobal</p>
-              </div>
-
-              <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-                MJ Study Aborad is one of the Leading Study Abroad Counsultant (as per ETS) providing education loan and visa services as well.
-              </p>
-            </div>
-
-
-            <div className='flex flex-col'>
-              <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
-                <li>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="/book"> Books </a>
-                </li>
-
-                <li>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="/forum"> Forum </a>
-                </li>
-
-                <li>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="/score-reporting"> score reporting</a>
-                </li>
-
-                <li>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="/book-counseling"> Counseling </a>
-                </li>
-              </ul>
-              <p className="mt-12 text-center text-sm text-gray-500 lg:text-right">
-                Copyright &copy; 2024. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <MainFooter />
     </div>
   );
 };

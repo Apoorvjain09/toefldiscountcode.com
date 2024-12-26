@@ -23,7 +23,7 @@ const formSchema = z.object({
     lastName: z.string().min(2, 'Last name must be at least 2 characters'),
     email: z.string().email('Invalid email address'),
     contactNumber: z.string().regex(/^\d{10}$/, 'Contact number must be 10 digits'),
-    voucher: z.enum(['13900', '12900'], {
+    voucher: z.enum(['Voucher_Purchase', 'Exam_booking'], {
         required_error: 'Please select a voucher option',
     }),
 })
@@ -79,12 +79,12 @@ export default function ToeflVoucherHero() {
                         transition={{ duration: 0.5 }}
                         className="text-center"
                     >
-                        <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                             MJ Study Abroad × ETS Partnership
-                        </h1>
-                        <p className="mt-2 text-muted-foreground">
+                        </div>
+                        <h1 className="mt-2 text-muted-foreground">
                             Exclusive TOEFL exam discounts for students
-                        </p>
+                        </h1>
                     </motion.div>
                 </CardHeader>
 
@@ -238,11 +238,11 @@ export default function ToeflVoucherHero() {
                                                         </SelectTrigger>
                                                     </FormControl>
                                                     <SelectContent>
-                                                        <SelectItem value="13700">
-                                                            INR 12,000 (You will get the voucher code on your registered Email ID)
+                                                        <SelectItem value="Voucher_Purchase">
+                                                            Voucher Purchase
                                                         </SelectItem>
-                                                        <SelectItem value="12700">
-                                                            INR 12,700 (We will book the exam slot for you, you will not get the voucher code)
+                                                        <SelectItem value="Exam_booking">
+                                                            Exam booking
                                                         </SelectItem>
                                                     </SelectContent>
                                                 </Select>

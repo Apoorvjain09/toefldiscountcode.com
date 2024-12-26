@@ -7,6 +7,10 @@ import { Info } from "lucide-react";
 import ToeflVoucherWhatIsToefl from "./ToeflVoucheWhatIsToefl";
 import ToeflVoucherWhatIsDiscountCode from "./ToeflVoucherWhatIsDiscountCode";
 import MainFooter from "@/components/ui/MainFooter";
+import ToeflVoucherTable from "./ToeflVoucherTable";
+import ToeflVoucherExamBooking from "./ToeflVoucherExamBooking";
+import DiscountCodeExplanation from "./DiscountCodeExplanation";
+import VoucherPurchaseExplanation from "./VoucherPurchaseExplanation";
 
 const Page = () => {
   return (
@@ -39,6 +43,10 @@ const Page = () => {
       </div>
 
       <ToeflVoucherFAQ />
+      <ToeflVoucherTable />
+      <DiscountCodeExplanation />
+      <VoucherPurchaseExplanation />
+      <ToeflVoucherExamBooking />
       <ToeflVoucherWhatIsToefl />
       <ToeflVoucherWhatIsDiscountCode />
       <MainFooter />

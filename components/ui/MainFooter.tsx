@@ -18,7 +18,7 @@ export default function MainFooter() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+                    <div className="text-center grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
                         <div>
                             <p className="font-medium text-primary">Company</p>
 

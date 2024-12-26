@@ -25,6 +25,23 @@ const Page = () => {
         setStage('test');
     };
 
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": `https://www.toeflgoglobal.com/tests/${id}`,
+        "name": "TOEFL Go Global",
+        "description": "Access free TOEFL books and preparation resources. Download top study materials and get ready to excel in your TOEFL exam.",
+        "image": "https://www.toeflgoglobal.com/assets/goglobal1.webp",
+        "publisher": {
+            "@type": "Organization",
+            "name": "TOEFL Go Global",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.toeflgoglobal.com/assets/goglobal1.webp",
+            },
+        },
+    };
+
     return (
         <div className="py-10 px-4">
             {stage === 'intro' && (
@@ -51,6 +68,11 @@ const Page = () => {
                     <ReadingListeningSection />
                 </Suspense>
             )}
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
         </div>
     );
 };

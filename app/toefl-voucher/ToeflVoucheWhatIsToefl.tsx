@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function AbToeflVoucheWhatIsToefloutToeflIBT() {
     return (
-        <section className="py-10 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-gray-50 to-gray-100">
+        <section className="py-10 px-4 sm:px-8 lg:px-16 ">
             <div className="max-w-5xl mx-auto">
                 <Card className="shadow-xl border border-gray-200">
                     <CardHeader>

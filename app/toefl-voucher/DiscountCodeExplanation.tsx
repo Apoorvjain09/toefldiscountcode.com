@@ -35,13 +35,13 @@ export default function DiscountCodeExplanation() {
 
                     <h2 className="font-bold text-2xl text-gray-900">Promo Code Details</h2>
                     <p>
-                        <strong>TOEFL Promo Code:</strong> IND4828101
+                        <strong>TOEFL Promo Code:</strong> IND3205101
                     </p>
                     <p>
-                        <strong>Agent Name:</strong> McCarthy AI Pvt Ltd (MJ Study Abroad)
+                        <strong>Agent Name:</strong> MJ Study Abroad
                     </p>
                     <p>
-                        <strong>Agent ID:</strong> IND4828101
+                        <strong>Agent ID:</strong> IND3205101
                     </p>
 
                     <Separator />

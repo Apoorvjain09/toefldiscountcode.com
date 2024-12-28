@@ -43,11 +43,6 @@ export default function VoucherPurchaseExplanation() {
                         MJ Study Abroad’s dedicated customer support team is always ready to assist you with the booking process. Whether you have questions or need help applying the voucher, their team is here to make the process seamless.
                     </p>
                 </CardContent>
-                <CardFooter className="flex justify-center mt-4">
-                    <Button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
-                        Buy Your TOEFL Exam Voucher Now
-                    </Button>
-                </CardFooter>
             </Card>
         </div>
     );

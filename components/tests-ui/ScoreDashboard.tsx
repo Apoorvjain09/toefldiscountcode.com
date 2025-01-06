@@ -82,12 +82,7 @@ const ScoreDashboard: React.FC<ScoreDashboardProps> = ({
 
         // If not a duplicate, append the new score
         if (!isDuplicate) {
-            const updatedData = [
-                ...parsedData.filter(
-                    (entry) => !(entry.date === currentDate && entry.score !== totalScore)
-                ),
-                { date: currentDate, score: totalScore },
-            ];
+            const updatedData = [...parsedData, { date: currentDate, score: totalScore }];
 
             // Update state and localStorage
             setHistoricalData(updatedData);
@@ -139,7 +134,7 @@ const ScoreDashboard: React.FC<ScoreDashboardProps> = ({
                 {icon}
             </CardHeader>
             <CardContent>
-                <div className="text-2xl font-bold">{score}/40</div>
+                <div className="text-2xl font-bold">{score}/30</div>
                 <Progress value={(score / 40) * 100} className="mt-2" />
                 <HoverCard>
                     <HoverCardTrigger className="text-sm text-muted-foreground cursor-help">

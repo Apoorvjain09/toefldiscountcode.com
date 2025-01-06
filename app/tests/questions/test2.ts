@@ -209,7 +209,7 @@ export const readingQuestions = [
 
         [5] Overfishing and overdiscarding may thus contribute to a syndrome known as “fishing down of food webs,” whereby we eliminate apex (top) predators and large species while transforming the ocean into a simplified system increasingly dominated by microbes, jellyfish, ocean-bottom invertebrates, plankton, and planktivores. The strongest evidence for the fishing down phenomenon exists in global catch statistics that show alarming shifts in species composition from high-value, near-bottom species to lower-value, open-ocean species. In the last three decades of the twentieth century, the global fishing fleet doubled in size and technology advanced immeasurably. Despite increased effort and technology, total catch stabilized, but landing rates (rates at which species are caught) of the most valuable species fell by 25 percent.
 
-        [6] Conservation organizations have condemned the obvious and extreme waste associated with bycatch. (A) Public concern over high mortality rates of endangered marine turtles captured in shrimp trawls led to the development of turtle exclusion devices (TEDs) in the 1980s. (B) TEDs were incorporated into the shrimp net design with the purpose of directing turtles out of nets without unacceptably reducing shrimp catches. (C) Marine engineers and fishers also developed shrimp net designs that incorporate bycatch reduction devices (BRDs), taking advantage of behavioral differences between shrimp and fish, or between different fishes, in order to separate fishes. (D)
+        [6] Conservation organizations have condemned the obvious and extreme waste associated with bycatch. (A) ■ Public concern over high mortality rates of endangered marine turtles captured in shrimp trawls led to the development of turtle exclusion devices (TEDs) in the 1980s. (B) ■ TEDs were incorporated into the shrimp net design with the purpose of directing turtles out of nets without unacceptably reducing shrimp catches. (C) ■ Marine engineers and fishers also developed shrimp net designs that incorporate bycatch reduction devices (BRDs), taking advantage of behavioral differences between shrimp and fish, or between different fishes, in order to separate fishes. ■ (D)
         `,
         question: "In the paragraph 6, there is a missing sentence. Look at the paragraph and indicate (A, B, C and D) where the following sentence could be added to the passage. → Turtles were not the only marine species to benefit from new catch techniques.",
         options: [
@@ -417,8 +417,8 @@ export const readingQuestions = [
         [6] The Park and Burgess model of growth in zones and natural areas of the city can still be used to describe patterns of growth in cities that were built around a central business district and that continue to attract large numbers of immigrants. But this model is biased toward the commercial and industrial cities of North America, which have tended to form around business centers rather than around palaces or cathedrals, as is often the case in some other parts of the world. Moreover, it fails to account for other patterns of urbanization, such as the rapid urbanization that occurs along commercial transportation corridors and the rise of nearby satellite cities.
 
          `,
-        highlight: 'were promptly occupied',
-        question: "The word 'promptly' in the passage is closest in meaning to",
+        highlight: 'promptly',
+        question: "The word 'promptly' in passage 5 is closest in meaning to",
         options: [
             "quickly",
             "usually",
@@ -464,9 +464,9 @@ export const readingQuestions = [
 
         [4] Park and Burgess’s model has come to be known as the “concentric-zone model”. Because the model was originally based on studies of Chicago, its center is labeled “Loop,” the term commonly applied to that city’s central commercial zone. Surrounding the central zone is a “zone in transition,” an area that is being invaded by business and light manufacturing. The third zone is inhabited by workers who do not want to live in the factory or business district but at the same time need to live reasonably close to where they work. The fourth or residential zone consists of upscale apartment buildings and single-family homes. And the outermost ring, outside the city limits, is the suburban or commuters’ zone; its residents live within a 30- to 60-minute ride of the central business district.
 
-        [5] Studies by Park, Burgess, and other Chicago-school sociologists showed how new groups of immigrants tended to be concentrated in separate areas within inner-city zones, where they sometimes experienced tension with other ethnic groups that had arrived earlier. Over time, however, each group was able to adjust to life in the city and to find a place for itself in the urban economy. (A) Eventually many of the immigrants moved to unsegregated areas in outer zones; the areas they left behind were promptly occupied by new waves of immigrants.
+        [5] Studies by Park, Burgess, and other Chicago-school sociologists showed how new groups of immigrants tended to be concentrated in separate areas within inner-city zones, where they sometimes experienced tension with other ethnic groups that had arrived earlier. Over time, however, each group was able to adjust to life in the city and to find a place for itself in the urban economy. (A) ■ Eventually many of the immigrants moved to unsegregated areas in outer zones; the areas they left behind were promptly occupied by new waves of immigrants.
 
-        [6] The Park and Burgess model of growth in zones and natural areas of the city can still be used to describe patterns of growth in cities that were built around a central business district and that continue to attract large numbers of immigrants. (B) But this model is biased toward the commercial and industrial cities of North America, which have tended to form around business centers rather than around palaces or cathedrals, as is often the case in some other parts of the world. (C) Moreover, it fails to account for other patterns of urbanization, such as the rapid urbanization that occurs along commercial transportation corridors and the rise of nearby satellite cities. (D)
+        [6] The Park and Burgess model of growth in zones and natural areas of the city can still be used to describe patterns of growth in cities that were built around a central business district and that continue to attract large numbers of immigrants. (B) ■ But this model is biased toward the commercial and industrial cities of North America, which have tended to form around business centers rather than around palaces or cathedrals, as is often the case in some other parts of the world. (C) ■ Moreover, it fails to account for other patterns of urbanization, such as the rapid urbanization that occurs along commercial transportation corridors and the rise of nearby satellite cities. ■ (D)
         `,
         question: "Look at the part of the passage that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → Typical of this kind of urban growth is the steel-producing center of Gary, Indiana, outside of Chicago, which developed because massive heavy industry could not be located within the major urban center itself.",
         options: [
@@ -699,7 +699,8 @@ export const listeningQuestions = [
     },
     {
         id: 18,
-        question: "What does the professor mean when they say 'that the way we expirence flavour is a symphony of sensory data'?",
+        question: "What does the professor mean when they say this :-",
+        audio: "https://www.dropbox.com/scl/fi/m9sxixochge3c69bsgjju/T2C3_packet.mp4?rlkey=tpxiawe6badw9n42qzqn24r8g&st=8ag971tj&raw=1",
         options: [
             "Taste and smell are independent processes",
             "Only one sense is dominant at a time",
@@ -721,7 +722,8 @@ export const listeningQuestions = [
     },
     {
         id: 20,
-        question: "Why does the man say this: 'I'm sure the dean would like to particiapte but the schedule is pretty tight?",
+        question: "Why does the man say this:-",
+        audio: "https://www.dropbox.com/scl/fi/l0bdkklnd4tn15x4o7gam/T2C4_packet.mp4?rlkey=x33wsnyh5dui5c1i4q6i2ihkp&st=omma96tw&raw=1",
         options: [
             "To express regret that the dean is not available",
             "To state that the dean cannot change his schedule",
@@ -872,7 +874,7 @@ export const speakingQuestions = [
         passage3: "Prey animals employ a variety of methods, including running and hiding, to avoid being caught by predators. Yet some animals do not hide but instead stand out. This is often accomplished through the method known as warning coloration. Animals utilizing warning coloration have brightly colored fur or skin. They are typically blue, purple, white, orange, red, or yellow in color. Many of these animals have lethal poison or venom. Predators that see brightly colored animals almost always avoid them. That is particularly true if the predators have had prior negative experiences with similar-looking animals.",
         conversationAudio3: "https://www.dropbox.com/scl/fi/ci67vtn8hfydqi63uyg6z/T2S2.mp3?rlkey=vyuuu77k32fqhrour5kx94l0s&raw=1",
         question3: "The professor talks about the poison dart frog and the skunk. Explain how their actions are related to animal warning coloration.",
-        Audio3Photo:"/assets/Man-giving-speech.png",
+        Audio3Photo: "/assets/Man-giving-speech.png",
 
         conversationAudio4: "https://www.dropbox.com/scl/fi/l3d2mp9o74dhc2m42bddw/T2S3.mp3?rlkey=zy4p41knq0w7q9qv50uigi890&raw=1",
         question4: "Using points and examples from the talk, explain two ways that natural arches are formed.",

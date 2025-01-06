@@ -93,7 +93,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                 setTimeLeft(prevTime => prevTime - 1);
             }, 1000);
             return () => clearInterval(timer);
-        } else if (timeLeft === 0) {
+        } else if (stage === 'readingPassage' && timeLeft === 0) {
             setStage('audioLecture');
         }
     }, [stage, timeLeft]);
@@ -157,7 +157,7 @@ const WritingSection: React.FC<WritingSectionProps> = ({ onComplete, onTaskCompl
                         >
                             Reload Audio
                         </Button>
-                        <Button onClick={() => setStage("task1")} variant="outline">
+                        <Button onClick={() => { setStage("task1"); console.log(stage) }} variant="outline">
                             Continue
                         </Button>
                     </div>

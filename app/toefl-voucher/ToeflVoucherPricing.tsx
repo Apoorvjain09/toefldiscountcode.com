@@ -16,16 +16,16 @@ const pricingOptions = [
         bookingMethod: "youtube_code",
     },
     {
-        price: 12700,
+        price: 13000,
         actualPrice: 16900,
-        savings: 4200,
+        savings: 3900,
         description: "We will book the exam slot for you, you will not get the voucher code",
         bookingMethod: "slot_booking",
     },
     {
-        price: 12000,
+        price: 13500,
         actualPrice: 16900,
-        savings: 4900,
+        savings: 3400,
         description: "You will get the voucher code on your registered Email ID",
         bookingMethod: "buy_voucher",
         popular: true,
@@ -83,13 +83,13 @@ export default function TOEFLPricing() {
                                             className="w-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 text-white"
                                             onClick={() => {
                                                 if (option.bookingMethod === 'youtube_code') {
-                                                    window.location.href = "https://www.youtube.com/watch?v=p6Lw3Oz2a7g"
+                                                    window.open("https://www.youtube.com/watch?v=p6Lw3Oz2a7g", "_blank");
                                                 }
                                                 if (option.bookingMethod === 'buy_voucher') {
-                                                    window.location.href = "https://rzp.io/l/6UO7bMkD";
+                                                    window.open("https://rzp.io/l/6UO7bMkD", "_blank");
                                                 }
                                                 if (option.bookingMethod === 'slot_booking') {
-                                                    window.location.href = "https://wa.me/918802880181?text=Hi%2C%20I%E2%80%99m%20interested%20in%20purchasing%20a%20TOEFL%20voucher.%20Could%20you%20share%20the%20details%3F";
+                                                    window.open("https://wa.me/918802880181?text=Hi%2C%20I%E2%80%99m%20interested%20in%20purchasing%20a%20TOEFL%20voucher.%20Could%20you%20share%20the%20details%3F", "_blank");
                                                 }
                                             }}
                                         >

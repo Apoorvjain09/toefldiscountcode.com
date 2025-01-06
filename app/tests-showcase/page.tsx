@@ -36,7 +36,7 @@ export default function TestShowCase() {
             <div className="mx-auto py-20 p-2">
                 <h2 className="text-3xl font-bold mb-10 text-center">Available Tests</h2>
                 <div className="flex flex-wrap gap-6 justify-center items-center">
-                    {Array.from({ length: 5 }, (_, i) => (
+                    {Array.from({ length: 7 }, (_, i) => (
                         <TestCard key={i} testNumber={i + 1} />
                     ))}
                 </div>

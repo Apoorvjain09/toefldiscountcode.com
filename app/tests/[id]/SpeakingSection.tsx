@@ -261,7 +261,7 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
                     <div className="mt-4 w-full max-w-md">
                         {stage === 'speak' && !isTimerRunning && (
                             <Button variant="default" onClick={handleTranscriptSubmit}>
-                                Submit
+                                {loading ? (<div className='animate-spin'><FaSpinner /></div>) : ("Submit")}
                             </Button>
                         )}
                     </div>

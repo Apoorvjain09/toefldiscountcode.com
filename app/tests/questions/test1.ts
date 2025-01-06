@@ -1,850 +1,813 @@
 export const readingQuestions = [
-  // First passage delta:key to toefl ---> test 1 reading passage 1
+  // First passage barrons 13th edition ---> pretest test 1 reading passage 2
   {
     id: 1,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    question: "How does the art of theater convey its message?",
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "According to paragraph 1, the most fundamental adaptation to maintain body temperature is",
     options: [
-      "An instrument or voice produces sound.",
-      "A camera converts light to images on film.",
-      "People perform a story for another group.",
-      "A person writes a story for others to read.",
+      "the heat generated by the metabolism",
+      "a shivering reflex in the muscles",
+      "migration to a warmer environment",
+      "higher caloric intake to match heat loss",
     ],
-    answer: 2,
+    answer: 0,
   },
   {
     id: 2,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    question:
-      "The author discusses literature in paragraph 2 in order to illustrate what point?",
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "Based on information in paragraph 1, which of the following best explains the term 'thermogenesis'?",
     options: [
-      "Literature and drama are both written forms of communication.",
-      "Reading a novel and attending a play are different experiences.",
-      "Both novelists and dramatists use an outline to organize ideas.",
-      "Many actors prefer roles from classic works of literature.",
+      "Heat loss that must be reversed",
+      "The adaptation of brown fat tissue in the neck",
+      "The maintenance of healthy environmental conditions",
+      "Conditions that affect the metabolism",
     ],
-    answer: 1,
+    answer: 3,
   },
   {
     id: 3,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    highlight:
-      "This combination of elements distinguishes theater from other art forms.",
-    question:
-      "Which sentence below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "Which of the sentences below best expresses the information in the highlighted statement in the passage? The other choices change the meaning or leave out important information.",
+    highlight: "Heat production is increased by such muscle activity as moving or shivering.",
     options: [
-      "A play’s scenery, lighting, and costumes contribute to the message of the play.",
-      "Theater is the only art form that mixes more than one medium in a single work of art.",
-      "A successful dramatist knows how to blend purpose, viewpoint, and theme into a unique performance.",
-      "Theater is a distinct art form by the way it joins characters and audience in the telling of a story.",
-    ],
-    answer: 3,
-  },
-  {
-    id: 4,
-    passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
-
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
-
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
-
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
-
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
-
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    question: "Why does the author mention *Everyman* in paragraph 5?",
-    options: [
-      "To show that the definition of theater has evolved over time.",
-      "To give an example of a play in which abstract ideas are characters.",
-      "To compare the importance of beauty, knowledge, and strength.",
-      "To illustrate the universal human desire to create theater.",
+      "An increase in heat production causes muscle activity such as moving or shivering.",
+      "Muscle activity like moving and shivering will increase heat production.",
+      "Moving and shivering are muscle activities that increase with heat.",
+      "When heat increases, the production of muscle activity also increases.",
     ],
     answer: 1,
   },
   {
-    id: 5,
+    id: 4,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    question:
-      "Which of the following can be inferred from paragraph 6 about the development of theater?",
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "The word 'minimal' in the passage is closest in meaning to",
+    highlight: "minimal",
     options: [
-      "In every human society, theater appeared before other forms of art.",
-      "Theater could not have developed without the support of political leaders.",
-      "People created theater as a way to promote peace between rival groups.",
-      "Theater emerged as a distinct art form at different times around the world.",
+      "most recent",
+      "most active",
+      "newest",
+      "smallest",
     ],
     answer: 3,
   },
   {
+    id: 5,
+    passage: `
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
+
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
+
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
+
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
+
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
+
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "In paragraph 2, the author explains the concept of vasodilation and vasoconstriction by",
+    options: [
+      "describing the evolution in our ancestors",
+      "giving an example of heat loss in the extremities",
+      "comparing the process in humans and animals",
+      "identifying various types of insulation",
+    ],
+    answer: 1,
+  },
+  {
     id: 6,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    highlight: "transitory",
-    question: "The word transitory in paragraph 7 is closest in meaning to",
-    options: ["temporary", "beautiful", "surprising", "expressive"],
-    answer: 0,
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "According to paragraph 3, why do many marine animals require a layer of blubber?",
+    options: [
+      "Because marine animals have lost their hair during evolution",
+      "Because heat is lost in water much faster than it is in air",
+      "Because dry hair does not insulate marine animals",
+      "Because they are so large that they require more insulation",
+    ],
+    answer: 1,
   },
   {
     id: 7,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    question: "How is theater similar to the other performing arts?",
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "Why does the author mention 'chickadees' in paragraph 4?",
     options: [
-      "It is based on works of literature.",
-      "It exists as a finished product.",
-      "It is an event that occurs through time.",
-      "It is presented the same way every time.",
+      "To discuss an animal that regulates heat very well",
+      "To demonstrate why chickadees have to eat so much",
+      "To mention an exception to the rules of thermoregulation",
+      "To give a reason for heat production in small animals",
     ],
-    answer: 2,
+    answer: 3,
   },
   {
     id: 8,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
-    question:
-      "According to the passage, all of the following are true of theater EXCEPT",
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
+    question: "The word 'enhance' in para 6 is closest in meaning to",
+    highlight: "to enhance",
     options: [
-      "The impulse toward theater is universal.",
-      "The medium of theater is written language.",
-      "Theater is a distinct form of art.",
-      "The focus of theater is always human.",
+      "simplify",
+      "improve",
+      "replace",
+      "interrupt",
     ],
     answer: 1,
   },
   {
     id: 9,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. [A] ■ Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. [B] ■ Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. [C] ■ For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located. ■ [D]
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. ⬛[A] The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. ⬛[B] At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. ⬛[C] In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.⬛[D]
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
     question:
-      "Look at the part of passage 6 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
-    options: ["Choice A", "Choice B", "Choice C", "Choice D"],
-    answer: 3,
+      "Look at the part of paragraph 2 that is displayed. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'Consequently, the American version of impeachment was clearly quite different than the English version upon which it was based.'",
+    options: [
+      "Choice A",
+      "Choice B",
+      "Choice C",
+      "Choice D"
+    ],
+    answer: 0,
   },
   {
     id: 10,
     passage: `
-        [1] The means by which an art form presents its message is referred to as the medium. Thus, sound produced by instruments or human voices is the medium of music. Paint on canvas or paper is the medium of painting. For literature, the medium is written language. For theater, it is a story performed by actors on a stage.
+      [1] Mammals and birds generally maintain body temperature within a narrow range (36–38°C for most mammals and 39–42°C for most birds) that is usually considerably warmer than the environment. Because heat always flows from a warm object to cooler surroundings, birds and mammals must counteract the constant heat loss. This maintenance of warm body temperature depends on several key adaptations. The most basic mechanism is the high metabolic rate of endothermy itself. Endotherms can produce large amounts of metabolic heat that replace the flow of heat to the environment, and they can vary heat production to match changing rates of heat loss. Heat production is increased by such muscle activity as moving or shivering. In some mammals, certain hormones can cause mitochondria to increase their metabolic activity and produce heat instead of ATP. This nonshivering thermogenesis (NST) takes place throughout the body, but some mammals also have a tissue called brown fat in the neck and between the shoulders that is specialized for rapid heat production. Through shivering and NST, mammals and birds in cold environments can increase their metabolic heat production by as much as 5 to 10 times above the minimal levels that occur in warm conditions.
 
-        [2] Drama is sometimes seen as a branch of literature because plays, like literature, are often printed in book form. However, there is an important difference between the two forms. Unlike a novel, a play is written to be performed, and the script of a play is not a finished work; it is an outline for a performance. The physical production of the play—the scenery, lighting, and costumes—will affect the performance, and so will the actors. How the actors interpret their roles greatly influences the play's effect on the audience.
+      [2] Another major thermoregulatory adaptation that evolved in mammals and birds is insulation (hair, feathers, and fat layers), which reduces the flow of heat and lowers the energy cost of keeping warm. Most land mammals and birds react to cold by raising their fur or feathers, thereby trapping a thicker layer of air. Humans rely more on a layer of fat just beneath the skin as insulation; goose bumps are a vestige of hair-raising left over from our furry ancestors. Vasodilation and vasoconstriction also regulate heat exchange and may contribute to regional temperature differences within the animal. For example, heat loss from a human is reduced when arms and legs cool to several degrees below the temperature of the body core, where most vital organs are located.
 
-        [3] The basic encounter in theater is between the performers and the audience. This is a special type of encounter because the performers are playing other people, characters. Moreover, the characters are part of a human story that has been written by a dramatist. This combination of elements distinguishes theater from other art forms.
+      [3] Hair loses most of its insulating power when wet. Marine mammals such as whales and seals have a very thick layer of insulation fat called blubber, just under the skin. Marine mammals swim in water colder than their body core temperature, and many species spend at least part of the year in nearly freezing polar seas. The loss of heat to water occurs 50 to 100 times more rapidly than heat loss to air, and the skin temperature of a marine mammal is close to water temperature. Even so, the blubber insulation is so effective that marine mammals maintain body core temperatures of about 36–38°C with metabolic rates about the same as those of land mammals of similar size. The flippers or tail of a whale or seal lack insulating blubber, but countercurrent heat exchangers greatly reduce heat loss in these extremities, as they do in the legs of many birds.
 
-        [4] Theater has several other distinctive characteristics. First, the subject matter of theater is always human beings. Second, theater is universal—there is an impulse toward creating theater in all societies. Third, theater is transitory in nature—a play is an event that occurs through time. Finally, theater is set apart by its basic elements: audience, performers, director, dramatist, purpose, viewpoint, and setting.
+      [4] Through metabolic heat production, insulation, and vascular adjustments, birds and mammals are capable of astonishing feats of thermoregulation. For example, small birds called chickadees, which weigh only 20 grams, can remain active and hold body temperature nearly constant at 40°C in environmental temperatures as low as –40°C—as long as they have enough food to supply the large amount of energy necessary for heat production.
 
-        [5] Human beings and human concerns are always the subject matter of drama, even when the performers play animals, objects, or abstract ideas. In the medieval play Everyman, some of the roles are abstract ideas such as Beauty, Knowledge, and Strength. The central character is Everyman, a human character, and the subject is death arriving before we want it to come—a theme that is universal to humans. The focus of drama is on human beings, even though different human concerns have been emphasized in different plays.
+      [5] Many mammals and birds live in places where thermoregulation requires cooling off as well as warming. For example, when a marine mammal moves into warm seas, as many whales do when they reproduce, excess metabolic heat is removed by vasodilation of numerous blood vessels in the outer layer of the skin. In hot climates or when vigorous exercise adds large amounts of metabolic heat to the body, many terrestrial mammals and birds may allow body temperature to rise by several degrees, which enhances heat loss by increasing the temperature gradient between the body and a warm environment.
 
-        [6] In view of the human-centered quality of theater, it is not surprising that the impulse toward theater is universal. The urge to create drama has existed wherever human society has developed: in Europe, Asia, Africa, Australia, and the Americas. In every culture recorded in history or studied by anthropologists, we find rituals, ceremonies, and celebrations that include elements of theater. At various times, these ceremonies and stories developed into a separate realm of theater. In Greece, a fully developed theater emerged almost 2,500 years ago. In India, theater became well-established around 2,000 years ago. Wherever theater has become a separate art form, it has had certain essential qualities: a story—the play—is presented by one group—the performers—to another group—the audience.,
-
-        [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
-        `,
+      [6] Evaporative cooling often plays a key role in dissipating the body heat. If environmental temperature is above body temperature, animals gain heat from the environment as well as from metabolism, and evaporation is the only way to keep body temperature from rising rapidly. Panting is important in birds and many mammals. Some birds have a pouch richly supplied with blood vessels in the floor of the mouth; fluttering the pouch increases evaporation. Pigeons can use evaporative cooling to keep body temperature close to 40°C in air temperatures as high as 60°C, as long as they have sufficient water. Many terrestrial mammals have sweat glands controlled by the nervous system. Other mechanisms that promote evaporative cooling include spreading saliva on body surfaces, an adaptation of some kangaroos and rodents for combating severe heat stress. Some bats use both saliva and urine to enhance evaporative cooling.
+    `,
     instructions:
       "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
     introductorySentence:
-      "Several qualities distinguish theater from other forms of art.",
+      "Thermoregulation is the process by which animals control body temperatures within healthy limits.",
     question: "What is the main topic of the passage?",
     options: [
-      "[A] Theater is a form of literature because we can read plays in books.",
-      "[B] Theater requires a human story, performers, and an audience.",
-      "[C] An actor must change his voice to play certain characters.",
-      "[D] The tendency toward creating theater occurs in all human societies.",
-      "[E] Theater developed as a separate art very early in Greece and India.",
-      "[F] Each theater performance is an immediate yet transitory experience.",
+      "[A] Although hair can be a very efficient insulation when it is dry and it can be raised, hair becomes ineffective when it is submerged in cold water",
+      "[B] Some animals with few adaptations for thermoregulation migrate to moderate climates to avoid the extreme weather in the polar regions and the tropics.",
+      "[C] Mammals and birds use insulation to mitigate heat loss, including hair and feathers that can be raised to trap air as well as fat or blubber under the skin.",
+      "[D] Some birds have a special pouch in the mouth, which can be fluttered to increase evaporation and decrease their body temperatures by as much as 20°C.",
+      "[E] Endotherms generate heat by increasing muscle activity, by releasing hormones into their bloodstreams, or by producing heat in brown fat tissues.",
+      "[F] Panting, sweating, and spreading saliva or urine on their bodies are all options for the evaporative cooling of animals in hot environmental conditions.",
     ],
     answers: 10,
-    summaryAnswer: [1, 3, 5],
+    summaryAnswer: [4, 2, 5],
   },
-  // Second passage delta:key to toefl ---> test 1 reading passage 3
+  // barrons 13th edition ---> model test 2 progress test, part 1 reading 1
   {
     id: 11,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    highlight: "shoals",
-    question: "The word 'shoals' in paragraph 1 is closest in meaning to",
-    options: ["shallows", "currents", "mountains", "islands"],
-    answer: 0,
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "Why does the author mention 'the railroads' in paragraph 1?",
+    options: [
+      "Because miners were traveling to camps in the West",
+      "Because mineral deposits were discovered when the railroads were built",
+      "Because the western frontier was being settled by families",
+      "Because traders used the railroads to transport their goods",
+    ],
+    answer: 1,
   },
   {
     id: 12,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    question: "What physical process occurs in the region of the Grand Banks?",
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "In paragraph 1, the author identifies Sudbury as",
     options: [
-      "Underwater hot springs heat the water.",
-      "Warm and cold currents come together.",
-      "Nutrient-rich water flows in from rivers.",
-      "Tides transport plankton and small fish.",
+      "an important stop on the new railroad line",
+      "a large market for the metals produced in Ontario",
+      "a major industrial center for the production of nickel",
+      "a mining town in the Klondike region",
     ],
-    answer: 1,
+    answer: 2,
   },
   {
     id: 13,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    highlight:
-      "This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.",
-    question:
-      "Which sentence below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "The word 'enduring' in the passage is closest in meaning to",
+    highlight: "enduring",
     options: [
-      "Millions of cod come to the Grand Banks every year to feed on the abundant supplies of herring and other small fish.",
-      "The Grand Banks used to have the world's largest concentration of cod because of favorable natural conditions.",
-      "The Grand Banks is the only place on Earth where cod are known to come together in extremely large groups.",
-      "The environmental resources of the Grand Banks have made many people wealthy from cod fishing.",
+      "disruptive",
+      "restored",
+      "identifiable",
+      "lasting",
     ],
-    answer: 1,
+    answer: 3,
   },
   {
     id: 14,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    question: "The phrase the region in paragraph 2 refers to",
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "How did the poetry by Robert Service contribute to the development of Canada?",
     options: [
-      "New England",
-      "northwestern Europe",
-      "the Grand Banks",
-      "Newfoundland",
+      "It made the Klondike gold rush famous.",
+      "It encouraged families to settle in the Klondike.",
+      "It captured the beauty of the western Klondike.",
+      "It prevented the Klondike’s annexation to Alaska.",
     ],
-    answer: 3,
+    answer: 0,
   },
   {
     id: 15,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    highlight: "replenish",
-    question: "The word 'replenish' in paragraph 4 is closest in meaning to",
-    options: ["defend", "repair", "restock", "improve"],
-    answer: 2,
-  },
-  {
-    id: 16,
-    passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
-
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
-
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
-
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    question: "What event first signaled the overfishing of the Atlantic cod?",
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "According to paragraph 3, the forest industry supported the development of Canada in all of the following ways EXCEPT",
     options: [
-      "The failure of cod to support thousands of fishers in the 1930s",
-      "The merging of seafood companies into one huge conglomerate",
-      "An increase in the number of fishers and fish-processing plants",
-      "The government moratorium on cod fishing during the 1990s",
-    ],
-    answer: 0,
-  },
-  {
-    id: 17,
-    passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
-
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
-
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
-
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    highlight: "commanding",
-    question: "The word 'commanding' in paragraph 4 is closest in meaning to",
-    options: ["suggesting", "missing", "defying", "receiving"],
-    answer: 3,
-  },
-  {
-    id: 18,
-    passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
-
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
-
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
-
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
-    question:
-      "It can be inferred from paragraph 6 that the author most likely believes which of the following about the future of the Atlantic cod fishery?",
-    options: [
-      "The fishery will improve if the government lifts the fishing ban.",
-      "It may be a long time before cod stocks recover from overfishing.",
-      "The center of the Atlantic cod fishery will shift to Norway.",
-      "The cod will return to the Grand Banks if seal hunting is allowed.",
+      "by supplying wood for the construction of homes and buildings",
+      "by clearing the land for expanded agricultural uses",
+      "by producing the power for the hydroelectric plants",
+      "by exporting wood and newsprint to foreign markets",
     ],
     answer: 1,
   },
   {
+    id: 16,
+    passage: `
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
+
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
+
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
+
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "The word 'Furthermore' in the passage is closest in meaning to",
+    highlight: "Furthermore",
+    options: [
+      "Although",
+      "Because",
+      "Therefore",
+      "Moreover",
+    ],
+    answer: 3,
+  },
+  {
+    id: 17,
+    passage: `
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
+
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
+
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
+
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    highlight: "By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises.",
+    question: "Which of the sentences below best expresses the information in the highlighted statement in the passage? The other choices change the meaning or leave out important information.",
+    options: [
+      "New businesses and industries were created by the federal government to keep the prices of manufactured goods low.",
+      "The lower price of manufacturing attracted many foreign businesses and new industries to the area.",
+      "Federal taxes on cheaper imported goods were responsible for protecting domestic industries and supporting new businesses.",
+      "The federal tax laws made it difficult for manufacturers to sell their goods to foreign markets.",
+    ],
+    answer: 2,
+  },
+  {
+    id: 18,
+    passage: `
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
+
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
+
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
+
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
+    question: "According to paragraph 4, British and American businesses opened affiliates in Canada because",
+    options: [
+      "the Canadian government offered incentives",
+      "the raw materials were available in Canada",
+      "the consumers in Canada were eager to buy their goods",
+      "the infrastructure was attractive to investors",
+    ],
+    answer: 0,
+  },
+  {
     id: 19,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. [A] ■ Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. [B] ■ As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. [C] ■ Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s. ■ [D]
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. ⬛[A] In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. ⬛[B] Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. ⬛[C] The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. ⬛[D] Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
     question:
-      "Look at the part of passage 5 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
-    options: ["Choice A", "Choice B", "Choice C", "Choice D"],
-    answer: 0,
+      "Look at the part of passage that is displayed. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'Railway construction through the Kootenay region of southeastern British Columbia also led to significant discoveries of gold, silver, copper, lead, and zinc.'",
+    options: [
+      "Choice A",
+      "Choice B",
+      "Choice C",
+      "Choice D"
+    ],
+    answer: 2,
   },
   {
     id: 20,
     passage: `
-        [1] Off the northeastern shore of North America, from the island of Newfoundland in Canada south to New England in the United States, there is a series of shallow areas called banks. Several large banks off Newfoundland are together called the Grand Banks, huge shoals on the edge of the North American continental shelf, where the warm waters of the Gulf Stream meet the cold waters of the Labrador Current. As the currents brush each other, they stir up minerals from the ocean floor, providing nutrients for plankton and tiny shrimp-like creatures called krill, which feed on the plankton. Herring and other small fish rise to the surface to eat the krill. Groundfish, such as cod and Atlantic cod, live on the bottom layer, congregating in the shallow waters where they prey on krill and small fish. This rich environment has produced cod by the millions and once had a greater density of cod than anywhere else on Earth.
+      [1] While the much-anticipated expansion of the western frontier was unfolding in accordance with the design of the National Policy, a new northern frontier was opening up to enhance the prospects of Canadian industrial development. Long the preserve of the fur trade, the Canadian Shield and the western Cordilleras became a treasury of minerals, timber and hydroelectric power in the late 19th and early 20th centuries. As early as 1883, CPR [Canadian Pacific Railway] construction crews blasting through the rugged terrain of northern Ontario discovered copper and nickel deposits in the vicinity of Sudbury. As refining processes, uses, and markets for the metal developed, Sudbury became the world’s largest nickel producer. The building of the Temiskaming and Northern Ontario Railway led to the discovery of rich silver deposits around Cobalt north of Lake Nipissing in 1903 and touched off a mining boom that spread northward to Kirkland Lake and the Porcupine district. Although the economic importance of these mining operations was enduring, they did not capture the public imagination to the same extent as the Klondike gold rush of the late 1890s.
 
-        [2] Beginning in the eleventh century, boats from the ports of northwestern Europe arrived to fish the Grand Banks. For the next eight centuries, the entire Newfoundland economy was based on Europeans arriving, catching fish for a few months in the summer, and then taking fish back to European markets. Cod laid out to dry on wooden "flakes" was a common sight in the fishing villages dotting the coast. Settlers in the region used to think the only sea creature worth talking about was cod, and in the local speech the word "fish" became synonymous with cod. Newfoundland’s national dish was a pudding whose main ingredient was cod.
+      [2] Fortune-seekers from all parts of the world flocked to the Klondike and Yukon River valleys to pan for gold starting in 1896. At the height of the gold rush in 1898, the previously unsettled subarctic frontier had a population of about 30,000, more than half of which was concentrated in the newly established town of Dawson. In the same year, the federal government created the Yukon Territory, administered by an appointed commissioner, in an effort to ward off the prospect of annexation to Alaska. Even if the economic significance of the Klondike strike was somewhat exaggerated and short-lived, the tales of sudden riches, heroic and tragic exploits, and the rowdiness and lawlessness of the mining frontier were immortalized through popular fiction and folklore, notably the poetic verses of Robert W. Service.\n\n
 
-        [3] By the nineteenth century, the Newfoundland fishery was largely controlled by merchants based in the capital at St. John’s. They marketed the catch supplied by the fishers working out of more than 600 villages around the long coastline. In return, the merchants provided fishing equipment, clothing, and all the food that could not be grown in the island’s thin, rocky soil. This system kept the fishers in a continuous state of debt and dependence on the merchants.
+      [3] Perhaps less romantic than the mining booms, the exploitation of forest and water resources was just as vital to national development. The Douglas fir, spruce, and cedar stands of British Columbia along with the white pine forests of Ontario satisfied construction demands on the treeless prairies as well as in the growing cities and towns of central Canada and the United States. British Columbia's forests also supplied lumber to Asia. In addition, the softwood forest wealth of the Cordilleras and the Shield was a valuable source of pulpwood for the development of the pulp and paper industry, which made Canada one of the world’s leading exporters of newsprint. Furthermore, the fast-flowing rivers of the Shield and Cordilleras could readily be harnessed as sources of hydroelectric power, replacing coal in the booming factories of central Canada as well as in the evolving mining and pulp and paper industries. The age of electricity under public ownership and control was ushered in by the creation of the Ontario Hydro-Electric Power Commission (now Ontario Hydro) in 1906 to distribute and eventually to produce this vital source of energy.
 
-        [4] Until the twentieth century, fishers believed in the cod’s ability to replenish itself and thought that overfishing was impossible. However, Newfoundland’s cod fishery began to show signs of trouble during the 1930s, when cod failed to support the fishers and thousands were unemployed. The slump lasted for the next few decades. Then, when an international agreement in 1977 established the 200-mile offshore fishing limit, the Canadian government decided to build up the modern Grand Banks fleet and make fishing a viable economic base for Newfoundland again. All of Newfoundland’s seafood companies were merged into one conglomerate. By the 1980s, the conglomerate was prospering, and cod were commanding excellent prices in the market. Consequently, there was a significant increase in the number of fishers and fish-processing plant workers.
-
-        [5] However, while the offshore fishery was prospering, the inshore fishermen found their catches dropping off. In 1992 the Canadian government responded by closing the Grand Banks to groundfishing. Newfoundland’s cod fishing and processing industries were shut down in a bid to let the vanishing stocks recover. The moratorium was extended in 1994, when all of the Atlantic cod fisheries in Canada were closed, except for one in Nova Scotia, and strict quotas were placed on other species of groundfish. Canada’s cod fishing industry collapsed, and around 40,000 fishers and other industry workers were put out of work.
-
-        [6] Atlantic cod stocks had once been so plentiful that early explorers joked about walking on the backs of the teeming fish. Today, cod stocks are at historically low levels and show no signs of imminent recovery, even after drastic conservation measures and severely limited fishing. Fishermen often blame the diminishing stocks on seals, which prey on cod and other species, but scientists believe that decades of overfishing are to blame. Studies on fish populations have shown that cod disappeared from Newfoundland at the same time that stocks started rebuilding in Norway, raising the possibility that the cod had migrated. Still, no one can predict whether and when the cod will return to the Grand Banks.
-        `,
+      [4] Western settlement and the opening of the northern resource frontier stimulated industrial expansion, particularly in central Canada. As the National Policy had intended, a growing agricultural population in the West increased the demand for eastern manufactured goods, thereby giving rise to agricultural implements works, iron and steel foundries, machine shops, railway yards, textile mills, boot and shoe factories, and numerous smaller manufacturing enterprises that supplied consumer goods. By keeping out lower-priced foreign manufactured goods, the high tariff policies of the federal government received much credit for protecting existing industries and encouraging the creation of new enterprises. To climb the tariff wall, large American industrial firms opened branches in Canada, and the governments of Ontario and Quebec aggressively urged them on by offering bonuses, subsidies, and guarantees to locate new plants within their borders. Canadian industrial enterprises became increasingly attractive to foreign investors, especially from the United States and Great Britain. Much of the over $600 million of American capital that flowed into Canada from 1900 to 1913 was earmarked for mining and the pulp and paper industry, while British investors contributed near $1.8 billion, mostly in railway building, business development, and the construction of urban infrastructure. As a result, the gross value of Canadian manufactured products quadrupled from 1891 to 1916.
+    `,
     instructions:
       "An introductory sentence for a brief summary of the passage is provided below. Complete the summary by selecting the THREE answer choices that express the most important ideas in the passage. Some sentences do not belong in the summary because they express ideas that are not presented in the passage or are minor ideas in the passage. This question is worth 2 points.",
     introductorySentence:
-      "The Atlantic cod fishery has shaped Newfoundland's economy for centuries.",
+      "The northern frontier provided many natural resources that contributed to the industrial expansion of Canada.",
     question:
       "Which era marks the beginning of the construction of the Great Wall?",
     options: [
-      "[A] Atlantic cod stocks were once plentiful in the rich environment around the Grand Banks.",
-      "[B] The Atlantic cod is a groundfish that preys on herring and small fish that eat krill.",
-      "[C] Cod fishing was so successful that few people considered the possibility of overfishing until fish stocks fell.",
-      "[D] The Canadian government tried to diversify Newfoundland's economy in the 1980s.",
-      "[E] Despite severe limits on fishing, cod stocks remain at low levels and show few signs of recovery.",
-      "[F] Newfoundland exports millions of dollars worth of crab and other shellfish every year.",
+      "[A] The Yukon Territory was created in 1898 during the gold rush in the Klondike and Yukon River valleys.",
+      "[B] The frontier was documented in the popular press, which published tales of heroes and gold strikes.",
+      "[C] Significant discoveries of mineral deposits encouraged prospectors and settlers to move into the territories.",
+      "[D] Wheat and other agricultural crops were planted after the forests were cleared, creating the central plains.",
+      "[E] Powered by hydroelectricity, lumber and paper mills exploited the forests for both domestic and foreign markets.",
+      "[F] Incentives encouraged American and British investors to help expand manufacturing plants in Canada.",
     ],
     answer: 10,
-    summaryAnswer: [0, 2, 4],
+    summaryAnswer: [2, 4, 5],
   },
 ];
 
 export const listeningQuestions = [
-  // https://www.youtube.com/watch?v=jSUh0Civuv4
-  // https://www.youtube.com/watch?v=Q5cGnhj9-OA
+  // https://www.youtube.com/watch?v=XgOO-mcSvYI
   {
     id: 1,
-    question: "What aspect of water erosion does the lecture focus on?",
+    question: "What is the main topic of the lecture?",
     options: [
-      "A comparison between the effects of water erosion and other types of erosion",
-      "The ways that water erosion shapes the edges of rivers and streams",
-      "The effects of water erosion on specific species of plants",
-      "The assorted effects of particular stages of erosion",
+      "The exploration of Saturn's moons",
+      "Theories on the formation of Saturn's rings",
+      "The composition, structure, and origin of Saturn's rings",
+      "The influence of Saturn's rings on art and human culture throughout history",
     ],
-    answer: 3,
+    answer: 2,
   },
   {
     id: 2,
-    question: "According to the lecture, which is one of the physical effects of bank erosion?",
+    question: "According to the professor, what are Saturn's rings primarily composed of?",
     options: [
-      "Plants can fall into the rivers and streams.",
-      "Soil that touches the running water doesn't gets washed away.",
-      "Large underwater caverns can form beneath the riverbed.",
-      "A stream can become dry and empty.",
-    ],
-    answer: 0,
-  },
-  {
-    id: 3,
-    question: "According to the professor, what is the effect of sheet erosion on plant life?",
-    options: [
-      "Plants will be pulled to the bottom of the slope.",
-      "Plants in affected areas may not survive.",
-      "Plants in sandy areas will be forced to compete for nutrients.",
-      "Plants at the base of a hill will be suffocated by deposited soil.",
+      "Rocky materials and gases",
+      "Water ice and small amounts of rocky materials",
+      "Metal particles and water vapor",
+      "Silicate dust and frozen methane",
     ],
     answer: 1,
   },
   {
-    id: 4,
-    question: "What can be inferred about how rills are formed?",
+    id: 3,
+    question: "What is the professor's opinion regarding the disparity between the width and thickness of Saturn's rings?",
     options: [
-      "The more bumpy a surface is, the more rills it can potentially develop.",
-      "Permanent streams and rivers usually start out as rills.",
-      "Most rills change their paths every time it rains.",
-      "Rills are less likely to happen if soil contains a lot of rocks and sand.",
+      "It is a phenomenon of little scientific importance",
+      "It indicates that the rings will eventually disappear",
+      "It is an astronomical wonder",
+      "It is a result of measurement errors",
     ],
-    answer: 0,
+    answer: 2,
+  },
+  {
+    id: 4,
+    question: "Which theory regarding the formation of Saturn's rings does the professor mention as the prevailing view among scientists?",
+    options: [
+      "The rings were formed by the collision of multiple moons",
+      "The rings were once part of Saturn's surface",
+      "The rings are the remnants of a celestial body that was torn apart by Saturn's gravity",
+      "The rings are made of debris from ancient comets that passed near Saturn",
+    ],
+    answer: 2,
   },
   {
     id: 5,
-    question: "When does gully erosion happen?",
+    question: "What can be inferred from the professor's description of the intricate structures within the rings as a 'cosmic ballet'?",
     options: [
-      "During repeated, heavy rainfall",
-      "When the surface of the land is exceptionally steep",
-      "When a rill follows the same path repeatedly",
-      "After the plant life is pulled away from the land in large strips",
+      "The rings are extremely chaotic and unpredictable",
+      "The rings consist of a harmonious interplay of gravitational forces",
+      "The rings are composed of delicate materials that are easily destroyed",
+      "The rings resemble the artistic patterns found in ballet performances on Earth",
     ],
-    answer: 3,
+    answer: 1,
   },
   {
     id: 6,
-    question: "What does the professor imply when she says this?",
-    audio: "https://www.dropbox.com/scl/fi/grcwpdgp3lcvt935d1tu9/T6C1_packet.mp4?rlkey=ibmyd2tx16zc4zauz2ke045u5&st=wze9jm7l&raw=1",
-    // audio: "https://www.dropbox.com/scl/fi/grcwpdgp3lcvt935d1tu9/T6C1_packet.mp4?rlkey=ibmyd2tx16zc4zauz2ke045u5&st=wze9jm7l&raw=1",
+    question: "Based on the lecture, how have Saturn's rings influenced various forms of art and human culture throughout history?",
     options: [
-      "Sometimes the effects of sheet erosion are not immediately noticeable.",
-      "Sheet erosion affects soil more slowly if the soil is mixed with sand.",
-      "All sandy soil is a result of sheet erosion.",
-      "The sheet erosion process happens in just a few days on a hill.",
+      "Saturn's rings have had little to no impact on human culture and artistic expression",
+      "Saturn's rings have inspired artists, poets, and writers with their ethereal beauty and mysterious origins",
+      "Saturn's rings have primarily influenced scientific literature and research",
+      "Saturn's rings have sparked numerous theories and science fiction stories",
     ],
-    answer: 0,
+    answer: 1,
   },
 
   {
     id: 7,
-    question: "What is the lecture mainly about?",
+    question: "What is the main idea of the lecture?",
     options: [
-      "A method in Alaska for ensuring fair election results",
-      "An important feature of the U.S. presidential election",
-      "The essential criteria used for choosing a candidate",
-      "A comparison of different voting systems",
-    ],
-    answer: 1,
-  },
-  {
-    id: 8,
-    question: "According to the professor, who becomes an elector?",
-    options: [
-      "A U.S. senator or representative",
-      "A trained member of the public",
-      "A member of a political party",
-      "A candidate for political office",
-    ],
-    answer: 2,
-  },
-  {
-    id: 9,
-    question: "Why does the professor say this?",
-    audio: "https://www.dropbox.com/scl/fi/epc6jd52rccexcfsskj1x/T6C2_packet.mp4?rlkey=73pf667ue931ht3hzbx7i502w&st=1kj9k7ra&raw=1",
-    options: [
-      "To clear up a possible confusion",
-      "To help explain the exact number of electors",
-      "To correct something she said earlier",
-      "To remind students of the electors' duties",
-    ],
-    answer: 0,
-  },
-  {
-    id: 10,
-    question: "Why does the professor use the example of Alaska in the lecture?",
-    options: [
-      "To explain the number of electors each state has",
-      "To show why states with small populations are powerful",
-      "To remind students of the number of electors in certain states",
-      "To develop the students' understanding of electoral politics",
-    ],
-    answer: 0,
-  },
-  {
-    id: 11,
-    question: "Which candidate wins the presidential election?",
-    options: [
-      "The one who wins the most states",
-      "The one who wins the biggest states",
-      "The one who receives the most votes from the public",
-      "The one who receives the most votes from electors",
+      "Exploring the history of ancient civilizations",
+      "Discussing the social and political impact of graffiti",
+      "Analyzing the techniques used in murals and stencil art",
+      "Evaluating the influence of graffiti on contemporary culture",
     ],
     answer: 3,
   },
   {
-    id: 12,
-    question: "What does the professor mean when she says this?",
-    audio: "https://www.dropbox.com/scl/fi/9msk92zopjmez2r2fls1k/T6C2_packet2.mp4?rlkey=jrt12w2ely0wbcvk2fokwbb3l&st=lxkm9akl&raw=1",
+    id: 8,
+    question: "When the professor says 🎧 what does this statement imply?",
+    audio: "https://www.dropbox.com/scl/fi/uz35n0hi89kqzlri35oct/T1C2_packet.mp4?rlkey=7oazk1tf3cc08tq7mg72jvou1&st=rz02g0zq&raw=1",
     options: [
-      "Many voters reject this system of choosing the president.",
-      "Critics of the voting system have pointed out weaknesses.",
-      "Students have made several objections to the voting system.",
-      "Flaws in this voting system are not a disadvantage.",
+      "Graffiti is a form of struggle",
+      "Graffiti is only used for personal expression",
+      "Graffiti represents a struggle for recognition and a way to communicate beliefs",
+      "Walls should be used exclusively for art",
+    ],
+    answer: 3,
+  },
+  {
+    id: 9,
+    question: "What did the professor mean when they said 🎧?",
+    audio: "https://www.dropbox.com/scl/fi/cwloske0spdkpcbjzbux9/T1C2_packet2.mp4?rlkey=d59s757ki785xpguxk2a4fda1&st=4pxbb00d&raw=1",
+    options: [
+      "Graffiti is typically created in hidden locations",
+      "Graffiti is a form of light art",
+      "Graffiti can be recognized and appreciated as legitimate forms of art",
+      "The world should only be illuminated by traditional art forms",
+    ],
+    answer: 3,
+  },
+  {
+    id: 10,
+    question: "Why does the professor mention Banksy?",
+    options: [
+      "To say that the Berlin Wall is a symbol of freedom and resistance",
+      "To show that graffiti can be perceived in a different way",
+      "To illustrate how the ancient civilizations used graffiti to communicate with each other",
+      "To prove that spray paint, markers, and stickers are common materials used in graffiti art",
     ],
     answer: 1,
+  },
+  {
+    id: 11,
+    question: "Which of the following are considered part of graffiti art?",
+    options: [
+      "Tagging, Wildstyle, Throw-ups",
+      "Canvas painting, Light installations",
+      "Tagging, Canvas painting, Light installations",
+      "Wildstyle, Throw-ups, Light installations",
+    ],
+    answer: 0,
+  },
+  {
+    id: 12,
+    question: "What are some examples of other forms of street art mentioned in the lecture?",
+    options: [
+      "Sculpture and printmaking",
+      "Photography and digital art",
+      "Murals, stencil art, and 3D installations",
+      "Collage and textile art",
+    ],
+    answer: 2,
   },
 
   {
     id: 13,
-    question: "What is the lecture mainly about?",
+    question: "What is the main idea of the lecture?",
     options: [
-      "How London's life and work are contrasted",
-      "How London's life influenced his work",
-      "London's political writings",
-      "London's early adventures",
-    ],
-    answer: 1,
-  },
-  {
-    id: 14,
-    question: "According to the professor, what effect did the absence of a father have on London?",
-    options: [
-      "It affected his relationship with his mother.",
-      "It caused him to commit crimes.",
-      "It influenced aspects of his writing.",
-      "It prepared him for a life of adventure.",
+      "The historical uses of Tesla coils in medicine",
+      "The process of creating visually captivating electrical displays",
+      "The broader impact of Tesla coils on understanding electricity and scientific discovery",
+      "The development of wireless power transmission",
     ],
     answer: 2,
   },
   {
-    id: 15,
-    question: "What does the professor mean when he says this?",
-    audio: "https://www.dropbox.com/scl/fi/81paklllv7uds6lbfqb4u/T6C3_packet.mp4?rlkey=3m0uronrcmk75nfj7esqbu9ml&st=xsr0nfvu&raw=1",
+    id: 14,
+    question: "Which components of a Tesla coil are responsible for storing electrical energy and regulating its discharge?",
     options: [
-      "He thinks many of the students in the class are poor.",
-      "He is joking that some of the students may not be happy at college.",
-      "He believes that some students are not enjoying the class.",
-      "He is implying that some students will imitate London's behavior.",
+      "Primary coil and secondary coil",
+      "Capacitor and spark gap",
+      "Copper wire and thinner wire",
+      "Capacitor and copper wire",
+    ],
+    answer: 1,
+  },
+  {
+    id: 15,
+    question: "What does the professor emphasize by saying this 🎧?",
+    audio: "https://www.dropbox.com/scl/fi/ejfgi7bjzhn51to4ibtoy/T1C3_packet2.mp4?rlkey=nl1h6xhwsmi43sb8mxstbo9lo&st=0wmojudq&raw=1",
+    options: [
+      "The importance of visualizing electrical energy",
+      "The significance of uncovering hidden knowledge in scientific discovery",
+      "The ability to predict the future of technology",
+      "The process of understanding the history of electricity",
     ],
     answer: 1,
   },
   {
     id: 16,
-    question: "Why does the professor think that London read so many books?",
+    question: "Which of the following is NOT true about the current applications of Tesla coils, according to the lecture?",
     options: [
-      "London wanted to learn from other writers.",
-      "London was enrolled at a university.",
-      "London needed to use other writers' ideas.",
-      "London had few ways of gaining real experience.",
+      "Primarily used for entertainment and education",
+      "Integral part of modern medical devices",
+      "Used for specific scientific purposes",
+      "Produce visually captivating electrical displays",
     ],
-    answer: 0,
+    answer: 1,
   },
   {
     id: 17,
-    question: "What does the professor imply about London's success?",
+    question: "Why does the professor say 🎧?",
+    audio: "https://www.dropbox.com/scl/fi/7bm8pzfzq30b5x2590fep/T1C3_packet.mp4?rlkey=a1l50wk2ah3ozajavgyndqmwq&st=kpfa8nhn&raw=1",
     options: [
-      "He was immediately successful as a writer.",
-      "He was successful only in later life.",
-      "He worked hard to achieve success.",
-      "He never really achieved much success.",
+      "To emphasize the need for continued experimentation in modern medicine",
+      "To highlight the connection between historical Tesla coil applications and the broader theme of scientific discovery",
+      "To underscore the significance of Tesla coils in the development of medical technology",
+      "To argue for the reintroduction of Tesla coils in contemporary medical treatments",
     ],
-    answer: 2,
+    answer: 1,
   },
   {
     id: 18,
-    question: "What does the professor think of London's work?",
+    question: "Based on the lecture, which of the following are part of the Tesla coil?",
     options: [
-      "Most of London's work is excellent.",
-      "Most of London's work is careless.",
-      "Much of London's work is not very good.",
-      "Much of London's work is very modern.",
+      "Primary coil, Secondary coil, Capacitor",
+      "Primary coil, Induction coil, Capacitor",
+      "Secondary coil, Induction coil, Capacitor",
+      "Primary coil, Secondary coil, Induction coil",
     ],
-    answer: 2,
+    answer: 0,
   },
 
   {
     id: 19,
-    question: "Why does the student visit her professor?",
+    question: "What was the general topic of the dialogue between the student and the administrator?",
     options: [
-      "To receive the second page of the exam study guide",
-      "To make suggestions about which readings should be covered on the exam",
-      "To examine important theories about developmental psychology in children",
-      "To discuss the best ways to prepare for her upcoming exam",
+      "Issues with email communication",
+      "The student not receiving their transcript",
+      "The student's outstanding balance",
+      "The timeline for processing transcripts",
     ],
-    answer: 3,
+    answer: 1,
   },
   {
     id: 20,
-    question: "Why does the student think reviewing for the test is especially hard in her psychology class?",
+    question: "What was the administrator subtly implying about the student when this was said 🎧?",
+    audio: "https://www.dropbox.com/scl/fi/ngorhnyhzb8ay0bskvnb5/T1C4_packet.mp4?rlkey=pn9b97u6x85ikljbpadljf0q0&st=s1k0umsx&raw=1",
     options: [
-      "The course has more readings than other classes she has taken in the past.",
-      "The test covers both child psychology and adult psychology.",
-      "Developmental psychology is not her main academic interest.",
-      "The study guide lists the most difficult texts that were used in class.",
+      "The student was not responsible enough.",
+      "The student purposely ignored the fees.",
+      "The student should have checked their spam folder more often.",
+      "The student should be more proactive in the future.",
     ],
     answer: 0,
   },
   {
     id: 21,
-    question: "What is the professor’s attitude toward study groups?",
+    question: "What were the reasons given by the administrator for the student not receiving their transcript?",
     options: [
-      "Professors should make an effort to organize their students into study groups.",
-      "They are a very important resource for exam preparation.",
-      "Students should create groups at the start of the semester, before exams begin.",
-      "Students in groups can divide the work of reviewing so that it is faster.",
+      "The student had an unpaid library fine and outstanding lab fees.",
+      "The student failed to submit their request on time.",
+      "The student's request was lost in the system.",
+      "The student was not enrolled in enough credit hours.",
     ],
-    answer: 1,
+    answer: 0,
   },
   {
     id: 22,
-    question: "What does the professor imply the student should do if she has any more questions about the exam?",
+    question: "What was the student's reason for not paying the outstanding fees?",
     options: [
-      "Write down a complete list of her questions and arrange them by subject",
-      "Make sure to attend all the group meetings that the professor organizes",
-      "Talk to her classmates to see if they can answer her questions",
-      "Review her study guide carefully to see if she’s missed anything",
+      "The student purposely ignored the fees.",
+      "The student didn't have enough money.",
+      "The student didn't receive the emails about the fees.",
+      "The student believed the fees were already paid.",
     ],
     answer: 2,
   },
   {
     id: 23,
-    question: "Why does the professor say this?",
-    audio: "https://www.dropbox.com/scl/fi/k6gm1rd3xvibjlhjtbag8/T6C4_packet.mp4?rlkey=5q2fxmgu104trtj1bzduss93u&st=of6386j7&raw=1",
+    question: "What did the administrator suggest the student do after paying the outstanding fees?",
     options: [
-      "He wants the student to understand that Alzheimer’s disease never affects children.",
-      "He is offering to lend the student a video that she can watch before the exam.",
-      "He is suggesting that the video is more important than the readings.",
-      "He is telling the student that the exam will include some information from a video.",
+      "Request an expedited transcript.",
+      "Explain the situation to the potential employer.",
+      "File a complaint about the situation.",
+      "Withdraw their job application.",
     ],
-    answer: 3,
+    answer: 1,
   },
 
   {
     id: 24,
-    question: "Why did the student go to the campus police?",
+    question: "What is the main idea of the dialogue?",
     options: [
-      "To report a stolen vehicle",
-      "To ask about his right of appeal",
-      "To get advice on writing a police report",
-      "To complain about the lack of handicapped parking places",
+      "The student is asking for a recommendation letter",
+      "The student is asking the professor for help with a specific project",
+      "The professor is assigning a new project to the student",
+      "The student is seeking help from the professor in finding a good internship",
     ],
-    answer: 0,
-  },
-  {
-    id: 25,
-    question: "What can be inferred about the student?",
-    options: [
-      "He didn’t know he was parking illegally.",
-      "He lives in a student dormitory.",
-      "He uses a wheelchair.",
-      "He drives to campus.",
-    ],
+
     answer: 3,
   },
   {
-    id: 26,
-    question: "What does the officer mean when she says this?",
-    audio: "https://www.dropbox.com/scl/fi/a8vmur6brmhvg1j9pjc9s/T6C5_packet.mp4?rlkey=lllnt8g0g19eylmptc7at196p&st=f4nimeyk&raw=1",
+    id: 25,
+    question: "What is the professor implying when she suggests the student work on a few projects?",
     options: [
-      "She is apologizing for the towing.",
-      "She is empathizing with the student’s situation.",
-      "She regrets that the student broke the law.",
-      "She is worried about the student’s appeal.",
+      "The student's resume is not strong enough",
+      "The professor wants the student to change their field of interest",
+      "The professor doubts the student's abilities",
+      "The student should start working on a new project immediately",
     ],
-    answer: 1,
+
+    answer: 0,
+  },
+  {
+    id: 26,
+    question: "How does the professor feel about helping the student find an internship?",
+    options: [
+      "Indifferent",
+      "Obliged",
+      "Enthusiastic",
+      "Frustrated",
+    ],
+
+    answer: 2,
   },
   {
     id: 27,
-    question: "Why does the officer say this?",
-    audio: "https://www.dropbox.com/scl/fi/jf1usghh7ja2m9qxd9vni/T6C5_packet2.mp4?rlkey=6v7nsifl1q1v1427ii403qxl8&st=nqe1z6be&raw=1",
+    question: "What does the professor recommend the student do to improve the chances of getting a good internship?",
     options: [
-      "To make sure the man knows what he can do",
-      "To give the man an excuse for breaking the rules",
-      "To introduce the circumstances in which people appeal",
-      "To offer the man help in writing an appeal",
+      "Complete more coursework",
+      "Work on a few projects to showcase abilities",
+      "Change their field of interest",
+      "Focus on networking instead of projects",
     ],
-    answer: 0,
+
+    answer: 1,
   },
   {
     id: 28,
-    question: "What will the student probably do?",
+    question: "In this dialogue, what does the professor suggest the student should be proactive about?",
     options: [
-      "Write a letter of appeal",
-      "Pay the fine immediately",
-      "Park in the faculty parking lot",
-      "Request a handicapped sticker",
+      "Preparing resume",
+      "Finding more projects",
+      "Reaching out and networking",
+      "Requesting more assistance from the professor",
     ],
-    answer: 0,
+
+    answer: 2,
   },
 
 ];
 
 export const writingQuestions = {
-  // https://www.youtube.com/watch?v=C-qoLHZmrmQ
-  task1_audio: "https://www.dropbox.com/scl/fi/m6txn7pjnxyk82nahud5h/T6W1.mp4?rlkey=3cq95cocgh0pq9cl6gkjhk9kj&st=go8ry211&raw=1",
+  // https://www.youtube.com/watch?v=_UZfqnXIUu4
+  task1_audio: "https://www.dropbox.com/scl/fi/rxq8j6rzqbhjx3p4i5pg6/T1W1.mp4?rlkey=0oa1u8isnnxmg03qxfnzf6i42&st=fvrksnb3&raw=1",
   task1_photo: "/assets/T1C3_Listening.avif",
   task1: {
     passage: `
-    More than 90% of people get married at least once in their life, and divorce has become a common experience for many. It’s a painful process, but statistics show that 40% to 50% of marriages in America end in divorce. Only Cuba and Belarus claim slightly higher divorce rates than the US. Researchers generally agree that there are three main causes of the high divorce rate.
-    While most feel that the growing awareness of gender inequality in America is having a positive effect on society, it has also led to an increase in divorce. Women are now more active in both professional and social settings. They have more job opportunities and no longer rely on a husband for financial and emotional support. This is in contrast to other countries, where women still worry about the social disapproval associated with divorce.
-    There are some sociologists who believe that economic concerns might be the leading cause of divorce. It’s certainly true that divorce is more common in low-income households. The inability to satisfy the needs of a family hurts relationships and often leads to divorce. Financially stable families are more likely to preserve their relationship because they can afford a better quality of life for every family member.        
-    Lastly, the 21st century is an age of instant gratification. In a society where people are used to quick fixes, many don't have the emotional skills needed to work through problems in a relationship. Some couples would prefer to just end their marriage and look for another partner than try to address issues affecting their relationship. Nowadays, even disputes over minor tasks, like forgetting to do household chores, could lead to divorce.`,
-
+      A recent study reveals that people, especially young people, are reading far less literature—novels, plays, and poems—than they used to. This is troubling because the trend has unfortunate effects for the reading public, for culture in general, and for the future of literature itself.      The shortened workweek would increase company profits because employees would feel more rested and alert, and as a result, they would make fewer costly errors in their work. Hiring more staff to ensure that the same amount of work would be accomplished would not result in additional payroll costs because four-day employees would only be paid 80 percent of the normal rate. In the end, companies would have fewer overworked and error-prone employees for the same money, which would increase company profits.
+      While there has been a decline in book reading generally, the decline has been especially sharp for literature. This is unfortunate because nothing else provides the intellectual stimulation that literature does. Literature encourages us to exercise our imaginations, empathize with others, and expand our understanding of language. So by reading less literature, the reading public is missing out on important benefits.
+      Unfortunately, missing out on the benefits of literature is not the only problem. What are people reading instead? Consider the prevalence of self-help books on lists of best sellers. These are usually superficial, poorly written, and intellectually undemanding. Additionally, instead of sitting down with a challenging novel, many persons are now more likely to turn on the television, watch a music video, or read a Web page. Clearly, diverting time previously spent in reading literature to trivial forms of entertainment has lowered the level of culture in general.
+      The trend of reading less literature is all the more regrettable because it is taking place during a period when good literature is being written. There are many talented writers today, but they lack an audience. This fact is bound to lead publishers to invest less in literature and so support fewer serious writers. Thus, the writing as well as the reading of literature is likely to decline because of the poor standards of today’s readers.
+    `
   },
   task2: {
     conversation: `
-    <p>Your professor is teaching a class on education. Write a post responding to the professor’s question.</p>
+    <p>The professor is teaching a class on science. Write a post responding to the professor’s question</p>
     <br/>
     <p><strong>In your response you should:</strong></p>
     <ul>
@@ -854,57 +817,57 @@ export const writingQuestions = {
     <p>An effective response will contain at least 100 words. You have ten minutes to write.</p>
     <br/>
     <div>
-      <p><strong>Professor Smith:</strong></p>
-      <p>In next week’s class we’ll talk about different approaches to education. You know, not everyone agrees about the best way for young people to gain knowledge and learn new skills. Let’s prepare by discussing whether it’s better for students to take classes with a lot of discussions or classes mainly focused on lectures. What do you think?</p>
+      <p><strong>Dr. Young:</strong></p>
+      <p>This week, we’ll be discussing the intriguing concept of space colonization. As technology advances and the Earth faces increasing environmental and resource challenges, some scientists propose establishing human settlements on other planets or moons. For example, Mars and the moon are considered viable options due to their relative proximity to Earth. Considering this, do you think space colonization is a feasible solution for humanity’s future? Why or why not?</p>
     </div>
     <br/>
     <div>
-      <p><strong>Mike:</strong></p>
-      <p>I prefer classes that have a lot of discussions. When I have the opportunity to get immediate feedback, I can understand things more deeply. I also benefit from hearing about different perspectives and new ways of thinking about challenging topics. Additionally, discussions help me retain the information better since they’re more interactive and memorable.</p>
+      <p><strong>Ella:</strong></p>
+      <p>I believe space colonization is a necessary step for humanity. Given the Earth’s limited resources and the ongoing environmental degradation, establishing colonies on other planets could serve as a vital backup. It’s an ambitious plan, but with the right technology and international cooperation, it could secure the future of human civilization.</p>
     </div>
     <div>
-      <p><strong>Rachel:</strong></p>
-      <p>I see your point, Mike, but I prefer lectures. I like being able to listen to an expert explain a topic and really get into it. With lectures, there’s usually a clear structure and a set agenda, which can help me stay focused and organized. Discussions can sometimes get off track or become too argumentative, which can take away from the learning experience.</p>
+      <p><strong>Miguel:</strong></p>
+      <p>While I understand Olivia’s points, I’m skeptical about the feasibility of space colonization. The costs and technological challenges are immense, and the ethical implications of terraforming another planet are complex. Instead of looking to space, we should focus on sustainable solutions on Earth to address our environmental and resource issues.</p>
     </div>
   `,
   },
 };
 
 export const speakingQuestions = [
-  // https://www.youtube.com/watch?v=clV12rF0uE4 
+  // https://www.youtube.com/watch?v=6b_zQ2maLzc
   {
     question1: `
-      Talk about a time when you accomplished something you did not think you could do. What did you accomplish? Why did you think you could not do it?    
+      Do you agree or disagree with the following statement? People should avoid using social media for personal relationships. Provide reasons and examples to support your opinion.    
     `,
 
-    passage2: `The university is currently considering possible locations on campus for displaying paintings and other artwork by students. I think the lobby at the entrance to the student center would be a great location. Since many students pass through the student center every day, artwork displayed in the lobby would be viewed by hundreds of people. Also, because the whole front of the building is made of glass windows, the lobby is filled with natural light. This makes it perfect for displaying artwork, which should have plenty of light to be seen and appreciated.`,
-    conversationAudio2: "https://www.dropbox.com/scl/fi/qb2lhx814a11gqasbx0pp/T6S1.mp4?rlkey=ca2c0okbc6lz6u57arxoe1zsr&st=q6q2uzor&raw=1",
-    question2: "Briefly summarize the proposal in the student's letter, then state the woman's opinion about the proposal and explain the reasons she gave for holding that opinion.",
-    Audio2Photo: "/assets/women-lecture2.png", //old female giving lecture
+    passage2: `Beginning next semester, the University will not allow the use of bicycles on campus. The campus sidewalks are intended for pedestrians and receive heavy pedestrian traffic. Several minor accidents have resulted from people on bicycles colliding with people walking, and although no one has been seriously hurt, University officials feel that bicycles pose a safety risk. Furthermore, the prohibition of bicycles will not be a problem for students, since the university currently operates a convenient alternative: the free campus bus system, which runs between all campus buildings.`,
+    conversationAudio2: "https://www.dropbox.com/scl/fi/t9oeqitd63vsckm7hj3l3/T1S1.mp4?rlkey=6avh5xbkaxvmokcvkrqzhp27o&st=1e8czs2n&raw=1",
+    question2: "The woman expresses her opinion of the proposed policy change. State her opinion, and explain the reasons she gives for holding that opinion.",
+    Audio2Photo: "/tests/students-talking-outdoor.avif",
 
-    passage3: "An effective, widely used marketing practice in the entertainment industry is entertainment merchandising. Entertainment merchandising is a form of marketing in which the brand or image from one product is also used to sell another. The practice of entertainment merchandising often occurs in connection with movies and television shows, especially those associated with children. For example, the success of a popular children's television show may result in the marketing of toys that are designed to look like characters in the show. Or the situation may be reversed when a children's television show is written to include characters that are based on already-popular toys.",
-    conversationAudio3: "https://www.dropbox.com/scl/fi/fo2j1q3bsdfnmst3q3gdv/T6S2.mp4?rlkey=8h8x6m1q046ymkmu31gx2ijtz&st=sfc73d05&raw=1",
-    question3: "Using the example from the lecture explain the concept of entertainment merchandising.",
+    passage3: "Individuals often modify their behavior based on what they have learned about the possible consequences of their actions. When an individual learns through experience that a certain behavior results in pleasant consequences, that behavior is likely to be repeated. An unpleasant consequence, on the other hand, discourages further repetition of the behavior. While behavior modification can be observed in experiments, it also occurs frequently in everyday settings, when individuals change their behavior based on what they have learned about the consequences of that behavior.",
+    conversationAudio3: "https://www.dropbox.com/scl/fi/fbl41dd1l3u97cjgxbb43/T1S2.mp4?rlkey=j86l6r6rwxaawoyf7yn825s6h&st=j151tn0x&raw=1",
+    question3: "Using the example from the lecture, explain what behavior modification is and how it works.",
     Audio3Photo: "/assets/T2C1_Listening.jpg", //old male giving lecture
 
-    conversationAudio4: "https://www.dropbox.com/scl/fi/r3h3i13y47u7u88s9sggt/T6S3.mp4T?rlkey=qykmaz0v4wqlz6cgp1yqr7vh3&st=f5sq1sc9&raw=1",
-    question4: "Using the points from the lecture, explain why the researchers think that babies may feel empathy.",
-    Audio4Photo: "/assets/T1C3_Listening.avif", //female giving lecture
+    conversationAudio4: "https://www.dropbox.com/scl/fi/fgqlziavto4dvjq2vbovr/T1S3.mp4?rlkey=cbrplnv8637m9jixn668p94xy&st=9kd4ao0m&raw=1",
+    question4: "Using points and examples from the lecture, explain mountains and valley winds.",
+    Audio4Photo: "/tests/mountain-valley-winds.png",
   },
 ];
 
 export const listeningAudios = [
-  "https://www.dropbox.com/scl/fi/wgikm6uy1awdmhssyv255/T6C1.mp4?rlkey=5ttthcfw2899v8sqe8ug2jxt1&st=bf8np98n&raw=1",
-  "https://www.dropbox.com/scl/fi/52oi3dkcaeai5rmqh762a/T6C2.mp4?rlkey=iih1nhwe2dm04d5bttowrp19i&st=sbpj5p0l&raw=1",
-  "https://www.dropbox.com/scl/fi/6pu841d0oi7e3wyv2dgd0/T6C3.mp4?rlkey=ptoq866jtoxspacqas3su211g&st=sw1sy4i6&raw=1",
-  "https://www.dropbox.com/scl/fi/xk67mqskv8xxanc1um4v8/T6C4.mp4?rlkey=47x6b6vlrx3xq38z49ya1dnxo&st=5wvko5px&raw=1",
-  "https://www.dropbox.com/scl/fi/223sffvig4emg5wnm786g/T6C5.mp4?rlkey=fcxzdt7v9b288ulgno47rvbee&st=kzgkuj8l&raw=1",
+  "https://www.dropbox.com/scl/fi/mw4gcvq7wto9fu9z4sl64/T1C1.mp4?rlkey=xd1wglx3z9dv6qu8dsjcd8mmy&st=7k53t6us&raw=1",
+  "https://www.dropbox.com/scl/fi/3bbc6njwa23zqafjan66d/T1C2.mp4?rlkey=v0j44stfsnsjbpj15dk4zrwye&st=80uavxes&raw=1",
+  "https://www.dropbox.com/scl/fi/kfv7i2iyr61rzhyklfxnv/T1C3.mp4?rlkey=oz5klwr03qys5cv9w8aje1sva&st=iivcgwm4&raw=1",
+  "https://www.dropbox.com/scl/fi/ups3vplmy0tbzz35jyitb/T1C4.mp4?rlkey=1iv0ex4nusaiauafm0i5qj0fy&st=36lnm1zb&raw=1",
+  "https://www.dropbox.com/scl/fi/hqj2uj33ye32le6nyvams/T1C5.mp4?rlkey=7kfw5s129gxkrpnf47qgzgpjm&st=2lqa2gtl&raw=1"
 ];
 
 export const listeningAudiosPhotos = [
-  "/assets/T1C3_Listening.avif", //female giving lecture
-  "/assets/women-lecture2.png", //old female giving lecture
-  "/assets/T2C1_Listening.jpg", //old male giving lecture
-  "/assets/Man-giving-speech.png", //middle ages male giving lecture
-  "/tests/cop-student-talking.png", //cop and student talking
+  "/tests/teacher-satrun.png",
+  "/tests/teacher-grafiti.png",
+  "/tests/femaleTeacher-teslaCoil.png",
+  "/tests/talking-reception.jpg",
+  "/tests/student-teacher-talking-in-class.webp",
 ];

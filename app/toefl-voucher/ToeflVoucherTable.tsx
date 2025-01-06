@@ -31,11 +31,11 @@ export default function ToeflVoucherTable() {
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Voucher</TableCell>
-                            <TableCell>Rs 4900</TableCell>
+                            <TableCell>Rs 3400</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Booking</TableCell>
-                            <TableCell>Rs 4200</TableCell>
+                            <TableCell>Rs 3900</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

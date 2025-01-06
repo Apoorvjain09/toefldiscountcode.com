@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
@@ -44,7 +44,6 @@ export default function ToeflVoucherHero() {
     })
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        // Handle form submission here
         const formData = {
             firstName: values.firstName,
             lastName: values.lastName,
@@ -55,20 +54,29 @@ export default function ToeflVoucherHero() {
         };
 
         try {
-            // Add the document to the "voucher" collection, letting Firebase generate the ID
             const docRef = await addDoc(collection(db, "voucher"), formData);
             console.log("Form details saved successfully with ID: ", docRef.id);
             setIsSubmitted(true);
             form.reset();
 
             setTimeout(() => {
-                setIsSubmitted(false);
                 setOpenModal(false);
-            }, 3000);
+            }, 5000);
         } catch (error) {
             console.error("Error saving form details: ", error);
         }
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!isSubmitted) {
+                setOpenModal(true);
+            }
+        }, 10000); // Every 10 seconds
+
+        return () => clearInterval(interval); // Cleanup interval on unmount
+    }, [isSubmitted]);
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 p-4 md:p-8 lg:p-12">
             <Card className="mx-auto max-w-5xl overflow-hidden">
@@ -91,8 +99,8 @@ export default function ToeflVoucherHero() {
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         {[
-                            { amount: 4900, type: 'Voucher' },
-                            { amount: 4200, type: 'Exam Booking' },
+                            { amount: 3400, type: 'Voucher' },
+                            { amount: 3900, type: 'Exam Booking' },
                             { amount: 1700, type: 'Discount Code' },
                         ].map((offer, index) => (
                             <motion.div
@@ -166,9 +174,9 @@ export default function ToeflVoucherHero() {
                     ) : (
                         <>
                             <DialogHeader>
-                                <DialogTitle>Enquiry Form</DialogTitle>
+                                <DialogTitle>Discount Voucher Form</DialogTitle>
                                 <DialogDescription>
-                                    Please fill out the form below to enquire about our TOEFL exam discounts.
+                                    Enquire about our TOEFL exam discounts.
                                 </DialogDescription>
                             </DialogHeader>
                             <Form {...form}>

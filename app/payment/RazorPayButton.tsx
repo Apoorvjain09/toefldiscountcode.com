@@ -22,8 +22,8 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ id }) => {
   }, [id]);
 
   return (
-    <div>
-      <form id={`razorpay-form-${id}`}></form>
+    <div className='z-[1000000] flex justify-center items-center'>
+      <form id={`razorpay-form-${id}`} className='z-[100000]'></form>
     </div>
   );
 };

@@ -221,19 +221,6 @@ export default function TeacherSignup() {
         "08:00 (AKST) - America, Anchorage",
         "13:00 (AST) - America, Anguilla",
         "13:00 (AST) - America, Antigua",
-        "14:00 (GMT-3) - America, Araguaina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
-        "14:00 (GMT-3) - America, Argentina",
         "14:00 (GMT-3) - America, Argentina",
         "13:00 (AST) - America, Aruba",
         "14:00 (GMT-3) - America, Asuncion",
@@ -272,7 +259,6 @@ export default function TeacherSignup() {
         "09:00 (PST) - America, Ensenada",
         "14:00 (GMT-3) - America, Fortaleza",
         "10:00 (MST) - America, Fort Nelson",
-        "12:00 (EST) - America, Indiana",
         "13:00 (AST) - America, Glace Bay",
         "15:00 (GMT-2) - America, Godthab",
         "13:00 (AST) - America, Goose Bay",
@@ -287,16 +273,10 @@ export default function TeacherSignup() {
         "10:00 (GMT-7) - America, Hermosillo",
         "11:00 (CST) - America, Indiana",
         "12:00 (EST) - America, Indiana",
-        "12:00 (EST) - America, Indiana",
-        "11:00 (CST) - America, Indiana",
-        "12:00 (EST) - America, Indiana",
-        "12:00 (EST) - America, Indiana",
-        "12:00 (EST) - America, Indiana",
         "10:00 (MST) - America, Inuvik",
         "12:00 (EST) - America, Iqaluit",
         "12:00 (EST) - America, Jamaica",
         "08:00 (AKST) - America, Juneau",
-        "12:00 (EST) - America, Kentucky",
         "12:00 (EST) - America, Kentucky",
         "13:00 (AST) - America, Kralendijk",
         "13:00 (GMT-4) - America, La Paz",
@@ -325,8 +305,6 @@ export default function TeacherSignup() {
         "12:00 (EST) - America, Nipigon",
         "08:00 (AKST) - America, Name",
         "15:00 (GMT-2) - America, Noronha",
-        "11:00 (CST) - America, North Dakota",
-        "11:00 (CST) - America, North Dakota",
         "11:00 (CST) - America, North Dakota",
         "11:00 (CST) - America, Ojinaga",
         "12:00 (EST) - America, Panama",
@@ -960,7 +938,7 @@ export default function TeacherSignup() {
                                                     <FormItem>
                                                         <FormLabel>Approximate Number of Students Taught</FormLabel>
                                                         <FormControl>
-                                                            <Input type="number" placeholder="e.g., 500" {...field} />
+                                                            <Input type="number" placeholder="e.g., 500" {...field} onChange={(e) => field.onChange(Number(e.target.value) || '')} />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>
@@ -974,7 +952,7 @@ export default function TeacherSignup() {
                                                     <FormItem>
                                                         <FormLabel>Approximate Teaching Hours</FormLabel>
                                                         <FormControl>
-                                                            <Input type="number" placeholder="e.g., 1200" {...field} />
+                                                            <Input type="number" placeholder="e.g., 1200" {...field} onChange={(e) => field.onChange(Number(e.target.value) || '')} />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>
@@ -1018,7 +996,7 @@ export default function TeacherSignup() {
                                                 </FormItem>
                                             )}
                                         />
-                                        <p className="text-sm text-muted-foreground bg-gray-50 shadow-lg p-2 rounded-lg">
+                                        <div className="text-sm text-muted-foreground bg-gray-50 shadow-lg p-2 rounded-lg">
                                             To upload your photo, follow these steps:
                                             <ol className="list-decimal list-inside mt-2 space-y-2">
                                                 <li>Go to <a href="https://drive.google.com" target="_blank" className="text-blue-500 underline">Google Drive</a>.</li>
@@ -1027,7 +1005,7 @@ export default function TeacherSignup() {
                                                 <li>Set the link sharing to <strong>"Anyone with the link"</strong> and copy the link.</li>
                                                 <li>Paste the link below.</li>
                                             </ol>
-                                        </p>
+                                        </div>
                                     </div>
                                 </TabsContent>
 
@@ -1477,7 +1455,7 @@ export default function TeacherSignup() {
                                                     <FormControl>
                                                         <div className="flex items-center">
                                                             <span className="mr-2">$</span>
-                                                            <Input type="number" min="5" {...field} />
+                                                            <Input type="number" min="5" {...field} onChange={(e) => field.onChange(Number(e.target.value) || '')} />
                                                         </div>
                                                     </FormControl>
                                                     <FormDescription>

@@ -92,7 +92,7 @@ export default function TutorListing() {
     };
 
     const [language, setLanguage] = React.useState<string>("TOEFL");
-    const [priceRange, setPriceRange] = React.useState<[number, string, number] | null>(null);
+    const [priceRange, setPriceRange] = React.useState<[string, string, number, string, string, string, number] | null>(null);
     const [country, setCountry] = React.useState<string>("");
     const [time, setTime] = React.useState<string>("Any time");
     const [filteredTutors, setFilteredTutors] = React.useState<Tutor[]>([]);
@@ -227,12 +227,16 @@ export default function TutorListing() {
             // }
 
             // Filter by price range
-            // if (priceRange) {
-            //     updatedTutors = updatedTutors.filter(
-            //         (tutor) =>
-            //             tutor.hourlyRate >= priceRange[0] && tutor.hourlyRate <= priceRange[1]
-            //     );
-            // }
+            if (priceRange) {
+                const [userCurrency, space1, minPrice, space2, string, space3, maxPrice] = priceRange;
+                updatedTutors = updatedTutors.filter((tutor) => {
+                    const convertedRate =
+                        currencyRates && userCurrency in currencyRates
+                            ? tutor.hourlyRate * currencyRates[userCurrency]
+                            : tutor.hourlyRate;
+                    return convertedRate >= minPrice && convertedRate <= maxPrice;
+                });
+            }
 
             // Filter by country
             if (country && country !== "Any country") {
@@ -308,9 +312,9 @@ export default function TutorListing() {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56">
-                        <DropdownMenuItem onClick={() => setLanguage("English")}>English</DropdownMenuItem>
+                        {/* <DropdownMenuItem onClick={() => setLanguage("English")}>English</DropdownMenuItem> */}
                         <DropdownMenuItem onClick={() => setLanguage("TOEFL")}>TOEFL</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setLanguage("IELTS")}>IELTS</DropdownMenuItem>
+                        {/* <DropdownMenuItem onClick={() => setLanguage("IELTS")}>IELTS</DropdownMenuItem> */}
                     </DropdownMenuContent>
                 </DropdownMenu>
 
@@ -322,11 +326,41 @@ export default function TutorListing() {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56">
-                        <DropdownMenuItem onClick={() => setPriceRange([200, "-", 500])}>₹200 - ₹500</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setPriceRange([501, "-", 1000])}>₹501 - ₹1000</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setPriceRange([1001, "-", 2000])}>₹501 - ₹1000</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setPriceRange([2001, "-", 3500])}>₹2001+</DropdownMenuItem>
+                        {[
+                            { min: 5, max: 20 },
+                            { min: 20.0000000001, max: 50 },
+                            { min: 50.0000000001, max: 100 },
+                            { min: 100.0000000001, max: 200 },
+                            { min: 200.0000000001, max: 500 }
+                        ].map((range, index) => {
+                            const convertedMin =
+                                currencyRates && userCurrency in currencyRates
+                                    ? parseFloat((range.min * currencyRates[userCurrency]).toFixed(0))
+                                    : range.min;
+                            const convertedMax =
+                                range.max && currencyRates && userCurrency in currencyRates
+                                    ? parseFloat((range.max * currencyRates[userCurrency]).toFixed(0))
+                                    : range.max;
+
+                            return (
+                                <DropdownMenuItem
+                                    key={index}
+                                    onClick={() =>
+                                        setPriceRange(
+                                            convertedMax !== null
+                                                ? [userCurrency, " ", convertedMin, " ", "-", " ", convertedMax]
+                                                : [userCurrency, " ", convertedMin, " ", "-", " ", Number.MAX_VALUE]
+                                        )
+                                    }
+                                >
+                                    {convertedMax !== null
+                                        ? `${userCurrency} ${convertedMin} - ${convertedMax}`
+                                        : `${userCurrency} ${convertedMin}+`}
+                                </DropdownMenuItem>
+                            );
+                        })}
                     </DropdownMenuContent>
+
                 </DropdownMenu>
 
                 <DropdownMenu>

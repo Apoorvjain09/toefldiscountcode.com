@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Search, Globe2, ChevronDown, Heart, Star, Users, MessageCircle, GraduationCap } from 'lucide-react'
+import { Search, Globe2, ChevronDown, Heart, Star, Users, MessageCircle, GraduationCap, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import {
@@ -90,6 +90,12 @@ export default function TutorListing() {
         AE: "AED", // United Arab Emirates
         SA: "SAR", // Saudi Arabia
     };
+
+    const [language, setLanguage] = React.useState<string>("TOEFL");
+    const [priceRange, setPriceRange] = React.useState<[number, string, number] | null>(null);
+    const [country, setCountry] = React.useState<string>("");
+    const [time, setTime] = React.useState<string>("Any time");
+    const [filteredTutors, setFilteredTutors] = React.useState<Tutor[]>([]);
 
     React.useEffect(() => {
         const head = document.head;
@@ -208,6 +214,49 @@ export default function TutorListing() {
         fetchUserLocationAndCurrency();
     }, []);
 
+
+    React.useEffect(() => {
+        const applyFilters = () => {
+            let updatedTutors = [...tutors];
+
+            // Filter by language
+            // if (language !== "Any language") {
+            //     updatedTutors = updatedTutors.filter((tutor) =>
+            //         tutor.specialties?.includes(language)
+            //     );
+            // }
+
+            // Filter by price range
+            // if (priceRange) {
+            //     updatedTutors = updatedTutors.filter(
+            //         (tutor) =>
+            //             tutor.hourlyRate >= priceRange[0] && tutor.hourlyRate <= priceRange[1]
+            //     );
+            // }
+
+            // Filter by country
+            if (country && country !== "Any country") {
+                updatedTutors = updatedTutors.filter(
+                    (tutor) => tutor.countryOfBirth === country
+                );
+            }
+
+            // Filter by availability time (optional, based on your data structure)
+            // if (time && time !== "Any time") {
+            //     updatedTutors = updatedTutors.filter((tutor) =>
+            //         tutor.availability?.some((slot) => slot.day === time)
+            //     );
+            // }
+
+            // Ensure tutors are verified
+            updatedTutors = updatedTutors.filter((tutor) => tutor.detailsVerified);
+
+            setFilteredTutors(updatedTutors);
+        };
+
+        applyFilters();
+    }, [language, priceRange, country, time, tutors]);
+
     return (
         <div className="font-roboto container mx-auto px-4 py-8 relative">
 
@@ -254,44 +303,239 @@ export default function TutorListing() {
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" className="w-full justify-between">
-                            English
+                            {language}
                             <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56">
-                        <DropdownMenuItem>English</DropdownMenuItem>
-                        <DropdownMenuItem>TOEFL</DropdownMenuItem>
-                        <DropdownMenuItem>IELTS</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLanguage("English")}>English</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLanguage("TOEFL")}>TOEFL</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLanguage("IELTS")}>IELTS</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" className="w-full justify-between">
-                            ₹200 – ₹3,500+
+                            {priceRange || "Price Range"}
                             <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56">
-                        <DropdownMenuItem>₹200 - ₹500</DropdownMenuItem>
-                        <DropdownMenuItem>₹501 - ₹1000</DropdownMenuItem>
-                        <DropdownMenuItem>₹1001 - ₹2000</DropdownMenuItem>
-                        <DropdownMenuItem>₹2001+</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setPriceRange([200, "-", 500])}>₹200 - ₹500</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setPriceRange([501, "-", 1000])}>₹501 - ₹1000</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setPriceRange([1001, "-", 2000])}>₹501 - ₹1000</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setPriceRange([2001, "-", 3500])}>₹2001+</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" className="w-full justify-between">
-                            Any country
+                            {country || "Any country"}
                             <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-56">
-                        <DropdownMenuItem>United States</DropdownMenuItem>
-                        <DropdownMenuItem>United Kingdom</DropdownMenuItem>
-                        <DropdownMenuItem>Canada</DropdownMenuItem>
-                        <DropdownMenuItem>Australia</DropdownMenuItem>
+                    <DropdownMenuContent className="w-56 max-h-[20rem] overflow-y-auto">
+                        <div className="py-2 rounded-lg bg-gray-100 shadow-sm mb-2">
+                            <p className="text-sm text-muted-foreground text-center">Popular Countries</p>
+                        </div>
+                        <DropdownMenuItem onClick={() => setCountry("in")}>India</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gb")}>The United Kingdom</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("us")}>United States</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ca")}>Canada</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("au")}>Australia</DropdownMenuItem>
+                        <div className="py-2 rounded-lg bg-gray-100 shadow-sm my-2">
+                            <p className="text-sm text-muted-foreground text-center">Other Countries</p>
+                        </div>
+                        <DropdownMenuItem onClick={() => setCountry("af")}>Afghanistan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("al")}>Albania</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("dz")}>Algeria</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ad")}>Andorra</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ao")}>Angola</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ag")}>Antigua and Barbuda</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ar")}>Argentina</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("am")}>Armenia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("at")}>Austria</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ax")}>Austrian Empire*</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("az")}>Azerbaijan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bs")}>Bahamas, The</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bh")}>Bahrain</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bd")}>Bangladesh</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bb")}>Barbados</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("by")}>Belarus</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("be")}>Belgium</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bz")}>Belize</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bj")}>Benin (Dahomey)</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bo")}>Bolivia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ba")}>Bosnia and Herzegovina</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bw")}>Botswana</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("br")}>Brazil</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bn")}>Brunei</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bg")}>Bulgaria</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bf")}>Burkina Faso (Upper Volta)</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mm")}>Burma</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("bi")}>Burundi</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cv")}>Cabo Verde</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("kh")}>Cambodia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cm")}>Cameroon</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ky")}>Cayman Islands, The</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cf")}>Central African Republic</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("td")}>Chad</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cl")}>Chile</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cn")}>China</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("co")}>Colombia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("km")}>Comoros</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ck")}>Cook Islands</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cr")}>Costa Rica</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ci")}>Cote d’Ivoire (Ivory Coast)</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("hr")}>Croatia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cu")}>Cuba</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cy")}>Cyprus</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cz")}>Czechia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("cd")}>Democratic Republic of the Congo</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("dk")}>Denmark</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("dj")}>Djibouti</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("dm")}>Dominica</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("do")}>Dominican Republic</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ec")}>Ecuador</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("eg")}>Egypt</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sv")}>El Salvador</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gq")}>Equatorial Guinea</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("er")}>Eritrea</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ee")}>Estonia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sz")}>Eswatini</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("et")}>Ethiopia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("fj")}>Fiji</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("fi")}>Finland</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("fr")}>France</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ga")}>Gabon</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gm")}>Gambia, The</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ge")}>Georgia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("de")}>Germany</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gh")}>Ghana</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gr")}>Greece</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gd")}>Grenada</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gt")}>Guatemala</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gn")}>Guinea</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gw")}>Guinea-Bissau</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("gy")}>Guyana</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ht")}>Haiti</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("hn")}>Honduras</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("hu")}>Hungary</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("is")}>Iceland</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("id")}>Indonesia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ir")}>Iran</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("iq")}>Iraq</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ie")}>Ireland</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("il")}>Israel</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("it")}>Italy</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("jm")}>Jamaica</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("jp")}>Japan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("jo")}>Jordan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("kz")}>Kazakhstan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ke")}>Kenya</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("kr")}>Korea</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("kw")}>Kuwait</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("kg")}>Kyrgyzstan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("la")}>Laos</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lv")}>Latvia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lb")}>Lebanon</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ls")}>Lesotho</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lr")}>Liberia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ly")}>Libya</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("li")}>Liechtenstein</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lt")}>Lithuania</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lu")}>Luxembourg</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mg")}>Madagascar</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mw")}>Malawi</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("my")}>Malaysia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mv")}>Maldives</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ml")}>Mali</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mt")}>Malta</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mh")}>Marshall Islands</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mr")}>Mauritania</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mu")}>Mauritius</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mx")}>Mexico</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("fm")}>Micronesia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("md")}>Moldova</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mc")}>Monaco</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mn")}>Mongolia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("me")}>Montenegro</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ma")}>Morocco</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mz")}>Mozambique</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("na")}>Namibia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("nr")}>Nauru</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("np")}>Nepal</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("nl")}>Netherlands, The</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("nz")}>New Zealand</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ni")}>Nicaragua</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ne")}>Niger</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ng")}>Nigeria</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("nu")}>Niue</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("mk")}>North Macedonia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("no")}>Norway</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("om")}>Oman</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pk")}>Pakistan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pw")}>Palau</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pa")}>Panama</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pg")}>Papua New Guinea</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("py")}>Paraguay</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pe")}>Peru</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ph")}>Philippines</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pl")}>Poland</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("pt")}>Portugal</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("qa")}>Qatar</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ro")}>Romania</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ru")}>Russia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("rw")}>Rwanda</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("kn")}>Saint Kitts and Nevis</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lc")}>Saint Lucia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("vc")}>Saint Vincent and the Grenadines</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ws")}>Samoa</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sm")}>San Marino</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("st")}>Sao Tome and Principe</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sa")}>Saudi Arabia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sn")}>Senegal</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("rs")}>Serbia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sc")}>Seychelles</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sl")}>Sierra Leone</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sg")}>Singapore</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sk")}>Slovakia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("si")}>Slovenia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sb")}>Solomon Islands, The</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("so")}>Somalia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("za")}>South Africa</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ss")}>South Sudan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("es")}>Spain</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("lk")}>Sri Lanka</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sd")}>Sudan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sr")}>Suriname</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("se")}>Sweden</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ch")}>Switzerland</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("sy")}>Syria</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tj")}>Tajikistan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tz")}>Tanzania</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("th")}>Thailand</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tl")}>Timor-Leste</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tg")}>Togo</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("to")}>Tonga</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tt")}>Trinidad and Tobago</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tn")}>Tunisia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tr")}>Turkey</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tm")}>Turkmenistan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("tv")}>Tuvalu</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ug")}>Uganda</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ua")}>Ukraine</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ae")}>United Arab Emirates, The</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("uy")}>Uruguay</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("uz")}>Uzbekistan</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("vu")}>Vanuatu</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ve")}>Venezuela</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("vn")}>Vietnam</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("ye")}>Yemen</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("zm")}>Zambia</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setCountry("zw")}>Zimbabwe</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
 
@@ -359,8 +603,7 @@ export default function TutorListing() {
             <h2 className="text-2xl font-semibold mb-6">{tutors.length + 1} Toefl English teachers available</h2>
 
             <div className="grid grid-cols-1 gap-6">
-                {tutors
-                    .filter((tutor) => tutor.detailsVerified)
+                {filteredTutors
                     .map((tutor) => {
                         const convertedRate = currencyRates && userCurrency in currencyRates
                             ? (tutor.hourlyRate * currencyRates[userCurrency]).toFixed(2)

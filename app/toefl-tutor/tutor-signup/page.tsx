@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card"
 import { Upload, User, BadgeIcon as Certificate, GraduationCap, FileText, Video, AccessibilityIcon as AvailabilityIcon, DollarSign, CheckCircle } from 'lucide-react'
-import { useUser } from "@clerk/nextjs"
+import { SignInButton, useUser } from "@clerk/nextjs"
 import { doc, setDoc } from "firebase/firestore"
 import { db } from "@/firebase"
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog"
@@ -82,9 +82,9 @@ const formSchema = z.object({
 })
 
 export default function TeacherSignup() {
-    const { user } = useUser();
+    const { user, isSignedIn } = useUser();
     const [activeTab, setActiveTab] = React.useState("about")
-    const [submitted, setSubmitted] = React.useState(true)
+    const [submitted, setSubmitted] = React.useState(false)
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -687,7 +687,16 @@ export default function TeacherSignup() {
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                                 <TabsContent value="about" className="mt-6 ">
                                     <div className="space-y-4 flex flex-col mx-auto w-[80%] sm:w-[50%]">
-                                        <h2 className="text-2xl font-bold">About</h2>
+                                        <h2 className="text-2xl font-bold flex gap-10 justify-between">
+                                            <div>
+                                                About
+                                            </div>
+                                            <div>
+                                                {!isSignedIn && (
+                                                    <SignInButton><Button>Sign In</Button></SignInButton>
+                                                )}
+                                            </div>
+                                        </h2>
                                         <p className="text-muted-foreground">
                                             Start creating your public tutor profile. Your progress will be automatically saved
                                             as you complete each section.
@@ -1496,25 +1505,32 @@ export default function TeacherSignup() {
                                         Previous
                                     </Button>
                                     {activeTab !== "pricing" ? (
-                                        <Button
-                                            type="button"
-                                            onClick={() => {
-                                                const currentIndex = tabs.findIndex(tab => tab.id === activeTab)
-                                                if (currentIndex < tabs.length - 1) {
-                                                    if (!user) {
-                                                        alert("Please Log in")
-                                                        return
-                                                    };
-                                                    if (activeTab === "description" && currentStep !== 4) {
-                                                        handleNext()
-                                                        return
-                                                    }
-                                                    setActiveTab(tabs[currentIndex + 1].id)
-                                                };
-                                            }}
-                                        >
-                                            Next
-                                        </Button>
+                                        <>
+                                            {isSignedIn ? (
+                                                <Button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const currentIndex = tabs.findIndex(tab => tab.id === activeTab)
+                                                        if (currentIndex < tabs.length - 1) {
+                                                            if (!user) {
+                                                                alert("Please Log in")
+                                                                return
+                                                            };
+                                                            if (activeTab === "description" && currentStep !== 4) {
+                                                                handleNext()
+                                                                return
+                                                            }
+                                                            setActiveTab(tabs[currentIndex + 1].id)
+                                                        };
+                                                    }}
+                                                >
+                                                    Next
+                                                </Button>
+                                            ) : (
+                                                <SignInButton><Button>Sign In</Button></SignInButton>
+                                            )}
+
+                                        </>
                                     ) : (
                                         <Button type="submit">Submit</Button>
                                     )}

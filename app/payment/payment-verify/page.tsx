@@ -27,7 +27,7 @@ const PaymentVerify: React.FC = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ userId, membershipType: '6MonthMembership' }),
+          body: JSON.stringify({ userId, membershipType: 'Monthly_Membership' }),
         });
 
         const data = await response.json();

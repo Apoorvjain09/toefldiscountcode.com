@@ -13,7 +13,7 @@ interface BookLessonModalProps {
     onOpenChange: (open: boolean) => void
     teacherAvatar?: string
     teacherName?: string
-    availability: any // Using the same availability type as before
+    availability: any
 }
 
 export function BookLessonModal({

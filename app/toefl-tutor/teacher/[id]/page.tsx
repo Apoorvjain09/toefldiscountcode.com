@@ -17,6 +17,8 @@ import {
 } from '@/components/ui/select'
 import { format, addDays, startOfWeek } from 'date-fns'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { BookLessonModal } from "@/components/toefl-tutor/BookLessonModal"
+import { userAgent } from "next/server"
 
 
 type Tutor = {
@@ -79,36 +81,81 @@ export default function TeacherProfile() {
     const [showFullDescription, setShowFullDescription] = React.useState(false);
     const [currentDate, setCurrentDate] = React.useState(new Date())
     const [selectedDuration, setSelectedDuration] = React.useState('25')
+    const [open, setOpen] = React.useState(false)
+    const currencyMap: { [key: string]: string } = {
+        US: "USD", // United States
+        CA: "CAD", // Canada
+        IN: "INR", // India
+        GB: "GBP", // United Kingdom
+        AU: "AUD", // Australia
+        NZ: "NZD", // New Zealand
+        JP: "JPY", // Japan
+        CN: "CNY", // China
+        KR: "KRW", // South Korea
+        DE: "EUR", // Germany (Eurozone)
+        FR: "EUR", // France (Eurozone)
+        ES: "EUR", // Spain (Eurozone)
+        IT: "EUR", // Italy (Eurozone)
+        NL: "EUR", // Netherlands (Eurozone)
+        BR: "BRL", // Brazil
+        RU: "RUB", // Russia
+        ZA: "ZAR", // South Africa
+        SG: "SGD", // Singapore
+        MX: "MXN", // Mexico
+        SE: "SEK", // Sweden
+        NO: "NOK", // Norway
+        CH: "CHF", // Switzerland
+        AE: "AED", // United Arab Emirates
+        SA: "SAR", // Saudi Arabia
+    };
+    const [convertedRate, setConvertedRate] = React.useState<string>(""); // Initialize with an empty string
+    const [userCurrency, setUserCurrency] = React.useState<string>(""); // Default to USD
 
     React.useEffect(() => {
         if (!tutorId) return;
 
         const fetchTutorFromLocalStorage = async () => {
             try {
-                const storedTutors = localStorage.getItem("tutors");
+                const storedTutors = localStorage.getItem("tuto rs");
+                const storedCurrencyData = localStorage.getItem("currencyData");
+                const storedGeoData = localStorage.getItem("geoData");
 
-                if (storedTutors) {
+                if (storedTutors && storedCurrencyData && storedGeoData) {
                     const tutors: Tutor[] = JSON.parse(storedTutors);
                     const tutorDetails = tutors.find((tutor) => tutor.id === tutorId);
 
                     if (tutorDetails) {
                         setTeacher(tutorDetails);
+
+                        const currencyData = JSON.parse(storedCurrencyData);
+                        const geoData = JSON.parse(storedGeoData);
+                        const userCountry = geoData.country;
+                        const userCurrency = currencyMap[userCountry] || "USD";
+
+                        setUserCurrency(userCurrency);
+
+                        const conversionRate = currencyData.rates[userCurrency];
+                        const convertedRate = conversionRate
+                            ? (tutorDetails.hourlyRate * conversionRate).toFixed(2)
+                            : tutorDetails.hourlyRate.toFixed(2);
+
+                        setConvertedRate(convertedRate);
+
+                        console.log(`Converted Rate: ${convertedRate}`);
+                        console.log(`User Currency: ${userCurrency}`);
                     } else {
                         console.log("Tutor not found in local storage.");
-                        // Optionally handle not found case here
                     }
                 } else {
-                    console.log("No tutors in local storage.");
-                    // Optionally handle no data in local storage case
+                    console.log("No tutors, currency data, or geo data in local storage.");
                 }
             } catch (error) {
-                console.error("Error fetching tutor:", error);
+                console.error("Error fetching tutor or data:", error);
             }
         };
 
         fetchTutorFromLocalStorage();
     }, [tutorId]);
-
 
     if (!teacher) {
         return <div>Loading...</div>;
@@ -126,9 +173,7 @@ export default function TeacherProfile() {
     return (
         <div className="container mx-auto py-8 px-4 sm:px-8">
             <div className="grid gap-6 md:grid-cols-[2fr,1fr]">
-                {/* Main Content */}
                 <div className="space-y-6">
-                    {/* Profile Header */}
                     <div className="flex items-start gap-4">
                         <Avatar className="h-24 w-24">
                             <AvatarImage src={teacher.photoLink} alt="Teacher" />
@@ -154,11 +199,9 @@ export default function TeacherProfile() {
                                         .join(", ")
                                     : "No certifications available."}
                             </p>
-
                         </div>
                     </div>
 
-                    {/* Credentials */}
                     <Card>
                         <CardContent className="pt-6">
                             <div className="space-y-4">
@@ -167,10 +210,10 @@ export default function TeacherProfile() {
                                         Professional
                                     </Badge>
                                     <div>
-                                        <p>{teacher.firstName} {teacher.lastName} is a highly qualified tutor with a verified teaching certificate.</p>
-                                        <Button variant="link" className="h-auto p-0">
+                                        <p>{teacher.firstName} {teacher.lastName} is a <span className="font-semibold">highly qualified</span> tutor with a verified teaching certificate.</p>
+                                        {/* <Button variant="link" className="h-auto p-0">
                                             Learn more
-                                        </Button>
+                                        </Button> */}
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -178,17 +221,16 @@ export default function TeacherProfile() {
                                         Super Tutor
                                     </Badge>
                                     <div>
-                                        <p>{teacher.firstName} {teacher.lastName} is a highly rated and experienced tutor.</p>
-                                        <Button variant="link" className="h-auto p-0">
+                                        <p>{teacher.firstName} {teacher.lastName} is a <span className="font-semibold">highly rated</span> and experienced tutor.</p>
+                                        {/* <Button variant="link" className="h-auto p-0">
                                             Learn more
-                                        </Button>
+                                        </Button> */}
                                     </div>
                                 </div>
                             </div>
                         </CardContent>
                     </Card>
 
-                    {/* About Section */}
                     <Card>
                         <CardHeader>
                             <h2 className="text-xl font-semibold">About me</h2>
@@ -408,14 +450,17 @@ export default function TeacherProfile() {
                                         <Star className="h-5 w-5 text-yellow-400" />
                                         <span className="text-xl font-bold">5</span>
                                     </div>
-                                    <p className="text-sm text-muted-foreground">52 reviews</p>
+                                    {/* <p className="text-sm text-muted-foreground">52 reviews</p> */}
+                                    <p className="text-sm text-muted-foreground">star rating</p>
                                 </div>
                                 <div>
-                                    <div className="text-xl font-bold">3270</div>
-                                    <p className="text-sm text-muted-foreground">lessons</p>
+                                    {/* <div className="text-xl font-bold">3270</div>
+                                    <p className="text-sm text-muted-foreground">lessons</p> */}
+                                    <div className="text-xl font-bold">{Number(teacher.studentsTaught) > 1000 ? "1000+" : teacher.studentsTaught} </div>
+                                    <p className="text-sm text-muted-foreground">students taught</p>
                                 </div>
                                 <div>
-                                    <div className="text-xl font-bold">₹1,728</div>
+                                    <div className="text-xl font-bold">{convertedRate} {userCurrency}</div>
                                     <p className="text-sm text-muted-foreground">50-min lesson</p>
                                 </div>
                             </div>
@@ -424,7 +469,7 @@ export default function TeacherProfile() {
 
                     {/* Action Buttons */}
                     <div className="space-y-3">
-                        <Button className="w-full" size="lg">
+                        <Button onClick={() => setOpen(true)} className="w-full" size="lg">
                             <Lightning className="mr-2 h-4 w-4" />
                             Book trial lesson
                         </Button>
@@ -436,6 +481,11 @@ export default function TeacherProfile() {
                             <Heart className="mr-2 h-4 w-4" />
                             Save to my list
                         </Button>
+                        <BookLessonModal
+                            open={open}
+                            onOpenChange={setOpen}
+                            availability={teacher.availability}
+                        />
                     </div>
 
                     {/* Activity Status */}

@@ -16,8 +16,9 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
+				roboto: ['Roboto', 'serif'],
 				baloo: [
-					'Baloo Bhai 2"',
+					'Baloo Bhai 2',
 					'cursive'
 				]
 			},

@@ -116,7 +116,7 @@ export default function TeacherProfile() {
 
         const fetchTutorFromLocalStorage = async () => {
             try {
-                const storedTutors = localStorage.getItem("tuto rs");
+                const storedTutors = localStorage.getItem("tutors");
                 const storedCurrencyData = localStorage.getItem("currencyData");
                 const storedGeoData = localStorage.getItem("geoData");
 

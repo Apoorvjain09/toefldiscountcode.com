@@ -240,7 +240,11 @@ export default function TeacherProfile() {
                                 <div>
                                     <p className={showFullDescription ? "block" : "line-clamp-5"}>
                                         {teacher.description.introduction}{" "}
+                                        <br />
+                                        <br />
                                         {teacher.description.teachingExperience && ` ${teacher.description.teachingExperience}`}
+                                        <br />
+                                        <br />
                                         {teacher.description.motivation}{" "}
                                     </p>
                                     <Button
@@ -485,6 +489,7 @@ export default function TeacherProfile() {
                             open={open}
                             onOpenChange={setOpen}
                             availability={teacher.availability}
+                            teacher_timezone={teacher.timezone}
                         />
                     </div>
 

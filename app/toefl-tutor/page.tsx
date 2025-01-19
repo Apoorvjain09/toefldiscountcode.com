@@ -173,7 +173,6 @@ export default function TutorListing() {
                 const storedLogInTime = localStorage.getItem("Old_LogIN_time");
 
                 const currentTime = new Date().getTime();
-                localStorage.setItem("New_LogIN_time", currentTime.toString());
 
                 if (storedCurrencyData && storedGeoData && storedLogInTime) {
                     const logInTimeDifference = currentTime - parseInt(storedLogInTime, 10);
@@ -197,12 +196,12 @@ export default function TutorListing() {
                 localStorage.setItem("geoData", JSON.stringify(geoData));
 
                 const userCountry = geoData.country;
-
                 const userCurrency = currencyMap[userCountry] || "USD";
                 setUserCurrency(userCurrency);
 
                 const currencyResponse = await fetch(`https://api.exchangerate-api.com/v4/latest/USD`);
                 const currencyData = await currencyResponse.json();
+                localStorage.setItem("currencyData", JSON.stringify(currencyData));
                 setCurrencyRates(currencyData.rates);
 
                 localStorage.setItem("Old_LogIN_time", currentTime.toString());
@@ -213,7 +212,6 @@ export default function TutorListing() {
 
         fetchUserLocationAndCurrency();
     }, []);
-
 
     React.useEffect(() => {
         const applyFilters = () => {
@@ -590,11 +588,11 @@ export default function TutorListing() {
             </div>
 
             <div className="flex flex-wrap gap-4 mb-8 items-center text-gray-500">
-                <Button variant="outline" className="gap-2">
+                <Button disabled={true} variant="outline" className="gap-2">
                     Specialties
                     <ChevronDown className="h-4 w-4" />
                 </Button>
-                <Button variant="outline" className="gap-2">
+                <Button disabled={true} variant="outline" className="gap-2">
                     <Globe2 className="h-4 w-4" />
                     Also speaks
                     <ChevronDown className="h-4 w-4" />
@@ -769,6 +767,7 @@ export default function TutorListing() {
                                     open={open}
                                     onOpenChange={setOpen}
                                     availability={tutor.availability}
+                                    teacher_timezone={tutor.timezone}
                                 />
                             </Card>
                         )

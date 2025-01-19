@@ -29,7 +29,10 @@ import { Upload, User, BadgeIcon as Certificate, GraduationCap, FileText, Video,
 import { SignInButton, useUser } from "@clerk/nextjs"
 import { doc, setDoc } from "firebase/firestore"
 import { db } from "@/firebase"
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogTitle } from "@/components/ui/dialog"
+import { getAllTimezones, getTimezone, getCountry } from 'countries-and-timezones';
+import { FaSpinner } from "react-icons/fa"
+import Link from "next/link"
 
 const formSchema = z.object({
     firstName: z.string().min(2).max(50),
@@ -85,6 +88,9 @@ export default function TeacherSignup() {
     const { user, isSignedIn } = useUser();
     const [activeTab, setActiveTab] = React.useState("about")
     const [submitted, setSubmitted] = React.useState(false)
+    const [timezoneOptions, setTimezoneOptions] = React.useState<string[]>([]);
+    const [fillReqiredDetailsNotification, setFillReqiredDetailsNotification] = React.useState(false);
+    const [loading, setLoading] = React.useState(false);
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -163,462 +169,16 @@ export default function TeacherSignup() {
         name: "availability",
     });
 
-    const timezoneOptions = [
-        "17:00 (GMT) - Africa, Abidjan",
-        "17:00 (GMT) - Africa, Accra",
-        "20:00 (GMT+3) - Africa, Addis Ababa",
-        "18:00 (GMT+1) - Africa, Algiers",
-        "20:00 (GMT+3) - Africa, Asmara",
-        "17:00 (GMT) - Africa, Bamako",
-        "18:00 (GMT+1) - Africa, Bangui",
-        "17:00 (GMT) - Africa, Banjul",
-        "17:00 (GMT) - Africa, Bissau",
-        "19:00 (GMT+2) - Africa, Blantyre",
-        "18:00 (GMT+1) - Africa, Brazzaville",
-        "19:00 (GMT+2) - Africa, Bujumbura",
-        "19:00 (GMT+2) - Africa, Cairo",
-        "18:00 (GMT+1) - Africa, Casablanca",
-        "18:00 (GMT+1) - Africa, Ceuta",
-        "17:00 (GMT) - Africa, Conakry",
-        "17:00 (GMT) - Africa, Dakar",
-        "20:00 (GMT+3) - Africa, Dar es_Salaam",
-        "20:00 (GMT+3) - Africa, Djibouti",
-        "18:00 (GMT+1) - Africa, Douala",
-        "18:00 (GMT+1) - Africa, Laayoune",
-        "17:00 (GMT) - Africa, Freetown",
-        "19:00 (GMT+2) - Africa, Gaborone",
-        "19:00 (GMT+2) - Africa, Harare",
-        "19:00 (GMT+2) - Africa, Johannesburg",
-        "19:00 (GMT+2) - Africa, Juba",
-        "20:00 (GMT+3) - Africa, Kampala",
-        "19:00 (GMT+2) - Africa, Khartoum",
-        "19:00 (GMT+2) - Africa, Kigali",
-        "18:00 (GMT+1) - Africa, Kinshasa",
-        "18:00 (GMT+1) - Africa, Lagos",
-        "18:00 (GMT+1) - Africa, Libreville",
-        "17:00 (GMT) - Africa, Lome",
-        "18:00 (GMT+1) - Africa, Luanda",
-        "19:00 (GMT+2) - Africa, Luxembourg",
-        "19:00 (GMT+2) - Africa, Lusaka",
-        "18:00 (GMT+1) - Africa, Malabo",
-        "19:00 (GMT+2) - Africa, Maputo",
-        "19:00 (GMT+2) - Africa, Maseru",
-        "19:00 (GMT+2) - Africa, Mbabane",
-        "20:00 (GMT+3) - Africa, Mogadishu",
-        "17:00 (GMT) - Africa, Monrovia",
-        "20:00 (GMT+3) - Africa, Nairobi",
-        "18:00 (GMT+1) - Africa, N'Djamena",
-        "18:00 (GMT+1) - Africa, Niamey",
-        "17:00 (GMT) - Africa, Nouakchott",
-        "17:00 (GMT) - Africa, Ouagadougou",
-        "18:00 (GMT+1) - Africa, Porto",
-        "17:00 (GMT) - Africa, Sao Tome",
-        "17:00 (GMT) - Africa, Timbuktu",
-        "19:00 (GMT+2) - Africa, Tripoli",
-        "18:00 (GMT+1) - Africa, Tunisia",
-        "19:00 (GMT+2) - Africa, Windhoek",
-        "07:00 (HAST) - America, Adak",
-        "08:00 (AKST) - America, Anchorage",
-        "13:00 (AST) - America, Anguilla",
-        "13:00 (AST) - America, Antigua",
-        "14:00 (GMT-3) - America, Argentina",
-        "13:00 (AST) - America, Aruba",
-        "14:00 (GMT-3) - America, Asuncion",
-        "12:00 (EST) - America, Atikokan",
-        "14:00 (GMT-3) - America, Bahia",
-        "11:00 (CST) - America, Bahia Banderas",
-        "13:00 (AST) - America, Barbados",
-        "14:00 (GMT-3) - America, Belem",
-        "11:00 (CST) - America, Belize",
-        "13:00 (AST) - America, Blanc",
-        "13:00 (GMT-4) - America, Boa Vista",
-        "12:00 (GMT-5) - America, Bogota",
-        "10:00 (MST) - America, Boise",
-        "10:00 (MST) - America, Cambridge Bay",
-        "13:00 (GMT-4) - America, Campo Grande",
-        "12:00 (EST) - America, Cancun",
-        "13:00 (GMT-4) - America, Caracas",
-        "14:00 (GMT-3) - America, Cayenne",
-        "12:00 (EST) - America, Cayman",
-        "11:00 (CST) - America, Chicago",
-        "11:00 (CST) - America, Chihuahua",
-        "12:00 (EST) - America, Coral Harbour",
-        "11:00 (CST) - America, Costa Rica",
-        "10:00 (MST) - America, Creston",
-        "13:00 (GMT-4) - America, Cuiaba",
-        "13:00 (AST) - America, Curacao",
-        "17:00 (GMT) - America, Denmark Harbour",
-        "10:00 (GMT-7) - America, Dawson",
-        "10:00 (MST) - America, Dawson Creek",
-        "10:00 (MST) - America, Denver",
-        "12:00 (EST) - America, Detroit",
-        "13:00 (AST) - America, Dominica",
-        "10:00 (MST) - America, Edmonton",
-        "12:00 (GMT-5) - Americas, Eirunepe",
-        "11:00 (CST) - America, El Salvador",
-        "09:00 (PST) - America, Ensenada",
-        "14:00 (GMT-3) - America, Fortaleza",
-        "10:00 (MST) - America, Fort Nelson",
-        "13:00 (AST) - America, Glace Bay",
-        "15:00 (GMT-2) - America, Godthab",
-        "13:00 (AST) - America, Goose Bay",
-        "12:00 (EST) - America, Grand Turk",
-        "13:00 (AST) - America, Grenada",
-        "13:00 (AST) - America, Guadeloupe",
-        "11:00 (CST) - America, Guatemala",
-        "12:00 PM (GMT-5) - America, Guayaquil",
-        "13:00 (GMT-4) - America, Guyana",
-        "13:00 (AST) - America, Halifax",
-        "12:00 (GMT-5) - America, Havana",
-        "10:00 (GMT-7) - America, Hermosillo",
-        "11:00 (CST) - America, Indiana",
-        "12:00 (EST) - America, Indiana",
-        "10:00 (MST) - America, Inuvik",
-        "12:00 (EST) - America, Iqaluit",
-        "12:00 (EST) - America, Jamaica",
-        "08:00 (AKST) - America, Juneau",
-        "12:00 (EST) - America, Kentucky",
-        "13:00 (AST) - America, Kralendijk",
-        "13:00 (GMT-4) - America, La Paz",
-        "12:00 (GMT-5) - America, Lima",
-        "09:00 (PST) - America, Los Angeles",
-        "13:00 (AST) - America, Lower Princes",
-        "14:00 (GMT-3) - America, Maceio",
-        "11:00 (CST) - America, Managua",
-        "13:00 (GMT-4) - America, Manaus",
-        "13:00 (AST) - America, Marigot",
-        "13:00 (AST) - America, Martinique",
-        "11:00 (CST) - America, Matamoros",
-        "10:00 AM (GMT-7) - America, Mazatlan",
-        "11:00 (CST) - America, Menominee",
-        "11:00 (CST) - America, Merida",
-        "08:00 (AKST) - America, Thunder",
-        "11:00 (CST) - America, Mexico City",
-        "14:00 (GMT-3) - America, Miquelon",
-        "13:00 (AST) - America, Moncton",
-        "11:00 (CST) - America, Monterrey",
-        "14:00 (GMT-3) - America, Montevideo",
-        "12:00 (EST) - America, Montreal",
-        "13:00 (AST) - America, Montserrat",
-        "12:00 (EST) - America, Nassau",
-        "12:00 (EST) - America, New York",
-        "12:00 (EST) - America, Nipigon",
-        "08:00 (AKST) - America, Name",
-        "15:00 (GMT-2) - America, Noronha",
-        "11:00 (CST) - America, North Dakota",
-        "11:00 (CST) - America, Ojinaga",
-        "12:00 (EST) - America, Panama",
-        "12:00 (EST) - America, Pangnirtung",
-        "14:00 (GMT-3) - America, Paramaribo",
-        "10:00 (MST) - America, Phoenix",
-        "12:00 (EST) - America, Port",
-        "12:00 (GMT-5) - America, Rio Branco",
-        "13:00 (AST) - America, Port of_Spain",
-        "13:00 (GMT-4) - America, Porto Velho",
-        "13:00 (AST) - America, Puerto Rico",
-        "2:00 PM (GMT-3) - America, Sands Point",
-        "11:00 (CST) - America, Rainy River",
-        "11:00 (CST) - America, Rankin Inlet",
-        "14:00 (GMT-3) - America, Recife",
-        "11:00 (CST) - America, Queen",
-        "11:00 (CST) - America, Resolute",
-        "14:00 (GMT-3) - America, Rosario",
-        "09:00 (PST) - America, Tijuana",
-        "14:00 (GMT-3) - America, Santarem",
-        "2:00 PM (GMT-3) - America, James",
-        "13:00 (AST) - America, Santo Domingo",
-        "14:00 (GMT-3) - America, Sao Paulo",
-        "15:00 (GMT-2) - America, Scoresbysund",
-        "08:00 (AKST) - America, Sitka",
-        "13:00 (AST) - America, St Barthelemy",
-        "13:30 (GMT-3:30) - America, St Johns",
-        "13:00 (AST) - America, St Kitts",
-        "13:00 (AST) - America, St Lucia",
-        "13:00 (AST) - America, St Thomas",
-        "13:00 (AST) - America, St Vincent",
-        "11:00 (CST) - America, Swift Current",
-        "11:00 AM (CST) - America, Tegucigalpa",
-        "13:00 (AST) - America, Thule",
-        "12:00 (EST) - America, Thunder Bay",
-        "12:00 (EST) - America, Toronto",
-        "13:00 (AST) - America, Tortola",
-        "09:00 (PST) - America, Vancouver",
-        "10:00 (GMT-7) - America, Whitehorse",
-        "11:00 (CST) - America, Winnipeg",
-        "08:00 (AKST) - America, Yakutat",
-        "10:00 (MST) - America, Yellowknife",
-        "01:00 (GMT+8) - Antarctica, Casey",
-        "00:00 (GMT+7) - Antarctica, Davis",
-        "03:00 (GMT+10) - Antarctica, DumontDUrville",
-        "04:00 (GMT+11) - Antarctica, Macquarie",
-        "22:00 (GMT+5) - Antarctica, Mawson",
-        "06:00 (GMT+13) - Antarctica, McMurdo",
-        "14:00 (GMT-3) - Antarctica, Palmer",
-        "14:00 (GMT-3) - Antarctica, Rothera",
-        "20:00 (GMT+3) - Antarctica, Syowa",
-        "17:00 (GMT) - Antarctica, Troll",
-        "22:00 (GMT+5) - Antarctica, Vostok",
-        "18:00 (GMT+1) - Arctic, Longyearbyen",
-        "20:00 (GMT+3) - Asia, Aden",
-        "22:00 (GMT+5) - Asia, Almaty",
-        "20:00 (GMT+3) - Asia, Amman",
-        "05:00 (GMT+12) - Asia, Anadyr",
-        "22:00 (GMT+5) - Asia, Aqtau",
-        "22:00 (GMT+5) - Asia, Aqtobe",
-        "22:00 (GMT+5) - Asia, Ashgabat",
-        "22:00 (GMT+5) - Asia, Atyrau",
-        "20:00 (GMT+3) - Asia, Baghdad",
-        "20:00 (GMT+3) - Asia, Bahrain",
-        "21:00 (GMT+4) - Asia, Baku",
-        "00:00 (GMT+7) - Asia, Bangkok",
-        "00:00 (GMT+7) - Asia, Barnaul",
-        "19:00 (GMT+2) - Asia, Beirut",
-        "23:00 (GMT+6) - Asia, Bishkek",
-        "01:00 (GMT+8) - Asia, Brunei",
-        "22:30 (GMT+5:30) - Asia, Kolkata",
-        "02:00 (GMT+9) - Asia, Chita",
-        "01:00 (GMT+8) - Asia, Choibalsan",
-        "01:00 (GMT+8) - Asia, Chongqing",
-        "22:30 (GMT+5:30) - Asia, Colombo",
-        "23:00 (GMT+6) - Asia, Dhaka",
-        "20:00 (GMT+3) - Asia, Damascus",
-        "02:00 (GMT+9) - Asia, No",
-        "21:00 (GMT+4) - Asia, Dubai",
-        "22:00 (GMT+5) - Asia, Dushanbe",
-        "19:00 (GMT+2) - Asia, Famous",
-        "19:00 (GMT+2) - Asia, Gaza",
-        "01:00 (GMT+8) - Asia, Harbin",
-        "19:00 (GMT+2) - Asia, Hebron",
-        "00:00 (GMT+7) - Asia, Ho Chi Minh",
-        "01:00 (GMT+8) - Asia, Hong Kong",
-        "00:00 (GMT+7) - Asia, Main",
-        "01:00 (GMT+8) - Asia, Irkutsk",
-        "20:00 (GMT+3) - Asia, Istanbul",
-        "00:00 (GMT+7) - Asia, Jakarta",
-        "02:00 (GMT+9) - Asia, Jayapura",
-        "19:00 (GMT+2) - Asia, Jerusalem",
-        "21:30 (GMT+4:30) - Asia, Kabul",
-        "05:00 (GMT+12) - Asia, Kamchatka",
-        "22:00 (GMT+5) - Asia, Karachi",
-        "23:00 (GMT+6) - Asia, Kashgar",
-        "22:45 (GMT+5:45) - Asia, Kathmandu",
-        "02:00 (GMT+9) - Asia, Khandyga",
-        "00:00 (GMT+7) - Asia, Krasnoyarsk",
-        "01:00 (GMT+8) - Asia, Kuala Lumpur",
-        "01:00 (GMT+8) - Asia, Kuching",
-        "20:00 (GMT+3) - Asia, Kuwait",
-        "01:00 (GMT+8) - Asia, Macau",
-        "04:00 (GMT+11) - Asia, Magadan",
-        "01:00 (GMT+8) - Asia, Makassar",
-        "01:00 (GMT+8) - Asia, Manila",
-        "21:00 (GMT+4) - Asia, Muscat",
-        "19:00 (GMT+2) - Asia, Nicosia",
-        "00:00 (GMT+7) - Asia, Novokuznetsk",
-        "00:00 (GMT+7) - Asia, Novosibirsk",
-        "23:00 (GMT+6) - Asia, Omsk",
-        "10:00 PM (GMT+5) - Asia, Oral",
-        "00:00 (GMT+7) - Asia, Phnom Penh",
-        "00:00 (GMT+7) - Asia, Pontianak",
-        "02:00 (GMT+9) - Asia, Pyongyang",
-        "20:00 (GMT+3) - Asia, Qatar",
-        "22:00 (GMT+5) - Asia, Kyzylorda",
-        "23:30 (GMT+6:30) - Asia, Yangon",
-        "20:00 (GMT+3) - Asia, Riyadh",
-        "04:00 (GMT+11) - Asia, Sakhalin",
-        "22:00 (GMT+5) - Asia, Samarkand",
-        "02:00 (GMT+9) - Asia, Seoul",
-        "01:00 (GMT+8) - Asia, Shanghai",
-        "01:00 (GMT+8) - Asia, Singapore",
-        "04:00 (GMT+11) - Asia, Srednekolymsk",
-        "01:00 (GMT+8) - Asia, Taipei",
-        "22:00 (GMT+5) - Asia, Tashkent",
-        "21:00 (GMT+4) - Asia, Tbilisi",
-        "20:30 (GMT+3:30) - Asia, Tehran",
-        "19:00 (GMT+2) - Asia, Tel Aviv",
-        "23:00 (GMT+6) - Asia, Thimphu",
-        "02:00 (GMT+9) - Asia, Tokyo",
-        "00:00 (GMT+7) - Asia, Tomsk",
-        "01:00 (GMT+8) - Asia, Ulaanbaatar",
-        "23:00 (GMT+6) - Asia, Urumqi",
-        "03:00 (GMT+10) - Asia, Ust",
-        "00:00 (GMT+7) - Asia, Vientiane",
-        "03:00 (GMT+10) - Asia, Vladivostok",
-        "02:00 (GMT+9) - Asia, Yakutsk",
-        "22:00 (GMT+5) - Asia, Yekaterinburg",
-        "21:00 (GMT+4) - Asia, Yerevan",
-        "16:00 (GMT-1) - Atlantic, Azores",
-        "13:00 (AST) - Atlantic, Bermuda",
-        "17:00 (GMT) - Atlantic, Canary",
-        "16:00 (GMT-1) - Atlantic, Cape Verde",
-        "17:00 (GMT) - Atlantic, Faroe",
-        "18:00 (GMT+1) - Atlantic, Jan Mayen",
-        "17:00 (GMT) - Atlantic, Madeira",
-        "17:00 (GMT) - Atlantic, Reykjavik",
-        "15:00 (GMT-2) - Atlantic, South Georgia",
-        "14:00 (GMT-3) - Atlantic, Stanley",
-        "17:00 (GMT) - Atlantic, St Helena",
-        "04:00 (GMT+11) - Australia, Sydney",
-        "03:30 (GMT+10:30) - Australia, Adelaide",
-        "03:00 (GMT+10) - Australia, Brisbane",
-        "03:30 (GMT+10:30) - Australia, Broken Hill",
-        "04:00 (GMT+11) - Australia, Currie",
-        "02:30 (GMT+9:30) - Australia, Darwin",
-        "01:45 (GMT+8:45) - Australia, Eucla",
-        "04:00 (GMT+11) - Australia, Hobart",
-        "04:00 (GMT+11) - Australia, Lord Howe",
-        "03:00 (GMT+10) - Australia, Lindeman",
-        "04:00 (GMT+11) - Australia, Melbourne",
-        "01:00 (GMT+8) - Australia, Perth",
-        "12:00 (GMT-5) - Pacific, Easter",
-        "17:00 - Etc/GMT",
-        "18:00 - Etc/GMT-1",
-        "16:00 - Etc/GMT+1",
-        "03:00 - Etc/GMT-10",
-        "07:00 - Etc/GMT+10",
-        "04:00 - Etc/GMT-11",
-        "06:00 - Etc/GMT+11",
-        "05:00 - Etc/GMT-12",
-        "05:00 - Etc/GMT+12",
-        "06:00 - Etc/GMT-13",
-        "07:00 - Etc/GMT-14",
-        "19:00 - Etc/GMT-2",
-        "15:00 - Etc/GMT+2",
-        "20:00 - Etc/GMT-3",
-        "14:00 - Etc/GMT+3",
-        "21:00 - Etc/GMT-4",
-        "13:00 - Etc/GMT+4",
-        "22:00 - Etc/GMT-5",
-        "12:00 - Etc/GMT+5",
-        "23:00 - Etc/GMT-6",
-        "11:00 - Etc/GMT+6",
-        "00:00 - Etc/GMT-7",
-        "10:00 - Etc/GMT+7",
-        "01:00 - Etc/GMT-8",
-        "09:00 - Etc/GMT+8",
-        "02:00 - Etc/GMT-9",
-        "08:00 - Etc/GMT+9",
-        "17:00 - Etc/Greenwich",
-        "17:00 - Etc/Universal",
-        "17:00 - Etc/UTC",
-        "17:00 - Etc/Zulu",
-        "18:00 (GMT+1) - Europe, Amsterdam",
-        "18:00 (GMT+1) - Europe, Andorra",
-        "21:00 (GMT+4) - Europe, Astrakhan",
-        "19:00 (GMT+2) - Europe, Athens",
-        "17:00 (GMT) - Europe, Belfast",
-        "18:00 (GMT+1) - Europe, Belgrade",
-        "18:00 (GMT+1) - Europe, Berlin",
-        "18:00 (GMT+1) - Europe, Bratislava",
-        "18:00 (GMT+1) - Europe, Brussels",
-        "19:00 (GMT+2) - Europe, Bucharest",
-        "18:00 (GMT+1) - Europe, Budapest",
-        "18:00 (GMT+1) - Europe, Busingen",
-        "19:00 (GMT+2) - Europe, Chisinau",
-        "18:00 (GMT+1) - Europe, Copenhagen",
-        "17:00 (GMT) - Europe, Dublin",
-        "18:00 (GMT+1) - Europe, Gibraltar",
-        "17:00 (GMT) - Europe, Guernsey",
-        "19:00 (GMT+2) - Europe, Helsinki",
-        "17:00 (GMT) - Europe, Isle of_Man",
-        "20:00 (GMT+3) - Europe, Istanbul",
-        "17:00 (GMT) - Europe, Jersey",
-        "19:00 (GMT+2) - Europe, Kaliningrad",
-        "20:00 (GMT+3) - Europe, Kirov",
-        "19:00 (GMT+2) - Europe, Kyiv",
-        "17:00 (GMT) - Europe, Lisbon",
-        "18:00 (GMT+1) - Europe, Ljubljana",
-        "17:00 (GMT) - Europe, London",
-        "18:00 (GMT+1) - Europe, Luxembourg",
-        "18:00 (GMT+1) - Europe, Madrid",
-        "18:00 (GMT+1) - Europe, Malta",
-        "19:00 (GMT+2) - Europe, Mariehamn",
-        "20:00 (GMT+3) - Europe, Minsk",
-        "18:00 (GMT+1) - Europe, Monaco",
-        "20:00 (GMT+3) - Europe, Moscow",
-        "19:00 (GMT+2) - Europe, Nicosia",
-        "18:00 (GMT+1) - Europe, Oslo",
-        "18:00 (GMT+1) - Europe, Paris",
-        "18:00 (GMT+1) - Europe, Podgorica",
-        "18:00 (GMT+1) - Europe, Prague",
-        "19:00 (GMT+2) - Europe, Riga",
-        "18:00 (GMT+1) - Europe, Rome",
-        "21:00 (GMT+4) - Europe, Samara",
-        "18:00 (GMT+1) - Europe, San Marino",
-        "18:00 (GMT+1) - Europe, Sarajevo",
-        "21:00 (GMT+4) - Europe, Saratov",
-        "20:00 (GMT+3) - Europe, Simferopol",
-        "18:00 (GMT+1) - Europe, Skopje",
-        "19:00 (GMT+2) - Europe, Sofia",
-        "18:00 (GMT+1) - Europe, Stockholm",
-        "19:00 (GMT+2) - Europe, Tallinn",
-        "18:00 (GMT+1) - Europe, Tirana",
-        "19:00 (GMT+2) - Europe, Tiraspol",
-        "21:00 (GMT+4) - Europe, Ulyanovsk",
-        "19:00 (GMT+2) - Europe, Uzhgorod",
-        "18:00 (GMT+1) - Europe, Vaduz",
-        "18:00 (GMT+1) - Europe, Vatican",
-        "18:00 (GMT+1) - Europe, Vienna",
-        "19:00 (GMT+2) - Europe, Vilnius",
-        "20:00 (GMT+3) - Europe, Volgograd",
-        "18:00 (GMT+1) - Europe, Warsaw",
-        "18:00 (GMT+1) - Europe, Zagreb",
-        "19:00 (GMT+2) - Europe, Zaporozhye",
-        "18:00 (GMT+1) - Europe, Zurich",
-        "17:00 - GMT",
-        "20:00 (GMT+3) - Indian, Antananarivo",
-        "23:00 (GMT+6) - Indian, Chagos",
-        "00:00 (GMT+7) - Indian, Christmas",
-        "23:30 (GMT+6:30) - Indian, Cocos",
-        "20:00 (GMT+3) - Indian, Comoro",
-        "22:00 (GMT+5) - Indian, Kerguelen",
-        "21:00 (GMT+4) - Indian, Mahe",
-        "22:00 (GMT+5) - Indian, Maldives",
-        "21:00 (GMT+4) - Indian, Mauritius",
-        "20:00 (GMT+3) - Indian, Mayotte",
-        "21:00 (GMT+4) - Indian, Reunion",
-        "06:00 (GMT+13) - Pacific, Apia",
-        "06:00 (GMT+13) - Pacific, Auckland",
-        "04:00 (GMT+11) - Pacific, Bougainville",
-        "06:45 (GMT+13:45) - Pacific, Chatham",
-        "03:00 (GMT+10) - Pacific, Chuuk",
-        "04:00 (GMT+11) - Pacific, Efate",
-        "06:00 (GMT+13) - Pacific, Enderbury",
-        "06:00 (GMT+13) - Pacific, Fakaofo",
-        "05:00 (GMT+12) - Pacific, Fiji",
-        "05:00 (GMT+12) - Pacific, Funafuti",
-        "11:00 (GMT-6) - Pacific, Galapagos",
-        "08:00 (GMT-9) - Pacific, Gambier",
-        "04:00 (GMT+11) - Pacific, Guadalcanal",
-        "03:00 (GMT+10) - Pacific, Guam",
-        "07:00 (HST) - Pacific, Honolulu",
-        "07:00 (HST) - Pacific, Johnston",
-        "07:00 (GMT+14) - Pacific, Kiritimati",
-        "04:00 (GMT+11) - Pacific, Kosrae",
-        "05:00 (GMT+12) - Pacific, Kwajalein",
-        "05:00 (GMT+12) - Pacific, Majuro",
-        "07:30 (GMT-9:30) - Pacific, Marquesas",
-        "06:00 (GMT-11) - Pacific, Midway",
-        "05:00 (GMT+12) - Pacific, Nauru",
-        "06:00 (GMT-11) - Pacific, Niue",
-        "05:00 (GMT+12) - Pacific, Norfolk",
-        "04:00 (GMT+11) - Pacific, Noumea",
-        "06:00 (GMT-11) - Pacific, Pago Pago",
-        "02:00 (GMT+9) - Pacific, Palau",
-        "09:00 (GMT-8) - Pacific, Pitcairn",
-        "04:00 (GMT+11) - Pacific, Pohnpei",
-        "03:00 (GMT+10) - Pacific, Port Moresby",
-        "07:00 (GMT-10) - Pacific, Rarotonga",
-        "03:00 (GMT+10) - Pacific, Saipan",
-        "07:00 (GMT-10) - Pacific, Tahiti",
-        "05:00 (GMT+12) - Pacific, Tarawa",
-        "06:00 (GMT+13) - Pacific, Tongatapu",
-        "05:00 (GMT+12) - Pacific, Wake",
-        "05:00 (GMT+12) - Pacific, Wallis",
-    ]
+    React.useEffect(() => {
+        // Fetch all timezones and set options
+        const timezones = Object.keys(getAllTimezones());
+        setTimezoneOptions(timezones);
+    }, []);
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
+        setFillReqiredDetailsNotification(false)
+        setLoading(true)
         try {
-
             if (!user) {
                 throw new Error("User not authenticated");
             }
@@ -631,9 +191,11 @@ export default function TeacherSignup() {
             console.log("Data saved successfully!");
             alert("Your details have been saved.");
             setSubmitted(true);
+            setLoading(false)
         } catch (error) {
             console.error("Error saving data:", error);
             alert("Failed to save your details. Please try again.");
+            setLoading(false);
         }
     }
 
@@ -1365,7 +927,7 @@ export default function TeacherSignup() {
 
                                 <TabsContent value="availability" className="mt-6">
                                     <div className="space-y-4 flex flex-col mx-auto w-[80%] sm:w-[50%]">
-                                        <h2 className="text-2xl font-bold">Availability</h2>
+                                        <h2 className="text-2xl font-bold">Availability (24 Hour Clock)</h2>
                                         <FormField
                                             control={form.control}
                                             name="timezone"
@@ -1377,11 +939,20 @@ export default function TeacherSignup() {
                                                             <SelectValue placeholder="Select timezone" />
                                                         </SelectTrigger>
                                                         <SelectContent>
-                                                            {timezoneOptions.map((timezone, index) => (
-                                                                <SelectItem key={index} value={timezone}>
-                                                                    {timezone}
-                                                                </SelectItem>
-                                                            ))}
+                                                            {timezoneOptions.map((timezone: string, index: number) => {
+                                                                // Get the country for the timezone
+                                                                const timezoneData = getTimezone(timezone);
+                                                                const country_tld = timezoneData?.countries?.[0] || 'Unknown Country';
+                                                                const country_name = getCountry(country_tld)?.name || 'Unknown Country';
+                                                                // const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                                                                // console.log("timezoneName", timezoneName)
+                                                                return (
+                                                                    <SelectItem key={index} value={timezone}>
+                                                                        {/* {country_name} -  */}
+                                                                        {timezone}
+                                                                    </SelectItem>
+                                                                );
+                                                            })}
                                                         </SelectContent>
                                                     </Select>
                                                     <FormMessage />
@@ -1507,13 +1078,16 @@ export default function TeacherSignup() {
                                             ) : (
                                                 <SignInButton><Button>Sign In</Button></SignInButton>
                                             )}
-
                                         </>
                                     ) : (
-                                        <Button type="submit">Submit</Button>
+                                        <>
+                                            {fillReqiredDetailsNotification && "(Please fill all required details)"}
+                                            <Button onClick={() => { setFillReqiredDetailsNotification(true) }} type="submit">
+                                                {loading ? (<div className="animate-spin"><FaSpinner /></div>) : ("Submit")}
+                                            </Button>
+                                        </>
                                     )}
                                 </div>
-
                             </form>
                         </Form>
                     </Tabs>
@@ -1525,8 +1099,13 @@ export default function TeacherSignup() {
                             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                             <DialogTitle className="text-2xl font-bold mb-2">Thank You!</DialogTitle>
                             <DialogDescription>
-                                Your enquiry has been submitted successfully. We'll get back to you soon.
+                                Your details has been submitted successfully. Profile will be active within 24hr after review.
                             </DialogDescription>
+                            <DialogFooter>
+                                <Link href="/toefl-tutor">
+                                    <Button>Go to homepage</Button>
+                                </Link>
+                            </DialogFooter>
                         </DialogContent>
                     </Dialog>
                 )}

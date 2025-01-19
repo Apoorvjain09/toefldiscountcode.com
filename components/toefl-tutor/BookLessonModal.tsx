@@ -13,7 +13,8 @@ interface BookLessonModalProps {
     onOpenChange: (open: boolean) => void
     teacherAvatar?: string
     teacherName?: string
-    availability: any
+    availability: any;
+    teacher_timezone: any;
 }
 
 export function BookLessonModal({
@@ -21,10 +22,23 @@ export function BookLessonModal({
     onOpenChange,
     teacherAvatar = '/placeholder.svg?height=40&width=40',
     teacherName = 'Teacher',
-    availability
+    availability,
+    teacher_timezone
 }: BookLessonModalProps) {
     const [selectedTime, setSelectedTime] = React.useState<string | null>(null)
     const [ShowPaymetButton, setShowPaymetButton] = React.useState(false)
+    const [userTimezone, setUserTimezone] = React.useState<string>("");
+    const [userTimezoneOffset, setUserTimezoneOffset] = React.useState<string>("");
+
+    React.useEffect(() => {
+        // Retrieve user's timezone from localStorage
+        const storedGeoData = localStorage.getItem("geoData");
+        if (storedGeoData) {
+            const geoData = JSON.parse(storedGeoData);
+            setUserTimezone(geoData.timezone || "UTC");
+            setUserTimezoneOffset(geoData.utcOffset || "");
+        }
+    }, []);
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -43,6 +57,9 @@ export function BookLessonModal({
                 </DialogHeader>
                 <ScheduleView
                     availability={availability}
+                    teacher_timezone={teacher_timezone}
+                    user_timezone={userTimezone}
+                    userTimezone_Offset={userTimezoneOffset}
                     onTimeSelect={setSelectedTime}
                 />
 

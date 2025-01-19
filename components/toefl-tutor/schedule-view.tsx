@@ -11,6 +11,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select'
+import { getAllTimezones, getTimezone, getCountry } from 'countries-and-timezones';
 
 interface TimeSlot {
     from: string
@@ -23,15 +24,27 @@ interface DaySchedule {
 }
 
 interface ScheduleViewProps {
-    availability: DaySchedule[]
-    onTimeSelect?: (time: string) => void
+    availability: any[];
+    teacher_timezone: string;
+    user_timezone: string;
+    onTimeSelect: (time: string) => void;
+    userTimezone_Offset: string;
 }
 
-export function ScheduleView({ availability, onTimeSelect }: ScheduleViewProps) {
+
+export function ScheduleView({ availability, teacher_timezone, user_timezone, onTimeSelect, userTimezone_Offset }: ScheduleViewProps) {
     const [currentDate, setCurrentDate] = React.useState(new Date())
     const [selectedDuration, setSelectedDuration] = React.useState('25')
     const [selectedDate, setSelectedDate] = React.useState<Date | null>(null)
     const [selectedTime, setSelectedTime] = React.useState<string | null>(null)
+    const [selectedTimezone, setSelectedTimezone] = React.useState('');
+    const [timezoneOptions, setTimezoneOptions] = React.useState<string[]>([]);
+    const [calculateTimeDifferenceStr, setCalculateTimeDifferenceStr] = React.useState<{
+        teacherTime: string;
+        userTime: string;
+        offsetDifference: string;
+    } | null>(null);
+
 
     // Get the start of the week for the current date
     const weekStart = startOfWeek(currentDate, { weekStartsOn: 1 })
@@ -68,6 +81,49 @@ export function ScheduleView({ availability, onTimeSelect }: ScheduleViewProps) 
 
         return Object.entries(groups).filter(([_, slots]) => slots.length > 0)
     }
+
+    function calculateTimeDifference(teacherTimezone: string, userTimezone: string) {
+        // Get timezone data for teacher and user
+        const teacherTimezoneData = getTimezone(teacherTimezone);
+        const userTimezoneData = getTimezone(userTimezone);
+
+        // Extract UTC offsets
+        const teacherOffset = teacherTimezoneData?.utcOffset || 0; // Offset in minutes
+        const userOffset = userTimezoneData?.utcOffset || 0;       // Offset in minutes
+
+        // Calculate time difference
+        const offsetDifference = userOffset - teacherOffset;
+
+        // Get the current UTC time
+        const now = new Date();
+        const utcTime = now.getTime() + now.getTimezoneOffset() * 60000; // UTC in milliseconds
+
+        // Calculate teacher and user local times
+        const teacherTime = new Date(utcTime + teacherOffset * 60000);
+        const userTime = new Date(utcTime + userOffset * 60000);
+
+        // Return formatted times
+        return {
+            teacherTime: teacherTime.toLocaleString(),
+            userTime: userTime.toLocaleString(),
+            offsetDifference: `${offsetDifference / 60} hours`
+        };
+    }
+
+    React.useEffect(() => {
+        // Fetch all timezones and set options
+        const timezones = Object.keys(getAllTimezones());
+        setTimezoneOptions(timezones);
+
+        const timeDifference = calculateTimeDifference(teacher_timezone, user_timezone);
+        setCalculateTimeDifferenceStr(timeDifference);
+
+        // console.log("Teacher Time:", result.teacherTime);
+        // console.log("User Time:", result.userTime);
+        // console.log("Offset Difference:", result.offsetDifference);
+    }, []);
+
+
 
     return (
         <div className="space-y-6">
@@ -128,9 +184,35 @@ export function ScheduleView({ availability, onTimeSelect }: ScheduleViewProps) 
             </div>
 
             {/* Timezone info */}
-            <p className="text-sm text-muted-foreground">
-                In your time zone, Asia/Kolkata (GMT +5:30)
+            <p className="text-sm text-muted-foreground flex items-center justify-center">
+                <div className='w-[40%]'>
+                    In your selected time zone:
+                </div>
+                <Select
+                    onValueChange={(value) => setSelectedTimezone(value)}
+                >
+                    <SelectTrigger className="w-[60%]">
+                        <SelectValue placeholder={user_timezone} />
+                    </SelectTrigger>
+                    <SelectContent>
+                        {timezoneOptions.map((timezone: string, index: number) => {
+                            // Get the country for the timezone
+                            const timezoneData = getTimezone(timezone);
+                            const country_tld = timezoneData?.countries?.[0] || 'Unknown Country';
+                            const country_name = getCountry(country_tld)?.name || 'Unknown Country';
+                            // const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                            // console.log("timezoneName", timezoneName)
+                            return (
+                                <SelectItem key={index} value={timezone}>
+                                    {/* {country_name} -  */}
+                                    {timezone}
+                                </SelectItem>
+                            );
+                        })}
+                    </SelectContent>
+                </Select>
             </p>
+
 
             {/* Time slots */}
             {selectedDate && (
@@ -150,19 +232,52 @@ export function ScheduleView({ availability, onTimeSelect }: ScheduleViewProps) 
                                 {timeOfDay}
                             </div>
                             <div className="grid grid-cols-3 gap-2">
-                                {slots.map((slot, index) => (
-                                    <Button
-                                        key={index}
-                                        variant={selectedTime === slot.from ? "default" : "outline"}
-                                        className="text-sm"
-                                        onClick={() => {
-                                            setSelectedTime(slot.from)
-                                            onTimeSelect?.(slot.from)
-                                        }}
-                                    >
-                                        {slot.from}
-                                    </Button>
-                                ))}
+                                {slots.map((slot, index) => {
+                                    // Parse offsetDifference as a number
+                                    const offset = calculateTimeDifferenceStr?.offsetDifference
+                                        ? parseFloat(calculateTimeDifferenceStr.offsetDifference)
+                                        : 0;
+
+                                    const totalOffsetMinutes = offset * 60; // Convert hours to minutes
+
+                                    // Convert slot.from and slot.to to adjusted times
+                                    const [fromHours, fromMinutes] = slot.from.split(':').map(Number);
+                                    const [toHours, toMinutes] = slot.to.split(':').map(Number);
+
+                                    const fromDate = new Date();
+                                    const toDate = new Date();
+
+                                    // Set the original time
+                                    fromDate.setHours(fromHours, fromMinutes);
+                                    toDate.setHours(toHours, toMinutes);
+
+                                    // Adjust by total offset in minutes
+                                    const adjustedFromTime = new Date(fromDate.getTime() + totalOffsetMinutes * 60000);
+                                    const adjustedToTime = new Date(toDate.getTime() + totalOffsetMinutes * 60000);
+
+                                    // Format adjusted times
+                                    const formattedFrom = `${String(adjustedFromTime.getHours()).padStart(2, '0')}:${String(adjustedFromTime.getMinutes()).padStart(2, '0')}`;
+                                    const formattedTo = `${String(adjustedToTime.getHours()).padStart(2, '0')}:${String(adjustedToTime.getMinutes()).padStart(2, '0')}`;
+
+                                    // Debugging Logs
+                                    console.log(`Original From: ${slot.from}, To: ${slot.to}`);
+                                    console.log(`Offset Difference (hours): ${offset}, Total Offset (minutes): ${totalOffsetMinutes}`);
+                                    console.log(`Adjusted From: ${formattedFrom}, Adjusted To: ${formattedTo}`);
+
+                                    return (
+                                        <Button
+                                            key={index}
+                                            variant={selectedTime === slot.from ? "default" : "outline"}
+                                            className="text-sm"
+                                            onClick={() => {
+                                                setSelectedTime(slot.from);
+                                                onTimeSelect?.(slot.from);
+                                            }}
+                                        >
+                                            {formattedFrom} - {formattedTo}
+                                        </Button>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}

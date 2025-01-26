@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
 import InstallPrompt from "@/components/pwa/InstallPrompt";
+import ToeflCommunityNotification from "@/components/Head/toefl-community-notification";
 
 export default function RootLayout({
   children,
@@ -23,6 +24,9 @@ export default function RootLayout({
           </head>
           <GoogleAnalyticsTracking />
           <body>
+            <div className="md:hidden">
+              <ToeflCommunityNotification />
+            </div>
             <main className="">
               <div className="p-4 lg:ml-64">
                 <div className="border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">

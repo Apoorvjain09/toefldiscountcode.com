@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,11 +21,13 @@ import {
   SelectItem,
   Select,
 } from "@/components/ui/select";
-import { useUser } from '@clerk/nextjs';
+import { useUser, useSession } from '@clerk/nextjs';
 import Alert from '@/components/ui/AlertNotification';
+import { getCountry } from "countries-and-timezones";
+import { FaSpinner } from 'react-icons/fa';
 
 const formSchema = z.object({
-  abroadPlan: z.enum(["September 2024", "January 2025", "May 2025", "September 2025", "Other"]),
+  abroadPlan: z.enum(["May 2025", "September 2025", "January 2026", "May 2026", "September 2026", "Other"]),
   studyCountry: z.enum(["USA", "Canada", "UK", "Australia", "Ireland", "Other"]),
   homeCountry: z.string().min(1),
   name: z.string().min(1),
@@ -41,11 +43,12 @@ const formSchema = z.object({
   examPlan: z.string().optional(),
 });
 
-export default function Home() {
+export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormSubmit: () => void }) {
   const [alert, setAlert] = useState<{ message: string; type: 'success' | 'error' | 'loading' | 'warning' } | null>(null);
   const [step, setStep] = useState(1);
   const { user } = useUser();
-  const userId = user?.id;
+  const [loading, setLoading] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -70,32 +73,136 @@ export default function Home() {
   const eligibilityExams = form.watch("eligibilityExams");
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+    setLoading(true)
     console.log("Form submitted with values:", values);
+    // try {
+    //   const response = await fetch('/api/send-email', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ values }),
+    //   });
+
+    //   if (response.ok) {
+    //     console.log('Email sent successfully');
+    //     setAlert({ message: 'Form submitted successfully!', type: 'success' });
+    //   } else {
+    //     const errorData = await response.json();
+    //     console.error('Failed to send email(page.tsx)', errorData);
+    //     setAlert({ message: 'Failed to submit the form. Please try again.', type: 'error' });
+    //   }
+    // } catch (error) {
+    //   console.error('Error sending email(page.tsx)', error);
+    //   setAlert({ message: 'An error occurred. Please try again.', type: 'error' });
+    // }
+
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      // Send data to ChatGPT via OpenAI API
+      const chatGptResponse = await fetch("/api/openai", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ values }),
+        body: JSON.stringify({
+          prompt: `
+            Given the following student profile:
+            ${JSON.stringify(values, null, 2)},
+            Provide a JSON response with the following:
+            1. A list of 10 shortlisted universities that best match the student's preferences, including fields like "universityName", "location", "ranking", and "acceptanceRate".
+            2. A rating of the student's profile on a scale of 1 to 10, based on their academic achievements and compatibility with their chosen program.
+            3. Suggestions for improvements that the student can make to enhance their profile.
+
+            Use the following JSON format for the response:
+            {
+              "shortlistedUniversities": [
+                {
+                  "universityName": "University of Example",
+                  "location": "City, Country",
+                  "ranking": 25,
+                  "acceptanceRate": "20%"
+                },
+                ...
+              ],
+              "profileRating": 7.5,
+              "improvements": [
+                "Improve GRE scores to at least 320.",
+                "Gain relevant work experience in the field of data science.",
+                "Participate in academic conferences to strengthen research background."
+              ]
+            }
+           `,
+        }),
       });
 
-      if (response.ok) {
-        console.log('Email sent successfully');
-        setAlert({ message: 'Form submitted successfully!', type: 'success' });
+      const data = await chatGptResponse.json();
+      if (data.success) {
+        console.log("Shortlisted Universities:", data.result);
+        setAlert({
+          message: "Universities have been shortlisted successfully!",
+          type: "success",
+        });
+        const responseData = JSON.parse(data.result);
+
+        // Store the data in localStorage
+        localStorage.setItem("universityShortlistingResponse-shortlistedUniversities", JSON.stringify(responseData.shortlistedUniversities));
+        localStorage.setItem("universityShortlistingResponse-profileRating", JSON.stringify(responseData.profileRating));
+        localStorage.setItem("universityShortlistingResponse-improvements", JSON.stringify(responseData.improvements));
+
+        setSubmitted(true)
+
+        setTimeout(() => {
+          onFormSubmit();
+        }, 1000);
+
       } else {
-        const errorData = await response.json();
-        console.error('Failed to send email(page.tsx)', errorData);
-        setAlert({ message: 'Failed to submit the form. Please try again.', type: 'error' });
+        console.error("Failed to get a response from ChatGPT:", data.error);
+        setAlert({
+          message: "Failed to shortlist universities. Please try again.",
+          type: "error",
+        });
       }
     } catch (error) {
-      console.error('Error sending email(page.tsx)', error);
-      setAlert({ message: 'An error occurred. Please try again.', type: 'error' });
+      console.error("Error sending data to ChatGPT:", error);
+      setAlert({
+        message: "An error occurred. Please try again.",
+        type: "error",
+      });
+    } finally {
+      setLoading(false)
     }
   };
 
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
+
+  useEffect(() => {
+    const fetchUserCountry = async () => {
+      if (user?.getSessions) {
+        try {
+          const sessions = await user.getSessions();
+          if (sessions.length > 0) {
+            const countryCode = sessions[0]?.latestActivity?.country;
+            if (countryCode) {
+              const countryInfo = getCountry(countryCode);
+              const countryName = countryInfo?.name || "Select country";
+              form.setValue("homeCountry", countryName);
+              form.setValue("name", user?.fullName || "");
+              form.setValue("email", user?.emailAddresses[0]?.emailAddress || "");
+            } else {
+              console.log("Country information not available");
+            }
+          } else {
+            console.log("No active sessions found");
+          }
+        } catch (error) {
+          console.error("Error fetching sessions:", error);
+        }
+      }
+    };
+
+    fetchUserCountry();
+  }, [user]);
 
 
   return (
@@ -117,8 +224,7 @@ export default function Home() {
         >
           {step === 1 && (
             <>
-              <FormField
-                control={form.control}
+              <FormField control={form.control}
                 name="abroadPlan"
                 render={({ field }) => (
                   <FormItem>
@@ -130,10 +236,11 @@ export default function Home() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent >
-                        <SelectItem value="September 2024">September 2024</SelectItem>
-                        <SelectItem value="January 2025">January 2025</SelectItem>
                         <SelectItem value="May 2025">May 2025</SelectItem>
                         <SelectItem value="September 2025">September 2025</SelectItem>
+                        <SelectItem value="January 2026">January 2026</SelectItem>
+                        <SelectItem value="May 2026">May 2026</SelectItem>
+                        <SelectItem value="September 2026">September 2026</SelectItem>
                         <SelectItem value="Other">Other</SelectItem>
                       </SelectContent>
                     </Select>
@@ -141,8 +248,7 @@ export default function Home() {
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
+              <FormField control={form.control}
                 name="studyCountry"
                 render={({ field }) => (
                   <FormItem>
@@ -392,8 +498,16 @@ export default function Home() {
               </Button>
             )}
             {step === 3 && (
-              <Button type="submit" className="w-full bg-black text-white">
-                Submit
+              <Button disabled={loading || submitted} type="submit" className="w-full bg-black text-white">
+                {loading ? (
+                  <div className="animate-spin">
+                    <FaSpinner />
+                  </div>
+                ) : submitted ? (
+                  "Hold on..."
+                ) : (
+                  "Submit"
+                )}
               </Button>
             )}
           </div>

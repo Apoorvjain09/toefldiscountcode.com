@@ -13,9 +13,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { Input } from '@/components/ui/input'
-import { db } from "@/firebase"; // Path to your firebase.ts
+import { db } from "@/firebase";
 import { collection, addDoc } from "firebase/firestore";
-
 
 
 const formSchema = z.object({
@@ -72,9 +71,9 @@ export default function ToeflVoucherHero() {
             if (!isSubmitted) {
                 setOpenModal(true);
             }
-        }, 10000); // Every 10 seconds
+        }, 15000);
 
-        return () => clearInterval(interval); // Cleanup interval on unmount
+        return () => clearInterval(interval);
     }, [isSubmitted]);
 
     return (

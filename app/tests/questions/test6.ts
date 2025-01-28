@@ -228,9 +228,9 @@ export const readingQuestions = [
         [7] One special quality of a theater performance is its immediacy. In the theater, we live in the perpetual present tense. Theater is a transitory art. A performance changes from moment to moment, and each moment is a direct, immediate adventure for the audience. The transitory nature of theater is a quality it shares with music and dance, and it sets it apart from literature and the visual arts. A novel or a painting is a fixed object; it exists as a finished product. The performing arts, on the other hand, are not objects but events. Theater occurs through time; it is an experience created by a series of sights, sounds, and impressions.
         `,
     question:
-      "Look at the part of passage 6 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This Paradoxial blend of himility and groundbreaking innovation underscores the uniqueness of thier legacy'",
+      "Look at the part of passage 6 that is displayed above. The letters (A), (B), (C), and (D) indicate where the following sentence could be added. → 'This enduring appeal of theater is a testament to its ability to connect deeply with audiences across cultures and eras.'",
     options: ["Choice A", "Choice B", "Choice C", "Choice D"],
-    answer: 3,
+    answer: 0,
   },
   {
     id: 10,

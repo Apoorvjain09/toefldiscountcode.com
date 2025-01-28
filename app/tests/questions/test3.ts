@@ -264,7 +264,7 @@ export const readingQuestions = [
             "live",
             "fight"
         ],
-        answer: 0
+        answer: 1
     },
     {
         id: 13,
@@ -294,7 +294,6 @@ export const readingQuestions = [
         ],
         answer: 2
     },
-
     {
         id: 14,
         passage: `
@@ -378,7 +377,7 @@ export const readingQuestions = [
             "estimates",
             "causes"
         ],
-        answer: 3
+        answer: 0
     },
     {
         id: 17,

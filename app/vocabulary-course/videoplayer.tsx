@@ -1,84 +1,59 @@
-import { useState, useEffect, useRef } from 'react';
-import Alert from '@/components/ui/AlertNotification';
-import VideoSkele from './LoadingSkeletonVideo';
+// components/VideoPlayer.tsx
+import React, { useState, useEffect } from 'react';
 
 interface VideoPlayerProps {
   videoUrl: string;
+  thumbnailUrl: string; // Add a thumbnailUrl prop
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl }) => {
-  const [alert, setAlert] = useState<{ message: string; type: 'success' | 'error' | 'loading' | 'warning' }>({ message: 'Loading video...', type: 'loading' });
-  const [showSkeleton, setShowSkeleton] = useState<boolean>(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, thumbnailUrl }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const videoElement = videoRef.current;
-    let internetConnectionTimeout: NodeJS.Timeout;
+    // CSS to hide the pop-out button
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120px; /* Adjust size to cover the button */
+        height: 80px;  /* Adjust size to cover the button */
+        background: transparent;
+        z-index: 10;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
 
-    if (videoElement) {
-      // Show loading alert
-      setAlert({ message: 'Loading video...', type: 'loading' });
+  const handlePlayVideo = () => {
+    setIsPlaying(true);
+  };
 
-      const handleCanPlay = () => {
-        // Show success alert
-        setAlert({ message: 'Video loaded', type: 'success' });
-        clearTimeout(internetConnectionTimeout);
-        setTimeout(() => {
-          setAlert({ message: '', type: 'loading' });
-          setShowSkeleton(false);
-        }, 2000);
-      };
-
-      const handleError = () => {
-        // Show error alert
-        setAlert({ message: 'Failed to load video', type: 'error' });
-        clearTimeout(internetConnectionTimeout);
-        setTimeout(() => setAlert({ message: '', type: 'loading' }), 2000);
-      };
-
-      videoElement.addEventListener('canplay', handleCanPlay);
-      videoElement.addEventListener('error', handleError);
-
-      // Reset the video element and load the new source
-      videoElement.pause();
-      videoElement.src = videoUrl;
-      videoElement.load();
-
-      // Show skeleton for 8 seconds
-      setShowSkeleton(true);
-      const skeletonTimeout = setTimeout(() => {
-        setShowSkeleton(false);
-      }, 40000);
-
-      // Show "Check Internet Connection" alert if video is not loaded after 8 seconds
-      internetConnectionTimeout = setTimeout(() => {
-        setAlert({ message: 'Please Wait... Loading!', type: 'warning' });
-      }, 20000);
-
-      // Clean up event listeners and timeouts
-      return () => {
-        videoElement.removeEventListener('canplay', handleCanPlay);
-        videoElement.removeEventListener('error', handleError);
-        clearTimeout(skeletonTimeout);
-        clearTimeout(internetConnectionTimeout);
-      };
-    }
-  }, [videoUrl]);
+  const modifiedUrl = videoUrl.replace('/view', '/preview');
 
   return (
-    <div className="w-full">
-      {alert.message && (
-        <Alert
-          message={alert.message}
-          type={alert.type}
-          onClose={() => setAlert({ message: '', type: 'loading' })}
-        />
+    <div className="w-full h-[30vh] sm:h-[90vh] flex flex-col items-center justify-center relative">
+      {isPlaying ? (
+        <>
+          <iframe
+            src={modifiedUrl}
+            width="100%"
+            height="100%"
+            allow="autoplay"
+            className="border rounded-lg"
+            allowFullScreen
+          ></iframe>
+          <div className="video-overlay"></div>
+        </>
+      ) : (
+        <div className="w-full h-full flex items-center justify-center cursor-pointer" onClick={handlePlayVideo}>
+          <img src={thumbnailUrl} alt="Video Thumbnail" className="w-full h-auto rounded-lg" />
+        </div>
       )}
-      {showSkeleton && <VideoSkele />}
-      <video ref={videoRef} controls className={`w-full ${showSkeleton ? 'hidden' : 'block'}`} controlsList="nodownload">
-        <source src={videoUrl} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
     </div>
   );
 };

@@ -49,7 +49,7 @@ const CoursePage: React.FC = () => {
       </Suspense>
       <div className="w-full p-4">
         <Suspense fallback={<div>Loading Video Player...</div>}>
-          <VideoPlayer videoUrl={currentLecture.videoUrl} />
+          <VideoPlayer videoUrl={currentLecture.videoUrl} thumbnailUrl='' />
         </Suspense>
       </div>
     </div>

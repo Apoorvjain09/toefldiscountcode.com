@@ -22,7 +22,7 @@ export const courseData: { sections: Section[] } = {
                 {
                     title: 'Genesis and Apocalypse',
                     lectures: [
-                        { id: 1, title: 'Lecture 1', videoUrl: 'https://mja.in/uploads/course_video/30Jul2020030757Genesis-and-Apocalypse--Part-1.mp4' },
+                        { id: 1, title: 'Lecture 1', videoUrl: 'https://drive.google.com/file/d/1-k7H_l5hF2Br6gLaH26Zz00HQjdY8iek/view?usp=drive_link' },
                         { id: 2, title: 'Lecture 2', videoUrl: 'https://mja.in/uploads/course_video/30Jul2020030701Genesis-and-Apocalypse--Part-2.mp4' },
                         { id: 3, title: 'Lecture 3', videoUrl: 'https://mja.in/uploads/course_video/30Jul2020030741Genesis-and-Apocalypse--Part-3.mp4' },
                         { id: 4, title: 'Lecture 4', videoUrl: 'https://mja.in/uploads/course_video/30Jul2020040751Genesis-and-Apocalypse--Part-4.mp4' },

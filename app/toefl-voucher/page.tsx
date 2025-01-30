@@ -34,7 +34,6 @@ const Page = () => {
             router.push("/toefl-voucher/available-codes");
           }
         } catch (error) {
-          setLoading(false);
           console.error("Failed to fetch geo data:", error);
         }
       } else {
@@ -44,9 +43,10 @@ const Page = () => {
           router.push("/toefl-voucher/available-codes");
         } else {
           console.log("Using cached geo data:", geoData);
-          setLoading(false);
         }
       }
+
+      setLoading(false);
     };
 
     fetchGeoData();

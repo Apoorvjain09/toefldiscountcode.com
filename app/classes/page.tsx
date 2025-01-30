@@ -1,6 +1,7 @@
 import { ModernSeriesPage } from "@/components/modern-series-page";
-import CalendarComponent from "./Calendar";
+import WhiteLabelClassSchedule from "./WhiteLabelClassSchedule";
 import type { Metadata } from "next";
+
 
 export const metadata: Metadata = {
     title: "TOEFL Classes | Expert TOEFL Coaching Online",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
         url: "https://toeflgoglobal.com/classes",
         images: [
             {
-                url: "/assets/goglobal1.webp", // Same image as requested
+                url: "/assets/goglobal1.webp",
                 width: 800,
                 height: 600,
                 alt: "TOEFL Classes Background",
@@ -26,8 +27,8 @@ export const metadata: Metadata = {
         title: "TOEFL Classes | Expert TOEFL Coaching Online",
         description:
             "Boost your TOEFL preparation with expert-led online classes. Flexible schedules and tailored study plans to help you succeed.",
-        images: ["/assets/goglobal1.webp"], // Same image as requested
-        creator: "@MJ_Study_Abroad", // Replace with your Twitter handle
+        images: ["/assets/goglobal1.webp"],
+        creator: "@MJ_Study_Abroad",
     },
 };
 
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 export default function Classes() {
     return (
         <>
-            <CalendarComponent />
+            <WhiteLabelClassSchedule />
             <ModernSeriesPage />
         </>
     )

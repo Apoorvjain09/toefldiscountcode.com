@@ -1,5 +1,6 @@
 // components/VideoPlayer.tsx
 import React, { useState, useEffect } from 'react';
+import Alert from '@/components/ui/AlertNotification';
 
 interface VideoPlayerProps {
   videoUrl: string;
@@ -7,7 +8,10 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, thumbnailUrl }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [error, setError] = useState(false);
+
+
 
   useEffect(() => {
     // CSS to hide the pop-out button
@@ -33,10 +37,17 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, thumbnailUrl }) => 
     setIsPlaying(true);
   };
 
+  const handleVideoError = () => {
+    setError(true);
+  };
+
   const modifiedUrl = videoUrl.replace('/view', '/preview');
 
   return (
     <div className="w-full h-[30vh] sm:h-[90vh] flex flex-col items-center justify-center relative">
+      {error && (
+        <Alert message="Error loading video. Please try again later." type="error" onClose={() => setError(false)} />
+      )}
       {isPlaying ? (
         <>
           <iframe
@@ -46,6 +57,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, thumbnailUrl }) => 
             allow="autoplay"
             className="border rounded-lg"
             allowFullScreen
+            onError={handleVideoError}
           ></iframe>
           <div className="video-overlay"></div>
         </>

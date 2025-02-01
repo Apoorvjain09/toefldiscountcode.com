@@ -3,11 +3,33 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { VoucherSectionAdminDashboard } from "./VoucherSectionAdminDashboard"
+import { useState } from "react";
+import Alert from "../ui/AlertNotification";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function AdminDashboard() {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [password, setPassword] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [alert, setAlert] = useState<{ message: string; type: "error" | "success" } | null>(null);
+    const correctPassword = "tgg123";
+
+    const handlePasswordSubmit = () => {
+        if (password === correctPassword) {
+            setIsAuthenticated(true);
+            setIsModalOpen(false);
+        } else {
+            setAlert({ message: "Incorrect password. Try again.", type: "error" });
+            setPassword("");
+        }
+    };
 
     return (
         <div className="container mx-auto py-10">
+            {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
+
             <h1 className="text-4xl font-bold mb-8">Admin Dashboard</h1>
             <Tabs defaultValue="vouchers" className="w-full">
                 <TabsList className="grid w-full grid-cols-4">
@@ -23,7 +45,9 @@ export default function AdminDashboard() {
                             <CardDescription>View and manage student vouchers</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <VoucherSectionAdminDashboard />
+                            {isAuthenticated && (
+                                <VoucherSectionAdminDashboard />
+                            )}
                         </CardContent>
                     </Card>
                 </TabsContent>
@@ -61,6 +85,25 @@ export default function AdminDashboard() {
                     </Card>
                 </TabsContent>
             </Tabs>
+
+            <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+                <DialogContent className="max-w-sm">
+                    <DialogHeader>
+                        <DialogTitle className="text-lg font-semibold">Enter Authentication Password</DialogTitle>
+                    </DialogHeader>
+                    <Input
+                        type="password"
+                        placeholder="Enter password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full p-2 text-sm"
+                    />
+                    <DialogFooter className="flex justify-between">
+                        <Button variant="outline" onClick={() => setIsModalOpen(false)}>Cancel</Button>
+                        <Button onClick={handlePasswordSubmit}>Submit</Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
         </div>
     )
 }

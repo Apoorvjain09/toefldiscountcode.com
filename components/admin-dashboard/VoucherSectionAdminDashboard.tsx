@@ -84,6 +84,7 @@ export function VoucherSectionAdminDashboard() {
         setIsEditing(!student.remarks);
         setIsModalOpen(true);
     };
+
     const handleSaveRemarks = async () => {
         if (!selectedStudent?.id) return;
 

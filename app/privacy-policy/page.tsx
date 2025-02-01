@@ -1,69 +1,87 @@
-import React from "react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function PrivacyPolicy() {
     return (
-        <div className="max-w-4xl mx-auto px-4 py-8 text-gray-700">
-            <h1 className="text-3xl font-bold text-blue-600 mb-4">Privacy Policy</h1>
-            <p className="mb-6">
-                Last updated: <span className="font-semibold">26 Jan 2025</span>
-            </p>
-            <p className="mb-4">
-                This extension is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your data when you use our browser extension.
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">1. Data Collection</h2>
-            <p className="mb-4">
-                We may collect the following information:
-                <ul className="list-disc list-inside pl-4">
-                    <li>Page metadata: TOEFL specific pages you visit within predefined domains.</li>
-                    <li>User traits stored in your browser's localStorage (if available).</li>
-                </ul>
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">2. Purpose of Data Collection</h2>
-            <p className="mb-4">
-                The data we collect is used exclusively to:
-                <ul className="list-disc list-inside pl-4">
-                    <li>Provide TOEFL discount codes and preparation resources.</li>
-                    <li>Log analytics to improve the extension’s functionality.</li>
-                </ul>
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">3. Data Usage</h2>
-            <p className="mb-4">
-                All data collected is securely transmitted to a Google Form for logging and analytics purposes. We do not share your data with third parties or use it for any purposes other than those stated in this policy.
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">4. User Consent</h2>
-            <p className="mb-4">
-                Before collecting or processing your data, we explicitly seek your consent through a permission modal. If you decline, no data will be collected or processed.
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">5. Data Security</h2>
-            <p className="mb-4">
-                We take reasonable measures to protect your data from unauthorized access or misuse. However, no method of data transmission over the internet is completely secure.
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">6. Your Rights</h2>
-            <p className="mb-4">
-                You have the right to:
-                <ul className="list-disc list-inside pl-4">
-                    <li>Opt out of data collection by declining consent.</li>
-                    <li>Contact us to request deletion of your data.</li>
-                </ul>
-            </p>
-
-            <h2 className="text-xl font-bold text-blue-500 mb-2">7. Contact Us</h2>
-            <p className="mb-4">
-                If you have any questions about this Privacy Policy or your data, please contact us at:{" "}
-                <a href="mailto:support@example.com" className="text-blue-600 underline">
-                    apoorv@mja.in
-                </a>
-            </p>
-
-            <p className="text-sm text-gray-500">
-                By using this extension, you agree to the terms outlined in this Privacy Policy.
-            </p>
+        <div className="container mx-auto py-10">
+            <Card className="max-w-3xl mx-auto">
+                <CardHeader>
+                    <CardTitle className="text-2xl font-bold">Privacy Policy</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <ScrollArea className="h-[400px] rounded-md border p-4">
+                        <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger>1. Data Collection</AccordionTrigger>
+                                <AccordionContent>
+                                    We may collect personal information such as your name, email address, and browsing data related to TOEFL resources when you interact with our website or extension. Additionally, we collect transaction details when using Razorpay for payments.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-2">
+                                <AccordionTrigger>2. Purpose of Data Collection</AccordionTrigger>
+                                <AccordionContent>
+                                    The data collected is used to provide TOEFL discount codes, preparation resources, process transactions securely via Razorpay, and improve user experience through analytics.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-3">
+                                <AccordionTrigger>3. Payment Processing</AccordionTrigger>
+                                <AccordionContent>
+                                    We use Razorpay for processing payments. All transactions are encrypted and comply with PCI-DSS standards. We do not store your payment details on our servers.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-4">
+                                <AccordionTrigger>4. Third-Party Services</AccordionTrigger>
+                                <AccordionContent>
+                                    We may share necessary information with third-party service providers like Razorpay for payment processing and analytics tools for improving user experience. These providers have their own privacy policies.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-5">
+                                <AccordionTrigger>5. User Consent</AccordionTrigger>
+                                <AccordionContent>
+                                    Before data collection, we seek user consent through a permission modal. You may opt out of data collection at any time.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-6">
+                                <AccordionTrigger>6. Data Security</AccordionTrigger>
+                                <AccordionContent>
+                                    We implement security measures to protect your data from unauthorized access. However, no method of transmission over the internet is 100% secure.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-7">
+                                <AccordionTrigger>7. Cookies</AccordionTrigger>
+                                <AccordionContent>
+                                    We use cookies to maintain session data. These are not used to personally identify users across other websites.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-8">
+                                <AccordionTrigger>8. Your Rights</AccordionTrigger>
+                                <AccordionContent>
+                                    You have the right to opt out of data collection, request deletion of your personal data, and modify your privacy settings at any time.
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="item-9">
+                                <AccordionTrigger>9. Updates to This Policy</AccordionTrigger>
+                                <AccordionContent>
+                                    We reserve the right to update this policy periodically. Changes will be posted on our website and take effect immediately.
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </ScrollArea>
+                </CardContent>
+                <CardFooter className="flex flex-col items-start gap-4">
+                    <div className="flex items-center space-x-2">
+                        <Checkbox id="privacy" />
+                        <Label htmlFor="privacy" className="text-sm font-medium leading-none">
+                            I acknowledge the Privacy Policy
+                        </Label>
+                    </div>
+                    <Button className="w-full">Accept and Continue</Button>
+                </CardFooter>
+            </Card>
         </div>
     );
 }

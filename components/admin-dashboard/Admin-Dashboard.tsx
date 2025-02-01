@@ -5,15 +5,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { VoucherSectionAdminDashboard } from "./VoucherSectionAdminDashboard"
 
 export default function AdminDashboard() {
+
     return (
         <div className="container mx-auto py-10">
             <h1 className="text-4xl font-bold mb-8">Admin Dashboard</h1>
             <Tabs defaultValue="vouchers" className="w-full">
                 <TabsList className="grid w-full grid-cols-4">
                     <TabsTrigger value="vouchers">Vouchers</TabsTrigger>
-                    <TabsTrigger value="students">Students</TabsTrigger>
-                    <TabsTrigger value="courses">Courses</TabsTrigger>
-                    <TabsTrigger value="analytics">Analytics</TabsTrigger>
+                    <TabsTrigger disabled={true} className="cursor-not-allowed" value="students">Students</TabsTrigger>
+                    <TabsTrigger disabled={true} className="cursor-not-allowed" value="courses">Courses</TabsTrigger>
+                    <TabsTrigger disabled={true} className="cursor-not-allowed" value="analytics">Analytics</TabsTrigger>
                 </TabsList>
                 <TabsContent value="vouchers">
                     <Card>

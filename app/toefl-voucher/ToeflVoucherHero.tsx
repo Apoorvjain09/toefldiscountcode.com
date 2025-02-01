@@ -67,13 +67,13 @@ export default function ToeflVoucherHero() {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => {
+        const timeout = setTimeout(() => {
             if (!isSubmitted) {
                 setOpenModal(true);
             }
-        }, 15000);
+        }, 10000);
 
-        return () => clearInterval(interval);
+        return () => clearTimeout(timeout);
     }, [isSubmitted]);
 
     return (

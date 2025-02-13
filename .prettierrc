@@ -1,0 +1,16 @@
+{
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "proseWrap": "always",
+    "printWidth": 80,
+    "overrides": [
+        {
+            "files": "*.ts",
+            "options": {
+                "parser": "typescript"
+            }
+        }
+    ]
+}

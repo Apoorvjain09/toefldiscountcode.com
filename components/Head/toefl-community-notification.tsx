@@ -20,7 +20,7 @@ export default function ToeflCommunityNotification() {
             setIsVisible(true);
             const audio = new Audio("/sounds/notification.mp3");
             audio.play().catch((error) => console.error("Failed to play sound:", error));
-        }, 5000);
+        }, 15000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -46,7 +46,7 @@ export default function ToeflCommunityNotification() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -100, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 100 }}
-                    className="fixed top-0 left-0 w-full z-50"
+                    className="fixed top-0 left-0 w-full z-[500]"
                 >
                     <motion.div
                         drag="y"
@@ -68,7 +68,7 @@ export default function ToeflCommunityNotification() {
                                         onClick={handleJoin}
                                         className="bg-white text-green-600 hover:bg-green-100 hover:text-green-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
                                     >
-                                        <FaWhatsapp />
+                                        <span className="hidden sm:block">Join whatsapp Community</span> <FaWhatsapp />
                                     </Button>
                                 </motion.div>
                                 <X onClick={() => { setIsVisible(false) }} className="absolute right-1 top-1 h-4 w-4" />

@@ -9,6 +9,7 @@ import { AlertCircle, Mic, CheckCircle, XCircle } from "lucide-react"
 import Alert from "@/components/ui/AlertNotification" // Import Alert component
 import { InfoCircledIcon } from "@radix-ui/react-icons"
 import { speakingTask1Questions } from "./speaking-task1-questions";
+import { FaMicrophone } from "react-icons/fa"
 
 const PREP_TIME = 15
 const SPEAK_TIME = 45
@@ -306,8 +307,15 @@ export default function SpeakingTask1() {
         }
     }
 
-    const handleStartMicTestExampleTestingIdlePhase = () => {
-        setShowMicPromptTestingIdlePhase(true); // Show confirmation dialog
+    const handleStartMicTestExampleTestingIdlePhase = async () => {
+        try {
+            // Request microphone permissions before showing the dialog
+            await navigator.mediaDevices.getUserMedia({ audio: true });
+            setShowMicPromptTestingIdlePhase(true); // Show confirmation dialog
+        } catch (error) {
+            console.error("Microphone permission denied:", error);
+            setAlert({ message: "Microphone access is required to proceed.", type: "error" });
+        }
     };
 
     const confirmMicTestExampleTestingIdlePhase = () => {
@@ -335,7 +343,7 @@ export default function SpeakingTask1() {
             {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
 
             <Card className="w-full max-w-2xl mx-auto">
-                <CardHeader>
+                <CardHeader className="mb-2 sm:mb-0">
                     <CardTitle className="flex items-center justify-between">
                         <span>Speaking Task 1</span>
                         {stage !== "idle" && <span className="text-2xl font-bold">{time}s</span>}
@@ -436,13 +444,13 @@ export default function SpeakingTask1() {
                     </>
                 )}
 
-                <CardFooter className="flex justify-between">
+                <CardFooter className="flex justify-between flex-col sm:flex-row gap-5">
                     {stage === "idle" && <Button onClick={startPrep} disabled={(!checkIfMicWorking || !transcribedTextTestingIdlePhase || micStatusTestingIdlePhase !== "success")} className={`${currentQuestionDoneGenerateNewQuestion && "animate-bounce"}`}>{currentQuestionDoneGenerateNewQuestion ? "Generate New Question" : "Start Practice"}</Button>}
                     {(stage === "prep" || stage === "speaking" || stage === "review") && (<Button variant="default" onClick={SubmitRecording} disabled={stage === "prep" || isRecording || isSubmitting || currentTaskEvaluatedAndSubmitted}> Submit  </Button>)}
                     {/* {stage === "review" && <Button onClick={resetPractice}>Try Again</Button>} */}
 
                     {!checkIfMicWorking ? (
-                        <div className="mt-4">
+                        <div className="">
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <Button variant="link" className="text-blue-600">
@@ -454,7 +462,7 @@ export default function SpeakingTask1() {
                                         <DialogTitle>Enable Microphone Access</DialogTitle>
                                     </DialogHeader>
                                     <div className="space-y-3 text-gray-700">
-                                        <p className="flex">
+                                        <p className="flex items-center flex-wrap gap-1">
                                             <div>1. Click on the lock icon 🔒 /</div>
                                             <InfoCircledIcon className="h-6 w-6 mx-1" />
                                             <div>next to the website URL.</div>
@@ -493,7 +501,7 @@ export default function SpeakingTask1() {
             </Card >
 
             {evaluation && (
-                <Card ref={evaluationRef} className="mt-6 border border-gray-300 shadow-md rounded-lg p-6">
+                <Card ref={evaluationRef} className="mt-6 border border-gray-300 shadow-md rounded-lg sm:p-6">
                     <CardHeader className="flex items-center justify-between">
                         <CardTitle className="text-2xl font-bold">AI Evaluation</CardTitle>
                         <span className={`px-3 py-1 text-lg font-bold rounded-lg ${evaluation.score >= 4 ? "bg-green-500 text-white" : "bg-red-500 text-white"}`}>
@@ -548,10 +556,13 @@ export default function SpeakingTask1() {
                                 <h3 className="font-semibold text-yellow-600 flex items-center">
                                     ✨ AI's Improved Answer 2
                                 </h3>
-                                <p className="text-gray-700 mt-2 leading-relaxed">
-                                    {/* {highlightDifferences(answer, evaluation.better_ans)} */}
-                                    {evaluation.better_ans2}
-                                </p>
+                                <ul className="list-disc pl-5 text-yellow-700">
+                                    <p className="text-gray-700 mt-2 leading-relaxed">
+                                        {/* {highlightDifferences(answer, evaluation.better_ans)} */}
+                                        {evaluation.better_ans2}
+                                    </p>
+                                </ul>
+
                             </div>
                         )}
                     </CardContent>
@@ -560,8 +571,9 @@ export default function SpeakingTask1() {
                         {(currentTaskEvaluatedAndSubmitted && (<Button onClick={GenerateNewQuestion}>Next</Button>))}
                     </CardFooter>
                 </Card>
-            )}
+            )
+            }
 
-        </div>
+        </div >
     )
 }

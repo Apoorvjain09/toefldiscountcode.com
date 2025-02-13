@@ -24,7 +24,7 @@ export default function RootLayout({
           </head>
           <GoogleAnalyticsTracking />
           <body>
-            <div className="md:hidden">
+            <div className="">
               <ToeflCommunityNotification />
             </div>
             <main className="">

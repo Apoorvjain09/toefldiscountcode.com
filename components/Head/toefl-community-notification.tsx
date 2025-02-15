@@ -36,24 +36,43 @@ export default function ToeflCommunityNotification() {
         if (info.offset.y > 150 || info.offset.y < -150) {
             setIsVisible(false);
         }
+        if (info.offset.x > 150) {
+            // Slide out to the right
+            setIsVisible(false);
+        } else if (info.offset.x < -150) {
+            // Slide out to the left
+            setIsVisible(false);
+        }
     };
 
     return (
         <AnimatePresence>
             {isVisible && (
                 <motion.div
-                    initial={{ y: -100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -100, opacity: 0 }}
+                    initial={{ x: 100, opacity: 0 }} // Starts from right
+                    animate={{ x: 0, opacity: 1 }} // Moves to the center
+                    exit={{ x: 200, opacity: 0 }} // Slides out to the right when closed
                     transition={{ type: "spring", stiffness: 100 }}
                     className="fixed top-0 left-0 w-full z-[500]"
+
+                // initial={{ y: -100, opacity: 0 }}
+                // animate={{ y: 0, opacity: 1 }}
+                // exit={{ y: -100, opacity: 0 }}
+                // transition={{ type: "spring", stiffness: 100 }}
+                // className="fixed top-0 left-0 w-full z-[500]"
                 >
                     <motion.div
-                        drag="y"
+                        drag="x" // Allow dragging left and right
                         onDragEnd={handleDragEnd}
-                        dragConstraints={{ top: 0, bottom: 0 }}
+                        dragConstraints={{ left: 0, right: 0 }}
                         dragElastic={0.3}
                         className="cursor-grab"
+
+                    // drag="y"
+                    // onDragEnd={handleDragEnd}
+                    // dragConstraints={{ top: 0, bottom: 0 }}
+                    // dragElastic={0.3}
+                    // className="cursor-grab"
                     >
                         <Card className="relative rounded-lg w-[90%] mx-auto mt-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600 shadow-lg">
                             <CardContent className="p-4 flex items-center justify-between">

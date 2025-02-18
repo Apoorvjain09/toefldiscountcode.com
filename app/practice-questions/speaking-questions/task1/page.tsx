@@ -77,8 +77,15 @@ export default function SpeakingTask1() {
                 const speechTranscriptExampleTestingIdlePhase = event.results[0][0].transcript;
                 setTranscribedTextTestingIdlePhase(speechTranscriptExampleTestingIdlePhase);
 
+                const validPhrases = [
+                    "peter loves apple",
+                    "peter love apple",
+                    "peter loves apples",
+                    "peter love apples"
+                ];
+
                 if (speechTranscriptExampleTestingIdlePhase.trim().length > 0) {
-                    if (speechTranscriptExampleTestingIdlePhase.toLowerCase() === "peter love apples") {
+                    if (validPhrases.includes(speechTranscriptExampleTestingIdlePhase.toLowerCase())) {
                         setMicStatusTestingIdlePhase("success");
                     } else {
                         setAlert({ message: "Try saying: 'Peter love apples' clearly.", type: "error", });
@@ -362,7 +369,7 @@ export default function SpeakingTask1() {
                                         </>
                                     ) : (
                                         <>
-                                            <Mic className="mr-2 h-5 w-5" /> Test Microphone {(micStatusTestingIdlePhase === "listening" && !isExampleMicTestingIdlePhase) && "{Again}"}
+                                            <Mic className="mr-2 h-5 w-5" /> Test Microphone {(micStatusTestingIdlePhase === "listening" && !isExampleMicTestingIdlePhase) && (<div className="animate-pulse">[Try Again]</div>)}
                                         </>
                                     )}
                                 </Button>
@@ -374,7 +381,7 @@ export default function SpeakingTask1() {
                                             <DialogTitle>Microphone Test</DialogTitle>
                                         </DialogHeader>
                                         <div className="text-center">
-                                            <p className="text-lg font-medium text-gray-800">Say: <span className="text-blue-600 font-bold">"Peter love apples"</span></p>
+                                            <p className="text-lg font-medium text-gray-800">Only Say: <span className="text-blue-600 font-bold">"Peter love apples"</span></p>
                                             <p className="text-gray-600 text-sm mt-2">We will check if your microphone is working correctly.</p>
                                         </div>
                                         <div className="flex justify-end gap-4 mt-4">
@@ -390,7 +397,12 @@ export default function SpeakingTask1() {
                                     <div className="flex justify-center items-center mt-3">
                                         {micStatusTestingIdlePhase === "listening" && (
                                             <span className="flex items-center text-blue-600">
-                                                <Mic className="h-5 w-5 mr-2 animate-pulse" /> Speak now...
+                                                {!(micStatusTestingIdlePhase === "listening" && !isExampleMicTestingIdlePhase) && (
+                                                    <>
+                                                        <Mic className="h-5 w-5 mr-2 animate-pulse" />
+                                                        Speak now...
+                                                    </>
+                                                )}
                                             </span>
                                         )}
 
@@ -439,7 +451,6 @@ export default function SpeakingTask1() {
                                     <Mic className="w-8 h-8 text-red-500 animate-pulse" />
                                 </div>
                             )}
-                            {/* {stage === "review" && audioUrl && <audio src={audioUrl} controls className="w-full mt-4" />} */}
                         </CardContent>
                     </>
                 )}
@@ -447,7 +458,6 @@ export default function SpeakingTask1() {
                 <CardFooter className="flex justify-between flex-col sm:flex-row gap-5">
                     {stage === "idle" && <Button onClick={startPrep} disabled={(!checkIfMicWorking || !transcribedTextTestingIdlePhase || micStatusTestingIdlePhase !== "success")} className={`${currentQuestionDoneGenerateNewQuestion && "animate-bounce"}`}>{currentQuestionDoneGenerateNewQuestion ? "Generate New Question" : "Start Practice"}</Button>}
                     {(stage === "prep" || stage === "speaking" || stage === "review") && (<Button variant="default" onClick={SubmitRecording} disabled={stage === "prep" || isRecording || isSubmitting || currentTaskEvaluatedAndSubmitted}> Submit  </Button>)}
-                    {/* {stage === "review" && <Button onClick={resetPractice}>Try Again</Button>} */}
 
                     {!checkIfMicWorking ? (
                         <div className="">
@@ -510,19 +520,6 @@ export default function SpeakingTask1() {
                     </CardHeader>
 
                     <CardContent className="space-y-4">
-                        {/* {evaluation.grammar_mistakes?.length > 0 && (
-                            <div className="p-4 border-l-4 border-red-500 bg-red-100 rounded-lg">
-                                <h3 className="font-semibold text-red-600 flex items-center">
-                                    ❌ Mistakes
-                                </h3>
-                                <ul className="list-disc pl-5 text-red-700">
-                                    {evaluation.grammar_mistakes.map((mistake: string, index: number) => (
-                                        <li key={index}>{mistake}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )} */}
-
                         {evaluation.tips?.length > 0 && (
                             <div className="p-4 border-l-4 border-blue-500 bg-blue-100 rounded-lg">
                                 <h3 className="font-semibold text-blue-600 flex items-center">
@@ -543,7 +540,6 @@ export default function SpeakingTask1() {
                                 </h3>
                                 <ul className="list-disc pl-5 text-green-700">
                                     <p className="text-gray-700 mt-2 leading-relaxed">
-                                        {/* {highlightDifferences(answer, evaluation.better_ans)} */}
                                         {evaluation.better_ans}
                                     </p>
                                 </ul>
@@ -558,7 +554,6 @@ export default function SpeakingTask1() {
                                 </h3>
                                 <ul className="list-disc pl-5 text-yellow-700">
                                     <p className="text-gray-700 mt-2 leading-relaxed">
-                                        {/* {highlightDifferences(answer, evaluation.better_ans)} */}
                                         {evaluation.better_ans2}
                                     </p>
                                 </ul>

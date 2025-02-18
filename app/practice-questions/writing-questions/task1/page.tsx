@@ -119,7 +119,6 @@ export default function ToeflWritingTask1() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-
     const formatTime = (seconds: number) => {
         const min = Math.floor(seconds / 60);
         const sec = seconds % 60;
@@ -310,6 +309,7 @@ export default function ToeflWritingTask1() {
                         </div>
                     )}
                 </CardContent>
+
                 <CardFooter className="flex justify-between">
                     <div className="flex items-center text-sm text-muted-foreground">
                         <Clock className="mr-2 h-4 w-4" />
@@ -337,7 +337,7 @@ export default function ToeflWritingTask1() {
             </Card>
 
             {evaluation && (
-                <Card ref={evaluationRef} className="mt-6 border border-gray-300 shadow-md rounded-lg p-6">
+                <Card ref={evaluationRef} className="mt-6 border border-gray-300 shadow-md rounded-lg sm:p-6">
                     <CardHeader className="flex items-center justify-between">
                         <CardTitle className="text-2xl font-bold">AI Evaluation</CardTitle>
                         <span className={`px-3 py-1 text-lg font-bold rounded-lg ${evaluation.score >= 4 ? "bg-green-500 text-white" : "bg-red-500 text-white"}`}>

@@ -16,24 +16,32 @@ const sections = [
         description: "Practice your reading comprehension skills",
         icon: BookOpen,
         color: "text-blue-500",
+        borderColor: "border-blue-500",
+        shadowColor: "shadow-[0_10px_30px_rgba(0,0,255,_0.7)]",
     },
     {
         title: "Listening",
         description: "Improve your listening and understanding",
         icon: Headphones,
         color: "text-green-500",
+        borderColor: "border-green-500",
+        shadowColor: "shadow-[0_10px_30px_rgba(0,128,0,_0.7)]",
     },
     {
         title: "Speaking",
         description: "Enhance your speaking abilities",
         icon: Mic,
         color: "text-yellow-500",
+        borderColor: "border-yellow-500",
+        shadowColor: "shadow-[0_10px_30px_rgba(255,255,0,_0.7)]",
     },
     {
         title: "Writing",
         description: "Develop your writing skills",
         icon: Pencil,
         color: "text-purple-500",
+        borderColor: "border-purple-500",
+        shadowColor: "shadow-[0_10px_30px_rgba(128,0,128,_0.7)]",
     },
 ]
 
@@ -61,7 +69,7 @@ export default function ToeflPracticeSections() {
                     <HoverCard>
                         <HoverCardTrigger asChild>
                             <Card
-                                className={`cursor-pointer transition-colors ${selectedSection === section.title ? "border-primary" : ""}`}
+                                className={`cursor-pointer transition-colors ${selectedSection === section.title ? `${section.borderColor} ${section.shadowColor}` : ""}`}
                                 onClick={() => {
                                     setSelectedSection(section.title);
                                     setShowDiffrentButtonsForEachTask(section.title === "Writing" || section.title === "Speaking");
@@ -114,6 +122,8 @@ export default function ToeflPracticeSections() {
 
 
 function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { selectedSection: string | null, showDiffrentButtonsForEachTask: boolean }) {
+    if (!selectedSection) return null;
+
     return (
         <>
             <AnimatePresence mode="wait">
@@ -139,35 +149,33 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                     </motion.div>
 
                 ) : (
-                    <>
-                        <motion.div
-                            key={selectedSection}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
-                            className="flex flex-col sm:flex-row gap-5 justify-center w-full"
-                        >
-                            <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions/task1`}>
-                                <Button
-                                    size="lg"
-                                    className="w-full sm:w-auto"
-                                    disabled={!selectedSection}
-                                >
-                                    Start Task 1 Practice
-                                </Button>
-                            </Link>
-                            <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions/task2`}>
-                                <Button
-                                    size="lg"
-                                    className="w-full sm:w-auto"
-                                    disabled={!selectedSection}
-                                >
-                                    Start Task 2 Practice
-                                </Button>
-                            </Link>
-                        </motion.div>
-                    </>
+                    <motion.div
+                        key={selectedSection}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex flex-col sm:flex-row gap-5 justify-center w-full items-center"
+                    >
+                        <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions/task1`}>
+                            <Button
+                                size="lg"
+                                className="w-[100%] sm:w-auto"
+                                disabled={!selectedSection}
+                            >
+                                Start Task 1 Practice
+                            </Button>
+                        </Link>
+                        <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions/task2`}>
+                            <Button
+                                size="lg"
+                                className="w-[100%] sm:w-auto"
+                                disabled={!selectedSection}
+                            >
+                                Start Task 2 Practice
+                            </Button>
+                        </Link>
+                    </motion.div>
                 )}
             </AnimatePresence>
 

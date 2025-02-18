@@ -165,10 +165,10 @@ export default function TOEFLListeningPractice() {
 
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-8">
+        <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-4 sm:p-8">
             <div className="mx-auto max-w-7xl">
-                <header className="mb-8 flex items-center justify-between">
-                    <h1 className="text-3xl font-bold text-gray-800">TOEFL Listening Practice</h1>
+                <header className="mb-8 flex flex-col gap-5 sm:gap-0 sm:flex-row items-center justify-between ">
+                    <h1 className="text-3xl font-bold text-gray-800 text-center sm:text-start">TOEFL Listening Practice</h1>
                     <Button variant="outline">
                         <HelpCircle className="mr-2 h-4 w-4" />
                         Instructions
@@ -223,6 +223,7 @@ export default function TOEFLListeningPractice() {
                                             Question {currentQuestionIndex + 1}
                                         </CardTitle>
                                     </CardHeader>
+
                                     <CardContent>
                                         <p className="text-gray-600">
                                             {selectedListeningQuestion.questions[currentQuestionIndex].question}
@@ -272,6 +273,7 @@ export default function TOEFLListeningPractice() {
                                             </RadioGroup>
                                         </div>
                                     </CardContent>
+
                                     <CardFooter className="flex justify-between">
                                         <Button onClick={handlePrevious} disabled={currentQuestionIndex === 0} variant="outline">
                                             <ChevronLeft className="mr-2 h-4 w-4" />
@@ -287,66 +289,69 @@ export default function TOEFLListeningPractice() {
                         )}
                     </main>
 
-                    <aside>
-                        {showQuestionsAfterAudioEnded && (
-                            <motion.div
-                                initial={{ opacity: 0, y: -20, height: 0 }}
-                                animate={{ opacity: 1, y: 0, height: "auto" }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                            >
-                                <Card className="mb-8">
-                                    <CardHeader>
-                                        <CardTitle className="text-lg font-semibold">Progress</CardTitle>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <Progress value={((currentQuestionIndex + 1) / totalQuestions) * 100} className="mb-2" />
-                                        <p className="text-sm text-gray-600">
-                                            Question {currentQuestionIndex + 1} of {totalQuestions}
-                                        </p>
-                                    </CardContent>
-                                </Card>
-                            </motion.div>
-                        )}
+                    {!isReviewModeAfterSubmit && (
+                        <aside>
+                            {showQuestionsAfterAudioEnded && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -20, height: 0 }}
+                                    animate={{ opacity: 1, y: 0, height: "auto" }}
+                                    transition={{ duration: 0.5, ease: "easeOut" }}
+                                >
+                                    <Card className="mb-8">
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">Progress</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <Progress value={((currentQuestionIndex + 1) / totalQuestions) * 100} className="mb-2" />
+                                            <p className="text-sm text-gray-600">
+                                                Question {currentQuestionIndex + 1} of {totalQuestions}
+                                            </p>
+                                        </CardContent>
+                                    </Card>
+                                </motion.div>
+                            )}
 
-                        <Tabs defaultValue="notes" className="w-full">
-                            <TabsList className="grid w-full grid-cols-2">
-                                <TabsTrigger value="notes">Notes</TabsTrigger>
-                                <TabsTrigger value="transcript">Transcript</TabsTrigger>
-                            </TabsList>
-                            <TabsContent value="notes">
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle className="flex items-center text-lg font-semibold">
-                                            <BookOpen className="mr-2 h-4 w-4" />
-                                            Notes
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <motion.textarea
-                                            initial={{ height: "10rem" }}
-                                            animate={{ height: showQuestionsAfterAudioEnded ? "10rem" : "50vh" }}
-                                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                                            className="w-full rounded-md border border-gray-300 p-2 transition-all duration-500"
-                                            placeholder="Take notes here..."
-                                        ></motion.textarea>
-                                    </CardContent>
-                                </Card>
-                            </TabsContent>
-                            <TabsContent value="transcript">
-                                <Card>
-                                    <CardHeader>
-                                        <CardTitle className="flex items-center text-lg font-semibold">
-                                            <PlayCircle className="mr-2 h-4 w-4" />
-                                            Transcript
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p className="text-sm text-gray-600">The transcript will be available after completing the test.</p>
-                                    </CardContent>
-                                </Card>
-                            </TabsContent>
-                        </Tabs>
-                    </aside>
+                            <Tabs defaultValue="notes" className="w-full">
+                                <TabsList className="grid w-full grid-cols-2">
+                                    <TabsTrigger value="notes">Notes</TabsTrigger>
+                                    <TabsTrigger value="transcript">Transcript</TabsTrigger>
+                                </TabsList>
+                                <TabsContent value="notes">
+                                    <Card>
+                                        <CardHeader>
+                                            <CardTitle className="flex items-center text-lg font-semibold">
+                                                <BookOpen className="mr-2 h-4 w-4" />
+                                                Notes
+                                            </CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <motion.textarea
+                                                initial={{ height: "10rem" }}
+                                                animate={{ height: showQuestionsAfterAudioEnded ? "10rem" : "50vh" }}
+                                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                                className="w-full rounded-md border border-gray-300 p-2 transition-all duration-500"
+                                                placeholder="Take notes here..."
+                                            ></motion.textarea>
+                                        </CardContent>
+                                    </Card>
+                                </TabsContent>
+                                <TabsContent value="transcript">
+                                    <Card>
+                                        <CardHeader>
+                                            <CardTitle className="flex items-center text-lg font-semibold">
+                                                <PlayCircle className="mr-2 h-4 w-4" />
+                                                Transcript
+                                            </CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-gray-600">The transcript will be available after completing the test.</p>
+                                        </CardContent>
+                                    </Card>
+                                </TabsContent>
+                            </Tabs>
+                        </aside>
+                    )}
+
                 </div>
 
                 {isReviewModeAfterSubmit && (
@@ -355,7 +360,7 @@ export default function TOEFLListeningPractice() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
                     >
-                        <Card className="mt-6 p-6 shadow-xl rounded-lg border border-gray-200 bg-white">
+                        <Card className="mt-6 p-2 sm:p-6 shadow-xl rounded-lg border border-gray-200 bg-white">
                             <CardHeader>
                                 <CardTitle className="text-lg font-semibold text-gray-800 flex items-center gap-2">
                                     <span className="text-green-600">✔</span> Explanation
@@ -403,8 +408,6 @@ export default function TOEFLListeningPractice() {
                         {!isReviewModeAfterSubmit ? (currentQuestionIndex === totalQuestions - 1 ? "Submit Answers 🎉" : "Submit Answers") : "Generate New Question"}
                     </Button>
 
-
-
                     <Dialog open={isResultScoreDialogOpen} onOpenChange={setIsResultScoreDialogOpen}>
                         <DialogContent className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
 
@@ -439,7 +442,6 @@ export default function TOEFLListeningPractice() {
                             </DialogFooter>
                         </DialogContent>
                     </Dialog>
-
                 </footer>
             </div>
         </div >

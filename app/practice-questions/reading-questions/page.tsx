@@ -1,14 +1,10 @@
 "use client"
 
-//test - add questions - push changes - show to mum
-
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-import { ModeToggle } from "@/components/mode-toggle"
 import { ArrowDownNarrowWideIcon, ChevronLeft, ChevronRight } from "lucide-react"
 import { ThemeProvider } from "@/components/theme-provider"
 import { quizData, Passage as QuizPassage } from "./reading-questions"
@@ -136,7 +132,6 @@ export default function ToeflReadingTest() {
         }
     };
 
-
     const handlePrevious = () => {
         if (currentQuestionIndex > 0) {
             setCurrentQuestionIndex((prev) => prev - 1)
@@ -197,15 +192,6 @@ export default function ToeflReadingTest() {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <main className="container mx-auto p-4">
                 <div className="space-y-8">
-                    {/*                     
-                    <div className="flex justify-between items-center">
-                        <h1 className="text-3xl font-bold">TOEFL Reading Practice</h1>
-                        <ModeToggle />
-                    </div>
-
-                    <Progress value={((currentQuestionIndex + 1) / totalQuestions) * 100} className="w-full" />
-                     */}
-
                     <div className="grid gap-8 md:grid-cols-2">
                         <Card className={`md:row-span-2 ${showCardHeader ? "" : "pt-4"}`}>
                             {showCardHeader && (
@@ -219,6 +205,7 @@ export default function ToeflReadingTest() {
                                     </CardTitle>
                                 </CardHeader>
                             )}
+
                             {!hidePassage_ShowDropBox ? (
                                 <CardContent>
                                     <div className={`max-h-[60vh] ${showCardHeader ? "sm:max-h-[80vh]" : "sm:max-h-[100vh]"} overflow-y-auto pr-4 text-justify`}>
@@ -231,28 +218,26 @@ export default function ToeflReadingTest() {
                                     </div>
                                 </CardContent>
                             ) : (
-                                <>
-                                    <CardContent>
-                                        <div className="p-4 border border-gray-300 rounded-lg">
-                                            <h2 className="text-lg font-semibold"><span className="italic">{selectedSummarizationOptions.length > 0 && "ORDER - "}</span>Selected Answer</h2>
+                                <CardContent>
+                                    <div className="p-4 border border-gray-300 rounded-lg">
+                                        <h2 className="text-lg font-semibold"><span className="italic">{selectedSummarizationOptions.length > 0 && "ORDER - "}</span>Selected Answer</h2>
 
-                                            {selectedSummarizationOptions.length > 0 ? (
-                                                <div className="flex flex-wrap gap-2 my-10 space-y-1">
-                                                    {selectedSummarizationOptions.map((option, index) => (
-                                                        <span
-                                                            key={index}
-                                                            className="px-3 py-3 bg-black text-white rounded-lg text-sm text-center font-semibold italic"
-                                                        >
-                                                            {option}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            ) : (
-                                                <p className="text-gray-500 italic">No options selected yet.</p>
-                                            )}
-                                        </div>
-                                    </CardContent>
-                                </>
+                                        {selectedSummarizationOptions.length > 0 ? (
+                                            <div className="flex flex-wrap gap-2 my-10 space-y-1">
+                                                {selectedSummarizationOptions.map((option, index) => (
+                                                    <span
+                                                        key={index}
+                                                        className="px-3 py-3 bg-black text-white rounded-lg text-sm text-center font-semibold italic"
+                                                    >
+                                                        {option}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <p className="text-gray-500 italic">No options selected yet.</p>
+                                        )}
+                                    </div>
+                                </CardContent>
                             )}
                         </Card>
 
@@ -269,6 +254,7 @@ export default function ToeflReadingTest() {
                                     )}
                                 </CardTitle>
                             </CardHeader>
+
                             <CardContent>
                                 {!currentQuestion?.summarization_intro_sentence && (<p className="mb-4">{currentQuestion?.question}</p>)}
                                 {currentQuestion?.insertion_sentence && (<p className="mb-5 font-bold italic">Sentence: {currentQuestion?.insertion_sentence}</p>)}
@@ -375,10 +361,13 @@ export default function ToeflReadingTest() {
                             onClick={handlePrevious}
                             disabled={currentQuestionIndex === 0}
                         >
-                            <ChevronLeft className="mr-2 h-4 w-4" /> Previous
+                            <ChevronLeft className="mr-2 h-4 w-4" />
+                            <span className="inline-flex">
+                                Prev<span className="hidden sm:inline">ious</span>
+                            </span>
                         </Button>
                         <span className="text-sm text-muted-foreground">
-                            Question {currentQuestionIndex + 1} of {totalQuestions}
+                            <span className="hidden sm:block">Question </span>{currentQuestionIndex + 1} of {totalQuestions}
                         </span>
                         <Button onClick={handleNext}>
                             {currentQuestionIndex === totalQuestions - 1 ? (showAfterSubmmitedPrompts ? "Next Passage" : "Submit") : "Next"}

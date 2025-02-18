@@ -92,8 +92,15 @@ export default function SpeakingTask1() {
                 const speechTranscriptExampleTestingIdlePhase = event.results[0][0].transcript;
                 setTranscribedTextTestingIdlePhase(speechTranscriptExampleTestingIdlePhase);
 
+                const validPhrases = [
+                    "peter loves apple",
+                    "peter love apple",
+                    "peter loves apples",
+                    "peter love apples"
+                ];
+
                 if (speechTranscriptExampleTestingIdlePhase.trim().length > 0) {
-                    if (speechTranscriptExampleTestingIdlePhase.toLowerCase() === "peter love apples") {
+                    if (validPhrases.includes(speechTranscriptExampleTestingIdlePhase.toLowerCase())) {
                         setMicStatusTestingIdlePhase("success");
                     } else {
                         setAlert({ message: "Try saying: 'Peter love apples' clearly.", type: "error", });
@@ -370,7 +377,7 @@ export default function SpeakingTask1() {
             <Card className="w-full max-w-2xl mx-auto">
                 <CardHeader className="mb-2 sm:mb-0">
                     <CardTitle className="flex items-center justify-between">
-                        <span>Speaking Task 1</span>
+                        <span>Speaking Task 2</span>
                         {stage !== "idle" && <span className="text-2xl font-bold">{time}s</span>}
                     </CardTitle>
                 </CardHeader>
@@ -445,7 +452,7 @@ export default function SpeakingTask1() {
                                     </>
                                 ) : (
                                     <>
-                                        <Mic className="mr-2 h-5 w-5" /> Test Microphone {(micStatusTestingIdlePhase === "listening" && !isExampleMicTestingIdlePhase) && "{Again}"}
+                                        <Mic className="mr-2 h-5 w-5" /> Test Microphone {(micStatusTestingIdlePhase === "listening" && !isExampleMicTestingIdlePhase) && (<div className="animate-pulse">[Try Again]</div>)}
                                     </>
                                 )}
                             </Button>
@@ -457,7 +464,7 @@ export default function SpeakingTask1() {
                                         <DialogTitle>Microphone Test</DialogTitle>
                                     </DialogHeader>
                                     <div className="text-center">
-                                        <p className="text-lg font-medium text-gray-800">Say: <span className="text-blue-600 font-bold">"Peter love apples"</span></p>
+                                        <p className="text-lg font-medium text-gray-800">Only Say: <span className="text-blue-600 font-bold">"Peter love apples"</span></p>
                                         <p className="text-gray-600 text-sm mt-2">We will check if your microphone is working correctly.</p>
                                     </div>
                                     <div className="flex justify-end gap-4 mt-4">
@@ -473,7 +480,12 @@ export default function SpeakingTask1() {
                                 <div className="flex justify-center items-center mt-3">
                                     {micStatusTestingIdlePhase === "listening" && (
                                         <span className="flex items-center text-blue-600">
-                                            <Mic className="h-5 w-5 mr-2 animate-pulse" /> Speak now...
+                                            {!(micStatusTestingIdlePhase === "listening" && !isExampleMicTestingIdlePhase) && (
+                                                <>
+                                                    <Mic className="h-5 w-5 mr-2 animate-pulse" />
+                                                    Speak now...
+                                                </>
+                                            )}
                                         </span>
                                     )}
 

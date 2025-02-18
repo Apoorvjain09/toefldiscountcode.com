@@ -8,7 +8,6 @@ import { Progress } from "@/components/ui/progress"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { AlarmClock, Save, Send, ChevronDown, ChevronUp, HelpCircle, User, Users, Presentation } from "lucide-react"
 import writingTasksQuestions from "./writing-task2-questions"
-import { BorderDashedIcon } from "@radix-ui/react-icons"
 import DiffMatchPatch from "diff-match-patch";
 import Alert from "@/components/ui/AlertNotification"
 
@@ -113,7 +112,6 @@ export default function TOEFLWritingTask2Practice() {
         setAlert({ message: "✅ New question loaded!", type: "success" });
         setTimeout(() => setAlert(null), 3000);
     };
-
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -249,6 +247,7 @@ export default function TOEFLWritingTask2Practice() {
                         Read the conversation and respond to the teacher's prompt in a well-organized essay of 300-350 words.
                     </CardDescription>
                 </CardHeader>
+
                 <CardContent>
                     <div className="flex justify-between items-center mb-4">
                         <div className="flex items-center">
@@ -269,6 +268,7 @@ export default function TOEFLWritingTask2Practice() {
                         className={`min-h-[200px] transition duration-150 ${shake ? "animate-shake border-red-500" : ""}`}
                     />
                 </CardContent>
+
                 <CardFooter className="flex justify-between">
                     <Button variant="outline" className="flex items-center">
                         <Save className="mr-2 h-4 w-4" /> Save Draft
@@ -325,7 +325,7 @@ export default function TOEFLWritingTask2Practice() {
             </Collapsible>
 
             {evaluation && (
-                <Card ref={evaluationRef} className="mt-6 border border-gray-300 shadow-md rounded-lg p-6">
+                <Card ref={evaluationRef} className="mt-6 border border-gray-300 shadow-md rounded-lg sm:p-6">
                     <CardHeader className="flex items-center justify-between">
                         <CardTitle className="text-2xl font-bold">AI Evaluation</CardTitle>
                         <span className={`px-3 py-1 text-lg font-bold rounded-lg ${evaluation.score >= 4 ? "bg-green-500 text-white" : "bg-red-500 text-white"}`}>

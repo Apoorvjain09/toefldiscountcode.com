@@ -189,7 +189,7 @@ export default function ToeflReadingTest() {
     if (!currentPassage) return <div className="text-center text-lg"><LoadingSpinner /></div>
 
     return (
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <main className="container mx-auto p-4">
                 <div className="space-y-8">
                     <div className="grid gap-8 md:grid-cols-2">

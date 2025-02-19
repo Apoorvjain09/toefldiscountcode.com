@@ -5,13 +5,12 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
-import { BookOpen, Headphones, Mic, Pencil } from "lucide-react"
-import Link from "next/link"
+import { BookOpen, Headphones, Loader2, Mic, Pencil, X } from "lucide-react"
 import { Separator } from "@radix-ui/react-separator"
 import { useMediaQuery } from "usehooks-ts"
-import { useUser } from "@clerk/nextjs"
+import { SignIn, useUser } from "@clerk/nextjs"
 import { useRouter, useSearchParams } from "next/navigation"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Check, Zap, Shield, Clock, HelpCircle } from "lucide-react"
 import PaymentButton from "@/app/payment/RazorPayButton"
 import Alert from "../ui/AlertNotification"
@@ -57,6 +56,11 @@ export default function ToeflPracticeSections() {
     const [isScrolledAfterSelectingTask, setIsScrolledAfterSelectingTask] = useState(false);
     const isLargeScreen = useMediaQuery("(min-width: 640px)")
 
+    const { user } = useUser()
+    const userId = user?.id;
+    const router = useRouter();
+    const [alert, setAlert] = useState<{ message: string; type: "success" | "error" | "loading" | "warning" } | null>(null)
+
     useEffect(() => {
         const handleScroll = () => {
             if (selectedSection) {
@@ -68,8 +72,50 @@ export default function ToeflPracticeSections() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [selectedSection]);
 
+    useEffect(() => {
+        if (userId && typeof window !== "undefined") {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.has("payment-verified")) {
+                const updateMembership = async () => {
+                    try {
+                        const response = await fetch("/api/updateMembership", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({ userId, membershipType: "Monthly_Membership" }),
+                        });
+
+                        const data = await response.json();
+
+                        if (data.success) {
+                            setAlert({ message: "Enjoy! Subscription Added", type: "success" });
+                            setTimeout(() => setAlert(null), 3000);
+                        } else {
+                            console.error("Failed to update membership:", data.error);
+                        }
+                    } catch (error) {
+                        console.error("Error updating membership:", error);
+                    } finally {
+                        console.log("deleted")
+                        // Remove `payment-verified` from URL without reloading the page
+                        urlParams.delete("payment-verified");
+                        const newUrl = window.location.pathname + "?" + urlParams.toString();
+                        window.history.replaceState({}, "", newUrl);
+                    }
+                };
+
+                updateMembership();
+            }
+        }
+    }, [userId, router]);
+
     return (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+
+            {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
+
             {sections.map((section) => (
                 <motion.div key={section.title} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <HoverCard>
@@ -113,6 +159,7 @@ export default function ToeflPracticeSections() {
                         transition={{ duration: 0.3 }}
                         className={`col-span-full mt-8 flex justify-center w-full ${selectedSection ? "fixed sm:absolute bottom-10 left-0 " : ""}`}
                     >
+
                         <ButtonGroup
                             selectedSection={selectedSection}
                             showDiffrentButtonsForEachTask={showDiffrentButtonsForEachTask}
@@ -127,61 +174,36 @@ export default function ToeflPracticeSections() {
 }
 
 function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { selectedSection: string | null, showDiffrentButtonsForEachTask: boolean }) {
+    const [showPricingModal, setShowPricingModal] = useState(false)
     const { user } = useUser()
     const router = useRouter();
-    const [showPricingModal, setShowPricingModal] = useState(false)
-    const searchParams = useSearchParams();
-    const [alert, setAlert] = useState<{ message: string; type: "success" | "error" | "loading" | "warning" } | null>(null)
-    const userId = user?.id;
-
-    useEffect(() => {
-        if (searchParams.has("payment-verified")) {
-            const updateMembership = async () => {
-                try {
-                    const response = await fetch("/api/updateMembership", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({ userId, membershipType: "Monthly_Membership" }),
-                    });
-
-                    const data = await response.json();
-
-                    if (data.success) {
-                        setAlert({ message: "Subscription Added", type: "success" });
-                        setTimeout(() => setAlert(null), 3000);
-                    } else {
-                        console.error("Failed to update membership:", data.error);
-                    }
-                } catch (error) {
-                    console.error("Error updating membership:", error);
-                } finally {
-                    router.replace("/");
-                }
-            };
-
-            updateMembership();
-        }
-    }, [searchParams, router, userId]);
-
-
+    const [isCheckingAccess, setIsCheckingAccess] = useState(false);
+    const [showClerkLoadingModal, setShowClerkLoadingModal] = useState(false)
     if (!selectedSection) return null;
 
     const RedirectAfterCheckingSubscription = (redirectLink: string) => {
-        var hasAccess = user?.publicMetadata?.["Monthly_Membership"] === "true";
+        if (user) {
+            setIsCheckingAccess(true);
 
-        if (hasAccess) {
-            router.push(redirectLink);
+            setTimeout(() => {
+                var hasAccess = user?.publicMetadata?.["Monthly_Membership"] === "true";
+
+                if (hasAccess) {
+                    router.push(redirectLink);
+                } else {
+                    setShowPricingModal(true);
+                }
+
+                setIsCheckingAccess(false);
+            }, 1000);
         } else {
-            setShowPricingModal(true)
+            setShowClerkLoadingModal(true);
         }
+
     }
 
     return (
         <>
-            {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
-
             <AnimatePresence mode="wait">
 
                 {!showDiffrentButtonsForEachTask ? (
@@ -199,7 +221,13 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                             className="w-[60%] sm:w-auto"
                             disabled={!selectedSection}
                         >
-                            {selectedSection ? `Start ${selectedSection} Practice` : "Select a Section"}
+                            {isCheckingAccess ? (
+                                <Loader2 className="animate-spin w-5 h-5 mr-2" /> // Spinning loader
+                            ) : (
+                                <>
+                                    {selectedSection ? `Start ${selectedSection} Practice` : "Select a Section"}
+                                </>
+                            )}
                         </Button>
                     </motion.div>
 
@@ -218,7 +246,11 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                             className="w-[60%] sm:w-auto"
                             disabled={!selectedSection}
                         >
-                            Start Task 1 Practice
+                            {isCheckingAccess ? (
+                                <Loader2 className="animate-spin w-5 h-5 mr-2" /> // Spinning loader
+                            ) : (
+                                "Start Task 1 Practice"
+                            )}
                         </Button>
                         <Button
                             onClick={() => RedirectAfterCheckingSubscription(`/practice-questions/${selectedSection?.toLowerCase()}-questions/task2`)}
@@ -226,11 +258,41 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                             className="w-[60%] sm:w-auto"
                             disabled={!selectedSection}
                         >
-                            Start Task 2 Practice
+                            {isCheckingAccess ? (
+                                <Loader2 className="animate-spin w-5 h-5 mr-2" /> // Spinning loader
+                            ) : (
+                                "Start Task 2 Practice"
+                            )}
                         </Button>
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            {showClerkLoadingModal && (
+                <Dialog open={showClerkLoadingModal} onOpenChange={setShowClerkLoadingModal}>
+                    <DialogContent className="max-w-md p-6 sm:max-w-lg md:max-w-xl rounded-lg shadow-xl border border-gray-200">
+                        {/* Header with Close Button */}
+                        <DialogHeader className="flex justify-between items-center">
+                            <DialogTitle className="text-lg font-semibold text-gray-900">
+                                Sign in to <span className="text-blue-500">Toefl Go Global</span>
+                            </DialogTitle>
+                            <Button variant="ghost" size="icon" onClick={() => setShowClerkLoadingModal(false)}>
+                                <X className="w-5 h-5" />
+                            </Button>
+                        </DialogHeader>
+
+                        {/* Clerk Sign-In Component */}
+                        <div className="flex flex-col items-center gap-4">
+                            <SignIn routing="hash" />
+                        </div>
+
+                        {/* Footer */}
+                        <DialogFooter className="text-center text-sm text-gray-500">
+                            <p>Secured by Clerk</p>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
+            )}
 
             <Dialog open={showPricingModal} onOpenChange={setShowPricingModal}>
                 <DialogContent className="sm:max-w-[425px]">

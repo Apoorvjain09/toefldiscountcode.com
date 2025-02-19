@@ -2,13 +2,19 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { BookOpen, Headphones, Mic, Pencil } from "lucide-react"
 import Link from "next/link"
 import { Separator } from "@radix-ui/react-separator"
 import { useMediaQuery } from "usehooks-ts"
+import { useUser } from "@clerk/nextjs"
+import { useRouter, useSearchParams } from "next/navigation"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Check, Zap, Shield, Clock, HelpCircle } from "lucide-react"
+import PaymentButton from "@/app/payment/RazorPayButton"
+import Alert from "../ui/AlertNotification"
 
 const sections = [
     {
@@ -120,12 +126,62 @@ export default function ToeflPracticeSections() {
     )
 }
 
-
 function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { selectedSection: string | null, showDiffrentButtonsForEachTask: boolean }) {
+    const { user } = useUser()
+    const router = useRouter();
+    const [showPricingModal, setShowPricingModal] = useState(false)
+    const searchParams = useSearchParams();
+    const [alert, setAlert] = useState<{ message: string; type: "success" | "error" | "loading" | "warning" } | null>(null)
+    const userId = user?.id;
+
+    useEffect(() => {
+        if (searchParams.has("payment-verified")) {
+            const updateMembership = async () => {
+                try {
+                    const response = await fetch("/api/updateMembership", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ userId, membershipType: "Monthly_Membership" }),
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        setAlert({ message: "Subscription Added", type: "success" });
+                        setTimeout(() => setAlert(null), 3000);
+                    } else {
+                        console.error("Failed to update membership:", data.error);
+                    }
+                } catch (error) {
+                    console.error("Error updating membership:", error);
+                } finally {
+                    router.replace("/");
+                }
+            };
+
+            updateMembership();
+        }
+    }, [searchParams, router, userId]);
+
+
     if (!selectedSection) return null;
+
+    const RedirectAfterCheckingSubscription = (redirectLink: string) => {
+        var hasAccess = user?.publicMetadata?.["Monthly_Membership"] === "true";
+
+        if (hasAccess) {
+            router.push(redirectLink);
+        } else {
+            setShowPricingModal(true)
+        }
+    }
 
     return (
         <>
+            {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
+
             <AnimatePresence mode="wait">
 
                 {!showDiffrentButtonsForEachTask ? (
@@ -137,15 +193,14 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                         transition={{ duration: 0.3 }}
                         className="flex justify-center w-full"
                     >
-                        <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions`}>
-                            <Button
-                                size="lg"
-                                className="w-full sm:w-auto"
-                                disabled={!selectedSection}
-                            >
-                                {selectedSection ? `Start ${selectedSection} Practice` : "Select a Section"}
-                            </Button>
-                        </Link>
+                        <Button
+                            onClick={() => RedirectAfterCheckingSubscription(`/practice-questions/${selectedSection?.toLowerCase()}-questions`)}
+                            size="lg"
+                            className="w-[60%] sm:w-auto"
+                            disabled={!selectedSection}
+                        >
+                            {selectedSection ? `Start ${selectedSection} Practice` : "Select a Section"}
+                        </Button>
                     </motion.div>
 
                 ) : (
@@ -157,28 +212,85 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                         transition={{ duration: 0.3 }}
                         className="flex flex-col sm:flex-row gap-5 justify-center w-full items-center"
                     >
-                        <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions/task1`}>
-                            <Button
-                                size="lg"
-                                className="w-[100%] sm:w-auto"
-                                disabled={!selectedSection}
-                            >
-                                Start Task 1 Practice
-                            </Button>
-                        </Link>
-                        <Link href={`/practice-questions/${selectedSection?.toLowerCase()}-questions/task2`}>
-                            <Button
-                                size="lg"
-                                className="w-[100%] sm:w-auto"
-                                disabled={!selectedSection}
-                            >
-                                Start Task 2 Practice
-                            </Button>
-                        </Link>
+                        <Button
+                            onClick={() => RedirectAfterCheckingSubscription(`/practice-questions/${selectedSection?.toLowerCase()}-questions/task1`)}
+                            size="lg"
+                            className="w-[60%] sm:w-auto"
+                            disabled={!selectedSection}
+                        >
+                            Start Task 1 Practice
+                        </Button>
+                        <Button
+                            onClick={() => RedirectAfterCheckingSubscription(`/practice-questions/${selectedSection?.toLowerCase()}-questions/task2`)}
+                            size="lg"
+                            className="w-[60%] sm:w-auto"
+                            disabled={!selectedSection}
+                        >
+                            Start Task 2 Practice
+                        </Button>
                     </motion.div>
                 )}
             </AnimatePresence>
 
+            <Dialog open={showPricingModal} onOpenChange={setShowPricingModal}>
+                <DialogContent className="sm:max-w-[425px]">
+                    <DialogHeader>
+                        <DialogTitle>Pro Plan</DialogTitle>
+                        <DialogDescription>Unlock premium features and take your experience to the next level.</DialogDescription>
+                    </DialogHeader>
+                    <Card className="w-full">
+                        <CardHeader>
+                            <CardTitle className="flex items-center justify-between">
+                                <span>$19.99 / month</span>
+                                <Zap className="w-5 h-5 text-yellow-500" />
+                            </CardTitle>
+                            <CardDescription>Billed annually or $24.99 month-to-month</CardDescription>
+                        </CardHeader>
+                        <CardContent className="grid gap-4">
+                            <div className="flex items-center space-x-2">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <span>Unlimited projects</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <span>Priority support</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <span>Advanced analytics</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Check className="w-4 h-4 text-green-500" />
+                                <span>Custom integrations</span>
+                            </div>
+                        </CardContent>
+                        <CardFooter className="flex flex-col space-y-4">
+                            {/* <Button className="w-full" onClick={() => setShowPricingModal(false)}>
+                                Upgrade to Pro
+                            </Button> */}
+                            <div onClick={() => setShowPricingModal(false)}>
+                                <PaymentButton id="pl_OYfRwibtIHC3Nx" />
+                            </div>
+                            <div className="flex justify-center space-x-4 text-sm text-gray-500">
+                                <div className="flex items-center">
+                                    <Shield className="w-4 h-4 mr-1" />
+                                    Secure payment
+                                </div>
+                                <div className="flex items-center">
+                                    <Clock className="w-4 h-4 mr-1" />
+                                    Cancel anytime
+                                </div>
+                            </div>
+                        </CardFooter>
+                    </Card>
+                    <DialogFooter className="sm:justify-start">
+                        <div className="flex items-center text-sm text-gray-500">
+                            <HelpCircle className="w-4 h-4 mr-1" />
+                            Need help? Contact our support team
+                        </div>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
         </>
 
     )

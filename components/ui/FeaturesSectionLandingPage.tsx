@@ -1,4 +1,5 @@
 "use client"
+
 import { useUser } from "@clerk/nextjs";
 import FAQLandingPAge from "./FAQ-landingpage";
 import Link from "next/link";
@@ -7,6 +8,8 @@ import Image from "next/image";
 import Jese from "@/public/assets/jese-leos.png"
 import Profile from "@/public/assets/profile-picture-2.jpg"
 import Murli from "@/public/assets/murli.avif"
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const SvgStarIcon = () => {
     return (
@@ -22,7 +25,6 @@ const SvgStarIcon = () => {
         </svg>
     )
 }
-
 
 const SvgIcon = () => (
     <svg
@@ -47,6 +49,16 @@ const SvgIcon = () => (
 
 export default function FeaturesSection() {
     const { isSignedIn } = useUser()
+    const router = useRouter();
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has("payment_id")) {
+                router.replace("/practice-questions?payment_id");
+            }
+        }
+    }, [router]);
 
     return (
         <>

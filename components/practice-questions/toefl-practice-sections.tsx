@@ -76,7 +76,7 @@ export default function ToeflPracticeSections() {
         if (userId && typeof window !== "undefined") {
             const urlParams = new URLSearchParams(window.location.search);
 
-            if (urlParams.has("payment-verified")) {
+            if (urlParams.has("payment_id")) {
                 const updateMembership = async () => {
                     try {
                         const response = await fetch("/api/updateMembership", {
@@ -100,7 +100,7 @@ export default function ToeflPracticeSections() {
                     } finally {
                         console.log("deleted")
                         // Remove `payment-verified` from URL without reloading the page
-                        urlParams.delete("payment-verified");
+                        urlParams.delete("payment_id");
                         const newUrl = window.location.pathname + "?" + urlParams.toString();
                         window.history.replaceState({}, "", newUrl);
                     }
@@ -270,26 +270,10 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
 
             {showClerkLoadingModal && (
                 <Dialog open={showClerkLoadingModal} onOpenChange={setShowClerkLoadingModal}>
-                    <DialogContent className="max-w-md p-6 sm:max-w-lg md:max-w-xl rounded-lg shadow-xl border border-gray-200">
-                        {/* Header with Close Button */}
-                        <DialogHeader className="flex justify-between items-center">
-                            <DialogTitle className="text-lg font-semibold text-gray-900">
-                                Sign in to <span className="text-blue-500">Toefl Go Global</span>
-                            </DialogTitle>
-                            <Button variant="ghost" size="icon" onClick={() => setShowClerkLoadingModal(false)}>
-                                <X className="w-5 h-5" />
-                            </Button>
-                        </DialogHeader>
-
-                        {/* Clerk Sign-In Component */}
-                        <div className="flex flex-col items-center gap-4">
+                    <DialogContent className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none">
+                        <div className="flex flex-col items-center">
                             <SignIn routing="hash" />
                         </div>
-
-                        {/* Footer */}
-                        <DialogFooter className="text-center text-sm text-gray-500">
-                            <p>Secured by Clerk</p>
-                        </DialogFooter>
                     </DialogContent>
                 </Dialog>
             )}

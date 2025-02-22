@@ -14,7 +14,8 @@ import {
   MessageCircleMore,
   ScreenShare,
   MountainIcon,
-  DollarSignIcon
+  DollarSignIcon,
+  ShieldQuestionIcon
 } from 'lucide-react';
 import { SidebarDesktop } from './sidebar-desktop';
 import { SidebarItems } from '@/types';
@@ -37,6 +38,7 @@ export default function Sidebar() {
   const sidebarItems: SidebarItems = {
     links: [
       { label: 'Toefl Mock Tests', href: '/', icon: Home },
+      { label: 'Practice Questions', href: '/practice-questions', icon: ShieldQuestionIcon },
       { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
       // { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
       { label: 'Book Counseling Slot', href: '/book-counseling', icon: ScreenShare },

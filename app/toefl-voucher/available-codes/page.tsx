@@ -8,6 +8,7 @@ import { X } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import VoucherCommentComponent from "./VoucherCommentComponent";
 
 const ubuntu = Ubuntu({
     subsets: ["latin"],
@@ -23,12 +24,13 @@ export default function AvailableCodesForNonIndians() {
         id: "toefl-voucher-comment-section",
         title: "Available Voucher Discussion",
     };
+
     useEffect(() => {
         const monthExists = localStorage.getItem("ToeflVoucher-userTentativeTestMonth");
 
         if (!monthExists) {
             const timer = setTimeout(() => {
-                setShowModal(true);
+                // setShowModal(true);
             }, 7000);
 
             return () => clearTimeout(timer);
@@ -40,8 +42,8 @@ export default function AvailableCodesForNonIndians() {
 
             <AvailableToeflCodesNonIndians />
             <div className="py-4"></div>
-            <ToeflVoucherCommentSection article={article} />
-
+            {/* <ToeflVoucherCommentSection article={article} /> */}
+            <VoucherCommentComponent />
             <Dialog open={showModal} onOpenChange={setShowModal}>
                 <DialogContent className={`max-w-2xl bg-gradient-to-b from-primary/10 to-background ${ubuntu.className}`}>
                     <DialogHeader>

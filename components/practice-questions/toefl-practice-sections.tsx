@@ -14,6 +14,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Check, Zap, Shield, Clock, HelpCircle } from "lucide-react"
 import PaymentButton from "@/app/payment/RazorPayButton"
 import Alert from "../ui/AlertNotification"
+import Link from "next/link"
 
 const sections = [
     {
@@ -55,11 +56,11 @@ export default function ToeflPracticeSections() {
     const [showDiffrentButtonsForEachTask, setShowDiffrentButtonsForEachTask] = useState(false);
     const [isScrolledAfterSelectingTask, setIsScrolledAfterSelectingTask] = useState(false);
     const isLargeScreen = useMediaQuery("(min-width: 640px)")
-
     const { user } = useUser()
     const userId = user?.id;
     const router = useRouter();
     const [alert, setAlert] = useState<{ message: string; type: "success" | "error" | "loading" | "warning" } | null>(null)
+    const [isSubscriptionBought, setIsSubscriptionBought] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -92,6 +93,7 @@ export default function ToeflPracticeSections() {
                         if (data.success) {
                             setAlert({ message: "Enjoy! Subscription Added", type: "success" });
                             setTimeout(() => setAlert(null), 3000);
+                            setIsSubscriptionBought(true);
                         } else {
                             console.error("Failed to update membership:", data.error);
                         }
@@ -163,6 +165,7 @@ export default function ToeflPracticeSections() {
                         <ButtonGroup
                             selectedSection={selectedSection}
                             showDiffrentButtonsForEachTask={showDiffrentButtonsForEachTask}
+                            isSubscriptionBought={isSubscriptionBought}
                         />
                     </motion.div>
                 )}
@@ -173,7 +176,7 @@ export default function ToeflPracticeSections() {
     )
 }
 
-function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { selectedSection: string | null, showDiffrentButtonsForEachTask: boolean }) {
+function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask, isSubscriptionBought }: { selectedSection: string | null, showDiffrentButtonsForEachTask: boolean, isSubscriptionBought: boolean }) {
     const [showPricingModal, setShowPricingModal] = useState(false)
     const { user } = useUser()
     const router = useRouter();
@@ -188,7 +191,7 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
             setTimeout(() => {
                 var hasAccess = user?.publicMetadata?.["Monthly_Membership"] === "true";
 
-                if (hasAccess) {
+                if (hasAccess || isSubscriptionBought) {
                     router.push(redirectLink);
                 } else {
                     setShowPricingModal(true);
@@ -199,7 +202,6 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
         } else {
             setShowClerkLoadingModal(true);
         }
-
     }
 
     return (
@@ -272,7 +274,7 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                 <Dialog open={showClerkLoadingModal} onOpenChange={setShowClerkLoadingModal}>
                     <DialogContent className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none">
                         <div className="flex flex-col items-center">
-                            <SignIn routing="hash" />
+                            <SignIn forceRedirectUrl="/practice-questions" routing="hash" />
                         </div>
                     </DialogContent>
                 </Dialog>
@@ -287,27 +289,28 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                     <Card className="w-full">
                         <CardHeader>
                             <CardTitle className="flex items-center justify-between">
-                                <span>$19.99 / month</span>
+                                <span>₹520 / month</span>
+                                {/* <span>$5.99 / month</span> */}
                                 <Zap className="w-5 h-5 text-yellow-500" />
                             </CardTitle>
-                            <CardDescription>Billed annually or $24.99 month-to-month</CardDescription>
+                            <CardDescription>Billed annually or ₹520 month-to-month</CardDescription>
                         </CardHeader>
                         <CardContent className="grid gap-4">
                             <div className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-500" />
-                                <span>Unlimited projects</span>
+                                <span>Full access to TOEFL practice tests</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-500" />
-                                <span>Priority support</span>
+                                <span>Instant evaluation for speaking and writing sections</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-500" />
-                                <span>Advanced analytics</span>
+                                <span>Extensive AI-graded TOEFL practice questions</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-500" />
-                                <span>Custom integrations</span>
+                                <span>Detailed performance analytics & feedback</span>
                             </div>
                         </CardContent>
                         <CardFooter className="flex flex-col space-y-4">
@@ -330,10 +333,14 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask }: { sele
                         </CardFooter>
                     </Card>
                     <DialogFooter className="sm:justify-start">
-                        <div className="flex items-center text-sm text-gray-500">
+                        <Link
+                            href="https://wa.me/918802880181"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-sm text-gray-500 hover:text-gray-800 cursor-pointer">
                             <HelpCircle className="w-4 h-4 mr-1" />
                             Need help? Contact our support team
-                        </div>
+                        </Link>
                     </DialogFooter>
                 </DialogContent>
             </Dialog>

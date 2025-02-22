@@ -10,6 +10,9 @@ import Profile from "@/public/assets/profile-picture-2.jpg"
 import Murli from "@/public/assets/murli.avif"
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { MainAnimatedTestimonials } from "../landingPage/MainAnimatedTestimonials";
+import MainTypesOfServices from "../landingPage/MainTypesOfServices";
+import { MainHeroSection } from "../landingPage/MainHeroSection";
 
 const SvgStarIcon = () => {
     return (
@@ -62,7 +65,13 @@ export default function FeaturesSection() {
 
     return (
         <>
-            <div className="p-6 h-96 relative w-full overflow-hidden bg-slate-900 sm:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 flex flex-col items-center justify-center rounded-t-lg">
+            <MainHeroSection />
+
+            <MainTypesOfServices />
+
+            <MainAnimatedTestimonials autoplay={false} />
+
+            <div className="p-6 h-96 relative w-full overflow-hidden bg-slate-900 sm:bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 flex flex-col items-center justify-center ">
                 <div className="absolute inset-0 w-full h-full z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
                 <h1 className={"text-center md:text-4xl text-xl text-white relative z-20 font-bold"}>
                     Ace Your TOEFL Test with Our AI-Powered Mock Tests
@@ -80,6 +89,7 @@ export default function FeaturesSection() {
                     </Link>
                 )}
             </div>
+
 
             <section className="bg-white text-black">
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -178,7 +188,7 @@ export default function FeaturesSection() {
             <section className="bg-white">
                 <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                     <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                        Read trusted reviews from our customers
+                        More trusted reviews from our Customers
                     </h2>
 
                     <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-3 md:gap-8">

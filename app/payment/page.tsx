@@ -58,32 +58,27 @@ export default function Payment() {
             <ul className="mt-6 space-y-2">
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> 8 Mock Tests </span>
+                <span className="text-gray-700"> 7 AI-Powered Mock Tests </span>
               </li>
 
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> 4 Pre-recorded Classes </span>
+                <span className="text-gray-700"> Access to TOEFL practice Tests </span>
               </li>
 
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> Vocab Ladder Access</span>
+                <span className="text-gray-700"> Free University Shortlisting </span>
               </li>
 
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> University Shortlisting</span>
+                <span className="text-gray-700"> Instant TGG-AI evaluation </span>
               </li>
 
               <li className="flex items-center gap-1">
                 <SvgTick />
-                <span className="text-gray-700"> 10 toefl mini tests </span>
-              </li>
-
-              <li className="flex items-center gap-1">
-                <SvgTick />
-                <span className="text-gray-700"> 12 Toefl vocab classes </span>
+                <span className="text-gray-700"> 400+ practice questions </span>
               </li>
             </ul>
 

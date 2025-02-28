@@ -7,32 +7,40 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { BookOpen, Info, Mail, Calendar, Video, MailIcon } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 
-const pricingOptions = [
-    {
-        price: 15200,
-        actualPrice: 16900,
-        savings: 1700,
-        description: "You will get the code through watching the youtube video.",
-        bookingMethod: "youtube_code",
-    },
-    {
-        price: 13000,
-        actualPrice: 16900,
-        savings: 3900,
-        description: "We will book the exam slot for you, you will not get the voucher code",
-        bookingMethod: "slot_booking",
-    },
-    {
-        price: 13500,
-        actualPrice: 16900,
-        savings: 3400,
-        description: "You will get the voucher code on your registered Email ID",
-        bookingMethod: "buy_voucher",
-        popular: true,
-    },
-]
 
-export default function TOEFLPricing() {
+interface HeroProps {
+    voucher: string;
+    booking: string;
+    discount: string;
+}
+
+export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) {
+    const pricingOptions = [
+        {
+            price: discount,
+            actualPrice: 16900,
+            savings: 16900 - Number(discount.replace(/,/g, '')),
+            description: "You will get the code through watching the youtube video.",
+            bookingMethod: "youtube_code",
+        },
+        {
+            price: booking,
+            actualPrice: 16900,
+            savings: 16900 - Number(booking.replace(/,/g, '')),
+            description: "We will book the exam slot for you, you will not get the voucher code",
+            bookingMethod: "slot_booking",
+        },
+        {
+            price: voucher,
+            actualPrice: 16900,
+            savings: 16900 - Number(voucher.replace(/,/g, '')),
+            description: "You will get the voucher code on your registered Email ID",
+            bookingMethod: "buy_voucher",
+            popular: true,
+        },
+    ]
+
+
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">TOEFL Exam Booking Options</h1>

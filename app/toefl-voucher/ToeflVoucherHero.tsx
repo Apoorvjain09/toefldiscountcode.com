@@ -27,7 +27,13 @@ const formSchema = z.object({
     }),
 })
 
-export default function ToeflVoucherHero() {
+interface HeroProps {
+    voucher: string;
+    booking: string;
+    discount: string;
+}
+
+export default function ToeflVoucherHero({ voucher, booking, discount }: HeroProps) {
     const [openModal, setOpenModal] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -98,9 +104,9 @@ export default function ToeflVoucherHero() {
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         {[
-                            { amount: 3400, type: 'Voucher' },
-                            { amount: 3900, type: 'Exam Booking' },
-                            { amount: 1700, type: 'Discount Code' },
+                            { amount: voucher, type: 'Voucher' },
+                            { amount: booking, type: 'Exam Booking' },
+                            { amount: discount, type: 'Discount Code' },
                         ].map((offer, index) => (
                             <motion.div
                                 key={offer.type}

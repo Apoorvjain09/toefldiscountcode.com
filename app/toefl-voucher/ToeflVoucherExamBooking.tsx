@@ -3,14 +3,21 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
-export default function ToeflVoucherExamBooking() {
+
+interface DiscountProps {
+    voucher: string;
+    booking: string;
+    discount: string;
+}
+
+export default function ToeflVoucherExamBooking({ voucher, booking, discount }: DiscountProps) {
     return (
         <div className="p-6 max-w-4xl mx-auto space-y-6">
             <Card className="shadow-2xl border-2 border-purple-500 ">
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-bold">TOEFL Exam Booking: Save Big on Your Test Fees</CardTitle>
                     <CardDescription className="text-gray-500 mt-2">
-                        Discover how you can save up to ₹4,000 by booking your TOEFL Exam through MJ Study Abroad. Learn the process, benefits, and why this is the best option for you.
+                        Discover how you can save up to ₹{16900 - Number(booking.replace(/,/g, ''))} by booking your TOEFL Exam through MJ Study Abroad. Learn the process, benefits, and why this is the best option for you.
                     </CardDescription>
                 </CardHeader>
 
@@ -18,7 +25,7 @@ export default function ToeflVoucherExamBooking() {
                 <CardContent className="prose prose-lg text-gray-700 space-y-2">
                     <h2 className="font-bold text-2xl text-gray-900">Why Choose TOEFL Exam Booking?</h2>
                     <p>
-                        TOEFL Exam Booking offers a smarter alternative to purchasing a TOEFL Exam Voucher. Instead of handling the booking yourself, an authorized vendor representative will book the exam for you based on your preferred exam center and dates. This method not only saves time but also allows test-takers to enjoy significant discounts of up to ₹4,000.
+                        TOEFL Exam Booking offers a smarter alternative to purchasing a TOEFL Exam Voucher. Instead of handling the booking yourself, an authorized vendor representative will book the exam for you based on your preferred exam center and dates. This method not only saves time but also allows test-takers to enjoy significant discounts of up to ₹{16900 - Number(booking.replace(/,/g, ''))}.
                     </p>
 
                     <Separator />
@@ -43,7 +50,7 @@ export default function ToeflVoucherExamBooking() {
                     <h2 className="font-bold text-2xl text-gray-900">Additional Benefits</h2>
                     <ul className="list-disc pl-6">
                         <li>Dedicated customer support via call, WhatsApp, or email.</li>
-                        <li>GRE Exam discounts of up to ₹3,000 with MJ Study Abroad coupon codes.</li>
+                        <li>GRE Exam discounts of up to ₹5,500 with MJ Study Abroad coupon codes.</li>
                         <li>Seamless study abroad services with over 50 international partners.</li>
                     </ul>
                 </CardContent>

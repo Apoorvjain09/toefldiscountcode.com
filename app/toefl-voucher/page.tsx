@@ -20,6 +20,10 @@ const Page = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
+  const TOEFL_Voucher = "12,900";
+  const TOEFL_Exam_Booking = "12,400";
+  const TOEFL_Discount_Code = "16,400";
+
   useEffect(() => {
     const fetchGeoData = async () => {
       const storedGeoData = localStorage.getItem("geoData");
@@ -58,8 +62,8 @@ const Page = () => {
         <LoadingSpinner />
       ) : (
         <div className="">
-          <ToeflVoucherHero />
-          <TOEFLPricing />
+          <ToeflVoucherHero voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+          <TOEFLPricing voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
           <ToeflVoucherWhyUS />
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-5 mx-10 mb-10 ">
@@ -85,11 +89,11 @@ const Page = () => {
             </div>
           </div>
 
-          <ToeflVoucherFAQ />
-          <ToeflVoucherTable />
-          <DiscountCodeExplanation />
-          <VoucherPurchaseExplanation />
-          <ToeflVoucherExamBooking />
+          <ToeflVoucherFAQ voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+          <ToeflVoucherTable voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+          <DiscountCodeExplanation voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+          <VoucherPurchaseExplanation voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+          <ToeflVoucherExamBooking voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
           <ToeflVoucherWhatIsToefl />
           <ToeflVoucherWhatIsDiscountCode />
           <MainFooter />

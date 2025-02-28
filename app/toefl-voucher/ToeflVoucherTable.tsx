@@ -9,7 +9,13 @@ import {
 } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-export default function ToeflVoucherTable() {
+interface DiscountProps {
+    voucher: string;
+    booking: string;
+    discount: string;
+}
+
+export default function ToeflVoucherTable({ voucher, booking, discount }: DiscountProps) {
     return (
         <Card className="my-10 w-full max-w-2xl mx-auto">
             <CardHeader>
@@ -27,15 +33,15 @@ export default function ToeflVoucherTable() {
                     <TableBody>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Discount Code</TableCell>
-                            <TableCell>Rs 1700</TableCell>
+                            <TableCell>Rs {16900 - Number(discount.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Voucher</TableCell>
-                            <TableCell>Rs 3400</TableCell>
+                            <TableCell>Rs {16900 - Number(voucher.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Booking</TableCell>
-                            <TableCell>Rs 3900</TableCell>
+                            <TableCell>Rs {16900 - Number(booking.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

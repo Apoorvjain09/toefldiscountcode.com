@@ -4,7 +4,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
-export default function VoucherPurchaseExplanation() {
+
+interface DiscountProps {
+    voucher: string;
+    booking: string;
+    discount: string;
+}
+
+export default function VoucherPurchaseExplanation({ voucher, booking, discount }: DiscountProps) {
     return (
         <div className="p-6 max-w-4xl mx-auto space-y-6">
             {/* Main Blog Header */}
@@ -12,7 +19,7 @@ export default function VoucherPurchaseExplanation() {
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-bold">TOEFL Exam Vouchers</CardTitle>
                     <CardDescription className="text-gray-500 mt-2">
-                        Save up to ₹3,500 on your TOEFL Exam with MJ Study Abroad.
+                        Save up to ₹{16900 - Number(voucher.replace(/,/g, ''))} on your TOEFL Exam with MJ Study Abroad.
                     </CardDescription>
                 </CardHeader>
 
@@ -26,7 +33,7 @@ export default function VoucherPurchaseExplanation() {
 
                     <h2 className="font-bold text-2xl text-gray-900">How Much Can You Save?</h2>
                     <p>
-                        Purchasing a prepaid voucher from authorized vendors like MJ Study Abroad can help you save up to ₹3,500 on your total exam fees. These vouchers are typically valid for 8 to 11 months from the date of purchase, making them a flexible and cost-effective choice for planning your TOEFL Exam.
+                        Purchasing a prepaid voucher from authorized vendors like MJ Study Abroad can help you save up to ₹{16900 - Number(voucher.replace(/,/g, ''))} on your total exam fees. These vouchers are typically valid for 8 to 11 months from the date of purchase, making them a flexible and cost-effective choice for planning your TOEFL Exam.
                     </p>
 
                     <Separator />

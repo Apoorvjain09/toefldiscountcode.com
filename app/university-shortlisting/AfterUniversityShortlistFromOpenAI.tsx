@@ -8,6 +8,8 @@ import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { MapPin, Trophy, UserCheck, ChevronUp, ChevronDown, Lightbulb } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
+import Link from "next/link"
 
 interface University {
     universityName: string
@@ -92,6 +94,26 @@ export default function AfterUniversityShortlistFromOpenAI({ shortlistedUniversi
                 </CardContent>
             </Card>
 
+            <div className="flex flex-col items-center text-center gap-4">
+                <p className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 drop-shadow-md">
+                    🎓 Get <span className="underline decoration-wavy">100% Application Fee Waivers</span>,<br />
+                    Scholarships, and Assistantships!
+                </p>
+
+                <Link href={`https://api.whatsapp.com/send?phone=918802880181&text=${encodeURIComponent(
+                    "Hey! I tried AI university shortlisting, and now I’m looking for expert manual shortlisting based on my profile. Can you assist me?"
+                )}`}
+                >
+                    <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 flex items-center gap-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                        <UserCheck className="h-5 w-5" />
+                        <span className="text-lg font-semibold">Reach us on WhatsApp</span>
+                        <FaWhatsapp className="h-6 w-6 text-green-400" />
+                    </Button>
+                </Link>
+            </div>
+
+
+
             <div className="grid gap-8 md:grid-cols-2">
                 <Card>
                     <CardHeader className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-t-lg">
@@ -125,13 +147,6 @@ export default function AfterUniversityShortlistFromOpenAI({ shortlistedUniversi
                     </CardContent>
                 </Card>
             </div>
-
-            {/* <div className="flex justify-center">
-                <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                    <UserCheck className="mr-2 h-4 w-4" />
-                    Apply Now
-                </Button>
-            </div> */}
         </div>
     )
 }

@@ -50,52 +50,43 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
+  const [formData, setFormData] = useState<Partial<z.infer<typeof formSchema>>>({
+    abroadPlan: undefined,
+    studyCountry: undefined,
+    homeCountry: "",
+    name: "",
+    contactNumber: "",
+    email: "",
+    educationLevel: undefined,
+    cgpa: undefined,
+    profileDescription: "",
+    nextLevel: undefined,
+    programPreference: "",
+    eligibilityExams: undefined,
+    examScores: "",
+    examPlan: "",
+  });
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      abroadPlan: undefined,
-      studyCountry: undefined,
-      homeCountry: "",
-      name: "",
-      contactNumber: "",
-      email: "",
-      educationLevel: undefined,
-      cgpa: undefined,
-      profileDescription: "",
-      nextLevel: undefined,
-      programPreference: "",
-      eligibilityExams: undefined,
-      examScores: "",
-      examPlan: "",
-    },
+    defaultValues: formData,
   });
 
   const eligibilityExams = form.watch("eligibilityExams");
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     setLoading(true)
-    console.log("Form submitted with values:", values);
-    // try {
-    //   const response = await fetch('/api/send-email', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ values }),
-    //   });
-
-    //   if (response.ok) {
-    //     console.log('Email sent successfully');
-    //     setAlert({ message: 'Form submitted successfully!', type: 'success' });
-    //   } else {
-    //     const errorData = await response.json();
-    //     console.error('Failed to send email(page.tsx)', errorData);
-    //     setAlert({ message: 'Failed to submit the form. Please try again.', type: 'error' });
-    //   }
-    // } catch (error) {
-    //   console.error('Error sending email(page.tsx)', error);
-    //   setAlert({ message: 'An error occurred. Please try again.', type: 'error' });
-    // }
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ values }),
+      });
+    } catch (error) {
+      setAlert({ message: 'An error occurred! Fixing Error..', type: 'error' });
+    }
 
     try {
       // Send data to ChatGPT via OpenAI API
@@ -173,8 +164,8 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
     }
   };
 
-  const nextStep = () => setStep(step + 1);
-  const prevStep = () => setStep(step - 1);
+  const prevStep = () => { setFormData(form.getValues()); setStep(step - 1) };
+  const nextStep = () => { setFormData(form.getValues()); setStep(step + 1); console.log(formData) };
 
   useEffect(() => {
     const fetchUserCountry = async () => {
@@ -217,7 +208,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
       <Form {...form}>
         <form
           onSubmit={(e) => {
-            console.log("Form is being submitted");
+            console.log("Form is being submitted", formData);
             form.handleSubmit(handleSubmit)(e);
           }}
           className="max-w-md w-[80vw] flex flex-col gap-4"
@@ -229,7 +220,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>When are you planning to go abroad?</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select onValueChange={field.onChange} {...field} >
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a date" />
@@ -253,7 +244,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Which country are you aiming to study in?</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select onValueChange={field.onChange} {...field}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a country" />
@@ -335,7 +326,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>What is your highest education level?</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select onValueChange={field.onChange} {...field}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select education level" />
@@ -359,7 +350,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>What is your college CGPA or percentage?</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select onValueChange={field.onChange} {...field}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select CGPA or percentage" />
@@ -400,7 +391,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Which level do you wish to pursue next?</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select onValueChange={field.onChange} {...field}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select next level" />
@@ -437,7 +428,7 @@ export default function AIUniversityShortlistingForm({ onFormSubmit }: { onFormS
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Have you appeared for any eligibility exams?</FormLabel>
-                    <Select onValueChange={field.onChange}>
+                    <Select onValueChange={field.onChange} {...field}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select an option" />

@@ -108,7 +108,7 @@ export default function MainTypesOfServices() {
                         <Card className="relative overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 text-white h-full">
                             <CardHeader>
                                 <CardTitle className="text-2xl sm:text-3xl font-bold">Take a Free Mock Test</CardTitle>
-                                <CardDescription className="text-blue-100">For All TestGlider Members!</CardDescription>
+                                <CardDescription className="text-blue-100">For All TOEFLgoglobal members!</CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <div className="absolute top-4 right-4">

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Copy, CheckCircle, ExternalLink } from 'lucide-react'
+import { GraduationCap, Copy, CheckCircle, ExternalLink, Book } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -15,6 +15,7 @@ import * as z from 'zod'
 import { Input } from '@/components/ui/input'
 import { db } from "@/firebase";
 import { collection, addDoc } from "firebase/firestore";
+import Link from 'next/link'
 
 
 const formSchema = z.object({
@@ -104,9 +105,9 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         {[
-                            { amount: voucher, type: 'Voucher' },
-                            { amount: booking, type: 'Exam Booking' },
-                            { amount: discount, type: 'Discount Code' },
+                            { amount: 16900 - Number(voucher.replace(/,/g, '')), type: 'Voucher' },
+                            { amount: 16900 - Number(booking.replace(/,/g, '')), type: 'Exam Booking' },
+                            { amount: 16900 - Number(discount.replace(/,/g, '')), type: 'Discount Code' },
                         ].map((offer, index) => (
                             <motion.div
                                 key={offer.type}
@@ -168,14 +169,31 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="text-center py-8"
+                            className="flex flex-col items-center justify-center py-12 px-6 text-center bg-white rounded-lg shadow-lg"
                         >
-                            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                            <DialogTitle className="text-2xl font-bold mb-2">Thank You!</DialogTitle>
-                            <DialogDescription>
-                                Your enquiry has been submitted successfully. We'll get back to you soon.
+                            <CheckCircle className="w-20 h-20 text-green-500 mb-6" />
+                            <DialogTitle className="text-3xl font-semibold text-gray-900 mb-2">
+                                Thank You! 🎉
+                            </DialogTitle>
+                            <DialogDescription className="text-gray-400 mb-6">
+                                Your enquiry has been submitted successfully. We’ll get back to you soon!
                             </DialogDescription>
+
+                            <p className="text-lg text-gray-800 font-medium">Want to boost your TOEFL score?</p>
+
+                            <div className="mt-6 w-full">
+                                <Link href="/practice-questions">
+                                    <Button className='text-md w-full bg-black'>
+                                        <Book className='text-white' /> Start Practicing FREE TOEFL tests
+                                    </Button>
+                                </Link>
+                            </div>
+
+                            <p className="mt-6 text-sm text-gray-500">
+                                Need help? <Link href="https://api.whatsapp.com/send/?phone=918802880181" className="text-blue-500 hover:underline">Contact us</Link>
+                            </p>
                         </motion.div>
+
                     ) : (
                         <>
                             <DialogHeader>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TOEFL Discount Code | Save Big on TOEFL Registration",
     description: "Access exclusive TOEFL discount codes and prepare for your exam with GregoGlobal's top resources. Save now and excel in your TOEFL journey.",
-    url: "https://www.toeflgoglobal.com/discount-code",
+    url: "https://www.toeflgoglobal.com/toefl-voucher",
     type: 'website',
     images: [
       {

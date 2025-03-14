@@ -18,43 +18,43 @@ import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
 const Page = () => {
   const router = useRouter();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const TOEFL_Voucher = "12,900";
   const TOEFL_Exam_Booking = "12,400";
   const TOEFL_Discount_Code = "16,400";
 
-  useEffect(() => {
-    const fetchGeoData = async () => {
-      const storedGeoData = localStorage.getItem("geoData");
+  // useEffect(() => {
+  //   const fetchGeoData = async () => {
+  //     const storedGeoData = localStorage.getItem("geoData");
 
-      if (!storedGeoData) {
-        try {
-          const geoResponse = await fetch(`https://ipapi.co/json/`);
-          const geoData = await geoResponse.json();
-          localStorage.setItem("geoData", JSON.stringify(geoData));
+  //     if (!storedGeoData) {
+  //       try {
+  //         const geoResponse = await fetch(`https://ipapi.co/json/`);
+  //         const geoData = await geoResponse.json();
+  //         localStorage.setItem("geoData", JSON.stringify(geoData));
 
-          if (geoData.country !== "IN") {
-            router.push("/toefl-voucher/available-codes");
-          }
-        } catch (error) {
-          console.error("Failed to fetch geo data:", error);
-        }
-      } else {
-        const geoData = JSON.parse(storedGeoData);
+  //         if (geoData.country !== "IN") {
+  //           router.push("/toefl-voucher/available-codes");
+  //         }
+  //       } catch (error) {
+  //         console.error("Failed to fetch geo data:", error);
+  //       }
+  //     } else {
+  //       const geoData = JSON.parse(storedGeoData);
 
-        if (geoData.country !== "IN") {
-          router.push("/toefl-voucher/available-codes");
-        } else {
-          console.log("Using cached geo data:", geoData);
-        }
-      }
+  //       if (geoData.country !== "IN") {
+  //         router.push("/toefl-voucher/available-codes");
+  //       } else {
+  //         console.log("Using cached geo data:", geoData);
+  //       }
+  //     }
 
-      setLoading(false);
-    };
+  //     setLoading(false);
+  //   };
 
-    fetchGeoData();
-  }, [router]);
+  //   fetchGeoData();
+  // }, [router]);
 
   return (
     <>

@@ -83,6 +83,15 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
         return () => clearTimeout(timeout);
     }, [isSubmitted]);
 
+    useEffect(() => {
+        if (openModal) {
+            localStorage.setItem("externalTGGModelOpen", "true");
+        } else {
+            localStorage.setItem("externalTGGModelOpen", "false");
+        }
+    }, [openModal]);
+
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 p-4 md:p-8 lg:p-12">
             <Card className="mx-auto max-w-5xl overflow-hidden">
@@ -162,6 +171,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                     </div>
                 </CardFooter>
             </Card>
+
             <Dialog open={openModal} onOpenChange={setOpenModal}>
                 <DialogContent className="sm:max-w-[425px]">
                     {isSubmitted ? (
@@ -184,7 +194,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                             <div className="mt-6 w-full">
                                 <Link href="/practice-questions">
                                     <Button className='text-md w-full bg-black'>
-                                        <Book className='text-white' /> Start Practicing FREE TOEFL tests
+                                        <Book className='text-white' /> Practice FREE TOEFL tests
                                     </Button>
                                 </Link>
                             </div>
@@ -193,7 +203,6 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                                 Need help? <Link href="https://api.whatsapp.com/send/?phone=918802880181" className="text-blue-500 hover:underline">Contact us</Link>
                             </p>
                         </motion.div>
-
                     ) : (
                         <>
                             <DialogHeader>

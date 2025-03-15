@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from 'next';
+import { TOEFLVOUCHERWhatsAppButton } from "./ToeflVoucher-whatsapp-button-fixed";
 
 export const metadata: Metadata = {
   title: "TOEFL Discount Code | Save Big on TOEFL Registration",
@@ -47,7 +48,10 @@ const layout = ({ children }: { children: ReactNode }) => {
   };
   return (
     <div className="">
-      <main className="">{children}</main>
+      <main className="">
+        {children}
+        <TOEFLVOUCHERWhatsAppButton phoneNumber="+918802880181" message="Hi there! I'd like to know more about toefl vouchers?" />
+      </main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

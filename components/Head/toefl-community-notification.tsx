@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa"
 
 export default function ToeflCommunityNotification() {
     const [isVisible, setIsVisible] = useState(false)
+    const [isFifteenSecondsPassed, setIsFifteenSecondsPassed] = useState(false)
 
     useEffect(() => {
         const isJoined = localStorage.getItem("Whatsap_community_joined");
@@ -17,13 +18,28 @@ export default function ToeflCommunityNotification() {
         }
 
         const timer = setTimeout(() => {
-            setIsVisible(true);
-            const audio = new Audio("/sounds/notification.mp3");
-            audio.play().catch((error) => console.error("Failed to play sound:", error));
+            setIsFifteenSecondsPassed(true);
         }, 15000);
+
 
         return () => clearTimeout(timer);
     }, []);
+
+    useEffect(() => {
+        if (!isFifteenSecondsPassed) return;
+
+        const checkForPopup = setInterval(() => {
+            const isExternalPopupOpen = localStorage.getItem("externalTGGModelOpen") === "true";
+            if (!isExternalPopupOpen) {
+                setIsVisible(true);
+                const audio = new Audio("/sounds/notification.mp3");
+                audio.play().catch((error) => console.error("Failed to play sound:", error));
+                clearInterval(checkForPopup); // Stop checking
+            }
+        }, 1000);
+
+        return () => clearInterval(checkForPopup);
+    }, [isFifteenSecondsPassed]);
 
 
     const handleJoin = () => {

@@ -6,7 +6,7 @@ import TOEFLPricing from "./ToeflVoucherPricing";
 import { Info } from "lucide-react";
 import ToeflVoucherWhatIsToefl from "./ToeflVoucheWhatIsToefl";
 import ToeflVoucherWhatIsDiscountCode from "./ToeflVoucherWhatIsDiscountCode";
-import MainFooter from "@/components/ui/MainFooter";
+import MainFooter from "@/components/landing-page/MainFooter";
 import ToeflVoucherTable from "./ToeflVoucherTable";
 import ToeflVoucherExamBooking from "./ToeflVoucherExamBooking";
 import DiscountCodeExplanation from "./DiscountCodeExplanation";

@@ -1,7 +1,7 @@
 import { Award, FormInputIcon, Laptop, Users } from 'lucide-react';
 import React from 'react';
 
-const HowWeDoIt = () => {
+const BookCounselingHowDoWeDoIt = () => {
   return (
     <section className=" text-black py- border-t-2">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 flex flex-col items-center">
@@ -54,4 +54,4 @@ const HowWeDoIt = () => {
   );
 };
 
-export default HowWeDoIt;
+export default BookCounselingHowDoWeDoIt;

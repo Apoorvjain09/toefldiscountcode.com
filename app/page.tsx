@@ -1,4 +1,4 @@
-import FeaturesSection from "@/components/ui/FeaturesSectionLandingPage";
+import LandingPageComponent from "@/components/landing-page/LandingPageComponent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function Page() {
     };
     return (
         <>
-            <FeaturesSection />
+            <LandingPageComponent />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

@@ -140,13 +140,6 @@ export default function ToeflPracticeSections() {
                                 </CardContent>
                             </Card>
                         </HoverCardTrigger>
-                        <HoverCardContent className="hidden sm:block w-80">
-                            <h3 className="text-lg font-semibold">{section.title} Section</h3>
-                            <p className="text-sm text-muted-foreground">
-                                The TOEFL {section.title} section tests your ability to {section.description.toLowerCase()}. Practice
-                                this section to improve your overall TOEFL score.
-                            </p>
-                        </HoverCardContent>
                     </HoverCard>
                 </motion.div>
             ))}

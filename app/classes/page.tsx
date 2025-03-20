@@ -1,6 +1,8 @@
-import { ModernSeriesPage } from "@/components/modern-series-page";
-import WhiteLabelClassSchedule from "./WhiteLabelClassSchedule";
+import { ClassesToeflCourse } from "@/app/classes/ClassesToeflCourse";
+import ClassesWhiteLabelSchedule from "./ClassesWhiteLabelSchedule";
 import type { Metadata } from "next";
+import MainFooter from "@/components/landing-page/MainFooter";
+import { ClassesCalanderView } from "./ClassesCalanderView";
 
 
 export const metadata: Metadata = {
@@ -36,8 +38,10 @@ export const metadata: Metadata = {
 export default function Classes() {
     return (
         <>
-            <WhiteLabelClassSchedule />
-            <ModernSeriesPage />
+            <ClassesWhiteLabelSchedule />
+            <ClassesCalanderView />
+            <ClassesToeflCourse />
+            <MainFooter />
         </>
     )
 }

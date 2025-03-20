@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const Carousel = () => {
+const BookCounselingCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -74,4 +74,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default BookCounselingCarousel;

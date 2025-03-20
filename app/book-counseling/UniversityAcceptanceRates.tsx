@@ -12,7 +12,7 @@ const UniversityAcceptanceRates = () => {
       name: 'Johns Hopkins University',
       generalAcceptanceRate: '18%',
       TGGAcceptanceRate: '36%',
-      logo: 'https://brand.jhu.edu/assets/uploads/sites/5/2014/06/university.shield.small_.blue_.png', // Update with actual path
+      logo: 'https://ymgrad.com//media/logo/john-hopkins.webp',
     },
     {
       name: 'Columbia University',

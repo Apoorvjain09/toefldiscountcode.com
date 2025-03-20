@@ -1,4 +1,4 @@
-export default function CounselingFAQ() {
+export default function BookCounselingFAQ() {
     return (
         <div className="flex flex-col mx-3 sm:mx-12 mt-10 pt-5 divide-gray-100 rounded-xl border border-gray-500 mb-10 bg-white">
             <p className="text-center font-bold text-4xl">FAQ</p>

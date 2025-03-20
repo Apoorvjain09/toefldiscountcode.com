@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 interface Series {
@@ -35,33 +34,25 @@ const SeriesGrid = ({ series }: { series: Series[] }) => (
               src={item.image}
               alt={`Image of ${item.title}`}
               className="object-cover"
-              loading="lazy" // Enable lazy loading for performance
+              loading="lazy"
               onError={(e) => {
-                e.currentTarget.src = '/fallback-image.svg'; // Fallback image if the source fails
+                e.currentTarget.src = '/fallback-image.svg';
               }}
             />
           </AspectRatio>
-          {/* <CardContent className="p-4">
-            <h3 className="text-lg font-semibold">{item.title}</h3>
-          </CardContent> */}
         </Card>
       </Link>
     ))}
   </div>
 )
 
-export function ModernSeriesPage() {
+export function ClassesToeflCourse() {
   return (
-    <div className="container mx-auto px-4 py-8 space-y-12">
+    <div className="container mx-auto p-8 space-y-12">
       <section>
         <h2 className="text-3xl font-bold mb-6">TTG+ Pre-Recorded Classes (2hrs/session)</h2>
         <SeriesGrid series={ongoingSeries} />
       </section>
-
-      {/* <section>
-        <h2 className="text-3xl font-bold mb-6">Recently Completed Test Series</h2>
-        <SeriesGrid series={completedSeries} />
-      </section> */}
     </div>
   )
 }

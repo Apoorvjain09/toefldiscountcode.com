@@ -2,11 +2,11 @@
 
 import { useCallback, useEffect, useState, useMemo } from 'react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Progress } from '@/components/ui/progress'
 import { CircleCheck, CircleX, Medal, X } from 'lucide-react'
+import Link from 'next/link'
 
 interface QuizQuestion {
   Word: string;
@@ -15,10 +15,10 @@ interface QuizQuestion {
 }
 interface McqQuizProps {
   questions: QuizQuestion[];
-  modulePosition: number; // New prop for module position
+  modulePosition: number;
 }
 
-export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
+export function VocabLadderQuizComponent({ questions, modulePosition }: McqQuizProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [userAnswers, setUserAnswers] = useState<{ [key: number]: string }>({})
   const [incorrectExplanation, setIncorrectExplanation] = useState<string | null>(null)
@@ -203,7 +203,6 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
             </div>
           )}
 
-
           {incorrectExplanation && (
             <div className="mt-4 backdrop-blur text-white text-base sm:text-xl p-5 rounded-lg">
               <p className="mb-3 text-red-600">Your Answer is "{userAnswers[currentQuestionIndex]}" <CircleX color="red" className="inline ml-2" /> </p>
@@ -247,7 +246,9 @@ export function McqQuiz({ questions, modulePosition }: McqQuizProps) {
                 Awesome Job! You’ve successfully completed this module, and now you’re one step closer to mastering the art of vocabulary! Every word you learn strengthens your understanding and brings you closer to expressing yourself with precision and confidence. 🚀
               </p>
 
-              <Button onClick={() => { window.location.href = "/vocab-ladder" }} className="bg-purple-500 hover:bg-purple-600 text-white px-8">Home</Button>
+              <Link href="/vocab-ladder">
+                <Button className="bg-purple-500 hover:bg-purple-600 text-white px-8">Home</Button>
+              </Link>
             </CardContent>
 
             <style jsx>{`

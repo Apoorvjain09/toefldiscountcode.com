@@ -1,4 +1,4 @@
-import { GamifiedJourney } from "@/components/gamified-journey";
+import { VocabLadderGamifiedJourney } from "@/components/vocab-ladder/VocabLadderGamifiedJourney";
 
 import type { Metadata } from "next";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: "https://toeflgoglobal.com/vocab-ladder",
         images: [
             {
-                url: "/assets/goglobal1.webp", // Same image as requested
+                url: "/assets/goglobal1.webp",
                 width: 800,
                 height: 600,
                 alt: "TOEFL Vocab Ladder Background",
@@ -26,16 +26,14 @@ export const metadata: Metadata = {
         title: "TOEFL Vocab Ladder | Boost Your Vocabulary for TOEFL Success",
         description:
             "Step up your TOEFL preparation with the Vocab Ladder. Learn and master essential words interactively to achieve your dream score.",
-        images: ["/assets/goglobal1.webp"], // Specified image
-        creator: "@MJ_Study_Abroad", // Replace with your Twitter handle
+        images: ["/assets/goglobal1.webp"],
+        creator: "@MJ_Study_Abroad",
     },
 };
 
 
 export default function VocabMountain() {
     return (
-        <div>
-            <GamifiedJourney />
-        </div>
+        <VocabLadderGamifiedJourney />
     )
 }

@@ -112,11 +112,6 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
         }
     }, [stage, resetTranscript]);
 
-    const handleStartTask = () => {
-        setStage('task1');
-        // onComplete()
-    };
-
     const handleContinueToTask2 = () => {
         setStage('task2Passage');
         setIsTimerRunning(true); // Restart the timer for Task 2 passage
@@ -225,16 +220,34 @@ const SpeakingSection: React.FC<SpeakingSectionProps> = ({ onComplete, onTaskCom
         <div className="min-h-[80vh] mx-auto py-10 px-4 md:py-20">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-10 text-center">Speaking Section</h2>
             {stage === 'intro' && (
-                <div className="flex flex-col items-center justify-center border shadow-2xl p-6 rounded-2xl">
-                    <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
+                <div className="flex flex-col items-center justify-center space-y-10 border shadow-2xl p-6 rounded-2xl">
+                    <p className="">
                         In this question of the TOEFL Speaking Task 1, you&apos;ll speak about a familiar topic. Your response will be scored on your ability to speak clearly and coherently about the topics. You&apos;ll have 15 seconds to prepare your answer and 45 seconds to speak.
                     </p>
-                    <p className="mb-8 md:mb-10 w-full md:w-2/3 lg:w-1/2 text-center">
+                    <p className="">
                         We recommend you practice taking notes with a pen and paper like you will during your TOEFL exam.
                     </p>
-                    <Button onClick={handleStartTask} variant="default">
-                        Start Task
-                    </Button>
+                    <div className='flex flex-wrap items-center justify-center gap-10'>
+                        <Button
+                            variant="outline"
+                            onClick={() => {
+                                navigator.mediaDevices.getUserMedia({ audio: true })
+                                    .then((stream) => {
+                                        stream.getTracks().forEach(track => track.stop()); // stop the stream
+                                        alert("Microphone permission granted ✅");
+                                    })
+                                    .catch((err) => {
+                                        console.error("Microphone permission denied ❌", err);
+                                        alert("Microphone access denied. Please check your browser settings.");
+                                    });
+                            }}
+                        >
+                            Test Microphone
+                        </Button>
+                        <Button variant="default" onClick={() => { setStage('task1') }}>
+                            Start Task
+                        </Button>
+                    </div>
                 </div>
             )}
             {stage === 'task1' && (

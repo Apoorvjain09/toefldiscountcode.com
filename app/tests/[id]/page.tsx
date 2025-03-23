@@ -6,6 +6,7 @@ import { FaPlayCircle } from 'react-icons/fa';
 const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));
 import { usePathname } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
+import Link from "next/link";
 
 
 const Page = () => {
@@ -56,10 +57,12 @@ const Page = () => {
                             Start Test
                         </Button>
                     ) : (
-                        <Button onClick={() => { window.location.href = "/payment" }} variant="default">
-                            <FaPlayCircle className="" size={24} />
-                            Purchase Membership
-                        </Button>
+                        <Link href="/payment">
+                            <Button variant="default">
+                                <FaPlayCircle className="" size={24} />
+                                Purchase Membership
+                            </Button>
+                        </Link>
                     )}
                 </div>
             )}

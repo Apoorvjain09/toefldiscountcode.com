@@ -1,5 +1,6 @@
 "use client"
-import React, { useState, useEffect, Suspense } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { MdError } from "react-icons/md";
 import ReactAudioPlayer from 'react-audio-player';
@@ -11,6 +12,7 @@ import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import AfterTestDetailsModal from '@/components/tests-ui/AfterTestDetailsModal';
+import { X } from 'lucide-react';
 
 interface ReadingQuestion {
     id: number;
@@ -25,25 +27,22 @@ interface ReadingQuestion {
 }
 
 export interface ListeningQuestion {
-    id: number; // Unique identifier for the question
-    question: string; // The text of the question
-    options: string[]; // Array of options for the question
-    answer: number; // Index of the correct option in the options array
+    id: number;
+    question: string;
+    options: string[];
+    answer: number;
     audio: string;
 }
 
-const Test1 = () => {
+const ReadingListeningSection = () => {
+    const [isReducedFontSize, setIsReducedFontSize] = useState(false)
     const [isAfterTestDetailsModalopen, setIsAfterTestDetailsModalopen] = useState(false)
     const [tryReloadAudio, setTryReloadAudio] = useState(0);
     const [stage, setStage] = useState<'instructions' | 'reading' | 'readingPassage1' | 'readingSummaryQuestions1' | 'readingPassage2' | 'readingSummaryQuestions2' | 'listeningInstructions' | 'listeningConversation1' | 'listeningQuestions1' | 'listeningConversation2' | 'listeningQuestions2' | 'listeningConversation3' | 'listeningQuestions3' | 'listeningConversation4' | 'listeningQuestions4' | 'listeningConversation5' | 'listeningQuestions5' | 'writing' | 'speaking' | 'resultsDashboard'>('instructions');
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState<number[]>(Array(20).fill(-1));
     const [listeningAnswers, setListeningAnswers] = useState<number[]>(Array(28).fill(-1));
-    const [currentListeningQuestion1, setCurrentListeningQuestion1] = useState(0);
-    const [currentListeningQuestion2, setCurrentListeningQuestion2] = useState(0);
-    const [currentListeningQuestion3, setCurrentListeningQuestion3] = useState(0);
-    const [currentListeningQuestion4, setCurrentListeningQuestion4] = useState(0);
-    const [currentListeningQuestion5, setCurrentListeningQuestion5] = useState(0);
+    const [currentListeningQuestion, setCurrentListeningQuestion] = useState(0);
     const [selectedAnswers1, setSelectedAnswers1] = useState<number[]>([]);
     const [selectedAnswers2, setSelectedAnswers2] = useState<number[]>([]);
     const [totalScoreReading, setTotalScoreReading] = useState<number>(0);
@@ -250,18 +249,12 @@ const Test1 = () => {
 
     const highlightText = (text: string, highlight?: string) => {
         if (!highlight) return text;
-
-        // Trim any leading or trailing whitespace from the highlight text
         const trimmedHighlight = highlight.trim();
-
-        // Split the passage into sentences.
         const sentences = text.match(/[^.!?]+[.!?]*/g) || [text];
 
-        // Iterate through sentences to find and highlight the matching one.
         return sentences.map((sentence, index) => {
             if (sentence.includes(trimmedHighlight)) {
                 const parts = sentence.split(new RegExp(`(${trimmedHighlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
-                // console.log('Parts:', parts);
                 return (
                     <span key={index}>
                         {parts.map((part, index) =>
@@ -298,46 +291,6 @@ const Test1 = () => {
         });
     };
 
-    const handleListeningContinueClick1 = () => {
-        if (currentListeningQuestion1 < listeningQuestions.slice(0, 6).length - 1) {
-            setCurrentListeningQuestion1(currentListeningQuestion1 + 1);
-        } else {
-            handleContinueClick();
-        }
-    };
-
-    const handleListeningContinueClick2 = () => {
-        if (currentListeningQuestion2 < listeningQuestions.slice(6, 12).length - 1) {
-            setCurrentListeningQuestion2(currentListeningQuestion2 + 1);
-        } else {
-            handleContinueClick();
-        }
-    };
-
-    const handleListeningContinueClick3 = () => {
-        if (currentListeningQuestion3 < listeningQuestions.slice(12, 18).length - 1) {
-            setCurrentListeningQuestion3(currentListeningQuestion3 + 1);
-        } else {
-            handleContinueClick();
-        }
-    };
-
-    const handleListeningContinueClick4 = () => {
-        if (currentListeningQuestion4 < listeningQuestions.slice(18, 23).length - 1) {
-            setCurrentListeningQuestion4(currentListeningQuestion4 + 1);
-        } else {
-            handleContinueClick();
-        }
-    };
-
-    const handleListeningContinueClick5 = () => {
-        if (currentListeningQuestion5 < listeningQuestions.slice(23, 28).length - 1) {
-            setCurrentListeningQuestion5(currentListeningQuestion5 + 1);
-        } else {
-            calculateScore();
-            handleContinueClick();
-        }
-    };
 
     const handleExitClick = () => {
         if (stage === 'instructions') {
@@ -431,20 +384,24 @@ const Test1 = () => {
     };
 
     return (
-        <div className="min-h-[80vh] md::py-10 px-4 ">
+        <div className={`min-h-[80vh] md::py-10 px-4 ${isReducedFontSize && "text-xs"}`}>
             <div className='flex flex-col md:flex-row justify-between px-10 mb-5 gap-10 '>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-center">TOEFL Full Length Test</h2>
-                <div className='flex flex-row items-center justify-center gap-5'>
-                    <Button onClick={handleExitClick} className="bg-blue-400 text-white" variant="outline" >
+                <div className='flex flex-row flex-wrap items-center justify-center gap-5'>
+                    <Button onClick={handleExitClick} variant="outline" >
                         <FaSignOutAlt />
                         Exit Section
                     </Button>
-                    <Button onClick={handleReportClick} className="" variant="destructive">
+                    <Button onClick={() => { setIsReducedFontSize(!isReducedFontSize) }}>
+                        Font Size
+                    </Button>
+                    <Button onClick={handleReportClick} variant="outline">
                         <MdError />
                         Report
                     </Button>
                 </div>
             </div>
+
             {showReportModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
                     <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
@@ -476,81 +433,70 @@ const Test1 = () => {
                     </div>
                 </div>
             )}
+
             {stage === 'instructions' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">General Test Instructions</h3>
-                    <p className="mb-4">
-                        This test measures your ability to use English in an academic context. There are 4 sections.
-                    </p>
-                    <p className="mb-4">
-                        In the Reading section, you will read two passages and answer questions about them.
-                    </p>
-                    <p className="mb-4">
-                        In the Listening section, you will hear several conversations and lectures and answer questions about them.
-                    </p>
-                    <p className="mb-4">
-                        In the Speaking section, you will answer 6 or 5 questions depending upon the task. Some of the questions ask you to speak about your own experience. Other questions ask you to speak about lectures and reading passages.
-                    </p>
-                    <p className="mb-4">
-                        In the Writing section you will answer 2 questions. The first question asks you to write about the relationship between a lecture you will hear and a passage you will read. The second question asks you to write an essay about a topic of general based on your experience.
-                    </p>
-                    <p className="mb-4">
-                        There will be directions for each section which explain how to answer the questions in that section.
-                    </p>
-                    <p className="mb-4">
-                        You should work quickly but carefully on the Reading and Listening questions. Some questions are more difficult than others, but try to answer every one to the best of your ability. If you are not sure of the answer to a question, make the best guess that you can.
-                    </p>
-                    <div className="text-center">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                <div className="shadow-sm p-6 rounded-lg border">
+                    <h3 className="text-xl font-bold text-center mb-8">General Test Instructions</h3>
+                    {[
+                        "This test measures your ability to use English in an academic context. There are 4 sections.",
+                        "In the Reading section, you will read two passages and answer questions about them.",
+                        "In the Listening section, you will hear several conversations and lectures and answer questions about them.",
+                        "In the Speaking section, you will answer 6 or 5 questions depending upon the task. Some of the questions ask you to speak about your own experience. Other questions ask you to speak about lectures and reading passages.",
+                        "In the Writing section you will answer 2 questions. The first question asks you to write about the relationship between a lecture you will hear and a passage you will read. The second question asks you to write an essay about a topic of general based on your experience.",
+                        "There will be directions for each section which explain how to answer the questions in that section.",
+                        "You should work quickly but carefully on the Reading and Listening questions. Some questions are more difficult than others, but try to answer every one to the best of your ability. If you are not sure of the answer to a question, make the best guess that you can."
+                    ].map((text, index) => (
+                        <p key={index} className='mb-4'>{text}</p>
+                    ))}
+                    <div className="text-center mt-8">
+                        <Button variant="outline" onClick={handleContinueClick}>
                             Continue
-                        </button>
+                        </Button>
                     </div>
                 </div>
             )}
+
             {stage === 'reading' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <div className="bg-white shadow p-6 rounded mb-8">
                     <h3 className="text-xl font-bold mb-4 text-center">Reading Section Directions</h3>
-                    <p className="mb-4">
-                        This section measures your ability to understand academic passages in English. You will read 2 passages and answer 10 questions per passage. In the test center, You have 36 minutes to read all the passages and answer all the questions.
-                    </p>
-                    <p className="mb-4">
-                        Most questions are worth 1 point, but the last question in each set is worth more than 1 point. The directions indicate how many points you may receive.
-                    </p>
-                    <p className="mb-4">
-                        Some passages include a word or phrase that is underlined in yellow. In the Official TOEFL, you will be able to click on the underlined word to see an example and explanation of the word.
-                    </p>
-                    <p className="mb-4">
-                        Within this section, you can go to the next question by clicking Next. You may skip questions in the current passage and go back to them later. If you want to return to previous questions, click on Back.
-                    </p>
-                    <p className="mb-4 font-bold">
-                        Remember once you go to the summary questions (which is 10th and 20th question) you can't check your previous inputs for the reading passage questions. So try not to leave questions for later.
-                    </p>
-                    {/* <p className="mb-4">
-                        You can click on Review at any time and the review screen will show you which questions you have answered and which you have not answered. From this review screen, you may go directly to any question you have already seen in the current passage.
-                    </p>
-                    <p className="mb-4">
-                        You may now begin the Reading section. NOTE: In an actual test some test takers may receive 4 passages; those test takers will have 72 minutes (1 hour and 12 minutes) to answer the questions.
-                    </p> */}
-                    <div className="text-center">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                    {[
+                        "This section measures your ability to understand academic passages in English. You will read 2 passages and answer 10 questions per passage. In the test center, you have 36 minutes to read all the passages and answer all the questions.",
+                        "Most questions are worth 1 point, but the last question in each set is worth more than 1 point. The directions indicate how many points you may receive.",
+                        "Some passages include a word or phrase that is underlined in yellow. In the Official TOEFL, you will be able to click on the underlined word to see an example and explanation of the word.",
+                        "Within this section, you can go to the next question by clicking Next. You may skip questions in the current passage and go back to them later. If you want to return to previous questions, click on Back.",
+                        "Remember once you go to the summary questions (which is 10th and 20th question) you can't check your previous inputs for the reading passage questions. So try not to leave questions for later."
+                    ].map((text, index, arr) => (
+                        <p
+                            key={index}
+                            className={`mb-4 ${index === arr.length - 1 ? 'font-bold' : ''}`}
+                        >
+                            {text}
+                        </p>
+                    ))}
+                    <div className="text-center mt-8">
+                        <Button variant="outline" onClick={handleContinueClick}>
                             Continue
-                        </button>
+                        </Button>
                     </div>
                 </div>
             )}
-            {stage === 'readingPassage1' && (
+
+            {['readingPassage1', 'readingPassage2'].includes(stage) && (
                 <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 1</h3>
-                    {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q: ReadingQuestion, index: Number) => (
+                    <h3 className="text-xl font-bold mb-4 text-center">
+                        Reading Section - {stage === 'readingPassage1' ? 'Passage 1' : 'Passage 2'}
+                    </h3>
+                    {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q: ReadingQuestion) => (
                         <div key={q.id} className="mb-8 flex flex-col lg:flex-row gap-10">
                             <p className="mb-2 whitespace-pre-line lg:w-[55%] overflow-y-scroll h-[35rem] p-2">
                                 <strong>Passage:</strong> {highlightText(q.passage ?? "", q.highlight ?? "")}
                             </p>
-                            <div className='border p-2 rounded-lg lg:w-[45%]'>
-                                <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
+                            <div className='border p-4 rounded-lg lg:w-[45%] text-base'>
+                                <div className='font-bold mb-3'>Question {currentQuestion + 1}: </div>
+                                <div className='mb-3'>{q.question}</div>
                                 <ul className="list-none mb-4">
                                     {q.options.map((option, i) => (
-                                        <li key={i} className="mb-1">
+                                        <li key={i} className="mb-2">
                                             <label className="flex items-center">
                                                 <input
                                                     type="radio"
@@ -570,36 +516,39 @@ const Test1 = () => {
                     <div className="text-center gap-10 flex justify-center">
                         <button
                             onClick={() => {
-                                if (currentQuestion > 0) {
-                                    setCurrentQuestion(currentQuestion - 1);
-                                }
+                                if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            Back
+                            {stage === 'readingPassage1' && currentQuestion > 0 ? 'Back' : 'Prev'}
                         </button>
                         <button
                             onClick={() => {
-                                if (currentQuestion < 8) {
+                                if ((stage === 'readingPassage1' && currentQuestion < 8) || (stage === 'readingPassage2' && currentQuestion < 18)) {
                                     setCurrentQuestion(currentQuestion + 1);
-                                    calculateScore()
+                                    calculateScore();
                                 } else {
-                                    calculateScore()
+                                    calculateScore();
                                     setCurrentQuestion(currentQuestion + 1);
-                                    handleContinueClick();
+                                    stage === 'readingPassage1' ? handleContinueClick() : setStage('readingSummaryQuestions2');
                                 }
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
-                            {currentQuestion < 8 ? 'Next' : 'Continue'}
+                            {(stage === 'readingPassage1' && currentQuestion < 8) || (stage === 'readingPassage2' && currentQuestion < 18)
+                                ? 'Next'
+                                : 'Continue'}
                         </button>
                     </div>
                 </div>
             )}
-            {stage === 'readingSummaryQuestions1' && (
+
+            {['readingSummaryQuestions1', 'readingSummaryQuestions2'].includes(stage) && (
                 <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 1 Summary</h3>
-                    {readingQuestions.slice(9, 10).map((q: ReadingQuestion, index: Number) => (
+                    <h3 className="text-xl font-bold mb-4 text-center">
+                        Reading Section - {stage === 'readingSummaryQuestions1' ? 'Passage 1 Summary' : 'Passage 2 Summary'}
+                    </h3>
+                    {readingQuestions.slice(stage === 'readingSummaryQuestions1' ? 9 : 19, stage === 'readingSummaryQuestions1' ? 10 : 20).map((q: ReadingQuestion) => (
                         <div key={q.id}>
                             <p><strong>Directions:</strong> {q.instructions}</p>
                             <p><strong>Introductory Sentence:</strong> {q.introductorySentence}</p>
@@ -608,19 +557,30 @@ const Test1 = () => {
                                     {q.options.map((option, i) => (
                                         <div
                                             key={i}
-                                            className={`p-2 mb-2 border rounded cursor-pointer ${selectedAnswers1.includes(i) ? 'bg-blue-200' : 'bg-white'}`}
-                                            onClick={() => handleSummaryOptionClick1(i)}
+                                            className={`p-2 mb-2 border rounded cursor-pointer ${stage === 'readingSummaryQuestions1'
+                                                ? selectedAnswers1.includes(i)
+                                                    ? 'bg-blue-200'
+                                                    : 'bg-white'
+                                                : selectedAnswers2.includes(i)
+                                                    ? 'bg-blue-200'
+                                                    : 'bg-white'
+                                                }`}
+                                            onClick={() => stage === 'readingSummaryQuestions1' ? handleSummaryOptionClick1(i) : handleSummaryOptionClick2(i)}
                                         >
                                             {option}
                                         </div>
                                     ))}
                                 </div>
                                 <div className="sm:h-auto min-h-40 w-[100%] sm:w-[45%] bg-gray-200 p-2 rounded">
-                                    {selectedAnswers1.map((index) => (
+                                    {(stage === 'readingSummaryQuestions1' ? selectedAnswers1 : selectedAnswers2).map((index) => (
                                         <div
                                             key={index}
                                             className="p-2 mb-2 border rounded bg-white cursor-pointer"
-                                            onClick={() => handleSummaryOptionClick1(index)}
+                                            onClick={() =>
+                                                stage === 'readingSummaryQuestions1'
+                                                    ? handleSummaryOptionClick1(index)
+                                                    : handleSummaryOptionClick2(index)
+                                            }
                                         >
                                             {q.options[index]}
                                         </div>
@@ -632,7 +592,7 @@ const Test1 = () => {
                     <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
                         <button
                             onClick={() => {
-                                handleModalToggle(); // Toggle modal on button click
+                                stage === 'readingSummaryQuestions1' ? handleModalToggle() : handleModalToggle2();
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
@@ -640,9 +600,14 @@ const Test1 = () => {
                         </button>
                         <button
                             onClick={() => {
-                                setStage('readingPassage2');
-                                setCurrentQuestion(10);
-                                calculateScore()
+                                calculateScore();
+                                if (stage === 'readingSummaryQuestions1') {
+                                    setStage('readingPassage2');
+                                    setCurrentQuestion(10);
+                                } else {
+                                    setStage('listeningInstructions');
+                                    setCurrentQuestion(0);
+                                }
                             }}
                             className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
                         >
@@ -651,65 +616,39 @@ const Test1 = () => {
                     </div>
                 </div>
             )}
-            {isModalOpen && (() => {
+
+            {(isModalOpen || isModalOpen2) && (() => {
+                const isFirstModal = isModalOpen;
+                const modalIndex = isFirstModal ? 10 : 20;
                 const passageContent = readingQuestions
-                    .find((q: ReadingQuestion) => q.id === 10)
+                    .find((q: ReadingQuestion) => q.id === modalIndex)
                     ?.passage.split("\n\n")
-                    .filter((line: string) => line.trim() !== "") // Remove empty lines
+                    .filter((line: string) => line.trim() !== "")
                     .map((line: string) => `<p>${line.trim()}</p><br/>`)
                     .join("");
 
+                const handleClose = isFirstModal ? handleModalToggle : handleModalToggle2;
+
                 return (
                     <Draggable handle=".modal-header">
-                        <div
-                            id="default-modal"
-                            tabIndex={-1}
-                            aria-hidden="true"
-                            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full"
-                        >
+                        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
                             <div className="relative p-4 w-full max-w-[80%] max-h-full">
                                 <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                    <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 cursor-move">
+                                    <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t cursor-move dark:border-gray-600">
                                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                                             Passage (Draggable)
                                         </h3>
-                                        <button
-                                            type="button"
-                                            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                            onClick={handleModalToggle}
-                                        >
-                                            <svg
-                                                className="w-3 h-3"
-                                                aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                fill="none"
-                                                viewBox="0 0 14 14"
-                                            >
-                                                <path
-                                                    stroke="currentColor"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="2"
-                                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                                                />
-                                            </svg>
-                                            <span className="sr-only">Close modal</span>
-                                        </button>
+                                        <Button onClick={handleClose} variant="outline">
+                                            <X className='h-5 w-5' />
+                                        </Button>
                                     </div>
                                     <div className="p-4 md:p-5 space-y-4 text-gray-600">
-                                        <div
-                                            dangerouslySetInnerHTML={{
-                                                __html: passageContent || "",
-                                            }}
-                                        ></div>
+                                        <div dangerouslySetInnerHTML={{ __html: passageContent || "" }}></div>
                                     </div>
                                     <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                        <button
-                                            onClick={handleModalToggle}
-                                            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                        >
+                                        <Button onClick={handleClose} variant="default">
                                             Close
-                                        </button>
+                                        </Button>
                                     </div>
                                 </div>
                             </div>
@@ -717,574 +656,120 @@ const Test1 = () => {
                     </Draggable>
                 );
             })()}
-            {stage === 'readingPassage2' && (
-                <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 2</h3>
-                    {readingQuestions.slice(currentQuestion, currentQuestion + 1).map((q: ReadingQuestion, index: Number) => (
-                        <div key={q.id} className="mb-8 flex flex-col lg:flex-row gap-10">
-                            <p className="mb-2 whitespace-pre-line lg:w-[55%] overflow-y-scroll h-[35rem] p-2">
-                                <strong>Passage:</strong> {highlightText(q.passage ?? "", q.highlight)}
-                            </p>
-                            <div className='border p-2 rounded-lg lg:w-[45%]'>
-                                <p className="mb-2"><strong>Question {currentQuestion + 1}:</strong> {q.question}</p>
-                                <ul className="list-none mb-4">
-                                    {q.options.map((option, i) => (
-                                        <li key={i} className="mb-1">
-                                            <label className="flex items-center">
-                                                <input
-                                                    type="radio"
-                                                    name={`question-${q.id}`}
-                                                    checked={answers[q.id] === i}
-                                                    onChange={() => handleOptionChange(q.id, i)}
-                                                    className="form-checkbox"
-                                                />
-                                                <span className="ml-2">{option}</span>
-                                            </label>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    ))}
-                    <div className="text-center gap-10 flex justify-center">
-                        <button
-                            onClick={() => {
-                                if (currentQuestion > 10) {
-                                    setCurrentQuestion(currentQuestion - 1);
-                                    console.log(currentQuestion)
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            Prev
-                        </button>
-                        <button
-                            onClick={() => {
-                                if (currentQuestion < 18) {
-                                    setCurrentQuestion(currentQuestion + 1);
-                                    calculateScore()
-                                } else {
-                                    handleContinueClick();
-                                    setCurrentQuestion(currentQuestion + 1);
-                                }
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentQuestion < 18 ? 'Next' : 'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'readingSummaryQuestions2' && (
-                <div className="bg-white shadow p-3 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Reading Section - Passage 2 Summary</h3>
-                    {readingQuestions.slice(19, 20).map((q: ReadingQuestion, index: Number) => (
-                        <div key={q.id}>
-                            <p><strong>Directions:</strong> {q.instructions}</p>
-                            <p><strong>Introductory Sentence:</strong> {q.introductorySentence}</p>
-                            <div className="flex flex-wrap justify-evenly mt-4">
-                                <div className="sm:w-[45%]">
-                                    {q.options.map((option, i) => (
-                                        <div
-                                            key={i}
-                                            className={`p-2 mb-2 border rounded cursor-pointer ${selectedAnswers2.includes(i) ? 'bg-blue-200' : 'bg-white'}`}
-                                            onClick={() => handleSummaryOptionClick2(i)}
-                                        >
-                                            {option}
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="sm:h-auto min-h-40 w-[100%] sm:w-[45%] bg-gray-200 p-2 rounded">
-                                    {selectedAnswers2.map((index) => (
-                                        <div
-                                            key={index}
-                                            className="p-2 mb-2 border rounded bg-white cursor-pointer"
-                                            onClick={() => handleSummaryOptionClick2(index)}
-                                        >
-                                            {q.options[index]}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                    <div className="text-center mt-4 mx-8 gap-10 flex justify-center">
-                        <button
-                            onClick={() => {
-                                handleModalToggle2(); // Toggle modal on button click
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            Read Passage
-                        </button>
-                        <button
-                            onClick={() => {
-                                calculateScore()
-                                // setStage('resultsDashboard');
-                                setStage('listeningInstructions');
-                                setCurrentQuestion(0);
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            Continue
-                        </button>
 
-                    </div>
-                </div>
-            )}
-            {isModalOpen2 && (() => {
-                const passageContent = readingQuestions
-                    .find((q: ReadingQuestion) => q.id === 20)
-                    ?.passage.split("\n\n")
-                    .filter((line: string) => line.trim() !== "") // Remove empty lines
-                    .map((line: string) => `<p>${line.trim()}</p><br/>`)
-                    .join("");
-                return (
-                    <Draggable handle=".modal-header">
-                        <div id="default-modal" tab-index="-1" aria-hidden="true" className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
-                            <div className="relative p-4 w-full max-w-[80%] max-h-full">
-                                <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                    <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 cursor-move">
-                                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                                            Passage (Draggable)
-                                        </h3>
-                                        <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onClick={handleModalToggle2}>
-                                            <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                            </svg>
-                                            <span className="sr-only">Close modal</span>
-                                        </button>
-                                    </div>
-                                    <div className="p-4 md:p-5 space-y-4">
-                                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                            <div
-                                                dangerouslySetInnerHTML={{
-                                                    __html: passageContent || "",
-                                                }}
-                                            ></div>
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                        <button onClick={handleModalToggle2} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Draggable>
-                )
-            })()}
             {stage === 'listeningInstructions' && (
-                <div className="bg-white shadow p-6 rounded mb-4">
+                <section className="bg-white shadow p-6 rounded mb-5">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section Directions</h3>
-                    <p className="mb-4">
-                        This section measures your ability to understand spoken English in an academic setting. You will hear several conversations and lectures and answer questions about them. You have 40 minutes to answer all the questions.
-                    </p>
-                    <p className="mb-4">
-                        Each conversation or lecture is followed by a set of questions. Listen carefully to the conversations and lectures and try to answer every question.
-                    </p>
-                    <p className="mb-4">
-                        You may take notes while you listen. You can use your notes to help answer the questions. Your notes will not be scored.
-                    </p>
-                    <p className="mb-4">
-                        Click on &quot;Continue&quot; to begin the listening section.
-                    </p>
-                    <div className="text-center">
-                        <button onClick={handleContinueClick} className="bg-blue-600 text-white py-2 px-4 rounded inline-block">
+                    {[
+                        "This section measures your ability to understand spoken English in an academic setting. You will hear several conversations and lectures and answer questions about them. You have 40 minutes to answer all the questions.",
+                        "Each conversation or lecture is followed by a set of questions. Listen carefully to the conversations and lectures and try to answer every question.",
+                        "You may take notes while you listen. You can use your notes to help answer the questions. Your notes will not be scored.",
+                        'Click on "Continue" to begin the listening section.'
+                    ].map((text, index) => (
+                        <p key={index} className="mb-4">{text}</p>
+                    ))}
+                    <div className="text-center mt-5">
+                        <Button onClick={handleContinueClick} variant="outline" >
                             Continue
-                        </button>
+                        </Button>
                     </div>
-                </div>
+                </section>
             )}
-            {stage === 'listeningConversation1' && (
+
+            {['listeningConversation2', 'listeningConversation3', 'listeningConversation1', 'listeningConversation4', 'listeningConversation5'].includes(stage) && (
                 <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 1</h3>
+                    <h3 className="text-xl font-bold mb-4 text-center">
+                        {`Listening Conversation ${stage.replace('listeningConversation', '')}`}
+                    </h3>
                     <p className="mb-4">[Use Headphones For Better Quality]</p>
                     <div className="custom-audio-container flex-col flex gap-10">
-                        <img src={listeningAudiosPhotos[0]}></img>
+                        <img src={listeningAudiosPhotos[parseInt(stage.replace('listeningConversation', '')) - 1]} alt="Audio Visual" />
                         <ReactAudioPlayer
                             key={tryReloadAudio}
-                            src={listeningAudios[0]}
+                            src={listeningAudios[parseInt(stage.replace('listeningConversation', '')) - 1]}
                             controls
                             className="custom-audio-player"
                         />
                     </div>
                     <div className="flex text-center mt-10 gap-5">
-                        <Button
-                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                            variant="default"
-                        >
-                            Reload Audio
-                        </Button>
-                        <Button onClick={handleContinueClick} variant="outline">
-                            Continue
-                        </Button>
+                        <Button onClick={() => setTryReloadAudio(prev => prev + 1)} variant="default">Reload Audio</Button>
+                        <Button onClick={handleContinueClick} variant="outline">Continue</Button>
                     </div>
                 </div>
             )}
-            {stage === 'listeningQuestions1' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
+
+            {['listeningQuestions1', 'listeningQuestions2', 'listeningQuestions3', 'listeningQuestions4', 'listeningQuestions5'].includes(stage) && (
+                <div className="shadow-sm border rounded-lg p-6 mb-4">
                     <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(0, 6).slice(currentListeningQuestion1, currentListeningQuestion1 + 1).map((q: ListeningQuestion, index: Number) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {currentListeningQuestion1 + 1}:</strong> {q.question}</p>
-                            {q.audio && (
-                                <div className='flex items-center justify-center gap-3'>
-                                    <ReactAudioPlayer
-                                        key={tryReloadAudio}
-                                        src={q.audio}
-                                        controls
-                                        className="custom-audio-player my-2"
-                                    />
-                                    <Button
-                                        onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                                        variant="default"
-                                    >
-                                        <ReloadIcon />
-                                    </Button>
-                                </div>
-                            )}
-                            <ul className="list-none mb-4">
-                                {q.options.map((option: string, i: number) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[currentListeningQuestion1] === i}
-                                                onChange={() => handleListeningOptionChange(currentListeningQuestion1, i)}
-                                                className="form-checkbox"
+                    {(() => {
+                        const section = parseInt(stage.replace('listeningQuestions', ''));
+                        const start = section === 1 ? 0 : section === 2 ? 6 : section === 3 ? 12 : section === 4 ? 18 : 23;
+                        const end = section === 1 ? 6 : section === 2 ? 12 : section === 3 ? 18 : section === 4 ? 23 : 28;
+
+                        return listeningQuestions
+                            .slice(start, end)
+                            .slice(currentListeningQuestion, currentListeningQuestion + 1)
+                            .map((q: ListeningQuestion) => (
+                                <div key={q.id} className="mb-8 space-y-5">
+                                    <p className="border rounded-lg shadow-sm p-4 sm:p-6">
+                                        <strong>Question {start + currentListeningQuestion + 1}:</strong> {q.question}
+                                    </p>
+                                    {q.audio && (
+                                        <div className="flex items-center justify-center gap-3">
+                                            <ReactAudioPlayer
+                                                key={tryReloadAudio}
+                                                src={q.audio}
+                                                controls
+                                                className="custom-audio-player my-2"
                                             />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                handleListeningContinueClick1();
-                                calculateScore();
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentListeningQuestion1 < listeningQuestions.slice(0, 6).length - 1 ? 'Next' : 'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningConversation2' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 2</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <div className="custom-audio-container flex-col flex gap-10">
-                        <img src={listeningAudiosPhotos[1]}></img>
-                        <ReactAudioPlayer
-                            key={tryReloadAudio}
-                            src={listeningAudios[1]}
-                            controls
-                            className="custom-audio-player"
-                        />
-                    </div>
-                    <div className="flex text-center mt-10 gap-5">
-                        <Button
-                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                            variant="default"
-                        >
-                            Reload Audio
-                        </Button>
-                        <Button onClick={handleContinueClick} variant="outline">
-                            Continue
-                        </Button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions2' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(6, 12).slice(currentListeningQuestion2, currentListeningQuestion2 + 1).map((q: ListeningQuestion, index: number) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {currentListeningQuestion2 + 7}:</strong> {q.question}</p>
-                            {q.audio && (
-                                <div className='flex items-center justify-center gap-3'>
-                                    <ReactAudioPlayer
-                                        key={tryReloadAudio}
-                                        src={q.audio}
-                                        controls
-                                        className="custom-audio-player my-2"
-                                    />
-                                    <Button
-                                        onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                                        variant="default"
-                                    >
-                                        <ReloadIcon />
-                                    </Button>
+                                            <Button
+                                                onClick={() => setTryReloadAudio(prev => prev + 1)}
+                                                variant="default"
+                                            >
+                                                <ReloadIcon />
+                                            </Button>
+                                        </div>
+                                    )}
+                                    <ul className="list-none border shadow-sm rounded-lg p-4 sm:p-6">
+                                        {q.options.map((option, i) => (
+                                            <li key={i} className="mb-2">
+                                                <label className="flex items-center">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={listeningAnswers[start + currentListeningQuestion] === i}
+                                                        onChange={() =>
+                                                            handleListeningOptionChange(start + currentListeningQuestion, i)
+                                                        }
+                                                        className="form-checkbox"
+                                                    />
+                                                    <span className="ml-2">{option}</span>
+                                                </label>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="text-center">
+                                        <Button variant="default" onClick={() => {
+                                            if (currentListeningQuestion < end - start - 1) {
+                                                setCurrentListeningQuestion(currentListeningQuestion + 1);
+                                            } else {
+                                                setCurrentListeningQuestion(0);
+                                                if (section === 5) {
+                                                    calculateScore();
+                                                }
+                                                handleContinueClick();
+                                            }
+                                            calculateScore();
+                                        }}
+                                        >
+                                            {currentListeningQuestion < end - start - 1 ? 'Next' : 'Continue'}
+                                        </Button>
+                                    </div>
                                 </div>
-                            )}
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[currentListeningQuestion2 + 6] === i}
-                                                onChange={() => handleListeningOptionChange(currentListeningQuestion2 + 6, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                handleListeningContinueClick2();
-                                calculateScore();
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentListeningQuestion2 < listeningQuestions.slice(6, 12).length - 1 ? 'Next' : 'Continue'}
-                        </button>
-                    </div>
+                            ));
+                    })()}
                 </div>
             )}
-            {stage === 'listeningConversation3' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 3</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <div className="custom-audio-container flex-col flex gap-10">
-                        <img src={listeningAudiosPhotos[2]}></img>
-                        <ReactAudioPlayer
-                            key={tryReloadAudio}
-                            src={listeningAudios[2]}
-                            controls
-                            className="custom-audio-player"
-                        />
-                    </div>
-                    <div className="flex text-center mt-10 gap-5">
-                        <Button
-                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                            variant="default"
-                        >
-                            Reload Audio
-                        </Button>
-                        <Button onClick={handleContinueClick} variant="outline">
-                            Continue
-                        </Button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions3' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(12, 18).slice(currentListeningQuestion3, currentListeningQuestion3 + 1).map((q: ListeningQuestion, index: number) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {currentListeningQuestion3 + 13}:</strong> {q.question}</p>
-                            {q.audio && (
-                                <div className='flex items-center justify-center gap-3'>
-                                    <ReactAudioPlayer
-                                        key={tryReloadAudio}
-                                        src={q.audio}
-                                        controls
-                                        className="custom-audio-player my-2"
-                                    />
-                                    <Button
-                                        onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                                        variant="default"
-                                    >
-                                        <ReloadIcon />
-                                    </Button>
-                                </div>
-                            )}
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[currentListeningQuestion3 + 12] === i}
-                                                onChange={() => handleListeningOptionChange(currentListeningQuestion3 + 12, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                handleListeningContinueClick3();
-                                calculateScore();
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentListeningQuestion3 < listeningQuestions.slice(12, 18).length - 1 ? 'Next' : 'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningConversation4' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 4</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <div className="custom-audio-container flex-col flex gap-10">
-                        <img src={listeningAudiosPhotos[3]}></img>
-                        <ReactAudioPlayer
-                            key={tryReloadAudio}
-                            src={listeningAudios[3]}
-                            controls
-                            className="custom-audio-player"
-                        />
-                    </div>
-                    <div className="flex text-center mt-10 gap-5">
-                        <Button
-                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                            variant="default"
-                        >
-                            Reload Audio
-                        </Button>
-                        <Button onClick={handleContinueClick} variant="outline">
-                            Continue
-                        </Button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions4' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(18, 23).slice(currentListeningQuestion4, currentListeningQuestion4 + 1).map((q: ListeningQuestion, index: number) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {currentListeningQuestion4 + 19}:</strong> {q.question}</p>
-                            {q.audio && (
-                                <div className='flex items-center justify-center gap-3'>
-                                    <ReactAudioPlayer
-                                        key={tryReloadAudio}
-                                        src={q.audio}
-                                        controls
-                                        className="custom-audio-player my-2"
-                                    />
-                                    <Button
-                                        onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                                        variant="default"
-                                    >
-                                        <ReloadIcon />
-                                    </Button>
-                                </div>
-                            )}
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[currentListeningQuestion4 + 18] === i}
-                                                onChange={() => handleListeningOptionChange(currentListeningQuestion4 + 18, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                handleListeningContinueClick4();
-                                calculateScore();
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentListeningQuestion4 < listeningQuestions.slice(18, 23).length - 1 ? 'Next' : 'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningConversation5' && (
-                <div className="bg-white shadow p-6 rounded mb-4 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Conversation 5</h3>
-                    <p className="mb-4">[Use Headphones For Better Quality]</p>
-                    <div className="custom-audio-container flex-col flex gap-10">
-                        <img src={listeningAudiosPhotos[4]}></img>
-                        <ReactAudioPlayer
-                            key={tryReloadAudio}
-                            src={listeningAudios[4]}
-                            controls
-                            className="custom-audio-player"
-                        />
-                    </div>
-                    <div className="flex text-center mt-10 gap-5">
-                        <Button
-                            onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                            variant="default"
-                        >
-                            Reload Audio
-                        </Button>
-                        <Button onClick={handleContinueClick} variant="outline">
-                            Continue
-                        </Button>
-                    </div>
-                </div>
-            )}
-            {stage === 'listeningQuestions5' && (
-                <div className="bg-white shadow p-2 sm:p-6 rounded mb-4">
-                    <h3 className="text-xl font-bold mb-4 text-center">Listening Section</h3>
-                    {listeningQuestions.slice(23, 28).slice(currentListeningQuestion5, currentListeningQuestion5 + 1).map((q: ListeningQuestion, index: number) => (
-                        <div key={q.id} className="mb-8 border rounded-lg p-2">
-                            <p className="mb-2"><strong>Question {currentListeningQuestion5 + 24}:</strong> {q.question}</p>
-                            {q.audio && (
-                                <div className='flex items-center justify-center gap-3'>
-                                    <ReactAudioPlayer
-                                        key={tryReloadAudio}
-                                        src={q.audio}
-                                        controls
-                                        className="custom-audio-player my-2"
-                                    />
-                                    <Button
-                                        onClick={() => { setTryReloadAudio((prevKey) => prevKey + 1) }}
-                                        variant="default"
-                                    >
-                                        <ReloadIcon />
-                                    </Button>
-                                </div>
-                            )}
-                            <ul className="list-none mb-4">
-                                {q.options.map((option, i) => (
-                                    <li key={i} className="mb-1">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="checkbox"
-                                                checked={listeningAnswers[currentListeningQuestion5 + 23] === i}
-                                                onChange={() => handleListeningOptionChange(currentListeningQuestion5 + 23, i)}
-                                                className="form-checkbox"
-                                            />
-                                            <span className="ml-2">{option}</span>
-                                        </label>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                    <div className="text-center">
-                        <button
-                            onClick={() => {
-                                handleListeningContinueClick5();
-                                calculateScore();
-                            }}
-                            className="bg-blue-600 text-white py-2 px-4 rounded inline-block"
-                        >
-                            {currentListeningQuestion5 < listeningQuestions.slice(23, 28).length - 1 ? 'Next' : 'Continue'}
-                        </button>
-                    </div>
-                </div>
-            )}
+
             {stage === 'writing' && (
                 <WritingSection onComplete={handleWritingCompletion} onTaskComplete={handleWritingComplete} />
             )}
@@ -1304,10 +789,12 @@ const Test1 = () => {
                 />
             )}
             {(id === "test1") && (
-                <AfterTestDetailsModal type={id} isOpen={isAfterTestDetailsModalopen} onClose={() => { setIsAfterTestDetailsModalopen(false) }} />
+                <div className='max-w-[100vw]'>
+                    <AfterTestDetailsModal type={id} isOpen={isAfterTestDetailsModalopen} onClose={() => { setIsAfterTestDetailsModalopen(false) }} />
+                </div>
             )}
         </div >
     );
 };
 
-export default Test1;
+export default ReadingListeningSection;

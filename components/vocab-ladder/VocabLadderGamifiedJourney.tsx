@@ -1,14 +1,10 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Button } from '@/components/ui/button'
 import { Trophy, Star, GraduationCap } from 'lucide-react'
-import quizData from "./../app/vocab-ladder/output.json"
-import { McqQuiz } from './mcq-quiz'
-import { useMediaQuery } from 'usehooks-ts'; // Import the hook
+import quizData from "../../app/vocab-ladder/output.json"
+import { VocabLadderQuizComponent } from './VocabLadderQuizComponent'
 
-// Define the type of each quiz question
 interface QuizQuestion {
   Word: string;
   Definition: string;
@@ -41,7 +37,7 @@ const JourneyItem: React.FC<JourneyItemProps> = ({ icon, isStart = false, isComp
   </div>
 )
 
-export function GamifiedJourney() {
+export function VocabLadderGamifiedJourney() {
   const [showQuiz, setShowQuiz] = useState(false)
   const [selectedQuestions, setSelectedQuestions] = useState<QuizQuestion[]>([])
   const [currentPosition, setCurrentPosition] = useState<number>(0)
@@ -80,11 +76,11 @@ export function GamifiedJourney() {
   const handleIconClick = (startIndex: number, endIndex: number, position: number) => {
     setSelectedQuestions(quizData.slice(startIndex, endIndex));
     setShowQuiz(true);
-    setCurrentPosition(position); // Update the current position
+    setCurrentPosition(position);
   };
   const renderJourneyItems = () => {
     const items = []
-    for (let i = 14; i >= 0; i--) { // Start from the bottom (14) and go to the top (0)
+    for (let i = 14; i >= 0; i--) {
       const startIndex = i * 20
       const endIndex = startIndex + 20
       const isCompleted = i < currentVocabularyLadderPositionExtracted
@@ -95,7 +91,7 @@ export function GamifiedJourney() {
           <JourneyItem
             id={`icon-${i}`}
             icon={icon}
-            isStart={i === 14} // Bottom-most icon is the first in the ladder
+            isStart={i === 14}
             isCompleted={isCompleted}
             isActive={i === currentVocabularyLadderPositionExtracted} // Make the current position bounce
             onClick={() => handleIconClick(startIndex, endIndex, i)}
@@ -120,7 +116,7 @@ export function GamifiedJourney() {
         className="rounded-lg modern-scrollbar" // Add a class for custom styling
       >
         {showQuiz ? (
-          <McqQuiz questions={selectedQuestions} modulePosition={currentPosition} />
+          <VocabLadderQuizComponent questions={selectedQuestions} modulePosition={currentPosition} />
         ) : (
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-col items-center space-y-6 mt-5">
@@ -128,16 +124,10 @@ export function GamifiedJourney() {
             </div>
             <div className="bg-green-500 text-center w-[90%] sm:w-[60%] p-6 rounded-lg my-8">
               <div className="flex items-center justify-center flex-col">
-                <h2
-                  className="text-white text-xl sm:text-3xl font-bold "
-                  style={{ fontFamily: "'Press Start 2P', cursive" }}
-                >
+                <h2 className="text-white text-xl sm:text-3xl font-bold">
                   TOEFL VOCAB LADDER
                 </h2>
-                <p
-                  className="text-green-100 text-base"
-                  style={{ fontFamily: "'Press Start 2P', cursive" }}
-                >
+                <p className="text-green-100 text-base">
                   complete all modules and become a toefl vocab master
                 </p>
               </div>

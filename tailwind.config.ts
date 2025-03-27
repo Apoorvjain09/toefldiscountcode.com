@@ -35,6 +35,7 @@ const config: Config = {
 			},
 			colors: {
 				'muted-foreground': 'hsl(215, 25%, 65%)',
+				'bg-muted': 'hsl(200, 20%, 60%)'	
 			},
 			keyframes: {
 				'accordion-down': {

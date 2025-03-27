@@ -16,6 +16,7 @@ import { Input } from '@/components/ui/input'
 import { db } from "@/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Link from 'next/link'
+import { submitVoucherForm } from '@/lib/supabaseActions'
 
 
 const formSchema = z.object({
@@ -50,26 +51,14 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
     })
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        const formData = {
-            firstName: values.firstName,
-            lastName: values.lastName,
-            email: values.email,
-            contactNumber: values.contactNumber,
-            voucher: values.voucher,
-            submittedAt: new Date().toISOString(), // Optional timestamp
-        };
-
+        setIsSubmitted(true)
         try {
-            const docRef = await addDoc(collection(db, "voucher"), formData);
-            console.log("Form details saved successfully with ID: ", docRef.id);
-            setIsSubmitted(true);
-            form.reset();
+            await submitVoucherForm(values)
+            form.reset()
 
-            setTimeout(() => {
-                setOpenModal(false);
-            }, 5000);
+            setTimeout(() => setOpenModal(false), 7000)
         } catch (error) {
-            console.error("Error saving form details: ", error);
+            console.error('Error submitting form:', error)
         }
     }
 
@@ -291,7 +280,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                                         )}
                                     />
                                     <DialogFooter>
-                                        <Button type="submit" className="w-full">Submit Enquiry</Button>
+                                        <Button type="submit" disabled={isSubmitted} className="w-full">Submit Enquiry</Button>
                                     </DialogFooter>
                                 </form>
                             </Form>

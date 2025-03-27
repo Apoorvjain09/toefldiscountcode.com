@@ -7,15 +7,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination"
-import { collection, doc, getDocs, limit, orderBy, query, QueryDocumentSnapshot, updateDoc } from "firebase/firestore";
-import { db } from "@/firebase"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 import { Textarea } from "../ui/textarea"
 import Alert from "../ui/AlertNotification"
+import { fetchVoucherSubmissions, updateVoucherRemarks } from '@/lib/supabaseActions'
+import AdminDashboardUserMetaDataDisplay from "./AdminDashboardMetaDataDisplay"
 
-// Mock data for demonstration
 type Student = {
-    id: string;
+    session_id: string;
     firstName: string;
     lastName: string;
     email: string;
@@ -23,6 +22,23 @@ type Student = {
     submittedAt: string;
     voucher: string;
     remarks: string;
+    usersessions: {
+        ip: string;
+        referrer: string;
+        timeZone: string;
+        country: string;
+        device: string;
+        speed: string;
+        connection: string;
+        tabStatus: string;
+        isp: string;
+        os: string;
+        userAgent: string;
+        city: string;
+        region: string;
+        longitude: string;
+        latitude: string;
+    }
 };
 
 export function VoucherSectionAdminDashboard() {
@@ -30,7 +46,7 @@ export function VoucherSectionAdminDashboard() {
     const [searchTerm, setSearchTerm] = useState("")
     const [voucherFilter, setVoucherFilter] = useState("all")
     const [selectedStudent, setSelectedStudent] = useState<Student | null>(null)
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isRemarksModalOpen, setIsRemarksModalOpen] = useState(false)
     const [remarks, setRemarks] = useState(selectedStudent?.remarks || "");
     const [isEditing, setIsEditing] = useState(!selectedStudent?.remarks);
     const [loading, setLoading] = useState(false);
@@ -51,29 +67,12 @@ export function VoucherSectionAdminDashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const q = query(
-                collection(db, "voucher"),
-                orderBy("submittedAt", "desc"),
-                limit(10)
-            );
-
-            const querySnapshot = await getDocs(q);
-            const data = querySnapshot.docs
-                .map((doc: QueryDocumentSnapshot) => {
-                    const docData = doc.data();
-                    return {
-                        id: doc.id,
-                        firstName: docData.firstName || "",
-                        lastName: docData.lastName || "",
-                        email: docData.email || "",
-                        contactNumber: docData.contactNumber || "",
-                        submittedAt: docData.submittedAt || "",
-                        voucher: docData.voucher || "",
-                        remarks: docData.remarks || "",
-                    } as Student;
-                })
-            // .sort((a, b) => new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime());
-            setStudents(data);
+            try {
+                const data = await fetchVoucherSubmissions();
+                setStudents(data);
+            } catch (err) {
+                console.error("Error fetching vouchers", err);
+            }
         };
         fetchData();
     }, []);
@@ -82,15 +81,15 @@ export function VoucherSectionAdminDashboard() {
         setSelectedStudent(student);
         setRemarks(student.remarks || "");
         setIsEditing(!student.remarks);
-        setIsModalOpen(true);
+        setIsRemarksModalOpen(true);
     };
 
     const handleSaveRemarks = async () => {
-        if (!selectedStudent?.id) return;
+        if (!selectedStudent?.session_id) return;
 
         setLoading(true);
         try {
-            await updateDoc(doc(db, "voucher", selectedStudent.id), { remarks });
+            await updateVoucherRemarks(selectedStudent.session_id, remarks);
             selectedStudent.remarks = remarks;
             setIsEditing(false);
         } catch (error) {
@@ -99,9 +98,25 @@ export function VoucherSectionAdminDashboard() {
         setLoading(false);
     };
 
+    function getTimeAgo(dateString: string) {
+        const now = new Date();
+        const past = new Date(dateString);
+        const diff = (now.getTime() - past.getTime()) / 1000; // in seconds
+
+        const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+
+        if (diff < 60) return rtf.format(-Math.floor(diff), "second");
+        if (diff < 3600) return rtf.format(-Math.floor(diff / 60), "minute");
+        if (diff < 86400) return rtf.format(-Math.floor(diff / 3600), "hour");
+        if (diff < 2592000) return rtf.format(-Math.floor(diff / 86400), "day");
+        if (diff < 31104000) return rtf.format(-Math.floor(diff / 2592000), "month");
+
+        return rtf.format(-Math.floor(diff / 31104000), "year");
+    }
+
     return (
         <div className="space-y-4">
-            <div className="flex justify-between">
+            <div className="flex justify-between flex-wrap gap-5">
                 <Input
                     placeholder="Search students..."
                     value={searchTerm}
@@ -115,7 +130,6 @@ export function VoucherSectionAdminDashboard() {
                     <SelectContent>
                         <SelectItem value="all">All Vouchers</SelectItem>
                         <SelectItem value="Exam_booking">Exam Booking</SelectItem>
-                        {/* Add more voucher types here */}
                     </SelectContent>
                 </Select>
             </div>
@@ -133,16 +147,18 @@ export function VoucherSectionAdminDashboard() {
                 </TableHeader>
                 <TableBody>
                     {filteredData.map((student) => (
-                        <TableRow key={student.id}>
+                        <TableRow key={student.session_id}>
                             <TableCell>{`${student.firstName} ${student.lastName}`}</TableCell>
                             <TableCell>{student.email}</TableCell>
                             <TableCell>{student.contactNumber}</TableCell>
-                            <TableCell>{new Date(student.submittedAt).toLocaleString()}</TableCell>
-                            <TableCell>
+                            <TableCell className="text-gray-500">{getTimeAgo(student.submittedAt)}</TableCell>                            <TableCell>
                                 <Badge variant="secondary">{student.voucher}</Badge>
                             </TableCell>
                             <TableCell>
-                                <Button onClick={() => handleViewStudent(student)} variant="outline" size="sm">Remarks</Button>
+                                <div className="flex flex-wrap gap-2">
+                                    <Button onClick={() => handleViewStudent(student)} variant="outline" size="sm">Remarks</Button>
+                                    <AdminDashboardUserMetaDataDisplay student={student} />
+                                </div>
                             </TableCell>
                         </TableRow>
                     ))}
@@ -174,7 +190,7 @@ export function VoucherSectionAdminDashboard() {
 
             {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
 
-            <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+            <Dialog open={isRemarksModalOpen} onOpenChange={setIsRemarksModalOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
                         <DialogTitle className="text-lg font-semibold">Student Remarks</DialogTitle>
@@ -202,7 +218,7 @@ export function VoucherSectionAdminDashboard() {
                                 Edit Remarks
                             </Button>
                         )}
-                        <Button onClick={() => { setIsModalOpen(false) }}>Close</Button>
+                        <Button onClick={() => { setIsRemarksModalOpen(false) }}>Close</Button>
                     </DialogFooter>
                 </DialogContent>
             </Dialog>

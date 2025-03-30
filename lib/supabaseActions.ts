@@ -13,12 +13,10 @@ export async function submitVoucherForm(formData: {
   contactNumber: string
   voucher: string
 }) {
-  let session_id = localStorage.getItem('session_id') || crypto.randomUUID()
 
-  if (!session_id) {
-    session_id = crypto.randomUUID()
-    localStorage.setItem('session_id', session_id)
-  }
+  await trackUserMetadata()
+
+  const session_id = localStorage.getItem('session_id');
 
   const { error } = await supabase.from('vouchers').insert([
     {

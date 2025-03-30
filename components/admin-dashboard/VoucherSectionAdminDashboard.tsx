@@ -50,12 +50,6 @@ export function VoucherSectionAdminDashboard() {
     const [remarks, setRemarks] = useState(selectedStudent?.remarks || "");
     const [isEditing, setIsEditing] = useState(!selectedStudent?.remarks);
     const [loading, setLoading] = useState(false);
-    const [alert, setAlert] = useState<{ message: string; type: "error" | "success" | "warning" | "loading" } | null>(null);
-
-    const ShowAdminAlert = () => {
-        setAlert({ message: "Only developer can access previous data.", type: "error" });
-        return;
-    }
 
     const filteredData = students.filter(
         (student) =>
@@ -164,31 +158,6 @@ export function VoucherSectionAdminDashboard() {
                     ))}
                 </TableBody>
             </Table>
-
-            <Pagination>
-                <PaginationContent>
-                    <PaginationItem>
-                        <PaginationPrevious href="#" />
-                    </PaginationItem>
-                    <PaginationItem>
-                        <PaginationLink href="#" isActive>1</PaginationLink>
-                    </PaginationItem>
-                    <PaginationItem>
-                        <PaginationLink href="#" onClick={() => ShowAdminAlert()}>2</PaginationLink>
-                    </PaginationItem>
-                    <PaginationItem>
-                        <PaginationLink href="#" onClick={() => ShowAdminAlert()}>3</PaginationLink>
-                    </PaginationItem>
-                    <PaginationItem>
-                        <PaginationEllipsis />
-                    </PaginationItem>
-                    <PaginationItem>
-                        <PaginationNext href="#" onClick={() => ShowAdminAlert()} />
-                    </PaginationItem>
-                </PaginationContent>
-            </Pagination>
-
-            {alert && <Alert message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
 
             <Dialog open={isRemarksModalOpen} onOpenChange={setIsRemarksModalOpen}>
                 <DialogContent className="max-w-md">

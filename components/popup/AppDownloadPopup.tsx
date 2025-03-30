@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-// Extend the WindowEventMap to include the beforeinstallprompt event
 declare global {
   interface WindowEventMap {
     beforeinstallprompt: BeforeInstallPromptEvent
@@ -18,7 +17,7 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
-export default function PWAInstallPrompt() {
+export default function AppDownloadPopup() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [showInstallPrompt, setShowInstallPrompt] = useState(false)
 

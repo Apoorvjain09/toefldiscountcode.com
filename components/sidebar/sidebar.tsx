@@ -15,7 +15,8 @@ import {
   ScreenShare,
   MountainIcon,
   DollarSignIcon,
-  ShieldQuestionIcon
+  ShieldQuestionIcon,
+  LayoutTemplate
 } from 'lucide-react';
 import { SidebarDesktop } from './sidebar-desktop';
 import { SidebarItems } from '@/types';
@@ -40,6 +41,7 @@ export default function Sidebar() {
       { label: 'Toefl Mock Tests', href: '/', icon: Home },
       { label: 'Practice Questions', href: '/practice-questions', icon: ShieldQuestionIcon },
       { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
+      { label: 'Toefl Templates', href: '/templates', icon: LayoutTemplate },
       // { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
       { label: 'Book Counseling Slot', href: '/book-counseling', icon: ScreenShare },
       {

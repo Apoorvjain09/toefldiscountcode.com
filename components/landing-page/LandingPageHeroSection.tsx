@@ -72,8 +72,7 @@ export function LandingPageHeroSection() {
     }, [hasSpeakingAnimatedProgressRefFinished]);
 
     return (
-        <div className={`${PoppinsFont.className} relative min-h-screen bg-white`
-        }>
+        <div className={`${PoppinsFont.className} relative min-h-screen bg-white`}>
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-blue-50 via-blue-100 to-white rounded-bl-full opacity-60" />
 
             <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" >
@@ -131,7 +130,9 @@ export function LandingPageHeroSection() {
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
                         Master TOEFL Prep at a price
-                        < span className="block text-blue-600" > That Feels Unreal </span>
+                        <span className="block bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+                            That Feels Unreal
+                        </span>
                     </motion.h1>
                 </div>
 
@@ -286,45 +287,9 @@ export function LandingPageHeroSection() {
                                             damping: 20,
                                         }}
                                     >
-                                        {
-                                            isSignedIn ? (
-                                                <Link href="/practice-questions" >
-                                                    <Button
-                                                        className="relative px-6 py-6 shadow-xl bg-gradient-to-r from-primary/90 to-primary hover:from-primary hover:to-primary/90"
-                                                        size="lg"
-                                                    >
-                                                        <motion.div
-                                                            className="absolute inset-0 rounded-lg bg-primary/10"
-                                                            animate={{
-                                                                scale: [1, 1.05, 1],
-                                                            }}
-                                                            transition={{
-                                                                duration: 2,
-                                                                repeat: Number.POSITIVE_INFINITY,
-                                                                ease: "easeInOut",
-                                                            }}
-                                                        />
-                                                        < span className="relative flex items-center gap-2" >
-                                                            <PenSquare className="size-4" />
-                                                            <span className="font-semibold" > Section wise Practice </span>
-                                                        </span>
-                                                        < motion.div
-                                                            className="absolute inset-0 rounded-lg bg-primary/10 blur-xl"
-                                                            animate={{
-                                                                opacity: [0.2, 0.5, 0.2],
-                                                            }}
-                                                            transition={{
-                                                                duration: 2,
-                                                                repeat: Number.POSITIVE_INFINITY,
-                                                                ease: "easeInOut",
-                                                            }}
-                                                        />
-                                                    </Button>
-                                                </Link>
-
-                                            ) : (
+                                        {isSignedIn ? (
+                                            <Link href="/practice-questions" >
                                                 <Button
-                                                    onClick={() => setShowClerkLogInModal(true)}
                                                     className="relative px-6 py-6 shadow-xl bg-gradient-to-r from-primary/90 to-primary hover:from-primary hover:to-primary/90"
                                                     size="lg"
                                                 >
@@ -340,8 +305,8 @@ export function LandingPageHeroSection() {
                                                         }}
                                                     />
                                                     < span className="relative flex items-center gap-2" >
-                                                        <LogIn className="size-4" />
-                                                        <span className="font-semibold" > Sign Up Now </span>
+                                                        <PenSquare className="size-4" />
+                                                        <span className="font-semibold" > Section wise Practice </span>
                                                     </span>
                                                     < motion.div
                                                         className="absolute inset-0 rounded-lg bg-primary/10 blur-xl"
@@ -355,7 +320,42 @@ export function LandingPageHeroSection() {
                                                         }}
                                                     />
                                                 </Button>
-                                            )}
+                                            </Link>
+
+                                        ) : (
+                                            <Button
+                                                onClick={() => setShowClerkLogInModal(true)}
+                                                className="relative px-6 py-6 shadow-xl bg-gradient-to-r from-primary/90 to-primary hover:from-primary hover:to-primary/90"
+                                                size="lg"
+                                            >
+                                                <motion.div
+                                                    className="absolute inset-0 rounded-lg bg-primary/10"
+                                                    animate={{
+                                                        scale: [1, 1.05, 1],
+                                                    }}
+                                                    transition={{
+                                                        duration: 2,
+                                                        repeat: Number.POSITIVE_INFINITY,
+                                                        ease: "easeInOut",
+                                                    }}
+                                                />
+                                                < span className="relative flex items-center gap-2" >
+                                                    <LogIn className="size-4" />
+                                                    <span className="font-semibold" > Sign Up Now </span>
+                                                </span>
+                                                < motion.div
+                                                    className="absolute inset-0 rounded-lg bg-primary/10 blur-xl"
+                                                    animate={{
+                                                        opacity: [0.2, 0.5, 0.2],
+                                                    }}
+                                                    transition={{
+                                                        duration: 2,
+                                                        repeat: Number.POSITIVE_INFINITY,
+                                                        ease: "easeInOut",
+                                                    }}
+                                                />
+                                            </Button>
+                                        )}
 
                                     </motion.div>
                                 )}
@@ -374,17 +374,15 @@ export function LandingPageHeroSection() {
                     </motion.div>
                 </div>
 
-                {
-                    showClerkLogInModal && (
-                        <Dialog open={showClerkLogInModal} onOpenChange={setShowClerkLogInModal} >
-                            <DialogContent className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none" >
-                                <div className="flex flex-col items-center" >
-                                    <SignIn forceRedirectUrl="/" routing="hash" />
-                                </div>
-                            </DialogContent>
-                        </Dialog>
-                    )
-                }
+                {showClerkLogInModal && (
+                    <Dialog open={showClerkLogInModal} onOpenChange={setShowClerkLogInModal} >
+                        <DialogContent className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none" >
+                            <div className="flex flex-col items-center" >
+                                <SignIn forceRedirectUrl="/" routing="hash" />
+                            </div>
+                        </DialogContent>
+                    </Dialog>
+                )}
             </div>
         </div>
     )

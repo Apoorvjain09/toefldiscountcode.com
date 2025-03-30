@@ -132,76 +132,71 @@ export default function LandingPageServices() {
                                         )}
 
                                 </div>
-                                < div className="absolute bottom-0 right-0 opacity-10" >
+                                <div className="absolute bottom-0 right-0 opacity-10" >
                                     <FileText className="w-32 h-32" />
                                 </div>
                             </CardContent>
                         </Card>
                     </motion.div>
 
-                    {
-                        features.map((feature, index) => (
-                            <motion.div
-                                key={feature.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
-                            >
-                                <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1" >
-                                    <CardHeader>
-                                        <div className={`w-12 h-12 rounded-lg ${feature.color} flex items-center justify-center mb-4`}>
-                                            <feature.icon className="w-6 h-6 text-white" />
-                                        </div>
-                                        < CardTitle className="text-xl" > {feature.title} </CardTitle>
-                                        < CardDescription > {feature.description} </CardDescription>
-                                    </CardHeader>
-                                    < CardContent >
-                                        <Button
-                                            variant="ghost"
-                                            className="group-hover:translate-x-1 transition-transform duration-300"
-                                            asChild
-                                        >
-                                            {(feature.href === "Mock Tests") ? (
-                                                <>
-                                                    {
-                                                        isSignedIn ? (
-                                                            <Button variant="ghost" onClick={() => { setShowClerkLogInModal(true) }}>
-                                                                Get Started
-                                                                < span className="ml-2" >→</span>
-                                                            </Button>
-                                                        ) : (
-                                                            <Link href={feature.href} >
-                                                                Get Started
-                                                                < span className="ml-2" >→</span>
-                                                            </Link>
-                                                        )}
-                                                </>
-                                            ) : (
-                                                <Link href={feature.href} >
-                                                    Get Started
-                                                    < span className="ml-2" >→</span>
-                                                </Link>
-                                            )}
-
-                                        </Button>
-                                    </CardContent>
-                                </Card>
-                            </motion.div>
-                        ))}
+                    {features.map((feature, index) => (
+                        <motion.div
+                            key={feature.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
+                        >
+                            <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1" >
+                                <CardHeader>
+                                    <div className={`w-12 h-12 rounded-lg ${feature.color} flex items-center justify-center mb-4`}>
+                                        <feature.icon className="w-6 h-6 text-white" />
+                                    </div>
+                                    < CardTitle className="text-xl" > {feature.title} </CardTitle>
+                                    < CardDescription > {feature.description} </CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <Button
+                                        variant="ghost"
+                                        className="group-hover:translate-x-1 transition-transform duration-300"
+                                        asChild
+                                    >
+                                        {(feature.href === "Mock Tests") ? (
+                                            <>
+                                                {isSignedIn ? (
+                                                    <Button variant="ghost" onClick={() => { setShowClerkLogInModal(true) }}>
+                                                        Get Started
+                                                        < span className="ml-2" >→</span>
+                                                    </Button>
+                                                ) : (
+                                                    <Link href={feature.href} >
+                                                        Get Started
+                                                        < span className="ml-2" >→</span>
+                                                    </Link>
+                                                )}
+                                            </>
+                                        ) : (
+                                            <Link href={feature.href} >
+                                                Get Started
+                                                < span className="ml-2" >→</span>
+                                            </Link>
+                                        )}
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
 
-            {
-                showClerkLogInModal && (
-                    <Dialog open={showClerkLogInModal} onOpenChange={setShowClerkLogInModal} >
-                        <DialogContent className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none" >
-                            <div className="flex flex-col items-center" >
-                                <SignIn forceRedirectUrl="/" routing="hash" />
-                            </div>
-                        </DialogContent>
-                    </Dialog>
-                )
-            }
+            {showClerkLogInModal && (
+                <Dialog open={showClerkLogInModal} onOpenChange={setShowClerkLogInModal} >
+                    <DialogContent className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none" >
+                        <div className="flex flex-col items-center" >
+                            <SignIn forceRedirectUrl="/" routing="hash" />
+                        </div>
+                    </DialogContent>
+                </Dialog>
+            )}
         </div >
     );
 }

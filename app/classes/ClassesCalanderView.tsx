@@ -14,25 +14,19 @@ type ClassItem = {
     duration: string
     subject: string
 }
-
 const classData: ClassItem[] = [
-    { date: '3rd March 2025', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'PTE' },
-    { date: '4th March 2025', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '4th March 2025', time: '7:30 am to 9 am', duration: '1.5 hrs', subject: 'GRE/GMAT' },
-    { date: '6th March 2025', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'German A1' },
-    { date: '8th March 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '10th March 2025', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'SAT' },
-    { date: '11th March 2025', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'Duolingo' },
-    { date: '13th March 2025', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '17th March 2025', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '17th March 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'TOEFL' },
-    { date: '18th March 2025', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'GRE/GMAT' },
-    { date: '19th March 2025', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'PTE' },
-    { date: '21st March 2025', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '25th March 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '28th March 2025', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
-    { date: '28th March 2025', time: '7 am to 8:30 am', duration: '1.5 hrs', subject: 'Duolingo' },
-]
+    { date: '3rd April 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'SAT' },
+    { date: '3rd April 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '4th April 2025', time: '7 am to 8:30 am', duration: '1.5 hrs', subject: 'Duolingo' },
+    { date: '5th April 2025', time: '7 am to 8:30 am', duration: '1.5 hrs', subject: 'German A1' },
+    { date: '5th April 2025', time: '7:30 am to 9 am', duration: '1.5 hrs', subject: 'GRE/GMAT' },
+    { date: '5th April 2025', time: '10 pm to 11:30 pm', duration: '1.5 hrs', subject: 'PTE' },
+    { date: '8th April 2025', time: '8 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '10th April 2025', time: '2:30 pm to 4 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '11th April 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'TOEFL' },
+    { date: '12th April 2025', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
+];
+
 export function ClassesCalanderView() {
     const [currentMonth, setCurrentMonth] = React.useState(new Date())
 

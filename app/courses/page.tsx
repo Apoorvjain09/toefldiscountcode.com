@@ -1,4 +1,7 @@
+import MainFooter from "@/components/landing-page/MainFooter";
+import { BuildingIcon, ClockIcon, StarIcon } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "TOEFL Courses | Master TOEFL Preparation Online",
@@ -31,6 +34,39 @@ export const metadata: Metadata = {
 
 
 export default function page() {
+
+    const courses = [
+        {
+            title: "GRE Verbal Masterclass",
+            price: "$115.00",
+            href: "/courses/verbal-course",
+            image: "assets/verbal-course-banner.png",
+            lectures: 13,
+            length: "26 hours",
+            validity: "1 Year",
+        },
+        {
+            title: "GRE Quant Masterclass",
+            price: "$120.00",
+            href: "/courses/quant-course",
+            image:
+                "https://www.dropbox.com/scl/fi/bnv3tio9lv26hfl6uxfa1/Quant_banner.png?rlkey=157scoylsfn6ocbks61vazrje&st=zby55ofw&raw=1",
+            lectures: 18,
+            length: "35 hours",
+            validity: "1 Year",
+        },
+        {
+            title: "Toefl Masterclass",
+            price: "$110.00",
+            href: "/courses/toefl-course",
+            image:
+                "https://www.dropbox.com/scl/fi/p9hkf8rsso0q2e072k3ko/toefl_banner.png?rlkey=8x2cy0odie1iz1207jlo8dkas&st=fw4bb3kg&raw=1",
+            lectures: 13,
+            length: "26 hours",
+            validity: "1 year",
+        },
+    ];
+
     return (
         <>
             <h1 className='flex items-center justify-center bg-gradient-to-r from-orange-400 to-red-400 rounded-t-lg w-full text-center h-[20vh] font-extrabold text-3xl text-white'>
@@ -63,330 +99,61 @@ export default function page() {
                 </div>
             </section>
 
-            <div className="flex flex-wrap p-5 gap-5 justify-evenly">
-                <a href="/courses/verbal-course" className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100">
-                    <img
-                        alt=""
-                        src="assets/verbal-course-banner.png"
-                        className="sm:h-64 w-full rounded-md object-cove"
-                    />
+            <section className="flex flex-wrap p-5 gap-5 justify-evenly">
+                {courses.map((course, index) => (
+                    <Link
+                        key={index}
+                        href={course.href}
+                        className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100"
+                    >
+                        <img
+                            alt={course.title}
+                            src={course.image}
+                            className="w-full rounded-md object-cover"
+                        />
 
-                    <div className="mt-2">
-                        <dl>
-                            <div>
-                                <dt className="sr-only">Price</dt>
+                        <div className="mt-2">
+                            <dl>
+                                <dd className="text-sm text-gray-500">{course.price}</dd>
+                                <dd className="font-medium">{course.title}</dd>
+                            </dl>
 
-                                <dd className="text-sm text-gray-500">$115.00</dd>
-                            </div>
-
-                            <div>
-                                <dt className="sr-only">Address</dt>
-
-                                <dd className="font-medium">GRE Verbal Masterclass</dd>
-                            </div>
-                        </dl>
-
-                        <div className="mt-6 flex items-center gap-8 text-xs">
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Classes</p>
-
-                                    <p className="font-medium">13 Lectures</p>
-                                </div>
-                            </div>
-
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Length</p>
-
-                                    <p className="font-medium">26 hours</p>
-                                </div>
-                            </div>
-
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Validity</p>
-
-                                    <p className="font-medium">1 Year</p>
-                                </div>
+                            <div className="mt-6 flex items-center gap-8 text-xs">
+                                {[
+                                    {
+                                        label: "Classes",
+                                        value: `${course.lectures} Lectures`,
+                                        icon: BuildingIcon,
+                                    },
+                                    {
+                                        label: "Length",
+                                        value: course.length,
+                                        icon: StarIcon,
+                                    },
+                                    {
+                                        label: "Validity",
+                                        value: course.validity,
+                                        icon: ClockIcon,
+                                    },
+                                ].map((item, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2"
+                                    >
+                                        <item.icon className="size-4 text-indigo-700" />
+                                        <div className="mt-1.5 sm:mt-0">
+                                            <p className="text-gray-500">{item.label}</p>
+                                            <p className="font-medium">{item.value}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="/courses/quant-course" className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100">
-                    <img
-                        alt=""
-                        src="https://www.dropbox.com/scl/fi/bnv3tio9lv26hfl6uxfa1/Quant_banner.png?rlkey=157scoylsfn6ocbks61vazrje&st=zby55ofw&raw=1"
-                        className="sm:h-64 w-full rounded-md object-cover"
-                    />
+                    </Link>
+                ))}
+            </section>
 
-                    <div className="mt-2">
-                        <dl>
-                            <div>
-                                <dt className="sr-only">Price</dt>
-
-                                <dd className="text-sm text-gray-500">$120.000</dd>
-                            </div>
-
-                            <div>
-                                <dt className="sr-only">Address</dt>
-
-                                <dd className="font-medium">GRE Quant Masterclass</dd>
-                            </div>
-                        </dl>
-
-                        <div className="mt-6 flex items-center gap-8 text-xs">
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Classes</p>
-
-                                    <p className="font-medium">18 Lectures</p>
-                                </div>
-                            </div>
-
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Length</p>
-
-                                    <p className="font-medium">35 hours</p>
-                                </div>
-                            </div>
-
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Validity</p>
-
-                                    <p className="font-medium">1 Year</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/courses/toefl-course" className="sm:w-[40%] shadow-lg block rounded-lg p-4 shadow-indigo-100">
-                    <img
-                        alt=""
-                        src="https://www.dropbox.com/scl/fi/p9hkf8rsso0q2e072k3ko/toefl_banner.png?rlkey=8x2cy0odie1iz1207jlo8dkas&st=fw4bb3kg&raw=1"
-                        className="sm:h-64 w-full rounded-md object-cover"
-                    />
-
-                    <div className="mt-2">
-                        <dl>
-                            <div>
-                                <dt className="sr-only">Price</dt>
-
-                                <dd className="text-sm text-gray-500">$110.00</dd>
-                            </div>
-
-                            <div>
-                                <dt className="sr-only">Address</dt>
-
-                                <dd className="font-medium">Toefl Masterclass</dd>
-                            </div>
-                        </dl>
-
-                        <div className="mt-6 flex items-center gap-8 text-xs">
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Classes</p>
-
-                                    <p className="font-medium">13 Lectures</p>
-                                </div>
-                            </div>
-
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Length</p>
-
-                                    <p className="font-medium">26 hours</p>
-                                </div>
-                            </div>
-
-                            <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-                                <svg
-                                    className="size-4 text-indigo-700"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                                    />
-                                </svg>
-
-                                <div className="mt-1.5 sm:mt-0">
-                                    <p className="text-gray-500">Validity</p>
-
-                                    <p className="font-medium">1 year</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <footer className="rounded-b-lg bg-gray-100">
-                <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-                    <div className="lg:flex lg:items-center lg:justify-between">
-                        <div>
-                            <div className="flex justify-center text-blue-600 lg:justify-start">
-                                <p className='font-extrabold text-3xl'>TOEFL Go GLobal</p>
-                            </div>
-
-                            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-                                MJ Study Aborad is one of the Leading Study Abroad Counsultant (as per ETS) providing education loan and visa services as well.
-                            </p>
-                        </div>
-
-
-                        <div className='flex flex-col'>
-                            <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/book"> Books </a>
-                                </li>
-
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/forum"> Forum </a>
-                                </li>
-
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/score-reporting"> score reporting</a>
-                                </li>
-
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/book-counseling"> Counseling </a>
-                                </li>
-                            </ul>
-                            <p className="mt-12 text-center text-sm text-gray-500 lg:text-right">
-                                Copyright &copy; 2024. All rights reserved.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <MainFooter />
         </>
     )
 }

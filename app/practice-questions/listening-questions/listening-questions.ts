@@ -534,7 +534,7 @@ export const listeningQuestions = [
         audioUrl: "https://www.dropbox.com/scl/fi/imr4frh378si4maj44szn/question5_conversation.mp3?rlkey=izaigeasu8whazs84b0c4mspe&st=380643pd&raw=1",
         questions: [
             {
-                id: 26,
+                id: 1,
                 question: "What is the main problem the student is having?",
                 options: [
                     "He wants to become a chemistry tutor.",
@@ -553,7 +553,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 27,
+                id: 2,
                 question: "According to the conversation, which of the following are ways that Connor can receive help? Select three answers.",
                 options: [
                     "Office hours with his professor",
@@ -573,7 +573,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 28,
+                id: 3,
                 question: "When would be the best time for Connor to meet with his professor?",
                 options: [
                     "Tuesdays and Thursdays after trigonometry class, during office hours",
@@ -592,7 +592,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 29,
+                id: 4,
                 question: "Which of the following are true about the Student Resource Center? Select two answers.",
                 options: [
                     "It’s on the second floor of the library.",
@@ -612,7 +612,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 30,
+                id: 5,
                 question: "What is meant by Connor’s statement: 'Availability wasn’t the limiting factor; I think it was my pride.'",
                 options: [
                     "I honestly felt proud about how I performed on the exam.",
@@ -631,7 +631,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 31,
+                id: 6,
                 question: "Based on the conversation, why did Connor not use the textbook to study?",
                 options: [
                     "He has not purchased it yet.",
@@ -658,7 +658,7 @@ export const listeningQuestions = [
         audioUrl: "https://www.dropbox.com/scl/fi/ke6kxob8zeroxzxiwzpnt/question6_lecture.mp3?rlkey=dqfipfv5vd7w31gjgmsa3hyck&st=53l0ewvh&raw=1",
         questions: [
             {
-                id: 32,
+                id: 1,
                 question: "What was the main topic of the lecture?",
                 options: [
                     "The importance of Shakespeare’s plays",
@@ -677,7 +677,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 33,
+                id: 2,
                 question: "What does the professor mean when she says, 'I can see I’m losing some of you…'?",
                 options: [
                     "Her students do not agree with her argument.",
@@ -696,7 +696,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 34,
+                id: 3,
                 question: "Why might the professor say, 'Do you guys see how the key to Lady Macbeth’s strategy for gaining influence over her husband is to somewhat switch the gender roles within her marriage?' without pausing to call on her students for responses?",
                 options: [
                     "To help students stay focused and not get off topic answering questions",
@@ -715,7 +715,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 35,
+                id: 4,
                 question: "What does the professor argue is a strength of Shakespeare’s plays and a quality that makes him a successful playwright in history?",
                 options: [
                     "The fact that people have read his plays for centuries and his works are well-preserved",
@@ -734,7 +734,7 @@ export const listeningQuestions = [
                 `
             },
             {
-                id: 36,
+                id: 5,
                 question: "The professor would likely describe Lady Macbeth as which of the following?",
                 options: [
                     "A very 'good' and loyal wife",
@@ -753,5 +753,844 @@ export const listeningQuestions = [
                 `
             }
         ]
-    }
+    },
+    {
+        //https://toefltestprep.com/practice-tests/lecture-on-behaviorism-listening-practice-with-answers
+        id: 7,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/b3wb96wvsc3opo90k7gij/question7_lecture.mp3?rlkey=rpggui0zjhld743jaxttovm8k&st=x52bpd8f&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "What is the main purpose of this lecture?",
+              options: [
+                "to explore the intricacies of non-verbal communication through human facial expressions",
+                "to advocate for the direct observation of thoughts as a reliable method in psychology",
+                "to teach effective methods for magic tricks using ideomotor action",
+                "to delve into Watson's behaviourism and the motor theory of thinking"
+              ],
+              correctAnswer: [
+                "to delve into Watson's behaviourism and the motor theory of thinking"
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because the lecture centers on Watson’s behaviorism, laryngeal habits, and ideomotor action as tools to understand thinking.
+                ❌ Option A is incorrect because facial expressions are discussed in the context of behaviorism, not as the main focus.
+                ❌ Option B is incorrect because Watson actually dismisses internal thought as unobservable.
+                ❌ Option C is incorrect because the magic trick is only used as an illustration of ideomotor action, not the lecture’s purpose.
+              `
+            },
+            {
+              id: 2,
+              question: "What does the professor say about those who communicate through sign language?",
+              options: [
+                "sign language disrupts the connection between thinking and muscle activity",
+                "observable muscular changes occur in their hands when solving problems",
+                "their thinking habits cannot be observed due to the nature of sign language",
+                "they exhibit laryngeal habits, similar to individuals using spoken language"
+              ],
+              correctAnswer: [
+                "observable muscular changes occur in their hands when solving problems"
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor says Watson observed hand muscle changes in sign language users during problem-solving.
+                ❌ Option A is incorrect because sign language supports, not disrupts, the motor theory.
+                ❌ Option C is incorrect because the professor states their thinking can be observed through hand muscles.
+                ❌ Option D is incorrect because the professor refers to hand muscle activity, not laryngeal habits, in this context.
+              `
+            },
+            {
+              id: 3,
+              question: "What point does the professor make when he refers to the magic trick?",
+              options: [
+                "demonstrate the concept of ideomotor action",
+                "show that people are easily fooled by simple illusions",
+                "emphasise the importance of studying magic tricks to understand human behaviour",
+                "showcase the professor's own entertainment skills and lighten the mood of the lecture"
+              ],
+              correctAnswer: [
+                "demonstrate the concept of ideomotor action"
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the professor uses the eye movement trick to explain ideomotor action.
+                ❌ Option B is incorrect because the focus is on subconscious motor responses, not being fooled.
+                ❌ Option C is incorrect because magic tricks are not emphasized as a research tool.
+                ❌ Option D is incorrect because the intent is explanatory, not for entertainment.
+              `
+            },
+            {
+              id: 4,
+              question: "The professor mentions the university library during this lecture. What does the reference to the library demonstrate?",
+              options: [
+                "to showcase the fact that the possibility of studying thought begins in the library",
+                "to inform them that William James came up with the concept of ideomotor in that library",
+                "to illustrate ideomotor action by showing how thinking about a location can produce involuntary eye movements",
+                "to highlight the role of language learnt in the learnt in the process of thinking"
+              ],
+              correctAnswer: [
+                "to illustrate ideomotor action by showing how thinking about a location can produce involuntary eye movements"
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the professor uses imagining the library to explain unconscious eye movement as ideomotor action.
+                ❌ Option A is incorrect because the library is an example, not a starting point for studying thought.
+                ❌ Option B is incorrect because James is mentioned, but not in connection with that library.
+                ❌ Option D is incorrect because the example is not about language learning.
+              `
+            },
+            {
+              id: 5,
+              question: "What is the professor's opinion on laryngeal habits?",
+              options: [
+                "They are an unimportant or irrelevant concept in understanding thinking",
+                "They provide a valuable window into a person's thought processes",
+                "They are a definitive and foolproof way to measure a person's thoughts",
+                "The professor completely disagrees with John B. Watson's theory of laryngeal habits"
+              ],
+              correctAnswer: [
+                "They provide a valuable window into a person's thought processes"
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor explains how Watson links throat muscle activity to thinking, suggesting its usefulness.
+                ❌ Option A is incorrect because the professor presents laryngeal habits as meaningful.
+                ❌ Option C is incorrect because he acknowledges limitations in measuring thought.
+                ❌ Option D is incorrect because the professor explains Watson’s view without fully disagreeing.
+              `
+            },
+            {
+              id: 6,
+              question: "Why does the professor say this?",
+              audio_packet:"https://www.dropbox.com/scl/fi/l4l5zztj3xa0kdyizxlfh/question7_lecture_packet.mp3?rlkey=7eu17z9awsgikh9972gl0okpe&st=2v5oky9d&raw=1",
+              options: [
+                "to recall what was said to the students previously",
+                "to explain the reason why the term is used",
+                "to give an example",
+                "to explain what James and other theorists had to say about it"
+              ],
+              correctAnswer: [
+                "to explain the reason why the term is used"
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor says “It’s called ideomotor action for this reason…” to clarify the name.
+                ❌ Option A is incorrect because he is not reviewing prior discussion.
+                ❌ Option C is incorrect because the explanation is definitional, not illustrative.
+                ❌ Option D is incorrect because although James is mentioned, the line explains terminology.
+              `
+            }
+        ]
+    },
+    {
+        //https://toefltestprep.com/practice-tests/lecture-on-anthropology-listening-practice-test
+        id: 8,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/uk513mh42c5knncf0d1cn/question8_lecture.mp3?rlkey=t43ciy457pvzxtlx1kclbiqcu&st=uk42rzhp&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "What is the primary topic of the professor's discussion?",
+              options: [
+                "Common mistakes found in ancient calendars",
+                "The historical shift towards the heliocentric model",
+                "Illustrations of diverse calendar systems across cultures",
+                "The astrological notion of planetary and stellar influences"
+              ],
+              correctAnswer: [
+                "Illustrations of diverse calendar systems across cultures"
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the professor explores calendar systems across cultures such as Stonehenge, Mayans, Chinese, and Roman calendars.
+                ❌ Option A is incorrect because calendar mistakes are not a major focus.
+                ❌ Option B is incorrect as heliocentrism is not discussed.
+                ❌ Option D is incorrect because astrology is mentioned only briefly in the Chinese context.
+              `
+            },
+            {
+              id: 2,
+              question: "The professor explores different hypotheses regarding the function of Stonehenge. What inference can be drawn regarding the professor's viewpoint?",
+              options: [
+                "She asserts that Stonehenge unequivocally served as a calendar.",
+                "She inclines towards the notion that Stonehenge likely functioned primarily as a religious site or burial ground.",
+                "She suggests that the stones primarily served as a commemoration of past occurrences.",
+                "She acknowledges the uncertainty surrounding the intended purpose behind the construction of Stonehenge."
+              ],
+              correctAnswer: [
+                "She asserts that Stonehenge unequivocally served as a calendar."
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the professor aligns herself with those who believe Stonehenge was used as a calendar, stating others “can’t deny” its calendar function.
+                ❌ Option B is incorrect because she does not favor the religious/tomb theory.
+                ❌ Option C is incorrect because commemorative purposes are not mentioned.
+                ❌ Option D is incorrect because she expresses confidence in the calendar hypothesis.
+              `
+            },
+            {
+              id: 3,
+              question: "What are the three natural units for measuring the passage of time, as discussed by the professor?",
+              options: [
+                "Hours, weeks, and years",
+                "Days, months, and years",
+                "Minutes, months, and decades",
+                "Days, weeks, and centuries"
+              ],
+              correctAnswer: [
+                "Days, months, and years"
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor explains how a day, month, and year correspond to natural celestial movements.
+                ❌ Option A is incorrect as hours and weeks are not emphasized.
+                ❌ Option C is incorrect because minutes and decades are not mentioned.
+                ❌ Option D is incorrect because centuries are not part of the natural time units discussed.
+              `
+            },
+            {
+              id: 4,
+              question: "Based on the information provided by the professor, what was one of the speculated functions of Stonehenge?",
+              options: [
+                "A temple or tomb",
+                "A marketplace",
+                "A library",
+                "A fortress"
+              ],
+              correctAnswer: [
+                "A temple or tomb"
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the professor mentions some believe Stonehenge served as a temple or tomb.
+                ❌ Option B is incorrect because marketplace is never suggested.
+                ❌ Option C is incorrect as libraries are not discussed.
+                ❌ Option D is incorrect because there is no evidence it was a fortress.
+              `
+            },
+            {
+              id: 5,
+              question: "Which ancient civilization is specifically mentioned as developing a highly sophisticated calendar system incorporating the planet Venus?",
+              options: [
+                "Egyptians",
+                "Greeks",
+                "Mayans",
+                "Romans"
+              ],
+              correctAnswer: [
+                "Mayans"
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the professor states that the Mayan calendar included Venus and was remarkably advanced.
+                ❌ Option A is incorrect because Egyptians are not mentioned in this context.
+                ❌ Option B is incorrect as Greeks are not referenced.
+                ❌ Option D is incorrect because while Romans are mentioned, they did not use Venus in their calendar system.
+              `
+            },
+            {
+              id: 6,
+              question: "According to the professor, what celestial body influenced the Chinese calendar, leading to the development of the Chinese zodiac?",
+              options: [
+                "The orbit of Mars",
+                "The orbit of Venus",
+                "The orbit of Jupiter",
+                "The orbit of Saturn"
+              ],
+              correctAnswer: [
+                "The orbit of Jupiter"
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the professor clearly says the Chinese zodiac is based on Jupiter’s 12-year orbital cycle.
+                ❌ Option A is incorrect because Mars is not mentioned in relation to the Chinese calendar.
+                ❌ Option B is incorrect because Venus is tied to the Mayan calendar.
+                ❌ Option D is incorrect because Saturn is not discussed.
+              `
+            }
+          ]
+    },
+    {
+        //https://toefltestprep.com/practice-tests/botany-class-discussion-listening-practice-test-with-answers
+        id: 9,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/vovvban515fpumho6nuvs/question9_lecture.mp3?rlkey=setm5i9zhscaa0wx94mkp82mx&st=vdaug1t4&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "What is the primary focus of the professor's lecture regarding Manila hemp fibers?",
+              options: [
+                "The similarities between cotton fibers and Manila hemp fibers",
+                "The different types of Manila hemp fibers",
+                "The economic significance of Manila hemp fibers",
+                "A specific utilization of Manila hemp fibers"
+              ],
+              correctAnswer: [
+                "A specific utilization of Manila hemp fibers"
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because the lecture focuses on how Manila hemp is used, especially in the shipping industry for ropes due to its saltwater resistance.
+                ❌ Option A is incorrect because similarities with cotton are mentioned only briefly from the previous class.
+                ❌ Option B is incorrect because fiber types are not the focus.
+                ❌ Option C is incorrect because economic factors are not discussed in detail.
+              `
+            },
+            {
+              id: 2,
+              question: "What is the professor's implication regarding the term 'Manila hemp'?",
+              options: [
+                "It serves as a commercial brand designation.",
+                "Certain elements of the name are unsuitable.",
+                "The name has undergone recent modifications.",
+                "The name was initially utilized in the 1940s."
+              ],
+              correctAnswer: [
+                "Certain elements of the name are unsuitable."
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor points out that while the 'Manila' part is geographically accurate, 'hemp' is misleading since the plant belongs to the banana family.
+                ❌ Option A is incorrect because branding is not discussed.
+                ❌ Option C is incorrect because the name’s evolution is not mentioned.
+                ❌ Option D is incorrect as no specific date for the name’s origin is given.
+              `
+            },
+            {
+              id: 3,
+              question: "Why did the professor bring up the Golden Gate Bridge?",
+              options: [
+                "To illustrate a drawback of steel cables",
+                "To exemplify innovative color usage",
+                "To demonstrate the resistance of steel cables to saltwater",
+                "To provide an instance of Manila hemp's use"
+              ],
+              correctAnswer: [
+                "To illustrate a drawback of steel cables"
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the professor explains that steel cables on the Golden Gate Bridge need frequent repainting due to saltwater corrosion.
+                ❌ Option B is incorrect because color usage is not discussed.
+                ❌ Option C is incorrect because steel cables are portrayed as vulnerable to saltwater.
+                ❌ Option D is incorrect because the bridge is not using Manila hemp.
+              `
+            },
+            {
+              id: 4,
+              question: "According to the professor, what was the primary factor leading many ships to use Manila hemp ropes instead of steel cables?",
+              options: [
+                "Manila hemp was less expensive.",
+                "Manila hemp was simpler to manufacture.",
+                "Manila hemp has greater resistance to saltwater.",
+                "Manila hemp is lighter in mass."
+              ],
+              correctAnswer: [
+                "Manila hemp has greater resistance to saltwater."
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the professor emphasizes that saltwater resistance made Manila hemp preferable to steel.
+                ❌ Option A is incorrect as cost is not discussed.
+                ❌ Option B is incorrect because manufacturing simplicity is not a factor.
+                ❌ Option D is incorrect because weight is not mentioned.
+              `
+            },
+            {
+                id: 5,
+                question: "According to the lecture, what is the method used to enhance the durability of Manila hemp rope?",
+                options: [
+                  "Apply zinc-based paint to the fibers",
+                  "Group and twist the fibers into bundles",
+                  "Submerge bundles of fibers in salt water",
+                  "Stretch the fibers using mechanical rollers"
+                ],
+                correctAnswer: [
+                  "Group and twist the fibers into bundles"
+                ],
+                answer_explanation: `
+                  ✔️ Option B is correct because the professor explains that grouping and twisting Manila hemp fibers into bundles increases their strength and durability.
+                  ❌ Option A is incorrect because zinc-based paint is used on steel cables, not hemp fibers.
+                  ❌ Option C is incorrect because soaking in saltwater is not a strengthening process.
+                  ❌ Option D is incorrect as mechanical rollers are not mentioned in the lecture.
+                `
+            },
+            {
+              id: 6,
+              question: "Why does the professor mention going away for the weekend?",
+              audio_packet: "https://www.dropbox.com/scl/fi/fa8ofvrzvvfzfy26spyja/question9_lecture_packet.mp3?rlkey=k8mej3pd3x5y3jbkrc56x6f92&st=2hw3kjvn&raw=1",
+              options: [
+                "To tell the class a joke",
+                "To apologize for not completing some work",
+                "To introduce the topic of the lecture",
+                "To encourage students to ask about her trip"
+              ],
+              correctAnswer: [
+                "To apologize for not completing some work"
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor explains that her weekend travel delayed grading the exams.
+                ❌ Option A is incorrect because her comment isn’t a joke.
+                ❌ Option C is incorrect because the topic of the lecture is introduced afterward.
+                ❌ Option D is incorrect because she does not invite questions about her trip.
+              `
+            }
+        ]
+    },
+    {
+        //https://toefltestprep.com/practice-tests/library-orientation-toefl-listening-practice-test-with-answers
+        id: 10,
+        type: "conversation",
+        audioUrl: "https://www.dropbox.com/scl/fi/rc6dkjyb8zj8cxycqs0q5/question10_conversation.mp3?rlkey=18b7dh5yqb0kwh43jnjp040wq&st=dcav7bg0&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "Why does the student visit the library?",
+              options: [
+                "To familiarize himself with the library's resources",
+                "To inquire about interlibrary loans",
+                "To participate in the new student orientation",
+                "To commence work on a research project"
+              ],
+              correctAnswer: [
+                "To familiarize himself with the library's resources"
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the student explicitly states he missed orientation and is seeking guidance about library services.
+                ❌ Option B is incorrect because interlibrary loans are discussed later as a resource, not the reason for his visit.
+                ❌ Option C is incorrect because he did not attend the orientation.
+                ❌ Option D is incorrect because he does not mention starting a research project.
+              `
+            },
+            {
+              id: 2,
+              question: "Why does the librarian direct the student to the history section?",
+              options: [
+                "She intends to show the nearest location with photocopying facilities.",
+                "She anticipates that he will conduct research in that area.",
+                "The student is searching for a book he utilized at his previous institution.",
+                "Students occasionally mistakenly believe that the section houses literary works."
+              ],
+              correctAnswer: [
+                "She anticipates that he will conduct research in that area."
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the librarian mentions the history section is often used by students in Latin American literature, the student’s major.
+                ❌ Option A is incorrect because photocopying is located elsewhere and mentioned separately.
+                ❌ Option C is incorrect because the student is not looking for a specific book.
+                ❌ Option D is incorrect because no confusion over section use is discussed.
+              `
+            },
+            {
+              id: 3,
+              question: "What inference does the student make about the interlibrary loan service at his previous school?",
+              options: [
+                "He never utilized it.",
+                "He grew to value it.",
+                "It caused inconvenience.",
+                "It was costly."
+              ],
+              correctAnswer: [
+                "It caused inconvenience"
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the student says interlibrary loan "used to take a long time" at his old school, suggesting inefficiency or inconvenience.
+                ❌ Option A is incorrect because he doesn’t say he never used it.
+                ❌ Option B is incorrect because he seems relieved by the better system here.
+                ❌ Option D is incorrect as cost is never mentioned.
+              `
+            },
+            {
+              id: 4,
+              question: "What does the student need to do before accessing any rare books?",
+              options: [
+                "Purchase a card",
+                "Obtain permission",
+                "Wear gloves",
+                "Try interlibrary loan first"
+              ],
+              correctAnswer: [
+                "Obtain permission",
+                "wear gloves"
+              ],
+              answer_explanation: `
+                ✔️ Options B and C are both required to access rare books. The librarian states that special permission is needed and gloves must be worn.
+                ❌ Option A is incorrect because a copy card is only needed for photocopying.
+                ❌ Option D is incorrect because there is no mention of interlibrary loan being a prerequisite for accessing rare books.
+              `
+            },
+            {
+              id: 5,
+              question: "Which sentence best expresses what the librarian means when she says this: Librarian: Yup, that’s the idea!",
+              audio_packet: "https://www.dropbox.com/scl/fi/ox3nmngsdno80nz922t74/question10_conversation_packet.mp3?rlkey=vedzgk152uf8pgoguqyfqngyw&st=l5ude7bs&raw=1",
+              options: [
+                "I desire for this to be accurate.",
+                "That suggestion is not very wise.",
+                "I appreciate your suggestion.",
+                "That aligns with our intentions."
+              ],
+              correctAnswer: [
+                "That aligns with our intentions."
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because the librarian uses the phrase to affirm the student's observation that the library has all the necessary resources in one place.
+                ❌ Option A is incorrect as she’s not expressing a desire but confirming a fact.
+                ❌ Option B is incorrect because she’s not criticizing the suggestion.
+                ❌ Option C is incorrect because she’s not thanking or complimenting the student.
+              `
+            }
+        ]
+    },
+    {
+        //https://toefltestprep.com/practice-tests/theater-history-toefl-listening-practice-test-with-answers
+        id: 11,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/agxnnc0slh2k1eb8elj6i/question11_lecture.mp3?rlkey=hzxjamgawyqiv3vdq95s4b0rj&st=tgb522g9&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "What is the primary focus of the lecture?",
+              options: [
+                "Emphasizing the significance of crafting authentic characters in theatrical productions",
+                "Exploring the impact of realistic literature on the theatrical landscape of France",
+                "Analyzing the effectiveness of a standardized approach to playwriting",
+                "Examining a renowned instance of a meticulously structured play"
+              ],
+              correctAnswer: [
+                "Analyzing the effectiveness of a standardized approach to playwriting"
+              ],
+              answer_explanation: `
+                ✔️ Option C is correct because the lecture centers on the "well-made play" structure and how its standardized format influenced 19th-century drama.
+                ❌ Option A is incorrect because character authenticity is not the central theme.
+                ❌ Option B is incorrect as realism is mentioned, but the lecture focuses on the earlier well-made play.
+                ❌ Option D is incorrect because no specific play is analyzed in detail.
+              `
+            },
+            {
+              id: 2,
+              question: "According to the professor, why did certain playwrights compose the conclusion of a play prior to its commencement?",
+              options: [
+                "To expedite the creation of numerous scripts",
+                "To thwart the audience's attempts at predicting the outcome through logical deduction",
+                "To evade the repetition of endings akin to those found in other plays",
+                "To guarantee the progression of the plot in a coherent and rational sequence"
+              ],
+              correctAnswer: [
+                "To guarantee the progression of the plot in a coherent and rational sequence"
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because the professor explains that starting with the ending ensured logical flow throughout the play.
+                ❌ Option A is incorrect because speed of writing is not mentioned.
+                ❌ Option B is incorrect as misleading the audience isn’t discussed.
+                ❌ Option C is incorrect because avoiding repetition isn’t the focus.
+              `
+            },
+            {
+              id: 3,
+              question: "Why does the professor reference a dialogue between two servants?",
+              options: [
+                "To exemplify typical characters in a well-crafted play",
+                "To illustrate the manner in which background details are disclosed in a well-crafted play",
+                "To elucidate the reasons behind considering Romeo and Juliet as a well-crafted play",
+                "To delineate the process by which playwrights construct the obligatory scene of a well-crafted play"
+              ],
+              correctAnswer: [
+                "To illustrate the manner in which background details are disclosed in a well-crafted play"
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because the professor uses the servant conversation to show how logical exposition is handled in a well-made play.
+                ❌ Option A is incorrect because servant characters are not the focus.
+                ❌ Option C is incorrect as Romeo and Juliet is only briefly referenced.
+                ❌ Option D is incorrect because this part refers to exposition, not the obligatory scene.
+              `
+            },
+            {
+              id: 4,
+              question: "In the lecture, what dramatic components are typically integrated into a well-constructed play to advance the storyline?",
+              options: [
+                "A sequence of significant shifts in the protagonist's perceived prospects for success",
+                "The introduction of fresh characters in the middle of the narrative",
+                "Details understood by the audience but concealed from the primary characters",
+                "The relocation of key characters from one location to another"
+              ],
+              correctAnswer: [
+                "A sequence of significant shifts in the protagonist's perceived prospects for success",
+                "Details understood by the audience but concealed from the primary characters"
+              ],
+              answer_explanation: `
+                ✔️ Options A and C are correct because the professor describes how suspense is built by audience knowledge and shifts in character fortune.
+                ❌ Option B is incorrect because new characters are not emphasized.
+                ❌ Option D is incorrect because physical movement isn’t highlighted.
+              `
+            },
+            {
+              id: 5,
+              question: "What does the professor suggest regarding the obligatory scene and the denouement?",
+              options: [
+                "Some individuals might find it challenging to distinguish between them.",
+                "Both serve as effective methods for crafting believable characters.",
+                "Typically, the denouement is encompassed within the obligatory scene.",
+                "Generally, the obligatory scene tends to be less thrilling than the denouement."
+              ],
+              correctAnswer: [
+                "Some individuals might find it challenging to distinguish between them."
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the professor notes the emotional versus logical functions of these scenes and says the difference can be subtle.
+                ❌ Option B is incorrect because character development is not the focus of this comparison.
+                ❌ Option C is incorrect because they are presented as separate.
+                ❌ Option D is incorrect because no statement compares the excitement levels.
+              `
+            },
+            {
+              id: 6,
+              question: "Why does the professor use the phrase 'sets the plot in motion'?",
+              audio_packet:"https://www.dropbox.com/scl/fi/9de3dosmvmfpqmflek0bc/question11_lecture_packet.mp3?rlkey=sutfnvebsxichigwiw56ivm4p&st=2c63lhyq&raw=1",
+              options: [
+                "To aid students in comprehending the definition of a novel term.",
+                "To signify that his statement is unrelated to the lecture's primary subject.",
+                "To highlight a specific aspect of a play above all others.",
+                "To commence summarizing the lecture's key points."
+              ],
+              correctAnswer: [
+                "To aid students in comprehending the definition of a novel term."
+              ],
+              answer_explanation: `
+                ✔️ Option A is correct because the professor uses the phrase to help students understand the term "inciting incident" and its role in triggering the plot.
+                ❌ Option B is incorrect as the phrase is central to the lecture's point.
+                ❌ Option C is incorrect because it's not elevated above all else.
+                ❌ Option D is incorrect because this is not a summary moment.
+              `
+            }
+        ]
+    },
+    {
+        //https://www.examenglish.com/TOEFL/TOEFL_lecture5.htm
+        id: 12,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/l5roijnmxrjxxdy9od340/question12_lecture.mp3?rlkey=46208hcef248b5ms96zw52jnu&st=6h6j4epw&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "Which of the following characterise anthropological study before the time of Franz Boas?",
+              options: [
+                "Few people were interested or involved in anthropological study.",
+                "Anthropologists were not expected to support their claims with evidence.",
+                "Anthropology was not studied seriously",
+                "Data was not collected in a systematic and objective way."
+              ],
+              correctAnswer: [
+                "Anthropologists were not expected to support their claims with evidence.",
+                "Data was not collected in a systematic and objective way."
+              ],
+              answer_explanation: `
+                ✔️ Options B and D are correct because early anthropological work was often speculative, biased, and lacked rigorous evidence collection.
+                ❌ Option A is incorrect because there were many adventurers and amateur theorists involved.
+                ❌ Option C is incorrect as some serious work was being done, just without scientific method.
+              `
+            },
+            {
+              id: 2,
+              question: "How did Boas’s early life influence his work in anthropology?",
+              options: [
+                "His religious upbringing meant that he was respectful to people from other backgrounds.",
+                "His fondness for collecting things inspired him to gather artefacts from little-known cultures.",
+                "His liberal upbringing helped him to understand different cultures.",
+                "His scientific studies ensured that he approached experiments systematically."
+              ],
+              correctAnswer: [
+                "His liberal upbringing helped him to understand different cultures.",
+                "His scientific studies ensured that he approached experiments systematically."
+              ],
+              answer_explanation: `
+                ✔️ Options C and D are correct. Boas’s liberal upbringing allowed him to question traditional beliefs, and his scientific background ensured rigorous methodology in anthropology.
+                ❌ Option A is incorrect because religious influence wasn’t a factor.
+                ❌ Option B is too simplistic and not mentioned as a core influence on his anthropological work.
+              `
+            },
+            {
+              id: 3,
+              question: "Why is Charles Darwin mentioned in the talk?",
+              options: [
+                "Darwin’s work in the natural sciences inspired Boas to study the world around him.",
+                "Both Darwin and Boas believed that individuals change according to their situations.",
+                "Darwin and Boas both went on expeditions to study human societies.",
+                "Both Boas and Darwin believed that humans evolved along a fixed route towards civilization."
+              ],
+              correctAnswer: [
+                "Both Darwin and Boas believed that individuals change according to their situations."
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because both Darwin and Boas emphasized adaptation to local environments rather than following a fixed, linear path.
+                ❌ Option A is incorrect because Darwin did not directly inspire Boas’s anthropological focus.
+                ❌ Option C is incorrect as Boas studied societies; Darwin studied natural species.
+                ❌ Option D is incorrect because Boas rejected the fixed evolution theory.
+              `
+            },
+            {
+              id: 4,
+              question: "What did Boas object to about museums?",
+              options: [
+                "The type of artefacts that were on display",
+                "The fact that certain cultures were not represented",
+                "The fact that some cultures were not considered important.",
+                "The order in which the displays were laid out"
+              ],
+              correctAnswer: [
+                "The order in which the displays were laid out"
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because Boas criticized the evolutionary order of displays that suggested a hierarchy of cultures.
+                ❌ Option A is incorrect because Boas didn’t question the artefacts themselves.
+                ❌ Option B is incorrect because all cultures were represented—just in a biased way.
+                ❌ Option C is incorrect because Boas focused on misrepresentation, not absence.
+              `
+            },
+            {
+              id: 5,
+              question: "What did Boas prove about head shape?",
+              options: [
+                "Intelligence is not linked to head shape and size.",
+                "Injuries to the head can alter its shape and size.",
+                "People in some cultures had larger brains than those in others.",
+                "The shape and size of people’s heads is not predetermined."
+              ],
+              correctAnswer: [
+                "The shape and size of people’s heads is not predetermined."
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because Boas demonstrated that cranial shape and size are influenced by environmental factors like nutrition, not race.
+                ❌ Option A is too general and not the exact point Boas made.
+                ❌ Option B is incorrect because injuries were not part of his study.
+                ❌ Option C is incorrect because Boas refuted such racial claims.
+              `
+            },
+            {
+              id: 6,
+              question: "What did Boas make people realise?",
+              options: [
+                "To study a culture, one can’t be a member of it.",
+                "Anthropology is broad and covers multiple disciplines.",
+                "Cultures can be effectively studied at a distance.",
+                "Many indigenous cultures were being lost to globalization."
+              ],
+              correctAnswer: [
+                "Anthropology is broad and covers multiple disciplines."
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because Boas’s approach included language, evolution, archaeology, and cultural practices—broadening the scope of anthropology.
+                ❌ Option A is incorrect—Boas emphasized immersion and learning the language.
+                ❌ Option C is incorrect as he discouraged distant observation.
+                ❌ Option D is true but not the main realization attributed to his legacy.
+              `
+            }
+          ]
+    },
+    {
+        //https://www.examenglish.com/TOEFL/TOEFL_lecture5.htm
+        id: 13,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/l5roijnmxrjxxdy9od340/question12_lecture.mp3?rlkey=46208hcef248b5ms96zw52jnu&st=6h6j4epw&raw=1",
+        questions: [
+            {
+              id: 1,
+              question: "Which of the following characterise anthropological study before the time of Franz Boas?",
+              options: [
+                "Few people were interested or involved in anthropological study.",
+                "Anthropologists were not expected to support their claims with evidence.",
+                "Anthropology was not studied seriously",
+                "Data was not collected in a systematic and objective way."
+              ],
+              correctAnswer: [
+                "Anthropologists were not expected to support their claims with evidence.",
+                "Data was not collected in a systematic and objective way."
+              ],
+              answer_explanation: `
+                ✔️ Options B and D are correct because early anthropological work was often speculative, biased, and lacked rigorous evidence collection.
+                ❌ Option A is incorrect because there were many adventurers and amateur theorists involved.
+                ❌ Option C is incorrect as some serious work was being done, just without scientific method.
+              `
+            },
+            {
+              id: 2,
+              question: "How did Boas’s early life influence his work in anthropology?",
+              options: [
+                "His religious upbringing meant that he was respectful to people from other backgrounds.",
+                "His fondness for collecting things inspired him to gather artefacts from little-known cultures.",
+                "His liberal upbringing helped him to understand different cultures.",
+                "His scientific studies ensured that he approached experiments systematically."
+              ],
+              correctAnswer: [
+                "His liberal upbringing helped him to understand different cultures.",
+                "His scientific studies ensured that he approached experiments systematically."
+              ],
+              answer_explanation: `
+                ✔️ Options C and D are correct. Boas’s liberal upbringing allowed him to question traditional beliefs, and his scientific background ensured rigorous methodology in anthropology.
+                ❌ Option A is incorrect because religious influence wasn’t a factor.
+                ❌ Option B is too simplistic and not mentioned as a core influence on his anthropological work.
+              `
+            },
+            {
+              id: 3,
+              question: "Why is Charles Darwin mentioned in the talk?",
+              options: [
+                "Darwin’s work in the natural sciences inspired Boas to study the world around him.",
+                "Both Darwin and Boas believed that individuals change according to their situations.",
+                "Darwin and Boas both went on expeditions to study human societies.",
+                "Both Boas and Darwin believed that humans evolved along a fixed route towards civilization."
+              ],
+              correctAnswer: [
+                "Both Darwin and Boas believed that individuals change according to their situations."
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because both Darwin and Boas emphasized adaptation to local environments rather than following a fixed, linear path.
+                ❌ Option A is incorrect because Darwin did not directly inspire Boas’s anthropological focus.
+                ❌ Option C is incorrect as Boas studied societies; Darwin studied natural species.
+                ❌ Option D is incorrect because Boas rejected the fixed evolution theory.
+              `
+            },
+            {
+              id: 4,
+              question: "What did Boas object to about museums?",
+              options: [
+                "The type of artefacts that were on display",
+                "The fact that certain cultures were not represented",
+                "The fact that some cultures were not considered important.",
+                "The order in which the displays were laid out"
+              ],
+              correctAnswer: [
+                "The order in which the displays were laid out"
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because Boas criticized the evolutionary order of displays that suggested a hierarchy of cultures.
+                ❌ Option A is incorrect because Boas didn’t question the artefacts themselves.
+                ❌ Option B is incorrect because all cultures were represented—just in a biased way.
+                ❌ Option C is incorrect because Boas focused on misrepresentation, not absence.
+              `
+            },
+            {
+              id: 5,
+              question: "What did Boas prove about head shape?",
+              options: [
+                "Intelligence is not linked to head shape and size.",
+                "Injuries to the head can alter its shape and size.",
+                "People in some cultures had larger brains than those in others.",
+                "The shape and size of people’s heads is not predetermined."
+              ],
+              correctAnswer: [
+                "The shape and size of people’s heads is not predetermined."
+              ],
+              answer_explanation: `
+                ✔️ Option D is correct because Boas demonstrated that cranial shape and size are influenced by environmental factors like nutrition, not race.
+                ❌ Option A is too general and not the exact point Boas made.
+                ❌ Option B is incorrect because injuries were not part of his study.
+                ❌ Option C is incorrect because Boas refuted such racial claims.
+              `
+            },
+            {
+              id: 6,
+              question: "What did Boas make people realise?",
+              options: [
+                "To study a culture, one can’t be a member of it.",
+                "Anthropology is broad and covers multiple disciplines.",
+                "Cultures can be effectively studied at a distance.",
+                "Many indigenous cultures were being lost to globalization."
+              ],
+              correctAnswer: [
+                "Anthropology is broad and covers multiple disciplines."
+              ],
+              answer_explanation: `
+                ✔️ Option B is correct because Boas’s approach included language, evolution, archaeology, and cultural practices—broadening the scope of anthropology.
+                ❌ Option A is incorrect—Boas emphasized immersion and learning the language.
+                ❌ Option C is incorrect as he discouraged distant observation.
+                ❌ Option D is true but not the main realization attributed to his legacy.
+              `
+            }
+          ]
+    },
 ];

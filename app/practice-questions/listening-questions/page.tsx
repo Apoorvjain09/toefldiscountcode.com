@@ -19,6 +19,7 @@ type ListeningQuestion = {
         id: number;
         question: string;
         options: string[];
+        audio_packet?: string;
         correctAnswer: string[];
         answer_explanation: string;
     }[];
@@ -69,6 +70,7 @@ export default function TOEFLListeningPractice() {
             setIsFirstInitializedOnPageLoad(true);
         }
     }, [isFirstInitializedOnPageLoad]);
+
 
     if (!selectedListeningQuestion) return <p>Loading...</p>;
 
@@ -228,6 +230,17 @@ export default function TOEFLListeningPractice() {
                                         <p className="text-gray-600">
                                             {selectedListeningQuestion.questions[currentQuestionIndex].question}
                                         </p>
+
+                                        {selectedListeningQuestion.questions[currentQuestionIndex].audio_packet && (
+                                            <audio controls autoPlay={!isReviewModeAfterSubmit} className="my-4 w-full rounded-lg border border-gray-300 bg-white p-2 shadow-sm transition-all duration-200 hover:shadow-md focus:ring-2 focus:ring-purple-500">
+                                                <source
+                                                    src={selectedListeningQuestion.questions[currentQuestionIndex].audio_packet}
+                                                    type="audio/mpeg"
+                                                />
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        )}
+
                                         <div className="mt-4 space-y-2">
                                             <RadioGroup className="space-y-2" onValueChange={(value) => { !isReviewModeAfterSubmit && handleAnswerChange(value, selectedListeningQuestion.questions[currentQuestionIndex].correctAnswer.length > 1) }}>
                                                 {selectedListeningQuestion.questions[currentQuestionIndex].options.map((option, index) => {

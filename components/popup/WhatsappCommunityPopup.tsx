@@ -121,7 +121,7 @@ export default function WhatsappCommunityPopup({ onJoinSuccess }: { onJoinSucces
             </AnimatePresence>
 
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="sm:max-w-md md:max-w-lg bg-white dark:bg-gray-900 rounded-xl border-0 shadow-2xl p-0 overflow-hidden">
+                <DialogContent className="w-full max-w-[95%] sm:max-w-md md:max-w-lg max-h-[95%] p-0 overflow-y-auto border-none rounded-2xl">
                     {!hasJoined ? (
                         <>
                             {/* Header with WhatsApp branding */}

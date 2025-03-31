@@ -52,7 +52,7 @@ export function SidebarMobile(props: SidebarMobileProps) {
             </SheetClose>
           </SheetHeader>
           <div className='h-full'>
-            <div className='sm:mt-5 mt-3 flex flex-col w-full gap-1'>
+            <div className='sm:mt-5 mt-3 flex flex-col w-full gap-1 overflow-y-scroll h-[80%]'>
               {props.sidebarItems.links.map((link, idx) => (
                 <Link key={idx} href={link.href}>
                   <SheetClose asChild>

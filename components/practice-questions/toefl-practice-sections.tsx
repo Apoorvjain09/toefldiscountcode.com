@@ -225,7 +225,6 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask, isSubscr
                             )}
                         </Button>
                     </motion.div>
-
                 ) : (
                     <motion.div
                         key={selectedSection}

@@ -194,6 +194,7 @@ export default function TOEFLListeningPractice() {
                                 <CardContent className="p-6">
                                     <div className="rounded-xl bg-gradient-to-r from-gray-50 to-gray-100 p-5 shadow-inner">
                                         <audio
+                                            key={selectedListeningQuestion.audioUrl}
                                             controls
                                             className="w-full rounded-lg border border-gray-300 bg-white p-2 shadow-sm transition-all duration-200 hover:shadow-md focus:ring-2 focus:ring-purple-500"
                                             onEnded={() => {

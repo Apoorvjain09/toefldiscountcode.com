@@ -1472,125 +1472,314 @@ export const listeningQuestions = [
           ]
     },
     {
-        //https://www.examenglish.com/TOEFL/TOEFL_lecture5.htm
+        //https://web.telegram.org/k/#@TOEFLPracticeOnlineListening - listeing_passage1_1 #TPO1
         id: 13,
-        type: "lecture",
-        audioUrl: "https://www.dropbox.com/scl/fi/l5roijnmxrjxxdy9od340/question12_lecture.mp3?rlkey=46208hcef248b5ms96zw52jnu&st=6h6j4epw&raw=1",
+        type: "conversation",
+        audioUrl: "https://www.dropbox.com/scl/fi/19f3toqn3jv2gvyj2zmw3/question13_conversation.mpeg?rlkey=bckna6bxia9owj0f009bwxmou&st=shypylpq&raw=1",
         questions: [
-            {
-              id: 1,
-              question: "Which of the following characterise anthropological study before the time of Franz Boas?",
-              options: [
-                "Few people were interested or involved in anthropological study.",
-                "Anthropologists were not expected to support their claims with evidence.",
-                "Anthropology was not studied seriously",
-                "Data was not collected in a systematic and objective way."
-              ],
-              correctAnswer: [
-                "Anthropologists were not expected to support their claims with evidence.",
-                "Data was not collected in a systematic and objective way."
-              ],
-              answer_explanation: `
-                ✔️ Options B and D are correct because early anthropological work was often speculative, biased, and lacked rigorous evidence collection.
-                ❌ Option A is incorrect because there were many adventurers and amateur theorists involved.
-                ❌ Option C is incorrect as some serious work was being done, just without scientific method.
-              `
-            },
-            {
-              id: 2,
-              question: "How did Boas’s early life influence his work in anthropology?",
-              options: [
-                "His religious upbringing meant that he was respectful to people from other backgrounds.",
-                "His fondness for collecting things inspired him to gather artefacts from little-known cultures.",
-                "His liberal upbringing helped him to understand different cultures.",
-                "His scientific studies ensured that he approached experiments systematically."
-              ],
-              correctAnswer: [
-                "His liberal upbringing helped him to understand different cultures.",
-                "His scientific studies ensured that he approached experiments systematically."
-              ],
-              answer_explanation: `
-                ✔️ Options C and D are correct. Boas’s liberal upbringing allowed him to question traditional beliefs, and his scientific background ensured rigorous methodology in anthropology.
-                ❌ Option A is incorrect because religious influence wasn’t a factor.
-                ❌ Option B is too simplistic and not mentioned as a core influence on his anthropological work.
-              `
-            },
-            {
-              id: 3,
-              question: "Why is Charles Darwin mentioned in the talk?",
-              options: [
-                "Darwin’s work in the natural sciences inspired Boas to study the world around him.",
-                "Both Darwin and Boas believed that individuals change according to their situations.",
-                "Darwin and Boas both went on expeditions to study human societies.",
-                "Both Boas and Darwin believed that humans evolved along a fixed route towards civilization."
-              ],
-              correctAnswer: [
-                "Both Darwin and Boas believed that individuals change according to their situations."
-              ],
-              answer_explanation: `
-                ✔️ Option B is correct because both Darwin and Boas emphasized adaptation to local environments rather than following a fixed, linear path.
-                ❌ Option A is incorrect because Darwin did not directly inspire Boas’s anthropological focus.
-                ❌ Option C is incorrect as Boas studied societies; Darwin studied natural species.
-                ❌ Option D is incorrect because Boas rejected the fixed evolution theory.
-              `
-            },
-            {
-              id: 4,
-              question: "What did Boas object to about museums?",
-              options: [
-                "The type of artefacts that were on display",
-                "The fact that certain cultures were not represented",
-                "The fact that some cultures were not considered important.",
-                "The order in which the displays were laid out"
-              ],
-              correctAnswer: [
-                "The order in which the displays were laid out"
-              ],
-              answer_explanation: `
-                ✔️ Option D is correct because Boas criticized the evolutionary order of displays that suggested a hierarchy of cultures.
-                ❌ Option A is incorrect because Boas didn’t question the artefacts themselves.
-                ❌ Option B is incorrect because all cultures were represented—just in a biased way.
-                ❌ Option C is incorrect because Boas focused on misrepresentation, not absence.
-              `
-            },
-            {
-              id: 5,
-              question: "What did Boas prove about head shape?",
-              options: [
-                "Intelligence is not linked to head shape and size.",
-                "Injuries to the head can alter its shape and size.",
-                "People in some cultures had larger brains than those in others.",
-                "The shape and size of people’s heads is not predetermined."
-              ],
-              correctAnswer: [
-                "The shape and size of people’s heads is not predetermined."
-              ],
-              answer_explanation: `
-                ✔️ Option D is correct because Boas demonstrated that cranial shape and size are influenced by environmental factors like nutrition, not race.
-                ❌ Option A is too general and not the exact point Boas made.
-                ❌ Option B is incorrect because injuries were not part of his study.
-                ❌ Option C is incorrect because Boas refuted such racial claims.
-              `
-            },
-            {
-              id: 6,
-              question: "What did Boas make people realise?",
-              options: [
-                "To study a culture, one can’t be a member of it.",
-                "Anthropology is broad and covers multiple disciplines.",
-                "Cultures can be effectively studied at a distance.",
-                "Many indigenous cultures were being lost to globalization."
-              ],
-              correctAnswer: [
-                "Anthropology is broad and covers multiple disciplines."
-              ],
-              answer_explanation: `
-                ✔️ Option B is correct because Boas’s approach included language, evolution, archaeology, and cultural practices—broadening the scope of anthropology.
-                ❌ Option A is incorrect—Boas emphasized immersion and learning the language.
-                ❌ Option C is incorrect as he discouraged distant observation.
-                ❌ Option D is true but not the main realization attributed to his legacy.
-              `
-            }
-          ]
+          {
+            id: 1,
+            question: "Why does the student go to see the librarian?",
+            options: [
+              "To sign up for a seminar on using electronic sources for research",
+              "To report that a journal is missing from the reference area",
+              "To find out the procedure for checking out journal articles",
+              "To ask about how to look for resources for a class paper"
+            ],
+            correctAnswer: [
+              "To ask about how to look for resources for a class paper"
+            ],
+            answer_explanation: `
+              ✔️ Option D is correct because the student tells the librarian she’s having trouble finding articles for her literature review and doesn’t know where to begin.
+              ❌ Option A is incorrect because there is no seminar mentioned.
+              ❌ Option B is incorrect because no journal is reported missing.
+              ❌ Option C is incorrect because the student isn’t asking about checkout procedures.
+            `
+          },
+          {
+            id: 2,
+            question: "What does the librarian say about the availability of journals and articles in the library?",
+            options: [
+              "They are not easy to find if a professor put them on reserve.",
+              "Most of them are accessible in an electronic format.",
+              "Most of them can be checked out for three weeks.",
+              "Printed versions from the past three years are located in the reference section."
+            ],
+            correctAnswer: [
+              "Most of them are accessible in an electronic format."
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because the librarian explains that most material is now available electronically through the university’s network.
+              ❌ Option A is incorrect because there’s no mention of difficulty finding reserve materials.
+              ❌ Option C is incorrect because journal checkout length isn’t discussed.
+              ❌ Option D is incorrect because the librarian says journals from the last year are in print, not the last three years.
+            `
+          },
+          {
+            id: 3,
+            question: "What does the librarian suggest the student should do to save time?",
+            options: [
+              "Choose an easier research topic",
+              "Concentrate on five journals",
+              "Read the summaries of the articles first",
+              "Install a new program on her home computer"
+            ],
+            correctAnswer: [
+              "Read the summaries of the articles first"
+            ],
+            answer_explanation: `
+              ✔️ Option C is correct because the librarian tells the student to use the abstracts to quickly decide whether an article is worth reading in full.
+              ❌ Option A is incorrect because the librarian says her topic is already well-focused.
+              ❌ Option B is incorrect because no number of journals is suggested.
+              ❌ Option D is incorrect because no additional programs are needed.
+            `
+          },
+          {
+            id: 4,
+            question: "What can be inferred about why the woman decides to use the computer in the library?",
+            options: [
+              "She thinks she might need additional help from the man.",
+              "She does not have a computer at home.",
+              "She has to hand in her assignment by the end of the day.",
+              "She will be meeting a friend in the library later on."
+            ],
+            correctAnswer: [
+              "She thinks she might need additional help from the man."
+            ],
+            answer_explanation: `
+              ✔️ Option A is correct because the student says she’ll try searching while she’s still in the library, “just in case,” implying she might want help from the librarian.
+              ❌ Option B is incorrect because she never says she lacks a home computer.
+              ❌ Option C is incorrect because no deadline is mentioned.
+              ❌ Option D is incorrect because she never mentions meeting anyone.
+            `
+          },
+          {
+            id: 5,
+            question: "Why does the woman say this?",
+            options: [
+              "She had forgotten about the information",
+              "She is surprised she was not aware of the information",
+              "She is annoyed that the information was published only recently",
+              "She is concerned that the librarian gave her incorrect information"
+            ],
+            correctAnswer: [
+              "She is surprised she was not aware of the information"
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because the woman reacts with surprise upon learning that she can access the library's electronic databases from home.
+              ❌ Option A is incorrect because it’s not something she previously knew.
+              ❌ Option C is incorrect because publication timing isn't discussed.
+              ❌ Option D is incorrect because she does not doubt the librarian.
+            `
+          }
+        ]
+    },
+    {
+        //https://web.telegram.org/k/#@TOEFLPracticeOnlineListening - listeing_passage1_2 #TPO1
+        id: 14,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/gqz31bj1nduzrwfqwy2kz/question14_lecture.mpeg?rlkey=nxx1vxty5rw1ibqmisgx7emgh&st=gss6ouq0&raw=1",
+        questions: [
+          {
+            id: 1,
+            question: "What is the purpose of the lecture?",
+            options: [
+              "To explain the difference between two artistic styles",
+              "To describe a new art gallery to the class",
+              "To introduce an artist's work to the class",
+              "To show how artists' styles can evolve over time"
+            ],
+            correctAnswer: [
+              "To introduce an artist's work to the class"
+            ],
+            answer_explanation: `
+              ✔️ Option C is correct because the professor talks about Rose Frantzen’s style, her background, and her work, encouraging students to attend her exhibit.
+              ❌ Option A is incorrect because the styles are discussed only in relation to Frantzen’s art.
+              ❌ Option B is incorrect because the gallery is mentioned but not described in detail.
+              ❌ Option D is incorrect because the focus is on Frantzen’s approach, not a stylistic evolution.
+            `
+          },
+          {
+            id: 2,
+            question: "What does the professor say about Frantzen's painting of a farm scene?",
+            options: [
+              "It resembles a photograph.",
+              "It may be Frantzen's best-known painting.",
+              "It was painted in the Impressionist style.",
+              "It was painted while Frantzen lived abroad."
+            ],
+            correctAnswer: [
+              "It was painted in the Impressionist style."
+            ],
+            answer_explanation: `
+              ✔️ Option C is correct because the professor highlights the painting’s broad brushstrokes, unnatural colors, and everyday scene, which are all features of Impressionism.
+              ❌ Option A is incorrect because the painting is not described as photo-like.
+              ❌ Option B is incorrect because he does not mention its popularity.
+              ❌ Option D is incorrect because it was painted after Frantzen returned to Iowa.
+            `
+          },
+          {
+            id: 3,
+            question: "Why did Frantzen go to the Sales Barn?",
+            options: [
+              "To study human form and movement",
+              "To earn money by painting portraits",
+              "To paint farm animals in an outdoor setting",
+              "To meet people who could model for her paintings"
+            ],
+            correctAnswer: [
+              "To study human form and movement"
+            ],
+            answer_explanation: `
+              ✔️ Option A is correct because the professor says Frantzen observed people’s postures and body movements at the Sales Barn to improve her work.
+              ❌ Option B is incorrect because portrait work was done at art fairs, not the Sales Barn.
+              ❌ Option C is incorrect because there’s no mention of painting animals there.
+              ❌ Option D is incorrect because her focus was on observing, not recruiting models.
+            `
+          },
+          {
+            id: 4,
+            question: "What does the professor imply about the painting of the young woman surrounded by pumpkins?",
+            options: [
+              "It was painted at an art fair.",
+              "It combines Impressionism with Realism.",
+              "It convinced Frantzen that she was a good illustrator.",
+              "It was originally meant to be used in an advertisement."
+            ],
+            correctAnswer: [
+              "It combines Impressionism with Realism."
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because the professor points out the photographic realism of the woman’s face and the broad, colorful brushstrokes in the background—blending Realism and Impressionism.
+              ❌ Option A is incorrect because he doesn’t mention where it was painted.
+              ❌ Option C is incorrect because it wasn’t related to her being an illustrator.
+              ❌ Option D is incorrect because it was not for advertising purposes.
+            `
+          },
+          {
+            id: 5,
+            question: "What does the professor imply when he says this:",
+            audio_packet:"https://www.dropbox.com/scl/fi/r52gbhzb56oq84exayyox/question14_lecture_packet.mp3?rlkey=4og841wtihox42vyok83h6sth&st=y95d8err&raw=1",
+            options: [
+              "The students can understand Frantzen's art without knowing about her life",
+              "The students should pay very close attention to what he is going to say",
+              "Some of his students are already familiar with Frantzen's life story",
+              "Some of his students may not appreciate Frantzen's work"
+            ],
+            correctAnswer: [
+              "The students can understand Frantzen's art without knowing about her life"
+            ],
+            answer_explanation: `
+              ✔️ Option A is correct because the professor states Frantzen is “accessible” and understanding her work doesn’t require knowing her life story, though he shares it anyway.
+              ❌ Option B is incorrect because he is not emphasizing future information.
+              ❌ Option C is incorrect because there’s no suggestion students already know her story.
+              ❌ Option D is incorrect because appreciation isn’t questioned.
+            `
+          }
+        ]
+    },
+    {
+        //https://web.telegram.org/k/#@TOEFLPracticeOnlineListening - listeing_passage1_3 #TPO1 - removed question 3
+        id: 15,
+        type: "lecture",
+        audioUrl: "https://www.dropbox.com/scl/fi/ok0v6dv50up6ryfbln8sm/question15_lecture.mpeg?rlkey=pf7a3adyxbxzrj0o62ymat9hv&st=jhn6qt7b&raw=1",
+        questions: [
+          {
+            id: 1,
+            question: "What does the professor mainly discuss?",
+            options: [
+              "The differences in age among American mountain ranges",
+              "The importance of a technique used for dating geological materials",
+              "The recent discovery of an ancient canyon",
+              "A comparison of various minerals used for dating"
+            ],
+            correctAnswer: [
+              "The importance of a technique used for dating geological materials"
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because the professor focuses on uranium-lead dating, detailing its process, applications, and recent improvements.
+              ❌ Option A is incorrect because comparing mountain range ages is not the focus.
+              ❌ Option C is incorrect because no new canyon was discovered.
+              ❌ Option D is incorrect because only zircon is discussed in depth.
+            `
+          },
+          {
+            id: 2,
+            question: "Before the use of uranium-lead analysis, where did most geologists think the Grand Canyon sandstone came from?",
+            options: [
+              "An ancient lake located in the American Southwest",
+              "A desert that once connected two continents",
+              "Sands carried by a river from the Appalachian Mountains",
+              "A nearby mountain range that had flattened out over time"
+            ],
+            correctAnswer: [
+              "A nearby mountain range that had flattened out over time"
+            ],
+            answer_explanation: `
+              ✔️ Option D is correct because the professor mentions that the conventional belief was that local mountains, which had eroded, were the source of the sandstone.
+              ❌ Option A is incorrect because no lake is discussed.
+              ❌ Option B is incorrect because intercontinental deserts are not mentioned.
+              ❌ Option C is incorrect because the Appalachian theory emerged after uranium-lead dating.
+            `
+          },
+          {
+            id: 3,
+            question: "According to the professor, what change has caused uranium-lead dating to gain popularity recently?",
+            options: [
+              "It can be performed outside a laboratory.",
+              "It can now be done more efficiently.",
+              "It no longer involves radioactive elements.",
+              "It can be used in fields other than geology."
+            ],
+            correctAnswer: [
+              "It can now be done more efficiently."
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because the professor notes that fewer zircon grains need to be analyzed now, improving speed and efficiency.
+              ❌ Option A is incorrect because lab access is not discussed.
+              ❌ Option C is incorrect because radioactive uranium is still part of the process.
+              ❌ Option D is incorrect because the professor only discusses geology.
+            `
+          },
+          {
+            id: 4,
+            question: "Why does the professor talk about the breaking apart of Earth's continents?",
+            options: [
+              "To give another example of how uranium-lead dating might be useful",
+              "To explain how the Grand Canyon was formed",
+              "To demonstrate how difficult uranium-lead dating is",
+              "To disprove a theory about the age of Earth's first mountain ranges"
+            ],
+            correctAnswer: [
+              "To give another example of how uranium-lead dating might be useful"
+            ],
+            answer_explanation: `
+              ✔️ Option A is correct because he mentions that uranium-lead dating could help confirm theories about continental drift.
+              ❌ Option B is incorrect because the Grand Canyon is already explained separately.
+              ❌ Option C is incorrect as the professor emphasizes the improved ease of the method.
+              ❌ Option D is incorrect because no such disproof is mentioned.
+            `
+          },
+          {
+            id: 5,
+            question: "What does the professor imply when he says this:",
+            audio_packet:"https://www.dropbox.com/scl/fi/r1c8en35in12kby59fmy7/question15_lecture_packet.mp3?rlkey=0vef5vjjlcls7dhf6r1wa2hiy&st=79m3kd46&raw=1",
+            options: [
+              "The class is easier than other geology classes",
+              "The class has already studied the information he is discussing",
+              "Some students should take a course in geological dating techniques",
+              "He will discuss the topic later in the class"
+            ],
+            correctAnswer: [
+              "The class has already studied the information he is discussing"
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because when the professor says, “as everyone in this class should know,” he implies the topic has been previously covered.
+              ❌ Option A is incorrect because no comparison to other classes is made.
+              ❌ Option C is incorrect because no recommendation to take another course is given.
+              ❌ Option D is incorrect because he continues the topic immediately.
+            `
+          }
+        ]
     },
 ];

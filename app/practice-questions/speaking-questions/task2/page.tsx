@@ -41,7 +41,7 @@ export default function SpeakingTask1() {
     const mediaRecorderExampleTestingIdlePhase = useRef<MediaRecorder | null>(null);
     const [showMicPromptTestingIdlePhase, setShowMicPromptTestingIdlePhase] = useState(false);
 
-    const [randomQuestion, setRandomQuestion] = useState<{ id: number; question: string; passage: string; Audio: string; } | null>(null);
+    const [randomQuestion, setRandomQuestion] = useState<{ id: number; question: string; passage?: string; Audio: string; } | null>(null);
     const [isInitialized, setIsInitialized] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [currentTaskEvaluatedAndSubmitted, setCurrentTaskEvaluatedAndSubmitted] = useState(false);
@@ -520,9 +520,11 @@ export default function SpeakingTask1() {
                     </CardContent>
                 ) : (
                     <CardContent>
-                        <p className="my-4 p-4 rounded-lg bg-gray-50 shadow-sm">
-                            <span className="font-bold underline italic">Passage</span><br />{randomQuestion?.passage}
-                        </p>
+                        {randomQuestion?.passage && (
+                            <p className="my-4 p-4 rounded-lg bg-gray-50 shadow-sm">
+                                <span className="font-bold underline italic">Passage</span><br />{randomQuestion?.passage}
+                            </p>
+                        )}
                         <Progress
                             value={progress}
                             className="mb-4 transition-[width] duration-500 ease-linear"

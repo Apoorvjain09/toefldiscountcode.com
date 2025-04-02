@@ -67,11 +67,82 @@ export const speakingTask1Questions = [
         Audio: "https://www.dropbox.com/scl/fi/8y2re8gcv65a12dgbbvon/question8.mp3?rlkey=q8g6lpgr8vlep6fxwjjvgoy8a&st=642sgph7&raw=1",
     },
     {
-        // extra - Remove later on
-        // from test4 - speakingQuestions
+        //http://toefltestprep.com/practice-tests/domesticated-mammals-speaking-integrated-practice-questions-with-answer-key
+        //lecture
         id: 9,
-        question: "The student expresses her opinion of the policy for vehicle registration. Report her opinion and explain the reasons that she gives for having that opinion.",
-        passage: `Vehicles parked on campus by students, faculty, or staff must be registered with the Campus Police Department. Parking permits are required for both part-time and full-time students. Permits may be purchased at the Campus Police Department, which is located at the south entrance to the campus or at the Business Office in the Administration Building. The fee per vehicle is $20. Please be advised that you must have a permit for every vehicle that you park in campus lots. Parking enforcement will begin one week after the first day of each semester.`,
-        Audio: "https://www.dropbox.com/scl/fi/lpm3b2rda2h649bwv8va4/T4S1.mp3?rlkey=cowu6mfq3bspsrj8sexu368mg&raw=1",
+        question: "Explain the correlation between the behavior of horses and antelope in herds and their suitability for domestication, as described by the professor.",
+        passage: `
+            For hundreds of years, humans have possessed the ability to domesticate numerous large mammals found in the wild, particularly those that naturally gather in herds. Once subjected to domestication, these mammals serve various purposes such as aiding in agricultural tasks and facilitating transportation. However, the domestication process is not equally successful for all herd mammals.
+            A key determinant of an animal's suitability for domestication lies in its territorial behavior. Non-territorial animals prove to be more amenable to domestication compared to their territorial counterparts, primarily because they can coexist harmoniously with individuals from other herds. Additionally, the presence of a hierarchical social structure within a herd significantly influences the ease of domestication. Animals that exhibit such hierarchical dynamics, where members follow a leader, are more readily domesticated, as humans can effectively assume the role of the leader in guiding and managing them.
+        `,
+        Audio: "https://www.dropbox.com/scl/fi/0f3yz655tae0tw27bxamc/question9.mp4?rlkey=rf2ytnh402uru3vk4vi221947&st=234hyjpo&raw=1",
+    },
+    {
+        //https://toefltestprep.com/practice-tests/city-university-announcement-speaking-integrated-practice-questions
+        //conversastion
+        id: 10,
+        question: "The woman shares her viewpoint on the university president's announcement. State her opinion and explain the reasons she gives for holding that opinion.",
+        passage: `
+            The university has opted to implement an approximately 8% tuition and fee hike for all students in the upcoming semester. While tuition and fees have remained unchanged for the past five years, the decision to increase them is now deemed necessary due to several factors. Firstly, the university has experienced a significant increase in student enrollment over the past five years, necessitating the hiring of additional professors to accommodate the growing student population. Additionally, the institution has made a fresh commitment to research and technology, prompting plans to renovate and enhance laboratory facilities to better cater to the needs of students.       
+        `,
+        Audio: "https://www.dropbox.com/scl/fi/v040xrlcn5ydo05671vl1/question10.mp3?rlkey=odry50poz9iyz0adcwt1r3tmu&st=uq6bgz68&raw=1",
+    },
+    {
+        //https://engoo.mx/app/lessons/toefl-speaking-actual-test-2/xwgSnBKmEeqgkpdoAAmPug "Changes to Be Made in Tomorrow’s Elections"
+        //conversation
+        id: 11,
+        question: "The man expresses his opinion about the article in the school newspaper. Explain his opinion and the reasons he gives for holding that opinion.",
+        passage: `
+            All students should be aware that there are two changes in tomorrow’s student council elections. First of all, there will be no voting in the student library as the librarians have claimed that voting there would be too noisy. As a result, voting will only be permitted in the student center and at the student cafeteria. The second change concerns the student cafeteria. Voting there will end at 8 P.M. rather than at 9 P.M. since the cafeteria regularly closes at eight. Those students wishing to vote between eight and nine must do so at the student center 
+        `,
+        Audio: "https://www.dropbox.com/scl/fi/oyirdigjeugbox9ybp3x3/question11.mpga?rlkey=coe028l7erk734dxk2l3j9z1k&st=m9yxzmgk&raw=1",
+    },
+    {
+        //https://engoo.mx/app/lessons/toefl-speaking-actual-test-2/xwgSnBKmEeqgkpdoAAmPug "Animal Warning Coloration"
+        //lecture
+        id: 12,
+        question: "The professor talks about the poison dart frog and the skunk. Explain how their actions are related to animal warning coloration.",
+        passage: `
+            Prey animals employ a variety of methods, including running and hiding, to avoid being caught by predators. Yet some animals do not hide but instead stand out. This is often accomplished through the method known as warning coloration. Animals utilizing warning coloration have brightly colored fur or skin. They are typically blue, purple, white, orange, red, or yellow in color. Many of these animals have lethal poison or venom. Predators that see brightly colored animals almost always avoid them. That is particularly true if the predators have had prior negative experiences with similar-looking animals.        
+        `,
+        Audio: "https://www.dropbox.com/scl/fi/6es2a36pllqc1hmvscvgs/question12.mpga?rlkey=gkah7ol67lyrjlgrhvzo0v9ib&st=2y3tpc8u&raw=1",
+    },
+    {
+        //https://engoo.mx/app/lessons/toefl-speaking-actual-test-2/xwgSnBKmEeqgkpdoAAmPug "Question 4"
+        //lecture without passage
+        id: 13,
+        question: "Using points and examples from the talk, explain two ways that natural arches are formed.",
+        Audio: "https://www.dropbox.com/scl/fi/issehek8e3xlib6b4nlni/question13.mpga?rlkey=53aaka2t63qj8ise5cj0rwtk9&st=qzr9jk65&raw=1",
+    },
+    {
+        //https://magoosh.com/toefl/toefl-integrated-speaking-practice/ "new scholarhips offers opportunity to study in Rome"
+        //conversation
+        id: 14,
+        question: "The female student expresses her opinion about why she disagrees with the university’s new policy. State her opinion and explain the reasons she gives for holding that opinion.",
+        passage: `
+            The university is pleased to offer an exciting new opportunity for students in the Romance Languages department. The prestigious Buonocore Scholarship allows students to study tuition-free for two semesters in Rome. Students must submit an essay exploring a specific aspect of Italian culture to the selection committee. They must also submit a detailed plan explaining how a year in Italy would provide the opportunity to further research and improve the essay. Please note that students in departments other than Romance Languages are ineligible for this opportunity.
+        `,
+        Audio: "https://www.dropbox.com/scl/fi/febiumyyft4r9gf59mlxf/question14.mp4?rlkey=h8k9pal5tw7v110m0zf7bct87&st=h9mxxmbd&raw=1",
+    },
+    {
+        //hhttp://studyabroadlife.org/toefl-speaking-practice-test "Speaking Practice Test 1"
+        //lecture
+        id: 15,
+        question: "Using the main point and examples from the lecture, describe two types of adaptations that trees have that allow them to survive in the environment.",
+        Audio: "https://www.dropbox.com/scl/fi/pfe3h0jr1nh4ulv3h84di/question15.mp3?rlkey=1lp3o3vqrvlg0bnvm3h6saqct&st=906i3d2g&raw=1",
+    },
+    {
+        //hhttp://studyabroadlife.org/toefl-speaking-practice-test "Speaking Practice Test 2"
+        //lecture
+        id: 16,
+        question: "Using the main point and examples from the lecture, describe two practices that humans can do to help prevent soil erosion and depletion.",
+        Audio: "https://www.dropbox.com/scl/fi/gozjapn9o6ubw9ln95lag/question16.mp3?rlkey=git07g64w7dz3ix5eyi65qrik&st=7tfhhlrn&raw=1",
+    },
+    {
+        //hhttp://studyabroadlife.org/toefl-speaking-practice-test "Speaking Practice Test 3"
+        //lecture
+        id: 17,
+        question: "Using the main point and examples from the lecture, explain the two benefits of domesticating animals.",
+        Audio: "https://www.dropbox.com/scl/fi/n95pnwxgiybrhlu7wpq8e/question17.mp3?rlkey=btp6avatqmc3mrlhnhs9s59rd&st=ihdwih0o&raw=1",
     },
 ];

@@ -45,7 +45,18 @@ export default function ToeflWritingTask1() {
 
     useEffect(() => {
         if (randomQuestion === null) {
-            const selectedQuestion = writingTask1Questions[Math.floor(Math.random() * writingTask1Questions.length)];
+            const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+            const completedIds = progress?.writing?.task1?.completedQuestionIds || [];
+
+            const remaining = writingTask1Questions.filter(q => !completedIds.includes(q.id));
+
+            if (remaining.length === 0) {
+                setAlert({ message: "✅ You’ve completed all Speaking Task 1 questions!", type: "success" });
+                setTimeout(() => setAlert(null), 6000);
+                return;
+            }
+
+            const selectedQuestion = remaining[Math.floor(Math.random() * remaining.length)];
             setRandomQuestion(selectedQuestion);
         }
     }, [randomQuestion]);
@@ -98,8 +109,21 @@ export default function ToeflWritingTask1() {
     }, [showMainTimer, mainTimer]);
 
     const fetchNewQuestionSet = () => {
-        // Select a new random question
-        const newQuestion = writingTask1Questions[Math.floor(Math.random() * writingTask1Questions.length)];
+        const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+        const completedIds = progress?.writing?.task1?.completedQuestionIds || [];
+
+        const remaining = writingTask1Questions.filter(q => !completedIds.includes(q.id));
+
+        console.log(remaining)
+        console.log(remaining.length)
+
+        if (remaining.length === 0) {
+            setAlert({ message: "✅ You’ve completed all Speaking Task 1 questions!", type: "success" });
+            setTimeout(() => setAlert(null), 6000);
+            return;
+        }
+
+        const newQuestion = remaining[Math.floor(Math.random() * remaining.length)];
 
         setRandomQuestion(newQuestion);
         setAnswer(""); // Clear previous answer
@@ -195,6 +219,20 @@ export default function ToeflWritingTask1() {
                 }, 300);
 
                 setCurrentTaskEvaluatedAndSubmitted(true);
+
+                // ✅ Save completed Task 1 writing question to localStorage
+                const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+                if (!progress.writing) progress.writing = {};
+                if (!progress.writing.task1) progress.writing.task1 = { completedQuestionIds: [] };
+
+                const doneSet = new Set(progress.writing.task1.completedQuestionIds);
+                if (randomQuestion) {
+                    doneSet.add(randomQuestion.id);
+                }
+
+                progress.writing.task1.completedQuestionIds = Array.from(doneSet);
+                localStorage.setItem("toefl_progress", JSON.stringify(progress));
+
             } else {
                 setAlert({ message: "Invalid AI response format. Try Again!", type: "error" });
                 console.log(evaluationData)

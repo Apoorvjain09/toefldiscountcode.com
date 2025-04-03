@@ -19,7 +19,7 @@ const defaultPopupState = {
 export default function PopupManager() {
     const [popupState, setPopupState] = useState<typeof defaultPopupState>(defaultPopupState)
     const pathname = usePathname()
-    const skipPopups = pathname.startsWith('/tests') || pathname.startsWith('/practice-questions') || pathname.startsWith('/vocab')
+    const skipPopups = pathname.startsWith('/tests') || pathname.startsWith('/practice-questions') || pathname.startsWith('/vocab') || pathname.startsWith('/toefl-voucher')
 
     useEffect(() => {
         const stored = localStorage.getItem('popup_manager')

@@ -11,21 +11,21 @@ export async function submitVoucherForm(formData: {
   lastName: string
   email: string
   contactNumber: string
-  voucher: string
+  query: string
 }) {
 
   await trackUserMetadata()
 
   const session_id = localStorage.getItem('session_id');
 
-  const { error } = await supabase.from('vouchers').insert([
+  const { error } = await supabase.from('vouchers').upsert([
     {
       session_id,
       first_name: formData.firstName,
       last_name: formData.lastName,
       email: formData.email,
       contact_number: formData.contactNumber,
-      voucher: formData.voucher,
+      query: formData.query,
       submitted_at: new Date().toISOString(),
       remarks: '',
     }
@@ -59,7 +59,7 @@ type voucher = {
   email: string
   contact_number: string
   submitted_at: string
-  voucher: string
+  query: string
   remarks: string
   usersessions?: usersessions
 }
@@ -74,7 +74,7 @@ export async function fetchVoucherSubmissions() {
       email,
       contact_number,
       submitted_at,
-      voucher,
+      query,
       remarks,
       usersessions (
         user_ipaddress,
@@ -106,7 +106,7 @@ export async function fetchVoucherSubmissions() {
       email,
       contact_number,
       submitted_at,
-      voucher,
+      query,
       remarks,
       usersessions = {}
     }) => ({
@@ -116,7 +116,7 @@ export async function fetchVoucherSubmissions() {
       email,
       contactNumber: contact_number,
       submittedAt: submitted_at,
-      voucher,
+      query,
       remarks,
       usersessions: {
         ip: usersessions.user_ipaddress ?? "",

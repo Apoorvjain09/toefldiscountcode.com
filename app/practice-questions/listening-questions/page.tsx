@@ -65,7 +65,19 @@ export default function TOEFLListeningPractice() {
 
     useEffect(() => {
         if (!isFirstInitializedOnPageLoad) {
-            const randomListening = listeningQuestions[Math.floor(Math.random() * listeningQuestions.length)];
+            const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+            const completedIds = progress?.listening?.completedQuestionIds || [];
+
+            const remainingQuestions = listeningQuestions.filter(
+                (q) => !completedIds.includes(q.id)
+            );
+
+            if (remainingQuestions.length === 0) {
+                alert("You’ve completed all available listening questions!");
+                return;
+            }
+
+            const randomListening = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
             setSelectedListeningQuestion(randomListening);
             setIsFirstInitializedOnPageLoad(true);
         }
@@ -151,6 +163,17 @@ export default function TOEFLListeningPractice() {
 
         setResultScoreDetails({ correct: correctCount, total: totalQuestions, percentage: scorePercentage });
         setIsResultScoreDialogOpen(true);
+
+        // Store in localStorage
+        const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+
+        const listeningCompleted = progress?.listening?.completedQuestionIds || [];
+
+        if (!progress.listening) progress.listening = {};
+        const updatedCompleted = new Set([...listeningCompleted, selectedListeningQuestion.id]);
+        progress.listening.completedQuestionIds = Array.from(updatedCompleted);
+
+        localStorage.setItem("toefl_progress", JSON.stringify(progress));
     };
 
     const GenerateNewQuestionAfterReview = () => {
@@ -159,9 +182,20 @@ export default function TOEFLListeningPractice() {
         setUserAnswerInput([]);
         setCurrentQuestionIndex(0);
         setShowQuestionsAfterAudioEnded(false);
-        setCurrentQuestionIndex(0);
 
-        const newListening = listeningQuestions[Math.floor(Math.random() * listeningQuestions.length)];
+        const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+        const completedIds = progress?.listening?.completedQuestionIds || [];
+
+        const remainingQuestions = listeningQuestions.filter(
+            (q) => !completedIds.includes(q.id)
+        );
+
+        if (remainingQuestions.length === 0) {
+            alert("You’ve completed all available questions!");
+            return;
+        }
+
+        const newListening = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
         setSelectedListeningQuestion(newListening);
     };
 

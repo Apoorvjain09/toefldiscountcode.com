@@ -20,7 +20,7 @@ type Student = {
     email: string;
     contactNumber: string;
     submittedAt: string;
-    voucher: string;
+    query: string;
     remarks: string;
     usersessions: {
         ip: string;
@@ -56,7 +56,7 @@ export function VoucherSectionAdminDashboard() {
             (student.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 student.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 student.email.toLowerCase().includes(searchTerm.toLowerCase())) &&
-            (voucherFilter === "all" || student.voucher === voucherFilter)
+            (voucherFilter === "all" || student.query === voucherFilter)
     );
 
     useEffect(() => {
@@ -117,15 +117,6 @@ export function VoucherSectionAdminDashboard() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="max-w-sm"
                 />
-                <Select value={voucherFilter} onValueChange={setVoucherFilter}>
-                    <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Filter by voucher" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="all">All Vouchers</SelectItem>
-                        <SelectItem value="Exam_booking">Exam Booking</SelectItem>
-                    </SelectContent>
-                </Select>
             </div>
 
             <Table>
@@ -146,7 +137,7 @@ export function VoucherSectionAdminDashboard() {
                             <TableCell>{student.email}</TableCell>
                             <TableCell>{student.contactNumber}</TableCell>
                             <TableCell className="text-gray-500">{getTimeAgo(student.submittedAt)}</TableCell>                            <TableCell>
-                                <Badge variant="secondary">{student.voucher}</Badge>
+                                <Badge variant="secondary">{student.query}</Badge>
                             </TableCell>
                             <TableCell>
                                 <div className="flex flex-wrap gap-2">

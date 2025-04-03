@@ -12,6 +12,7 @@ import DiffMatchPatch from "diff-match-patch";
 import Alert from "@/components/ui/AlertNotification"
 
 interface ConversationType {
+    id: number;
     opening_statement: string;
     teacher_statement: string;
     board_statement?: string;
@@ -68,9 +69,21 @@ const Conversation = ({ current_conversation }: { current_conversation: Conversa
 )
 
 const getRandomConversation = () => {
-    const randomIndex = Math.floor(Math.random() * writingTasksQuestions.length);
-    console.log(writingTasksQuestions[randomIndex])
-    return writingTasksQuestions[randomIndex];
+    const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+    const completedIds = progress?.writing?.task2?.completedQuestionIds || [];
+
+    const remaining = writingTasksQuestions.filter(q =>
+        !completedIds.includes(q.id)
+    );
+    console.log(remaining)
+    console.log(remaining.length)
+    if (remaining.length === 0) {
+        alert("✅ You’ve completed all Writing Task 2 questions!");
+        return null;
+    }
+
+    const randomIndex = Math.floor(Math.random() * remaining.length);
+    return remaining[randomIndex];
 };
 
 export default function TOEFLWritingTask2Practice() {
@@ -102,6 +115,9 @@ export default function TOEFLWritingTask2Practice() {
         }
 
         const newConversation = getRandomConversation();
+
+        if (!newConversation) return;
+
         setConversation(newConversation);
         setAnswer(""); // Clear user input
         setWordCount(0);
@@ -188,6 +204,19 @@ export default function TOEFLWritingTask2Practice() {
                 }, 300);
 
                 setCurrentTaskEvaluatedAndSubmitted(true)
+
+                // ✅ Save completed Writing Task 2 question
+                const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+                if (!progress.writing) progress.writing = {};
+                if (!progress.writing.task2) progress.writing.task2 = { completedQuestionIds: [] };
+
+                const doneSet = new Set(progress.writing.task2.completedQuestionIds);
+                if (conversation?.id !== undefined) {
+                    doneSet.add(conversation.id);
+                }
+
+                progress.writing.task2.completedQuestionIds = Array.from(doneSet);
+                localStorage.setItem("toefl_progress", JSON.stringify(progress));
             } else {
                 setAlert({ message: "Invalid AI response format.", type: "error" });
                 setTimeout(() => setAlert(null), 3000);

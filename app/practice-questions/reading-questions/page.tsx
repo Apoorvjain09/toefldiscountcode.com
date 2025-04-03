@@ -111,12 +111,35 @@ export default function ToeflReadingTest() {
         });
 
         setCorrectAnswersCount(correctCount);
+
+
+        // ✅ Update localStorage with completed passage ID
+        const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+        if (!progress.reading) { progress.reading = { completedQuestionIds: [] }; }
+
+        const completedSet = new Set(progress.reading.completedQuestionIds || []);
+        completedSet.add(currentPassage.id);
+
+        progress.reading.completedQuestionIds = Array.from(completedSet);
+        localStorage.setItem("toefl_progress", JSON.stringify(progress));
     };
 
     const loadNextPassage = () => {
         if (quizData.passages.length > 0) {
-            const randomIndex = Math.floor(Math.random() * quizData.passages.length);
-            const selectedPassage = quizData.passages[randomIndex];
+            const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+            const completedIds = progress?.reading?.completedQuestionIds || [];
+
+            const remainingPassages = quizData.passages.filter(
+                (p) => !completedIds.includes(p.id)
+            );
+
+            if (remainingPassages.length === 0) {
+                alert("You’ve completed all available reading passages!");
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingPassages.length);
+            const selectedPassage = remainingPassages[randomIndex];
 
             setCurrentPassage(selectedPassage);
             setCurrentQuestionIndex(0);
@@ -146,8 +169,20 @@ export default function ToeflReadingTest() {
 
     useEffect(() => {
         if (quizData.passages.length > 0) {
-            const randomIndex = Math.floor(Math.random() * quizData.passages.length);
-            const selectedPassage = quizData.passages[randomIndex];
+            const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+            const completedIds = progress?.reading?.completedQuestionIds || [];
+
+            const remainingPassages = quizData.passages.filter(
+                (p) => !completedIds.includes(p.id)
+            );
+
+            if (remainingPassages.length === 0) {
+                alert("You’ve completed all available reading passages!");
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * remainingPassages.length);
+            const selectedPassage = remainingPassages[randomIndex];
 
             setCurrentPassage(selectedPassage);
             setCurrentQuestionIndex(0); // Reset question index when new passage is loaded

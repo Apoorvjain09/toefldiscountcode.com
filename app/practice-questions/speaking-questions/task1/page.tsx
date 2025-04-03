@@ -116,8 +116,21 @@ export default function SpeakingTask1() {
 
     useEffect(() => {
         if (!isInitialized) {
-            const newQuestion = speakingTask1Questions[Math.floor(Math.random() * speakingTask1Questions.length)];
-            setRandomQuestion(newQuestion.question);
+            const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+            const completedQuestions = progress?.speaking?.task1?.completedQuestionIds || [];
+
+            const remainingQuestions = speakingTask1Questions.filter(
+                (q) => !completedQuestions.includes(q.id)
+            );
+
+            if (remainingQuestions.length === 0) {
+                setAlert({ message: "✅ You’ve completed all Speaking Task 1 questions!", type: "success" });
+                setTimeout(() => setAlert(null), 6000);
+                return;
+            }
+
+            const random = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
+            setRandomQuestion(random.question);
             setIsInitialized(true);
         }
     }, [isInitialized]);
@@ -198,7 +211,6 @@ export default function SpeakingTask1() {
                 if (newTranscript.trim()) {
                     setTranscribedTextSpeakingPhase((prevTranscript) => prevTranscript + " " + newTranscript.trim()); // Append new words
                 }
-                console.log("Recognized speech", transcribedTextSpeakingPhase)
             };
 
             mediaRecorderRef.current.ondataavailable = (e) => chunks.push(e.data);
@@ -253,10 +265,10 @@ export default function SpeakingTask1() {
 
                     Return only the following JSON format:
                     {
-                      "score": 0-5, // TOEFL speaking score (integer)
+                      "score": 0-5, // TOEFL speaking score (integer),
                       "tips": ["Tip 1", "Tip 2", "Tip 3"], // Actionable tips for improvement
-                      "better_ans": "Rephrased version of User's Answer" // AI-generated approx 150 word response
-                      "better_ans2": "Second Rephrased version of User's Answer" // AI-generated approx 150 word response
+                      "better_ans": "150 word reponse similar to user's answer",
+                      "better_ans2": "second 150 word answer"
                     }
                                     
                     Strictly follow the JSON format with no extra explanations.
@@ -291,6 +303,18 @@ export default function SpeakingTask1() {
                 }, 300);
 
                 setCurrentTaskEvaluatedAndSubmitted(true);
+
+                // ✅ Save completed question to localStorage
+                const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+                if (!progress.speaking) progress.speaking = {};
+                if (!progress.speaking.task1) progress.speaking.task1 = { completedQuestionIds: [] };
+
+                const doneSet = new Set(progress.speaking.task1.completedQuestionIds);
+                const completedQ = speakingTask1Questions.find(q => q.question === randomQuestion);
+                if (completedQ) doneSet.add(completedQ.id);
+
+                progress.speaking.task1.completedQuestionIds = Array.from(doneSet);
+                localStorage.setItem("toefl_progress", JSON.stringify(progress));
             } else {
                 setAlert({ message: "Invalid AI response format. Try Again!", type: "error" });
                 console.log(evaluationData)
@@ -301,7 +325,7 @@ export default function SpeakingTask1() {
             setAlert({ message: "❌ Something went wrong.", type: "error" });
             setTimeout(() => setAlert(null), 3000);
         } finally {
-            setIsSubmitting(false); // Stop loading animation
+            setIsSubmitting(false);
         }
     }
 
@@ -331,8 +355,23 @@ export default function SpeakingTask1() {
     };
 
     const GenerateNewQuestion = () => {
+        const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+        const completedQuestions = progress?.speaking?.task1?.completedQuestionIds || [];
 
-        const newQuestion = speakingTask1Questions[Math.floor(Math.random() * speakingTask1Questions.length)];
+        const remainingQuestions = speakingTask1Questions.filter(
+            (q) => !completedQuestions.includes(q.id)
+        );
+
+        if (remainingQuestions.length === 0) {
+            setAlert({ message: "✅ You’ve completed all Speaking Task 1 questions!", type: "success" });
+            setTimeout(() => setAlert(null), 3000);
+            return;
+        }
+
+        console.log(remainingQuestions);
+        console.log(remainingQuestions.length);
+
+        const newQuestion = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
 
         setRandomQuestion(newQuestion.question);
         setStage("idle");
@@ -341,7 +380,6 @@ export default function SpeakingTask1() {
         setEvaluation(null);
         setTranscribedTextSpeakingPhase("");
         setCurrentTaskEvaluatedAndSubmitted(false);
-
         setCurrentQuestionDoneGenerateNewQuestion(true)
     };
 

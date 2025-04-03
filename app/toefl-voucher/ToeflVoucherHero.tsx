@@ -13,8 +13,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { Input } from '@/components/ui/input'
-import { db } from "@/firebase";
-import { collection, addDoc } from "firebase/firestore";
 import Link from 'next/link'
 import { submitVoucherForm } from '@/lib/supabaseActions'
 
@@ -24,9 +22,7 @@ const formSchema = z.object({
     lastName: z.string().min(2, 'Last name must be at least 2 characters'),
     email: z.string().email('Invalid email address'),
     contactNumber: z.string().regex(/^\d{10}$/, 'Contact number must be 10 digits'),
-    voucher: z.enum(['Voucher_Purchase', 'Exam_booking'], {
-        required_error: 'Please select a voucher option',
-    }),
+    query: z.string()
 })
 
 interface HeroProps {
@@ -46,7 +42,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
             lastName: '',
             email: '',
             contactNumber: '',
-            voucher: undefined,
+            query: '',
         },
     })
 
@@ -62,15 +58,15 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
         }
     }
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            if (!isSubmitted) {
-                setOpenModal(true);
-            }
-        }, 10000);
+    // useEffect(() => {
+    //     const timeout = setTimeout(() => {
+    //         if (!isSubmitted) {
+    //             setOpenModal(true);
+    //         }
+    //     }, 10000);
 
-        return () => clearTimeout(timeout);
-    }, [isSubmitted]);
+    //     return () => clearTimeout(timeout);
+    // }, [isSubmitted]);
 
     useEffect(() => {
         if (openModal) {
@@ -103,17 +99,20 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         {[
-                            { amount: 16900 - Number(voucher.replace(/,/g, '')), type: 'Voucher' },
-                            { amount: 16900 - Number(booking.replace(/,/g, '')), type: 'Exam Booking' },
                             { amount: 16900 - Number(discount.replace(/,/g, '')), type: 'Discount Code' },
+                            { amount: 16900 - Number(voucher.replace(/,/g, '')), type: 'Voucher' },
+                            // { amount: 16900 - Number(booking.replace(/,/g, '')), type: 'Exam Booking' },
                         ].map((offer, index) => (
                             <motion.div
                                 key={offer.type}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: index * 0.2 }}
-                                className="flex items-center space-x-4 rounded-lg border p-4 transition-colors hover:bg-accent"
-                            >
+                                className="flex items-center space-x-4 rounded-lg border p-4 transition-colors hover:bg-accent cursor-pointer"
+                                onClick={() => {
+                                    const target = document.getElementById('pricing-section');
+                                    target?.scrollIntoView({ behavior: 'smooth' });
+                                }}                            >
                                 <div className="rounded-full bg-purple-100 p-2.5 dark:bg-purple-900">
                                     <GraduationCap className="h-5 w-5 text-purple-600 dark:text-purple-300" />
                                 </div>
@@ -127,6 +126,37 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                                 </div>
                             </motion.div>
                         ))}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.6 }}
+                            onClick={() => {
+                                const target = document.getElementById('reliability-section')
+                                if (target) {
+                                    const topOffset = target.getBoundingClientRect().top + window.scrollY - 100 // adjust -100 as needed
+                                    window.scrollTo({ top: topOffset, behavior: 'smooth' })
+                                }
+                            }}
+                        >
+                            <Card className="group transition-shadow hover:shadow-lg border-green-200 dark:border-green-800 cursor-pointer">
+                                <CardHeader className="flex flex-row items-center space-x-4 p-4">
+                                    <div className="rounded-full bg-green-100 dark:bg-green-900 p-2.5 transition-transform duration-300 group-hover:scale-105">
+                                        <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-300" />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <p className="text-lg font-semibold">Check Reliability</p>
+                                        <p className="text-sm text-muted-foreground">
+                                            Verified by 1,000+ students who booked TOEFL at the lowest price.
+                                        </p>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="text-xs text-green-700 dark:text-green-300 italic">
+                                        Trusted by top scorers across India.
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     </div>
 
                     <div className="relative overflow-hidden rounded-2xl">
@@ -256,7 +286,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                                     />
                                     <FormField
                                         control={form.control}
-                                        name="voucher"
+                                        name="query"
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormLabel>Select your voucher</FormLabel>

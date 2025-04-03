@@ -131,8 +131,21 @@ export default function SpeakingTask1() {
 
     useEffect(() => {
         if (!isInitialized) {
-            const newQuestion = speakingTask1Questions[Math.floor(Math.random() * speakingTask1Questions.length)];
-            setRandomQuestion(newQuestion);
+            const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+            const completedIds = progress?.speaking?.task2?.completedQuestionIds || [];
+
+            const remaining = speakingTask1Questions.filter(
+                (q) => !completedIds.includes(q.id)
+            );
+
+            if (remaining.length === 0) {
+                setAlert({ message: "✅ You’ve completed all Speaking Task 2 questions!", type: "success" });
+                setTimeout(() => setAlert(null), 3000);
+                return;
+            }
+
+            const random = remaining[Math.floor(Math.random() * remaining.length)];
+            setRandomQuestion(random);
             setIsInitialized(true);
         }
     }, [isInitialized]);
@@ -152,7 +165,7 @@ export default function SpeakingTask1() {
 
         if (stage === "prep" || stage === "speaking") {
             let start = Date.now();
-            let totalTime = stage === "prep" ? PREP_TIME : SPEAK_TIME;
+            let totalTime = stage === "prep" ? (randomQuestion?.passage ? PREP_TIME : 5) : SPEAK_TIME;
 
             const updateProgress = () => {
                 const elapsedTime = (Date.now() - start) / 1000; // Convert ms to seconds
@@ -278,10 +291,10 @@ export default function SpeakingTask1() {
 
                     Return only the following JSON format:
                     {
-                      "score": 0-5, // TOEFL speaking score (integer)
+                      "score": 0-5, // TOEFL speaking score (integer),
                       "tips": ["Tip 1", "Tip 2", "Tip 3"], // Actionable tips for improvement
-                      "better_ans": "Rephrased version of User's Answer" // AI-generated approx 150 word response
-                      "better_ans2": "Second Rephrased version of User's Answer" // AI-generated approx 150 word response
+                      "better_ans": "150 word reponse similar to user's answer",
+                      "better_ans2": "second 150 word answer"
                     }
                                     
                     Strictly follow the JSON format with no extra explanations.
@@ -291,7 +304,7 @@ export default function SpeakingTask1() {
                     `
                 }),
             });
-            console.log(randomQuestion)
+            // console.log(randomQuestion)
             console.log(transcribedTextSpeakingPhase)
             const data = await res.json();
 
@@ -316,6 +329,19 @@ export default function SpeakingTask1() {
                 }, 300);
 
                 setCurrentTaskEvaluatedAndSubmitted(true);
+
+                // ✅ Save completed Task 2 question to localStorage
+                const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+                if (!progress.speaking) progress.speaking = {};
+                if (!progress.speaking.task2) progress.speaking.task2 = { completedQuestionIds: [] };
+
+                const doneSet = new Set(progress.speaking.task2.completedQuestionIds);
+                if (randomQuestion) {
+                    doneSet.add(randomQuestion.id);
+                }
+
+                progress.speaking.task2.completedQuestionIds = Array.from(doneSet);
+                localStorage.setItem("toefl_progress", JSON.stringify(progress));
             } else {
                 setAlert({ message: "Invalid AI response format. Try Again!", type: "error" });
                 console.log(evaluationData)
@@ -356,8 +382,23 @@ export default function SpeakingTask1() {
     };
 
     const GenerateNewQuestion = () => {
+        const progress = JSON.parse(localStorage.getItem("toefl_progress") || "{}");
+        const completedIds = progress?.speaking?.task2?.completedQuestionIds || [];
 
-        const newQuestion = speakingTask1Questions[Math.floor(Math.random() * speakingTask1Questions.length)];
+        const remaining = speakingTask1Questions.filter(
+            (q) => !completedIds.includes(q.id)
+        );
+
+        if (remaining.length === 0) {
+            setAlert({ message: "✅ You’ve completed all Speaking Task 2 questions!", type: "success" });
+            setTimeout(() => setAlert(null), 7000);
+            return;
+        }
+
+        console.log(remaining)
+        console.log(remaining.length)
+
+        const newQuestion = remaining[Math.floor(Math.random() * remaining.length)];
 
         setRandomQuestion(newQuestion);
         setStage("idle");
@@ -520,9 +561,13 @@ export default function SpeakingTask1() {
                     </CardContent>
                 ) : (
                     <CardContent>
-                        {randomQuestion?.passage && (
+                        {randomQuestion?.passage ? (
                             <p className="my-4 p-4 rounded-lg bg-gray-50 shadow-sm">
                                 <span className="font-bold underline italic">Passage</span><br />{randomQuestion?.passage}
+                            </p>
+                        ) : (
+                            <p className="my-4 p-4 rounded-lg bg-gray-50 shadow-sm text-center">
+                                <span className="font-bold underline italic">Integrated Speaking Question But Without Passage</span><br />
                             </p>
                         )}
                         <Progress

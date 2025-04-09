@@ -240,13 +240,12 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
                         <TabsContent value="video" className="pt-4">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Student Success Stories</CardTitle>
-                                    <CardDescription>Watch testimonials from our successful students</CardDescription>
+                                    <CardDescription>MJ Study Abroad is an authorized ETS agent with ETS Agent ID IND3205101, ensuring a 100% safe and authentic purchase.</CardDescription>
                                 </CardHeader>
                                 <CardContent>
                                     <div className="aspect-video bg-muted rounded-md overflow-hidden">
                                         <video className="w-full h-full object-cover" autoPlay controls poster="/placeholder.svg?height=400&width=600">
-                                            <source src="https://www.dropbox.com/scl/fi/gc420y3yfeopot1dv6fad/Check-Reliability-TOEFLgoglobal.mp4?rlkey=is14d9l8vcg0ok5cngx106nn5&st=pyntg0um&raw=1" type="video/mp4" />
+                                            <source src="https://www.dropbox.com/scl/fi/l2z0uqtk4o9wyjftg6qam/Check-Reliability-Final.mp4?rlkey=g4pq3nmdlb69mlft1rhxncocf&st=tz6xnwtq&raw=1" type="video/mp4" />
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>

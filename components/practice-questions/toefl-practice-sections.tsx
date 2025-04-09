@@ -2,19 +2,17 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
+import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card"
 import { BookOpen, Headphones, Loader2, Mic, Pencil, X } from "lucide-react"
 import { Separator } from "@radix-ui/react-separator"
 import { useMediaQuery } from "usehooks-ts"
 import { SignIn, useUser } from "@clerk/nextjs"
-import { useRouter, useSearchParams } from "next/navigation"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Check, Zap, Shield, Clock, HelpCircle } from "lucide-react"
-import PaymentButton from "@/app/payment/RazorPayButton"
+import { useRouter } from "next/navigation"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 import Alert from "../ui/AlertNotification"
-import Link from "next/link"
+import MainPayentPopup from "../payment/MainPaymentPopup"
 
 const sections = [
     {
@@ -272,70 +270,10 @@ function ButtonGroup({ selectedSection, showDiffrentButtonsForEachTask, isSubscr
                 </Dialog>
             )}
 
-            <Dialog open={showPricingModal} onOpenChange={setShowPricingModal}>
-                <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                        <DialogTitle>Pro Plan</DialogTitle>
-                        <DialogDescription>Unlock premium features and take your experience to the next level.</DialogDescription>
-                    </DialogHeader>
-                    <Card className="w-full">
-                        <CardHeader>
-                            <CardTitle className="flex items-center justify-between">
-                                <span>₹520 / month</span>
-                                {/* <span>$5.99 / month</span> */}
-                                <Zap className="w-5 h-5 text-yellow-500" />
-                            </CardTitle>
-                            <CardDescription>Billed annually or ₹520 month-to-month</CardDescription>
-                        </CardHeader>
-                        <CardContent className="grid gap-4">
-                            <div className="flex items-center space-x-2">
-                                <Check className="w-4 h-4 text-green-500" />
-                                <span>Full access to TOEFL practice tests</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <Check className="w-4 h-4 text-green-500" />
-                                <span>Instant evaluation for speaking and writing sections</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <Check className="w-4 h-4 text-green-500" />
-                                <span>Extensive AI-graded TOEFL practice questions</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <Check className="w-4 h-4 text-green-500" />
-                                <span>Detailed performance analytics & feedback</span>
-                            </div>
-                        </CardContent>
-                        <CardFooter className="flex flex-col space-y-4">
-                            {/* <Button className="w-full" onClick={() => setShowPricingModal(false)}>
-                                Upgrade to Pro
-                            </Button> */}
-                            <div onClick={() => setShowPricingModal(false)}>
-                                <PaymentButton id="pl_OYfRwibtIHC3Nx" />
-                            </div>
-                            <div className="flex justify-center space-x-4 text-sm text-gray-500">
-                                <div className="flex items-center">
-                                    <Shield className="w-4 h-4 mr-1" />
-                                    Secure payment
-                                </div>
-                                <div className="flex items-center">
-                                    <Clock className="w-4 h-4 mr-1" />
-                                    Cancel anytime
-                                </div>
-                            </div>
-                        </CardFooter>
-                    </Card>
-                    <DialogFooter className="sm:justify-start">
-                        <Link
-                            href="https://wa.me/918802880181"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center text-sm text-gray-500 hover:text-gray-800 cursor-pointer">
-                            <HelpCircle className="w-4 h-4 mr-1" />
-                            Need help? Contact our support team
-                        </Link>
-                    </DialogFooter>
-                </DialogContent>
-            </Dialog>
+            <MainPayentPopup
+                showPricingModal={showPricingModal}
+                setShowPricingModal={setShowPricingModal}
+            />
         </>
 
     )

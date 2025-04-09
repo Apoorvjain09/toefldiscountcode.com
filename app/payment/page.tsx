@@ -1,6 +1,13 @@
-// import { useUser } from '@clerk/nextjs';
+"use client"
+
+import MainPayentPopup from "@/components/payment/MainPaymentPopup";
+import PaypalPaymentButton from "@/components/payment/paypal/paypal-button";
+import { Head } from "next/document";
+import { useState } from "react";
 
 export default function Payment() {
+  const [showPricingModal, setShowPricingModal] = useState(false)
+
   const SvgTick = () => {
     return (
       <svg
@@ -83,9 +90,10 @@ export default function Payment() {
             </ul>
 
             <a
-              href="https://rzp.io/rzp/Daf27InL"
-              target="_blank"
+              // href="https://rzp.io/rzp/Daf27InL"
+              // target="_blank"
               className="mt-8 block rounded-full border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
+              onClick={() => { setShowPricingModal(true) }}
             >
               Get Started
             </a>
@@ -128,7 +136,7 @@ export default function Payment() {
             </ul>
 
             <a
-              href="/"
+              // href="/"
               className="mt-8 block rounded-full border border-indigo-600 bg-white px-12 py-3 text-center text-sm font-medium text-indigo-600 hover:ring-1 hover:ring-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
             >
               Get Started
@@ -136,6 +144,11 @@ export default function Payment() {
           </div>
         </div>
       </div>
+
+      <MainPayentPopup
+        showPricingModal={showPricingModal}
+        setShowPricingModal={setShowPricingModal}
+      />
     </div>
   );
 }

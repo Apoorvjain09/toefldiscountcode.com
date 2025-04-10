@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+"use client"
+
 import { GraduationCap, Copy, CheckCircle, ExternalLink, Book } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -80,20 +81,13 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 p-4 md:p-8 lg:p-12">
             <Card className="mx-auto max-w-5xl overflow-hidden">
-                <CardHeader className="space-y-4 p-6 md:p-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-center"
-                    >
-                        <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                            MJ Study Abroad × ETS Partnership
-                        </div>
-                        <h1 className="mt-2 text-muted-foreground">
-                            Exclusive TOEFL exam discounts for students
-                        </h1>
-                    </motion.div>
+                <CardHeader className="space-y-4 p-6 md:p-8 text-center">
+                    <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        MJ Study Abroad × ETS Partnership
+                    </div>
+                    <h1 className="mt-2 text-muted-foreground">
+                        Exclusive TOEFL exam discounts for students
+                    </h1>
                 </CardHeader>
 
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
@@ -103,11 +97,8 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                             { amount: 16900 - Number(voucher.replace(/,/g, '')), type: 'Voucher' },
                             // { amount: 16900 - Number(booking.replace(/,/g, '')), type: 'Exam Booking' },
                         ].map((offer, index) => (
-                            <motion.div
+                            <div
                                 key={offer.type}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: index * 0.2 }}
                                 className="flex items-center space-x-4 rounded-lg border p-4 transition-colors hover:bg-accent cursor-pointer"
                                 onClick={() => {
                                     const target = document.getElementById('pricing-section');
@@ -124,19 +115,15 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                                         </Badge>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6 }}
-                            onClick={() => {
-                                const target = document.getElementById('reliability-section')
-                                if (target) {
-                                    const topOffset = target.getBoundingClientRect().top + window.scrollY - 100 // adjust -100 as needed
-                                    window.scrollTo({ top: topOffset, behavior: 'smooth' })
-                                }
-                            }}
+                        <div onClick={() => {
+                            const target = document.getElementById('reliability-section')
+                            if (target) {
+                                const topOffset = target.getBoundingClientRect().top + window.scrollY - 100 // adjust -100 as needed
+                                window.scrollTo({ top: topOffset, behavior: 'smooth' })
+                            }
+                        }}
                         >
                             <Card className="group transition-shadow hover:shadow-lg border-green-200 dark:border-green-800 cursor-pointer">
                                 <CardHeader className="flex flex-row items-center space-x-4 p-4">
@@ -156,7 +143,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                                     </div>
                                 </CardContent>
                             </Card>
-                        </motion.div>
+                        </div>
                     </div>
 
                     <div className="relative overflow-hidden rounded-2xl">
@@ -167,6 +154,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                             src="/assets/hero.png"
                             alt="Student studying for TOEFL"
                             className="h-full w-full object-cover"
+                            priority
                         />
                     </div>
                 </CardContent>
@@ -194,12 +182,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
             <Dialog open={openModal} onOpenChange={setOpenModal}>
                 <DialogContent className="sm:max-w-[425px]">
                     {isSubmitted ? (
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="flex flex-col items-center justify-center py-12 px-6 text-center bg-white rounded-lg shadow-lg"
-                        >
+                        <div className="flex flex-col items-center justify-center py-12 px-6 text-center bg-white rounded-lg shadow-lg">
                             <CheckCircle className="w-20 h-20 text-green-500 mb-6" />
                             <DialogTitle className="text-3xl font-semibold text-gray-900 mb-2">
                                 Thank You! 🎉
@@ -221,7 +204,7 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                             <p className="mt-6 text-sm text-gray-500">
                                 Need help? <Link href="https://api.whatsapp.com/send/?phone=918802880181" className="text-blue-500 hover:underline">Contact us</Link>
                             </p>
-                        </motion.div>
+                        </div>
                     ) : (
                         <>
                             <DialogHeader>

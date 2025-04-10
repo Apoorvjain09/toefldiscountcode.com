@@ -1,9 +1,6 @@
-'use client';
 
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 export default function AbToeflVoucheWhatIsToefloutToeflIBT() {
     return (

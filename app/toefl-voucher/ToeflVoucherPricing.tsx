@@ -1,10 +1,12 @@
+"use client"
+
 import React, { useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { BookOpen, Info, Mail, Calendar, Video, MailIcon, CheckCircle, Star, ExternalLink, Book } from 'lucide-react'
+import { BookOpen, Calendar, Video, MailIcon, CheckCircle, Star, ExternalLink, Book } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 import {
     Dialog,
@@ -12,7 +14,6 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
@@ -20,7 +21,6 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from 'next/link'
 import { submitVoucherForm } from '@/lib/supabaseActions'
-import { motion } from 'framer-motion'
 
 interface HeroProps {
     voucher: string;
@@ -340,12 +340,7 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
 
                         <TabsContent value="call" className="pt-4">
                             {isFormSubmitted ? (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                    className="flex flex-col items-center justify-cente p-6 text-center bg-white rounded-lg shadow-lg"
-                                >
+                                <div className="flex flex-col items-center justify-cente p-6 text-center bg-white rounded-lg shadow-lg" >
                                     <CheckCircle className="w-20 h-20 text-green-500 mb-6" />
                                     <DialogTitle className="text-3xl font-semibold text-gray-900 mb-2">
                                         Thank You! 🎉
@@ -367,7 +362,7 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
                                     <p className="mt-6 text-sm text-gray-500">
                                         Need help? <Link href="https://api.whatsapp.com/send/?phone=918802880181" className="text-blue-500 hover:underline">Contact us</Link>
                                     </p>
-                                </motion.div>
+                                </div>
                             ) : (
                                 <form className="space-y-4" onSubmit={handleSubmit}>
                                     <Card>

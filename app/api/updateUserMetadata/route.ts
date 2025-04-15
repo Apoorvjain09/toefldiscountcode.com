@@ -21,7 +21,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Missing one or more fields' }, { status: 400 });
     }
 
-    await clerkClient.users.updateUserMetadata(userId, {
+    const clerk = await clerkClient();
+    await clerk.users.updateUserMetadata(userId, {
       publicMetadata: {
         location,
         bookedExam,

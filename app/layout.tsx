@@ -1,11 +1,10 @@
-"use client"
+// export const dynamic = 'force-static'
+
 import "./globals.css";
 import Sidebar from "@/components/sidebar/sidebar";
 import { ClerkProvider } from "@clerk/nextjs";
 import 'regenerator-runtime/runtime';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
-import { useEffect } from 'react'
-import { trackUserMetadata } from '@/lib/supabaseActions'
 import ClerkHandleLogInComponent from "@/components/clerk-login/clerkHandleLogInComponent";
 import PopupManager from "@/components/popup/popup-manager";
 

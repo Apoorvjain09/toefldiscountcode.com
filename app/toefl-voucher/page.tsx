@@ -10,6 +10,7 @@ import ToeflVoucherTable from "./ToeflVoucherTable";
 import ToeflVoucherExamBooking from "./ToeflVoucherExamBooking";
 import DiscountCodeExplanation from "./DiscountCodeExplanation";
 import VoucherPurchaseExplanation from "./VoucherPurchaseExplanation";
+import ToeflVoucherImageGallery from "./ToeflVoucherImageGallery";
 
 
 const Page = () => {
@@ -20,6 +21,7 @@ const Page = () => {
 
   return (
     <div className="">
+      <ToeflVoucherImageGallery />
       <ToeflVoucherHero voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
       <TOEFLPricing voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
       <ToeflVoucherWhyUS />

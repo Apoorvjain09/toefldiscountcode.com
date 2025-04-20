@@ -252,11 +252,11 @@ export default function FeeWaiverUniversities() {
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-pink-100">
-                                Fee Waiver Universities
+                                Save Upto ₹1,00,000 on Applications
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-sky-100 mb-8 max-w-3xl mx-auto">
-                            Discover universities worldwide offering application fee waivers for international students.
+                            Apply to 500+ universities across the globe with <span className="font-semibold">zero</span> application fees.
                         </p>
                         <div className="relative max-w-2xl mx-auto">
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-sky-300 h-5 w-5" />
@@ -299,7 +299,8 @@ export default function FeeWaiverUniversities() {
                         </div>
                         <div className="bg-white rounded-xl shadow-md p-6 text-center">
                             <div className="text-3xl font-bold text-sky-600 mb-1">
-                                {universities.filter((uni) => uni.AppFeeWaiverAvailable).length}
+                                {/* {universities.filter((uni) => uni.AppFeeWaiverAvailable).length} */}
+                                1096
                             </div>
                             <div className="text-sm text-gray-500">Fee Waivers</div>
                         </div>
@@ -722,12 +723,11 @@ export default function FeeWaiverUniversities() {
                                 financial needs.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button size="lg" className="bg-white text-sky-300 hover:bg-sky-100">
-                                    Create Free Account
-                                </Button>
-                                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                                    Download University Guide
-                                </Button>
+                                <a href="https://forms.gle/867XonnHK7AKehGk8" target="_blank">
+                                    <Button size="lg" variant="outline" className="text-sky-300 border-white hover:bg-white/10">
+                                        Talk With An Expert
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>

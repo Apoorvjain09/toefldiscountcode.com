@@ -758,9 +758,9 @@ export default function TutorListing() {
                                         <div className="text-sm text-muted-foreground">50-min lesson</div>
                                     </div>
                                     <Button onClick={() => setOpen(true)} className="w-full" size="lg">Book trial lesson</Button>
-                                    <Button variant="outline" className="w-full">
+                                    <Button onClick={() => (window.location.href = `/toefl-tutor/teacher/${tutor.id}`)} variant="outline" className="w-full">
                                         <MessageCircle className="mr-2 h-4 w-4" />
-                                        Send message
+                                        Teacher Profile
                                     </Button>
                                 </CardFooter>
                                 <BookLessonModal
@@ -775,7 +775,7 @@ export default function TutorListing() {
                 <Card className="flex flex-col md:flex-row">
                     <div className="md:w-1/4 p-6">
                         <Avatar className="w-full h-auto aspect-square rounded-lg">
-                            <AvatarImage src="/placeholder.svg" />
+                            <AvatarImage src="https://png.pngtree.com/thumb_back/fh260/background/20250305/pngtree-a-warm-and-knowledgeable-female-teacher-image_17057065.jpg" />
                             <AvatarFallback>TD</AvatarFallback>
                         </Avatar>
                     </div>
@@ -822,7 +822,7 @@ export default function TutorListing() {
                         <Button className="w-full" size="lg">Book trial lesson</Button>
                         <Button variant="outline" className="w-full">
                             <MessageCircle className="mr-2 h-4 w-4" />
-                            Send message
+                            Teacher Profile
                         </Button>
                     </CardFooter>
                 </Card>

@@ -54,13 +54,13 @@ export default function PopupManager() {
                         <WhatsappCommunityPopup onJoinSuccess={() => updatePopup('WhatsappCommunity', true)} />
                     )}
 
-                    {showTargetScore && (
+                    {/* {showTargetScore && (
                         <TargetScorePopup onSubmit={(score) => updatePopup('TargetScore', score)} />
                     )}
 
                     {showAppDownload && (
                         <AppDownloadPopup />
-                    )}
+                    )} */}
                 </>
             )}
         </>

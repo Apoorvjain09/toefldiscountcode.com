@@ -5,18 +5,15 @@ import {
   Bookmark,
   Home,
   List,
-  Mail,
-  MoreHorizontal,
   BookCopy,
   TicketPercent,
-  User,
   Users,
-  MessageCircleMore,
   ScreenShare,
   MountainIcon,
   DollarSignIcon,
   ShieldQuestionIcon,
-  LayoutTemplate
+  LayoutTemplate,
+  HandCoins
 } from 'lucide-react';
 import { SidebarDesktop } from './sidebar-desktop';
 import { SidebarItems } from '@/types';
@@ -39,6 +36,7 @@ export default function Sidebar() {
   const sidebarItems: SidebarItems = {
     links: [
       { label: 'Toefl Mock Tests', href: '/', icon: Home },
+      { label: 'Application Fee Waivers', href: '/application-fee-waiver', icon: HandCoins },
       { label: 'Practice Questions', href: '/practice-questions', icon: ShieldQuestionIcon },
       { label: 'Discount Codes', href: '/toefl-voucher', icon: Bell },
       { label: 'Toefl Templates', href: '/templates', icon: LayoutTemplate },

@@ -1177,14 +1177,15 @@ export default function FeeWaiverUniversities() {
                                 </div>
                             </div>
 
-                            <DialogFooter className="mt-6">
+                            <DialogFooter className="mt-6 gap-2">
                                 <Button variant="outline" onClick={() => setActiveUniversity(null)}>
                                     Close
                                 </Button>
                                 <a href="https://forms.gle/867XonnHK7AKehGk8" target="_blank">
-                                    <Button className="bg-sky-600 hover:bg-sky-700">
-                                        <ExternalLink className="h-4 w-4 mr-2" />
-                                        Callback From an Expert
+                                    <Button className="bg-sky-600 hover:bg-sky-700 w-full">
+                                        ☺️
+                                        Request Callback From an Expert
+
                                     </Button>
                                 </a>
                             </DialogFooter>
@@ -1321,7 +1322,7 @@ function UniversityListItem({ university, rankingType, onViewDetails }: Universi
                 </Avatar>
             </div>
             <div className="flex-1">
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-start gap-4 mb-4 sm:mb-0 sm:gap-0 flex-col sm:flex-row">
                     <div>
                         <h3 className="font-medium">{university.University}</h3>
                         <p className="text-sm text-muted-foreground flex items-center">

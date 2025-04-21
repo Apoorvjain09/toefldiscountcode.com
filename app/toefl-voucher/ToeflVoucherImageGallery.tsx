@@ -22,23 +22,25 @@ export default function ToeflVoucherImageGallery() {
             id: 1,
             src: "https://www.dropbox.com/scl/fi/j146ctl1scmlvczaqtwfj/1.png?rlkey=2tfhj1o8570tex9p5h0uoxsg8&st=7krhsna5&raw=1",
             alt: "Image 1",
+            caption: "Step1 ➡️ Click 'My Account'",
         },
         {
             id: 2,
             src: "https://www.dropbox.com/scl/fi/n76h31wik61lexqlhdalp/2.png?rlkey=kiz8m84ap0bbzog1fp3jy41k1&st=ahsvrway&raw=1",
             alt: "Image 2",
+            caption: "Step2 ➡️ Click 'Manage My Account'",
         },
         {
             id: 3,
             src: "https://www.dropbox.com/scl/fi/7cd4af5so4qsrc64kg70t/video_with_Voice.mp4?rlkey=5hhlzwhbap8keiwtxqd98gcxj&st=pnty4uh4&raw=1",
             alt: "Video 2",
-            caption: "Sample Caption 2",
+            caption: "Step3 ➡️ Do What is Told in the VIDEO ☺️",
         },
         {
             id: 4,
-            src: "https://www.dropbox.com/scl/fi/1gxictpghyo84xl57a1ok/4.png?rlkey=l3e2hw9gx7yl9dvtp4r7z8lrp&st=s3xylcio&raw=1",
+            src: "https://www.dropbox.com/scl/fi/niwrkkppyuyog8kyxz0pj/4_final.png?rlkey=vklyydemqmgbqqemkkoyyko5i&st=mdgmwej7&raw=1",
             alt: "Image 3",
-            caption: "Sample Caption 3",
+            caption: "Step4 ➡️ Write What you wrote in the AGENT CODE section. ENJOY YOUR DISCOUNT 😀🎉",
         }
     ]
 

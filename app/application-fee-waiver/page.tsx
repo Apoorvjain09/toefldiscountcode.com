@@ -60,6 +60,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import universities from './unique-uni-sorted.json'
 
 interface University {
+    topPick?: boolean;
     StudyLevelId: number;
     Studylvl: string;
     Country: string;
@@ -1212,7 +1213,12 @@ function UniversityCard({ university, rankingType, onViewDetails }: UniversityCa
                         </AvatarFallback>
                     </Avatar>
                 </div>
-                <div className="absolute top-3 right-3">
+                <div className="absolute top-3 right-3 flex flex-col items-end space-y-1">
+                    {university.topPick && (
+                        <Badge className="bg-yellow-500 text-white font-semibold animate-pulse">
+                            🌟 Top Pick
+                        </Badge>
+                    )}
                     <Badge className="bg-green-600 hover:bg-green-700">Fee Waiver</Badge>
                 </div>
                 <div className="absolute bottom-3 left-3">
@@ -1306,7 +1312,7 @@ function UniversityCard({ university, rankingType, onViewDetails }: UniversityCa
 
 function UniversityListItem({ university, rankingType, onViewDetails }: UniversityCardProps) {
     return (
-        <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg hover:bg-slate-50 transition-colors">
+        <div className={`flex flex-col md:flex-row gap-4 p-4 border rounded-lg hover:bg-slate-50 transition-colors ${university.topPick && "border-yellow-400 shadow-md"}`}>
             <div className="w-full md:w-16 h-16 rounded-md overflow-hidden shrink-0 bg-gradient-to-r from-sky-500 to-indigo-600 flex items-center justify-center">
                 <Avatar className="w-12 h-12 border-2 border-white">
                     <AvatarFallback className={cn("text-lg font-bold", generateColorFromName(university.University))}>
@@ -1324,6 +1330,11 @@ function UniversityListItem({ university, rankingType, onViewDetails }: Universi
                         </p>
                     </div>
                     <div className="flex items-center gap-2">
+                        {university.topPick && (
+                            <Badge className="bg-yellow-500 text-white font-semibold animate-pulse">
+                                🌟 Top Pick
+                            </Badge>
+                        )}
                         <Badge className="bg-green-600">Fee Waiver</Badge>
                         <Badge variant="secondary">{university.Studylvl}</Badge>
                     </div>

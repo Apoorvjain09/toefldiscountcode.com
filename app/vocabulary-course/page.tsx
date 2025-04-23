@@ -4,12 +4,11 @@ import dynamic from 'next/dynamic';
 import { useUser } from '@clerk/nextjs';
 import { Seo } from '@/components/Head/Seo';
 import women from "@/public/assets/woman-young-free-clipart-hd.png"
+import { lazy } from 'react';
 
 //mayank - 10th july 2024
 
-const CoursePage = dynamic(() => import('./CousePage'), {
-  suspense: true,
-});
+const CoursePage = lazy(() => import('./CousePage'));
 
 export default function Page() {
   const [stage, setStage] = useState<'start' | 'course'>('start');
@@ -76,7 +75,7 @@ export default function Page() {
                     src="assets/woman-young-free-clipart-hd.png"
                     // src="https://freepngimg.com/thumb/girl/168680-woman-young-free-clipart-hd.png"
                     alt=""
-                    loading='lazy' 
+                    loading='lazy'
                   />
                 </div>
               </div>

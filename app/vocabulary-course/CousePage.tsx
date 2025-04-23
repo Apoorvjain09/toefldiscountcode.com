@@ -3,14 +3,11 @@ import { useState, useEffect, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { courseData, Lecture } from './courseData';
 
-const Sidebar = dynamic(() => import('./sidebar'), {
-  suspense: true,
-});
+import { lazy } from 'react';
+import LoadingSpinner from '@/components/ui/LoadingSpinner'; // optional fallback
 
-const VideoPlayer = dynamic(() => import('./videoplayer'), {
-  suspense: true,
-});
-
+const Sidebar = lazy(() => import('./sidebar'));
+const VideoPlayer = lazy(() => import('./videoplayer'));
 const initialLecture = courseData.sections[0].chapters[0].lectures[0];
 
 const CoursePage: React.FC = () => {

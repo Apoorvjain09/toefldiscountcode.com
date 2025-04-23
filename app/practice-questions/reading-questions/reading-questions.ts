@@ -3774,5 +3774,450 @@ export const quizData: { passages: Passage[] } = {
                 // },
             ]
         },
+        {
+            //TestAdmit, TPO1 Reading: Groundwater
+            id: 17,
+            passage: dedent`
+                [1] Groundwater is the word used to describe water that saturates the ground, filling all the available spaces. By far the most abundant type of groundwater is meteoric water; this is the groundwater that circulates as part of the water cycle. Ordinary meteoric water is water that has soaked into the ground from the surface, from precipitation (rain and snow) and from lakes and streams. There it remains, sometimes for long periods, before emerging at the surface again. At first thought it seems incredible that there can be enough space in the “solid” ground underfoot to hold all this water.
+                [2] The necessary space is there, however, in many forms. The commonest spaces are those among the particles—sand grains and tiny pebbles—of loose, unconsolidated sand and gravel. Beds of this material, out of sight beneath the soil, are common. They are found wherever fast rivers carrying loads of coarse sediment once flowed. For example, as the great ice sheets that covered North America during the last ice age steadily melted away, huge volumes of water flowed from them. The water was always laden with pebbles, gravel, and sand, known as glacial outwash , that was deposited as the flow slowed down.
+                [3] The same thing happens to this day, though on a smaller scale, wherever a sediment-laden river or stream emerges from a mountain valley onto relatively flat land, dropping its load as the current slows: the water usually spreads out fanwise, depositing the sediment in the form of a smooth, fan-shaped slope. Sediments are also dropped where a river slows on entering a lake or the sea, the deposited sediments are on a lake floor or the seafloor at first, but will be located inland at some future date, when the sea level falls or the land rises; such beds are sometimes thousands of meters thick.
+                [4] In lowland country almost any spot on the ground may overlie what was once the bed of a river that has since become buried by soil; if they are now below the water’s upper surface (the water table), the gravels and sands of the former riverbed, and its sandbars, will be saturated with groundwater.
+                [5] So much for unconsolidated sediments. Consolidated (or cemented) sediments, too, contain millions of minute water-holding pores. This is because the gaps among the original grains are often not totally plugged with cementing chemicals; also, parts of the original grains may become dissolved by percolating groundwater, either while consolidation is taking place or at any time afterwards. The result is that sandstone, for example, can be as porous as the loose sand from which it was formed.
+                [6] Thus a proportion of the total volume of any sediment, loose or cemented, consists of empty space. Most crystalline rocks are much more solid; a common exception is basalt, a form of solidified volcanic lava, which is sometimes full of tiny bubbles that make it very porous.
+                [7] The proportion of empty space in a rock is known as its porosity. But note that porosity is not the same as permeability, which measures the ease with which water can flow through a material; this depends on the sizes of the individual cavities and the crevices linking them.
+                [8] Much of the water in a sample of water-saturated sediment or rock will drain from it if the sample is put in a suitable dry place. But some will remain, clinging to all solid surfaces. It is held there by the force of surface tension without which water would drain instantly from any wet surface, leaving it totally dry. The total volume of water in the saturated sample must therefore be thought of as consisting of water that can, and water that cannot, drain away.
+                [9] The relative amount of these two kinds of water varies greatly from one kind of rock or sediment to another, even though their porosities may be the same. What happens depends on pore size. If the pores are large, the water in them will exist as drops too heavy for surface tension to hold, and it will drain away; but if the pores are small enough, the water in them will exist as thin films, too light to overcome the force of surface tension holding them in place; then the water will be firmly held.
+            `,
+            questions: [
+                {
+                    id: 1,
+                    question: "Which of the following can be inferred from paragraph 1 about the ground that we walk on?",
+                    options: [
+                        "It cannot hold rainwater for long periods of time.",
+                        "It prevents most groundwater from circulating.",
+                        "It has the capacity to store large amounts of water.",
+                        "It absorbs most of the water it contains from rivers."
+                    ],
+                    correct_answer: "C",
+                    answer_explanation: dedent`
+                        Paragraph 1 emphasizes that groundwater saturates the ground, and although it may seem incredible, the ground has enough space to hold all this water. This clearly supports the idea that the ground has the capacity to store large amounts of water, making option (C) correct.
+                    
+                        ❌ Option A is incorrect because the paragraph says water can remain in the ground for long periods.
+                        ❌ Option B is incorrect because it discusses circulation as part of the water cycle.
+                        ❌ Option D is incorrect because the paragraph mentions multiple sources, not just rivers.
+                    
+                        Therefore, option (C) is the best answer.
+                    `
+                },
+                {
+                    id: 2,
+                    question: "According to paragraph 2, where is groundwater usually found?",
+                    options: [
+                        "Inside pieces of sand and gravel",
+                        "On top of beds of rock",
+                        "In fast rivers that are flowing beneath the soil",
+                        "In spaces between pieces of sediment"
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
+                        Paragraph 2 explains that the most common locations for groundwater are the spaces between particles like sand grains and pebbles in loose, unconsolidated sand and gravel. These gaps hold the water, making option (D) correct.
+                    
+                        ❌ Option A is incorrect because groundwater is found between, not inside, the particles.
+                        ❌ Option B is incorrect; the paragraph discusses beds beneath the soil, not on top of rock.
+                        ❌ Option C is incorrect because it refers to past rivers that deposited sediment, not current underground rivers.
+                    
+                        Thus, the best answer is (D).
+                    `
+                },
+                {
+                    id: 3,
+                    question: "The phrase “glacial outwash” in the passage refers to",
+                    options: [
+                        "fast rivers",
+                        "glaciers",
+                        "the huge volumes of water created by glacial melting",
+                        "the particles carried in water from melting glaciers"
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
+                        Paragraph 2 describes glacial outwash as pebbles, gravel, and sand carried by water flowing from melting glaciers. These sediments were deposited as the flow slowed down, making option (D) correct.
+                    
+                        ❌ Option A is incorrect because the outwash refers to the materials, not the rivers themselves.
+                        ❌ Option B is incorrect as it refers to the source of the meltwater, not the outwash.
+                        ❌ Option C is incorrect because it focuses on the water, not the particles it carried.
+                    
+                        Therefore, the best answer is (D).
+                    `
+                },
+                {
+                    id: 4,
+                    question: "All of the following are mentioned in paragraph 3 as places that sediment-laden rivers can deposit their sediments EXCEPT",
+                    options: [
+                        "A mountain valley",
+                        "Flat land",
+                        "A lake floor",
+                        "The seafloor"
+                    ],
+                    correct_answer: "A",
+                    answer_explanation: dedent`
+                        Paragraph 3 explains that when sediment-laden rivers slow down, they deposit sediments on flat land (as alluvial fans), in lakes, and in the sea. Mountain valleys are described as the origin of rivers, not as deposition sites, making option (A) correct.
+                    
+                        ✅ Option B, C, and D are explicitly mentioned as deposition areas.
+                        ❌ Option A is incorrect because a mountain valley is a source, not a deposit site.
+                    
+                        Hence, the correct answer is (A).
+                    `
+                },
+                {
+                    id: 5,
+                    question: "The word “overlie” in the passage is closest in meaning to",
+                    options: [
+                        "cover",
+                        "change",
+                        "separate",
+                        "surround"
+                    ],
+                    correct_answer: "A",
+                    answer_explanation: dedent`
+                        In paragraph 4, the word “overlie” is used in the context of the ground lying above former riverbeds. This suggests that it means “to cover” or “to lie on top of,” making option (A) the correct answer.
+                    
+                        ❌ Option B (“change”) and ❌ Option C (“separate”) do not fit the context of physical layering.
+                        ❌ Option D (“surround”) is also incorrect as it implies enclosing rather than lying on top.
+                    
+                        Therefore, the correct answer is (A).
+                    `
+                },
+                {
+                    id: 6,
+                    question: "According to paragraphs 6 and 7, why is basalt unlike most crystalline forms of rock?",
+                    options: [
+                        "It is unusually solid.",
+                        "It often has high porosity.",
+                        "It has a low proportion of empty space.",
+                        "It is highly permeable."
+                    ],
+                    correct_answer: "B",
+                    answer_explanation: dedent`
+                        Paragraph 6 states that most crystalline rocks are solid, but basalt is an exception because it often contains many tiny bubbles, making it very porous. This makes option (B) correct.
+                    
+                        ❌ Option A is incorrect because basalt is mentioned as an exception to solid crystalline rocks.
+                        ❌ Option C contradicts the passage, which says basalt has many pores.
+                        ❌ Option D is incorrect because permeability is not specifically discussed in relation to basalt.
+                    
+                        Thus, option (B) is the best answer.
+                    `
+                },
+                {
+                    id: 7,
+                    question: "What is the main purpose of paragraph 7?",
+                    options: [
+                        "To explain why water can flow through rock",
+                        "To emphasize the large amount of empty space in all rock",
+                        "To point out that a rock cannot be both porous and permeable",
+                        "To distinguish between two related properties of rock"
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
+                        Paragraph 7 defines and contrasts porosity and permeability, emphasizing that while porosity refers to empty space in a material, permeability refers to how easily water can flow through it. This makes option (D) the correct answer.
+                    
+                        ❌ Option A is partially true but not the main focus.
+                        ❌ Option B is incorrect because the paragraph doesn’t generalize about all rock.
+                        ❌ Option C is incorrect; the paragraph doesn’t state that a rock cannot be both.
+                    
+                        Therefore, the main purpose is best captured by option (D).
+                    `
+                },
+                {
+                    id: 8,
+                    question: "Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
+                    highlighted_sentence:"If the pores are large, the water in them will exist as drops too heavy for surface tension to hold, and it will drain away; but if the pores are small enough, the water in them will exist as thin films, too light to overcome the force of surface tension holding them in place; then the water will be firmly held.",
+                    options: [
+                        "Surface tension is not strong enough to retain drops of water in rocks with large pores, but it’s strong enough to hold on to thin films of water in rocks with small pores.",
+                        "Water in rocks is held in place by large pores and drains away from small size pores through surface tension.",
+                        "Small pores and large pores both interact with surface tension to determine whether a rock will hold water as heavy drops or as a thin film.",
+                        "If the force of surface tension is too weak to hold water in place as heavy drops, the water will continue to be held firmly in place as a thin film when large pores exist."
+                    ],
+                    correct_answer: "A",
+                    answer_explanation: dedent`
+                        The highlighted sentence explains that water drains from large pores because it forms heavy drops that surface tension cannot hold, whereas in small pores, water remains as thin films that surface tension can retain. Option (A) captures this contrast accurately.
+                    
+                        ❌ Option B reverses the pore-size logic, which changes the meaning.
+                        ❌ Option C is vague and does not clearly express the weight vs. film distinction.
+                        ❌ Option D wrongly states that thin films are held in large pores, which contradicts the original idea.
+                    
+                        Therefore, option (A) is the best choice.
+                    `
+                },
+                {
+                    id: 9,
+                    insertion_passage: dedent`
+                        [1] Groundwater is the word used to describe water that saturates the ground, filling all the available spaces. By far the most abundant type of groundwater is meteoric water; this is the groundwater that circulates as part of the water cycle. Ordinary meteoric water is water that has soaked into the ground from the surface, from precipitation (rain and snow) and from lakes and streams. There it remains, sometimes for long periods, before emerging at the surface again. At first thought it seems incredible that there can be enough space in the “solid” ground underfoot to hold all this water.
+                        [2] The necessary space is there, however, in many forms. The commonest spaces are those among the particles—sand grains and tiny pebbles—of loose, unconsolidated sand and gravel. Beds of this material, out of sight beneath the soil, are common. They are found wherever fast rivers carrying loads of coarse sediment once flowed. For example, as the great ice sheets that covered North America during the last ice age steadily melted away, huge volumes of water flowed from them. The water was always laden with pebbles, gravel, and sand, known as glacial outwash , that was deposited as the flow slowed down.
+                        [3] The same thing happens to this day, though on a smaller scale, wherever a sediment-laden river or stream emerges from a mountain valley onto relatively flat land, dropping its load as the current slows: the water usually spreads out fanwise, depositing the sediment in the form of a smooth, fan-shaped slope. Sediments are also dropped where a river slows on entering a lake or the sea, the deposited sediments are on a lake floor or the seafloor at first, but will be located inland at some future date, when the sea level falls or the land rises; such beds are sometimes thousands of meters thick.
+                        [4] In lowland country almost any spot on the ground may overlie what was once the bed of a river that has since become buried by soil; if they are now below the water’s upper surface (the water table), the gravels and sands of the former riverbed, and its sandbars, will be saturated with groundwater.
+                        [5] So much for unconsolidated sediments. Consolidated (or cemented) sediments, too, contain millions of minute water-holding pores. This is because the gaps among the original grains are often not totally plugged with cementing chemicals; also, parts of the original grains may become dissolved by percolating groundwater, either while consolidation is taking place or at any time afterwards. The result is that sandstone, for example, can be as porous as the loose sand from which it was formed.
+                        [6] Thus a proportion of the total volume of any sediment, loose or cemented, consists of empty space. Most crystalline rocks are much more solid; a common exception is basalt, a form of solidified volcanic lava, which is sometimes full of tiny bubbles that make it very porous.
+                        [7] The proportion of empty space in a rock is known as its porosity. But note that porosity is not the same as permeability, which measures the ease with which water can flow through a material; this depends on the sizes of the individual cavities and the crevices linking them.
+                        [8] Much of the water in a sample of water-saturated sediment or rock will drain from it if the sample is put in a suitable dry place. [A] ⬛ But some will remain, clinging to all solid surfaces. [B] ⬛ It is held there by the force of surface tension without which water would drain instantly from any wet surface, leaving it totally dry. [C] ⬛ The total volume of water in the saturated sample must therefore be thought of as consisting of water that can, and water that cannot, drain away. ⬛ [D]
+                        [9] The relative amount of these two kinds of water varies greatly from one kind of rock or sediment to another, even though their porosities may be the same. What happens depends on pore size. If the pores are large, the water in them will exist as drops too heavy for surface tension to hold, and it will drain away; but if the pores are small enough, the water in them will exist as thin films, too light to overcome the force of surface tension holding them in place; then the water will be firmly held.
+                    `,
+                    question: 'Look at the four squares [⬛] that show where the following sentence could be inserted in the passage.',
+                    insertion_sentence: "Such findings, agree Soffer and Adovasio, reveal just how shaky the most widely accepted reconstructions of Upper Paleolithic life are",
+                    options: [
+                        "Blank A",
+                        "Blank B",
+                        "Blank C",
+                        "Blank D",
+                    ],
+                    correct_answer: 'C',
+                    answer_explanation: dedent`
+
+                    `
+                },
+                {
+                    id: 10,
+                    summarization_intro_sentence: "Much of the ground is actually saturated with water.",
+                    options: [
+                        "Sediments that hold water were spread by glaciers and are still spread by rivers and streams.",
+                        "Water is stored underground in beds of loose sand and gravel or in cemented sediment",
+                        "The size of a saturated rock’s pores determines how much water it will retain when the rock is put in a dry place.",
+                        "Groundwater often remains underground for a long time before it emerges again.",
+                        "Like sandstone, basalt is a crystalline rock that is very porous.",
+                        "Beds of unconsolidated sediments are typically located at inland sites that were once underwater."
+                    ],
+                    correct_answer: "ABD",
+                    answer_explanation: dedent`
+                    `
+                },
+                // {
+                //     id: 0,
+                //     question: 'question1',
+                //     highlighted_sentence: "highlighted_Sentence1",
+                //     summarization_intro_sentence: "",
+                //     insertion_passage: dedent``,
+                //     insertion_sentence: "",
+                //     options: [
+                //         "option1",
+                //         "option2",
+                //         "option3",
+                //         "option4",
+                //     ],
+                //     correct_answer: 'ABCD',
+                //     answer_explanation: dedent`
+                //         explanation
+                //     `
+                // },
+            ]
+        },
+        {
+            //TestAdmit, Reading - TestAdmit Mock Test 1 Reading: Habitat Selection in Birds 
+            id: 18,
+            passage: dedent`
+                [1] Bird habitat selection is an extensive subject matter largely in part because both amateur and professional students of birds have accumulated an enormous amount of information on which birds live where, and how they operate in their environments. Additionally, birds are ideal subjects for studies of habitat selection, because they are highly mobile, often migrating thousands of miles and in the process passing over an enormous range of environments, and yet ordinarily forage, breed, and winter in very specific habitats. In order to better understand how bird behavior is altered either by natural phenomena or by human activities, and to stop the continued decline of bird populations, researchers record and study detailed observations of the habitat selections of birds.
+                [2] Habitat erosion has either limited or eliminated access to appropriate habitats and is directly responsible for the declining populations of certain bird species. The populations of these species mainly continue to plummet due to constant development, disturbance by humans, and coastal erosion. Oil spills are even more disastrous, as toxic chemicals rapidly diminish the species’ already-shrinking populations. Further, the birds’ populations are jeopardized by introduced species, both domesticated and wild, which have continued the reduction of available habitat and reproduction success. It was thus reasoned that if the populations of these birds are declining because of habitat loss, then the creation of artificial beaches in areas inaccessible to people and their pets ought to attract breeding Black Skimmers and Piping Plovers, helping local populations rebound. Recent habitat restoration experiments have been conducted in southern California and have resulted in favorable outcomes when material raised from the bottom of the sea was used to produce artificial beaches and sandbars, allowing both of the aforementioned species of birds to occupy the sites and reproduce successfully.
+                [3] Another promising habitat conversion technique based on the notion that specific species are linked to specific environments is habitat management. Exactly what type of management depends on a species’ food preferences, foraging strategies, and nest site requirements. Some birds can live in suburban and even urban environments; other species whose habitat requirements are specific, especially area-sensitive birds requiring large tracts of woodland or grassland, have more difficulty finding suitable habitat amidst our ever-developing human landscape. A current example of habitat management is the regular controlled burning of the low scrubby habitat of the Florida Scrub Jay, an endangered species numbering in the mere thousands. Once, the species’ habitat burned irregularly but naturally as a result of lightning strikes, creating a patchwork of scrub oak woodland with open, sandy patches surrounded by other plants. The scrub jays generally nest in wide areas of open pine or oak habitats. When the natural fires were quickly suppressed by the growing human communities in Florida though, the scrub oak thickets eventually became tall and dense. Initially, the Scrub Jay populations still fared relatively well under these conditions, but the subsequent arrival of egg-eating blue jays soon reduced their numbers. To counter the drop in populations, environmental groups within the state have made a strong effort at preserving Florida's remaining scrub through controlled burns and even clearing out areas of large trees to increase the size of a scrub habitat. Although the number of Scrub Jay breeding pairs is still thought to be dropping, the protection method seems to have slowed down the rate of decline.
+                [4] In addition to the habitat conservation and management, the birds’ ability to breed more successfully in specific habitat types and their strong preferences for some places over others, even if they are capable of reproducing in a variety of environments must be taken into account. Researchers have found that individuals able to exercise their habitat preferences will generally leave more descendants than those unable to do so. While widespread findings have shown that members of an animal species often occupy both source habitats (where the population grows) and sink habitats (where the population declines), poor-quality sink habitats are utilized by individuals that are unable to insert themselves into superior source habitats, often because they are excluded by older, more experienced competitors and so must make the best of a bad situation elsewhere. A prime example of this phenomenon can be observed in the Black-throated Blue Warbler of North America, which prefers nesting in tall hardwood forests with a dense layer of shorter trees and shrubs even though it can breed in forests with a lower shrub density. Older, experienced warblers tend to occupy sites with a high shrub density, relegating younger birds to occupy woodlands with lower shrub density. Birds able to acquire territories in the forests with higher shrub density produce significantly more offspring than their lower shrub occupying counterparts. The same breeding success can also be observed in birds such as the Blue Tit, which have higher reproductive success in woodlands than in hedgerows.
+            `,
+            questions: [
+                {
+                  id: 1,
+                  question: "The word “extensive” in the passage is closest in meaning to",
+                  options: [
+                    "A. wide",
+                    "B. precise",
+                    "C. growing",
+                    "D. obscure"
+                  ],
+                  correct_answer: "A",
+                  answer_explanation: dedent`
+                    The word “extensive” refers to something that covers a large area or range. In this context, “wide” best captures the intended meaning. 
+              
+                    ❌ Option B (“precise”) and ❌ Option D (“obscure”) are unrelated to scale or breadth. 
+                    ❌ Option C (“growing”) implies increase rather than existing extent.
+              
+                    ✅ Therefore, option (A) is correct.
+                  `
+                },
+                {
+                  id: 2,
+                  question: "According to paragraph 1, all of the following characteristics make birds the perfect candidate for habitat selection EXCEPT",
+                  options: [
+                    "A. their ability to reproduce in various habitats",
+                    "B. their preference to feed in certain types of environments ",
+                    "C. the mobility allowing them to move quickly to other locations",
+                    "D. the fact that they pass through different habitats in their migration"
+                  ],
+                  correct_answer: "A",
+                  answer_explanation: dedent`
+                    Paragraph 1 does not mention that birds reproduce in various habitats; it focuses on feeding preferences, mobility, and migration. 
+              
+                    ✅ Options B, C, and D are clearly supported in the paragraph. 
+                    ❌ Option A is not mentioned, making it the correct EXCEPT answer.
+                  `
+                },
+                {
+                  id: 3,
+                  question: "Why does the author mention the Black Skimmers and Piping Plovers?",
+                  options: [
+                    "A. To illustrate how continued coastal erosion has created suitable habitats for certain birds",
+                    "B. To support the argument that introduced species have caused irreversible damage to indigenous wildlife",
+                    "C. To provide an example of habitat restoration that increased declining bird populations",
+                    "D. To demonstrate that particular species of birds will prefer undisturbed habitats over artificially built ones"
+                  ],
+                  correct_answer: "C",
+                  answer_explanation: dedent`
+                    The author uses these examples to show that restoration efforts helped recover populations of birds previously in decline.
+              
+                    ❌ Options A and B are not supported in the context.
+                    ❌ Option D misses the focus on restoration impact.
+              
+                    ✅ Hence, option (C) is the best answer.
+                  `
+                },
+                {
+                  id: 4,
+                  question: "The word “jeopardized” in the passage is closest in meaning to",
+                  options: [
+                    "A. mixed",
+                    "B. suffered",
+                    "C. expanded",
+                    "D. endangered"
+                  ],
+                  correct_answer: "D",
+                  answer_explanation: dedent`
+                    “Jeopardized” means being put at risk or endangered.
+              
+                    ❌ Options A, B, and C do not convey the threat or risk implied.
+              
+                    ✅ Option (D) is correct as it best aligns with the meaning in context.
+                  `
+                },
+                {
+                  id: 5,
+                  question: "The word “notion” in the passage is closest in meaning to",
+                  options: [
+                    "A. definition",
+                    "B. possibility",
+                    "C. reality",
+                    "D. belief"
+                  ],
+                  correct_answer: "D",
+                  answer_explanation: dedent`
+                    “Notion” refers to an idea or belief. 
+              
+                    ❌ Options A and C suggest fixed or factual meanings.
+                    ❌ Option B is not a good synonym in this context.
+              
+                    ✅ Option (D) is the correct meaning.
+                  `
+                },
+                {
+                  id: 6,
+                  question: "Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
+                  highlighted_sentence:"Some birds can live in suburban and even urban environments; other species whose habitat requirements are specific, especially area-sensitive birds requiring large tracts of woodland or grassland, have more difficulty finding suitable habitat amidst our ever-developing human landscape.",
+                  options: [
+                    "A. The higher the birds’ area-sensitivity, the more they are to modify their food preference and breeding needs based on the changes in their habitat.",
+                    "B. Being area-sensitive to large tracts of woodland, particular species of birds actively migrate to suitable habitats instead of adapting to emerging suburban or urban communities.",
+                    "C. The landscape is forever changing due to human development so birds must be able to adapt or face elimination.",
+                    "D. Often birds having the ability to live in suburban or urban environments can more easily adapt to habitats reshaped by human development."
+                  ],
+                  correct_answer: "D",
+                  answer_explanation: dedent`
+                    The highlighted sentence discusses adaptability of birds in altered environments. 
+              
+                    ✅ Option (D) best reflects that idea.
+              
+                    ❌ Option A distorts the focus. 
+                    ❌ Option B overgeneralizes about specific habitats. 
+                    ❌ Option C lacks detail about adaptability.
+              
+                    Therefore, option (D) is the correct answer.
+                  `
+                },
+                {
+                  id: 7,
+                  question: "The author’s description of sink habitats mention all of the following EXCEPT",
+                  options: [
+                    "A. These habitats are mostly occupied by younger, inexperienced birds.",
+                    "B. Birds that dwell in these habitats typically suffer a decline in population. ",
+                    "C. Mature birds are unable to survive in such locations due to inferior conditions.",
+                    "D. The habitats may be unfertile to birds but are still preferred when compared to uninhabitable ones."
+                  ],
+                  correct_answer: "C",
+                  answer_explanation: dedent`
+                    The passage mentions that younger birds often occupy sink habitats and that these areas lead to population decline.
+              
+                    ❌ Option C is not supported — mature birds are not said to be unable to survive.
+              
+                    ✅ Thus, option (C) is the correct EXCEPT choice.
+                  `
+                },
+                {
+                  id: 8,
+                  question: "The author uses the Black-throated Blue Warbler of North America in paragraph 4 in order to",
+                  options: [
+                    "A. contrast the structural difference between source habitats and sink habitats.",
+                    "B. illustrate how nesting preferences are passed on to offspring through experience .",
+                    "C. explain why sink habitats are so valuable to the reproduction success of younger birds.",
+                    "D. provide proof that more experienced birds prefer source habitats while being able to survive in sink habitats."
+                  ],
+                  correct_answer: "D",
+                  answer_explanation: dedent`
+                    The example of the Black-throated Blue Warbler shows that older birds prefer source habitats and have greater survival success.
+              
+                    ✅ This supports option (D). 
+                    ❌ Options A, B, and C do not accurately reflect the key point made.
+              
+                    Thus, option (D) is the best choice.
+                  `
+                },
+                {
+                  id: 9,
+                  question: 'Look at the four squares [⬛] that show where the following sentence could be inserted in the passage.',
+                  insertion_sentence: "The loss of undeveloped beaches has, for example, threatened the Black Skimmer and Piping Plover along the Gulf Coast of the United States, both of which nest on sandy and shell beaches and islands.",
+                  insertion_passage:`
+                    1] Bird habitat selection is an extensive subject matter largely in part because both amateur and professional students of birds have accumulated an enormous amount of information on which birds live where, and how they operate in their environments. Additionally, birds are ideal subjects for studies of habitat selection, because they are highly mobile, often migrating thousands of miles and in the process passing over an enormous range of environments, and yet ordinarily forage, breed, and winter in very specific habitats. In order to better understand how bird behavior is altered either by natural phenomena or by human activities, and to stop the continued decline of bird populations, researchers record and study detailed observations of the habitat selections of birds.
+                    [2] Habitat erosion has either limited or eliminated access to appropriate habitats and is directly responsible for the declining populations of certain bird species. [A] ⬛ The populations of these species mainly continue to plummet due to constant development, disturbance by humans, and coastal erosion. [B] ⬛ Oil spills are even more disastrous, as toxic chemicals rapidly diminish the species’ already-shrinking populations. [C] ⬛ Further, the birds’ populations are jeopardized by introduced species, both domesticated and wild, which have continued the reduction of available habitat and reproduction success. [D] ⬛ It was thus reasoned that if the populations of these birds are declining because of habitat loss, then the creation of artificial beaches in areas inaccessible to people and their pets ought to attract breeding Black Skimmers and Piping Plovers, helping local populations rebound. Recent habitat restoration experiments have been conducted in southern California and have resulted in favorable outcomes when material raised from the bottom of the sea was used to produce artificial beaches and sandbars, allowing both of the aforementioned species of birds to occupy the sites and reproduce successfully.
+                    [3] Another promising habitat conversion technique based on the notion that specific species are linked to specific environments is habitat management. Exactly what type of management depends on a species’ food preferences, foraging strategies, and nest site requirements. Some birds can live in suburban and even urban environments; other species whose habitat requirements are specific, especially area-sensitive birds requiring large tracts of woodland or grassland, have more difficulty finding suitable habitat amidst our ever-developing human landscape. A current example of habitat management is the regular controlled burning of the low scrubby habitat of the Florida Scrub Jay, an endangered species numbering in the mere thousands. Once, the species’ habitat burned irregularly but naturally as a result of lightning strikes, creating a patchwork of scrub oak woodland with open, sandy patches surrounded by other plants. The scrub jays generally nest in wide areas of open pine or oak habitats. When the natural fires were quickly suppressed by the growing human communities in Florida though, the scrub oak thickets eventually became tall and dense. Initially, the Scrub Jay populations still fared relatively well under these conditions, but the subsequent arrival of egg-eating blue jays soon reduced their numbers. To counter the drop in populations, environmental groups within the state have made a strong effort at preserving Florida's remaining scrub through controlled burns and even clearing out areas of large trees to increase the size of a scrub habitat. Although the number of Scrub Jay breeding pairs is still thought to be dropping, the protection method seems to have slowed down the rate of decline.
+                    [4] In addition to the habitat conservation and management, the birds’ ability to breed more successfully in specific habitat types and their strong preferences for some places over others, even if they are capable of reproducing in a variety of environments must be taken into account. Researchers have found that individuals able to exercise their habitat preferences will generally leave more descendants than those unable to do so. While widespread findings have shown that members of an animal species often occupy both source habitats (where the population grows) and sink habitats (where the population declines), poor-quality sink habitats are utilized by individuals that are unable to insert themselves into superior source habitats, often because they are excluded by older, more experienced competitors and so must make the best of a bad situation elsewhere. A prime example of this phenomenon can be observed in the Black-throated Blue Warbler of North America, which prefers nesting in tall hardwood forests with a dense layer of shorter trees and shrubs even though it can breed in forests with a lower shrub density. Older, experienced warblers tend to occupy sites with a high shrub density, relegating younger birds to occupy woodlands with lower shrub density. Birds able to acquire territories in the forests with higher shrub density produce significantly more offspring than their lower shrub occupying counterparts. The same breeding success can also be observed in birds such as the Blue Tit, which have higher reproductive success in woodlands than in hedgerows.
+                  `,
+                  options: [
+                    "Blank A",
+                    "Blank B",
+                    "Blank C",
+                    "Blank D",
+                  ],
+                  correct_answer: "B",
+                  answer_explanation: dedent`
+                    The sentence describes how loss of habitat has negatively impacted bird populations — the key idea is threat due to habitat loss.
+              
+                    ✅ Option (B) accurately reflects that idea.
+                    ❌ Other options change or ignore the essential information.
+              
+                    Therefore, option (B) is correct.
+                  `
+                },
+                {
+                  id: 10,
+                  summarization_intro_sentence: "Observations of the habitat selections of birds have brought habitat restoration and management plans greater success.",
+                  options: [
+                    "A. The arrival of certain kinds of birds has excluded some birds from their source habitats, further reducing their already dwindling populations. ",
+                    "B. Planned fires generated by humans can sometimes restore bird habitats and decelerate population declines in bird species.",
+                    "C. Decreased population density in source habitats lends support to the idea that better management of superior sink habitats may boost reproduction rates.",
+                    "D. Habitat restoration projects and habitat management plans are based on the concept that a strong connection exists between changes to a habitat and population declines. ",
+                    "E. Certain species of birds are able to breed in multiple habitats, but these species generally have more success breeding in preferred environments.",
+                    "F. Despite efforts by environmental groups, habitat loss has not been slowed because of the increasing human population and its demand for land."
+                  ],
+                  correct_answer: "BDE",
+                  answer_explanation: dedent`
+                    ✅ Options B, D, and E align with the idea that knowledge of bird habitat selection helps improve restoration efforts.
+              
+                    ❌ Options A, C, and F either misinterpret the relationship or shift focus from habitat management.
+              
+                    So, the best answers are (B), (D), and (E).
+                  `
+                }
+            ]
+        },
     ]
 }

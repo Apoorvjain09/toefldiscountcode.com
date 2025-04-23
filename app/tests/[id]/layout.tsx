@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-    const testId = params.id;
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id: testId } = await params;
+
     return {
         title: `TOEFL ${testId} | AI-Powered Practice Test`,
         description: `Take TOEFL ${testId} and prepare with a full-length, AI-powered practice test. Get detailed insights into your performance.`,

@@ -5,7 +5,6 @@ import React, { useState, Suspense, lazy } from "react";
 import { FaPlayCircle } from 'react-icons/fa';
 const ReadingListeningSection = lazy(() => import('./ReadingListeningSection'));
 import { usePathname } from 'next/navigation';
-import { useUser } from '@clerk/nextjs';
 import Link from "next/link";
 
 

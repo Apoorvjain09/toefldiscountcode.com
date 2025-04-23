@@ -7,6 +7,7 @@ import 'regenerator-runtime/runtime';
 import { GoogleAnalyticsTracking } from "@/components/Head/GoogleAnalyticsTracker";
 import ClerkHandleLogInComponent from "@/components/clerk-login/clerkHandleLogInComponent";
 import PopupManager from "@/components/popup/popup-manager";
+import 'regenerator-runtime/runtime';
 
 export default function RootLayout({
   children,

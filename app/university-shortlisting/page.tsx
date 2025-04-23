@@ -4,10 +4,9 @@ import dynamic from 'next/dynamic';
 import LoadingSpinner from '@/components/ui/LoadingSpinner'; // Ensure you have a loading spinner component
 import { Seo } from '@/components/Head/Seo';
 import AfterUniversityShortlistFromOpenAI from './AfterUniversityShortlistFromOpenAI';
+import { lazy } from 'react';
 
-const FormComponent = dynamic(() => import('./form'), {
-  suspense: true,
-});
+const FormComponent = lazy(() => import('./form'));
 
 export default function Home() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);

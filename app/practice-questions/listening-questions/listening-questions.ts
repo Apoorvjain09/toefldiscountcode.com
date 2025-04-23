@@ -1782,4 +1782,104 @@ export const listeningQuestions = [
           }
         ]
     },
+    {
+        //TestAdmit Listen Mock Test 1
+        id: 16,
+        type: "conversation",
+        audioUrl: "https://www.dropbox.com/scl/fi/ny482ple8ncypnp41o6nz/question16_conversation.mp3?rlkey=6mw39rdonzc90nelf0di9x2lj&st=9hgj42k9&raw=1",
+        questions: [
+          {
+            id: 1,
+            question: "Why does the student go to talk to the dormitory employee?",
+            options: [
+              "To report a problem in the laundry room",
+              "To request reimbursement for her ruined clothes",
+              "To get change to use for the washing machine",
+              "To inquire about a broken washing machine"
+            ],
+            correctAnswer: [
+              "To request reimbursement for her ruined clothes"
+            ],
+            answer_explanation: `
+              ✔️ Option B is correct because although the student initially reports the laundry issue, the main focus of the visit becomes requesting compensation for her damaged clothes. She is given a reimbursement form and instructions on how to receive a refund.
+              ❌ Option A is incorrect because the report is just the starting point of the conversation, not the main purpose of the visit.
+              ❌ Option C is incorrect because the student never asks for change or mentions needing coins at the moment.
+              ❌ Option D is incorrect because she doesn't inquire about the machine in general, only mentions it in relation to her ruined laundry.
+            `
+          },
+          {
+            id: 2,
+            question: "What does the employee imply about the student’s clothes turning green?",
+            options: [
+              "She is not the first person this has happened to",
+              "It must have been the student’s fault",
+              "It does not happen to students in a different dormitory",
+              "The clothes usually turns a different color"
+            ],
+            correctAnswer: [
+              "She is not the first person this has happened to"
+            ],
+            answer_explanation: `
+              ✔️ Option A is correct because the employee responds with surprise and says, “You too?”, which clearly implies that other students have experienced the same issue with their clothes turning green.
+              ❌ Option B is incorrect because the employee never blames the student; instead, she offers help and even suggests maintenance look at the machine.
+              ❌ Option C is incorrect because there's no mention that this problem is isolated to one dormitory or doesn't happen elsewhere.
+              ❌ Option D is incorrect because there’s no mention of other colors being a common outcome.
+            `
+          },
+          {
+            id: 3,
+            question: "Why does the student mention washing machines in another dormitory?",
+            options: [
+              "To tell the employee what dormitory she just washed her clothes in",
+              "To compare the prices for washing a load of clothes",
+              "To suggest a feature she would like to see in her current dormitory",
+              "To complain about a washing machine there"
+            ],
+            correctAnswer: [
+              "To suggest a feature she would like to see in her current dormitory"
+            ],
+            answer_explanation: `
+              ✔️ Option C is correct because the student brings up Swanson Residence Hall to highlight the convenience of using campus debit cards with the newer machines there — suggesting she would like the same feature in her current dorm.
+              ❌ Option A is incorrect because she washed her clothes in the current dorm, not Swanson.
+              ❌ Option B is incorrect because there’s no discussion of prices or cost comparison.
+              ❌ Option D is incorrect because she doesn’t complain about the machines in Swanson — in fact, she praises them.
+            `
+          },
+          {
+            id: 4,
+            question: "What does the employee imply about the building he works in?",
+            options: [
+              "The electrical wiring is not capable of supporting the campus network.",
+              "It is not as nice a place to live as other dormitories.",
+              "Students living there do not want to use their debit cards",
+              "Working in that building is a big inconvenience"
+            ],
+            correctAnswer: [
+              "The electrical wiring is not capable of supporting the campus network."
+            ],
+            answer_explanation: `
+              ✔️ Option A is correct because the employee explains that the dormitory is old and lacks the necessary network cables to support the debit card system for the washing machines.
+              ❌ Option B is incorrect because there's no comment on the overall quality of living in the building.
+              ❌ Option C is incorrect because the student expresses interest in using debit cards, and the employee agrees it would be a nice feature.
+              ❌ Option D is incorrect because the employee never complains about his job or implies that working there is inconvenient.
+            `
+          },
+          {
+            id: 5,
+            question: "What does the employee imply when he says this:",
+            audio_packet:"https://www.dropbox.com/scl/fi/1ccnl8ayrzqb7e7qa0hjq/question16_conversation_packet.mp3?rlkey=g13meaixyhkintixpod4xg5rx&st=2wqaqzco&raw=1",
+            options: [
+              "He sometimes cannot tell the difference between a washer and a dryer.",
+              "He is not sure which washing machines are working properly.",
+              "Some washing machines are clearly better than other washing machines.",
+              "He thinks that there is not a big difference between different washing machines."
+            ],
+            correctAnswer: [
+              "He thinks that there is not a big difference between different washing machines."
+            ],
+            answer_explanation: `
+            `
+          }
+        ]
+    },
 ];

@@ -5,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { LogOut, MoreHorizontal, Settings } from 'lucide-react';
+import { Banknote, EarthLock, LogOut, MoreHorizontal, ReceiptText, Settings } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { UserButton, useAuth, useUser, SignOutButton, SignInButton } from '@clerk/nextjs';
 import styles from './SidebarDesktop.module.css'; // import the CSS module
@@ -53,17 +53,30 @@ export function SidebarDesktop(props: SidebarDesktopProps) {
                   </div>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className='bg-white mb-2 w-56 p-3 rounded-[1rem]'>
-                <div className='space-y-1'>
-                  <Link href='/'>
-                    <SidebarButton size='sm' icon={Settings} className='w-full'>
-                      <Link href="/profile">Account Settings</Link>
-                    </SidebarButton>
-                  </Link>
-                  <SidebarButton size='sm' icon={LogOut} className='w-full'>
-                    {!isSignedIn ? <SignInButton /> : <SignOutButton />}
+              <PopoverContent className='bg-white mb-2 w-56 p-3 rounded-[1rem] space-y-1'>
+                {/* <Link href='/'>
+                  <SidebarButton size='sm' icon={Settings} className='w-full'>
+                    <Link href="/profile">Account Settings</Link>
                   </SidebarButton>
-                </div>
+                </Link> */}
+                <Link href='/privacy-policy'>
+                  <SidebarButton size='sm' icon={EarthLock} className='w-full'>
+                    Privacy Policy
+                  </SidebarButton>
+                </Link>
+                <Link href='/privacy-policy/cancellation-and-refund-policy'>
+                  <SidebarButton size='sm' icon={Banknote} className='w-full'>
+                    Cancel & Refunds
+                  </SidebarButton>
+                </Link>
+                <Link href='/privacy-policy/terms-conditions'>
+                  <SidebarButton size='sm' icon={ReceiptText} className='w-full'>
+                    Terms & Conditions
+                  </SidebarButton>
+                </Link>
+                <SidebarButton size='sm' icon={LogOut} className='w-full'>
+                  {!isSignedIn ? <SignInButton /> : <SignOutButton />}
+                </SidebarButton>
               </PopoverContent>
             </Popover>
           </div>

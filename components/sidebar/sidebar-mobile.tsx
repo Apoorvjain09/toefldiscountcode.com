@@ -1,6 +1,6 @@
 'use client';
-
 import { SidebarItems } from '@/types';
+
 import {
   Sheet,
   SheetClose,
@@ -9,11 +9,11 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { LogOut, Menu, MoreHorizontal, Settings, X } from 'lucide-react';
+import { Banknote, EarthLock, LogOut, Menu, MoreHorizontal, ReceiptText, Settings, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
-import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useUser, UserButton, SignInButton, SignOutButton } from '@clerk/nextjs';
 import React, { Suspense, lazy, useEffect, useState } from 'react';
@@ -86,12 +86,33 @@ export function SidebarMobile(props: SidebarMobileProps) {
                 </DrawerTrigger>
                 <DrawerContent className='p-2 z-[500] border-black bg-white text-black'>
                   <div className='flex flex-col space-y-2 mt-2'>
-                    <Link href='/profile' className='w-full border-black'>
+                    {/* <Link href='/profile' className='w-full border-black'>
                       <SheetClose asChild>
                         <SidebarButton size='sm' icon={Settings} className='w-full'>
                           Account Settings
                         </SidebarButton>
                       </SheetClose>
+                    </Link> */}
+                    <Link href='/privacy-policy'>
+                      <DrawerClose asChild>
+                        <SidebarButton size='sm' icon={EarthLock} className='w-full'>
+                          Privacy Policy
+                        </SidebarButton>
+                      </DrawerClose>
+                    </Link>
+                    <Link href='/privacy-policy/cancellation-and-refund-policy'>
+                      <DrawerClose asChild>
+                        <SidebarButton size='sm' icon={Banknote} className='w-full'>
+                          Cancel & Refunds
+                        </SidebarButton>
+                      </DrawerClose>
+                    </Link>
+                    <Link href='/privacy-policy/terms-conditions'>
+                      <DrawerClose asChild>
+                        <SidebarButton size='sm' icon={ReceiptText} className='w-full'>
+                          Terms & Conditions
+                        </SidebarButton>
+                      </DrawerClose>
                     </Link>
                     <SidebarButton size='sm' icon={LogOut} className='w-full'>
                       {!isSignedIn ? <SignInButton /> : <SignOutButton />}
@@ -103,6 +124,6 @@ export function SidebarMobile(props: SidebarMobileProps) {
           </div>
         </Suspense>
       </SheetContent>
-    </Sheet>
+    </Sheet >
   );
 }

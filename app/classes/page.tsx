@@ -3,6 +3,7 @@ import ClassesWhiteLabelSchedule from "./ClassesWhiteLabelSchedule";
 import type { Metadata } from "next";
 import MainFooter from "@/components/landing-page/MainFooter";
 import { ClassesCalanderView } from "./ClassesCalanderView";
+import ClassesWhyUs from "./ClassesWhyUs";
 
 
 export const metadata: Metadata = {
@@ -38,9 +39,11 @@ export const metadata: Metadata = {
 export default function Classes() {
     return (
         <>
+            <h1 className="mb-4 font-extrabold leading-none tracking-tight text-gray-900 text-2xl md:text-3xl lg:text-4xl dark:text-white text-center mt-5 px-20">Upcoming Live Classes – Monthly Schedule</h1>
             <ClassesWhiteLabelSchedule />
             <ClassesCalanderView />
-            <ClassesToeflCourse />
+            {/* <ClassesToeflCourse /> */}
+            <ClassesWhyUs />
             <MainFooter />
         </>
     )

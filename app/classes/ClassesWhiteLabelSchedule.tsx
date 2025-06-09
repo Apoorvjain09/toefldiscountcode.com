@@ -96,12 +96,12 @@ function BatchCard({ batch, selectedCourse }: { batch: Batch, selectedCourse: st
             </CardHeader>
             <CardContent className="pb-2">
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm">
+                    {/* <div className="flex items-center text-sm">
                         <Users className="mr-1 h-4 w-4 text-muted-foreground" />
                         <span>
                             {batch.enrolled}/{batch.seats} enrolled
                         </span>
-                    </div>
+                    </div> */}
                     <StatusBadge status={getStatus(batch)} />
                 </div>
             </CardContent>

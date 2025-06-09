@@ -16,7 +16,7 @@ export default function LandingPageServices() {
     const { user, isSignedIn } = useUser()
     const features = [
         {
-            title: "Mock Test",
+            title: "7 AI Powered Mock Test",
             description: "Just Like the Real Test",
             icon: FileText,
             color: "bg-blue-500",
@@ -24,7 +24,7 @@ export default function LandingPageServices() {
             loginRequired: true
         },
         {
-            title: "Practice Question",
+            title: "400+ Practice Question",
             description: "Focus on Weak Areas",
             icon: BookOpen,
             color: "bg-purple-500",

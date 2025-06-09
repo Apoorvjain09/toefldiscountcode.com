@@ -25,6 +25,26 @@ const classData: ClassItem[] = [
     { date: '10th April 2025', time: '2:30 pm to 4 pm', duration: '1.5 hrs', subject: 'IELTS' },
     { date: '11th April 2025', time: '6 pm to 7:30 pm', duration: '1.5 hrs', subject: 'TOEFL' },
     { date: '12th April 2025', time: '8 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
+
+    // June 2025 Schedule
+    { date: '3rd June 2025', time: '8:00 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '4th June 2025', time: '10:00 pm to 11:30 pm', duration: '1.5 hrs', subject: 'PTE' },
+    { date: '5th June 2025', time: '7:00 am to 8:30 am', duration: '1.5 hrs', subject: 'GRE/GMAT' },
+    { date: '6th June 2025', time: '8:00 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '7th June 2025', time: '7:00 am to 8:30 am', duration: '1.5 hrs', subject: 'Duolingo' },
+    { date: '10th June 2025', time: '10:00 pm to 11:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '11th June 2025', time: '6:00 pm to 7:30 pm', duration: '1.5 hrs', subject: 'PTE' },
+    { date: '12th June 2025', time: '8:00 pm to 9:30 pm', duration: '1.5 hrs', subject: 'SAT' },
+    { date: '14th June 2025', time: '8:00 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '17th June 2025', time: '6:00 pm to 7:30 pm', duration: '1.5 hrs', subject: 'TOEFL' },
+    { date: '18th June 2025', time: '8:00 am to 9:30 am', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '18th June 2025', time: '8:00 pm to 9:30 pm', duration: '1.5 hrs', subject: 'GRE/GMAT' },
+    { date: '21st June 2025', time: '6:00 pm to 7:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '21st June 2025', time: '8:00 am to 9:30 am', duration: '1.5 hrs', subject: 'PTE' },
+    { date: '21st June 2025', time: '10:00 pm to 11:30 pm', duration: '1.5 hrs', subject: 'Duolingo' },
+    { date: '24th June 2025', time: '6:00 pm to 7:30 pm', duration: '1.5 hrs', subject: 'SAT' },
+    { date: '25th June 2025', time: '2:30 pm to 4:00 pm', duration: '1.5 hrs', subject: 'IELTS' },
+    { date: '28th June 2025', time: '8:00 pm to 9:30 pm', duration: '1.5 hrs', subject: 'IELTS' },
 ];
 
 export function ClassesCalanderView() {

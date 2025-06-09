@@ -104,7 +104,7 @@ export default function WhatsappCommunityPopup({ onJoinSuccess }: { onJoinSucces
                                                 New
                                             </Badge>
                                         </div>
-                                        <span className="text-xs opacity-90">900+ Students</span>
+                                        <span className="text-xs opacity-90">500+ Students</span>
                                     </div>
                                     <ChevronRight className="h-4 w-4 opacity-70 transition-transform group-hover:translate-x-1" />
                                 </Button>
@@ -171,7 +171,7 @@ export default function WhatsappCommunityPopup({ onJoinSuccess }: { onJoinSucces
                                             </div>
                                         ))}
                                         <div className="pl-5 flex items-center justify-center w-8 h-8 rounded-full bg-muted text-xs font-medium">
-                                            +245
+                                            +500
                                         </div>
                                     </div>
                                 </div>

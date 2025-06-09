@@ -13,7 +13,8 @@ import {
   DollarSignIcon,
   ShieldQuestionIcon,
   LayoutTemplate,
-  HandCoins
+  HandCoins,
+  MessageCircleMore
 } from 'lucide-react';
 import { SidebarDesktop } from './sidebar-desktop';
 import { SidebarItems } from '@/types';
@@ -42,16 +43,16 @@ export default function Sidebar() {
       { label: 'Toefl Templates', href: '/templates', icon: LayoutTemplate },
       // { label: 'Score Reporting', href: '/score-reporting', icon: Mail },
       { label: 'Book Counseling Slot', href: '/book-counseling', icon: ScreenShare },
-      {
-        href: '/book',
-        icon: List,
-        label: 'Books/ Materials',
-      },
       // {
-      //   href: '/forum',
-      //   icon: MessageCircleMore,
-      //   label: 'Biggest Toefl Forum',
+      //   href: '/book',
+      //   icon: List,
+      //   label: 'Books/ Materials',
       // },
+      {
+        href: '/forum',
+        icon: MessageCircleMore,
+        label: 'Biggest Toefl Forum',
+      },
       // {
       //   href: '/study-partner',
       //   icon: Bookmark,
@@ -77,16 +78,16 @@ export default function Sidebar() {
         icon: DollarSignIcon,
         label: 'Monthly Pricing',
       },
-      {
-        href: 'https://gre-resources.com/gre-books',
-        icon: BookCopy,
-        label: 'Gre Resources',
-      },
-      {
-        href: 'https://gre-resources.com/gre-vouchers',
-        icon: TicketPercent,
-        label: 'Gre Discount Vouchers',
-      },
+      // {
+      //   href: 'https://gre-resources.com/gre-books',
+      //   icon: BookCopy,
+      //   label: 'Gre Resources',
+      // },
+      // {
+      //   href: 'https://gre-resources.com/gre-vouchers',
+      //   icon: TicketPercent,
+      //   label: 'Gre Discount Vouchers',
+      // },
       // {
       //   href: '/profile',
       //   icon: User,

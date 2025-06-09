@@ -6,62 +6,38 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 
 const courseBatches: Record<string, Batch[]> = {
-    pte: [
-        { id: 1, date: "3rd March", seats: 12, enrolled: 8 },
-        { id: 2, date: "19th March", seats: 15, enrolled: 3 },
-        { id: 16, date: "3rd March", seats: 12, enrolled: 4 },
-        { id: 27, date: "19th March", seats: 18, enrolled: 10 },
-        { id: 32, date: "5th April", seats: 14, enrolled: 14 },
-    ],
     ielts: [
-        { id: 3, date: "4th March", seats: 10, enrolled: 10 },
-        { id: 4, date: "8th March", seats: 12, enrolled: 12 },
-        { id: 5, date: "13th March", seats: 15, enrolled: 15 },
-        { id: 6, date: "17th March", seats: 12, enrolled: 12 },
-        { id: 7, date: "21st March", seats: 15, enrolled: 10 },
-        { id: 8, date: "25th March", seats: 10, enrolled: 10 },
-        { id: 9, date: "28th March", seats: 12, enrolled: 12 },
-        { id: 17, date: "4th March", seats: 22, enrolled: 22 },
-        { id: 20, date: "8th March", seats: 11, enrolled: 9 },
-        { id: 23, date: "13th March", seats: 21, enrolled: 11 },
-        { id: 24, date: "17th March", seats: 10, enrolled: 7 },
-        { id: 28, date: "21st March", seats: 24, enrolled: 17 },
-        { id: 29, date: "25th March", seats: 15, enrolled: 15 },
-        { id: 30, date: "28th March", seats: 16, enrolled: 14 },
-        { id: 33, date: "3rd April", seats: 15, enrolled: 12 },
-        { id: 34, date: "8th April", seats: 14, enrolled: 10 },
-        { id: 35, date: "10th April", seats: 16, enrolled: 8 },
-        { id: 36, date: "12th April", seats: 20, enrolled: 7 },
+        { id: 1, date: "3rd June", seats: 20, enrolled: 0 },
+        { id: 2, date: "6th June", seats: 20, enrolled: 0 },
+        { id: 3, date: "10th June", seats: 20, enrolled: 0 },
+        { id: 4, date: "14th June", seats: 20, enrolled: 0 },
+        { id: 5, date: "18th June", seats: 20, enrolled: 0 },
+        { id: 6, date: "21st June", seats: 20, enrolled: 0 },
+        { id: 7, date: "25th June", seats: 20, enrolled: 0 },
+        { id: 8, date: "28th June", seats: 20, enrolled: 0 },
     ],
-    gre_gmat: [
-        { id: 10, date: "4th March", seats: 8, enrolled: 8 },
-        { id: 11, date: "18th March", seats: 10, enrolled: 10 },
-        { id: 18, date: "4th March", seats: 20, enrolled: 20 },
-        { id: 26, date: "18th March", seats: 16, enrolled: 16 },
-        { id: 37, date: "5th April", seats: 10, enrolled: 6 },
-    ],
-    german_a1: [
-        { id: 12, date: "6th March", seats: 15, enrolled: 15 },
-        { id: 19, date: "6th March", seats: 10, enrolled: 10 },
-        { id: 38, date: "5th April", seats: 10, enrolled: 6 },
-    ],
-    sat: [
-        { id: 13, date: "10th March", seats: 12, enrolled: 12 },
-        { id: 21, date: "10th March", seats: 14, enrolled: 14 },
-        { id: 39, date: "3rd April", seats: 18, enrolled: 13 },
-    ],
-    duolingo: [
-        { id: 14, date: "11th March", seats: 20, enrolled: 20 },
-        { id: 15, date: "28th March", seats: 20, enrolled: 19 },
-        { id: 22, date: "11th March", seats: 15, enrolled: 5 },
-        { id: 31, date: "28th March", seats: 16, enrolled: 9 },
-        { id: 40, date: "4th April", seats: 12, enrolled: 3 },
+    pte: [
+        { id: 1, date: "4th June", seats: 20, enrolled: 0 },
+        { id: 2, date: "11th June", seats: 20, enrolled: 0 },
+        { id: 3, date: "21st June", seats: 20, enrolled: 0 },
     ],
     toefl: [
-        { id: 25, date: "17th March", seats: 13, enrolled: 13 },
-        { id: 41, date: "11th April", seats: 14, enrolled: 9 },
+        { id: 1, date: "17th June", seats: 20, enrolled: 0 },
+    ],
+    duolingo: [
+        { id: 1, date: "7th June", seats: 20, enrolled: 0 },
+        { id: 2, date: "21st June", seats: 20, enrolled: 0 },
+    ],
+    gre_gmat: [
+        { id: 1, date: "5th June", seats: 20, enrolled: 0 },
+        { id: 2, date: "18th June", seats: 20, enrolled: 0 },
+    ],
+    sat: [
+        { id: 1, date: "12th June", seats: 20, enrolled: 0 },
+        { id: 2, date: "24th June", seats: 20, enrolled: 0 },
     ],
 };
+
 type Batch = {
     id: number;
     date: string;

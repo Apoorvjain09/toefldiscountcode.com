@@ -14,6 +14,19 @@ export const GoogleAnalyticsTracking = () => {
           gtag('config', 'AW-16486749894');
         `}
       </Script>
+
+
+
+      {/* Google Analytics Tracking (G-C9335FF58T) */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C9335FF58T" />
+      <Script id="google-analytics-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-C9335FF58T');
+        `}
+      </Script>
     </>
- );
+  );
 }

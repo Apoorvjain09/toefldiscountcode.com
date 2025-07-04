@@ -30,7 +30,7 @@ export default function VoucherPurchaseExplanation({ voucher, booking, discount 
 
                     <h2 className="font-bold text-2xl text-gray-900">How Much Can You Save?</h2>
                     <p>
-                        Purchasing a prepaid voucher from authorized vendors like MJ Study Abroad can help you save up to ₹{16900 - Number(voucher.replace(/,/g, ''))} on your total exam fees. These vouchers are typically valid for 8 to 11 months from the date of purchase, making them a flexible and cost-effective choice for planning your TOEFL Exam.
+                        Purchasing a prepaid voucher from authorized vendors like MJ Study Abroad can help you save up to ₹{16900 - Number(voucher.replace(/,/g, ''))} on your total exam fees.
                     </p>
 
                     <Separator />

@@ -16,7 +16,6 @@ export const GoogleAnalyticsTracking = () => {
       </Script>
 
 
-
       {/* Google Analytics Tracking (G-C9335FF58T) */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C9335FF58T" />
       <Script id="google-analytics-tag" strategy="afterInteractive">

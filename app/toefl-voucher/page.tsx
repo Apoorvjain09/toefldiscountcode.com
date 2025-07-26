@@ -15,9 +15,9 @@ import ToeflVoucherImageGallery from "./ToeflVoucherImageGallery";
 
 const Page = () => {
 
-  const TOEFL_Voucher = "13,000";
+  const TOEFL_Voucher = "13,500";
   const TOEFL_Exam_Booking = "12,400";
-  const TOEFL_Discount_Code = "16,400";
+  const TOEFL_Discount_Code = "15,700";
 
   return (
     <div className="">

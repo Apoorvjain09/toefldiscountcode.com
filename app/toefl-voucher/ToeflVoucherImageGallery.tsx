@@ -44,7 +44,7 @@ export default function ToeflVoucherImageGallery() {
         // }
         {
             id: 1,
-            src: "https://www.dropbox.com/scl/fi/ygz4pmp7612cfbbd2v07j/9-july-new-toefl-video.mp4?rlkey=vlkr84sazbquh4kuy5uvl2ssp&st=9jqjusiz&raw=1",
+            src: "https://www.dropbox.com/scl/fi/db3wmhncilkab185jv2i8/voucher-1200off.mp4?rlkey=2kx5kcl3ajipplbhop1gsrocf&st=prdpesi4&raw=1",
             alt: "Video 2",
             caption: "Follow Steps Told in the VIDEO ☺️",
         },

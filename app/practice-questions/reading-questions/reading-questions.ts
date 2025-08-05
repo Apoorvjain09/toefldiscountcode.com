@@ -3930,7 +3930,7 @@ export const quizData: { passages: Passage[] } = {
                 {
                     id: 8,
                     question: "Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
-                    highlighted_sentence:"If the pores are large, the water in them will exist as drops too heavy for surface tension to hold, and it will drain away; but if the pores are small enough, the water in them will exist as thin films, too light to overcome the force of surface tension holding them in place; then the water will be firmly held.",
+                    highlighted_sentence: "If the pores are large, the water in them will exist as drops too heavy for surface tension to hold, and it will drain away; but if the pores are small enough, the water in them will exist as thin films, too light to overcome the force of surface tension holding them in place; then the water will be firmly held.",
                     options: [
                         "Surface tension is not strong enough to retain drops of water in rocks with large pores, but it’s strong enough to hold on to thin films of water in rocks with small pores.",
                         "Water in rocks is held in place by large pores and drains away from small size pores through surface tension.",
@@ -3962,7 +3962,7 @@ export const quizData: { passages: Passage[] } = {
                         [9] The relative amount of these two kinds of water varies greatly from one kind of rock or sediment to another, even though their porosities may be the same. What happens depends on pore size. If the pores are large, the water in them will exist as drops too heavy for surface tension to hold, and it will drain away; but if the pores are small enough, the water in them will exist as thin films, too light to overcome the force of surface tension holding them in place; then the water will be firmly held.
                     `,
                     question: 'Look at the four squares [⬛] that show where the following sentence could be inserted in the passage.',
-                    insertion_sentence: "Such findings, agree Soffer and Adovasio, reveal just how shaky the most widely accepted reconstructions of Upper Paleolithic life are",
+                    insertion_sentence: "This distinction is essential for hydrogeologists, as it helps determine how much usable water can actually be extracted from a geological formation.",
                     options: [
                         "Blank A",
                         "Blank B",
@@ -3971,7 +3971,14 @@ export const quizData: { passages: Passage[] } = {
                     ],
                     correct_answer: 'C',
                     answer_explanation: dedent`
+                        The sentence explains the **practical importance of distinguishing between drainable and retained water**, which is exactly what is introduced in the sentence that follows Blank C:
+                        
+                        > "The total volume of water in the saturated sample must therefore be thought of as consisting of water that can, and water that cannot, drain away."
 
+                        ✅ So, inserting the sentence at **Blank C** provides a logical transition from the physical behavior of water (surface tension) to the implication for hydrogeology.
+                        
+                        ❌ Blank A and B are too early—surface tension hasn’t been explained yet.
+                        ❌ Blank D is too late—the core point has already been made.
                     `
                 },
                 {
@@ -4020,16 +4027,16 @@ export const quizData: { passages: Passage[] } = {
             `,
             questions: [
                 {
-                  id: 1,
-                  question: "The word “extensive” in the passage is closest in meaning to",
-                  options: [
-                    "A. wide",
-                    "B. precise",
-                    "C. growing",
-                    "D. obscure"
-                  ],
-                  correct_answer: "A",
-                  answer_explanation: dedent`
+                    id: 1,
+                    question: "The word “extensive” in the passage is closest in meaning to",
+                    options: [
+                        "A. wide",
+                        "B. precise",
+                        "C. growing",
+                        "D. obscure"
+                    ],
+                    correct_answer: "A",
+                    answer_explanation: dedent`
                     The word “extensive” refers to something that covers a large area or range. In this context, “wide” best captures the intended meaning. 
               
                     ❌ Option B (“precise”) and ❌ Option D (“obscure”) are unrelated to scale or breadth. 
@@ -4039,16 +4046,16 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 2,
-                  question: "According to paragraph 1, all of the following characteristics make birds the perfect candidate for habitat selection EXCEPT",
-                  options: [
-                    "A. their ability to reproduce in various habitats",
-                    "B. their preference to feed in certain types of environments ",
-                    "C. the mobility allowing them to move quickly to other locations",
-                    "D. the fact that they pass through different habitats in their migration"
-                  ],
-                  correct_answer: "A",
-                  answer_explanation: dedent`
+                    id: 2,
+                    question: "According to paragraph 1, all of the following characteristics make birds the perfect candidate for habitat selection EXCEPT",
+                    options: [
+                        "A. their ability to reproduce in various habitats",
+                        "B. their preference to feed in certain types of environments ",
+                        "C. the mobility allowing them to move quickly to other locations",
+                        "D. the fact that they pass through different habitats in their migration"
+                    ],
+                    correct_answer: "A",
+                    answer_explanation: dedent`
                     Paragraph 1 does not mention that birds reproduce in various habitats; it focuses on feeding preferences, mobility, and migration. 
               
                     ✅ Options B, C, and D are clearly supported in the paragraph. 
@@ -4056,16 +4063,16 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 3,
-                  question: "Why does the author mention the Black Skimmers and Piping Plovers?",
-                  options: [
-                    "A. To illustrate how continued coastal erosion has created suitable habitats for certain birds",
-                    "B. To support the argument that introduced species have caused irreversible damage to indigenous wildlife",
-                    "C. To provide an example of habitat restoration that increased declining bird populations",
-                    "D. To demonstrate that particular species of birds will prefer undisturbed habitats over artificially built ones"
-                  ],
-                  correct_answer: "C",
-                  answer_explanation: dedent`
+                    id: 3,
+                    question: "Why does the author mention the Black Skimmers and Piping Plovers?",
+                    options: [
+                        "A. To illustrate how continued coastal erosion has created suitable habitats for certain birds",
+                        "B. To support the argument that introduced species have caused irreversible damage to indigenous wildlife",
+                        "C. To provide an example of habitat restoration that increased declining bird populations",
+                        "D. To demonstrate that particular species of birds will prefer undisturbed habitats over artificially built ones"
+                    ],
+                    correct_answer: "C",
+                    answer_explanation: dedent`
                     The author uses these examples to show that restoration efforts helped recover populations of birds previously in decline.
               
                     ❌ Options A and B are not supported in the context.
@@ -4075,16 +4082,16 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 4,
-                  question: "The word “jeopardized” in the passage is closest in meaning to",
-                  options: [
-                    "A. mixed",
-                    "B. suffered",
-                    "C. expanded",
-                    "D. endangered"
-                  ],
-                  correct_answer: "D",
-                  answer_explanation: dedent`
+                    id: 4,
+                    question: "The word “jeopardized” in the passage is closest in meaning to",
+                    options: [
+                        "A. mixed",
+                        "B. suffered",
+                        "C. expanded",
+                        "D. endangered"
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
                     “Jeopardized” means being put at risk or endangered.
               
                     ❌ Options A, B, and C do not convey the threat or risk implied.
@@ -4093,16 +4100,16 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 5,
-                  question: "The word “notion” in the passage is closest in meaning to",
-                  options: [
-                    "A. definition",
-                    "B. possibility",
-                    "C. reality",
-                    "D. belief"
-                  ],
-                  correct_answer: "D",
-                  answer_explanation: dedent`
+                    id: 5,
+                    question: "The word “notion” in the passage is closest in meaning to",
+                    options: [
+                        "A. definition",
+                        "B. possibility",
+                        "C. reality",
+                        "D. belief"
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
                     “Notion” refers to an idea or belief. 
               
                     ❌ Options A and C suggest fixed or factual meanings.
@@ -4112,17 +4119,17 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 6,
-                  question: "Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
-                  highlighted_sentence:"Some birds can live in suburban and even urban environments; other species whose habitat requirements are specific, especially area-sensitive birds requiring large tracts of woodland or grassland, have more difficulty finding suitable habitat amidst our ever-developing human landscape.",
-                  options: [
-                    "A. The higher the birds’ area-sensitivity, the more they are to modify their food preference and breeding needs based on the changes in their habitat.",
-                    "B. Being area-sensitive to large tracts of woodland, particular species of birds actively migrate to suitable habitats instead of adapting to emerging suburban or urban communities.",
-                    "C. The landscape is forever changing due to human development so birds must be able to adapt or face elimination.",
-                    "D. Often birds having the ability to live in suburban or urban environments can more easily adapt to habitats reshaped by human development."
-                  ],
-                  correct_answer: "D",
-                  answer_explanation: dedent`
+                    id: 6,
+                    question: "Which of the sentences below best expresses the essential information in the highlighted sentence in the passage? Incorrect choices change the meaning in important ways or leave out essential information.",
+                    highlighted_sentence: "Some birds can live in suburban and even urban environments; other species whose habitat requirements are specific, especially area-sensitive birds requiring large tracts of woodland or grassland, have more difficulty finding suitable habitat amidst our ever-developing human landscape.",
+                    options: [
+                        "A. The higher the birds’ area-sensitivity, the more they are to modify their food preference and breeding needs based on the changes in their habitat.",
+                        "B. Being area-sensitive to large tracts of woodland, particular species of birds actively migrate to suitable habitats instead of adapting to emerging suburban or urban communities.",
+                        "C. The landscape is forever changing due to human development so birds must be able to adapt or face elimination.",
+                        "D. Often birds having the ability to live in suburban or urban environments can more easily adapt to habitats reshaped by human development."
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
                     The highlighted sentence discusses adaptability of birds in altered environments. 
               
                     ✅ Option (D) best reflects that idea.
@@ -4135,16 +4142,16 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 7,
-                  question: "The author’s description of sink habitats mention all of the following EXCEPT",
-                  options: [
-                    "A. These habitats are mostly occupied by younger, inexperienced birds.",
-                    "B. Birds that dwell in these habitats typically suffer a decline in population. ",
-                    "C. Mature birds are unable to survive in such locations due to inferior conditions.",
-                    "D. The habitats may be unfertile to birds but are still preferred when compared to uninhabitable ones."
-                  ],
-                  correct_answer: "C",
-                  answer_explanation: dedent`
+                    id: 7,
+                    question: "The author’s description of sink habitats mention all of the following EXCEPT",
+                    options: [
+                        "A. These habitats are mostly occupied by younger, inexperienced birds.",
+                        "B. Birds that dwell in these habitats typically suffer a decline in population. ",
+                        "C. Mature birds are unable to survive in such locations due to inferior conditions.",
+                        "D. The habitats may be unfertile to birds but are still preferred when compared to uninhabitable ones."
+                    ],
+                    correct_answer: "C",
+                    answer_explanation: dedent`
                     The passage mentions that younger birds often occupy sink habitats and that these areas lead to population decline.
               
                     ❌ Option C is not supported — mature birds are not said to be unable to survive.
@@ -4153,16 +4160,16 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 8,
-                  question: "The author uses the Black-throated Blue Warbler of North America in paragraph 4 in order to",
-                  options: [
-                    "A. contrast the structural difference between source habitats and sink habitats.",
-                    "B. illustrate how nesting preferences are passed on to offspring through experience .",
-                    "C. explain why sink habitats are so valuable to the reproduction success of younger birds.",
-                    "D. provide proof that more experienced birds prefer source habitats while being able to survive in sink habitats."
-                  ],
-                  correct_answer: "D",
-                  answer_explanation: dedent`
+                    id: 8,
+                    question: "The author uses the Black-throated Blue Warbler of North America in paragraph 4 in order to",
+                    options: [
+                        "A. contrast the structural difference between source habitats and sink habitats.",
+                        "B. illustrate how nesting preferences are passed on to offspring through experience .",
+                        "C. explain why sink habitats are so valuable to the reproduction success of younger birds.",
+                        "D. provide proof that more experienced birds prefer source habitats while being able to survive in sink habitats."
+                    ],
+                    correct_answer: "D",
+                    answer_explanation: dedent`
                     The example of the Black-throated Blue Warbler shows that older birds prefer source habitats and have greater survival success.
               
                     ✅ This supports option (D). 
@@ -4172,23 +4179,23 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 9,
-                  question: 'Look at the four squares [⬛] that show where the following sentence could be inserted in the passage.',
-                  insertion_sentence: "The loss of undeveloped beaches has, for example, threatened the Black Skimmer and Piping Plover along the Gulf Coast of the United States, both of which nest on sandy and shell beaches and islands.",
-                  insertion_passage:`
+                    id: 9,
+                    question: 'Look at the four squares [⬛] that show where the following sentence could be inserted in the passage.',
+                    insertion_sentence: "The loss of undeveloped beaches has, for example, threatened the Black Skimmer and Piping Plover along the Gulf Coast of the United States, both of which nest on sandy and shell beaches and islands.",
+                    insertion_passage: `
                     1] Bird habitat selection is an extensive subject matter largely in part because both amateur and professional students of birds have accumulated an enormous amount of information on which birds live where, and how they operate in their environments. Additionally, birds are ideal subjects for studies of habitat selection, because they are highly mobile, often migrating thousands of miles and in the process passing over an enormous range of environments, and yet ordinarily forage, breed, and winter in very specific habitats. In order to better understand how bird behavior is altered either by natural phenomena or by human activities, and to stop the continued decline of bird populations, researchers record and study detailed observations of the habitat selections of birds.
                     [2] Habitat erosion has either limited or eliminated access to appropriate habitats and is directly responsible for the declining populations of certain bird species. [A] ⬛ The populations of these species mainly continue to plummet due to constant development, disturbance by humans, and coastal erosion. [B] ⬛ Oil spills are even more disastrous, as toxic chemicals rapidly diminish the species’ already-shrinking populations. [C] ⬛ Further, the birds’ populations are jeopardized by introduced species, both domesticated and wild, which have continued the reduction of available habitat and reproduction success. [D] ⬛ It was thus reasoned that if the populations of these birds are declining because of habitat loss, then the creation of artificial beaches in areas inaccessible to people and their pets ought to attract breeding Black Skimmers and Piping Plovers, helping local populations rebound. Recent habitat restoration experiments have been conducted in southern California and have resulted in favorable outcomes when material raised from the bottom of the sea was used to produce artificial beaches and sandbars, allowing both of the aforementioned species of birds to occupy the sites and reproduce successfully.
                     [3] Another promising habitat conversion technique based on the notion that specific species are linked to specific environments is habitat management. Exactly what type of management depends on a species’ food preferences, foraging strategies, and nest site requirements. Some birds can live in suburban and even urban environments; other species whose habitat requirements are specific, especially area-sensitive birds requiring large tracts of woodland or grassland, have more difficulty finding suitable habitat amidst our ever-developing human landscape. A current example of habitat management is the regular controlled burning of the low scrubby habitat of the Florida Scrub Jay, an endangered species numbering in the mere thousands. Once, the species’ habitat burned irregularly but naturally as a result of lightning strikes, creating a patchwork of scrub oak woodland with open, sandy patches surrounded by other plants. The scrub jays generally nest in wide areas of open pine or oak habitats. When the natural fires were quickly suppressed by the growing human communities in Florida though, the scrub oak thickets eventually became tall and dense. Initially, the Scrub Jay populations still fared relatively well under these conditions, but the subsequent arrival of egg-eating blue jays soon reduced their numbers. To counter the drop in populations, environmental groups within the state have made a strong effort at preserving Florida's remaining scrub through controlled burns and even clearing out areas of large trees to increase the size of a scrub habitat. Although the number of Scrub Jay breeding pairs is still thought to be dropping, the protection method seems to have slowed down the rate of decline.
                     [4] In addition to the habitat conservation and management, the birds’ ability to breed more successfully in specific habitat types and their strong preferences for some places over others, even if they are capable of reproducing in a variety of environments must be taken into account. Researchers have found that individuals able to exercise their habitat preferences will generally leave more descendants than those unable to do so. While widespread findings have shown that members of an animal species often occupy both source habitats (where the population grows) and sink habitats (where the population declines), poor-quality sink habitats are utilized by individuals that are unable to insert themselves into superior source habitats, often because they are excluded by older, more experienced competitors and so must make the best of a bad situation elsewhere. A prime example of this phenomenon can be observed in the Black-throated Blue Warbler of North America, which prefers nesting in tall hardwood forests with a dense layer of shorter trees and shrubs even though it can breed in forests with a lower shrub density. Older, experienced warblers tend to occupy sites with a high shrub density, relegating younger birds to occupy woodlands with lower shrub density. Birds able to acquire territories in the forests with higher shrub density produce significantly more offspring than their lower shrub occupying counterparts. The same breeding success can also be observed in birds such as the Blue Tit, which have higher reproductive success in woodlands than in hedgerows.
                   `,
-                  options: [
-                    "Blank A",
-                    "Blank B",
-                    "Blank C",
-                    "Blank D",
-                  ],
-                  correct_answer: "B",
-                  answer_explanation: dedent`
+                    options: [
+                        "Blank A",
+                        "Blank B",
+                        "Blank C",
+                        "Blank D",
+                    ],
+                    correct_answer: "B",
+                    answer_explanation: dedent`
                     The sentence describes how loss of habitat has negatively impacted bird populations — the key idea is threat due to habitat loss.
               
                     ✅ Option (B) accurately reflects that idea.
@@ -4198,18 +4205,18 @@ export const quizData: { passages: Passage[] } = {
                   `
                 },
                 {
-                  id: 10,
-                  summarization_intro_sentence: "Observations of the habitat selections of birds have brought habitat restoration and management plans greater success.",
-                  options: [
-                    "A. The arrival of certain kinds of birds has excluded some birds from their source habitats, further reducing their already dwindling populations. ",
-                    "B. Planned fires generated by humans can sometimes restore bird habitats and decelerate population declines in bird species.",
-                    "C. Decreased population density in source habitats lends support to the idea that better management of superior sink habitats may boost reproduction rates.",
-                    "D. Habitat restoration projects and habitat management plans are based on the concept that a strong connection exists between changes to a habitat and population declines. ",
-                    "E. Certain species of birds are able to breed in multiple habitats, but these species generally have more success breeding in preferred environments.",
-                    "F. Despite efforts by environmental groups, habitat loss has not been slowed because of the increasing human population and its demand for land."
-                  ],
-                  correct_answer: "BDE",
-                  answer_explanation: dedent`
+                    id: 10,
+                    summarization_intro_sentence: "Observations of the habitat selections of birds have brought habitat restoration and management plans greater success.",
+                    options: [
+                        "A. The arrival of certain kinds of birds has excluded some birds from their source habitats, further reducing their already dwindling populations. ",
+                        "B. Planned fires generated by humans can sometimes restore bird habitats and decelerate population declines in bird species.",
+                        "C. Decreased population density in source habitats lends support to the idea that better management of superior sink habitats may boost reproduction rates.",
+                        "D. Habitat restoration projects and habitat management plans are based on the concept that a strong connection exists between changes to a habitat and population declines. ",
+                        "E. Certain species of birds are able to breed in multiple habitats, but these species generally have more success breeding in preferred environments.",
+                        "F. Despite efforts by environmental groups, habitat loss has not been slowed because of the increasing human population and its demand for land."
+                    ],
+                    correct_answer: "BDE",
+                    answer_explanation: dedent`
                     ✅ Options B, D, and E align with the idea that knowledge of bird habitat selection helps improve restoration efforts.
               
                     ❌ Options A, C, and F either misinterpret the relationship or shift focus from habitat management.

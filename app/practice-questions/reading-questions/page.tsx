@@ -229,7 +229,7 @@ export default function ToeflReadingTest() {
                 <div className="space-y-8">
                     <div className="grid gap-8 md:grid-cols-2">
                         <Card className={`md:row-span-2 ${showCardHeader ? "" : "pt-4"}`}>
-                            {showCardHeader && (
+                            {(currentQuestionIndex !== totalQuestions - 1) && showCardHeader && (
                                 <CardHeader>
                                     <CardTitle className="flex items-center justify-between">
                                         <div className="flex gap-2">
@@ -254,7 +254,7 @@ export default function ToeflReadingTest() {
                                 </CardContent>
                             ) : (
                                 <CardContent>
-                                    <div className="p-4 border border-gray-300 rounded-lg">
+                                    <div className="p-4 border border-gray-300 rounded-lg mt-4">
                                         <h2 className="text-lg font-semibold"><span className="italic">{selectedSummarizationOptions.length > 0 && "ORDER - "}</span>Selected Answer</h2>
 
                                         {selectedSummarizationOptions.length > 0 ? (

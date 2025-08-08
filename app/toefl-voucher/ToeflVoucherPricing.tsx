@@ -21,6 +21,7 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from 'next/link'
 import { submitVoucherForm } from '@/lib/supabaseActions'
+import TOEFLVoucherForm from './ToeflVoucherForm'
 
 interface HeroProps {
     voucher: string;
@@ -31,6 +32,8 @@ interface HeroProps {
 export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) {
     const [openCheckReliabilityModal, setOpenCheckReliabilityModal] = useState(false);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+    const [openModal, setOpenModal] = useState(false)
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
     const pricingOptions = [
         {
@@ -40,13 +43,6 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
             description: "You will get the code through watching the youtube video.",
             bookingMethod: "youtube_code",
         },
-        // {
-        //     price: booking,
-        //     actualPrice: 16900,
-        //     savings: 16900 - Number(booking.replace(/,/g, '')),
-        //     description: "We will book the exam slot for you, you will not get the voucher code",
-        //     bookingMethod: "slot_booking",
-        // },
         {
             price: voucher,
             actualPrice: 16900,
@@ -54,6 +50,13 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
             description: "You will get the voucher code on your registered Email ID",
             bookingMethod: "buy_voucher",
             popular: true,
+        },
+        {
+            price: booking,
+            actualPrice: 16900,
+            savings: 16900 - Number(booking.replace(/,/g, '')),
+            description: "We will book the exam slot for you.",
+            bookingMethod: "slot_booking",
         },
     ]
 
@@ -101,7 +104,7 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
         <>
             <div id="pricing-section" className="container mx-auto px-4 py-8">
                 <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">TOEFL Exam Booking Options</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {pricingOptions.map((option, index) => (
                         <Card key={index} className={`flex flex-col ${option.popular ? 'border-gray-800' : ''}`}>
                             <CardHeader>
@@ -129,13 +132,14 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
                                     {option.bookingMethod === 'buy_voucher' && (
                                         <>
                                             <MailIcon className="mr-2 h-4 w-4" />
-                                            <span>Get voucher code on email</span>
+                                            {/* <span>Get voucher code on email</span> */}
+                                            <span>Contact us at 9310017599</span>
                                         </>
                                     )}
                                     {option.bookingMethod === 'slot_booking' && (
                                         <>
                                             <FaWhatsapp className="mr-2 h-4 w-4" />
-                                            <span>Talk to counselor via whatsapp</span>
+                                            <span>Contact us at 9310017599</span>
                                         </>
                                     )}
                                 </div>
@@ -154,7 +158,8 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
                                                         window.open("https://rzp.io/l/6UO7bMkD", "_blank");
                                                     }
                                                     if (option.bookingMethod === 'slot_booking') {
-                                                        window.open("https://wa.me/918802880181?text=Hi%2C%20I%E2%80%99m%20interested%20in%20purchasing%20a%20TOEFL%20voucher.%20Could%20you%20share%20the%20details%3F", "_blank");
+                                                        // window.open("https://wa.me/918802880181?text=Hi%2C%20I%E2%80%99m%20interested%20in%20purchasing%20a%20TOEFL%20voucher.%20Could%20you%20share%20the%20details%3F", "_blank");
+                                                        setOpenModal(true)
                                                     }
                                                 }}
                                             >
@@ -428,6 +433,15 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
                     </Tabs>
                 </DialogContent>
             </Dialog>
+
+
+
+            <TOEFLVoucherForm
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+                isSubmitted={isSubmitted}
+                setIsSubmitted={setIsSubmitted}
+            />
         </>
     )
 }

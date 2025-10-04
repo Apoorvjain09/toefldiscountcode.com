@@ -17,7 +17,7 @@ const Page = () => {
 
   const TOEFL_Voucher = "13,500";
   const TOEFL_Exam_Booking = "12,500";
-  const TOEFL_Discount_Code = "15,486";
+  const TOEFL_Discount_Code = "16,491";
 
   return (
     <div className="">

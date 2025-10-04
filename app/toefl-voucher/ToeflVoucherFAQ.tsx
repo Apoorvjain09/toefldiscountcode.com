@@ -28,7 +28,7 @@ export default function ToeflVoucherFAQ({ voucher, booking, discount }: FAQProps
                     <AccordionTrigger>What are the benefits of booking a TOEFL exam through MJ Study Abroad?</AccordionTrigger>
                     <AccordionContent>
                         <ul className="list-disc pl-6 space-y-2">
-                            <li>Save up to ₹{16900 - Number(booking.replace(/,/g, ''))} compared to the regular registration price.</li>
+                            <li>Save up to ₹{18000 - Number(booking.replace(/,/g, ''))} compared to the regular registration price.</li>
                             <li>Multiple booking options – get a voucher code or let us book the slot for you.</li>
                             <li>Official ETS Partner (ETS Agent ID: IND3205101).</li>
                             <li>Secure payment process with instant confirmation.</li>
@@ -49,13 +49,13 @@ export default function ToeflVoucherFAQ({ voucher, booking, discount }: FAQProps
                     <AccordionContent>
                         <ul className="list-disc pl-6 space-y-2">
                             <li>
-                                **Option 1**: <strong>₹15,200</strong> (Save ₹{16900 - Number(discount.replace(/,/g, ''))}) Watch a short youtube video to get the code.
+                                **Option 1**: <strong>₹15,200</strong> (Save ₹{18000 - Number(discount.replace(/,/g, ''))}) Watch a short youtube video to get the code.
                             </li>
                             <li>
-                                **Option 2**: <strong>₹13,700</strong> (Save ₹{16900 - Number(booking.replace(/,/g, ''))}, Most Popular) – Receive a voucher code via email.
+                                **Option 2**: <strong>₹13,700</strong> (Save ₹{18000 - Number(booking.replace(/,/g, ''))}, Most Popular) – Receive a voucher code via email.
                             </li>
                             <li>
-                                **Option 3**: <strong>₹12,700</strong> (Save ₹{16900 - Number(voucher.replace(/,/g, ''))}) – We book the slot for you; no voucher code provided.
+                                **Option 3**: <strong>₹12,700</strong> (Save ₹{18000 - Number(voucher.replace(/,/g, ''))}) – We book the slot for you; no voucher code provided.
                             </li>
                         </ul>
                     </AccordionContent>
@@ -64,7 +64,7 @@ export default function ToeflVoucherFAQ({ voucher, booking, discount }: FAQProps
                 <AccordionItem value="item-5">
                     <AccordionTrigger>How much does the TOEFL exam cost without a voucher?</AccordionTrigger>
                     <AccordionContent>
-                        The standard TOEFL iBT exam price is ₹16,900. By booking through MJ Study Abroad, you can save up to ₹{16900 - Number(booking.replace(/,/g, ''))} depending on the option you choose.
+                        The standard TOEFL iBT exam price is ₹16,900. By booking through MJ Study Abroad, you can save up to ₹{18000 - Number(booking.replace(/,/g, ''))} depending on the option you choose.
                     </AccordionContent>
                 </AccordionItem>
 

@@ -38,26 +38,26 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
     const pricingOptions = [
         {
             price: discount,
-            actualPrice: 16900,
-            savings: 16900 - Number(discount.replace(/,/g, '')),
+            actualPrice: 18000,
+            savings: 18000 - Number(discount.replace(/,/g, '')),
             description: "You will get the code through watching the youtube video.",
             bookingMethod: "youtube_code",
         },
         {
             price: voucher,
-            actualPrice: 16900,
-            savings: 16900 - Number(voucher.replace(/,/g, '')),
+            actualPrice: 18000,
+            savings: 18000 - Number(voucher.replace(/,/g, '')),
             description: "You will get the voucher code on your registered Email ID",
             bookingMethod: "buy_voucher",
             popular: true,
         },
-        {
-            price: booking,
-            actualPrice: 16900,
-            savings: 16900 - Number(booking.replace(/,/g, '')),
-            description: "We will book the exam slot for you.",
-            bookingMethod: "slot_booking",
-        },
+        // {
+        //     price: booking,
+        //     actualPrice: 18000,
+        //     savings: 18000 - Number(booking.replace(/,/g, '')),
+        //     description: "We will book the exam slot for you.",
+        //     bookingMethod: "slot_booking",
+        // },
     ]
 
     const [formData, setFormData] = useState({
@@ -104,7 +104,7 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
         <>
             <div id="pricing-section" className="container mx-auto px-4 py-8">
                 <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">TOEFL Exam Booking Options</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
                     {pricingOptions.map((option, index) => (
                         <Card key={index} className={`flex flex-col ${option.popular ? 'border-gray-800' : ''}`}>
                             <CardHeader>

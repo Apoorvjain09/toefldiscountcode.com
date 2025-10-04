@@ -33,15 +33,15 @@ export default function ToeflVoucherTable({ voucher, booking, discount }: Discou
                     <TableBody>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Discount Code</TableCell>
-                            <TableCell>Rs {16900 - Number(discount.replace(/,/g, ''))}</TableCell>
+                            <TableCell>Rs {18000 - Number(discount.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Voucher</TableCell>
-                            <TableCell>Rs {16900 - Number(voucher.replace(/,/g, ''))}</TableCell>
+                            <TableCell>Rs {18000 - Number(voucher.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Booking</TableCell>
-                            <TableCell>Rs {16900 - Number(booking.replace(/,/g, ''))}</TableCell>
+                            <TableCell>Rs {18000 - Number(booking.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

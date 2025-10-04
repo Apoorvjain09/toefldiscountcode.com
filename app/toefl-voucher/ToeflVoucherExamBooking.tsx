@@ -15,7 +15,7 @@ export default function ToeflVoucherExamBooking({ voucher, booking, discount }: 
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-bold">TOEFL Exam Booking: Save Big on Your Test Fees</CardTitle>
                     <CardDescription className="text-gray-500 mt-2">
-                        Discover how you can save up to ₹{16900 - Number(booking.replace(/,/g, ''))} by booking your TOEFL Exam through MJ Study Abroad. Learn the process, benefits, and why this is the best option for you.
+                        Discover how you can save up to ₹{18000 - Number(booking.replace(/,/g, ''))} by booking your TOEFL Exam through MJ Study Abroad. Learn the process, benefits, and why this is the best option for you.
                     </CardDescription>
                 </CardHeader>
 
@@ -23,7 +23,7 @@ export default function ToeflVoucherExamBooking({ voucher, booking, discount }: 
                 <CardContent className="prose prose-lg text-gray-700 space-y-2">
                     <h2 className="font-bold text-2xl text-gray-900">Why Choose TOEFL Exam Booking?</h2>
                     <p>
-                        TOEFL Exam Booking offers a smarter alternative to purchasing a TOEFL Exam Voucher. Instead of handling the booking yourself, an authorized vendor representative will book the exam for you based on your preferred exam center and dates. This method not only saves time but also allows test-takers to enjoy significant discounts of up to ₹{16900 - Number(booking.replace(/,/g, ''))}.
+                        TOEFL Exam Booking offers a smarter alternative to purchasing a TOEFL Exam Voucher. Instead of handling the booking yourself, an authorized vendor representative will book the exam for you based on your preferred exam center and dates. This method not only saves time but also allows test-takers to enjoy significant discounts of up to ₹{18000 - Number(booking.replace(/,/g, ''))}.
                     </p>
 
                     <Separator />

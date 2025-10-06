@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { MdError } from "react-icons/md";
 import ReactAudioPlayer from 'react-audio-player';
@@ -35,6 +35,7 @@ export interface ListeningQuestion {
 }
 
 const ReadingListeningSection = () => {
+    const DraggableModalRef = useRef(null);
     const [isReducedFontSize, setIsReducedFontSize] = useState(false)
     const [isAfterTestDetailsModalopen, setIsAfterTestDetailsModalopen] = useState(false)
     const [tryReloadAudio, setTryReloadAudio] = useState(0);
@@ -630,8 +631,8 @@ const ReadingListeningSection = () => {
                 const handleClose = isFirstModal ? handleModalToggle : handleModalToggle2;
 
                 return (
-                    <Draggable handle=".modal-header">
-                        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
+                    <Draggable nodeRef={DraggableModalRef} handle=".modal-header">
+                        <div ref={DraggableModalRef} className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full">
                             <div className="relative p-4 w-full max-w-[80%] max-h-full">
                                 <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                                     <div className="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t cursor-move dark:border-gray-600">

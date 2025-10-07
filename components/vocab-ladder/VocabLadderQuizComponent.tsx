@@ -176,7 +176,7 @@ export function VocabLadderQuizComponent({ questions, modulePosition }: McqQuizP
   }, [currentQuestion, questions]); const progressValue = (correctAnswersCount / questions.length) * 100
 
   return (
-    <Card className="relative mx-auto bg-[#1D1A5F] w-full h-[95vh] sm:h-[90vh] bg-center bg-cover bg-no-repeat bg-[url('https://img.freepik.com/free-vector/outer-space-background-with-planets-stars_107791-17549.jpg?t=st=1730365437~exp=1730369037~hmac=4113865b77c0b9f1a5e1e18857f19df9fe3ddf309b5b2bbeddadffa0ad234bc0&w=996')]">
+    <Card className="relative mx-auto bg-[#1D1A5F] w-full h-[95vh] sm:h-[90vh] bg-center bg-cover bg-no-repeat bg-[url('https://img.freepik.com/free-vector/outer-space-background-with-planets-stars_107791-17549.jpg')]">
       <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md"></div>
       <div className='relative z-10'>
 

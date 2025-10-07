@@ -7,34 +7,42 @@ import Link from "next/link";
 
 const courseBatches: Record<string, Batch[]> = {
     ielts: [
-        { id: 1, date: "3rd June", seats: 20, enrolled: 0 },
-        { id: 2, date: "6th June", seats: 20, enrolled: 0 },
-        { id: 3, date: "10th June", seats: 20, enrolled: 0 },
-        { id: 4, date: "14th June", seats: 20, enrolled: 0 },
-        { id: 5, date: "18th June", seats: 20, enrolled: 0 },
-        { id: 6, date: "21st June", seats: 20, enrolled: 0 },
-        { id: 7, date: "25th June", seats: 20, enrolled: 0 },
-        { id: 8, date: "28th June", seats: 20, enrolled: 0 },
+        { id: 1, date: "1st Oct", seats: 20, enrolled: 0 },
+        { id: 2, date: "6th Oct", seats: 20, enrolled: 0 },
+        { id: 3, date: "9th Oct", seats: 20, enrolled: 0 },
+        { id: 4, date: "13th Oct", seats: 20, enrolled: 0 },
+        { id: 5, date: "17th Oct", seats: 20, enrolled: 0 },
+        { id: 6, date: "23rd Oct", seats: 20, enrolled: 0 },
+        { id: 7, date: "28th Oct", seats: 20, enrolled: 0 },
     ],
-    pte: [
-        { id: 1, date: "4th June", seats: 20, enrolled: 0 },
-        { id: 2, date: "11th June", seats: 20, enrolled: 0 },
-        { id: 3, date: "21st June", seats: 20, enrolled: 0 },
-    ],
+
     toefl: [
-        { id: 1, date: "17th June", seats: 20, enrolled: 0 },
+        { id: 1, date: "9th Oct", seats: 20, enrolled: 0 },
     ],
+
+    pte: [
+        { id: 1, date: "4th Oct", seats: 20, enrolled: 0 },
+        { id: 2, date: "14th Oct", seats: 20, enrolled: 0 },
+        { id: 3, date: "28th Oct", seats: 20, enrolled: 0 },
+    ],
+
     duolingo: [
-        { id: 1, date: "7th June", seats: 20, enrolled: 0 },
-        { id: 2, date: "21st June", seats: 20, enrolled: 0 },
+        { id: 1, date: "12th Oct", seats: 20, enrolled: 0 },
     ],
+
     gre_gmat: [
-        { id: 1, date: "5th June", seats: 20, enrolled: 0 },
-        { id: 2, date: "18th June", seats: 20, enrolled: 0 },
+        { id: 1, date: "10th Oct", seats: 20, enrolled: 0 },
+        { id: 2, date: "17th Oct", seats: 20, enrolled: 0 },
     ],
+
     sat: [
-        { id: 1, date: "12th June", seats: 20, enrolled: 0 },
-        { id: 2, date: "24th June", seats: 20, enrolled: 0 },
+        { id: 1, date: "6th Oct", seats: 20, enrolled: 0 },
+        { id: 2, date: "28th Oct", seats: 20, enrolled: 0 },
+    ],
+
+    german_language: [
+        { id: 1, date: "16th Oct", seats: 20, enrolled: 0 },
+        { id: 2, date: "27th Oct", seats: 20, enrolled: 0 },
     ],
 };
 

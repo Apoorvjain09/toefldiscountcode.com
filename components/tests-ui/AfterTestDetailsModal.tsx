@@ -92,12 +92,7 @@ export default function AfterTestDetailsModal({
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                                 <Progress value={(step + 1) / steps.length * 100} className="w-full" />
-                                <motion.div
-                                    key={step}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.3 }}
+                                <div
                                 >
                                     {step === 1 && (
                                         <div className="space-y-4">
@@ -128,7 +123,7 @@ export default function AfterTestDetailsModal({
                                             />
                                         </div>
                                     )}
-                                </motion.div>
+                                </div>
 
                                 <div className="flex justify-between">
                                     <Button onClick={prevStep} disabled={step === 0} className='bg-gradient-to-br from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600'>

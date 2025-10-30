@@ -132,8 +132,7 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
                                     {option.bookingMethod === 'buy_voucher' && (
                                         <>
                                             <MailIcon className="mr-2 h-4 w-4" />
-                                            {/* <span>Get voucher code on email</span> */}
-                                            <span>Contact us at 9310017599</span>
+                                            <span>Get voucher code on email</span>
                                         </>
                                     )}
                                     {option.bookingMethod === 'slot_booking' && (

@@ -27,9 +27,10 @@ interface HeroProps {
     voucher: string;
     booking: string;
     discount: string;
+    originalPrice: number;
 }
 
-export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) {
+export default function TOEFLPricing({ voucher, booking, discount, originalPrice }: HeroProps) {
     const [openCheckReliabilityModal, setOpenCheckReliabilityModal] = useState(false);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     const [openModal, setOpenModal] = useState(false)
@@ -38,23 +39,23 @@ export default function TOEFLPricing({ voucher, booking, discount }: HeroProps) 
     const pricingOptions = [
         {
             price: discount,
-            actualPrice: 18000,
-            savings: 18000 - Number(discount.replace(/,/g, '')),
+            actualPrice: originalPrice,
+            savings: originalPrice - Number(discount.replace(/,/g, '')),
             description: "You will get the code through watching the youtube video.",
             bookingMethod: "youtube_code",
         },
         {
             price: voucher,
-            actualPrice: 18000,
-            savings: 18000 - Number(voucher.replace(/,/g, '')),
+            actualPrice: originalPrice,
+            savings: originalPrice - Number(voucher.replace(/,/g, '')),
             description: "You will get the voucher code on your registered Email ID",
             bookingMethod: "buy_voucher",
             popular: true,
         },
         // {
         //     price: booking,
-        //     actualPrice: 18000,
-        //     savings: 18000 - Number(booking.replace(/,/g, '')),
+        //     actualPrice: originalPrice,
+        //     savings: originalPrice - Number(booking.replace(/,/g, '')),
         //     description: "We will book the exam slot for you.",
         //     bookingMethod: "slot_booking",
         // },

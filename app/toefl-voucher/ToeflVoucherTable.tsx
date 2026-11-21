@@ -13,9 +13,10 @@ interface DiscountProps {
     voucher: string;
     booking: string;
     discount: string;
+    originalPrice: number;
 }
 
-export default function ToeflVoucherTable({ voucher, booking, discount }: DiscountProps) {
+export default function ToeflVoucherTable({ voucher, booking, discount, originalPrice }: DiscountProps) {
     return (
         <Card className="my-10 w-full max-w-2xl mx-auto">
             <CardHeader>
@@ -33,15 +34,15 @@ export default function ToeflVoucherTable({ voucher, booking, discount }: Discou
                     <TableBody>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Discount Code</TableCell>
-                            <TableCell>Rs {18000 - Number(discount.replace(/,/g, ''))}</TableCell>
+                            <TableCell>Rs {originalPrice - Number(discount.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Voucher</TableCell>
-                            <TableCell>Rs {18000 - Number(voucher.replace(/,/g, ''))}</TableCell>
+                            <TableCell>Rs {originalPrice - Number(voucher.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium">TOEFL Exam Booking</TableCell>
-                            <TableCell>Rs {18000 - Number(booking.replace(/,/g, ''))}</TableCell>
+                            <TableCell>Rs {originalPrice - Number(booking.replace(/,/g, ''))}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

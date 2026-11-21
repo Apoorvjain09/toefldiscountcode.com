@@ -30,9 +30,10 @@ interface HeroProps {
     voucher: string;
     booking: string;
     discount: string;
+    originalPrice: number;
 }
 
-export default function ToeflVoucherHero({ voucher, booking, discount }: HeroProps) {
+export default function ToeflVoucherHero({ voucher, booking, discount, originalPrice }: HeroProps) {
     const [openModal, setOpenModal] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -93,9 +94,9 @@ export default function ToeflVoucherHero({ voucher, booking, discount }: HeroPro
                 <CardContent className="grid gap-8 p-6 md:p-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         {[
-                            { amount: 18000 - Number(discount.replace(/,/g, '')), type: 'Discount Code' },
-                            { amount: 18000 - Number(voucher.replace(/,/g, '')), type: 'Voucher' },
-                            // { amount: 18000 - Number(booking.replace(/,/g, '')), type: 'Exam Booking' },
+                            { amount: originalPrice - Number(discount.replace(/,/g, '')), type: 'Discount Code' },
+                            { amount: originalPrice - Number(voucher.replace(/,/g, '')), type: 'Voucher' },
+                            // { amount: originalPrice - Number(booking.replace(/,/g, '')), type: 'Exam Booking' },
                         ].map((offer, index) => (
                             <div
                                 key={offer.type}

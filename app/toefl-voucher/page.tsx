@@ -15,15 +15,16 @@ import ToeflVoucherImageGallery from "./ToeflVoucherImageGallery";
 
 const Page = () => {
 
-  const TOEFL_Voucher = "13,500";
+  const TOEFL_Original_Price = 18_560;
+  const TOEFL_Voucher = "15,500";
   const TOEFL_Exam_Booking = "12,500";
-  const TOEFL_Discount_Code = "16,491";
+  const TOEFL_Discount_Code = "17,004";
 
   return (
     <div className="">
       <ToeflVoucherImageGallery />
-      <ToeflVoucherHero voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
-      <TOEFLPricing voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+      <ToeflVoucherHero voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
+      <TOEFLPricing voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
       <ToeflVoucherWhyUS />
 
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 mx-10 mb-10 ">
@@ -49,11 +50,11 @@ const Page = () => {
         </div>
       </div>
 
-      <ToeflVoucherFAQ voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
-      <ToeflVoucherTable voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
-      <DiscountCodeExplanation voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
-      <VoucherPurchaseExplanation voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
-      <ToeflVoucherExamBooking voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} />
+      <ToeflVoucherFAQ voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
+      <ToeflVoucherTable voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
+      <DiscountCodeExplanation voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
+      <VoucherPurchaseExplanation voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
+      <ToeflVoucherExamBooking voucher={TOEFL_Voucher} booking={TOEFL_Exam_Booking} discount={TOEFL_Discount_Code} originalPrice={TOEFL_Original_Price} />
       <ToeflVoucherWhatIsToefl />
       <ToeflVoucherWhatIsDiscountCode />
       <MainFooter />

@@ -90,7 +90,6 @@ export function TOEFLVOUCHERWhatsAppButton({
           </TooltipTrigger>
           <TooltipContent
             side="left"
-            asChild
             className="z-9"
           >
             <motion.div
